@@ -1,0 +1,147 @@
+section.portfolio {
+	position: relative;
+	display: block;
+	width: 100vw;
+	height: auto;
+	margin: 2em 0;
+	padding-bottom: calc(75% + 3.5rem);
+}
+
+.hide {
+  display: none;
+}
+.portfolio .menu {
+  position: absolute;
+  margin: 0;
+  width: 292px;
+  font-size: 1.2rem;
+  line-height: 3.5rem;
+  font-family: "Merriweather", serif;
+  font-weight: 100;
+  color: #5B753D;
+  z-index: 10;
+}
+
+.menu-label {
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.menu-label span{
+  display: inline-block;
+  float: left;
+  width: 144px;
+  margin: 0;
+  padding-left: 1.5em;
+  background: #DCE6CF;
+  z-index: 1;
+}
+
+.menu-label::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  float: left;
+  height: 3em;
+  width: 136px;
+  top: 26px;
+  right: 1px;
+  padding: 0;
+  margin: 0;
+  background: #DCE6CF;
+  transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  border-radius: 0 0 0 2.5em;
+}
+
+.menu ul {
+	position: relative;
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	background: #DCE6CF;
+}
+.menu li {
+	padding-left: 1.5em;
+	cursor: pointer;
+	background: #DCE6CF;
+}
+.menu li:hover {
+	background: #DCE6CF;
+}
+.menu li:active {
+	background: #EDF2E6;
+}
+
+.gallery {
+	position: absolute;
+	width: 100%;
+	margin: 0; padding: 0;
+	margin-top: 3.5rem;
+}
+.gallery ul {
+	width: 100%;
+	margin: 0; padding: 0;
+	list-style: none;
+}
+.gallery li {
+	position: relative;
+	display: inline-block;
+	display: none; /* For Filtering */
+	float: left;
+	width: 50%;
+	height: 37.5vw;
+	margin: 0; padding: 0;
+}
+.gallery li img {
+	position: relative;
+	width: 100%;
+	height: auto;
+	/*background-image: url('../portfolio_images/placeholder-dark.jpg');*/
+	cursor: pointer;
+}
+
+.gallery .hover-state {
+	opacity: 0;
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	background-color: rgba(51,51,51,0.75);
+	cursor: pointer;
+}
+.gallery .hover-state:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em; /* Adjusts for spacing */
+}
+.gallery li:hover .hover-state{
+	opacity: 1;
+	display: block;
+}
+
+.folio-hover {
+	display: inline-block;
+	vertical-align: middle;
+	color: #fafafa;
+	line-height: 1.8rem;
+	font-weight: 100;
+}
+.folio-title {
+	font-size: 1.5rem;
+	font-family: "Raleway", "Lato", "Helvetica", sans-serif;
+}
+.folio-type {
+	font-size: 1.2rem;
+
+	font-weight: lighter;
+	font-style: italic;
+}

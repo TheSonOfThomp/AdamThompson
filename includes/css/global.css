@@ -1,0 +1,195 @@
+html{font-size: 16px;}
+body {background: #FAFAFA; padding: 0; margin: 0;
+	font-family: "Merriweather", "Times New Roman", serif; font-weight: 100; color: #4a4a4a; overflow-x: hidden;}
+header { 
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 12rem;
+}
+section {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+}
+/* ------ HELPER CLASSES ------ */
+.hidden {
+	display: none !important;
+}
+.container {
+	width: 84%;
+	margin: 0 8%;
+	height: 100%;
+}
+.shrinkwrap {
+	will-change: width;
+	width:intrinsic; /* For Safari, see https://developer.mozilla.org/en-US/docs/CSS/width */
+	width:-moz-fit-content;
+	width:-webkit-fit-content;
+	width:fit-content;
+	height: 100%;
+	margin: auto;
+}
+.vertical-center {
+	text-align: center;
+}
+.vertical-center:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em; /* Adjusts for spacing */
+}
+.animate {
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+}
+a {
+	color: #5B753D;
+	font-weight: inherit;
+	 -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a::visited {
+	color: #5B753D;
+}
+/* ---------------------------- */
+.sub-header{
+  position: relative;
+  display: inline-block;
+  float: left;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  margin-top: 1rem;
+  overflow: hidden;
+  color: inherit;
+}
+.sub-header::before, .sub-header::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  float: left;
+  margin: 0;
+  border-bottom: 1px solid #4a4a4a;
+}
+.sub-header::before {
+	width: calc(100% - 128px);
+	height: 128px;
+}
+.sub-header::after{
+	right: -36px;
+	top: 36px;
+	width: 144px;
+	height: 128px;
+	-webkit-transform: rotate(25deg);
+	-moz-transform: rotate(25deg);
+	transform: rotate(25deg);
+}
+.sub-header .title {
+	position: relative;
+	display: block;
+	float: left;
+	/*margin-left: 8%;*/
+	font-family: "Raleway", "Lato", "Helvetica", sans-serif;
+	font-size: 4rem;
+	line-height: 1em;
+	font-weight: 200;
+	top: 3.2rem;
+}
+.sub-header ul {
+  position: relative;
+  display: block;
+  list-style: none;
+  padding-left: 0;
+  /*margin-left: 8%;*/
+  margin-top: 0;
+  padding-top: 7.3em;
+  font-size: 1.2em;
+  font-weight: 200;
+  color: #5B753D;
+}
+.sub-header li {
+  display: inline;
+  padding-right: 1em;
+}
+.sub-header a{
+  color: inherit;
+  text-decoration: none;
+}
+
+footer {
+	width: 100%;
+	height: 6.4rem;
+	margin-top: 4rem;
+	font-size: 1.1rem;
+    line-height: 6.4rem;
+    background-color: #5B753D;
+    color: #fafafa;
+}
+footer .container {
+	position: relative;
+	min-height: inherit;
+}
+.copyright {
+	position: relative;
+	display: inline-block;
+	float: left;
+	text-align: left;
+	color: #fafafa;
+}
+.social {
+	position: relative;
+	display: inline-block;
+	float: right;
+	width: 100%;
+	height: inherit;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: right;
+	color: #fafafa;
+}
+.social-media {
+	display: inline-block;
+	float: left;
+	width: 19%;
+	height: 3.4rem;
+	margin: 1.5rem 0;
+	/*padding: 0 3em;
+	margin: 1.5em 0;*/
+	border-left: 1px solid #fafafa;
+}
+.social-media:last-child {
+	padding-right: 0;
+}
+.social-media:first-child {
+	border-left: none;
+}
+.social-media a {
+	display: block;
+	width: 20%;
+	height: 100%;
+	margin: 0 40%;
+	background-size: 100%;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+
+.social-media #twitter {
+	background-image: url('../image_assets/twitter.png');
+}
+.social-media #linkedin {
+	background-image: url('../image_assets/linkedin.png');
+}
+.social-media #codepen {
+	background-image: url('../image_assets/codepen.png');
+}
+.social-media #behance {
+	background-image: url('../image_assets/behance.png');
+}
+.social-media #email {
+	background-image: url('../image_assets/email.png');
+}

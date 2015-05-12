@@ -1,0 +1,200 @@
+@media screen and (max-width: 768px) {
+	.hide-mobile {
+		display: none;
+	}
+	/* ------------ HEADER ------------ */
+	header.main-header {
+		height: auto;
+		padding-top: 0;
+	}
+	.main-header .container {
+		width: 100%;
+		margin: 0;
+	}
+	.sub-header {
+		margin-top: 1rem;
+	}
+	.sub-header::before {
+		width: calc(100% - 56px);
+	}
+	.sub-header::after{
+		right: -108px;
+	}
+	.sub-header .title {
+		font-size: 2.8rem;
+		line-height: 3.6rem;
+		width: 50%;
+		top: 0;
+		padding-left: 4%; padding-left: 4vw; 
+	}
+	.sub-header img {
+		height: 5.4rem;
+		float: right;
+		margin: 0;
+		padding-top: 1.8rem;
+		padding-right: 2%;
+		opacity: 1;
+	}
+	.sub-header .tagline {
+		width: 100%;
+		display: none;
+		text-align: center;
+		font-size: 1.6em;
+		line-height: 1.25em;
+		top: 3em;
+	}
+	.sub-header ul {
+		width: 100%;
+		padding-top: 9.6rem;
+		text-align: center;
+	}
+	.sub-header li {
+		top: 6rem;
+		display: block;
+		font-size: 1.5rem;
+		line-height: 4rem;
+		cursor: pointer;
+		padding-right: 0;
+	}
+	.sub-header a{
+		display: inline-block;
+		width: 100%;
+	}
+	.main-header .sub-header li:hover, .main-header .sub-header li:active, .main-header .sub-header li:focus {
+		background-color: #DCE6CF;
+	}
+
+
+	/* ------------ BIO ------------ */
+	.bio {
+		height: auto;
+		margin-top: 0;
+		margin-bottom: 6rem;
+	}
+	.bio .bio-pic {
+		display: inline-block;
+		position: relative;
+		float: none;
+		clear: left;
+		width: 70%;
+		height: auto;
+		margin: 1rem 15% 0 15%;
+		text-align: center;
+		transform: rotateZ(0deg);
+		-moz-transform: rotateZ(0deg);
+		-webkit-transform: rotateZ(0deg); 
+	}
+	.bio .bio-pic img {
+		display: inline;
+		transform: rotateZ(0deg);
+		-moz-transform: rotateZ(0deg);
+		-webkit-transform: rotateZ(0deg); 
+	}
+	.bio .bio-text {
+		float: none;
+		clear: left;
+		min-width: 100%;
+		max-width: 100%;
+		text-align: center;
+		font-size: 1.25rem;
+	}
+	.bio .bio-text p {
+		margin-bottom: 1rem;
+	}
+
+	/* ------------ PORTFOLIO ------------ */
+	section.portfolio {
+		margin-bottom: 0;
+		padding-bottom: calc(75%*4 + 3.5rem);
+	}
+	.portfolio .menu {
+		width: 100%;
+	}
+	.portfolio .menu-label {
+		width: 100%;
+	}
+	.portfolio .menu-label span {
+		width: calc(100% - 156px) ;
+	}
+	.portfolio .menu-label span, .portfolio .dropdown li {
+		padding-left: 2em;
+	}
+	.gallery li {
+		width: 100%;
+		height: 75vw;
+	}
+	.gallery .hover-state {
+		opacity: 1;
+		background-color: rgba(51,51,51,0.4);
+	}
+	.gallery .folio-hover {
+		max-width: calc(100% - 2.51rem);
+		padding: 1.25rem;
+		background:rgba(28,28,28,0.6);
+		border-radius: 8px; 
+	}
+	/* ------------ RESUME ------------ */
+	.resume {
+		margin-top: -2rem;
+	}
+	.resume .sub-header .title {
+		top: 56px;
+	}
+	.resume .sub-header ul {
+		padding-top: 8rem;
+		padding-left: 4%;
+		text-align: left;
+	}
+	.resume .sub-header li {
+		font-size: 1rem;
+	}
+	.experience .logo-container {
+		width: 100%;
+	}
+	.experience .logo {
+		width: 60%;
+		padding-bottom: 60%;
+		margin: 0 auto;
+
+	}
+	.experience .resume-content {
+		margin-top: 2rem;
+		max-width: 100%;
+		min-width: 100%;
+		border-left: 0;
+		border-top: 1px solid #5B753D;
+		padding-left: 0;
+	}
+	.experience .job-header {
+		width: 100%;
+		padding-top: 1rem;
+		text-align: center;
+	}
+	.experience .job-title {
+		width: 100%;
+		font-size: 1.5rem;
+	}
+	.experience .job-duration {
+		margin: 0;
+		display: block;
+	}
+	.experience .resume-list {
+		display: none;
+		padding-left: 40px;
+	}
+
+	.skills {
+		display: none;
+	}
+
+	/* ------------ FOOTER ------------ */
+	.social-media {
+		width: 33%;
+		height: 4.8rem;
+		margin: 0.8rem 0;
+	}
+	.social-media a {
+		width: 40%;
+		margin: 0 30%;
+	}
+}

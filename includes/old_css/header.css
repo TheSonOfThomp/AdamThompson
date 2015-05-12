@@ -1,0 +1,251 @@
+body {
+	background-color: #fafafa;
+	margin: 0;
+	padding: 0;
+  	font-family: "Lato", sans-serif;
+  	font-weight: 300;
+  	line-height: 1.5;
+  	color: #333333; 
+  	height: 100%;
+}
+p {
+	font-size: 14pt;
+}
+h1, h2 {
+	font-family: "Raleway", sans-serif;
+}
+
+header a {
+	text-decoration: none;
+	font-size: 5em;
+	font-weight: lighter;
+	font-family: "Lato", sans-serif;
+	-webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear; 
+}
+
+/* Fit the name on the screen  */
+@media screen and (max-width: 840px) {
+	header #name {
+		width: 100%;
+	}
+	header a {
+		text-decoration: none;
+		font-size: 4em;
+		font-weight: lighter;
+		font-family: "Lato", sans-serif;
+	}
+}
+@media screen and (max-width: 430px) {
+	header #name {
+		width: 100%;
+	}
+	header a {
+		text-decoration: none;
+		font-size: 3em;
+		font-weight: lighter;
+		font-family: "Lato", sans-serif;
+	}
+}
+
+/* ------------ Nav bar ---------------*/
+
+#nav {
+	margin: 0;
+	padding: 0;
+}
+#nav li {
+	padding: 1px 0 0 0;
+	float: left;
+	width: 33%;
+	text-align: center;
+	list-style: none;
+}
+#nav li a {
+	font-family: 'Raleway', sans-serif;
+	position: relative;
+	top: 6px;
+	text-decoration: none;
+	color: #497235;
+	font-size: 16pt;
+}
+#nav li a:hover{
+	text-decoration: underline;
+	color: #497235;
+}
+/* ------------------------------------ */
+
+
+#bar_head {
+	position: absolute;
+	left: 0;
+	width: 129px;
+	height: 32px;
+	background: url('../image_assets/bar_head.png') no-repeat;
+}
+
+#bar_repeat {
+	position: relative;
+	height: 32px;
+	margin-left: 129px;
+	background: url('../image_assets/bar-repeat.png') repeat-x;
+}
+
+/* DESKTOP HEADER */
+@media screen and (min-width: 940px) {
+	#head {
+		position: relative;
+		height: 18vh;
+	}
+	header {
+		padding-top: 35vh;
+		padding-bottom: 35vh;
+	}
+	#banner {
+		position: relative;
+		width: 100%;
+		height: 128px;}
+		#name {
+			position: relative;
+			float: left;
+			left: 9%;
+			width: 640px;
+			height: 100%;
+			cursor: pointer;
+		}
+		#social_media {
+			position: relative;
+			width: 414px;
+			height: 100%;
+			float: right;
+			right: 9%;
+		}
+			#social_media div {
+				margin: 16px;
+				padding: 48px;
+				border-radius: 1%;
+				opacity: 0.6;
+				-webkit-transition: all 0.3s linear;
+			    -moz-transition: all 0.3s linear;
+			    transition: all 0.3s linear; 
+			}
+			#social_media div:hover {
+				opacity: 0.44;
+				-webkit-transition: all 0.3s linear;
+			    -moz-transition: all 0.3s linear;
+			    transition: all 0.3s linear; 
+			}
+				#linkedin {
+					float: right;
+					background: url('../image_assets/linkedin.png') center center no-repeat;
+					background-size: 72px;
+
+				}
+				#email {
+					float: right;
+					background: url('../image_assets/mail.png') center center no-repeat;
+					background-size: 72px;
+				}
+				#twitter {
+					float: right;
+					background: url('../image_assets/twitter.png') center center no-repeat;
+					background-size: 72px;
+				}
+				@media screen and (max-width: 1290px) {
+					#social_media {
+						width: 276px;
+					}
+					#email {
+						display: none;
+					}
+				}
+				@media screen and (max-width: 1111px) {
+					#social_media {
+						width: 138px;
+					}
+					#twitter {
+						display: none;
+					}
+				}
+	#bar {
+		position: relative;
+		/* top: 40%; */
+	}
+	#bar_head {
+		position: absolute;
+		left: 0;
+		width: 129px;
+		height: 32px;
+		background: url('../image_assets/bar_head.png') no-repeat;
+	}
+
+	#bar_repeat {
+		position: relative;
+		height: 32px;
+		margin-left: 129px;
+		background: url('../image_assets/bar-repeat.png') repeat-x;
+	}
+	#nav {
+		display: none;
+	}
+}
+
+
+/* Display Nav bar at 1024 */
+@media screen and (max-width: 1024px) {
+	#nav {
+		display: inline;
+	}
+}
+
+
+/* MOBILE HEADER */
+@media screen and (max-width: 939px) {
+	#name {
+		position: relative;
+		top: 3%;
+		left: 9%;
+		width: 70%;
+		height: auto;
+	}
+	#name img {
+		width: 100%;
+		height: auto;
+	}
+	#social_media {
+		width: 118px;
+		height: 240px;
+		display: none;
+	}
+
+	#linkedin {
+	float: right;
+	background: url('../image_assets/linkedin.png') center center no-repeat;
+	background-size: 72px;
+
+	}
+	#email {
+		float: right;
+		background: url('../image_assets/mail.png') center center no-repeat;
+		background-size: 72px;
+	}
+	#twitter {
+		float: right;
+		background: url('../image_assets/twitter.png') center center no-repeat;
+		background-size: 72px;
+	}
+}
+
+/* For short Screens */
+@media screen and (max-height: 720px){
+	header {
+		padding: none !important;
+	}
+	#head {
+		height: 160px !important;
+	}
+}
+
+
+

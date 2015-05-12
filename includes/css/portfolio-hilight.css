@@ -1,0 +1,100 @@
+.title {
+	width: 100%;
+}
+.back-to-main {
+	position: relative;
+	display: block;
+	line-height: 1em;
+	cursor: pointer;
+}
+.back-to-main a::before {
+	content: '';
+	position: relative;
+	display: inline-block;
+	content: '';
+	top: 0.1em;
+	height: 1em;
+	width: 1em;
+	margin-right: 0.25em;
+	background-image: url('../image_assets/back-arrow.png');
+	background-size: 100%;
+}
+
+.gallery-content {
+	position: relative;
+	top: 0;
+	left: 0; right: 0;
+	width: 84%;
+	padding: 0 8%;
+	background-color: #4a4a4a;
+}
+.col {
+	position: relative;
+	display: inline-block;
+	float: left;
+	font-size: 1.2rem;
+	line-height: 1.5em;
+}
+.left-column {
+	width: 54%;
+	padding: 1rem 4% 0 0; 
+}
+.folio_paragraph {
+	width: 100%;
+}
+.right-column {
+	width: 38%;
+	padding: 1rem 2% 0 2%; 
+}
+.folio_image {
+	display: inherit;
+	position: relative;
+	width: 100%;height: auto;
+	background-image: ('../portfolio_images/placeholder-light.jpg');
+	margin: 0;
+}
+.folio_image img {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+.folio_image figcaption {
+	text-align: center;
+	font-size: 1rem;
+	color: #5B753D;
+}
+
+
+@media screen and (max-width: 1160px) {
+	.sub-header {
+		margin-top: 1rem;
+	}
+	.sub-header::before {
+		width: calc(100% - 56px);
+	}
+	.sub-header::after{
+		right: -108px;
+	}
+	.sub-header .title {
+		font-size: 2.4rem;
+		line-height: 3.2rem;
+		width: 100%;
+		max-width: 520px;
+		top: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.left-column, .right-column {
+		width: 100%;
+	}
+	.folio-paragraph, .folio-image {
+		width: 100%;
+		display: block;
+	}
+	.folio-paragraph {
+		text-indent: 1.2em;
+	}
+}
