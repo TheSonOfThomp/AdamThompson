@@ -8,8 +8,8 @@
 	 else {
 	 	$root_path = 'http://adam-thompson.ca';
 	 }
+	 $allow_url_include=0;
 ?>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 	"http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
@@ -18,7 +18,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0;">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<link rel="shortcut icon" type="image/png" href="<?php echo $root_path?>/includes/image_assets/@_light.png">
-		<link rel="apple-touch-icon" href="<?php echo $root_path?>/includes/image-assets/ios.png"/>
 
 		<!-- STYLE & FONTS -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:300, 100' rel='stylesheet' type='text/css'>
