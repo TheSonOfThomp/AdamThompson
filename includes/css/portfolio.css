@@ -82,6 +82,9 @@ section.portfolio {
 	width: 100%;
 	margin: 0; padding: 0;
 	margin-top: 3.5rem;
+	border-color: #5B753D;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
 }
 .gallery ul {
 	width: 100%;

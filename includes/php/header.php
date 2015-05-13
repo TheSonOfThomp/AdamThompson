@@ -1,7 +1,7 @@
 <header class="main-header">
 	<div class="sub-header">
 		<div class="container">
-			<div class="title">Adam Thompson</div>
+			<div class="title">Adam Thompson <?php $DEBUG; ?></div>
 			<img alt="I design things" src="includes/image_assets/falcon.png">
 			<div class="tagline animate">
 				<em id="tag1">Experience</em> Designer
