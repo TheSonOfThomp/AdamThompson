@@ -50,7 +50,3 @@ include('portfolio_switch.php');
 		</figure>
 	</div>
 </article>
-
-<?php 
-include $root_path.'/includes/php/footer.php';
-?>
