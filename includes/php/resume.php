@@ -17,8 +17,8 @@
 			</div>
 			<div class="resume-content">
 				<div class="job-header">
-					<span class="job-title">Head of User Experience and Design</span>
-					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, User Interface Designer at KnowRoaming</span>
+					<span class="job-title">User Experience and Product Designer</span>
+					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, Product Design, User Interface Designer at KnowRoaming</span>
 					<span class="job-duration">May 2014 - April 2015</span>
 				</div>
 				<ul class="resume-list">
