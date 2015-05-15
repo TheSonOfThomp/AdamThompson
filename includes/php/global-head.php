@@ -1,7 +1,7 @@
 <?php $page_title = ucfirst($page_id);
 	include_once('mySchoolTime.php');
 
-	$DEBUG = true;
+	$DEBUG = false;
 
 	if ($DEBUG) {
 	 	$root_path = 'http://localhost:8888/adam-thompson-4';
