@@ -54,7 +54,7 @@
 				</ul>
 			</div>
 		</article>
-		<article class="genesys job hidden">
+		<article class="genesys job">
 			<div class="logo-container">
 				<div class="logo vertical-center"></div>
 				<div class="company-site"><a href="http://www.genesyslabs.com" target="_blank">Genesys Labs</a></div>
@@ -65,9 +65,10 @@
 					<span class="job-duration">January - April 2013</span>
 				</div>
 				<ul class="resume-list">
-					<li>Organized open-house and designed event related media</li>
-					<li>Designed new procedure for evaluating and interviewing job candidates</li>
-					<li>Performed maintenance on internal network and servers</li>
+					<li>Organized an open house event &amp designed and assisted in designing all event related media</li>
+					<li>Edited and improved php code for meeting room booking freeware</li>
+					<li>Performed maintenance and setup on existing internal network, &amp servers</li>
+					<li>Designed a new procedure for evaluating and interviewing new job candidates</li>
 				</ul>
 			</div>
 		</article>

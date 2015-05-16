@@ -57,6 +57,12 @@
 			break;
 
 		// OTHER //
+		case 'KR_retail':
+			$p_title = "KnowRoaming Retail Display";
+			$img1 = $img_path."retail-white.jpg";
+			$img2 = $img_path."retail-render.jpg";
+			$img3 = $img_path."retail-prototype-1.jpg";
+			break;
 		case 'mediago':
 			$p_title = "MediaGo app Redesign";
 			$p_p1 = "While at Sony, I designed several concept images to improve the usability and aesthetics of the app. The version pictured got the best feedback throughout the ofice. The design however was not implemented due to differing priorities and a lack of relevant resources in the department";
@@ -92,7 +98,7 @@
 			$img2_caption = "App feedback";
 			break;
 		case 'kwasind':
-			# code...
+			$p_title = 'Camp Kwasind Graphics';
 			break;
 		case 'this':
 			$p_title = "Adam-Thompson.ca";
