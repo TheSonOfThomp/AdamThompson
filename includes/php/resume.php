@@ -49,7 +49,7 @@
 				<ul class="resume-list">
 					<li>Lead the design and development for a new music-dicovery feature in MediaGo. This feature has not yet been released.</li>
 					<li>Developed the front-end for the new feature using HTML, SASS and jQuery</li>
-					<li>Proposed a UI re-design of the entire MediaGoa application, enhancing aesthetics, and overall user experience</li>
+					<li>Proposed a UI re-design of the entire MediaGo application, enhancing aesthetics, and overall user experience</li>
 					<li>Designed promotional graphics and videos for MediaGo</li>
 				</ul>
 			</div>
@@ -77,7 +77,7 @@
 		<div class="skills-header">
 			<span class="skills-title">My Toolbox</span>
 		</div>
-		<div class="skills-sub-header">Professional Tools</div>
+		<div class="skills-sub-header"></div>
 		<ul class="program-list"> <!-- must have a multiple of 8 -->
 			<li class="animate" id="sketch">
 				<div class="app-logo"></div><p class="app-name">Sketch</p>
@@ -87,9 +87,6 @@
 			</li>
 			<li class="animate" id="ai">
 				<div class="app-logo"></div><p class="app-name">Illustrator</p>
-			</li>
-			<li class="animate" id="indesign">
-				<div class="app-logo"></div><p class="app-name">InDesign</p>
 			</li>
 			<li class="animate" id="balsamiq">
 				<div class="app-logo"></div><p class="app-name">Balsamiq</p>
@@ -103,8 +100,11 @@
 			<li class="animate" id="jquery">
 				<div class="app-logo"></div><p class="app-name">jQuery</p>
 			</li>				
+			<li class="animate" id="coffeescript">
+				<div class="app-logo"></div><p class="app-name">CoffeeScript</p>
+			</li>
 		</ul>
-		<div class="skills-sub-header">Other Tools</div>
+		<div class="skills-sub-header"></div>
 		<ul class="program-list"> <!-- must have a multiple of 8 -->
 			<li class="animate" id="autocad">
 				<div class="app-logo"></div><p class="app-name">AutoCad</p>
@@ -115,20 +115,48 @@
 			<li class="animate" id="max">
 				<div class="app-logo"></div><p class="app-name">3DS Max</p>
 			</li>
-			<li class="animate" id="xcode">
-				<div class="app-logo"></div><p class="app-name">XCode</p>
+			<li class="animate" id="c4d">
+				<div class="app-logo"></div><p class="app-name">Cinema 4D</p>
+			</li>
+			<li class="animate" id="arduino">
+				<div class="app-logo"></div><p class="app-name">Arduino</p>
 			</li>
 			<li class="animate" id="ae">
 				<div class="app-logo"></div><p class="app-name">After Effects</p>
 			</li>
-			<li class="animate" id="premiere">
-				<div class="app-logo"></div><p class="app-name">Premiere</p>
-			</li>
-			<li class="animate" id="c4d">
-				<div class="app-logo"></div><p class="app-name">Cinema 4D</p>
-			</li>
 			<li class="animate" id="final_cut">
-				<div class="app-logo"></div><p class="app-name">Final Cut</p>
+				<div class="app-logo"></div><p class="app-name">Final Cut X</p>
+			</li>
+			<li class="animate" id="indesign">
+				<div class="app-logo"></div><p class="app-name">InDesign</p>
+			</li>
+		
+		</ul>
+		<div class="skills-sub-header hidden"></div>
+		<ul class="program-list"> <!-- must have a multiple of 8 -->
+			<li class="animate" id="php">
+				<div class="app-logo"></div><p class="app-name">PHP</p>
+			</li>
+			<li class="animate" id="cpp">
+				<div class="app-logo"></div><p class="app-name">C++</p>
+			</li>
+			<li class="animate" id="java">
+				<div class="app-logo"></div><p class="app-name">Java</p>
+			</li>
+			<li class="animate" id="swift">
+				<div class="app-logo"></div><p class="app-name">Swift</p>
+			</li>
+			<li class="animate" id="git">
+				<div class="app-logo"></div><p class="app-name">Git</p>
+			</li>
+			<li class="animate" id="xcode">
+				<div class="app-logo"></div><p class="app-name">XCode</p>
+			</li>
+			<li class="animate" id="bootstrap">
+				<div class="app-logo"></div><p class="app-name">Bootstrap</p>
+			</li>
+			<li class="animate" id="sass">
+				<div class="app-logo"></div><p class="app-name">SASS</p>
 			</li>
 		</ul>
 <!-- 		<div class="skills-sub-header">In The Works</div>

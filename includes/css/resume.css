@@ -143,16 +143,26 @@ section.resume {
 				}
 					/* APP ICONS */
 					/* graphics */
+					#sketch .app-logo {
+					background-image: url('../image_assets/apps/sketch.png');}
 					#photoshop .app-logo {
 					background-image: url('../image_assets/apps/photoshop.png');}
 					#ai .app-logo {
 					background-image: url('../image_assets/apps/ai.png');}
 					#indesign .app-logo {
 					background-image: url('../image_assets/apps/indd.png');}
-					#sketch .app-logo {
-					background-image: url('../image_assets/apps/sketch.png');}
 					#balsamiq .app-logo {
 					background-image: url('../image_assets/apps/balsamiq.png');}
+
+					/* Dev 1 */
+					#html5 .app-logo {
+					background-image: url('../image_assets/apps/html5.png');}
+					#css3 .app-logo {
+					background-image: url('../image_assets/apps/css3.png');}
+					#jquery .app-logo {
+					background-image: url('../image_assets/apps/jquery.png');}
+					#coffeescript .app-logo {
+					background-image: url('../image_assets/apps/coffeescript.png');}
 
 					/* 3d */
 					#autocad .app-logo {
@@ -161,30 +171,43 @@ section.resume {
 					background-image: url('../image_assets/apps/inventor.png');}
 					#max .app-logo {
 					background-image: url('../image_assets/apps/max.png');}
+					#c4d .app-logo {
+					background-image: url('../image_assets/apps/c4d.png');}
 
-					/* Dev */
-					#html5 .app-logo {
-					background-image: url('../image_assets/apps/html5.png');}
-					#css3 .app-logo {
-					background-image: url('../image_assets/apps/css3.png');}
-					#jquery .app-logo {
-					background-image: url('../image_assets/apps/jquery.png');}
-					#sublime .app-logo {
-					background-image: url('../image_assets/apps/sublime.png');}
-					#coda .app-logo {
-					background-image: url('../image_assets/apps/coda.png');}
+					/* Dev 2 */
+					#arduino .app-logo {
+					background-image: url('../image_assets/apps/arduino.png');}
 					#xcode .app-logo {
 					background-image: url('../image_assets/apps/xcode.png');}
-					#espresso .app-logo {
-					background-image: url('../image_assets/apps/espresso.png');}
+					#php .app-logo {
+					background-image: url('../image_assets/apps/php.png');}
+					#cpp .app-logo {
+					background-image: url('../image_assets/apps/cpp.png');}
+					#java .app-logo {
+					background-image: url('../image_assets/apps/java.png');}
+					#swift .app-logo {
+					background-image: url('../image_assets/apps/swift.png');}
+					#git .app-logo {
+					background-image: url('../image_assets/apps/git.png');}
+					#bootstrap .app-logo {
+					background-image: url('../image_assets/apps/bootstrap.png');}
+					#sass .app-logo {
+					background-image: url('../image_assets/apps/sass.png');}
 
 					/* video */
 					#ae .app-logo {
 					background-image: url('../image_assets/apps/ae.png');}
-					#c4d .app-logo {
-					background-image: url('../image_assets/apps/c4d.png');}
 					#premiere .app-logo {
 					background-image: url('../image_assets/apps/premiere.png');}
 					#final_cut .app-logo {
 					background-image: url('../image_assets/apps/final_cut.png');}
+
+
+					/* Other */
+					#espresso .app-logo {
+					background-image: url('../image_assets/apps/espresso.png');}
+					#sublime .app-logo {
+					background-image: url('../image_assets/apps/sublime.png');}
+					#coda .app-logo {
+					background-image: url('../image_assets/apps/coda.png');}
 
