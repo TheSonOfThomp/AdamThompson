@@ -138,7 +138,7 @@
       <!-- ********** KNOWROAMING PACKAGE ********** -->
       <li class="folio-item industrial">
 	      <a href="Portfolio/?p=KR_retail">
-	      	<img src="includes/portfolio_images/retail.jpg">
+	      	<img src="includes/portfolio_images/retail-white.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">KnowRoaming Retail Display</span><br/>
