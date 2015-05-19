@@ -135,7 +135,7 @@
 			</div>
 		</a>
       </li>
-      <!-- ********** KNOWROAMING PACKAGE ********** -->
+      <!-- ********** KNOWROAMING STAND ********** -->
       <li class="folio-item industrial">
 	      <a href="Portfolio/?p=KR_retail">
 	      	<img src="includes/portfolio_images/retail-white.jpg">

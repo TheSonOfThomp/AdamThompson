@@ -89,6 +89,8 @@
 
 		case 'KR_promo':
 			$p_title = 'KnowRoaming Promotional Materials';
+			$p_p1 = "At KnowRoaming I designed several pieces of propotional media. Not all of it is shown here.";
+			$img1 = $img_path."KnowRoaming_pass.jpg";
 			break;
 		case 'ComicSans':
 			$p_title = "Say No To Comic Sans";

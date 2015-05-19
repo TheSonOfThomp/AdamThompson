@@ -14,6 +14,11 @@ $(document).ready(function(){
 			x = 0;
 	},6000);
 
+	$('.sub-header #falcon').click(function(){
+		alert('click');
+	});
+
+
 	// // Toggle V2
 	// for (var i =  2 ; i <= 4; i++) {
 	// 	$('.tagline em#tag' + i).slideToggle();

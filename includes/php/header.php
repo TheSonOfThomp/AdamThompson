@@ -2,7 +2,7 @@
 	<div class="sub-header">
 		<div class="container">
 			<div class="title">Adam Thompson <?php $DEBUG; ?></div>
-			<img alt="I design things" src="includes/image_assets/falcon.png">
+			<a class="img-container" href='/Portfolio/?p=falcon'><img id="falcon" alt="I design things" src="includes/image_assets/falcon.png"></a>
 			<div class="tagline animate">
 				<em id="tag1">Experience</em> Designer
 				<em id="tag2" style="display: none;">Interaction Designer</em>
