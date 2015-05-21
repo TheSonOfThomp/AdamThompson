@@ -2,17 +2,20 @@ header.main-header {
 	padding-top: 1rem;
 }
 .sub-header .img-container {
-	cursor: pointer;
-}
-.sub-header #falcon {
 	position: relative;
 	display: block;
 	float: left;
-	height: 7em;
-	width: auto;
+	height: 112px;
+	width: 93px;
 	margin-left: 1.6rem;
 	margin-top: 1rem;
 	cursor: pointer;
+	z-index: 100;
+}
+.sub-header #falcon {
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
 .sub-header .tagline {
 	position: relative;

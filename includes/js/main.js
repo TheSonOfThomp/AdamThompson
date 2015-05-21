@@ -14,11 +14,6 @@ $(document).ready(function(){
 			x = 0;
 	},6000);
 
-	$('.sub-header #falcon').click(function(){
-		alert('click');
-	});
-
-
 	// // Toggle V2
 	// for (var i =  2 ; i <= 4; i++) {
 	// 	$('.tagline em#tag' + i).slideToggle();
@@ -43,6 +38,9 @@ $(document).ready(function(){
 	// Mobile - show Resume content
 	if ($(window).width() <= 768) {
 		$('.job').click(function(){
+			$('.resume-list',this).slideToggle();
+		});
+		$('.school').click(function(){
 			$('.resume-list',this).slideToggle();
 		});
 	}

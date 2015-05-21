@@ -16,10 +16,10 @@
 				<div class="company-site"><a href="http://www.knowroaming.com" target="_blank">KnowRoaming</a></div>
 			</div>
 			<div class="resume-content">
-				<div class="job-header">
-					<span class="job-title">User Experience and Product Designer</span>
+				<div class="subsection-header">
+					<span class="subsection-title">User Experience and Product Designer</span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, Product Design, User Interface Designer at KnowRoaming</span>
-					<span class="job-duration">May 2014 - April 2015</span>
+					<span class="subsection-duration">May&nbsp2014 - April&nbsp2015</span>
 				</div>
 				<ul class="resume-list">
 					<li>My primary task at KnowRoaming was to redesign the interface, and rethink the functionality of their mobile apps. In coordination with the COO, developers, and Customer Service (as a proxy for user feedback), I reworked everything from the registration workflow, to the in app experience at home and abroad using the <a href="http://www.knowroaming.com" target="_blank">KnowRoaming SIM Sticker</a>. </li>
@@ -41,10 +41,10 @@
 				<div class="company-site"><a href="http://mediago.sony.com" target="_blank">Sony Network Entertainment</a></div>
 			</div>
 			<div class="resume-content">
-				<div class="job-header">
-					<span class="job-title">User Experience Designer</span>
+				<div class="subsection-header">
+					<span class="subsection-title">User Experience Designer</span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, User Interface Designer at Sony Network Entertainment</span>
-					<span class="job-duration">September - December 2013</span>
+					<span class="subsection-duration">September - December&nbsp2013</span>
 				</div>
 				<ul class="resume-list">
 					<li>Lead the design and development for a new music-dicovery feature in MediaGo. This feature has not yet been released.</li>
@@ -60,9 +60,9 @@
 				<div class="company-site"><a href="http://www.genesyslabs.com" target="_blank">Genesys Labs</a></div>
 			</div>
 			<div class="resume-content">
-				<div class="job-header">
-					<span class="job-title">IT &amp Engineering HR Assistant</span>
-					<span class="job-duration">January - April 2013</span>
+				<div class="subsection-header">
+					<span class="subsection-title">IT &amp Engineering HR Assistant</span>
+					<span class="subsection-duration">January - April&nbsp2013</span>
 				</div>
 				<ul class="resume-list">
 					<li>Organized an open house event &amp designed and assisted in designing all event related media</li>
@@ -74,10 +74,10 @@
 		</article>
 	</section>
 	<section class="skills container">
-		<div class="skills-header">
-			<span class="skills-title">My Toolbox</span>
+		<div class="resume-header">
+			<span class="resume-title">My Toolbox</span>
 		</div>
-		<div class="skills-sub-header"></div>
+		<div class="skills-sub-header"><!-- Professional --></div>
 		<ul class="program-list"> <!-- must have a multiple of 8 -->
 			<li class="animate" id="sketch">
 				<div class="app-logo"></div><p class="app-name">Sketch</p>
@@ -104,7 +104,7 @@
 				<div class="app-logo"></div><p class="app-name">CoffeeScript</p>
 			</li>
 		</ul>
-		<div class="skills-sub-header"></div>
+		<div class="skills-sub-header"><!-- Other --></div>
 		<ul class="program-list"> <!-- must have a multiple of 8 -->
 			<li class="animate" id="autocad">
 				<div class="app-logo"></div><p class="app-name">AutoCad</p>
@@ -162,5 +162,46 @@
 <!-- 		<div class="skills-sub-header">In The Works</div>
 		<ul class="program-list">
 		</ul> -->
+	</section>
+	<section class="education container">
+		<div class="resume-header">
+			<span class="resume-title">Education</span>
+		</div>
+		<article class="school" id="uwaterloo">
+			<div class="logo-container">
+				<div class="logo"></div>
+				<span class="company-site">University of Waterloo</span>
+			</div>
+			<div class="resume-content">
+				<div class="subsection-header">
+					<span class="subsection-title">Systems Design Engineering <span class="inline-note">with Cognitive Science Minor</span></span>
+					<span class="hidden">University of Waterloo, Systems Design, Mechatronics, Human Factors, User Interface, </span>
+					<span class="subsection-duration"><?php echo $term ?> - Class&nbspof&nbsp2017</span>
+				</div>
+				<ul class="resume-list">
+					<li>Engineering Design <span class="inline-note">(SYDE 361)<span class="subsection-duration">Spring 2015</span></span>
+						<div class="list-description">This class includes a term-long design project, while learning about the design process, from problem definition to prototyping.</div>
+					</li>
+					<li>Mechanics of Deformable Solids <span class="inline-note">(SYDE 286)<span class="subsection-duration">Fall 2014</span></span>
+						<div class="list-description">We explored the mechanics involved in stress and strain on common engineering materials. Our final was to build a cardboard bridge and estimate its failure load.</div>
+					</li>
+					<li>Circuits & Instrumentation <span class="inline-note">(SYDE 292)<span class="subsection-duration">Fall 2014</span></span>
+						<div class="list-description">This course covered op-amps, filters and transducers. We covered measurement and instrumentation devices, and hight, low and band-pass filters. Our final project was a single-note guitar tuner using an instrumentation amplifier, and a seriese of band-pass filters</div>
+					</li>
+					<li>Intro to Cognitive Science <span class="inline-note">(PSYCH 256)<span class="subsection-duration">Fall 2014</span></span>
+						<div class="list-description">This course was an introduction to the field of cognitive science. We covered many of the approaches to the field such as the Computational-Reperesentational Understandind of the Mind (CRUM), and others.</div>
+					</li>
+					<li>Human Factors in Design <span class="inline-note">(SYDE 162)<span class="subsection-duration">Spring 2013</span></span>
+						<div class="list-description">We were introduced to needs-analysis, user interviews, ergonimics and user testing.</div>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="school hidden" id="fhci">
+			<div class="logo-container">
+				<div class="logo"></div>
+				<span class="company-site">Forest Heights Collegiate Institute</span>
+			</div>
+		</article>
 	</section>
 </section>

@@ -4,6 +4,17 @@ section.resume {
 .resume a {
 	text-decoration: underline;
 }
+
+.resume-header {
+	padding-left: 1rem;
+	width: 100%;
+	border-bottom: 1px solid #4a4a4a;
+}
+	.resume-title {
+		font-family: "Raleway", "Lato", "Helvetica", "Arial", sans-serif;
+		font-size: 2rem;
+		line-height: 2em;
+	}
 .experience {
 	position: relative;
 	display: inline-block;
@@ -64,14 +75,20 @@ section.resume {
 			padding-left: 2rem;
 			border-left: 1px solid #4a4a4a;
 		}
-			.job-header {
+			.subsection-header {
 
 			}
-				.job-title {
+				.subsection-title {
 					font-family: "Raleway", "Lato", "Helvetica", "Arial", sans-serif;
 					font-size: 2rem;
 				}
-				.job-duration {
+					.inline-note {
+						display: inline;
+						font-size: 1.25rem;
+						font-style: italic;
+					}
+
+				.subsection-duration {
 					margin-left: 1rem;
 					font-family: "Lato", "Helvetica", "Arial", sans-serif;
 					font-size: 1rem;
@@ -85,22 +102,16 @@ section.resume {
 				.resume-list li {
 					margin-bottom: 1em;
 				}
+				.resume-list .list-description {
+					font-family: "Merriweather", "Garamond", "Times New Roman", serif;
+					font-size: 1rem;
+				}
 
 .skills {
 	position: relative;
 	display: inline-block;
 	margin-top: 2rem;
 }
-	.skills-header {
-		padding-left: 1rem;
-		width: 100%;
-		border-bottom: 1px solid #4a4a4a;
-	}
-		.skills-title {
-			font-family: "Raleway", "Lato", "Helvetica", "Arial", sans-serif;
-			font-size: 2rem;
-			line-height: 2em;
-		}
 	.skills-sub-header {
 		padding-left: 1rem;
 		padding-top: 1.5rem;
@@ -211,3 +222,17 @@ section.resume {
 					#coda .app-logo {
 					background-image: url('../image_assets/apps/coda.png');}
 
+
+.education {
+	position: relative;
+	display: inline-block;
+}
+.school {
+	margin-top: 2rem;
+}
+	.school#uwaterloo .logo {
+		background-image: url('../image_assets/uwaterloo.gif');}
+	}
+	.school#fhci .logo {
+		background-image: url('../image_assets/fhci.png');}
+	}

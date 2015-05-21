@@ -27,13 +27,13 @@
 		top: 0;
 		padding-left: 4%; padding-left: 4vw; 
 	}
-	.sub-header img {
-		height: 5.4rem;
+	.sub-header .img-container {
+		height: 86px;
+		width: 71px;
 		float: right;
 		margin: 0;
 		padding-top: 1.8rem;
-		padding-right: 2%;
-		opacity: 1;
+		padding-right: 3%;
 	}
 	.sub-header .tagline {
 		width: 100%;
@@ -148,16 +148,16 @@
 	.resume .sub-header li {
 		font-size: 1rem;
 	}
-	.experience .logo-container {
+	.logo-container {
 		width: 100%;
 	}
-	.experience .logo {
+	.logo {
 		width: 60%;
 		padding-bottom: 60%;
 		margin: 0 auto;
 
 	}
-	.experience .resume-content {
+	.resume-content {
 		margin-top: 2rem;
 		max-width: 100%;
 		min-width: 100%;
@@ -165,20 +165,23 @@
 		border-top: 1px solid #5B753D;
 		padding-left: 0;
 	}
-	.experience .job-header {
+	.resume-header {
+		margin-top: 3rem;
+	}
+	.subsection-header {
 		width: 100%;
 		padding-top: 1rem;
 		text-align: center;
 	}
-	.experience .job-title {
+	.subsection-title {
 		width: 100%;
 		font-size: 1.5rem;
 	}
-	.experience .job-duration {
+	.subsection-duration {
 		margin: 0;
 		display: block;
 	}
-	.experience .resume-list {
+	.resume-list {
 		display: none;
 		padding-left: 40px;
 	}
