@@ -111,6 +111,18 @@
 			</div>
 		</a>
       </li>
+      <!-- ********** KNOWROAMING STAND ********** -->
+      <li class="folio-item industrial">
+	      <a href="Portfolio/?p=KR_retail">
+	      	<img src="includes/portfolio_images/retail-white.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+				  	<span class="folio-title">KnowRoaming Retail Display</span><br/>
+				  	<span class="folio-type">Industrial Design</span>
+				</div>
+			</div>
+		</a>
+      </li>
       <!-- ********** KNOWROAMING APPLICATOR ********** -->
       <li class="folio-item industrial">
 	      <a href="Portfolio/?p=KR_applicator">
@@ -130,18 +142,6 @@
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">KnowRoaming Package Design</span><br/>
-				  	<span class="folio-type">Industrial Design</span>
-				</div>
-			</div>
-		</a>
-      </li>
-      <!-- ********** KNOWROAMING STAND ********** -->
-      <li class="folio-item industrial">
-	      <a href="Portfolio/?p=KR_retail">
-	      	<img src="includes/portfolio_images/retail-white.jpg">
-			<div class="hover-state animate">
-				<div class="folio-hover">
-				  	<span class="folio-title">KnowRoaming Retail Display</span><br/>
 				  	<span class="folio-type">Industrial Design</span>
 				</div>
 			</div>

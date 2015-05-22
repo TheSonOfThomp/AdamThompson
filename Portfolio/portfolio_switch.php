@@ -54,14 +54,28 @@
 		case 'stic':
 			$p_title = 'Ski Tip Connector';
 			$p_p1 = "For our first year design project, our team designed a ski tip connector to assist skiers with mental and physical disabilities more easily navigate the slopes. The design was considered by the Canadian Association for Disabled Skiing. Models were created using AutoCad and Inventor.";
+			$p_p2 = "The mechanism is akin to the G6 guitar capo, which uses a wrap-spring-clutch to keep the device closed when in use, but allows it to quickly open by pressing the release lever.";
+			$img1 = $img_path."STiC.png";
+			$img1_caption = "The STiC, Ski Tip Connector";
+			$img2 = $img_path."STiC-2.png";
+			$img2_caption = "How the STiC is used. The STiCs keep the skis of an amateur skier in the \"pizza\" formation, which allows for more control. The rings on the side allow an instructor to attach tethers to steer a lesser-abled skier" ;
+			$img3 = $img_path."STiC-3.png";
+			$img3_caption = "An exploded view of a Ski Tip Connector";
+			$img4 = $img_path."STiC-4.png";
+			$img4_caption = "";
 			break;
 
 		// OTHER //
 		case 'KR_retail':
 			$p_title = "KnowRoaming Retail Display";
+			$p_p1 = "At KnowRoaming I was asked to design and build a stand to display the SIM Stickers in retail stores. I took just over a week to move from concept sketches to this final prototype.";
+			$p_p2 = " The prototyping phase was a long procedure since I had to experiment to get the front protrusion and front panel height just right. In the final drawings there are notes on which dimenstions need to be lengthened to increase the capacity. (The prototypes were shorter in order to fit on one sheet of the cardboard that we had in the office)";
 			$img1 = $img_path."retail-white.jpg";
+			$img1_caption = "A prototype from the factory";
 			$img2 = $img_path."retail-render.jpg";
+			$img2_caption = "An AutoCAD 3D render of the retail stand";
 			$img3 = $img_path."retail-prototype-1.jpg";
+			$img3_caption = "One of the first prototypes";
 			break;
 		case 'mediago':
 			$p_title = "MediaGo app Redesign";
@@ -80,7 +94,7 @@
 			break;
 		case 'falcon':
 			$p_title = 'Falcon Logo';
-			$p_p1 = "My personal logo is based on the old heraldry of the Scottish and English Thompson's. I have wanted to design my own simple line logo for a while, so when I discovered what was on my family's crest at the CNE, I thought that a falcon might make for a pretty cool logo. I sketched a few designs on paper, and over several weeks removed unnecessary details, reducing the shape of the falcon to as few lines as possilble.";
+			$p_p1 = "My personal logo is based on the old heraldry of the Scottish and English Thompson's. I have wanted to design my own simple line logo for a while, so when I discovered what was on my family's crest last year at the CNE, I thought that a falcon might make for a pretty cool logo. I sketched a few designs on paper, and over several weeks removed unnecessary details, reducing the shape of the falcon to as few lines as possilble.";
 			$img2 = $img_path."falcon-dark.jpg";
 			$img2_caption = "The dark version";
 			$img1 = $img_path."falcon-light.jpg";
