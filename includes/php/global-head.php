@@ -4,10 +4,10 @@
 	$DEBUG = false;
 
 	if ($DEBUG) {
-	 	$root_path = 'http://localhost:8888/adam-thompson-4';
+	 	$root_path = 'http://localhost:9999/adam-thompson-4';
 	 } 
 	 else {
-	 	$root_path = 'http://adam-thompson.ca';
+	 	$root_path = 'http://adamthompson.ca';
 	 }
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
