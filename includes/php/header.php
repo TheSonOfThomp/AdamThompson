@@ -1,9 +1,10 @@
+
 <header class="main-header">
 	<div class="sub-header">
 		<div class="container">
-			<div class="title">Adam Thompson <?php $DEBUG; ?></div>
-			<a class="img-container" target="_blank" href='Portfolio/?p=falcon'>
-				<img id="falcon" alt="I design things" src="includes/image_assets/falcon.png">
+			<div class="title"><a href="<?php echo $root_path; ?>/">Adam Thompson <?php $DEBUG; ?></a></div>
+			<a class="img-container" target="_blank" href='<?php echo $root_path; ?>/Portfolio/?p=falcon'>
+				<img id="falcon" alt="I design things" src="<?php echo $root_path; ?>/includes/image_assets/falcon.png">
 			</a>
 			<div class="tagline animate">
 				<em id="tag1">Experience</em> Designer
@@ -12,20 +13,22 @@
 				<em id="tag4" style="display: none;">Industrial Designer</em>
 				<em id="tag5" style="display: none;">Web Designer</em>
 			</div>
+			<!-- NavBar -->
 			<ul>
 				<li>
-					<a href="#portfolio">Portfolio</a>
+					<a href="<?php echo $root_path; ?>/#portfolio">Portfolio</a>
 				</li>
 				<li>
-					<a href="#about">About</a>
+					<a href="<?php echo $root_path; ?>/#about">About</a>
 				</li>
 				<li>
-					<a href="#resume">Resumé</a>
+					<a href="<?php echo $root_path; ?>/#resume">Resume</a>
 				</li>
 				<li>
-					<a href="#social">Social</a>
+					<a href="<?php echo $root_path; ?>/#social">Social</a>
 				</li>
 			</ul>
+			<!-- //NavBar -->
 		</div>
 	</div>
 </header>

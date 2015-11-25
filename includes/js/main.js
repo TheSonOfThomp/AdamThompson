@@ -14,27 +14,6 @@ $(document).ready(function(){
 			x = 0;
 	},6000);
 
-	// // Toggle V2
-	// for (var i =  2 ; i <= 4; i++) {
-	// 	$('.tagline em#tag' + i).slideToggle();
-	// };
-
-	// var y = 1;
-	// setInterval(function(){
-	// 	console.log(y + ',')
-	// 	$('.tagline em#tag' + y).slideToggle();
-	// 	y++;
-	// 	if (y>=5) {
-	// 		y=1;
-	// 	};
-	// 	console.log(y + ';')
-	// 	$('.tagline em#tag' + y).slideToggle();
-
-	// }, 6000);
-
-	// var port_height = $('.portfolio .menu').height() + 2 * $('.portfolio .gallery li').height();
-	// $('.portfolio').height(port_height);
-
 	// Mobile - show Resume content
 	if ($(window).width() <= 768) {
 		$('.job').click(function(){
@@ -44,4 +23,7 @@ $(document).ready(function(){
 			$('.resume-list',this).slideToggle();
 		});
 	}
+
+	// $('.gallery .folio-item a').vanillabox();
+
 });

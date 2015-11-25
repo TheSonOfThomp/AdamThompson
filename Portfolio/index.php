@@ -3,12 +3,18 @@ include('../includes/php/global-head.php');
 include('portfolio_switch.php');
 ?>
 <title>Adam Thompson - <?php echo($p_title) ?></title>
+<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/header.css" type="text/css">
+<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/mobile.css" type="text/css">
 <link rel="stylesheet" type="text/css" href="<?php echo $root_path; ?>/includes/css/portfolio-hilight.css">
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/portfolio.js"></script>
 </head>
 <!-- ********** /HEAD ********** -->
 
 
-<header>
+<!-- <header>
 	<div class="sub-header">
 		<div class="container">
 			<div class="title"><?php echo $p_title ?></div>
@@ -17,8 +23,10 @@ include('portfolio_switch.php');
 			</ul>
 		</div>
 	</div>	
-</header>
+</header> -->
+<?php include('../includes/php/header.php'); ?>
 <article class="gallery-content">
+	<h2 class="portfolio-title"><?php echo $p_title ?></h2>
 	<div class="col left-column">
 		<p class="folio_paragraph" id="paragraph1"><?php echo $p_p1; ?></p>
 		<p class="folio_paragraph" id="paragraph2"><?php echo $p_p2; ?></p>
@@ -60,5 +68,10 @@ include('portfolio_switch.php');
 		</figure>
 	</div>
 </article>
+<script type="text/javascript">
+	// Scroll to the h2
+	h2_location = $('h2').offset().top;
+    $('body').animate({scrollTop: h2_location}, 650);
+</script>
 </body>
 </html>

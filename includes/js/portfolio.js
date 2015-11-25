@@ -53,4 +53,6 @@ $(document).ready(function(){
     $('.gallery-modal').slideToggle('slow');
     $('body').animate({scrollTop: scroll_location}, scroll_location/1.6);
   })
+  
+
 });

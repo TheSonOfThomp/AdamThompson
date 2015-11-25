@@ -6,10 +6,12 @@
 		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/portfolio.css" type="text/css">
 		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/resume.css" type="text/css">
 		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/mobile.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/theme/bitter/vanillabox.css">
 
 		<!-- SCRIPTS -->
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/jquery.mixitup.min.js"></script>
+		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/jquery.vanillabox-0.1.7.min.js"></script>
 		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/main.js"></script>
 		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/portfolio.js"></script>
 </head> 
@@ -21,7 +23,7 @@
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 	
-	  ga('create', 'UA-41604709-1', 'adam-thompson.ca');
+	  ga('create', 'UA-41604709-1', 'adamthompson.ca');
 	  ga('send', 'pageview');
 	  _gaq.push(['_setCustomVar',
 	      1,                  // This custom var is set to slot #1.  Required parameter.

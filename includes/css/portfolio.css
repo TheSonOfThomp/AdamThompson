@@ -10,6 +10,8 @@ section.portfolio {
 .hide {
   display: none;
 }
+
+/* ---------- Dropdown Content Filter ---------- */
 .portfolio .menu {
   position: absolute;
   margin: 0;
@@ -56,7 +58,6 @@ section.portfolio {
   -moz-transform: rotate(25deg);
   border-radius: 0 0 0 2.5em;
 }
-
 .menu ul {
 	position: relative;
 	width: 100%;
@@ -77,6 +78,7 @@ section.portfolio {
 	background: #EDF2E6;
 }
 
+/* ---------- Portfolio Images ---------- */
 .gallery {
 	position: absolute;
 	width: 100%;
@@ -91,7 +93,7 @@ section.portfolio {
 	margin: 0; padding: 0;
 	list-style: none;
 }
-.gallery li {
+.gallery .folio-item {
 	position: relative;
 	display: inline-block;
 	display: none; /* For Filtering */
@@ -100,12 +102,18 @@ section.portfolio {
 	height: 37.5vw;
 	margin: 0; padding: 0;
 }
-.gallery li img {
+
+.gallery .folio-item img {
 	position: relative;
 	width: 100%;
 	height: auto;
 	/*background-image: url('../portfolio_images/placeholder-dark.jpg');*/
 	cursor: pointer;
+}
+
+.gallery a {
+	display: block;
+	height: 0;
 }
 
 .gallery .hover-state {

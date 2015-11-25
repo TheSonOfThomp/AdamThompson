@@ -1,7 +1,8 @@
-.title {
-	width: 100%;
+.portfolio-title {
+	margin-bottom: 0.5rem;
 }
-.back-to-main {
+
+/*.back-to-main {
 	position: relative;
 	display: block;
 	line-height: 1em;
@@ -18,7 +19,7 @@
 	margin-right: 0.25em;
 	background-image: url('../image_assets/back-arrow.png');
 	background-size: 100%;
-}
+}*/
 
 .gallery-content {
 	position: relative;
@@ -26,7 +27,6 @@
 	left: 0; right: 0;
 	width: 84%;
 	padding: 0 8%;
-	background-color: #4a4a4a;
 }
 .col {
 	position: relative;
@@ -37,14 +37,14 @@
 }
 .left-column {
 	width: 54%;
-	padding: 1rem 4% 0 0; 
-}
-.folio_paragraph {
-	width: 100%;
+	padding: 0 4% 0 0; 
 }
 .right-column {
 	width: 38%;
-	padding: 1rem 2% 0 2%; 
+	padding: 0 2% 0 2%; 
+}
+.folio_paragraph {
+	width: 100%;
 }
 .folio_image {
 	display: inherit;

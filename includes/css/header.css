@@ -1,6 +1,10 @@
 header.main-header {
 	padding-top: 1rem;
 }
+
+.sub-header .title {
+	z-index: 100;
+}
 .sub-header .img-container {
 	position: relative;
 	display: block;
