@@ -1,7 +1,8 @@
 <?php $page_id = "Adam Thompson";
-
-include('includes/php/main-head.php');
-
+include('includes/php/main-head.php'); ?>
+<!-- BODY -->
+<main>
+<?php 
 include('includes/php/header.php'); ?>
 
 <?php
@@ -21,5 +22,6 @@ include('includes/php/header.php'); ?>
 <?php
 	include 'includes/php/footer.php';
 ?>
+</main>
 </body>
 </html>

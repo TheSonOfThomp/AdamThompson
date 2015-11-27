@@ -46,6 +46,7 @@ $(document).ready(function(){
   $('li.folio-item').click(function(){
     $('.gallery-modal').slideToggle('slow');
     scroll_location = $('body').scrollTop();
+    console.log('Scrolling from: ' + scroll_location);
     $('body').animate({scrollTop: 0}, scroll_location/1.6);
     // Blur everything else
   })

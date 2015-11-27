@@ -12,3 +12,5 @@
 		</div>
 	</div>
 </section>
+<section class="site-filter">
+</section>

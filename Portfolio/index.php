@@ -24,6 +24,7 @@ include('portfolio_switch.php');
 		</div>
 	</div>	
 </header> -->
+<main>
 <?php include('../includes/php/header.php'); ?>
 <article class="gallery-content">
 	<h2 class="portfolio-title"><?php echo $p_title ?></h2>
@@ -69,9 +70,10 @@ include('portfolio_switch.php');
 	</div>
 </article>
 <script type="text/javascript">
-	// Scroll to the h2
-	h2_location = $('h2').offset().top;
-    $('body').animate({scrollTop: h2_location}, 650);
+	// // Scroll to the h2
+	// h2_location = $('h2').offset().top;
+ //    $('body').animate({scrollTop: h2_location}, 650);
 </script>
+</main>
 </body>
 </html>

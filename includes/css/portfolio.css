@@ -1,10 +1,10 @@
 section.portfolio {
 	position: relative;
 	display: block;
-	width: 100vw;
+	width: 100%;
 	height: auto;
 	margin: 2em 0;
-	padding-bottom: calc(75% + 3.5rem);
+/*	padding-bottom: calc(75% + 3.5rem);*/
 }
 
 .hide {
@@ -12,8 +12,8 @@ section.portfolio {
 }
 
 /* ---------- Dropdown Content Filter ---------- */
-.portfolio .menu {
-  position: absolute;
+.menu {
+  position: relative;
   margin: 0;
   width: 292px;
   font-size: 1.2rem;
@@ -80,15 +80,18 @@ section.portfolio {
 
 /* ---------- Portfolio Images ---------- */
 .gallery {
-	position: absolute;
+	position: relative;
 	width: 100%;
-	margin: 0; padding: 0;
-	margin-top: 3.5rem;
-	border-color: #5B753D;
+	margin: 0;
+	padding: 0;
+	/*margin-top: 3.5rem;*/
+/*	border-color: #5B753D;
 	border-top: 1px solid;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid;*/
 }
 .gallery ul {
+	position: relative;
+	display: inline-block;
 	width: 100%;
 	margin: 0; padding: 0;
 	list-style: none;
@@ -99,8 +102,11 @@ section.portfolio {
 	display: none; /* For Filtering */
 	float: left;
 	width: 50%;
-	height: 37.5vw;
-	margin: 0; padding: 0;
+	/*height: 37.5vw;*/
+	height: 0;
+	padding: 0;
+	padding-bottom: 37.5%;
+	margin: 0; 
 }
 
 .gallery .folio-item img {
@@ -112,8 +118,8 @@ section.portfolio {
 }
 
 .gallery a {
-	display: block;
-	height: 0;
+	display: inline-block;
+	height: auto;
 }
 
 .gallery .hover-state {

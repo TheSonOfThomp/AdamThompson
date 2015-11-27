@@ -1,5 +1,6 @@
 .portfolio-title {
 	margin-bottom: 0.5rem;
+	margin-left: 2%;
 }
 
 /*.back-to-main {
@@ -23,10 +24,12 @@
 
 .gallery-content {
 	position: relative;
+	display: inline-block;
 	top: 0;
 	left: 0; right: 0;
 	width: 84%;
 	padding: 0 8%;
+	padding-bottom: 3rem;
 }
 .col {
 	position: relative;
@@ -36,8 +39,8 @@
 	line-height: 1.5em;
 }
 .left-column {
-	width: 54%;
-	padding: 0 4% 0 0; 
+	width: 52%;
+	padding: 0 4% 0 2%; 
 }
 .right-column {
 	width: 38%;
