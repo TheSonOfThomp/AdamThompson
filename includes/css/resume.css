@@ -4,6 +4,12 @@ section.resume {
 .resume a {
 	text-decoration: underline;
 }
+.filter-notification {
+	font-family: "Raleway", "Lato", "Helvetica", "Arial", sans-serif;
+	color: #cacaca;
+	font-size: 0.5em;
+	line-height: 2em;
+}
 
 .resume-header {
 	padding-left: 1rem;
@@ -15,6 +21,9 @@ section.resume {
 		font-size: 2rem;
 		line-height: 2em;
 	}
+.resume-item {
+	display: none;
+}
 .experience {
 	position: relative;
 	display: inline-block;
@@ -127,6 +136,7 @@ section.resume {
 			list-style: none;
 		}
 			.program-list li {
+				display: none;
 				position: relative;
 				width: 7%;
 				margin: 1rem 2.75% 1rem 2.75%;

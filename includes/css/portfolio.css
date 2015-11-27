@@ -4,6 +4,7 @@ section.portfolio {
 	width: 100%;
 	height: auto;
 	margin: 2em 0;
+	text-align: center;
 /*	padding-bottom: calc(75% + 3.5rem);*/
 }
 
@@ -12,7 +13,7 @@ section.portfolio {
 }
 
 /* ---------- Dropdown Content Filter ---------- */
-.menu {
+/*.menu {
   position: relative;
   margin: 0;
   width: 292px;
@@ -70,6 +71,93 @@ section.portfolio {
 	padding-left: 1.5em;
 	cursor: pointer;
 	background: #DCE6CF;
+}
+.menu li:hover {
+	background: #DCE6CF;
+}
+.menu li:active {
+	background: #EDF2E6;
+}*/
+
+/* ---------- Inline Dropdown Filter ---------- */
+
+.inline-sort {
+  position: relative;
+  display: inline-block;
+  font-size: 1.25em;
+  line-height: 3em;
+  padding: 0 1rem; 
+  background-color: #fafafa;
+}
+
+.sort-text {
+  display: inline-block;
+  position: relative;
+  float: left;
+  top: 0;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin: 0;
+  width: 270px;
+  z-index: 10;
+  margin-left: 0.5em;
+  text-align: left;
+}
+
+.menu-label {
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu-label .selected {
+  display: inline-block;
+  width: 230px;
+  margin: 0;
+  padding-left: 12px;
+  background: #DCE6CF;
+  z-index: 9;
+}
+
+.menu-label::after {
+  content: '';
+  background: red;
+  position: absolute;
+  display: inline-block;
+  float: left;
+	height: 32px;
+	width: 72px;
+	top: 23.5px;
+	left: 206.5px;
+  padding: 0;
+  margin: 0;
+  background: #DCE6CF;
+  -webkit-transform: rotate(65deg);
+      -ms-transform: rotate(65deg);
+          transform: rotate(65deg);
+  z-index: 0;
+    border-radius: 0 0 0 100%;
+}
+
+.menu ul {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  background: #DCE6CF;
+}
+
+.menu li {
+  padding-left: 1em;
+  cursor: pointer;
+  background: #DCE6CF;
 }
 .menu li:hover {
 	background: #DCE6CF;
