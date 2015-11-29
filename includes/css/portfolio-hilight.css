@@ -1,6 +1,9 @@
 .portfolio-title {
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
 	margin-bottom: 0.5rem;
-	margin-left: 2%;
+	text-align: left;
 }
 
 /*.back-to-main {
@@ -25,18 +28,20 @@
 .gallery-content {
 	position: relative;
 	display: inline-block;
-	top: 0;
-	left: 0; right: 0;
 	width: 84%;
 	padding: 0 8%;
 	padding-bottom: 3rem;
+	margin-top: 3rem;
 }
 .col {
 	position: relative;
-	display: inline-block;
-	float: left;
 	font-size: 1.2rem;
 	line-height: 1.5em;
+}
+.single-column {
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
 }
 .left-column {
 	width: 52%;

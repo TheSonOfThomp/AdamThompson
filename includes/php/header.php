@@ -7,7 +7,7 @@
 				<img id="falcon" alt="I design things" src="<?php echo $root_path; ?>/includes/image_assets/falcon.png">
 			</a>
 			<div class="tagline animate">
-				<em id="tag1">Experience</em> Designer
+				<em id="tag1">UX</em> Designer
 				<em id="tag2" style="display: none;">Interaction Designer</em>
 				<em id="tag3" style="display: none;">Product Designer</em>
 				<em id="tag4" style="display: none;">Industrial Designer</em>

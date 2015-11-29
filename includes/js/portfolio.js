@@ -36,6 +36,6 @@ $(document).ready(function(){
   $('.close-modal').click(function(){
     $('.gallery-modal').slideToggle('slow');
     $('body').animate({scrollTop: scroll_location}, scroll_location/1.6);
-  })
+  });
 
 });
