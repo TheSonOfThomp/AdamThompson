@@ -52,6 +52,9 @@ section.resume {
 				background-position: 50%;
 				background-repeat: no-repeat;
 			}
+				.noom .logo {
+					background-image: url("../image_assets/noom_logo.png");
+				}
 				.knowroaming .logo {
 					background-image: url("../image_assets/knowroaming_logo.png");
 					background-position: 50% 46%;
@@ -108,6 +111,14 @@ section.resume {
 				font-size: 1.25rem;
 				line-height: 1.5em;
 			}
+
+				.resume-content-divider {
+					font-size: 1.5rem;
+					line-height: 1.5em;
+					margin-bottom: 0.5em;
+					text-decoration: underline;
+					font-style: italic;
+				}
 				.resume-list li {
 					margin-bottom: 1em;
 				}

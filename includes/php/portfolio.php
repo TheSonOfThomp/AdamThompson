@@ -2,7 +2,7 @@
   <div class="gallery" id="gallery">
     <ul>
     <!-- ********** KNOWROAMING APP ********** -->
-      <li class="folio-item ux all">
+      <li class="folio-item ux featured">
       	<a href="Portfolio/?p=KR_app">
 			<img src="includes/portfolio_images/knowroaming_app_home.jpg">
 			<div class="hover-state animate">
@@ -14,7 +14,7 @@
 		</a>
 	  </li>
 	  <!-- ********** KNOWROAMING WEBSITE ********** -->
-      <li class="folio-item ux all">
+      <li class="folio-item ux featured">
 	      <a href="Portfolio/?p=KR_web">
 	      	<img src="includes/portfolio_images/knowroaming_pilots_site.jpg">
 			<div class="hover-state animate">
@@ -38,7 +38,7 @@
 		</a>
       </li>
       <!-- ********** Colour Thermometer ********** -->
-      <li class="folio-item web software all">
+      <li class="folio-item web software featured">
       	<a href="Portfolio/?p=colortherm">
 			<img src="includes/portfolio_images/colourThermometer.jpg">
 			<div class="hover-state animate">
@@ -50,7 +50,7 @@
 		</a>
 	  </li>
 	  <!-- ********** athletes.knowroaming ********** -->
-      <li class="folio-item web all">
+      <li class="folio-item web featured">
       	<a href="Portfolio/?p=athletes">
 			<img src="includes/portfolio_images/athletes1.jpg">
 			<div class="hover-state animate">

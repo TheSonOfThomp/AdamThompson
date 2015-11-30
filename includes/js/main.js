@@ -1,7 +1,7 @@
 //Toggle V1
 var design_types = ["UX", "Interaction", "Product", "Industrial", "Web"];
 
-var filterResume = false;
+var filterResume = 0;
 
 $(document).ready(function(){
 	//Rotate through the header 
@@ -40,7 +40,7 @@ $(document).ready(function(){
 			},
 			// Set default filter
 			load: {
-				filter: '.all'
+				filter: '.featured'
 			}
 		});
 	});
@@ -54,7 +54,10 @@ $(document).ready(function(){
 				selectors: {
 					target: '.resume-item',
 					filter: '.filter'
-			  	}
+			  	},
+			  	load: {
+					filter: '.featured'
+				}
 			});
 		});
 
@@ -91,16 +94,7 @@ function getFilterNotification(filter) {
 		case 'pm':
 			return prefix + 'Product Management';
 		default:
-			return ' - Showing All items';
+			return ' - Showing top items';
 	}
 
 }
-
-
-
-
-
-
-
-
-
