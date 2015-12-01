@@ -1,6 +1,43 @@
 <section class="portfolio" id="portfolio">
   <div class="gallery" id="gallery">
     <ul>
+    <!-- ********** NOOM -  Food Logging ********** -->
+      <li class="folio-item ux featured">
+      	<a href="Portfolio/?p=noom_logging">
+			<img src="includes/portfolio_images/noom-meal-logging.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">Noom Meal Logging UX</span><br/>
+					<span class="folio-type">UI &amp UX</span>
+				</div>
+			</div>
+		</a>
+	  </li>
+	  <!-- ********** NOOM - Portion Picker ********** -->
+      <li class="folio-item ux">
+      	<a href="Portfolio/?p=noom_portion">
+			<img src="includes/portfolio_images/noom-portion-picker.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">Noom Portion Picker</span><br/>
+					<span class="folio-type">UI &amp UX</span>
+				</div>
+			</div>
+		</a>
+	  </li>
+	  <!-- ********** NOOM - Coach Dashboard ********** -->
+      <li class="folio-item featured ux pm">
+      	<a href="Portfolio/?p=noom_coach">
+			<img src="includes/portfolio_images/noom-coach-dashboard.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">Noom Coach Dashboard</span><br/>
+					<span class="folio-type">UI &amp UX</span>
+				</div>
+			</div>
+		</a>
+	  </li>
+
     <!-- ********** KNOWROAMING APP ********** -->
       <li class="folio-item ux featured">
       	<a href="Portfolio/?p=KR_app">
@@ -14,7 +51,7 @@
 		</a>
 	  </li>
 	  <!-- ********** KNOWROAMING WEBSITE ********** -->
-      <li class="folio-item ux featured">
+      <li class="folio-item ux">
 	      <a href="Portfolio/?p=KR_web">
 	      	<img src="includes/portfolio_images/knowroaming_pilots_site.jpg">
 			<div class="hover-state animate">
@@ -50,7 +87,7 @@
 		</a>
 	  </li>
 	  <!-- ********** athletes.knowroaming ********** -->
-      <li class="folio-item web featured">
+      <li class="folio-item web">
       	<a href="Portfolio/?p=athletes">
 			<img src="includes/portfolio_images/athletes1.jpg">
 			<div class="hover-state animate">
@@ -145,7 +182,7 @@
 			</div>
 		</a>
 	  </li>
-	  <!-- ********** THIS SITE********** -->
+	  <!-- ********** THIS SITE ********** -->
       <li class="folio-item web">
       	<a href="Portfolio/?p=this">
 			<img src="includes/portfolio_images/this.jpg">

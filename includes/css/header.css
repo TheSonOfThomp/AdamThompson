@@ -49,7 +49,7 @@ header.main-header {
 .bio {
 	height: 12rem;
 	width: 100%;
-	margin: 8rem 0 8rem 0;
+	margin: 20vh 0;
 }
 
 @media screen and (min-width: 1160px) {

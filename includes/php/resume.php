@@ -22,7 +22,7 @@
 					<span class="subsection-duration">September - December&nbsp2015</span>
 				</div>
 				<ul class="resume-list">
-					<li class="resume-item featured ux graphics pm">Re-designed the mobile meal-logging experience to improve clarity and speed of navigation</li>
+					<li class="resume-item featured ux graphics pm">Re-designed the mobile meal-logging experience to improve clarity and speed of navigation, evidenced by user-testing</li>
 					<li class="resume-item featured ux pm">Initiated multidisciplinary discussions and managed the early design process for the coach dashboard</li>
 					<li class="resume-item featured ux graphics">Improved the food portion picker interface to endure user confidence</li>
 					<li class="resume-item featured soft">Prototyped a recipe parser for the iOS app</li>
@@ -43,25 +43,26 @@
 				<ul class="resume-list">
 
 					<div class="resume-content-divider">UX Design</div>
-						<li class="resume-item featured ux graphics industrial">Redesigned the user experience of both iOS and Android apps. In coordination with the COO, developers, and customer service, I reworked everything from the registration workflow, to the in app experience at home and abroad using the <a href="http://www.knowroaming.com" target="_blank">KnowRoaming SIM Sticker</a>. </li>
-						<li class="resume-item featured ux graphics industrial pm">Leveraged customer feedback to re-design the flow of the app, from account setup to the in-app experience when using the product, to better correspond with the 3 use-phases of the product. </li>
-						<li class="resume-item ux graphics web">Wire-framed and oversaw the design of the new company homepage, and corporate portal</li>
+						<li class="resume-item featured ux graphics industrial">Redesigned both <a href="Portfolio/?p=KR_app">iOS and Android apps</a> from the ground up. I reworked everything from the registration workflow, to the in app experience at home and abroad using the KnowRoaming SIM Sticker.</li>
+						<li class="resume-item featured ux graphics industrial pm">Leveraged customer feedback to iterate on the flow of the app to better correspond with the users' mental model of the 3 use-phases of the product.</li>
+						<li class="resume-item ux graphics web">Initiated and oversaw the preliminary design of the new <a href="Portfolio/?p=KR_web">company homepage</a>, and <a href="corporate.knowroaming.com" target="_blank">corporate portal</a></li>
 
 
 					<div class="resume-content-divider">Product Management</div>
-						<li class="resume-item featured ux pm web soft">Ran weekly stakeholder meetings with the developers, the heads of customer service, and other leadership to discuss the experience of the mobile apps, consumer facing and corporate websites, and other relevant topics. </li>
-						<li class="resume-item featured pm">Created, streamlined and branded a core company service, now called <a href="https://support.knowroaming.com/hc/en-us/articles/203064825-What-is-ReachMe-" target="_blank">ReachMe</a>. ReachMe enables you to receive calls to your home mobile number by forwarding your home mobile number to a local KnowRoaming number.</li>
+						<li class="resume-item featured ux pm web soft">Lead weekly stakeholder meetings with the developers, customer service, and company leadership to discuss the experience of the mobile apps, consumer facing and corporate websites, and other relevant topics.</li>
+						<li class="resume-item featured pm">Created, branded and optimixed a core company service, now called <a href="https://support.knowroaming.com/hc/en-us/articles/203064825-What-is-ReachMe-" target="_blank">ReachMe</a>. ReachMe enables you to receive calls to your home mobile number by forwarding your home mobile number to a local KnowRoaming number.</li>
 
 					<div class="resume-content-divider">Web Development</div>
-						<li class="resume-item web soft">Designed and developed the KnowRoaming Athletes sponsorship sign-up page and form using HTML, CSS, CoffeeScript and php.</li>
-						<li class="resume-item soft pm">Assisted in developing and debugging iOS and Android user interface. I leveraged my programming and design experience to provide valuable development insights.</li>
+						<li class="resume-item web soft">Designed and developed the <a href="athletes.knowroaming.com" target="_blank">KnowRoaming Athletes</a> sign-up page using HTML5, CSS3, CoffeeScript and PHP.</li>
+						<li class="resume-item soft pm">Assisted in developing and debugging iOS and Android user interface</li>
 
 					<div class="resume-content-divider">Industrial Design</div>
-						<li class="resume-item ux industrial">Designed and built a prototype retail stand for dispensing product boxes and displaying product information in retail stores. </li>
-						<li class="resume-item graphics industrial">Designed a new product package concept, leveraging unique features of the KnowRoaming product, reducing the box side by 50%.</li>
-						<li class="resume-item industrial">Created sketches and 3D concept models of an improved sticker application device using AutoCAD and Inventor</li>
+						<li class="resume-item ux industrial">Designed and prototyped a <a href="Portfolio/?p=KR_retail">retail stand</a> for dispensing product boxes and displaying product information in retail stores.</li>
+						<li class="resume-item graphics industrial">Designed a new product <a href="Portfolio/?p=KR_package">package concept</a>, reducing the box side by 50% by leveraging unique features of the KnowRoaming product.</li>
+						<li class="resume-item industrial">Created 3D concept models of an automated <a href="Portfolio/?p=KR_applicator">sticker application device</a> using AutoCAD and Inventor</li>
 				</ul>
 			</div>
+		</article>
 		<article class="sony job">
 			<div class="logo-container">
 				<div class="logo vertical-center"></div>
