@@ -4,6 +4,12 @@ section.resume {
 .resume a {
 	text-decoration: underline;
 }
+.filter-notification {
+	font-family: "Raleway", "Lato", "Helvetica", "Arial", sans-serif;
+	color: #cacaca;
+	font-size: 0.5em;
+	line-height: 2em;
+}
 
 .resume-header {
 	padding-left: 1rem;
@@ -15,6 +21,9 @@ section.resume {
 		font-size: 2rem;
 		line-height: 2em;
 	}
+.resume-item {
+	display: none;
+}
 .experience {
 	position: relative;
 	display: inline-block;
@@ -43,6 +52,9 @@ section.resume {
 				background-position: 50%;
 				background-repeat: no-repeat;
 			}
+				.noom .logo {
+					background-image: url("../image_assets/noom_logo.png");
+				}
 				.knowroaming .logo {
 					background-image: url("../image_assets/knowroaming_logo.png");
 					background-position: 50% 46%;
@@ -99,6 +111,14 @@ section.resume {
 				font-size: 1.25rem;
 				line-height: 1.5em;
 			}
+
+				.resume-content-divider {
+					font-size: 1.5rem;
+					line-height: 1.5em;
+					margin-bottom: 0.5em;
+					text-decoration: underline;
+					font-style: italic;
+				}
 				.resume-list li {
 					margin-bottom: 1em;
 				}
@@ -127,6 +147,7 @@ section.resume {
 			list-style: none;
 		}
 			.program-list li {
+				display: none;
 				position: relative;
 				width: 7%;
 				margin: 1rem 2.75% 1rem 2.75%;

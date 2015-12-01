@@ -1,17 +1,20 @@
 section.portfolio {
 	position: relative;
 	display: block;
-	width: 100vw;
+	width: 100%;
 	height: auto;
 	margin: 2em 0;
-	padding-bottom: calc(75% + 3.5rem);
+	text-align: center;
+/*	padding-bottom: calc(75% + 3.5rem);*/
 }
 
 .hide {
   display: none;
 }
-.portfolio .menu {
-  position: absolute;
+
+/* ---------- Dropdown Content Filter ---------- */
+/*.menu {
+  position: relative;
   margin: 0;
   width: 292px;
   font-size: 1.2rem;
@@ -56,7 +59,6 @@ section.portfolio {
   -moz-transform: rotate(25deg);
   border-radius: 0 0 0 2.5em;
 }
-
 .menu ul {
 	position: relative;
 	width: 100%;
@@ -75,37 +77,137 @@ section.portfolio {
 }
 .menu li:active {
 	background: #EDF2E6;
+}*/
+
+/* ---------- Inline Dropdown Filter ---------- */
+
+.inline-sort {
+  position: relative;
+  display: inline-block;
+  font-size: 1.25em;
+  line-height: 3em;
+  padding: 0 1rem; 
+  background-color: #fafafa;
 }
 
+.sort-text {
+  display: inline-block;
+  position: relative;
+  float: left;
+  top: 0;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin: 0;
+  width: 270px;
+  z-index: 10;
+  margin-left: 0.5em;
+  text-align: left;
+}
+
+.menu-label {
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu-label .selected {
+  display: inline-block;
+  width: 230px;
+  margin: 0;
+  padding-left: 12px;
+  background: #DCE6CF;
+  z-index: 9;
+}
+
+.menu-label::after {
+  content: '';
+  background: red;
+  position: absolute;
+  display: inline-block;
+  float: left;
+	height: 32px;
+	width: 72px;
+	top: 23.5px;
+	left: 206.5px;
+  padding: 0;
+  margin: 0;
+  background: #DCE6CF;
+  -webkit-transform: rotate(65deg);
+      -ms-transform: rotate(65deg);
+          transform: rotate(65deg);
+  z-index: 0;
+    border-radius: 0 0 0 100%;
+}
+
+.menu ul {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  background: #DCE6CF;
+}
+
+.menu li {
+  padding-left: 1em;
+  cursor: pointer;
+  background: #DCE6CF;
+}
+.menu li:hover {
+	background: #DCE6CF;
+}
+.menu li:active {
+	background: #EDF2E6;
+}
+
+/* ---------- Portfolio Images ---------- */
 .gallery {
-	position: absolute;
+	position: relative;
 	width: 100%;
-	margin: 0; padding: 0;
-	margin-top: 3.5rem;
-	border-color: #5B753D;
+	margin: 0;
+	padding: 0;
+	/*margin-top: 3.5rem;*/
+/*	border-color: #5B753D;
 	border-top: 1px solid;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid;*/
 }
 .gallery ul {
+	position: relative;
+	display: inline-block;
 	width: 100%;
 	margin: 0; padding: 0;
 	list-style: none;
 }
-.gallery li {
+.gallery .folio-item {
 	position: relative;
 	display: inline-block;
 	display: none; /* For Filtering */
 	float: left;
 	width: 50%;
-	height: 37.5vw;
-	margin: 0; padding: 0;
+	/*height: 37.5vw;*/
+	height: 0;
+	padding: 0;
+	padding-bottom: 37.5%;
+	margin: 0; 
 }
-.gallery li img {
+
+.gallery .folio-item img {
 	position: relative;
 	width: 100%;
 	height: auto;
 	/*background-image: url('../portfolio_images/placeholder-dark.jpg');*/
 	cursor: pointer;
+}
+
+.gallery a {
+	display: inline-block;
+	height: auto;
 }
 
 .gallery .hover-state {

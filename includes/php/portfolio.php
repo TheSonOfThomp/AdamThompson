@@ -1,22 +1,8 @@
 <section class="portfolio" id="portfolio">
-  <div class="menu">
-    <div class="menu-label">
-    	<span>Featured</span>
-    </div>
-    <ul class="dropdown hide">
-      <li class="filter active" data-filter=".showcase" id="all">Featured</li>
-      <li class="filter" data-filter=".ux">UI &amp UX</li>
-      <li class="filter" data-filter=".web">Web Dev</li>
-      <li class="filter" data-filter=".graphics">Graphics</li>
-      <li class="filter" data-filter=".industrial">Industrial</li>
-      <!-- <li class="filter" data-filter=".soft">Software</li> -->
-	  <!-- <li class="filter" data-filter=".music">Music &amp Video</li> -->
-    </ul>
-  </div>
   <div class="gallery" id="gallery">
     <ul>
     <!-- ********** KNOWROAMING APP ********** -->
-      <li class="folio-item ux showcase">
+      <li class="folio-item ux featured">
       	<a href="Portfolio/?p=KR_app">
 			<img src="includes/portfolio_images/knowroaming_app_home.jpg">
 			<div class="hover-state animate">
@@ -28,7 +14,7 @@
 		</a>
 	  </li>
 	  <!-- ********** KNOWROAMING WEBSITE ********** -->
-      <li class="folio-item ux showcase">
+      <li class="folio-item ux featured">
 	      <a href="Portfolio/?p=KR_web">
 	      	<img src="includes/portfolio_images/knowroaming_pilots_site.jpg">
 			<div class="hover-state animate">
@@ -52,7 +38,7 @@
 		</a>
       </li>
       <!-- ********** Colour Thermometer ********** -->
-      <li class="folio-item web software showcase">
+      <li class="folio-item web software featured">
       	<a href="Portfolio/?p=colortherm">
 			<img src="includes/portfolio_images/colourThermometer.jpg">
 			<div class="hover-state animate">
@@ -64,7 +50,7 @@
 		</a>
 	  </li>
 	  <!-- ********** athletes.knowroaming ********** -->
-      <li class="folio-item web showcase">
+      <li class="folio-item web featured">
       	<a href="Portfolio/?p=athletes">
 			<img src="includes/portfolio_images/athletes1.jpg">
 			<div class="hover-state animate">

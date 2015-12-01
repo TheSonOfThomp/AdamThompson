@@ -1,7 +1,7 @@
 <?php $page_title = ucfirst($page_id);
 	include_once('mySchoolTime.php');
 
-	$DEBUG = false;
+	$DEBUG = true;
 
 	if ($DEBUG) {
 	 	$root_path = 'http://localhost:9999/adam-thompson-4';
@@ -17,6 +17,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0;">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="design, user experience, product, industrial, gui">
 		<link rel="shortcut icon" type="image/png" href="<?php echo $root_path?>/includes/image_assets/@_light.png">
 
 		<!-- STYLE & FONTS -->

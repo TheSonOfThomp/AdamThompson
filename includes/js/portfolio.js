@@ -9,7 +9,6 @@ $(document).ready(function(){
   // When a dropdown item is clicked
   $('.dropdown li').click(function(){
     var title = $(this).text();
-    
     // Change the Label title
     $('.menu-label span').text(title);
     
@@ -25,21 +24,6 @@ $(document).ready(function(){
     // $('li.active').fadeIn().removeClass('active');
     // $(this).addClass('active').fadeOut();
   });
-  // MixItUp portfolio filter
-  $(function(){
-    // Instantiate MixItUp:
-    $('#gallery').mixItUp({
-      // Set what elements are the selectors
-      selectors: {
-        target: '.folio-item',
-        filter: '.filter'
-      },
-      // Set default filter
-      load: {
-        filter: '.showcase'
-      }
-    });
-  });
 
   var scroll_location = 0;
   // When a portfolio element is clicked
@@ -52,5 +36,6 @@ $(document).ready(function(){
   $('.close-modal').click(function(){
     $('.gallery-modal').slideToggle('slow');
     $('body').animate({scrollTop: scroll_location}, scroll_location/1.6);
-  })
+  });
+
 });

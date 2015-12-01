@@ -1,6 +1,10 @@
 header.main-header {
 	padding-top: 1rem;
 }
+
+.sub-header .title {
+	z-index: 100;
+}
 .sub-header .img-container {
 	position: relative;
 	display: block;
@@ -45,7 +49,7 @@ header.main-header {
 .bio {
 	height: 12rem;
 	width: 100%;
-	margin: 10rem 0;
+	margin: 8rem 0 8rem 0;
 }
 
 @media screen and (min-width: 1160px) {
@@ -107,4 +111,18 @@ header.main-header {
 .bio .bio-text p {
 	margin: 0;
 	line-height: 1.5em;
+}
+
+.site-filter {
+	text-align: center;
+}
+
+.filter-line {
+	position: absolute;
+	width: 96%;
+	margin-top: 1.75rem;
+	margin: 1.75rem 1% 0 1%;
+	border: none;
+	background-color: #5B753D;
+	height: 1px;
 }

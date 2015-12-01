@@ -1,6 +1,13 @@
 @media screen and (max-width: 768px) {
+	main {
+		width: 100%;
+		margin: 0;
+	}
 	.hide-mobile {
 		display: none;
+	}
+	.mobile-only {
+		display: inline;
 	}
 	/* ------------ HEADER ------------ */
 	header.main-header {
@@ -102,12 +109,45 @@
 		margin-bottom: 1rem;
 	}
 
+	/* ------------ FILTER ------------ */
+
+	.sort-text {
+	}
+	.filter-line {
+		background-color: #cacaca
+	}
+	.inline-sort {
+		width: 66%;
+		text-align: center;
+	}
+	.menu {
+		width: 100%;
+		margin: 0;
+	}
+	.menu-label {
+
+		display: inline-block;
+		text-align: center;
+	}
+	.menu-label .selected {
+		width: 100%;
+		padding: 0;
+	}
+	.menu-label::after {
+		display: none;
+	}
+
+	.menu li {
+		padding: 0;
+		text-align: center;
+	}
+
 	/* ------------ PORTFOLIO ------------ */
 	section.portfolio {
 		margin-bottom: 0;
-		padding-bottom: calc(75%*4 + 3.5rem);
+		/*padding-bottom: calc(75%*4 + 3.5rem);*/
 	}
-	.portfolio .menu {
+/*	.portfolio .menu {
 		width: 100%;
 	}
 	.portfolio .menu-label {
@@ -118,10 +158,10 @@
 	}
 	.portfolio .menu-label span, .portfolio .dropdown li {
 		padding-left: 2em;
-	}
-	.gallery li {
+	}*/
+	.gallery .folio-item {
 		width: 100%;
-		height: 75vw;
+		padding-bottom: 75%;
 	}
 	.gallery .hover-state {
 		opacity: 1;
