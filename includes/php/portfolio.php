@@ -7,8 +7,8 @@
 			<img src="includes/portfolio_images/noom-meal-logging.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
-					<span class="folio-title">Noom Meal Logging UX</span><br/>
-					<span class="folio-type">UI &amp UX</span>
+					<span class="folio-title">Noom Meal Logging Experience</span><br/>
+					<span class="folio-type">UX & Product Management</span>
 				</div>
 			</div>
 		</a>
@@ -45,7 +45,7 @@
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">KnowRoaming App</span><br/>
-					<span class="folio-type">UI &amp UX</span>
+					<span class="folio-type">UX & Product Management</span>
 				</div>
 			</div>
 		</a>
@@ -74,6 +74,18 @@
 			</div>
 		</a>
       </li>
+       <!-- ********** SMRT WATR ********** -->
+      <li class="folio-item ux industrial soft pm featured">
+	      <a href="Portfolio/?p=smrtwatr">
+	      	<img src="includes/portfolio_images/smrtwatr.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+				  	<span class="folio-title">SMRT WATR</span><br/>
+				  	<span class="folio-type">Multi-disciplinary</span>
+				</div>
+			</div>
+		</a>
+      </li>
       <!-- ********** Colour Thermometer ********** -->
       <li class="folio-item web software featured">
       	<a href="Portfolio/?p=colortherm">
@@ -81,13 +93,13 @@
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">Colour Thermometer</span><br/>
-					<span class="folio-type">Web Design</span>
+					<span class="folio-type">Web Development</span>
 				</div>
 			</div>
 		</a>
 	  </li>
 	  <!-- ********** BOSE SPEAKER ********** -->
-      <li class="folio-item industrial featured">
+      <li class="folio-item industrial ">
       	<a href="Portfolio/?p=bose">
 			<img src="includes/portfolio_images/bose-speaker.jpg">
 			<div class="hover-state animate">
