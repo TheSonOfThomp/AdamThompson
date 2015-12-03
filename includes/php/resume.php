@@ -22,10 +22,10 @@
 					<span class="subsection-duration">September - December&nbsp2015</span>
 				</div>
 				<ul class="resume-list">
-					<li class="resume-item featured ux graphics pm">Re-designed the mobile meal-logging experience to improve clarity and speed of navigation, evidenced by user-testing</li>
+					<li class="resume-item featured ux graphics pm">Re-designed the <a href="Portfolio/?p=noom_logging">meal-logging experience</a> on iOS and Android to improve clarity and speed of navigation, evidenced by user-testing</li>
 					<li class="resume-item featured ux pm">Initiated multidisciplinary discussions and managed the early design process for the coach dashboard</li>
-					<li class="resume-item featured ux graphics">Improved the food portion picker interface to endure user confidence</li>
-					<li class="resume-item featured soft">Prototyped a recipe parser for the iOS app</li>
+					<li class="resume-item featured ux graphics">Improved the <a href="Portfolio/?p=noom_portion">portion picker</a> interface to ensure user confidence when logging food items</li>
+					<li class="resume-item featured ux graphics">Prototyped and iterated interaction designs using Sketch, Framer JS, and Origami, and tested using Usability Hub and UserTesting.com</li>
 				</ul>
 			</div>
 		</article>

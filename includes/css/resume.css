@@ -201,6 +201,8 @@ section.resume {
 					background-image: url('../image_assets/apps/autocad.png');}
 					#inventor .app-logo {
 					background-image: url('../image_assets/apps/inventor.png');}
+					#rhino .app-logo {
+					background-image: url('../image_assets/apps/rhino.png');}
 					#max .app-logo {
 					background-image: url('../image_assets/apps/max.png');}
 					#c4d .app-logo {

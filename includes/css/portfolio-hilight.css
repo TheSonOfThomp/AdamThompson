@@ -53,6 +53,7 @@
 }
 .folio_paragraph {
 	width: 100%;
+	line-height: 1.75em;
 }
 .folio_image {
 	display: inherit;

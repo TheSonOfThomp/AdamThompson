@@ -26,7 +26,7 @@
 		</a>
 	  </li>
 	  <!-- ********** NOOM - Coach Dashboard ********** -->
-      <li class="folio-item featured ux pm">
+      <li class="folio-item ux pm">
       	<a href="Portfolio/?p=noom_coach">
 			<img src="includes/portfolio_images/noom-coach-dashboard.jpg">
 			<div class="hover-state animate">
@@ -86,6 +86,18 @@
 			</div>
 		</a>
 	  </li>
+	  <!-- ********** BOSE SPEAKER ********** -->
+      <li class="folio-item industrial featured">
+      	<a href="Portfolio/?p=bose">
+			<img src="includes/portfolio_images/bose-speaker.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">Bose Speaker Model</span><br/>
+					<span class="folio-type">Industrial Design</span>
+				</div>
+			</div>
+		</a>
+	  </li>
 	  <!-- ********** athletes.knowroaming ********** -->
       <li class="folio-item web">
       	<a href="Portfolio/?p=athletes">
@@ -110,8 +122,8 @@
 			</div>
 		</a>
 	  </li>
-	  <!-- ********** MEDIAGO NEW ********** -->
-      <li class="folio-item ux">
+<!-- ********** MEDIAGO NEW ********** -->
+<!--       <li class="folio-item ux">
       	<a href="Portfolio/?p=mediago_new">
 			<img src="includes/portfolio_images/mediago_new.jpg">
 			<div class="hover-state animate">
@@ -121,7 +133,19 @@
 				</div>
 			</div>
 		</a>
-	  </li>
+	  </li> -->
+	 <!-- ********** KNOWROAMING STAND ********** -->
+      <li class="folio-item industrial">
+	      <a href="Portfolio/?p=KR_retail">
+	      	<img src="includes/portfolio_images/retail-white.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+				  	<span class="folio-title">KnowRoaming Retail Display</span><br/>
+				  	<span class="folio-type">Industrial Design</span>
+				</div>
+			</div>
+		</a>
+      </li>
       <!-- ********** STiC DESIGN ********** -->
       <li class="folio-item industrial">
 	      <a href="Portfolio/?p=stic">
@@ -134,18 +158,7 @@
 			</div>
 		</a>
       </li>
-      <!-- ********** KNOWROAMING STAND ********** -->
-      <li class="folio-item industrial">
-	      <a href="Portfolio/?p=KR_retail">
-	      	<img src="includes/portfolio_images/retail-white.jpg">
-			<div class="hover-state animate">
-				<div class="folio-hover">
-				  	<span class="folio-title">KnowRoaming Retail Display</span><br/>
-				  	<span class="folio-type">Industrial Design</span>
-				</div>
-			</div>
-		</a>
-      </li>
+
       <!-- ********** KNOWROAMING APPLICATOR ********** -->
       <li class="folio-item industrial">
 	      <a href="Portfolio/?p=KR_applicator">
@@ -159,7 +172,7 @@
 		</a>
       </li>
        <!-- ********** KNOWROAMING PACKAGE ********** -->
-      <li class="folio-item industrial">
+<!--       <li class="folio-item industrial">
 	      <a href="Portfolio/?p=KR_package">
 	      	<img src="includes/portfolio_images/placeholder-light.jpg">
 			<div class="hover-state animate">
@@ -169,7 +182,7 @@
 				</div>
 			</div>
 		</a>
-      </li>
+      </li> -->
       <!-- ********** KNOWROAMING GRAPHICS ********** -->
       <li class="folio-item graphics">
 		<a href="Portfolio/?p=KR_promo">

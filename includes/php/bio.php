@@ -13,22 +13,24 @@
 	</div>
 </section>
 
-
 <section class="site-filter">
 <hr class="filter-line">
   <div class="inline-sort">
-    <span class="sort-text hide-mobile">Show things relevant to</span></span>
+    <span class="sort-text hide-mobile">Sort portfolio by</span></span>
     <div class="menu">
-	    <div class="menu-label"><span class="selected">All Industries<span class="mobile-only">design</span></span></div>
+	    <div class="menu-label"><span class="selected">Featured<span class="mobile-only"> items</span></span></div>
 	    <ul class="dropdown hide">
-	      <li class="filter active" data-filter=".featured" id="all">All Industries</li>
-	      <li class="filter" data-filter=".ux">UX/Product Design</li>
-	      <li class="filter" data-filter=".industrial">Industrial Design</li>
-<!-- 	      <li class="filter" data-filter=".pm">Product Management</li> -->
-	      <li class="filter" data-filter=".graphics">Graphic Design</li>
-	      <li class="filter" data-filter=".web">Web Development</li>
-<!-- 	      <li class="filter" data-filter=".soft">App Development</li> -->
-		  <!-- <li class="filter" data-filter=".music">Music &amp Video</li> -->
+			<li class="filter active" data-filter=".featured" id="featured">Featured</li>
+			<li class="filter" data-filter=".ux">UX/Product Design</li>
+			<li class="filter" data-filter=".industrial">Industrial Design</li>
+			<!--			<li class="filter" data-filter=".pm">Product Management</li> -->
+			<li class="filter" data-filter=".graphics">Graphic Design</li>
+			<li class="filter" data-filter=".web">Web Development</li>
+			<?php if ($DEBUG)
+				echo '<li class="filter" data-filter=".folio-item">Everything</li>'
+			?>
+<!--			<li class="filter" data-filter=".soft">App Development</li> -->
+<!--			<li class="filter" data-filter=".music">Music &amp Video</li> -->
 	    </ul>
     </div>
 <!--     <span class="sort-text hide-mobile">design</span> -->

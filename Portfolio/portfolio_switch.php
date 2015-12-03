@@ -25,9 +25,9 @@
 
 		case 'colortherm':
 			$p_title = 'Colour Thermometer';
-			$p_p1 = "The <a terget='_blank' href='".$root_path."/ColourThermometer'>Colour Thermometer</a> is a web app I built that converts the specified location's temperature, weather conditions and current time as an hsv (hue, saturation, variance) colour value, respectively. I built this in my spare time in the winter of 2015 to demonstrate my abilities in JavaScript. I was inspired by <a href='http://thecolourclock.co.uk' target='_blank'>The Colour Clock.</a>";
+			$p_p1 = "The <a terget='_blank' href='".$root_path."/ColourThermometer'>Colour Thermometer</a> is a web app I built that converts the specified location's temperature, weather conditions and current time as an hsv (hue, saturation, variance) colour value, respectively. I built this in my spare time in the winter of 2015 for fun and to demonstrate my abilities in JavaScript. I was inspired by <a href='http://thecolourclock.co.uk' target='_blank'>The Colour Clock.</a>";
 			$img1 = $img_path."colourThermometer.jpg";
-			$img1_caption = "A screenshot from late winter 2015";
+			$img1_caption = "A screenshot from early spring 2015";
 			break;
 
 		case 'athletes':
