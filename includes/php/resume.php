@@ -17,7 +17,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">Product Designer/UX Engineer</span>
+					<span class="subsection-title">Product Designer</span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, Product Designer at Noom</span>
 					<span class="subsection-duration">September - December&nbsp2015</span>
 				</div>
@@ -70,7 +70,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">User Interface/Experience Designer</span>
+					<span class="subsection-title">UI/UX Designer</span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, User Interface Designer at Sony Network Entertainment</span>
 					<span class="subsection-duration">September - December&nbsp2013</span>
 				</div>
@@ -200,7 +200,7 @@
 				</div>
 				<ul class="resume-list">
 					<li class="resume-item featured ux pm industrial">Engineering Design <span class="inline-note">(SYDE 361)<span class="subsection-duration">Spring 2015</span></span>
-						<div class="list-description">This class includes a term-long design project, while learning about the design process, from problem definition to prototyping.</div>
+						<div class="list-description">In this class, we learned about the design process; from problem definition to ideation and prototyping. We practiced what we were learning with a term-long design project. Our team designed an <a href="Portfolio/?p=smrtwatr">interactive water fountain</a></div>
 					</li>
 					<li class="resume-item featured industrial">Mechanics of Deformable Solids <span class="inline-note">(SYDE 286)<span class="subsection-duration">Fall 2014</span></span>
 						<div class="list-description">We explored the mechanics involved in stress and strain on common engineering materials. Our final was to build a cardboard bridge and estimate its failure load.</div>

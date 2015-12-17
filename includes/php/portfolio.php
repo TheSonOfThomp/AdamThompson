@@ -4,7 +4,7 @@
     <!-- ********** NOOM -  Food Logging ********** -->
       <li class="folio-item ux featured">
       	<a href="Portfolio/?p=noom_logging">
-			<img src="includes/portfolio_images/noom-meal-logging.jpg">
+			<img src="includes/portfolio_images/noom-meal-logging.png">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">Noom Meal Logging Experience</span><br/>

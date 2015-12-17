@@ -15,22 +15,15 @@ include('portfolio_switch.php');
 </head>
 <!-- ********** /HEAD ********** -->
 
-
-<!-- <header>
-	<div class="sub-header">
-		<div class="container">
-			<div class="title"><?php echo $p_title ?></div>
-			<ul>
-				<li class="back-to-main"><a href="<?php echo $root_path?>">Back</a></li>
-			</ul>
-		</div>
-	</div>	
-</header> -->
 <main>
 <?php include('../includes/php/header.php'); ?>
+
+
 <article class="gallery-content">
-	<h2 class="portfolio-title"><?php echo $p_title ?></h2>
+	<h2 class="portfolio-title"><?php echo $p_title ?></h2>	
 	<div class="col single-column">
+
+	<?php if ($useTemplate) {?>
 		<p class="folio_paragraph" id="paragraph1"><?php echo $p_p1; ?></p>
 		<figure class="folio_image" id="img1">
 			<a href="<?php echo $img1 ; ?>" target="_blank">
@@ -71,7 +64,11 @@ include('portfolio_switch.php');
 			<figcaption><?php echo $img5_caption ?></figcaption>
 		</figure>
 		<p class="folio_paragraph" id="paragraph6"><?php echo $p_p6; ?></p>
-		
+	<?php } else { ?>
+		<?php echo $HTML; ?>
+
+
+	<?php } ?>
 	</div>
 </article>
 <script type="text/javascript">

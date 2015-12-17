@@ -1,12 +1,21 @@
 html{font-size: 16px;}
 
 body {background: #CECECE; padding: 0; margin: 0;
-	font-family: "Merriweather", "Garamond", "Times New Roman", serif; font-weight: 100; color: #4a4a4a; overflow-x: hidden;
+	font-family: "Merriweather", "Garamond", "Times New Roman", serif;
+	font-weight: 100; color: #4a4a4a; overflow-x: hidden;
+}
+
+*::selection {
+  background: #DCE6CF; /* WebKit/Blink Browsers */
+}
+*::-moz-selection {
+  background: #DCE6CF; /* Gecko Browsers */
 }
 
 main {
 	display: block;
 	width: 98%;
+	min-height: 98%; min-height: 98vh;
 	margin: 1%;
 	padding: 0;
 	background: #FAFAFA;
@@ -31,13 +40,26 @@ h1 {
 	line-height: 1em;
 	font-weight: 200;
 }
-
 h2 {
+	font-family: "Merriweather", "Garamond", "Times New Roman", serif;
+	font-size: 3rem;
+	line-height: 1.5em;
+	font-weight: 200;
+	/*text-decoration: underline;*/
+}
+h3 {
 	font-family: "Merriweather", "Garamond", "Times New Roman", serif;
 	font-size: 2rem;
 	line-height: 1.5em;
 	font-weight: 200;
 	/*text-decoration: underline;*/
+}
+h4 {
+	font-family: "Lato", "Helvetica", sans-serif;
+	font-size: 1.75rem;
+	line-height: 1em;
+	font-weight: 300;
+	color: #808080;
 }
 /* ------ HELPER CLASSES ------ */
 .hidden {
@@ -149,6 +171,9 @@ a::visited {
   text-decoration: none;
 }
 
+
+
+/* -- FOOTER -- */
 footer {
 	width: 100%;
 	height: 6.4rem;
@@ -167,30 +192,35 @@ footer .container {
 	display: inline-block;
 	float: left;
 	text-align: left;
-	color: #fafafa;
+	color: #4a4a4a;
 }
-.social {
+.social-list {
+	display: block;
 	position: relative;
-	display: inline-block;
-	float: right;
-	width: 100%;
-	height: inherit;
-	margin: 0;
 	padding: 0;
+	margin: 0;
 	list-style: none;
-	text-align: right;
-	color: #fafafa;
 }
-.social-media {
-	display: inline-block;
-	float: left;
-	width: 19%;
-	height: 3.4rem;
-	margin: 1.5rem 0;
-	/*padding: 0 3em;
-	margin: 1.5em 0;*/
-	border-left: 1px solid #fafafa;
-}
+	.social-list .social-media {
+		display: inline-block;
+		position: relative;
+		width: 19%;
+		height: 3.4rem;
+		padding: 1.5rem 0;
+		float: left;
+/*		border-left: 1px solid #fafafa;*/
+	}
+	.social-list .social-media:hover {
+		padding-top: 0.5rem;
+		padding-bottom: 1.5rem;
+	}
+		.social-list .social-media .social-logo {
+			position: relative;
+			padding-bottom: 100%;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			border-radius: 0;
+		}
 .social-media:last-child {
 	padding-right: 0;
 }

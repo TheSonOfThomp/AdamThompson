@@ -3,7 +3,7 @@
 	<div class="sub-header">
 		<div class="container">
 			<div class="title"><a href="<?php echo $root_path; ?>/">Adam Thompson <?php $DEBUG; ?></a></div>
-			<a class="img-container" target="_blank" href='<?php echo $root_path; ?>/Portfolio/?p=falcon'>
+			<a class="img-container hidden" target="_blank" href='<?php echo $root_path; ?>/Portfolio/?p=falcon'>
 				<img id="falcon" alt="I design things" src="<?php echo $root_path; ?>/includes/image_assets/falcon.png">
 			</a>
 			<div class="tagline animate">
