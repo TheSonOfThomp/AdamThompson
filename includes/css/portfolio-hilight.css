@@ -33,6 +33,10 @@
 	padding-bottom: 3rem;
 	margin-top: 3rem;
 }
+.cover-photo {
+	width: 100%;
+}
+
 .col {
 	position: relative;
 	font-size: 1.2rem;
@@ -58,13 +62,17 @@
 .folio_image {
 	display: inherit;
 	position: relative;
-	width: 100%;height: auto;
+	width: 100%;
+	height: auto;
 	margin: 0;
+	text-align: center;
 }
 .folio_image img {
 	position: relative;
 	display: inline-block;
-	width: 100%;
+	max-width: 96%;
+	max-height: 640px;
+	width: auto;
 	height: auto;
 	margin: 0;
 }
@@ -74,6 +82,10 @@
 	color: #5B753D;
 }
 
+blockquote {
+	border-left: 1px solid #5B753D;
+	padding-left: 1em;
+}
 
 @media screen and (max-width: 1160px) {
 	.sub-header {

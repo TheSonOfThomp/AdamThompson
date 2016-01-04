@@ -4,7 +4,7 @@
     <!-- ********** NOOM -  Food Logging ********** -->
       <li class="folio-item ux featured">
       	<a href="Portfolio/?p=noom_logging">
-			<img src="includes/portfolio_images/noom-meal-logging.png">
+			<img src="includes/portfolio_images/noom_logging.png">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">Noom Meal Logging Experience</span><br/>
@@ -25,23 +25,11 @@
 			</div>
 		</a>
 	  </li>
-	  <!-- ********** NOOM - Coach Dashboard ********** -->
-      <li class="folio-item ux pm">
-      	<a href="Portfolio/?p=noom_coach">
-			<img src="includes/portfolio_images/noom-coach-dashboard.jpg">
-			<div class="hover-state animate">
-				<div class="folio-hover">
-					<span class="folio-title">Noom Coach Dashboard</span><br/>
-					<span class="folio-type">UI &amp UX</span>
-				</div>
-			</div>
-		</a>
-	  </li>
 
     <!-- ********** KNOWROAMING APP ********** -->
       <li class="folio-item ux featured">
       	<a href="Portfolio/?p=KR_app">
-			<img src="includes/portfolio_images/knowroaming_app_home.jpg">
+			<img src="includes/portfolio_images/KR_app.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">KnowRoaming App</span><br/>
@@ -88,8 +76,8 @@
       </li>
       <!-- ********** Colour Thermometer ********** -->
       <li class="folio-item web software featured">
-      	<a href="Portfolio/?p=colortherm">
-			<img src="includes/portfolio_images/colourThermometer.jpg">
+      	<a href="Portfolio/?p=colourtherm">
+			<img src="includes/portfolio_images/colourtherm.png">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">Colour Thermometer</span><br/>
