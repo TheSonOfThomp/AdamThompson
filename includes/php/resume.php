@@ -42,17 +42,17 @@
 				</div>
 				<ul class="resume-list">
 
-					<div class="resume-content-divider">UX Design</div>
+					<div class="resume-content-divider">Design</div>
 						<li class="resume-item featured ux graphics industrial">Redesigned both <a href="Portfolio/?p=KR_app">iOS and Android apps</a> from the ground up. I reworked everything from the registration workflow, to the in app experience at home and abroad using the KnowRoaming SIM Sticker.</li>
 						<li class="resume-item featured ux graphics industrial pm">Leveraged customer feedback to iterate on the flow of the app to better correspond with the users' mental model of the 3 use-phases of the product.</li>
 						<li class="resume-item ux graphics web">Initiated and oversaw the preliminary design of the new <a href="Portfolio/?p=KR_web">company homepage</a>, and <a href="corporate.knowroaming.com" target="_blank">corporate portal</a></li>
-
+						<li class="resume-item ux graphics video">Storyboarded, and animated an app <a href="Portfolio/?p=KR_video">intro video</a> for the updated KnowRoaming app</li>
 
 					<div class="resume-content-divider">Product Management</div>
-						<li class="resume-item featured ux pm web soft">Lead weekly stakeholder meetings with the developers, customer service, and company leadership to discuss the experience of the mobile apps, consumer facing and corporate websites, and other relevant topics.</li>
-						<li class="resume-item featured pm">Created, branded and optimixed a core company service, now called <a href="https://support.knowroaming.com/hc/en-us/articles/203064825-What-is-ReachMe-" target="_blank">ReachMe</a>. ReachMe enables you to receive calls to your home mobile number by forwarding your home mobile number to a local KnowRoaming number.</li>
+						<li class="resume-item featured pm">Created, branded and optimixed a core company service, now called <a href="https://support.knowroaming.com/hc/en-us/articles/203064825-What-is-ReachMe-" target="_blank">ReachMe</a>.</li>
+						<li class="resume-item featured ux pm web soft">Started and lead weekly design meetings with developers, customer service, marketing and company leadership to discuss the experience of the mobile apps, consumer facing and corporate websites, and other relevant topics.</li>
 
-					<div class="resume-content-divider">Web Development</div>
+					<div class="resume-content-divider">Development</div>
 						<li class="resume-item web soft">Designed and developed the <a href="athletes.knowroaming.com" target="_blank">KnowRoaming Athletes</a> sign-up page using HTML5, CSS3, CoffeeScript and PHP.</li>
 						<li class="resume-item soft pm">Assisted in developing and debugging iOS and Android user interface</li>
 

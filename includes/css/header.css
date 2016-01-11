@@ -112,17 +112,3 @@ header.main-header {
 	margin: 0;
 	line-height: 1.5em;
 }
-
-.site-filter {
-	text-align: center;
-}
-
-.filter-line {
-	position: absolute;
-	width: 96%;
-	margin-top: 1.75rem;
-	margin: 1.75rem 1% 0 1%;
-	border: none;
-	background-color: #5B753D;
-	height: 1px;
-}

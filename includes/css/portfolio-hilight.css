@@ -70,7 +70,7 @@
 .folio_image img {
 	position: relative;
 	display: inline-block;
-	max-width: 96%;
+	max-width: 90%;
 	max-height: 640px;
 	width: auto;
 	height: auto;

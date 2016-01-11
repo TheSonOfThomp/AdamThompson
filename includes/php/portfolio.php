@@ -1,6 +1,9 @@
 <section class="portfolio" id="portfolio">
   <div class="gallery" id="gallery">
     <ul>
+
+<!-- ************************************** FEATURED ************************************** -->
+
     <!-- ********** NOOM -  Food Logging ********** -->
       <li class="folio-item ux featured">
       	<a href="Portfolio/?p=noom_logging">
@@ -13,20 +16,7 @@
 			</div>
 		</a>
 	  </li>
-	  <!-- ********** NOOM - Portion Picker ********** -->
-      <li class="folio-item ux">
-      	<a href="Portfolio/?p=noom_portion">
-			<img src="includes/portfolio_images/noom-portion-picker.jpg">
-			<div class="hover-state animate">
-				<div class="folio-hover">
-					<span class="folio-title">Noom Portion Picker</span><br/>
-					<span class="folio-type">UI &amp UX</span>
-				</div>
-			</div>
-		</a>
-	  </li>
-
-    <!-- ********** KNOWROAMING APP ********** -->
+	  <!-- ********** KNOWROAMING APP ********** -->
       <li class="folio-item ux featured">
       	<a href="Portfolio/?p=KR_app">
 			<img src="includes/portfolio_images/KR_app.jpg">
@@ -38,31 +28,7 @@
 			</div>
 		</a>
 	  </li>
-	  <!-- ********** KNOWROAMING WEBSITE ********** -->
-      <li class="folio-item ux">
-	      <a href="Portfolio/?p=KR_web">
-	      	<img src="includes/portfolio_images/knowroaming_pilots_site.jpg">
-			<div class="hover-state animate">
-				<div class="folio-hover">
-				  	<span class="folio-title">KnowRoaming Main Site</span><br/>
-				  	<span class="folio-type">UI &amp UX</span>
-				</div>
-			</div>
-		</a>
-      </li>
-	  <!-- ********** PERSONAL FALCON LOGO ********** -->
-      <li class="folio-item graphics">
-	      <a href="Portfolio/?p=falcon">
-	      	<img src="includes/portfolio_images/falcon-dark.jpg">
-			<div class="hover-state animate">
-				<div class="folio-hover">
-				  	<span class="folio-title">Falcon Logo</span><br/>
-				  	<span class="folio-type">Graphic Design</span>
-				</div>
-			</div>
-		</a>
-      </li>
-       <!-- ********** SMRT WATR ********** -->
+	  <!-- ********** SMRT WATR ********** -->
       <li class="folio-item ux industrial soft pm featured">
 	      <a href="Portfolio/?p=smrtwatr">
 	      	<img src="includes/portfolio_images/smrtwatr.jpg">
@@ -74,7 +40,7 @@
 			</div>
 		</a>
       </li>
-      <!-- ********** Colour Thermometer ********** -->
+	  <!-- ********** Colour Thermometer ********** -->
       <li class="folio-item web software featured">
       	<a href="Portfolio/?p=colourtherm">
 			<img src="includes/portfolio_images/colourtherm.png">
@@ -86,10 +52,49 @@
 			</div>
 		</a>
 	  </li>
+
+<!-- ************************************** //FEATURED ************************************** -->
+
+	  <!-- ********** NOOM - Portion Picker ********** -->
+      <li class="folio-item ux">
+      	<a href="Portfolio/?p=noom_portion">
+			<img src="includes/portfolio_images/noom_portion.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">Noom Portion Picker</span><br/>
+					<span class="folio-type">UI &amp UX</span>
+				</div>
+			</div>
+		</a>
+	  </li>
+	  <!-- ********** KNOWROAMING WEBSITE ********** -->
+      <li class="folio-item ux">
+	      <a href="Portfolio/?p=KR_web">
+	      	<img src="includes/portfolio_images/KR_web.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+				  	<span class="folio-title">KnowRoaming Main Site</span><br/>
+				  	<span class="folio-type">UI &amp UX</span>
+				</div>
+			</div>
+		</a>
+      </li>
+	  <!-- ********** PERSONAL FALCON LOGO ********** -->
+      <li class="folio-item graphics">
+	      <a href="Portfolio/?p=falcon">
+	      	<img src="includes/portfolio_images/falcon.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+				  	<span class="folio-title">Falcon Logo</span><br/>
+				  	<span class="folio-type">Graphic Design</span>
+				</div>
+			</div>
+		</a>
+      </li>
 	  <!-- ********** BOSE SPEAKER ********** -->
       <li class="folio-item industrial ">
-      	<a href="Portfolio/?p=bose">
-			<img src="includes/portfolio_images/bose-speaker.jpg">
+      	<a href="Portfolio/?p=bose_speaker">
+			<img src="includes/portfolio_images/bose_speaker.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">Bose Speaker Model</span><br/>
@@ -100,8 +105,8 @@
 	  </li>
 	  <!-- ********** athletes.knowroaming ********** -->
       <li class="folio-item web">
-      	<a href="Portfolio/?p=athletes">
-			<img src="includes/portfolio_images/athletes1.jpg">
+      	<a href="Portfolio/?p=KR_athletes">
+			<img src="includes/portfolio_images/KR_athletes.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">KnowRoaming Athletes</span><br/>
@@ -112,7 +117,7 @@
 	  </li>
 	  <!-- ********** MEDIAGO APP ********** -->
       <li class="folio-item ux graphics">
-      	<a href="Portfolio/?p=mediago">
+      	<a href="Portfolio/?p=mediago_app">
 			<img src="includes/portfolio_images/mediago_app.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
@@ -137,7 +142,7 @@
 	 <!-- ********** KNOWROAMING STAND ********** -->
       <li class="folio-item industrial">
 	      <a href="Portfolio/?p=KR_retail">
-	      	<img src="includes/portfolio_images/retail-white.jpg">
+	      	<img src="includes/portfolio_images/KR_retail.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">KnowRoaming Retail Display</span><br/>
@@ -149,7 +154,7 @@
       <!-- ********** STiC DESIGN ********** -->
       <li class="folio-item industrial">
 	      <a href="Portfolio/?p=stic">
-	      	<img src="includes/portfolio_images/STiC.png">
+	      	<img src="includes/portfolio_images/stic.png">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">Ski Tip Connector</span><br/>
@@ -162,7 +167,7 @@
       <!-- ********** KNOWROAMING APPLICATOR ********** -->
       <li class="folio-item industrial">
 	      <a href="Portfolio/?p=KR_applicator">
-	      	<img src="includes/portfolio_images/applicator-1.png">
+	      	<img src="includes/portfolio_images/KR_applicator.png">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">Multi-Use Sticker Applicator</span><br/>
@@ -186,7 +191,7 @@
       <!-- ********** KNOWROAMING GRAPHICS ********** -->
       <li class="folio-item graphics">
 		<a href="Portfolio/?p=KR_promo">
-			<img src="includes/portfolio_images/KnowRoaming_pass.jpg">
+			<img src="includes/portfolio_images/KR_promo.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">KnowRoaming Promotions</span><br/>
@@ -195,21 +200,23 @@
 			</div>
 		</a>
 	  </li>
-	  <!-- ********** THIS SITE ********** -->
-      <li class="folio-item web">
-      	<a href="Portfolio/?p=this">
-			<img src="includes/portfolio_images/this.jpg">
+
+	  <!-- ********** KNOWROAMING INTRO VIDEO ********** -->
+      <li class="folio-item video">
+		<a href="Portfolio/?p=KR_video">
+			<img src="includes/portfolio_images/KR_video.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
-					<span class="folio-title">This Website</span><br/>
-					<span class="folio-type">Web Design</span>
+				  	<span class="folio-title">KnowRoaming Intro Video</span><br/>
+				  	<span class="folio-type">Video</span>
 				</div>
 			</div>
 		</a>
 	  </li>
+
 	  <!-- ********** SAY NO TO COMIC SANS ********** -->
       <li class="folio-item soft web">
-		<a href="Portfolio/?p=ComicSans">
+		<a href="Portfolio/?p=comic_sans">
 			<img src="includes/portfolio_images/comic_sans.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
@@ -221,14 +228,94 @@
 	  </li>
       <!-- ********** KWASIND GRAPHICS ********** -->
       <li class="folio-item graphics">	
-      	<img src="includes/portfolio_images/Kwasind-black.png">
-		<div class="hover-state animate">
-			<div class="folio-hover">
-			  	<span class="folio-title">Camp Kwasind Graphics</span><br/>
-			  	<span class="folio-type">Graphic Design</span>
+      <a href="Portfolio/?p=kwasind">
+      	<img src="includes/portfolio_images/kwasind.png">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+				  	<span class="folio-title">Camp Kwasind Graphics</span><br/>
+				  	<span class="folio-type">Graphic Design</span>
+				</div>
 			</div>
-		</div>
+		</a>
       </li>
+
+      <!-- ********** KWASIND VIDEO ********** -->
+      <li class="folio-item video">
+      	<a href="Portfolio/?p=kwasind_video">
+			<img src="includes/portfolio_images/kwasind_video.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">Camp Kwasind Summer videos</span><br/>
+					<span class="folio-type">Video</span>
+				</div>
+			</div>
+		</a>
+	  </li>
+
+	  <!-- ********** MATRIX COUNTDOWN ********** -->
+      <li class="folio-item video">
+      	<a href="Portfolio/?p=matrix_countdown">
+			<img src="includes/portfolio_images/matrix_countdown.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">Matrix-Style Countdown video</span><br/>
+					<span class="folio-type">Video</span>
+				</div>
+			</div>
+		</a>
+	  </li>
+
+	  <!-- ********** THIS COVER ********** -->
+<!--       <li class="folio-item video">
+      	<a href="Portfolio/?p=this_cover">
+			<img src="includes/portfolio_images/this_cover.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">'This' by Ed Sheeran Cover</span><br/>
+					<span class="folio-type">Video & Music</span>
+				</div>
+			</div>
+		</a>
+	  </li> -->
+
+	  <!-- ********** MGM Video ********** -->
+      <li class="folio-item video">
+      	<a href="Portfolio/?p=mgm_video">
+			<img src="includes/portfolio_images/mgm_video.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">Mystery Guitar Man — Peter Gunn Theme</span><br/>
+					<span class="folio-type">Video</span>
+				</div>
+			</div>
+		</a>
+	  </li>
+
+	 <!-- ********** HBC Slideshow ********** -->
+<!--       <li class="folio-item video">
+      	<a href="Portfolio/?p=hbc_photos">
+			<img src="includes/portfolio_images/hbc_photos.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">Higland Baptist Church | In Mission and Service</span><br/>
+					<span class="folio-type">Video</span>
+				</div>
+			</div>
+		</a>
+	  </li> -->
+
+      <!-- ********** MY SITE ********** -->
+      <li class="folio-item web">
+      	<a href="Portfolio/?p=mySite">
+			<img src="includes/portfolio_images/mySite.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">This Website</span><br/>
+					<span class="folio-type">Web Development</span>
+				</div>
+			</div>
+		</a>
+	  </li>
     </ul>
   </div>
 </section>

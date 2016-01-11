@@ -8,7 +8,9 @@ include('includes/php/header.php'); ?>
 <?php
 	include 'includes/php/bio.php';
 ?>
-
+<?php 
+	include 'includes/php/site-filter.php';
+?>
 <?php
 	include 'includes/php/portfolio.php';
 	// include 'includes/php/gallery-hilight.php'

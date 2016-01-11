@@ -36,7 +36,7 @@ include('portfolio_switch.php');
 <script type="text/javascript">
 	$(document).ready(function() {
 
-		$('.folio_image').each(function() {
+		$('.folio_image.image').each(function() {
 			if ($('a', this).attr('href') == '') {
 				console.log($(this).attr('id') + ' does not exist');
 				$(this).remove();
@@ -45,6 +45,13 @@ include('portfolio_switch.php');
 
 		$('.folio_paragraph').each(function() {
 			if ($(this).text() == '') {
+				console.log($(this).attr('id') + ' does not exist');
+				$(this).remove();
+			}
+		});
+
+		$('.folio_image.video').each(function() {
+			if ($('iframe', this).attr('src') == '') {
 				console.log($(this).attr('id') + ' does not exist');
 				$(this).remove();
 			}
