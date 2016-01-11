@@ -417,6 +417,9 @@ footer .container {
 .social-media #codepen {
 	background-image: url('../image_assets/codepen.png');
 }
+.social-media #git {
+	background-image: url('../image_assets/git.png');
+}
 .social-media #behance {
 	background-image: url('../image_assets/behance.png');
 }
