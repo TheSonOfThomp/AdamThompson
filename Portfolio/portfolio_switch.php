@@ -47,7 +47,7 @@
 
 		case 'noom_portion':
 			$p_title = "Noom Portion Picker";
-			$p_p1 = "A smaller project that I worked on at Noom was re-designing the food Portion Piocker, and other numerical inputs. The previous version of the portion picker was a small ruler with a coloured dot as a confirmation button. User research showed that many users were experiencing difficulty when logging food items, and we realized that the current confirmation button was likely not enough of a signifier for its function. After multiple prototypes and tests we decided on the design shown. This design features a larger touch area for the numerical selection ruler, a more salient unit display and selector, as well as a more intuitive confirmation button.";
+			$p_p1 = "A smaller project that I worked on at Noom was re-designing the food Portion Picker (and other numerical data input UI widgets). The previous version of the portion picker was a small ruler with a coloured dot as a confirmation button. User research showed that many users were experiencing difficulty when logging food items, and we realized that the current confirmation button was likely not enough of a signifier for its function. After multiple prototypes and tests we decided on the design shown. This design features a larger touch area for the numerical selection ruler, a more salient unit display and selector, as well as a more intuitive confirmation button.";
 			$img1 = $img_path."noom_portion_old.jpg";
 			$img1_caption =  "The previous version of the Noom portion picker";
 			break;
