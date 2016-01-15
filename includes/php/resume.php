@@ -49,8 +49,9 @@
 						<li class="resume-item ux graphics video">Storyboarded, and animated an app <a href="Portfolio/?p=KR_video">intro video</a> for the updated KnowRoaming app</li>
 
 					<div class="resume-content-divider">Product Management</div>
-						<li class="resume-item featured pm">Created, branded and optimixed a core company service, now called <a href="https://support.knowroaming.com/hc/en-us/articles/203064825-What-is-ReachMe-" target="_blank">ReachMe</a>.</li>
 						<li class="resume-item featured ux pm web soft">Started and lead weekly design meetings with developers, customer service, marketing and company leadership to discuss the experience of the mobile apps, consumer facing and corporate websites, and other relevant topics.</li>
+						<li class="resume-item featured pm">Created, branded and optimized a core company service, now called <a href="https://support.knowroaming.com/hc/en-us/articles/203064825-What-is-ReachMe-" target="_blank">ReachMe</a>.</li>
+						
 
 					<div class="resume-content-divider">Development</div>
 						<li class="resume-item web soft">Designed and developed the <a href="athletes.knowroaming.com" target="_blank">KnowRoaming Athletes</a> sign-up page using HTML5, CSS3, CoffeeScript and PHP.</li>
