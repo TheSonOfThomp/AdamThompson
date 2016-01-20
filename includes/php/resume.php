@@ -23,8 +23,8 @@
 				</div>
 				<ul class="resume-list">
 					<li class="resume-item featured ux graphics pm">Re-designed the <a href="Portfolio/?p=noom_logging">meal-logging experience</a> on iOS and Android to improve clarity and speed of navigation, evidenced by user-testing</li>
-					<li class="resume-item featured ux pm">Initiated multidisciplinary discussions and managed the early design process for the coach dashboard</li>
-					<li class="resume-item featured ux graphics">Improved the <a href="Portfolio/?p=noom_portion">portion picker</a> interface to ensure user confidence when logging food items</li>
+					<li class="resume-item featured ux pm">Initiated multidisciplinary collaboration by insisting upon stakeholder meetings before attempting solutions, and managed the early design process for the coach dashboard </li>
+					<li class="resume-item featured ux graphics">Improved the <a href="Portfolio/?p=noom_portion">portion picker</a> interface to improve user confidence when logging food items, by adding a larger interaction area, more salient unit display, and a more intuitive confirmation button.</li>
 					<li class="resume-item featured ux graphics">Prototyped and iterated interaction designs using Sketch, Framer JS, and Origami, and tested using Usability Hub and UserTesting.com</li>
 				</ul>
 			</div>
@@ -55,7 +55,7 @@
 
 					<div class="resume-content-divider">Development</div>
 						<li class="resume-item web soft">Designed and developed the <a href="athletes.knowroaming.com" target="_blank">KnowRoaming Athletes</a> sign-up page using HTML5, CSS3, CoffeeScript and PHP.</li>
-						<li class="resume-item soft pm">Assisted in developing and debugging iOS and Android user interface</li>
+						<li class="resume-item soft pm">Assisted in developing and debugging iOS and Android user interface. Collaborated with developers daily to work out frond-end code solutions.</li>
 
 					<div class="resume-content-divider">Industrial Design</div>
 						<li class="resume-item ux industrial">Designed and prototyped a <a href="Portfolio/?p=KR_retail">retail stand</a> for dispensing product boxes and displaying product information in retail stores.</li>
