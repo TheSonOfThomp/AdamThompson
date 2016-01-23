@@ -9,6 +9,8 @@
 	.mobile-only {
 		display: inline;
 	}
+
+
 	/* ------------ HEADER ------------ */
 	header.main-header {
 		height: auto;
@@ -72,6 +74,7 @@
 	}
 
 
+
 	/* ------------ BIO ------------ */
 	.bio {
 		height: auto;
@@ -108,13 +111,21 @@
 	.bio .bio-text p {
 		margin-bottom: 1rem;
 	}
+	.social-list.dark {
+		padding-top: 0;
+	}
+
 
 	/* ------------ FILTER ------------ */
 
+	.site-filter {
+		margin-top: 1rem;
+	}
 	.sort-text {
 	}
 	.filter-line {
-		background-color: #cacaca
+		background-color: #cacaca;
+		display: none;
 	}
 	.inline-sort {
 		width: 66%;

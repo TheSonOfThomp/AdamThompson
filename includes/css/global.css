@@ -377,11 +377,21 @@ footer .container {
 		position: relative;
 		width: 19%;
 		height: 3.4rem;
+		min-height: 56px;
 		padding: 1.5rem 0;
 		float: left;
 /*		border-left: 1px solid #fafafa;*/
 	}
-	.social-list .social-media:hover {
+		.social-media a {
+			display: block;
+			width: 20%;
+			height: 100%;
+			margin: 0 40%;
+			background-size: contain;
+			background-position: 50%;
+			background-repeat: no-repeat;
+		}
+	.social-list .animate.social-media:hover {
 		padding-top: 0.5rem;
 		padding-bottom: 1.5rem;
 	}
@@ -398,31 +408,59 @@ footer .container {
 .social-media:first-child {
 	border-left: none;
 }
-.social-media a {
-	display: block;
-	width: 20%;
-	height: 100%;
-	margin: 0 40%;
-	background-size: 100%;
-	background-position: 50%;
-	background-repeat: no-repeat;
+.social-list.dark {
+	width: 50%;
+	margin: 0 25%;
+	padding-top: 2rem;
 }
 
-.social-media #twitter {
-	background-image: url('../image_assets/twitter.png');
+
+.light .social-media #twitter {
+	background-image: url('../image_assets/social/twitter_light.png');
 }
-.social-media #linkedin {
-	background-image: url('../image_assets/linkedin.png');
+.light .social-media #linkedin {
+	background-image: url('../image_assets/social/linkedin_light.png');
 }
-.social-media #codepen {
-	background-image: url('../image_assets/codepen.png');
+.light .social-media #git {
+	background-image: url('../image_assets/social/git_light.png');
 }
-.social-media #git {
-	background-image: url('../image_assets/git.png');
+.light .social-media #email {
+	background-image: url('../image_assets/social/email_light.png');
 }
-.social-media #behance {
-	background-image: url('../image_assets/behance.png');
+.light .social-media #instagram {
+	background-image: url('../image_assets/social/instagram_light.png');
 }
-.social-media #email {
-	background-image: url('../image_assets/email.png');
+/* not in use */
+/*
+.light .social-media #codepen {
+	background-image: url('../image_assets/social/codepen_light.png');
 }
+.light .social-media #behance {
+	background-image: url('../image_assets/social/behance_light.png');
+}
+*/
+
+.dark .social-media #twitter {
+	background-image: url('../image_assets/social/twitter_dark.png');
+}
+.dark .social-media #linkedin {
+	background-image: url('../image_assets/social/linkedin_dark.png');
+}
+.dark .social-media #git {
+	background-image: url('../image_assets/social/git_dark.png');
+}
+.dark .social-media #email {
+	background-image: url('../image_assets/social/email_dark.png');
+}
+.dark .social-media #instagram {
+	background-image: url('../image_assets/social/instagram_dark.png');
+}
+/* not in use */
+/*
+.dark .social-media #codepen {
+	background-image: url('../image_assets/social/codepen_dark.png');
+}
+.dark .social-media #behance {
+	background-image: url('../image_assets/social/behance_dark.png');
+}
+*/

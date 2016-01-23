@@ -21,7 +21,7 @@
 			break;
 
 		case 'KR_app':
-			$p_title = 'KnowRoaming App UX Design';
+			$p_title = 'KnowRoaming App Product Design Overhaul';
 			$p_p1 = "<a target='_blank' href='http://knowroaming.com'>KnowRoaming</a> is a startup in Toronto, seeking to eliminate 'Bill Shock' from international roaming. They sell a SIM Sticker that sticks to your existing SIM card and acts as a second SIM while you're abroad. They connect you to a local network through the Sticker to save you money on roaming. Their iOS and Android apps are accout management tools, to setup your account, manage your balance and chack usage and rates.";
 			$p_p2 = "I joined the KnowRoaming team in May 2014 as the company’s first User Experience designer. My primary task was to take their existing account-management app, and rework it to improve the flow and experience. In coordination with the stakeholders, COO, developers, and customer service, I reworked everything from the registration workflow, to the in app experience at home and abroad using the KnowRoaming SIM Sticker.";
 			$p_p3 = "To start, I analyzed the existing app and noted what it does well, and where it fell short. Over the next few months I worked out sketches and wireframes, iterating  and discussing the designs every week. Once a basic workflow was decided, I began to work on the new visual style, and finally came up with a viable product near the end of my term there.";
