@@ -2,32 +2,27 @@ header.main-header {
 	padding-top: 1rem;
 }
 
-.sub-header .title {
+.header .title, .sub-header .title {
 	z-index: 100;
-}
-.sub-header .img-container {
 	position: relative;
 	display: block;
-	float: left;
-	height: 112px;
-	width: 93px;
-	margin-left: 1.6rem;
-	margin-top: 1rem;
-	cursor: pointer;
-	z-index: 100;
+	float: none;
 }
-.sub-header #falcon {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-.sub-header .tagline {
-	position: relative;
-	display: inline;
-	float: right;
-	text-align: right;
-	margin-right: 8%;
+
+.header .title {
 	text-align: center;
+}
+
+.sub-header .title {
+	text-align: left;
+}
+
+.header .tagline, .sub-header .tagline {
+	position: relative;
+	display: block;
+	width: 36rem;
+	text-align: right;
+	margin: auto;
 	font-weight: 100;
 	font-size: 2rem;
 	line-height: 1em;
@@ -37,7 +32,7 @@ header.main-header {
 	color: #5B753D;
 }
 @media (max-width: 1280px) {
-	.sub-header .tagline {
+	.header .tagline, .sub-header .tagline {
 		font-size: 1.6em;
 		line-height: 1.25em;
 		top: 3em;
@@ -47,9 +42,9 @@ header.main-header {
 /* BIO */
 
 .bio {
-	height: 12rem;
+	/*height: 12rem;*/
 	width: 100%;
-	margin: 16vh 0 24vh 0;
+	margin: 12vh 0 24vh 0;
 }
 
 @media screen and (min-width: 1160px) {
@@ -59,9 +54,8 @@ header.main-header {
 }
 .bio-pic {
 	position: relative;
-	display: inline-block;
-	float: left;
-	margin-right: 2rem;
+	display: block;
+	margin: auto;
 	border-radius: 100%;
 	width: 12rem;
 	height: 12rem;
@@ -76,21 +70,19 @@ header.main-header {
 .bio-pic img {
 	width: 100%;
 	height: 100%;
-	border-radius: 100%;
+	border-radius: 40%;
 /*	transform: rotateZ(-25deg);
 	-moz-transform: rotateZ(-25deg);
 	-webkit-transform: rotateZ(-25deg);*/
 }
 .bio-text {
 	position: relative;
-	display: inline-block;
-	float: left;
-	width: 80%;
-	max-width: 48rem;
-	font-size: 1.25rem;
+	display: block;
+	text-align: center;
+	font-size: 1rem;
 	line-height: 1.5em;
 	font-weight: 100;
-	top: 3rem;
+	margin-top: 2.5em;
 }
 @media screen and (max-width: 1160px){
 	.bio {

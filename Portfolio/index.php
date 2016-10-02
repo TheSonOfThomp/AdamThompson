@@ -15,7 +15,7 @@ include('portfolio_switch.php');
 </head>
 <!-- ********** /HEAD ********** -->
 
-<main>
+<main class="portfolio-page">
 <?php include('../includes/php/header.php'); ?>
 
 

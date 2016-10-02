@@ -1,9 +1,20 @@
+.portfolio-page .header {
+	margin: 0;
+}
+
+.portfolio-page .header .title{
+	top: 0.5em;
+}
+.portfolio-page .header .tagline{
+	top: 2.5em;
+}
+
 .portfolio-title {
 	width: 100%;
-	max-width: 720px;
+	/*max-width: 720px;*/
 	margin: 0 auto;
 	margin-bottom: 0.75em;
-	text-align: left;
+	text-align: center;
 }
 
 /*.back-to-main {
@@ -31,7 +42,7 @@
 	width: 84%;
 	padding: 0 8%;
 	padding-bottom: 3rem;
-	margin-top: 3rem;
+	margin-top: 5rem;
 }
 .cover-photo {
 	width: 100%;

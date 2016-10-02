@@ -107,7 +107,7 @@ a::visited {
 	color: #5B753D;
 }
 /* ---------------------------- */
-.sub-header{
+.header, .sub-header{
   position: relative;
   display: inline-block;
   float: left;
@@ -118,6 +118,7 @@ a::visited {
   overflow: hidden;
   color: inherit;
 }
+/*
 .sub-header::before, .sub-header::after {
   content: '';
   position: absolute;
@@ -130,7 +131,8 @@ a::visited {
 	width: calc(100% - 128px);
 	height: 128px;
 }
-.sub-header::after{
+*/
+/*.sub-header::after{
 	right: -36px;
 	top: 36px;
 	width: 144px;
@@ -138,35 +140,41 @@ a::visited {
 	-webkit-transform: rotate(25deg);
 	-moz-transform: rotate(25deg);
 	transform: rotate(25deg);
-}
-.sub-header .title {
+}*/
+.header .title, .sub-header .title {
 	position: relative;
 	display: block;
-	float: left;
-	/*margin-left: 8%;*/
 	font-family: "Raleway", "Lato", "Helvetica", sans-serif;
-	font-size: 4rem;
 	line-height: 1em;
 	font-weight: 200;
 	top: 3.2rem;
 }
-.sub-header ul {
+
+.header .title {
+	font-size: 4.5rem;
+}
+
+.sub-header .title {
+	font-size: 3.5rem;
+}
+
+.header ul, .sub-header ul {
   position: relative;
   display: block;
   list-style: none;
   padding-left: 0;
   /*margin-left: 8%;*/
   margin-top: 0;
-  padding-top: 7.3em;
+  padding-top: 3em;
   font-size: 1.2em;
   font-weight: 200;
   color: #5B753D;
 }
-.sub-header li {
+.header li, .sub-header li {
   display: inline;
   padding-right: 1em;
 }
-.sub-header a{
+.header a, .sub-header a{
   color: inherit;
   text-decoration: none;
 }
@@ -347,11 +355,11 @@ a::visited {
 /* ---------------------- FOOTER ---------------------- */
 footer {
 	width: 100%;
-	height: 6.4rem;
+	height: 3.2rem;
 	margin-top: 4rem;
 	font-size: 1.1rem;
     line-height: 6.4rem;
-    background-color: #5B753D;
+    background-color: #4a4a4a;
     color: #fafafa;
 }
 footer .container {
@@ -365,6 +373,8 @@ footer .container {
 	text-align: left;
 	color: #4a4a4a;
 }
+
+/* ---------------------- Social Bar ---------------------- */
 .social-list {
 	display: block;
 	position: relative;
@@ -375,7 +385,7 @@ footer .container {
 	.social-list .social-media {
 		display: inline-block;
 		position: relative;
-		width: 19%;
+		width: 20%;
 		height: 3.4rem;
 		min-height: 56px;
 		padding: 1.5rem 0;
@@ -408,10 +418,18 @@ footer .container {
 .social-media:first-child {
 	border-left: none;
 }
+
+.social-list.light {
+	width: 64%;
+	margin: 1em 18%;
+
+}
+.social-list.light .social-media{
+	padding: 0 0;
+}
 .social-list.dark {
-	width: 50%;
-	margin: 0 25%;
-	padding-top: 2rem;
+	width: 56%;
+	margin: 1em 22%;
 }
 
 
@@ -454,6 +472,9 @@ footer .container {
 }
 .dark .social-media #instagram {
 	background-image: url('../image_assets/social/instagram_dark.png');
+}
+.dark .social-media #soundcloud {
+	background-image: url('../image_assets/social/soundcloud_dark.png');
 }
 /* not in use */
 /*
