@@ -109,8 +109,9 @@ section.resume {
 				}
 			.resume-list {
 				padding-left: 1rem;
-				font-size: 1.25rem;
+				font-size: 1.1rem;
 				line-height: 1.5em;
+				list-style-type: circle;
 			}
 
 				.resume-content-divider {

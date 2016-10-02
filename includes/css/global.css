@@ -15,8 +15,8 @@ body {background: #CECECE; padding: 0; margin: 0;
 main {
 	display: block;
 	width: 98%;
-	min-height: 98%; min-height: 98vh;
-	margin: 1%;
+	min-height: 99%; min-height: 99vh;
+	margin: 1% 1% 0 1%;
 	padding: 0;
 	background: #FAFAFA;
 }
@@ -355,12 +355,13 @@ a::visited {
 /* ---------------------- FOOTER ---------------------- */
 footer {
 	width: 100%;
-	height: 3.2rem;
+	height: 6.4rem;
 	margin-top: 4rem;
-	font-size: 1.1rem;
-    line-height: 6.4rem;
+	font-size: 1rem;
+    line-height: 1.6rem;
     background-color: #4a4a4a;
     color: #fafafa;
+    padding-bottom: 0.5rem;
 }
 footer .container {
 	position: relative;
@@ -368,10 +369,10 @@ footer .container {
 }
 .copyright {
 	position: relative;
-	display: inline-block;
-	float: left;
-	text-align: left;
-	color: #4a4a4a;
+	display: block;
+	text-align: center;
+	color: #fafafa;
+	top: 1rem;
 }
 
 /* ---------------------- Social Bar ---------------------- */
@@ -421,7 +422,9 @@ footer .container {
 
 .social-list.light {
 	width: 64%;
-	margin: 1em 18%;
+	margin: 0 18%;
+	padding: 0.2rem 0;
+	height: 3.4rem
 
 }
 .social-list.light .social-media{

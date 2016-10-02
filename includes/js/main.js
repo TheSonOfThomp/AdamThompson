@@ -1,5 +1,5 @@
 //Toggle V1
-var design_types = ["UX", "Interaction", "Product", "Industrial", "Web"];
+var design_types = ["UX", "Interaction", "Product", "Web", "Industrial"];
 
 var filterResume = 0;
 
