@@ -52,7 +52,10 @@ section.resume {
 				background-size: 80%;
 				background-position: 50%;
 				background-repeat: no-repeat;
-			}
+			}	
+				.zynga .logo {
+					background-image: url("../image_assets/zynga_logo.png");
+				}
 				.noom .logo {
 					background-image: url("../image_assets/noom_logo.png");
 				}
@@ -187,6 +190,10 @@ section.resume {
 					background-image: url('../image_assets/apps/indd.png');}
 					#balsamiq .app-logo {
 					background-image: url('../image_assets/apps/balsamiq.png');}
+					#framer .app-logo {
+					background-image: url('../image_assets/apps/framer.png');}
+					#origami .app-logo {
+					background-image: url('../image_assets/apps/origami.png');}
 
 					/* Dev 1 */
 					#html5 .app-logo {
@@ -198,19 +205,6 @@ section.resume {
 					#coffeescript .app-logo {
 					background-image: url('../image_assets/apps/coffeescript.png');}
 
-					/* 3d */
-					#autocad .app-logo {
-					background-image: url('../image_assets/apps/autocad.png');}
-					#inventor .app-logo {
-					background-image: url('../image_assets/apps/inventor.png');}
-					#rhino .app-logo {
-					background-image: url('../image_assets/apps/rhino.png');}
-					#max .app-logo {
-					background-image: url('../image_assets/apps/max.png');}
-					#c4d .app-logo {
-					background-image: url('../image_assets/apps/c4d.png');}
-
-					/* Dev 2 */
 					#arduino .app-logo {
 					background-image: url('../image_assets/apps/arduino.png');}
 					#xcode .app-logo {
@@ -223,13 +217,32 @@ section.resume {
 					background-image: url('../image_assets/apps/java.png');}
 					#swift .app-logo {
 					background-image: url('../image_assets/apps/swift.png');}
+					#python .app-logo {
+					background-image: url('../image_assets/apps/python.png');}
+					#matlab .app-logo {
+					background-image: url('../image_assets/apps/matlab.png');}
 					#git .app-logo {
 					background-image: url('../image_assets/apps/git.png');}
 					#bootstrap .app-logo {
 					background-image: url('../image_assets/apps/bootstrap.png');}
 					#sass .app-logo {
 					background-image: url('../image_assets/apps/sass.png');}
+					#excel .app-logo {
+					background-image: url('../image_assets/apps/excel.png');}
+					#sql .app-logo {
+					background-image: url('../image_assets/apps/sql.png');}	
 
+					/* 3d */
+					#autocad .app-logo {
+					background-image: url('../image_assets/apps/autocad.png');}
+					#inventor .app-logo {
+					background-image: url('../image_assets/apps/inventor.png');}
+					#rhino .app-logo {
+					background-image: url('../image_assets/apps/rhino.png');}
+					#max .app-logo {
+					background-image: url('../image_assets/apps/max.png');}
+					#c4d .app-logo {
+					background-image: url('../image_assets/apps/c4d.png');}
 					/* video */
 					#ae .app-logo {
 					background-image: url('../image_assets/apps/ae.png');}

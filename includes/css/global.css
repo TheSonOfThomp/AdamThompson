@@ -114,39 +114,16 @@ a::visited {
   height: 100%;
   width: 100%;
   margin: 0;
-  margin-top: 1rem;
+  margin-top: 0;
   overflow: hidden;
   color: inherit;
 }
-/*
-.sub-header::before, .sub-header::after {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  float: left;
-  margin: 0;
-  border-bottom: 1px solid #4a4a4a;
-}
-.sub-header::before {
-	width: calc(100% - 128px);
-	height: 128px;
-}
-*/
-/*.sub-header::after{
-	right: -36px;
-	top: 36px;
-	width: 144px;
-	height: 128px;
-	-webkit-transform: rotate(25deg);
-	-moz-transform: rotate(25deg);
-	transform: rotate(25deg);
-}*/
 .header .title, .sub-header .title {
 	position: relative;
 	display: block;
 	font-family: "Raleway", "Lato", "Helvetica", sans-serif;
 	line-height: 1em;
-	font-weight: 200;
+	font-weight: 500;
 	top: 3.2rem;
 }
 
@@ -357,7 +334,7 @@ footer {
 	width: 100%;
 	height: 6.4rem;
 	margin-top: 4rem;
-	font-size: 1rem;
+	font-size: 12px;
     line-height: 1.6rem;
     background-color: #4a4a4a;
     color: #fafafa;

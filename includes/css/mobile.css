@@ -9,19 +9,26 @@
 	.mobile-only {
 		display: inline;
 	}
-
-
 	/* ------------ HEADER ------------ */
-	header.main-header {
+	.header, .sub-header{
 		height: auto;
-		padding-top: 0;
+		margin-top: 0;
+		padding-top: 0l
 	}
 	.main-header .container {
 		width: 100%;
 		margin: 0;
 	}
+
+	header.main-header{
+		padding: 0;
+		margin: 0;
+	} 
+	header .header .title {
+		top: 28px;
+	}
 	.sub-header {
-		margin-top: 1rem;
+		margin-top: 0;
 	}
 	.sub-header::before {
 		width: calc(100% - 56px);
