@@ -32,14 +32,12 @@ section.portfolio {
 }
 .gallery .folio-item {
 	position: relative;
-	display: inline-block;
-	display: none; /* For Filtering */
+	display: inline-block; display: none; /* For Filtering */
+	overflow: hidden;
 	float: left;
 	width: 50%;
-	/*height: 37.5vw;*/
-	height: 0;
+	height: 36.75vw; /* 50% * 98% * 3/4 */
 	padding: 0;
-	padding-bottom: 37.5%;
 	margin: 0; 
 }
 
@@ -53,6 +51,7 @@ section.portfolio {
 
 .gallery a {
 	display: inline-block;
+	width: 100%;
 	height: auto;
 }
 

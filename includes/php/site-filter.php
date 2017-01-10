@@ -4,8 +4,9 @@
 		<span class="sort-text hide-mobile">Sort portfolio by:</span></span>
 		<div class="menu">
 		    <div class="menu-label"><span class="selected">Featured<span class="mobile-only"> items</span></span></div>
-		    <ul class="dropdown hide">
-				<li class="filter active" data-filter=".featured" id="featured">Featured</li>
+		    <!-- <ul class="dropdown hide"> -->
+		    <ul class="horizontal-sort animate">
+				<li class="filter active selected" data-filter=".featured" id="featured">Featured</li>
 				<li class="filter" data-filter=".ux">UX/Product Design</li>
 				<li class="filter" data-filter=".industrial">Industrial Design</li>
 				<!--			<li class="filter" data-filter=".pm">Product Management</li> -->

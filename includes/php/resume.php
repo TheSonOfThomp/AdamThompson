@@ -55,7 +55,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">User Experience & Product Designer</span>
+					<span class="subsection-title">UX/Product Designer & Product Manager</span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, Product Design, User Interface Designer at KnowRoaming</span>
 					<span class="subsection-duration">May&nbsp2014 - April&nbsp2015 (2 Terms)</span>
 				</div>
@@ -69,7 +69,7 @@
 						<li class="resume-item web soft">Designed and developed the <a href="athletes.knowroaming.com" target="_blank">KnowRoaming Athletes</a> sign-up page using HTML5, CSS3, CoffeeScript and PHP.</li>
 
 					<div class="resume-content-divider">Product Management</div>
-						<li class="resume-item featured ux pm web soft">Started and lead weekly design meetings with developers, customer service, marketing and company leadership to discuss the experience of the mobile apps, consumer facing and corporate websites, and other relevant topics.</li>
+						<li class="resume-item featured ux pm web soft">Initiated and lead weekly design meetings with developers, customer service, marketing and company leadership to discuss the experience of the mobile apps, consumer facing and corporate websites, and other relevant topics.</li>
 						<li class="resume-item featured pm">Created, branded and optimized a core company service, now called <a href="https://support.knowroaming.com/hc/en-us/articles/203064825-What-is-ReachMe-" target="_blank">ReachMe</a>.</li>						
 
 					<div class="resume-content-divider">Industrial Design</div>

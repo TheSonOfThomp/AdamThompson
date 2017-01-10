@@ -6,6 +6,12 @@ $(document).ready(function(){
     $('.dropdown').slideToggle();
   });
 	
+  $(".horizontal-sort li").click(function(){
+    $(".horizontal-sort li").removeClass("selected");
+    $(this).addClass("selected")
+
+  });
+
   // When a dropdown item is clicked
   $('.dropdown li').click(function(){
     var title = $(this).text();
