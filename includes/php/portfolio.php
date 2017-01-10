@@ -41,7 +41,7 @@
 		</a>
       </li>
 	  <!-- ********** Colour Thermometer ********** -->
-      <li class="folio-item web software featured">
+      <li class="folio-item web soft featured">
       	<a href="Portfolio/?p=colourtherm">
 			<img src="includes/portfolio_images/colourtherm.png">
 			<div class="hover-state animate">

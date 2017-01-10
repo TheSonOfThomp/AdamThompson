@@ -141,11 +141,17 @@
 	.menu {
 		width: 100%;
 		margin: 0;
+		padding: 0;
+	}
+	.menu .horizontal-sort {
+		display: none;
 	}
 	.menu-label {
-
 		display: inline-block;
+		width: 92%;
+		padding: 0 4%;
 		text-align: center;
+		background: #DCE6CF;
 	}
 	.menu-label .selected {
 		width: 100%;
@@ -179,7 +185,8 @@
 	}*/
 	.gallery .folio-item {
 		width: 100%;
-		padding-bottom: 75%;
+		height: auto;
+		/*padding-bottom: 75%;*/
 	}
 	.gallery .hover-state {
 		opacity: 1;
