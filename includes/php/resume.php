@@ -91,7 +91,7 @@
 					<span class="subsection-duration">September - December&nbsp2013</span>
 				</div>
 				<ul class="resume-list">
-					<li class="resume-item featured ux graphics">Lead the design and development for a new music-dicovery feature in MediaGo. This feature has not yet been released.</li>
+					<li class="resume-item featured ux graphics">Led the design and development for a new music-dicovery feature in MediaGo. This feature has not yet been released.</li>
 					<li class="resume-item featured ux web">Developed the front-end for the new feature using HTML, SASS and jQuery</li>
 					<li class="resume-item featured ux graphics">Proposed a UI re-design of the entire MediaGo application, enhancing aesthetics, and ove user experience</li>
 					<li class="resume-item graphics">Designed promotional graphics and videos for MediaGo</li>
