@@ -1,7 +1,7 @@
 <section class="resume" id="resume">
 	<div class="sub-header">
 		<div class="container">
-			<div class="title">Resumé <span class="filter-notification"></span></div>
+			<div class="title">Résumé <span class="filter-notification"></span></div>
 			<ul>
 				<li>
 					<a target="_blank" href="<?php echo $root_path;?>/Resume">Download PDF</a>
@@ -61,18 +61,18 @@
 				</div>
 				<ul class="resume-list">
 
-					<div class="resume-content-divider">UX Design</div>
+					<h4>UX Design</h4>
 						<li class="resume-item featured ux graphics industrial">Redesigned both <a href="Portfolio/?p=KR_app">iOS and Android apps</a> from the ground up. I reworked everything from the registration workflow, to the in app experience at home and abroad using the KnowRoaming SIM Sticker.</li>
 						<li class="resume-item featured ux graphics industrial pm">Leveraged customer feedback to iterate on the flow of the app to better correspond with the users' mental model of the 3 use-phases of the product.</li>
 						<li class="resume-item ux graphics web">Initiated and oversaw the preliminary design of the new <a href="Portfolio/?p=KR_web">company homepage</a>, and <a href="corporate.knowroaming.com" target="_blank">corporate portal</a></li>
 						<li class="resume-item ux graphics video">Storyboarded, and animated an app <a href="Portfolio/?p=KR_video">intro video</a> for the updated KnowRoaming app</li>
 						<li class="resume-item web soft">Designed and developed the <a href="athletes.knowroaming.com" target="_blank">KnowRoaming Athletes</a> sign-up page using HTML5, CSS3, CoffeeScript and PHP.</li>
 
-					<div class="resume-content-divider">Product Management</div>
+					<h4>Product Management</h4>
 						<li class="resume-item featured ux pm web soft">Initiated and lead weekly design meetings with developers, customer service, marketing and company leadership to discuss the experience of the mobile apps, consumer facing and corporate websites, and other relevant topics.</li>
 						<li class="resume-item featured pm">Created, branded and optimized a core company service, now called <a href="https://support.knowroaming.com/hc/en-us/articles/203064825-What-is-ReachMe-" target="_blank">ReachMe</a>.</li>						
 
-					<div class="resume-content-divider">Industrial Design</div>
+					<h4>Industrial Design</h4>
 						<li class="resume-item ux industrial">Designed and prototyped a <a href="Portfolio/?p=KR_retail">retail stand</a> for dispensing product boxes and displaying product information in retail stores.</li>
 						<li class="resume-item graphics industrial">Designed a new product <a href="Portfolio/?p=KR_package">package concept</a>, reducing the box side by 50% by leveraging unique features of the KnowRoaming product.</li>
 						<li class="resume-item industrial">Created 3D concept models of an automated <a href="Portfolio/?p=KR_applicator">sticker application device</a> using AutoCAD and Inventor</li>

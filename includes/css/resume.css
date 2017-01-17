@@ -84,11 +84,13 @@ section.resume {
 			}
 
 		.resume-content {
-			max-width: calc(80% - 2rem - 1px);
-			min-height: 100%;
+			/*max-width: calc(80% - 2rem - 1px);
+			min-height: 100%;*/
+			width: 80%;
+			padding: 0;
 			float: left;
 			display: inline-block;
-			padding-left: 2rem;
+			/*padding-left: 2rem;*/
 			/*border-left: 1px solid #4a4a4a;*/
 		}
 			.subsection-header {
@@ -97,7 +99,7 @@ section.resume {
 				.subsection-title {
 					font-family: "Raleway", "Lato", "Helvetica", "Arial", sans-serif;
 					font-size: 2rem;
-					font-weight: 400;
+					font-weight: 500;
 				}
 					.inline-note {
 						display: inline;
@@ -113,7 +115,7 @@ section.resume {
 				}
 			.resume-list {
 				padding-left: 1rem;
-				font-size: 1.1rem;
+				font-size: 1rem;
 				line-height: 1.5em;
 				list-style-type: disc;
 			}

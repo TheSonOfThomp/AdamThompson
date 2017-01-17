@@ -11,7 +11,7 @@
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">Noom Meal Logging Experience</span><br/>
-					<span class="folio-type">UX & Product Management</span>
+					<span class="folio-type">Product Design</span>
 				</div>
 			</div>
 		</a>
@@ -23,7 +23,7 @@
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">KnowRoaming App</span><br/>
-					<span class="folio-type">UX & Product Management</span>
+					<span class="folio-type">UX / Product Management</span>
 				</div>
 			</div>
 		</a>
@@ -35,7 +35,7 @@
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">SMRT WATR</span><br/>
-				  	<span class="folio-type">Multi-disciplinary</span>
+				  	<span class="folio-type">UX / Full-stack development / Mechanical Design</span>
 				</div>
 			</div>
 		</a>

@@ -83,14 +83,14 @@ section.portfolio {
 	vertical-align: middle;
 	color: #fafafa;
 	line-height: 1.8rem;
-	font-weight: 100;
+	font-weight: 500;
 }
 .folio-title {
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	font-family: "Raleway", "Lato", "Helvetica", sans-serif;
 }
 .folio-type {
-	font-size: 1.2rem;
+	font-size: 1rem;
 
 	font-weight: lighter;
 	font-style: italic;
