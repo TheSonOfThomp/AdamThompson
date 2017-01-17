@@ -87,10 +87,18 @@
 	height: auto;
 	margin: 0;
 }
+
+.folio_image iframe {
+	width: 90%;
+	height: 640px;
+}
+
 .folio_image figcaption {
 	text-align: center;
 	font-size: 1rem;
 	color: #5B753D;
+	max-width: 80%;
+	margin: 0 10%;
 }
 
 blockquote {

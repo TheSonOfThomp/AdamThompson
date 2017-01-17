@@ -97,6 +97,7 @@ section.resume {
 				.subsection-title {
 					font-family: "Raleway", "Lato", "Helvetica", "Arial", sans-serif;
 					font-size: 2rem;
+					font-weight: 400;
 				}
 					.inline-note {
 						display: inline;
@@ -114,7 +115,7 @@ section.resume {
 				padding-left: 1rem;
 				font-size: 1.1rem;
 				line-height: 1.5em;
-				list-style-type: circle;
+				list-style-type: disc;
 			}
 
 				.resume-content-divider {

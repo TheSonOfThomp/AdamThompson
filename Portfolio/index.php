@@ -1,6 +1,7 @@
 <?php
 include('../includes/php/global-head.php');
 include('portfolio_switch.php');
+include('../includes/plugins/Parsedown.php');
 ?>
 <title>Adam Thompson - <?php echo($p_title) ?></title>
 <link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/header.css" type="text/css">
@@ -28,6 +29,7 @@ include('portfolio_switch.php');
 		include('portfolio-template.php');
 	}
 	else {
+		$Parsedown = new Parsedown();
 		include($HTML_FILE);
 	}
 	?>

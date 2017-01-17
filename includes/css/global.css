@@ -48,10 +48,10 @@ h2 {
 	/*text-decoration: underline;*/
 }
 h3 {
-	font-family: "Merriweather", "Garamond", "Times New Roman", serif;
+	font-family: "Lato", "Helvetica", sans-serif;
 	font-size: 2rem;
 	line-height: 1.5em;
-	font-weight: 200;
+	font-weight: 400;
 	/*text-decoration: underline;*/
 }
 h4 {
