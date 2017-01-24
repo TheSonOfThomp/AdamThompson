@@ -5,13 +5,8 @@ Meal logging is a must-have feature in Noom Coach. Therefore it must to be quick
 Through user testing we got to see what users did (and didn’t do) in the app. The biggest issue we saw was that users were having difficulty navigating between the search view and the cart view (to view foods already logged). The buttons to view the cart, and to add more items were not nearly salient enough to be the primary action; the back buttons on either screen were counter intuitive, and didn’t work the way anyone expected them to.
 
 <figure class='folio_image' id='img2'>
-<!-- 	<a target='_blank'>
-		<img src='<?php echo $root_path ?>/includes/portfolio_images/noom_logging-old.gif'>
-	</a>
- -->
-<iframe src="https://player.vimeo.com/video/157767468" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-<figcaption>I want to log a meal. The arrow button in the left corner — where does that take me? That little check mark in the right corner — can I click it? And if I do, where does it take me, and how can I get back?</figcaption>
+	<iframe src="https://player.vimeo.com/video/157767468" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<figcaption>I want to log a meal. The arrow button in the left corner — where does that take me? That little check mark in the right corner — can I click it? And if I do, where does it take me, and how can I get back?</figcaption>
 </figure>
 
 The exact problems were not identical between the Android and iOS apps, but there were significant problems with each. On iOS, users were flat-out confused about the behaviour of some buttons, whereas on Android, users were missing out on critical information. When an Android user pressed the back arrow their meal would be saved, and they would arrive back on the home screen. At face value this makes sense, however it doesn’t provide the user experience promised by Noom: to learn about your meals in order to make healthier choices in the future. We saw this as another symptom of a broken food-logging workflow.

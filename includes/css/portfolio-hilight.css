@@ -1,41 +1,40 @@
 .portfolio-page .header {
 	margin: 0;
 }
-
 .portfolio-page .header .title{
 	top: 0.5em;
 }
 .portfolio-page .header .tagline{
 	top: 2.5em;
 }
-
 .portfolio-title {
 	width: 100%;
-	/*max-width: 720px;*/
 	margin: 0 auto;
 	margin-bottom: 0.75em;
 	text-align: center;
 }
 
-/*.back-to-main {
-	position: relative;
-	display: block;
-	line-height: 1em;
-	cursor: pointer;
-}
-.back-to-main a::before {
-	content: '';
-	position: relative;
-	display: inline-block;
-	content: '';
-	top: 0.1em;
-	height: 1em;
-	width: 1em;
-	margin-right: 0.25em;
-	background-image: url('../image_assets/back-arrow.png');
-	background-size: 100%;
-}*/
 
+.portfolio-page h2 {
+	
+}
+
+.portfolio-page h3 {
+	
+}
+
+.portfolio-page h4 {
+	
+}
+
+.portfolio-page p {
+	line-height: 1.6em;
+}
+
+
+
+
+/* ------ Default Style ------ */
 .gallery-content {
 	position: relative;
 	display: inline-block;
