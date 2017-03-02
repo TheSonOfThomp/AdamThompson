@@ -28,6 +28,18 @@
 			</div>
 		</a>
 	  </li>
+	  		  <!-- ********** Chameleon ********** -->
+      <li class="folio-item mech soft dsp audio signals ux industrial featured">
+      	<a href="Portfolio/?p=chameleon">
+			<img src="includes/portfolio_images/chameleon.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">Chameleon Hearing Protection</span><br/>
+					<span class="folio-type">Mechanical Design / Audio & Acoustics / UX</span>
+				</div>
+			</div>
+		</a>
+	  </li>
 	  <!-- ********** SMRT WATR ********** -->
       <li class="folio-item ux industrial soft pm featured">
 	      <a href="Portfolio/?p=smrtwatr">
@@ -35,13 +47,16 @@
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">SMRT WATR</span><br/>
-				  	<span class="folio-type">UX / Full-stack development / Mechanical Design</span>
+				  	<span class="folio-type">UX / Full-stack / Mechanical Design</span>
 				</div>
 			</div>
 		</a>
       </li>
-	  <!-- ********** Colour Thermometer ********** -->
-      <li class="folio-item web soft featured">
+
+<!-- ************************************** //FEATURED ************************************** -->
+
+	  	   <!-- ********** Colour Thermometer ********** -->
+      <li class="folio-item web Software">
       	<a href="Portfolio/?p=colourtherm">
 			<img src="includes/portfolio_images/colourtherm.png">
 			<div class="hover-state animate">
@@ -53,10 +68,8 @@
 		</a>
 	  </li>
 
-<!-- ************************************** //FEATURED ************************************** -->
-
 	  <!-- ********** NOOM - Portion Picker ********** -->
-      <li class="folio-item ux">
+      <!-- <li class="folio-item ux">
       	<a href="Portfolio/?p=noom_portion">
 			<img src="includes/portfolio_images/noom_portion.jpg">
 			<div class="hover-state animate">
@@ -66,7 +79,7 @@
 				</div>
 			</div>
 		</a>
-	  </li>
+	  </li> -->
 	  <!-- ********** KNOWROAMING WEBSITE ********** -->
       <li class="folio-item ux">
 	      <a href="Portfolio/?p=KR_web">
