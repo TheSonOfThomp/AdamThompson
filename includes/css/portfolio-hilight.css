@@ -1,5 +1,6 @@
 header.main-header {
-	background: #FAFAFAdd;
+	background: #FAFAFAcc;
+	-webkit-backdrop-filter: saturate(1.8) blur(20px);
 	height: auto;
 	z-index: 1;
 }
