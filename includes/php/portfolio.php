@@ -18,8 +18,8 @@
 	  </li>
 	  <!-- ********** KNOWROAMING APP ********** -->
       <li class="folio-item ux featured">
-      	<a href="Portfolio/?p=KR_app">
-			<img src="includes/portfolio_images/KR_app.jpg">
+      	<a href="Portfolio/?p=knowroaming">
+			<img src="includes/portfolio_images/KnowRoaming.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">KnowRoaming App</span><br/>

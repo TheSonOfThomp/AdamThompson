@@ -1,5 +1,11 @@
 Meal logging is a must-have feature in Noom Coach. Therefore it must to be quick and intuitive to log the food you’ve eaten and get insightful feedback. With the help of the UX research team and the input of other designers and engineers, I was able to fix some big problems with the food logging experience, and re-design it to be as straight-forward and intuitive as possible.
 
+<figure class='folio_image' id='img1'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/noom_logging.jpg'>
+	</a>
+</figure>
+
 ###Why did we do this?
 
 Through user testing we got to see what users did (and didn’t do) in the app. The biggest issue we saw was that users were having difficulty navigating between the search view and the cart view (to view foods already logged). The buttons to view the cart, and to add more items were not nearly salient enough to be the primary action; the back buttons on either screen were counter intuitive, and didn’t work the way anyone expected them to.

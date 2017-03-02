@@ -1,3 +1,5 @@
+<img class="cover-photo" src="<?php echo $cover_photo ?>">
+
 <p class="folio_paragraph" id="paragraph1"><?php echo $p_p1; ?></p>
 <figure class="folio_image image" id="img1">
 	<a href="<?php echo $img1 ; ?>" target="_blank">

@@ -22,9 +22,7 @@ include('../includes/plugins/Parsedown.php');
 
 <article class="gallery-content">
 	<h2 class="portfolio-title"><?php echo $p_title ?></h2>	
-	<div class="col single-column">
-		<img class="cover-photo" src="<?php echo $cover_photo ?>">
-
+		<div class="col single-column">
 	<?php if ($useTemplate) {
 		include('portfolio-template.php');
 	}

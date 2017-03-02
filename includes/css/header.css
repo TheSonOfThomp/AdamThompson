@@ -1,5 +1,3 @@
-
-
 header.main-header {
 	padding-top: 1rem;
 }
@@ -28,7 +26,8 @@ header.main-header {
 	font-weight: 100;
 	font-size: 2rem;
 	line-height: 1em;
-	top: 5.2rem; /* 3.2rem + title-height - this-height */
+	padding-top: 16px;  
+	/*3.2rem + title-height - this-height */
 }
 .tagline em {
 	color: #5B753D;
@@ -37,7 +36,7 @@ header.main-header {
 	.header .tagline, .sub-header .tagline {
 		font-size: 1.6em;
 		line-height: 1.25em;
-		top: 3em;
+		padding-top: 3em;
 	}
 }
 
