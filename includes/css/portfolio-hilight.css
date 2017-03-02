@@ -1,5 +1,7 @@
 header.main-header {
+	background: #FAFAFAdd;
 	height: auto;
+	z-index: 1;
 }
 
 .portfolio-page .header {
@@ -9,7 +11,8 @@ header.main-header {
 	text-align: center;
 	padding: 12px 0;
 	font-size: 3rem;
-	border-bottom: 1px solid #4a4a4a
+	border-bottom: 1px solid #4a4a4a;
+	opacity: 1;
 }
 
 .portfolio-page .header .title:before {
