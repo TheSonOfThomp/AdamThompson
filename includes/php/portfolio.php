@@ -16,19 +16,8 @@
 			</div>
 		</a>
 	  </li>
-	  <!-- ********** KNOWROAMING APP ********** -->
-      <li class="folio-item ux featured">
-      	<a href="Portfolio/?p=knowroaming">
-			<img src="includes/portfolio_images/KnowRoaming.jpg">
-			<div class="hover-state animate">
-				<div class="folio-hover">
-					<span class="folio-title">KnowRoaming App</span><br/>
-					<span class="folio-type">UX / Product Management</span>
-				</div>
-			</div>
-		</a>
-	  </li>
-	  		  <!-- ********** Chameleon ********** -->
+
+	  	  		  <!-- ********** Chameleon ********** -->
       <li class="folio-item mech soft dsp audio signals ux industrial featured">
       	<a href="Portfolio/?p=chameleon">
 			<img src="includes/portfolio_images/chameleon.jpg">
@@ -40,6 +29,7 @@
 			</div>
 		</a>
 	  </li>
+
 	  <!-- ********** SMRT WATR ********** -->
       <li class="folio-item ux industrial soft pm featured">
 	      <a href="Portfolio/?p=smrtwatr">
@@ -52,6 +42,19 @@
 			</div>
 		</a>
       </li>
+
+	  	  <!-- ********** KNOWROAMING APP ********** -->
+      <li class="folio-item ux featured">
+      	<a href="Portfolio/?p=knowroaming">
+			<img src="includes/portfolio_images/knowroaming/knowroaming.jpg">
+			<div class="hover-state animate">
+				<div class="folio-hover">
+					<span class="folio-title">KnowRoaming App</span><br/>
+					<span class="folio-type">UX / Product Management</span>
+				</div>
+			</div>
+		</a>
+	  </li>
 
 <!-- ************************************** //FEATURED ************************************** -->
 

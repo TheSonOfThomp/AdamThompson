@@ -110,7 +110,7 @@ header.main-header {
 	height: 640px;
 }
 
-.folio_image figcaption {
+figcaption {
 	text-align: center;
 	font-size: 1rem;
 	color: #5B753D;
@@ -123,6 +123,17 @@ blockquote {
 	padding-left: 1em;
 }
 
+table {
+	font-size: 12px;
+	line-height: 1.2em;
+	border: none;
+	width: 100%;
+}
+table * {
+	border: 1px solid #cacaca;
+	margin: 0;
+}
+/*
 @media screen and (max-width: 1160px) {
 	.sub-header {
 		margin-top: 1rem;
@@ -153,4 +164,4 @@ blockquote {
 	.folio-paragraph {
 		text-indent: 1.2em;
 	}
-}
+}*/

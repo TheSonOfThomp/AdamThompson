@@ -13,7 +13,7 @@
 		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/jquery.mixitup.min.js"></script>
 		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/jquery.vanillabox-0.1.7.min.js"></script>
 		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/main.js"></script>
-		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/portfolio.js"></script>
+		<!-- <script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/portfolio.js"></script> -->
 </head> 
 <body id= "<?php echo($page_id) ?>" onload="__pauseAnimations();">
 	<!-- Google Analytics Code --> 
