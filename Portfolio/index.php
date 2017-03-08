@@ -23,14 +23,20 @@ include('../includes/plugins/Parsedown.php');
 <article class="gallery-content">
 	<h2 class="portfolio-title"><?php echo $p_title ?></h2>	
 		<div class="col single-column">
-	<?php if ($useTemplate) {
+
+	<?php if ($useMarkdown) {
+		$Parsedown = new Parsedown();
+		$markdown = file_get_contents($p.'.md');
+		echo $Parsedown->text($markdown);
+	}
+	else if ($useTemplate) {
 		include('portfolio-template.php');
 	}
 	else {
-		$Parsedown = new Parsedown();
 		include($HTML_FILE);
 	}
 	?>
+
 	</div>
 </article>
 <script type="text/javascript">

@@ -1,6 +1,7 @@
 <?php
 	$p = $_GET['p'];
 	$useTemplate = true;
+	$useMarkdown = false;
 	$HTML_FILE = $p.'.php';
 	$img_path = $root_path."/includes/portfolio_images/";
 	$cover_photo = $img_path.$p.'.jpg';
@@ -9,11 +10,21 @@
 		// SHOWCASE //
 		case 'noom_logging':
 			$useTemplate = false;
+			$useMarkdown = true;
 			$p_title = "Improving Food Logging at Noom";
 			$HTML_FILE = $p.'.php';
 			break;
+
+		case 'chameleon':
+			$useTemplate = false;
+			$useMarkdown = true;
+			$p_title = "Chameleon Hearing Protection";
+			$HTML_FILE = $p.'.php';
+			break;
+
 		case 'smrtwatr':
 			$useTemplate = false;
+			$useMarkdown = false;
 			$HAS_VIDEO = true;
 			$p_title = "SMRT WATR - An Interactive Water Fountain";
 			$HTML_FILE = $p.'.php';
@@ -22,6 +33,7 @@
 
 		case 'knowroaming':
 			$useTemplate = false;
+			$useMarkdown = true;
 			// $HAS_VIDEO = true;
 			$p_title = "KnowRoaming App Redesign";
 			$HTML_FILE = $p.'.php';
