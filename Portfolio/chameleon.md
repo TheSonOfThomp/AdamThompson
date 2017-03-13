@@ -7,4 +7,4 @@
 
 A variable hearing protection device for periodically loud environments, such as construction sites and factories which continuously adjusts its attenuation based on the loudness of the environment.
 
-More detail coming soon!
+More details coming soon!

@@ -21,7 +21,7 @@ include('../includes/plugins/Parsedown.php');
 
 
 <article class="gallery-content">
-	<h2 class="portfolio-title"><?php echo $p_title ?></h2>	
+	<h1 class="portfolio-title"><?php echo $p_title ?></h2>	
 		<div class="col single-column">
 
 	<?php if ($useMarkdown) {

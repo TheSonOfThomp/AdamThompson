@@ -33,16 +33,39 @@ header.main-header {
 	/*font-size: 4rem;*/
 }
 
+.portfolio-page h1 {
+	font-size: 40px;
+
+}
+
 .portfolio-page h2 {
-	
+	font-size: 32px;
+	font-style: normal;
+	font-weight: bold
 }
 
 .portfolio-page h3 {
-	
+	font-size: 32px;
+	font-weight: 300;
 }
 
 .portfolio-page h4 {
-	
+	font-size: 28px;
+	font-weight: normal;	
+}
+
+.portfolio-page h5 {
+	font-size: 24px;
+	color: #808080;
+	font-weight: normal;
+}
+.portfolio-page h6 {
+	font-size: 20px;
+	color: #808080;
+	font-weight: normal;
+	font-style: italic;
+	margin: 0;
+
 }
 
 .portfolio-page p {
@@ -67,7 +90,7 @@ header.main-header {
 
 .col {
 	position: relative;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	line-height: 1.5em;
 }
 .single-column {
@@ -99,7 +122,7 @@ header.main-header {
 	position: relative;
 	display: inline-block;
 	max-width: 90%;
-	max-height: 640px;
+	max-height: 440px;
 	width: auto;
 	height: auto;
 	margin: 0;
@@ -121,6 +144,7 @@ figcaption {
 blockquote {
 	border-left: 1px solid #5B753D;
 	padding-left: 1em;
+	color: #808080;
 }
 
 table {
