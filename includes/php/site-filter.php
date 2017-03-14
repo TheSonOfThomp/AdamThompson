@@ -1,10 +1,9 @@
-<section class="site-filter dropdown-filter">
+<section class="site-filter dropdown-filter hide">
 	<hr class="filter-line">
 	<div class="inline-sort">
 		<span class="sort-text hide-mobile">Filter portfolio by:</span></span>
 		<div class="menu">
 		    <div class="menu-label"><span class="selected">Featured<span class="mobile-only"> items:</span></span></div>
-		    <!-- <ul class="dropdown hide"> -->
 		    <ul class="horizontal-sort animate">
 				<li class="filter active selected" data-filter=".featured" id="featured">Featured</li>
 				<li class="filter" data-filter=".ux">UX/UI</li>

@@ -85,7 +85,7 @@ header.main-header {
 	font-weight: 100;
 	margin-top: 2.5em;
 }
-@media screen and (max-width: 1160px){
+/*@media screen and (max-width: 1160px){
 	.bio {
 		margin-top: 4rem;
 	}
@@ -105,7 +105,7 @@ header.main-header {
 		margin: 0 12%;
 		padding-top: 2rem;
 	}
-}
+}*/
 .bio .bio-text p {
 	margin: 0;
 	line-height: 1.5em;

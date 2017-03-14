@@ -51,7 +51,7 @@
 		padding-top: 1.8rem;
 		padding-right: 3%;
 	}
-	.sub-header .tagline {
+	.tagline {
 		width: 100%;
 		display: none;
 		text-align: center;
@@ -101,12 +101,12 @@
 		-moz-transform: rotateZ(0deg);
 		-webkit-transform: rotateZ(0deg); 
 	}
-	.bio .bio-pic img {
+/*	.bio .bio-pic img {
 		display: inline;
 		transform: rotateZ(0deg);
 		-moz-transform: rotateZ(0deg);
 		-webkit-transform: rotateZ(0deg); 
-	}
+	}*/
 	.bio .bio-text {
 		float: none;
 		clear: left;
