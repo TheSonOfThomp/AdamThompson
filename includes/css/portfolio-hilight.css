@@ -41,7 +41,8 @@ header.main-header {
 .portfolio-page h2 {
 	font-size: 32px;
 	font-style: normal;
-	font-weight: bold
+	font-weight: bold;
+	color: #5B753D;
 }
 
 .portfolio-page h3 {
@@ -67,7 +68,6 @@ header.main-header {
 	margin: 0;
 
 }
-
 .portfolio-page p {
 	line-height: 1.6em;
 }
@@ -136,7 +136,7 @@ header.main-header {
 figcaption {
 	text-align: center;
 	font-size: 1rem;
-	color: #5B753D;
+	color: #808080;
 	max-width: 80%;
 	margin: 0 10%;
 }

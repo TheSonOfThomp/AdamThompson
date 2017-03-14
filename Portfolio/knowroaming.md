@@ -1,3 +1,7 @@
+I worked at KnowRoaming as a co-op student from May 2014 to April 2015 (with 4 months of school in between). This was my first ever app design job, and had no supervision from a senior designer. This experience helped me learn and grow a lot as a designer. The following is an attempt to capture my design process at the time.
+
+---
+
 <a href="http://knowroaming.com" target="_blank">KnowRoaming</a> is a Toronto-based company looking to eliminate 'Bill Shock' induced by international roaming—that feeling you get when you realize just how much roaming can cost. Their Smart SIM Sticker, which sandwiches on top of your existing SIM card, acts as a second SIM while you're abroad. You are automatically connected to a local network through the Sticker, and pay only a small fee for roaming. The Smart Sticker comes with iOS and Android companion apps which are account management tools, used to to setup your account, manage your balance and check usage and roaming rates.
 
 <figure class='folio_image' id='img1'>
@@ -49,80 +53,40 @@ Shown in the screenshot above, the app displays the user's current network statu
 With individual research established, I wanted to get some frontline information from people who are more familiar with the app. I had no way of directly contacting existing users unfortunately, so I had to settle for some second-hand information. Thankfully we had a great support team who were in contact with users daily. I asked them to compile a list of some common issues users were having in the app, whether these were issues they were calling in about, or issues in troubleshooting. This provided me with some good confirmation of the issues I had found in the heuristic evaluation, as well as some new insights that I had not thought of.
 
 ### Personas
-Along with the list of usability issues, I asked for some basic demographic information of our users. From this information, and some interaction with individuals who generally fit the descriptions, I was able to create three brief personas of our users. To keep it simple, I limited the personas to an intent quote, and a short bio.
+Along with the list of usability issues, I asked for some basic demographic information of our users. From this information, and some interaction with individuals who generally fit the descriptions, I was able to create three brief personas of our users. To keep it brief, I've limited the personas to an intent quote.<!-- , and a short bio. -->
 
-##### Jim
+###### Jim
 >I’m going on vacation next month, and I'd like to be able to contact my family & friends back home while I'm gone
 
-*Summary:* Jim is a seventy year-old retired teacher, who spends his time travelling world with his wife. He has three children and several more grandchildren whom he would like to contact while abroad, and wishes to use KnowRoaming in order to do this without spending too much money. Jim needs glasses for reading and occasionally struggles to read smaller type on his mobile device’s screen.
+<!-- *Summary:* Jim is a seventy year-old retired teacher, who spends his time travelling world with his wife. He has three children and several more grandchildren whom he would like to contact while abroad, and wishes to use KnowRoaming in order to do this without spending too much money. Jim needs glasses for reading and occasionally struggles to read smaller type on his mobile device’s screen. -->
 
-##### Paul
+###### Paul
 >My job is to travel, and I'd like to be able to use my phone during my downtime without paying ridiculous fees.
 
-*Summary:* Paul is a commercial airline pilot who travels to many countries each week. He enjoys browsing, gaming and streaming media on his smartphone. He wishes to use KnowRoaming as a simple solution to use his smartphone while travelling.
+<!-- *Summary:* Paul is a commercial airline pilot who travels to many countries each week. He enjoys browsing, gaming and streaming media on his smartphone. He wishes to use KnowRoaming as a simple solution to use his smartphone while travelling. -->
 
-##### Tina
+###### Tina
 >I travel a lot for work, so I need to be able to contact clients, and for them to contact me wherever I am.
 
-*Summary:* Tina is an independent business consultant who frequently travels abroad to meet with clients. She wishes to use her phone to call out and to receive calls wherever she is in the world. She also wants an interface that is easy to use and that is not too different from what she is used to.
+<!-- *Summary:* Tina is an independent business consultant who frequently travels abroad to meet with clients. She wishes to use her phone to call out and to receive calls wherever she is in the world. She also wants an interface that is easy to use and that is not too different from what she is used to. -->
 
 ### Task Analysis
 
-With the data I now had about the intended and actual use of the app, I was able to do a task breakdown to organize the actions involved in different activities in the app. Primarily targeting first time users, I broke down the tasks involved for a new user to start using the product, since many of these actions also need to be done by existing users before using the product again. Not all hierarchies are shown but most are similarly structured.
+With the data I now had about the intended and actual use of the app, I was able to do a task breakdown to organize the actions involved in different activities in the app. Primarily targeting first time users, I broke down the tasks involved for a new user to start using the product, since many of these actions also need to be done by existing users before using the product again.
 
 <figure class='folio_image' id='img3'>
 	<a target='_blank'>
-		<img src='../includes/portfolio_images/knowroaming/knowroaming hta 1 Register.png'>
+		<img src='../includes/portfolio_images/knowroaming/hta 1 Register.png' style="max-height: 236px">
+		<img src='../includes/portfolio_images/knowroaming/hta 2 Load Balance.png' style="max-height: 236px; max-width: 50%">
+		<img src='../includes/portfolio_images/knowroaming/hta 3 Call forward.png' style="max-height: 236px; max-width: 50%">
+		<img src='../includes/portfolio_images/knowroaming/hta 4 Foreign.png' style="max-height: 236px; max-width: 50%">
+		<img src='../includes/portfolio_images/knowroaming/hta 5 APN.png' style="max-height: 236px; max-width: 50%">
 	</a>
 <figcaption>Registration Task Hierarchy</figcaption>
 </figure>
 
-The other tasks involved in account setup are:
-2. Load Balance
-3. Setup Call-Forwarding
-4. Purchase Foreign number
-5. Setup KnowRoaming Access Point Name (APN)
-
 With the amount of unique actions needed to register and get ready to go, there was an opportunity to improve the app greatly.
 
-### Use Cases
-
-There are a number of cases in which the app can be used, and the app should behave differently in each scenario. I worked with the product team to flesh out what these use cases were, and what actions need to be performed when.
-
-#### At Home
-
-<figure class='folio_image' id='home_bar'>
-	<a target='_blank'>
-		<img src='../includes/portfolio_images/knowroaming/Phase_bar-home.png'>
-	</a>
-<figcaption></figcaption>
-</figure>
-The first use case is at home. This is ideally where a user will do most of their account setup and management. Things like setting up a call forwarding number are not technically possible while abroad, so this action should be encouraged while on the Home SIM
-
-##### Abroad
-<figure class='folio_image' id='abroad_bar'>
-	<a target='_blank'>
-		<img src='../includes/portfolio_images/knowroaming/Phase_bar-abroad.png'>
-	</a>
-<figcaption></figcaption>
-</figure>
-When a user arrives abroad, neither Android nor iOS will automatically setup a data connection, so the first thing a user must do when arriving abroad is set up this connection. Once the data connection has been established, users can use their device just like at home. 
-
-##### Back Home
-<figure class='folio_image' id='backhome_bar'>
-	<a target='_blank'>
-		<img src='../includes/portfolio_images/knowroaming/Phase_bar-back.png'>
-	</a>
-<figcaption></figcaption>
-</figure>
-You might think this seems like the same as the first use case—and you wouldn't be entirely wrong. It is very similar, only with one major distinction. While the geographical case is the same, users arriving back home after being abroad will still have the KnowRoaming data connection. In order to return to their home data plan, users need to redo the same process they took to establish their roaming data connection.
-
-From a user experience standpoint this part was tricky, since this really shouldn't be necessary, but was due to technical limitations. It was difficult to counvince users that once arriving back home, their data connection wouldn't automatically reconnect like the regular cell service would.
-
-##### Edge Cases: 
-######Home SIM while Abroad / Abroad on Home SIM
-
-In some rare cases, either (a) the KnowRoaming SIM will fail to connect/re-connect, or (b) a more advanced user will force a SIM switch. In these cases the actions available to users are different from the standard cases, so I'd have to take these cases into account.
 
 <!-- ### Storyboards -->
 
@@ -165,9 +129,9 @@ While this version showed _status_ it wasn't entirely clear that actions should 
 
 With account feedback seeming to bleed into design of the home screen, I shifted my efforts there.
 
-### Home Screen
+### Home Screen and App Architecture
 
-The home screen is the first page a user sees after registering, and every subsequent time they open the app. As such it needs to clearly show all the information a user might need. From the support team's insight into user needs, and the consequences if an item is not seen, we were able to rank design elements and user actions into a hierarchy.
+The home screen is the first page a user sees after registering, and every subsequent time they open the app. As such it needs to clearly show all the information a user might need. From the support team's insight into user needs, and the potential for error if an item is not seen, we were able to rank design elements and user actions into a hierarchy.
 
 1. Current Network/SIM card
 2. Summary of Status
@@ -176,7 +140,111 @@ The home screen is the first page a user sees after registering, and every subse
 5. Account Balance
 6. Reload account
 7. ReachMe
-8. Usage, History, My Numbers, Rate Calculator
+8. Usage, My Numbers, Rate Calculator
+9. Account Settings
+10. Billing History
+
+I used this hierarchy to inform the home screen design, and the app's information architecture. 
+
+
+#### Dashboard-Style Design
+
+A Dashboard-style homescreen would allow nearly all navigational components to be easily salient and discoverable. However, with at least 8 different actions with different relative importances, there was a high likelihood that the interface would become cluttered quite quickly, especially if new features would be added. I could make more important elements bigger, and lesser ones smaller, but the risk of clutter remained. 
+
+<figure class='folio_image' id='home-dash'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/sketch-home-dashboard.jpg'>
+</a>
+<figcaption>The dashboard design. This version didn't make it past a sketch</figcaption>
+</figure>
+
+As you might be able to tell, this sketch came before the "Ready to Roam" paradigm was finalized. 
+
+#### Drawer Design
+
+A major benefit of a navigation drawer is that it allows all navigation elements to be viewed simultaneously in a list. The nav drawer also provides a greater area of screen space to be used to display more important information. 
+
+I put a drawer in into the dashboard design using the main screen for the high-importance elements placing the items of lower importance in the less-salient Drawer. This iteration of the top-level navigation pattern was used while designing other elements of the interface.
+
+<figure class='folio_image' id='home-drawer'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/home-openDrawer.png'>
+	<img src='../includes/portfolio_images/knowroaming/home-drawer.png'>
+</a>
+<figcaption></figcaption>
+</figure>
+
+I did have qualms about the drawer though, for [discoverability reasons](https://uxdesign.cc/death-by-hamburger-2d1db115352a#.865mhybml).
+
+#### Tab Bar
+
+A tab bar is ubiquitous on both iOS and Android. With the ablility to show highly important information and actions with a default tab, place others in the tab bar, and even more still in a now-common "More" tab, the tab bar seemed like the best route to go.
+
+While there are still some elements hidden, the more frequently used items are in the bar. This design avoids clutter that the dashboard had, and does not have the discoverability issue of the drawer (thanks to the word "More" under the hamburger icon).
+
+<!-- TODO Mention the bubbles fill up -->
+
+<figure class='folio_image' id='home-drawer'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/home-bubbles.png'>
+</a>
+<figcaption></figcaption>
+</figure>
+
+Using [Prototype on Paper](https://marvelapp.com/pop/) (now owned by Marvel), I made prototypes of these navigation patterns and tested on co-workers, friends and family. In retrospect I should've tested more rigorously, but time constraints (and inexperience at the time) were a major limiting factor at the time.
+
+### Use Cases
+
+There are a number of cases in which the app can be used, and the app should behave differently in each scenario. I worked with the product team to flesh out what these use cases were, and what actions need to be performed when.
+
+<!-- #### At Home -->
+
+<figure class='folio_image' id='home_bar'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/knowroaming/status-home.png' style="max-width: 50%">
+	</a>
+<figcaption></figcaption>
+</figure>
+The first use case is at home. This is ideally where a user will do most of their account setup and management. Things like setting up a call forwarding number are not technically possible while abroad, so this action should be encouraged while on the Home SIM
+
+<!-- #### Abroad -->
+<figure class='folio_image' id='abroad_bar'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/knowroaming/status-abroad.png' style="max-width: 50%">
+	</a>
+<figcaption></figcaption>
+</figure>
+When a user arrives abroad, neither Android nor iOS will automatically setup a data connection, so the first thing a user must do when arriving abroad is set up this connection. Once the data connection has been established, users can use their device just like at home. 
+
+<!-- #### Back Home -->
+<figure class='folio_image' id='backhome_bar'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/knowroaming/status-back.png' style="max-width: 50%">
+	</a>
+<figcaption></figcaption>
+</figure>
+You might think this seems like the same as the first use case—and you wouldn't be entirely wrong. It is very similar, only with one major distinction. While the geographical case is the same, iOS users arriving back home after being abroad will still have the KnowRoaming data connection. In order to return to their home data plan, users need to redo the same process they took to establish their roaming data connection.
+
+From a UX standpoint this one was tricky, since this really shouldn't be necessary, but was due to technical limitations. It was difficult to counvince users that once arriving back home, their data connection wouldn't automatically reconnect like the regular cell service would.
+
+#### Edge Cases 
+_**Home SIM while Abroad / Abroad on Home SIM**_
+
+In some rare cases, either (a) the KnowRoaming SIM will fail to connect/re-connect, or (b) a more advanced user will force a SIM switch. In these cases the actions available to users are different from the standard cases, so I'd have to take these cases into account.
+
+### Designing for Use Cases
+
+With these use cases defined, it became clear that the previous home screen design wouldn't quite cut it. A user on the home screen at home (yeah, this terminology got confusing) might see two of the three bubbles filled, and be lead to believe they weren't ready to roam, when in fact they had done all they could. 
+
+The solution was relatively simple—remove all options in the checklist that are not possible in the user's current state.
+
+<figure class='folio_image' id='phases'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/Home - ready.png'>
+	<img src='../includes/portfolio_images/knowroaming/Abroad - ready.png'>
+</a>
+<figcaption></figcaption>
+</figure>
 
 
 <!-- To start, I analyzed the existing app and noted what it does well, and where it fell short. Over the next few months I worked out sketches and wireframes, iterating  and discussing the designs every week. Once a basic workflow was decided, I began to work on the new visual style, and finally came up with a viable product near the end of my term there.
