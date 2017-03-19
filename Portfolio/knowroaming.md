@@ -227,7 +227,6 @@ You might think this seems like the same as the first use case—and you wouldn'
 
 From a UX standpoint this one was tricky, since this really shouldn't be necessary, but was due to technical limitations. It was difficult to counvince users that once arriving back home, their data connection wouldn't automatically reconnect like the regular cell service would.
 
-#### Edge Cases 
 _**Home SIM while Abroad / Abroad on Home SIM**_
 
 In some rare cases, either (a) the KnowRoaming SIM will fail to connect/re-connect, or (b) a more advanced user will force a SIM switch. In these cases the actions available to users are different from the standard cases, so I'd have to take these cases into account.
@@ -246,6 +245,90 @@ The solution was relatively simple—remove all options in the checklist that ar
 <figcaption></figcaption>
 </figure>
 
+<!-- Add more here -->
+
+## UI Refinement
+
+### Typography
+
+Early in the design process, I tried using some fonts from KnowRoaming's logotype and marketing materials, specifically [Brandon Grotesque](https://typekit.com/fonts/brandon-grotesque) and [Futura](https://typekit.com/fonts/futura-pt). These mockups never seemed to look right since these fonts were designed for print. After exploring some other fonts, I decided that the simplest decision would be to use the system fonts: Helvetica Neue for iOS (at the time), and Roboto for Android. After experimenting with several fonts while designng both the app and other graphics, I was able to create this [full style guide](../KnowRoaming_Style_Guide_2015.pdf) which includes colour, typography, logo use, and other elements.
+
+<figure class='folio_image' id='style-typography'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/style-guide-typography.jpg'>
+</a>
+<figcaption>The typography page of the 2015 KnowRoaming Style Guide</figcaption>
+</figure>
+
+### Colour
+
+Also included in this style guide, is a colour guideline. When KnowRoaming had hired a full-time graphic designer, the two of us worked together to standardze the colours we used, and for what functions in the UI. Since the company logo had already been designed, it was only natural to use the included light and dark blues as the primary colours in the app. Additional blues were selected as button-press states, for dark text, and a light blue as an off-white background. 
+
+<figure class='folio_image' id='style-blue'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/style-guide-blue.jpg'>
+</a>
+<figcaption>Blues used in the app</figcaption>
+</figure>
+
+We also outlined secondary colours: Gold, Teal, Red and Lavender. These colours all had specific functions and meanings in the app.
+
+<figure class='folio_image' id='style-secondary'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/style-guide-secondary.jpg'>
+</a>
+<figcaption>Secondary colours and their uses in the app and web UI</figcaption>
+</figure>
+
+
+
+### Icons
+
+#### ReachMe Logo
+
+<figure class='folio_image' id='reachme_logo'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/ReachMe_full.png' style="width: 400px;">
+	<img src='../includes/portfolio_images/knowroaming/logo-text-dark.png' style="width: 400px;">
+</a>
+<figcaption></figcaption>
+</figure>
+
+
+Since I was one of the original ideators of the ReachMe service branding, I created a logo for the unique service. The design was fairly straightforward, and to be honset, derivative. The icon uses the bubbles featured in the company logo, connected with lines to signify connectedness. The logotype simply echoes the company logo font weights.
+
+#### Home Screen and Tab Bar Icons
+
+### Controls
+
+<!-- Binary (buttons), discrete (incrementer/stepper/spinner/radio), multistate (checkbox), continuous (slider) -->
+
+#### Reload and Usage Screen
+
+#### Design for the "Thumb Zone"
+
+#### Reminders and Popups
+
+### Motion Design
+
+There wasn't much time to include motion design in the app design since my bandwidth, as well as that of the developers, was quite limited. There are some instances in the app that make good use of some motion design.
+
+#### Usage screen
+
+#### ReachMe screen
+
+#### Intro Tutorial
+
+#### More Tab
+
+<!-- Mention button sizes and control layout -->
+
+<!-- Note: no multigesture interactions -->
+
+<!-- Note: no multigesture interactions -->
+
+### Design Patterns
+
 
 <!-- To start, I analyzed the existing app and noted what it does well, and where it fell short. Over the next few months I worked out sketches and wireframes, iterating  and discussing the designs every week. Once a basic workflow was decided, I began to work on the new visual style, and finally came up with a viable product near the end of my term there.
 
@@ -262,4 +345,4 @@ Among the other improvements were the Reload, ReachMe and Checkout workflow, the
 			$img5 = $img_path."knowroaming_app_login.jpg";
 			$img5_caption =  "The new login screen, featuring double parallax (on supported devices)"; -->
 
-To be Continued...
+<!-- To be Continued... -->
