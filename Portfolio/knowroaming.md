@@ -280,8 +280,6 @@ We also outlined secondary colours: Gold, Teal, Red and Lavender. These colours 
 <figcaption>Secondary colours and their uses in the app and web UI</figcaption>
 </figure>
 
-
-
 ### Icons
 
 #### ReachMe Logo
@@ -299,7 +297,7 @@ Since I was one of the original ideators of the ReachMe service branding, I crea
 
 #### Home Screen and Tab Bar Icons
 
-### Controls
+### Controls and Layout
 
 <!-- Binary (buttons), discrete (incrementer/stepper/spinner/radio), multistate (checkbox), continuous (slider) -->
 
@@ -325,9 +323,9 @@ There wasn't much time to include motion design in the app design since my bandw
 
 <!-- Note: no multigesture interactions -->
 
-<!-- Note: no multigesture interactions -->
-
 ### Design Patterns
+
+#### 	
 
 
 <!-- To start, I analyzed the existing app and noted what it does well, and where it fell short. Over the next few months I worked out sketches and wireframes, iterating  and discussing the designs every week. Once a basic workflow was decided, I began to work on the new visual style, and finally came up with a viable product near the end of my term there.
