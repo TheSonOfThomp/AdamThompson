@@ -2,6 +2,7 @@
 include('../includes/php/global-head.php');
 include('portfolio_switch.php');
 include('../includes/plugins/Parsedown.php');
+include('../includes/plugins/ParsedownExtra.php');
 ?>
 <title>Adam Thompson - <?php echo($p_title) ?></title>
 <link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/header.css" type="text/css">
@@ -25,7 +26,7 @@ include('../includes/plugins/Parsedown.php');
 		<div class="col single-column">
 
 	<?php if ($useMarkdown) {
-		$Parsedown = new Parsedown();
+		$Parsedown = new ParsedownExtra();
 		$markdown = file_get_contents($p.'.md');
 		echo $Parsedown->text($markdown);
 	}
