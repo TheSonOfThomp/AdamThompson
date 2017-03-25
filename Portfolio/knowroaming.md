@@ -251,7 +251,7 @@ The solution was relatively simple—remove all options in the checklist that ar
 
 ### Typography
 
-Early in the design process, I tried using some fonts from KnowRoaming's logotype and marketing materials, specifically [Brandon Grotesque](https://typekit.com/fonts/brandon-grotesque) and [Futura](https://typekit.com/fonts/futura-pt). These mockups never seemed to look right since these fonts were designed for print. After exploring some other fonts, I decided that the simplest decision would be to use the system fonts: Helvetica Neue for iOS (at the time), and Roboto for Android. After experimenting with several fonts while designng both the app and other graphics, I was able to create this [full style guide](../KnowRoaming_Style_Guide_2015.pdf) which includes colour, typography, logo use, and other elements.
+Early in the design process, I tried using some fonts from KnowRoaming's logotype and marketing materials, specifically [Brandon Grotesque](https://typekit.com/fonts/brandon-grotesque) and [Futura](https://typekit.com/fonts/futura-pt)—two approachable sans-serif fonts. These mockups never seemed to look right since these fonts were designed for print, and weren't always readable on the phone screen. After exploring some other fonts, I decided that the simplest decision would be to use the system fonts: Helvetica Neue for iOS (at the time), and Roboto for Android. After experimenting with several fonts while designng both the app and other graphics, I was able to create a [style guide](../KnowRoaming_Style_Guide_2015.pdf) which includes colour, typography, logo use, and other elements. Also included in the style guide guidelines for colours and font weights to use on different background colours.
 
 <figure class='folio_image' id='style-typography'>
 <a target='_blank'>
@@ -284,18 +284,36 @@ We also outlined secondary colours: Gold, Teal, Red and Lavender. These colours 
 
 #### ReachMe Logo
 
+Since I was one of the original ideators of the ReachMe service branding, I created a logo for the unique service. The design was fairly straightforward, and to be honset, derivative. The icon uses the bubbles featured in the company logo, connected with lines to signify connectedness. The logotype simply echoes the company logo font weights.
+
 <figure class='folio_image' id='reachme_logo'>
 <a target='_blank'>
 	<img src='../includes/portfolio_images/knowroaming/ReachMe_full.png' style="width: 400px;">
-	<img src='../includes/portfolio_images/knowroaming/logo-text-dark.png' style="width: 400px;">
 </a>
 <figcaption></figcaption>
 </figure>
 
 
-Since I was one of the original ideators of the ReachMe service branding, I created a logo for the unique service. The design was fairly straightforward, and to be honset, derivative. The icon uses the bubbles featured in the company logo, connected with lines to signify connectedness. The logotype simply echoes the company logo font weights.
+#### KnowRoaming Icon Set
 
-#### Home Screen and Tab Bar Icons
+<figure class='folio_image' id='icon-set'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/limited-icon-set.png' style="max-height: 300px">
+</a>
+<figcaption>A limited selection of KnowRoaming icons</figcaption>
+</figure>
+
+On the home screen, icons representing the user's current state, the actons they can perform in that state, and tab bar icons were all necessary. To create these icons, I first took inspiration from existing iconsets on sites like [Iconfinder](http://www.iconfinder.com). Based on some common symbols, I created an icon set in a unified KnowRoaming style—a thin stroke with rounded end-caps, in keeping with the iOS design language at the time.
+
+The "Setup Data" icons were interresting to design, since they were fairly unique compared to the other icons. I started with a (hopefully) ubiquitous symbol for "internet"—the globe—and added elements to symbolize the state of being abroad or returning home. After some iterating on these elements, I arrived at the following icons.
+
+<figure class='folio_image' id='data-icons'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/icon_data-roaming.png' style="padding-right: 32px;">
+	<img src='../includes/portfolio_images/knowroaming/icon_data-home.png'>
+</a>
+<figcaption>KnowRoaming icons for Abroad Data, and Home Data </figcaption>
+</figure>
 
 ### Controls and Layout
 
