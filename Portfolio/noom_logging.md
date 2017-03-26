@@ -2,7 +2,7 @@ Meal logging is a must-have feature in Noom Coach. Therefore it must to be quick
 
 <figure class='folio_image' id='img1'>
 	<a target='_blank'>
-		<img src='../includes/portfolio_images/noom_logging.jpg'>
+		<img src='../includes/portfolio_images/noom/noom_logging.jpg'>
 	</a>
 </figure>
 
@@ -34,7 +34,7 @@ To start, I made some rough sketches and of how the screens would need to flow t
 
 <figure class='folio_image' id='img2'>
 	<a target='_blank'>
-		<img src='../includes/portfolio_images/noom_logging-rough-flowchart.jpg'>
+		<img src='../includes/portfolio_images/noom/noom_logging-rough-flowchart.jpg'>
 	</a>
 <figcaption></figcaption>
 </figure>
@@ -51,7 +51,7 @@ A third solution was to build a hybrid of the first two; a conditional UI which 
 
 <figure class='folio_image' id='img2'>
 	<a target='_blank'>
-		<img src='../includes/portfolio_images/noom_logging-va.jpg'>
+		<img src='../includes/portfolio_images/noom/noom_logging-va.jpg'>
 	</a>
 <figcaption>The top sketch illustrates navigation when editing a meal, the bottom when starting a new meal. Notice the different icons on the search screens in each scenario.</figcaption>
 </figure>
@@ -62,7 +62,7 @@ Since a user can log a new meal, or edit one, and start the workflow with either
 
 <figure class='folio_image' id='img2'>
 	<a target='_blank'>
-		<img src='../includes/portfolio_images/noom_logging-vc.png'>
+		<img src='../includes/portfolio_images/noom/noom_logging-vc.png'>
 	</a>
 <figcaption></figcaption>
 </figure>
@@ -95,7 +95,7 @@ There were still some small UI fixes that needed to be done before I could offic
 
 <figure class='folio_image' id='img2'>
 	<a target='_blank'>
-		<img src='../includes/portfolio_images/noom_logging-matrix.png'>
+		<img src='../includes/portfolio_images/noom/noom_logging-matrix.png'>
 	</a>
 <figcaption></figcaption>
 </figure>
