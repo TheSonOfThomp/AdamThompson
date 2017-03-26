@@ -285,7 +285,7 @@ Even when keeping the data simple, allowing selection from both four different t
 <figcaption>Screenshot of the Usage History screen</figcaption>
 </figure>
 
-To solve this problem, I still went with a similar pattern, but with a different type of interaction, in hopes that it would be less confusing to users than a double segmented control. (In retrospect, maybe a double segmented control wouldn't be that bad... We should test it). 
+To solve this problem, I still went with a similar pattern, but with a different type of interaction, in hopes that it would be less confusing to users than a double segmented control. (In retrospect, maybe a double segmented control wouldn't be that bad... We should test it). The 
 
 
 
@@ -378,7 +378,7 @@ The "Setup Data" icons were interresting to design, since they were fairly uniqu
 <figcaption>KnowRoaming icons for Abroad Data, and Home Data </figcaption>
 </figure>
 
-### Motion Design
+<!-- ### Motion Design
 
 There wasn't much time to include motion design in the app design since my bandwidth, as well as that of the developers, was quite limited. There are some instances in the app that make good use of some motion design.
 
@@ -388,7 +388,7 @@ There wasn't much time to include motion design in the app design since my bandw
 
 #### Intro Tutorial
 
-#### More Tab
+#### More Tab -->
 
 
 <!-- Mention button sizes and control layout -->
