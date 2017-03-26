@@ -122,7 +122,7 @@
 	  <!-- ********** athletes.knowroaming ********** -->
       <li class="folio-item web">
       	<a href="Portfolio/?p=KR_athletes">
-			<img src="includes/portfolio_images/KR_athletes.jpg">
+			<img src="includes/portfolio_images/knowroaming/KR_athletes.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">KnowRoaming Athletes</span><br/>
@@ -158,7 +158,7 @@
 	 <!-- ********** KNOWROAMING STAND ********** -->
       <li class="folio-item industrial">
 	      <a href="Portfolio/?p=KR_retail">
-	      	<img src="includes/portfolio_images/KR_retail.jpg">
+	      	<img src="includes/portfolio_images/knowroaming/KR_retail.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">KnowRoaming Retail Display</span><br/>
@@ -183,7 +183,7 @@
       <!-- ********** KNOWROAMING APPLICATOR ********** -->
       <li class="folio-item industrial">
 	      <a href="Portfolio/?p=KR_applicator">
-	      	<img src="includes/portfolio_images/KR_applicator.png">
+	      	<img src="includes/portfolio_images/knowroaming/KR_applicator.png">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">Multi-Use Sticker Applicator</span><br/>
@@ -207,7 +207,7 @@
       <!-- ********** KNOWROAMING GRAPHICS ********** -->
       <li class="folio-item graphics">
 		<a href="Portfolio/?p=KR_promo">
-			<img src="includes/portfolio_images/KR_promo.jpg">
+			<img src="includes/portfolio_images/knowroaming/KR_promo.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">KnowRoaming Promotions</span><br/>
@@ -220,7 +220,7 @@
 	  <!-- ********** KNOWROAMING INTRO VIDEO ********** -->
       <li class="folio-item video">
 		<a href="Portfolio/?p=KR_video">
-			<img src="includes/portfolio_images/KR_video.jpg">
+			<img src="includes/portfolio_images/knowroaming/KR_video.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">KnowRoaming Intro Video</span><br/>
