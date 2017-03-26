@@ -247,7 +247,70 @@ The solution was relatively simple—remove all options in the checklist that ar
 
 <!-- Add more here -->
 
+<!-- ## ReachME Screen -->
+
+<!-- ## Tutorial -->
+
 ## UI Refinement
+
+Once the major UX flow was mostly decided, I took to designing and refining different UI elements.
+
+### Controls and Layout
+
+<!-- Binary (buttons), discrete (incrementer/stepper/spinner/radio), multistate (checkbox), continuous (slider) -->
+
+#### Reload Screen
+
+When redesigning the account top-up/reload screen, I pressed for user editable amounts to allow for the ablility to top up with a precise the amount that the user wanted. This was vetoed for logistical and support reasons, and so I had to design for a number of discrete reload options, as well as the same number of Auto-Reload options. I quickly realized that if I put all the options on the screen at once, the screen would get really crowded, and likely overflow off the bottom of the screen. Trying o find ways to efficiently layout this information, I took inspiration from the Starbucks app at the time, which had a horizontally scrolling row to select how much you wanted to put on your Starbucks card. The idea would be to have enough horizontal room for 4.5 cells, which would cut off one cell and imply scrollability.
+
+I brought this idea to our lead iOS developer, and we brainstormed ideas on how to implement something like this. She came up with a rotated custom list UI element which worked perfectly. I was happy with the result, and we implemented this for both the Reload and Auto-Reload amounts. 
+
+<figure class='folio_image' id='reload'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/Reload_iphone6.png'>
+</a>
+<figcaption>Screenshot of the Reload screen</figcaption>
+</figure>
+
+#### Usage Screen
+
+Another tricky screen to design the layour for was the usage screen. I tried to come up with some creative ways of showing a user how many minutes, messages and megabytes they had used in the past day, week, month or year. I had several pages of mockups showing different charts and graphs, but I couldn't get all the information and options laid out nicely on the screen. We finally decided to keep it simple, and go with a basic list of all the events within the given time period.
+
+Even when keeping the data simple, allowing selection from both four different time ranges and three different types of usage was a challenge. The instinct would be to use two layers of segmented controls, but after mocking that up and making some prototypes, these designs didn't seem right. The segmented control pattern is rarely doubled up in practice, and generally works as a secondary tab bar. A backup pattern would be needed for one of either the time range or usage type.
+
+<figure class='folio_image' id='usage'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/usage_iphone6.png'>
+</a>
+<figcaption>Screenshot of the Usage History screen</figcaption>
+</figure>
+
+To solve this problem, I still went with a similar pattern, but with a different type of interaction, in hopes that it would be less confusing to users than a double segmented control. (In retrospect, maybe a double segmented control wouldn't be that bad... We should test it). 
+
+
+
+#### Design for the "Thumb Zone"
+
+There have been many blog posts about designing for the [thumb zone](http://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php), or sometimes the "stretch zone" as it's sometimes called. There are three rough regions on a mobile device: easy-, ok- and hard-to-reach with the thmb for a single handed user. When I was laying out components in the UI, I kept the thumb zone in mind, and kept priority interacion zones within the easy- or ok-to-reach zones. The hard-to-reach areas should be reserved for feedback-only or infrequent interactions.
+
+<figure class='folio_image' id='thumbzone'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/thumbzone-register.png'>
+</a>
+<figcaption>Illustration of the Thumb Zone over the registration screen of the app</figcaption>
+</figure>
+
+#### Reminders and Pop-ups
+
+Everyone hates pop-ups, but sometimes the're necessary. However, previous versons of the KnowRoaming app overused pop-ups, showing one essentially everytime a user returned to the app outside of about a one hour window. There were some pop-ups that were necessary though. Certain pop-ups contained highly important contextual information when a user arrives abroad or changes networks reminding them what actions to take. I took to redesigning this reminder to first make it fit btter visually, and second make it convey the information (hopefully) more clearly. This reminder will appear only once every few times the user ooens the app (I don't recall the exact interval), as well as when a cell network change is detected. Users also have the ability to disable the notification. 
+
+<figure class='folio_image' id='reminders'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/reminder-old.png' style="padding-right: 16px;">
+	<img src='../includes/portfolio_images/knowroaming/reminder-new.png'>
+</a>
+<figcaption></figcaption>
+</figure>
 
 ### Typography
 
@@ -315,16 +378,6 @@ The "Setup Data" icons were interresting to design, since they were fairly uniqu
 <figcaption>KnowRoaming icons for Abroad Data, and Home Data </figcaption>
 </figure>
 
-### Controls and Layout
-
-<!-- Binary (buttons), discrete (incrementer/stepper/spinner/radio), multistate (checkbox), continuous (slider) -->
-
-#### Reload and Usage Screen
-
-#### Design for the "Thumb Zone"
-
-#### Reminders and Popups
-
 ### Motion Design
 
 There wasn't much time to include motion design in the app design since my bandwidth, as well as that of the developers, was quite limited. There are some instances in the app that make good use of some motion design.
@@ -337,13 +390,15 @@ There wasn't much time to include motion design in the app design since my bandw
 
 #### More Tab
 
+
 <!-- Mention button sizes and control layout -->
 
 <!-- Note: no multigesture interactions -->
 
+<!--
 ### Design Patterns
 
-#### 	
+#### 	 -->
 
 
 <!-- To start, I analyzed the existing app and noted what it does well, and where it fell short. Over the next few months I worked out sketches and wireframes, iterating  and discussing the designs every week. Once a basic workflow was decided, I began to work on the new visual style, and finally came up with a viable product near the end of my term there.
