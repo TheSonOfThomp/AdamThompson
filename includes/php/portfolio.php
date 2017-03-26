@@ -7,7 +7,7 @@
     <!-- ********** NOOM -  Food Logging ********** -->
       <li class="folio-item ux featured">
       	<a href="Portfolio/?p=noom_logging">
-			<img src="includes/portfolio_images/noom_logging.png">
+			<img src="includes/portfolio_images/noom/noom_logging.png">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">Noom Meal Logging Experience</span><br/>
@@ -33,7 +33,7 @@
 	  <!-- ********** SMRT WATR ********** -->
       <li class="folio-item ux industrial soft pm featured">
 	      <a href="Portfolio/?p=smrtwatr">
-	      	<img src="includes/portfolio_images/smrtwatr.jpg">
+	      	<img src="includes/portfolio_images/smrtwatr/smrtwatr.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 				  	<span class="folio-title">SMRT WATR</span><br/>
