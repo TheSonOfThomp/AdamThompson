@@ -24,7 +24,7 @@
 
 		case 'smrtwatr':
 			$useTemplate = false;
-			$useMarkdown = false;
+			$useMarkdown = true;
 			$HAS_VIDEO = true;
 			$p_title = "SMRT WATR - An Interactive Water Fountain";
 			$HTML_FILE = $p.'.php';
