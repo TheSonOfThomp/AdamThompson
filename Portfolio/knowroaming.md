@@ -356,7 +356,6 @@ Since I was one of the original ideators of the ReachMe service branding, I crea
 <figcaption></figcaption>
 </figure>
 
-
 #### KnowRoaming Icon Set
 
 <figure class='folio_image' id='icon-set'>
