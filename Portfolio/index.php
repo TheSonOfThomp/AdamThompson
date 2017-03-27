@@ -69,9 +69,9 @@ include('../includes/plugins/ParsedownExtra.php');
 		});
 	});
 
-	// // Scroll to the h2
-	// h2_location = $('h2').offset().top;
- //    $('body').animate({scrollTop: h2_location}, 650);
+	// Add make all links open a new tab
+	$('p a').attr('target', '_blank');
+
 </script>
 </main>
 </body>
