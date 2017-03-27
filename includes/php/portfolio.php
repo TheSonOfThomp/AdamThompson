@@ -20,7 +20,7 @@
 	  	  		  <!-- ********** Chameleon ********** -->
       <li class="folio-item mech soft dsp audio signals ux industrial featured">
       	<a href="Portfolio/?p=chameleon">
-			<img src="includes/portfolio_images/chameleon.jpg">
+			<img src="includes/portfolio_images/chameleon/chameleon.jpg">
 			<div class="hover-state animate">
 				<div class="folio-hover">
 					<span class="folio-title">Chameleon Hearing Protection</span><br/>
