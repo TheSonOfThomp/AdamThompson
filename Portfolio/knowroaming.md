@@ -119,8 +119,8 @@ For a user to know that they're "Ready to Roam", we would need to provide good f
 
 <figure class='folio_image' id='ready_to_roam'>
 <a target='_blank'>
-	<img src='../includes/portfolio_images/knowroaming/sketch-ReadyToRoam1.JPG'>
-	<img src='../includes/portfolio_images/knowroaming/sketch-home-bubbles.JPG'>
+	<img src='../includes/portfolio_images/knowroaming/sketch-ReadyToRoam1.jpg'>
+	<img src='../includes/portfolio_images/knowroaming/sketch-home-bubbles.jpg'>
 </a>
 <figcaption>Two early sketches of a "Ready to Roam" feature</figcaption>
 </figure>
