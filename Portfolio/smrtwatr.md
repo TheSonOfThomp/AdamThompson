@@ -37,7 +37,7 @@ With a workflow established, I got to UI design. The priority screens were a hom
 <figcaption>Screenshots of the Endgame UI</figcaption>
 </figure>
 
-## The Code
+## Implementation
 
 We set up a [Tornado Web](http://www.tornadoweb.org/en/stable/) Python server on a Raspberry Pi to serve the web UI, and to communicate with the fountain's controller. Tornado supports html templates, and can dynamiclly change the UI on the fly. This was unlike any web development I had ever done, but I got used to it pretty quickly, and wrote all of the app's HTML and SASS, as well as some server-side logic. All front-end, back-end, and controller code is available on [GitHub](https://github.com/Adam93MT/SMRTWATR/tree/master/smrtwatr_server).
 <!-- 

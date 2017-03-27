@@ -4,7 +4,7 @@ I was the product lead in this project, and played a pivotal role in all aspects
 
 <figure class='folio_image' id='img1'>
 	<a target='_blank'>
-		<img src='../includes/portfolio_images/chameleon.jpg'>
+		<img src='../includes/portfolio_images/chameleon/chameleon.jpg'>
 	</a>
 <figcaption></figcaption>
 </figure>
