@@ -36,13 +36,13 @@ From all our research we were able to define six major areas that the product sh
 
 More details coming soon!
 
-## Measurement Circuit
+<!-- ## Measurement Circuit
 
 ## Control Logic
 
 ## Mechanical Design
 
-## Comfort and Ergonomics
+## Comfort and Ergonomics -->
 
 
 
