@@ -65,7 +65,7 @@ include('../includes/plugins/toc.php');
 		});
 
 		// Create TOC (only if more than 6 sections)
-		if (toc.length > 6)
+		if (toc.length > 8)
 			for (var i = 0; i <= toc.length-1; i++) {
 				level= toc[i]["level"] - 1;
 				text = toc[i]["text"];
