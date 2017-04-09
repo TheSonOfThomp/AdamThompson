@@ -31,7 +31,7 @@ include('../includes/plugins/toc.php');
 		$Parsedown = new ParsedownExtra();
 		$markdown = file_get_contents($p.'.md');?>
 		<script type="text/javascript">
-		var toc = <?echo markdown_toc($p.'.md');?>;
+		var toc = <?php echo markdown_toc($p.'.md');?>;
 		</script>
 		<?php
 		echo $Parsedown->text($markdown);
