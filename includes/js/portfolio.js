@@ -47,12 +47,15 @@ $(document).ready(function(){
 
 // Sticky header
 $(document).scroll(function(){
-  if ($(this).scrollTop() > 100) {
-    $('.main-header').addClass('fixed');
-    $('.portfolio-title').css('padding-top', 100);
-  }
-  else {
-    $('.main-header').removeClass('fixed');
-    $('.portfolio-title').css('padding-top', 0);
+  // No sticky header if the window is too small
+  if ($(window).height() >= 735){
+    if ($(this).scrollTop() > 100) {
+      $('.main-header').addClass('fixed');
+      $('.portfolio-title').css('padding-top', 100);
+    }
+    else {
+      $('.main-header').removeClass('fixed');
+      $('.portfolio-title').css('padding-top', 0);
+    }
   }
 });
