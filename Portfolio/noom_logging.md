@@ -90,14 +90,11 @@ Wanting to show that One-Screen did in fact rule them all, I created a decision 
 
 Once I included the development estimate, the One-X model pulled ahead. After discussing this chart to the rest of the team, we agreed that the benefits of One-Screen didn’t justify the increased development time, and we would move forward with the One-X model.
 
-The Decision Matrix I used to rank and justify the designsFinishing Touches
-There were still some small UI fixes that needed to be done before I could officially spec and hand over the design, so I kept the Sketch file open and kept working. After discussing how the navigation bar was implemented, I found a way to make the One-X model even better. As it turned out, it was possible to transition between two screens while keeping one navigation bar (or primary toolbar on Android) in place. The One-Screen version was technical overkill (I admit, I was a little overzealous), and the problems it solved could just as easily be solved by modifying the One-X version. By keeping a static close button and making the header a uniform size, it was possible to achieve the feeling of a single context for meal logging. We did some validation of this and I added it to the matrix. The rest of the team was on board with these changes, and we were ready to spec. I sent the designs to Zeplin, and the improved meal logging experience was ready to be built!
-
 <figure class='folio_image' id='img2'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/noom/noom_logging-matrix.png'>
 	</a>
-<figcaption></figcaption>
+<figcaption>The Decision Matrix I used to rank and justify the designs</figcaption>
 </figure>
 
 ## Finishing Touches
