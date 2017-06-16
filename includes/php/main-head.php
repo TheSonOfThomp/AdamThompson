@@ -2,10 +2,11 @@
 	include('includes/php/global-head.php');
 ?>
 		<title><?php echo($page_title) ?></title>
-		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/header.css" type="text/css">
+		<!-- <link rel="stylesheet" type="text/css" href="<?php echo $root_path; ?>/includes/css/adamthompson.css"> -->
+<!-- 		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/header.css" type="text/css">
 		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/portfolio.css" type="text/css">
 		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/resume.css" type="text/css">
-		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/mobile.css" type="text/css">
+		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/mobile.css" type="text/css"> -->
 		<link rel="stylesheet" type="text/css" href="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/theme/bitter/vanillabox.css">
 
 		<!-- SCRIPTS -->
