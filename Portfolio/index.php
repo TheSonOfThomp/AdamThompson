@@ -22,8 +22,9 @@ include('../includes/plugins/toc.php');
 <?php include('../includes/php/header.php'); ?>
 
 <article class="gallery-content">
-	<div id="toc">
+	<div id="toc hide">
 	</div>
+	<!-- TODO: ADD LEFT ALIGNED LOGO/MONOGRAM -->
 	<h1 class="portfolio-title"><?php echo $p_title ?></h2>	
 		<div class="col single-column">
 

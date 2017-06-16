@@ -34,9 +34,15 @@ From all our research we were able to define six major areas that the product sh
  <tr><td>Measurement Accuracy</td><td>Should accurately measure noise level</td><td>Measurement Error at 4000Hz</td><td>dBSPL</td><td>0</td><td><3</td><td>3</td></tr>
 </tbody></table>
 
-More details coming soon!
+## Measurement Circuit
 
-<!-- ## Measurement Circuit
+Our first prototypes were of a measurement circuit—a system to calculate the volume in dB(A) from the mic's signal. The design of this piece was based on that of a [standard noise meter](youtube.com). In order to have a useful dB value which represents loudness as a human ear might hear it, the incoming sound signal is put through a band-pass filter called an [A-weight filter](wikipedia.org/A_weight_filter). I took a circuit design I found online for this filter, and simulated it to verify its behaviour before ordering parts. The filter behaved as expected, though it did have a constant amplitude drop of about -6dB. This is not a problem since the signal must be amplified before passing through the filter in the first place. This amplified and filtered signal is then input into the `analog read` pin of an Arduino Uno. Since the positive and negative gains of the analog filter and amplifiers are known, we can easily calculate the voltage at the output of the microphone. Since the sensitivity of the microphone is given, the incoming noise level in dB(A) can be caculated. This took a little calibration since the component values and mic input voltage weren't precise. In the end we were able to get a relatively accurate measurement of the noise level reaching the microphone (verified using the app NoiSee).
+
+I often got questions when demoing the prototype about why the filtering was implemented in analog circuitry as opposed to digitally. The answer for the first prototype is that the Arduino Uno was the only microcontroller we had access to at this point, and that I was more familiar with analog filters vs. digital filters. Once we had decided to implement the final prototype using a Teensy 3.2, which has enough processing power to do this kind of filtering (and I had become more familiar with digital filtering) I decided to keep this section of the design the same so I could spend more time working on parts of the prototype that didn't work yet.
+
+More details coming soon
+
+<!-- 
 
 ## Control Logic
 
