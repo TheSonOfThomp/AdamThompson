@@ -26,4 +26,4 @@
 		<link href='http://fonts.googleapis.com/css?family=Raleway:200, 300' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
 
-		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/global.css" type="text/css">
+		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/style/adamthompson.css" type="text/css">

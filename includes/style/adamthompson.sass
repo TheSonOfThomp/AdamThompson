@@ -1,0 +1,845 @@
+$serif: "Merriweather", "Garamond", "Times New Roman", serif
+$sans-serif: "Raleway", "Lato", "Helvetica", sans-serif
+$sans-title: $sans-serif
+$sans-body: "Lato", "Helvetica", sans-serif
+
+// Neutrals
+$white: #FAFAFA
+$white_trans: #FAFAFAcc
+$light_grey: #CECECE
+$med_grey: #808080
+$dark_grey: #4a4a4a
+$dark_grey_trans: rgba(51,51,51,0.75)
+// $dark_grey_trans: #4A4A4Acc
+
+// Greens
+$white_green: #EDF2E6
+$light_green: #DCE6CF
+$green: #5B753D
+
+*::selection
+	background: $light_green /* WebKit/Blink Browsers */
+*::-moz-selection 
+	background: $light_green /* Gecko Browsers */
+
+html
+	font-size: 16px
+
+	body 
+		background: $light_grey
+		padding: 0
+		margin: 0
+		font-family: $serif
+		color: $dark_grey
+		font-weight: 100
+		overflow-x: hidden
+
+	main
+		display: block
+		width: 100%
+		margin: 0
+		padding: 0
+		background: $white
+
+	header
+		display: block
+		margin: 0
+		padding: 0
+		width: 100%
+		height: 12rem
+		.main-header
+			padding-top: 1rem
+
+	section
+		display: block
+		margin: 0
+		padding: 0
+		width: 100%
+
+	h1
+		font-family: $sans-title
+		font-size: 4rem
+		line-height: 1em
+		font-weight: 200
+	h2
+		font-family: $serif
+		font-size: 3rem
+		line-height: 1.5em
+		font-weight: 200
+		/*text-decoration: underline*/
+	h3
+		font-family: $sans-body
+		font-size: 2rem
+		line-height: 1.5em
+		font-weight: 400
+		/*text-decoration: underline*/
+	h4
+		font-family: $sans-body
+		font-size: 1.75rem
+		line-height: 1em
+		font-weight: 300
+		color: $med_grey
+	a
+		color: $green
+		font-weight: inherit
+		-webkit-tap-highlight-color: rgba(0,0,0,0)
+		:visited
+			color: $green
+
+/* -------------------- HEADER -------------------- */
+.header
+	position: relative
+	display: inline-block
+	float: left
+	height: 100%
+	width: 100%
+	margin: 0
+	margin-top: 0
+	overflow: hidden
+	color: inherit
+	.title
+		position: relative
+		display: block
+		float: none
+		line-height: 1em
+		font-weight: 500
+		padding-top: 3.2rem
+		font-family: $sans-serif
+		z-index: 100
+	.tagline
+		position: relative
+		display: block
+		width: 36rem
+		text-align: right
+		margin: auto
+		font-weight: 100
+		font-size: 2rem
+		line-height: 1em
+		padding-top: 16px 
+
+		@media (max-width: 1280px)
+			font-size: 1.6em
+			line-height: 1.25em
+			padding-top: 3em
+
+		em
+			color: $green
+
+	ul
+		position: relative
+		display: block
+		list-style: none
+		padding-left: 0
+		margin-top: 0
+		padding-top: 3em
+		font-size: 1.2em
+		font-weight: 200
+		color: $green
+	li
+		display: inline
+		padding-right: 1em
+	a
+		color: inherit
+		text-decoration: none
+
+.header 
+	.title
+		font-size: 4.5rem
+		text-align: center
+
+.sub-header 
+	@extend .header
+	.title
+		font-size: 3.5rem
+		text-align: left
+
+/* ---------- Horizontal List Filter ---------- */
+.inline-sort
+	position: relative
+	display: inline-block
+	font-size: 1em
+	line-height: 3em
+	background-color: $white
+
+.sort-text
+	display: inline-block
+	position: relative
+	float: left
+	font-weight: 500
+	top: 0
+
+.menu-label
+	display: none
+
+.menu
+	position: relative
+	display: inline-block
+	float: left
+	margin: 0
+	text-align: left
+	padding-left: 16px
+
+	ul
+		position: relative
+		width: 100%
+		list-style: none
+		margin: 0
+		padding-left: 0
+
+	li
+		display: inline-block
+		padding: 0 16px
+		cursor: pointer
+		color: $green
+
+		&:hover
+			background: $white_green
+		&:active, .active
+			color: $med_grey
+			background: $light_green
+
+.site-filter
+	text-align: center
+
+.filter-line
+	display: none
+
+/* ---------------------- BIO & PIC ---------------------- */
+
+.bio
+	width: 100%
+	margin: 12vh 0 24vh 0
+
+	.bio-pic
+		position: relative
+		display: block
+		margin: auto
+		border-radius: 100%
+		width: 12rem
+		height: 12rem
+
+		img
+			width: 100%
+			height: 100%
+			border-radius: 40%
+	.bio-text
+		position: relative
+		display: block
+		text-align: center
+		font-size: 1rem
+		line-height: 1.5em
+		font-weight: 100
+		margin-top: 2.5em
+		p
+			margin: 0
+			line-height: 1.5em
+
+/* ---------------------- PORTFOLIO ---------------------- */
+
+section.portfolio
+	position: relative
+	display: block
+	width: 100%
+	height: auto
+	margin: 2em 0
+	text-align: center
+
+	.gallery
+		position: relative
+		width: 100%
+		margin: 0
+		padding: 0
+
+		ul
+			position: relative
+			display: inline-block
+			width: 100%
+			margin: 0 
+			padding: 0
+			list-style: none
+		.folio-item
+			position: relative
+			display: inline-block
+			display: none /* For Filtering */
+			overflow: hidden
+			float: left
+			width: 50%
+			height: 36.75vw /* 50% * 98% * 3/4 */
+			padding: 0
+			margin: 0 
+			img
+				position: relative
+				width: 100%
+				height: auto
+				cursor: pointer
+
+			a
+				display: inline-block
+				width: 100%
+				height: auto
+
+			&:hover
+				.hover-state
+					opacity: 1
+					display: block
+			
+			.hover-state
+				opacity: 0
+				position: absolute
+				top: 0 
+				bottom: 0
+				left: 0 
+				right: 0
+				height: 100%
+				width: 100%
+				text-align: center
+				background-color: $dark_grey_trans 
+				cursor: pointer
+				&:before
+					content: ''
+					display: inline-block
+					height: 100%
+					vertical-align: middle
+					margin-right: -0.25em /* Adjusts for spacing */
+
+				.folio-hover
+					display: inline-block
+					vertical-align: middle
+					color: $white
+					line-height: 1.8rem
+					font-weight: 500
+					.folio-title
+						font-size: 1.75rem
+						font-family: $sans-serif
+					.folio-type
+						font-size: 1rem
+						font-weight: lighter
+						font-style: italic
+
+/* ---------------------- RESUME ---------------------- */
+
+section.resume
+	min-height: 12em
+
+	a
+		text-decoration: underline
+
+	.resume-header
+		padding-left: 1rem
+		width: 30%
+		font-weight: 400
+		border-bottom: 1px solid $dark_grey
+		.resume-title
+			font-family: $sans-serif
+			font-size: 2rem
+			line-height: 2em
+	.resume-item
+		display: none
+
+	.container
+		article
+			.logo-container
+				width: 20%
+				height: 100%
+				float: left
+				display: inline-block
+				.logo
+					width: 80%
+					height: 0
+					padding-bottom: 80%
+					margin-right: 10%
+					border-radius: 100%	
+					background-color: #f2f2f2
+					background-size: 80%
+					background-position: 50%
+					background-repeat: no-repeat
+				.company-site
+					display: none
+					margin-top: 0.8rem
+					font-family: $sans-body
+					font-size: 1rem
+					font-weight: 300
+					text-align: center
+					a
+						text-decoration: none
+						color: $dark_grey
+
+			.resume-content
+				width: 80%
+				padding: 0
+				float: left
+				display: inline-block
+		
+				.subsection-header
+					.subsection-title
+						font-family: $sans-serif
+						font-size: 2rem
+						font-weight: 500
+						.inline-note
+							display: inline
+							font-size: 1.25rem
+							font-style: italic
+					.subsection-duration
+						margin-left: 1rem
+						font-family: $sans-body
+						font-size: 1rem
+						font-weight: 300
+				
+				.resume-list
+					padding-left: 1rem
+					font-size: 1rem
+					line-height: 1.5em
+					list-style-type: disc
+				
+					.resume-item
+						margin-bottom: 1em
+				
+						.list-description
+							font-family: $serif
+							font-size: 1rem
+
+	.experience
+		position: relative
+		display: inline-block
+		.job
+			display: block
+			position: relative
+			width: 100%
+			overflow: hidden
+			margin-top: 3rem
+			
+		.zynga .logo
+			background-image: url("../image_assets/zynga_logo.png")
+
+		.noom .logo
+			background-image: url("../image_assets/noom_logo.png")
+
+		.knowroaming .logo
+			background-image: url("../image_assets/knowroaming_logo.png")
+			background-position: 50% 46%
+
+		.sony .logo
+			background-image: url("../image_assets/sony_logo.png")	
+
+		.genesys .logo
+			background-image: url("../image_assets/genesys_logo.png")
+				
+	.skills
+		position: relative
+		display: inline-block
+		margin-top: 2rem
+		.skills-sub-header
+			padding-left: 1rem
+			padding-top: 1.5rem
+			font-family: $sans-serif
+			font-size: 1.5rem
+			line-height: 2em	
+		.program-list
+			display: block
+			position: relative
+			padding: 0
+			margin: 0
+			list-style: none
+			li
+				display: none
+				position: relative
+				width: 7%
+				margin: 1rem 2.75% 1rem 2.75%
+				float: left
+				&:hover
+					margin-top: 0.5rem
+					margin-bottom: 1.5rem
+		
+				.app-name
+					position: relative
+					margin: 0
+					padding-top: 0.5em
+					font-size: 1rem
+					line-height: 1rem
+					min-height: 2rem
+					text-align: center
+			
+				.app-logo
+					position: relative
+					padding-bottom: 100%
+					background-size: 100%
+					background-repeat: no-repeat
+					border-radius: 0
+			
+			#sketch .app-logo
+				background-image: url('../image_assets/apps/sketch.png')
+			#photoshop .app-logo
+				background-image: url('../image_assets/apps/photoshop.png')
+			#ai .app-logo
+				background-image: url('../image_assets/apps/ai.png')
+			#indesign .app-logo
+				background-image: url('../image_assets/apps/indd.png')
+			#balsamiq .app-logo
+				background-image: url('../image_assets/apps/balsamiq.png')
+			#framer .app-logo
+				background-image: url('../image_assets/apps/framer.png')
+			#origami .app-logo
+				background-image: url('../image_assets/apps/origami.png')
+			#html5 .app-logo
+				background-image: url('../image_assets/apps/html5.png')
+			#css3 .app-logo
+				background-image: url('../image_assets/apps/css3.png')
+			#jquery .app-logo
+				background-image: url('../image_assets/apps/jquery.png')
+			#coffeescript .app-logo
+				background-image: url('../image_assets/apps/coffeescript.png')
+			#arduino .app-logo
+				background-image: url('../image_assets/apps/arduino.png')
+			#xcode .app-logo
+				background-image: url('../image_assets/apps/xcode.png')
+			#php .app-logo
+				background-image: url('../image_assets/apps/php.png')
+			#cpp .app-logo
+				background-image: url('../image_assets/apps/cpp.png')
+			#java .app-logo
+				background-image: url('../image_assets/apps/java.png')
+			#swift .app-logo
+				background-image: url('../image_assets/apps/swift.png')
+			#python .app-logo
+				background-image: url('../image_assets/apps/python.png')
+			#matlab .app-logo
+				background-image: url('../image_assets/apps/matlab.png')
+			#git .app-logo
+				background-image: url('../image_assets/apps/git.png')
+			#bootstrap .app-logo
+				background-image: url('../image_assets/apps/bootstrap.png')
+			#sass .app-logo
+				background-image: url('../image_assets/apps/sass.png')
+			#excel .app-logo
+				background-image: url('../image_assets/apps/excel.png')
+			#sql .app-logo
+				background-image: url('../image_assets/apps/sql.png')	
+			#autocad .app-logo
+				background-image: url('../image_assets/apps/autocad.png')
+			#inventor .app-logo
+				background-image: url('../image_assets/apps/inventor.png')
+			#rhino .app-logo
+				background-image: url('../image_assets/apps/rhino.png')
+			#max .app-logo
+				background-image: url('../image_assets/apps/max.png')
+			#c4d .app-logo
+				background-image: url('../image_assets/apps/c4d.png')
+			#ae .app-logo
+				background-image: url('../image_assets/apps/ae.png')
+			#premiere .app-logo
+				background-image: url('../image_assets/apps/premiere.png')
+			#final_cut .app-logo
+				background-image: url('../image_assets/apps/final_cut.png')
+			#espresso .app-logo
+				background-image: url('../image_assets/apps/espresso.png')
+			#sublime .app-logo
+				background-image: url('../image_assets/apps/sublime.png')
+			#coda .app-logo
+				background-image: url('../image_assets/apps/coda.png')
+
+	.education
+		position: relative
+		display: inline-block
+		.school
+			margin-top: 2rem
+		#uwaterloo .logo
+			background-image: url('../image_assets/uwaterloo.gif')
+
+		#fhci .logo
+			background-image: url('../image_assets/fhci.png')
+
+/* ---------------------- PORTFOLIO PAGE ---------------------- */
+
+.portfolio-page
+	header.main-header
+		background: $white_trans
+		-webkit-backdrop-filter: saturate(1.8) blur(20px)
+		height: auto
+		z-index: 5
+
+	.header
+		margin: 0
+		.title
+			text-align: center
+			padding: 12px 0
+			font-size: 3rem
+			border-bottom: 1px solid $dark_grey
+			opacity: 1
+		&:before
+			content: ''
+
+		.tagline
+			display: none
+			top: 2.5em
+
+	.gallery-content
+		position: relative
+		display: inline-block
+		width: 100%
+		padding: 24px 0
+
+		.portfolio-title
+			width: 100%
+			margin: 0 auto
+			margin-bottom: 0.75em
+			text-align: center
+			font-family: $sans-serif
+
+		h1
+			font-size: 40px
+		h2
+			font-size: 32px
+			font-style: normal
+			font-weight: bold
+			color: $green
+		h3
+			font-size: 32px
+			font-weight: 300
+		h4
+			font-size: 28px
+			font-weight: 300	
+		h5
+			font-size: 24px
+			color: $med_grey
+			font-weight: normal
+		h6
+			font-size: 20px
+			color: $med_grey
+			font-weight: normal
+			font-style: italic
+			margin: 0
+		p
+			line-height: 1.6em
+
+/* ------ Default Style ------ */
+
+		.cover-photo
+			width: 100%
+
+		.col
+			position: relative
+			font-size: 16px
+			line-height: 1.5em
+		.folio_paragraph
+			width: 100%
+			line-height: 1.75em
+		.folio_image
+			display: inherit
+			position: relative
+			width: 100%
+			height: auto
+			margin: 0
+			text-align: center
+			img
+				position: relative
+				display: inline-block
+				max-width: 90%
+				max-height: 440px
+				width: auto
+				height: auto
+				margin: 0
+
+			iframe
+				width: 90%
+				height: 540px
+
+			figcaption
+				text-align: center
+				font-size: 1rem
+				color: $med_grey
+				max-width: 80%
+				margin: 0 10%
+
+		blockquote
+			border-left: 1px solid $green
+			padding-left: 1em
+			color: $med_grey
+
+		table
+			font-size: 12px
+			line-height: 1.2em
+			border: none
+			width: 100%
+			*
+				margin: 0
+
+		.footnotes
+			font-size: 12px
+
+		sup a::before
+			content: '['
+		sup a::after
+			content: ']'
+
+/* ------ Table of Contents ------ */
+@media screen and (max-width: 1175px)
+	#toc
+		display: none
+
+	/* TODO: Implement drop-down TOC*/
+
+/*TODO Implement current location highlight */
+#toc
+	position: fixed
+	top: 112px
+	z-index: 1
+	width: 20%
+	max-width: 360px
+
+#toc a
+	display: block
+	cursor: pointer
+	font-size: 14px
+	text-decoration: none
+	font-weight: 500
+	margin: 0 2vw
+
+// #toc .toc-h1
+
+#toc .toc-h2
+	padding-left: 16px
+	font-family: "Lato", "Helvetica", sans-serif
+
+#toc .toc-h
+	padding-left: 32px
+	font-family: "Lato", "Helvetica", sans-serif
+	opacity: 0.8
+
+	/* ---------------------- FOOTER ---------------------- */
+footer
+	width: 100%
+	height: 6.4rem
+	margin-top: 4rem
+	font-size: 12px
+	line-height: 1.6rem
+	background-color: $dark_grey
+	color: $white
+	padding-bottom: 0.5rem
+
+	.container
+		position: relative
+		min-height: inherit
+
+		.copyright
+			position: relative
+			display: block
+			text-align: center
+			color: $white
+			top: 1rem
+
+/* ---------------------- Social Bar ---------------------- */
+.social-list
+	display: block
+	position: relative
+	padding: 0
+	margin: 0
+	list-style: none
+
+	.animate.social-media
+		&:hover
+			padding-top: 0.5rem
+			padding-bottom: 1.5rem
+
+	.social-media
+		display: inline-block
+		position: relative
+		width: 20%
+		height: 3.4rem
+		min-height: 56px
+		padding: 1.5rem 0
+		float: left
+
+		a
+			display: block
+			width: 20%
+			height: 100%
+			margin: 0 40%
+			background-size: contain
+			background-position: 50%
+			background-repeat: no-repeat
+		.social-logo
+			position: relative
+			padding-bottom: 100%
+			background-size: 100%
+			background-repeat: no-repeat
+			border-radius: 0
+
+		:last-child
+			padding-right: 0
+		:first-child
+			border-left: none
+
+	&.light
+		width: 64%
+		margin: 0 18%
+		padding: 0.2rem 0
+		height: 3.4rem
+		.social-media
+			padding: 0 0
+			#twitter
+				background-image: url('../image_assets/social/twitter_light.png')
+			#linkedin
+				background-image: url('../image_assets/social/linkedin_light.png')
+			#git
+				background-image: url('../image_assets/social/git_light.png')
+			#email
+				background-image: url('../image_assets/social/email_light.png')
+			#instagram
+				background-image: url('../image_assets/social/instagram_light.png')
+
+	&.dark
+		width: 56%
+		margin: 1em 22%
+		.social-media
+			#twitter
+				background-image: url('../image_assets/social/twitter_dark.png')
+			#linkedin
+				background-image: url('../image_assets/social/linkedin_dark.png')
+			#git
+				background-image: url('../image_assets/social/git_dark.png')
+			#email
+				background-image: url('../image_assets/social/email_dark.png')
+			#instagram
+				background-image: url('../image_assets/social/instagram_dark.png')
+			#soundcloud
+				background-image: url('../image_assets/social/soundcloud_dark.png')
+
+/* ------ HELPER CLASSES ------ */
+.hidden, .hide
+	display: none !important
+.mobile-only
+	display: none
+.container
+	width: 84%
+	margin: 0 8%
+	height: 100%
+.shrinkwrap
+	will-change: width
+	width: intrinsic /* For Safari, see https://developer.mozilla.org/en-US/docs/CSS/width */
+	width: -moz-fit-content
+	width: -webkit-fit-content
+	width: fit-content
+	height: 100%
+	margin: auto
+	@media screen and (min-width: 1160px)
+		min-width: 62rem
+
+.vertical-center
+	text-align: center
+	&:before
+		content: ''
+		display: inline-block
+		height: 100%
+		vertical-align: middle
+		margin-right: -0.25em /* Adjusts for spacing */
+
+.animate
+	-webkit-transition: all 0.3s ease-in-out
+	-moz-transition: all 0.3s ease-in-out
+	transition: all 0.3s ease-in-out
+
+.fixed
+	position: fixed
+
+/* ---------------------------- */
+
