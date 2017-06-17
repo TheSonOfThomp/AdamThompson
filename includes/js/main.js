@@ -1,5 +1,5 @@
 //Toggle V1
-var design_types = ["UX", "Interaction", "Product", "Web", "Industrial"];
+var design_types = ["Product", "UX", "Web", "Interaction"];
 
 var filterResume = 0;
 
@@ -14,7 +14,7 @@ $(document).ready(function(){
 		// reset counter to avoid overflow
 		if (x == design_types.length)
 			x = 0;
-	},6000);
+	},4000);
 
 	// Mobile - show Resume content
 	if ($(window).width() <= 768) {
