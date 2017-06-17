@@ -79,7 +79,7 @@ html {
     float: none;
     line-height: 1em;
     font-weight: 500;
-    padding-top: 3.2rem;
+    padding-top: 48px;
     font-family: "Raleway", "Lato", "Helvetica", sans-serif;
     z-index: 100; }
   .header .tagline, .sub-header .tagline {
@@ -491,7 +491,7 @@ section.resume {
   margin: 0; }
   .portfolio-page .header .title, .portfolio-page .sub-header .title {
     text-align: center;
-    padding: 12px 0;
+    padding: 16px 0;
     font-size: 3rem;
     border-bottom: 1px solid #4a4a4a;
     opacity: 1; }
@@ -536,66 +536,61 @@ section.resume {
     margin: 0; }
   .portfolio-page .gallery-content p {
     line-height: 1.6em; }
+  .portfolio-page .gallery-content .cover-photo {
+    width: 100%; }
+  .portfolio-page .gallery-content .col {
+    position: relative;
+    font-size: 16px;
+    line-height: 1.5em; }
+  .portfolio-page .gallery-content .single-column {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto; }
+  .portfolio-page .gallery-content .folio_paragraph {
+    width: 100%;
+    line-height: 1.75em; }
+  .portfolio-page .gallery-content .folio_image {
+    display: inherit;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    text-align: center; }
+    .portfolio-page .gallery-content .folio_image img {
+      position: relative;
+      display: inline-block;
+      max-width: 90%;
+      max-height: 440px;
+      width: auto;
+      height: auto;
+      margin: 0; }
+    .portfolio-page .gallery-content .folio_image iframe {
+      width: 90%;
+      height: 540px; }
+    .portfolio-page .gallery-content .folio_image figcaption {
+      text-align: center;
+      font-size: 1rem;
+      color: #808080;
+      max-width: 80%;
+      margin: 0 10%; }
+  .portfolio-page .gallery-content blockquote {
+    border-left: 1px solid #5B753D;
+    padding-left: 1em;
+    color: #808080; }
+  .portfolio-page .gallery-content table {
+    font-size: 12px;
+    line-height: 1.2em;
+    border: none;
+    width: 100%; }
+    .portfolio-page .gallery-content table * {
+      margin: 0; }
+  .portfolio-page .gallery-content .footnotes {
+    font-size: 12px; }
+  .portfolio-page .gallery-content sup a::before {
+    content: "["; }
+  .portfolio-page .gallery-content sup a::after {
+    content: "]"; }
 
-/* ------ Default Style ------ */
- *
- * .cover-photo
- * 	width: 100%
- *
- * .col
- * 	position: relative
- * 	font-size: 16px
- * 	line-height: 1.5em
- * .folio_paragraph
- * 	width: 100%
- * 	line-height: 1.75em
- * .folio_image
- * 	display: inherit
- * 	position: relative
- * 	width: 100%
- * 	height: auto
- * 	margin: 0
- * 	text-align: center
- * 	img
- * 		position: relative
- * 		display: inline-block
- * 		max-width: 90%
- * 		max-height: 440px
- * 		width: auto
- * 		height: auto
- * 		margin: 0
- *
- * 	iframe
- * 		width: 90%
- * 		height: 540px
- *
- * 	figcaption
- * 		text-align: center
- * 		font-size: 1rem
- * 		color: $med_grey
- * 		max-width: 80%
- * 		margin: 0 10%
- *
- * blockquote
- * 	border-left: 1px solid $green
- * 	padding-left: 1em
- * 	color: $med_grey
- *
- * table
- * 	font-size: 12px
- * 	line-height: 1.2em
- * 	border: none
- * 	width: 100%
- * 	*
- * 		margin: 0
- *
- * .footnotes
- * 	font-size: 12px
- *
- * sup a::before
- * 	content: '['
- * sup a::after
- * 	content: ']' */
 /* ------ Table of Contents ------ */
 @media screen and (max-width: 1175px) {
   #toc {
