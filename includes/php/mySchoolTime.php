@@ -113,7 +113,7 @@ class mySchoolTime{
 							return '4B';	
 						}
 						else {
-							return 'real life';
+							return ' ';
 						}
 					}
 					else {
@@ -128,7 +128,7 @@ class mySchoolTime{
 						return '1B';
 					}
 					elseif ($this->year >= $this->year_grad) {
-						return 'real life';
+						return ' ';
 					}
 					else {
 						return 0;
@@ -152,7 +152,7 @@ class mySchoolTime{
 						return '4B';	
 					}
 					elseif ($this->year >= $this->year_grad) {
-						return 'real life';
+						return ' ';
 					}
 					else {
 						$term_num += 1;
@@ -166,7 +166,7 @@ class mySchoolTime{
 							return '4B';	
 						}
 						else {
-							return 'real life';
+							return ' ';
 						}
 					}
 					elseif ($term_num == 12) {

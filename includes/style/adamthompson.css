@@ -105,7 +105,7 @@ html {
     list-style: none;
     padding-left: 0;
     margin-top: 0;
-    padding-top: 3em;
+    padding-top: 24px;
     font-size: 1.2em;
     font-weight: 200;
     color: #5B753D; }
@@ -289,59 +289,65 @@ section.resume {
       line-height: 2em; }
   section.resume .resume-item {
     display: none; }
-  section.resume .container article .logo-container {
-    width: 20%;
-    height: 100%;
-    float: left;
-    display: inline-block; }
-    section.resume .container article .logo-container .logo {
+  section.resume .container article {
+    cursor: pointer; }
+    section.resume .container article .logo-container {
+      width: 180px;
+      max-width: 20%;
+      height: 100%;
+      float: left;
+      display: inline-block; }
+      section.resume .container article .logo-container .logo {
+        width: 80%;
+        height: 0;
+        padding-bottom: 80%;
+        margin-right: 10%;
+        border-radius: 100%;
+        background-color: #f2f2f2;
+        background-size: 80%;
+        background-position: 50%;
+        background-repeat: no-repeat; }
+      section.resume .container article .logo-container .company-site {
+        display: none;
+        margin-top: 0.8rem;
+        font-family: "Lato", "Helvetica", sans-serif;
+        font-size: 1rem;
+        font-weight: 300;
+        text-align: center; }
+        section.resume .container article .logo-container .company-site a {
+          text-decoration: none;
+          color: #4a4a4a; }
+    section.resume .container article .resume-content {
       width: 80%;
-      height: 0;
-      padding-bottom: 80%;
-      margin-right: 10%;
-      border-radius: 100%;
-      background-color: #f2f2f2;
-      background-size: 80%;
-      background-position: 50%;
-      background-repeat: no-repeat; }
-    section.resume .container article .logo-container .company-site {
-      display: none;
-      margin-top: 0.8rem;
-      font-family: "Lato", "Helvetica", sans-serif;
-      font-size: 1rem;
-      font-weight: 300;
-      text-align: center; }
-      section.resume .container article .logo-container .company-site a {
-        text-decoration: none;
-        color: #4a4a4a; }
-  section.resume .container article .resume-content {
-    width: 80%;
-    padding: 0;
-    float: left;
-    display: inline-block; }
-    section.resume .container article .resume-content .subsection-header .subsection-title {
-      font-family: "Raleway", "Lato", "Helvetica", sans-serif;
-      font-size: 2rem;
-      font-weight: 500; }
-      section.resume .container article .resume-content .subsection-header .subsection-title .inline-note {
-        display: inline;
-        font-size: 1.25rem;
-        font-style: italic; }
-    section.resume .container article .resume-content .subsection-header .subsection-duration {
-      margin-left: 1rem;
-      font-family: "Lato", "Helvetica", sans-serif;
-      font-size: 1rem;
-      font-weight: 300; }
-    section.resume .container article .resume-content .resume-list {
-      padding-left: 1rem;
-      font-size: 1rem;
-      line-height: 1.5em;
-      list-style-type: disc; }
-      section.resume .container article .resume-content .resume-list .resume-item {
-        margin-bottom: 1em; }
-        section.resume .container article .resume-content .resume-list .resume-item .list-description {
-          font-family: "Merriweather", "Garamond", "Times New Roman", serif;
-          font-size: 1rem; }
+      padding: 54px 0 0 0;
+      float: left;
+      display: inline-block; }
+      @media screen and (max-width: 900px) {
+        section.resume .container article .resume-content {
+          padding: 0; } }
+      section.resume .container article .resume-content .subsection-header .subsection-title {
+        font-family: "Raleway", "Lato", "Helvetica", sans-serif;
+        font-size: 2rem;
+        font-weight: 500; }
+        section.resume .container article .resume-content .subsection-header .subsection-title .inline-note {
+          display: inline;
+          font-size: 1.25rem;
+          font-style: italic; }
+      section.resume .container article .resume-content .subsection-header .subsection-duration {
+        margin-left: 1rem;
+        font-family: "Lato", "Helvetica", sans-serif;
+        font-size: 1rem;
+        font-weight: 300; }
+      section.resume .container article .resume-content .resume-list {
+        padding-left: 1rem;
+        font-size: 1rem;
+        line-height: 1.5em;
+        list-style-type: disc; }
+        section.resume .container article .resume-content .resume-list .resume-item {
+          margin-bottom: 1em; }
+          section.resume .container article .resume-content .resume-list .resume-item .list-description {
+            font-family: "Merriweather", "Garamond", "Times New Roman", serif;
+            font-size: 1rem; }
   section.resume .experience {
     position: relative;
     display: inline-block; }
@@ -350,7 +356,7 @@ section.resume {
       position: relative;
       width: 100%;
       overflow: hidden;
-      margin-top: 3rem; }
+      margin-top: 32px; }
     section.resume .experience .zynga .logo {
       background-image: url("../image_assets/zynga_logo.png"); }
     section.resume .experience .noom .logo {
@@ -717,8 +723,8 @@ footer {
   display: none; }
 
 .container {
-  width: 84%;
-  margin: 0 8%;
+  width: 80%;
+  margin: 0 10%;
   height: 100%; }
 
 .shrinkwrap {
@@ -733,14 +739,19 @@ footer {
     .shrinkwrap {
       min-width: 62rem; } }
 
-.vertical-center {
-  text-align: center; }
-  .vertical-center:before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em; }
+.vertical-center:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; }
+
+.horizontal-center:before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  horizontal-align: middle;
+  margin-right: -0.25em; }
 
 .animate {
   -webkit-transition: all 0.3s ease-in-out;
@@ -750,6 +761,210 @@ footer {
 .fixed {
   position: fixed; }
 
-/* ---------------------------- */
+/* ---------------------- MOBILE ---------------------- */
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    margin: 0; }
+
+  .hide-mobile {
+    display: none; }
+
+  .mobile-only {
+    display: inline; }
+
+  /* ------------ HEADER ------------ */
+  .header, .sub-header, .sub-header {
+    height: auto;
+    margin-top: 0;
+    padding-top: 0; }
+    .header .main-header .container, .sub-header .main-header .container, .sub-header .main-header .container {
+      width: 100%;
+      margin: 0; }
+    .header .tagline, .sub-header .tagline, .sub-header .tagline {
+      width: 100%;
+      display: none;
+      text-align: center;
+      font-size: 1.6em;
+      line-height: 1.25em;
+      top: 3em; }
+
+  header.main-header {
+    padding: 0;
+    margin: 0; }
+
+  .sub-header {
+    margin-top: 0; }
+    .sub-header:before {
+      width: calc(100% - 56px); }
+    .sub-header:after {
+      right: -108px; }
+    .sub-header .title {
+      font-size: 2.8rem;
+      line-height: 3.6rem;
+      width: 50%;
+      top: 0;
+      padding-left: 4%;
+      padding-left: 4vw; }
+    .sub-header .img-container {
+      height: 86px;
+      width: 71px;
+      float: right;
+      margin: 0;
+      padding-top: 1.8rem;
+      padding-right: 3%; }
+    .sub-header ul {
+      width: 100%;
+      padding-top: 9.6rem;
+      text-align: center; }
+    .sub-header li {
+      top: 6rem;
+      display: block;
+      font-size: 1.5rem;
+      line-height: 4rem;
+      cursor: pointer;
+      padding-right: 0; }
+    .sub-header a {
+      display: inline-block;
+      width: 100%; }
+
+  .main-header .sub-header li:hover,
+  .main-header .sub-header li:active,
+  .main-header .sub-header li:focus {
+    background-color: #5B753D; }
+
+  /* ------------ BIO ------------ */
+  .bio {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 6rem; }
+    .bio .bio-pic {
+      display: inline-block;
+      position: relative;
+      float: none;
+      clear: left;
+      width: 70%;
+      height: auto;
+      margin: 1rem 15% 0 15%;
+      text-align: center;
+      transform: rotateZ(0deg);
+      -moz-transform: rotateZ(0deg);
+      -webkit-transform: rotateZ(0deg); }
+    .bio .bio-text {
+      float: none;
+      clear: left;
+      min-width: 100%;
+      max-width: 100%;
+      text-align: center;
+      font-size: 1.25rem; }
+      .bio .bio-text p {
+        margin-bottom: 1rem; }
+
+  .social-list.dark {
+    padding-top: 0; }
+
+  /* ------------ FILTER ------------ */
+  .site-filter {
+    margin-top: 1rem; }
+
+  .filter-line {
+    background-color: #cacaca;
+    display: none; }
+
+  .inline-sort {
+    width: 66%;
+    text-align: center; }
+
+  .menu {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    .menu .horizontal-sort {
+      display: none; }
+    .menu li {
+      padding: 0;
+      text-align: center; }
+
+  .menu-label {
+    display: inline-block;
+    width: 92%;
+    padding: 0 4%;
+    text-align: center;
+    background: #DCE6CF; }
+    .menu-label .selected {
+      width: 100%;
+      padding: 0; }
+    .menu-label:after {
+      display: none; }
+
+  /* ------------ PORTFOLIO ------------ */
+  section.portfolio {
+    margin-bottom: 0; }
+    section.portfolio .gallery .folio-item {
+      width: 100%;
+      height: auto; }
+    section.portfolio .gallery .hover-state {
+      opacity: 1;
+      background-color: rgba(51, 51, 51, 0.75); }
+    section.portfolio .gallery .folio-hover {
+      max-width: calc(100% - 2.51rem);
+      padding: 1.25rem;
+      background: rgba(28, 28, 28, 0.6);
+      border-radius: 8px; }
+
+  /* ------------ RESUME ------------ */
+  section.resume {
+    margin-top: -2rem; }
+    section.resume .sub-header .title {
+      top: 56px; }
+    section.resume .sub-header ul {
+      padding-top: 3rem;
+      padding-left: 4%;
+      text-align: left; }
+    section.resume .sub-header li {
+      font-size: 1rem; }
+    section.resume .container article.experience.job {
+      margin-top: 16px; }
+    section.resume .container article .logo-container {
+      width: 100%;
+      max-width: 100%; }
+      section.resume .container article .logo-container .logo {
+        width: 50%;
+        padding-bottom: 50%;
+        margin: 0 auto; }
+    section.resume .container article .resume-content {
+      margin-top: 2rem;
+      max-width: 100%;
+      min-width: 100%;
+      border-left: 0;
+      border-top: 1px solid #5B753D;
+      padding-left: 0; }
+      section.resume .container article .resume-content .resume-header {
+        margin-top: 3rem; }
+      section.resume .container article .resume-content .subsection-header {
+        width: 100%;
+        padding-top: 1rem;
+        text-align: center; }
+        section.resume .container article .resume-content .subsection-header .subsection-title {
+          width: 100%;
+          font-size: 1.5rem; }
+        section.resume .container article .resume-content .subsection-header .subsection-duration {
+          margin: 0;
+          display: block; }
+      section.resume .container article .resume-content .resume-list {
+        display: none;
+        padding-left: 40px; }
+    section.resume .skills {
+      display: none; }
+
+  /* ------------ FOOTER ------------ */
+  .social-media {
+    width: 33%;
+    height: 4.8rem;
+    margin: 0.8rem 0; }
+
+  .social-media a {
+    width: 40%;
+    margin: 0 30%; } }
 
 /*# sourceMappingURL=adamthompson.css.map */

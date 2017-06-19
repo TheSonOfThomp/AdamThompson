@@ -131,7 +131,7 @@ html
 		list-style: none
 		padding-left: 0
 		margin-top: 0
-		padding-top: 3em
+		padding-top: 24px
 		font-size: 1.2em
 		font-weight: 200
 		color: $green
@@ -338,8 +338,11 @@ section.resume
 
 	.container
 		article
+			cursor: pointer
+			$logo-size: 144px
 			.logo-container
-				width: 20%
+				width: $logo-size/0.8
+				max-width: 20%
 				height: 100%
 				float: left
 				display: inline-block
@@ -366,9 +369,12 @@ section.resume
 
 			.resume-content
 				width: 80%
-				padding: 0
+				padding: ($logo-size - 36px)/2 0 0 0
 				float: left
 				display: inline-block
+				@media screen and (max-width: $logo-size/0.8/0.2) 
+					&
+						padding: 0
 		
 				.subsection-header
 					.subsection-title
@@ -386,6 +392,7 @@ section.resume
 						font-weight: 300
 				
 				.resume-list
+					// display: none
 					padding-left: 1rem
 					font-size: 1rem
 					line-height: 1.5em
@@ -406,7 +413,7 @@ section.resume
 			position: relative
 			width: 100%
 			overflow: hidden
-			margin-top: 3rem
+			margin-top: 32px
 			
 		.zynga .logo
 			background-image: url("../image_assets/zynga_logo.png")
@@ -813,8 +820,8 @@ footer
 .mobile-only
 	display: none
 .container
-	width: 84%
-	margin: 0 8%
+	width: 80%
+	margin: 0 10%
 	height: 100%
 .shrinkwrap
 	will-change: width
@@ -826,14 +833,21 @@ footer
 	margin: auto
 	@media screen and (min-width: 1160px)
 		min-width: 62rem
-
 .vertical-center
-	text-align: center
+	// text-align: center
 	&:before
 		content: ''
 		display: inline-block
 		height: 100%
 		vertical-align: middle
+		margin-right: -0.25em /* Adjusts for spacing */
+.horizontal-center
+	// text-align: center
+	&:before
+		content: ''
+		display: inline-block
+		width: 100%
+		horizontal-align: middle
 		margin-right: -0.25em /* Adjusts for spacing */
 
 .animate
@@ -844,5 +858,210 @@ footer
 .fixed
 	position: fixed
 
-/* ---------------------------- */
+/* ---------------------- MOBILE ---------------------- */
+@media screen and (max-width: 768px) 
+	main 
+		width: 100%
+		margin: 0
+	.hide-mobile 
+		display: none
+	.mobile-only 
+		display: inline
+
+	/* ------------ HEADER ------------ */
+	.header, .sub-header
+		height: auto
+		margin-top: 0
+		padding-top: 0
+		.main-header .container 
+			width: 100%
+			margin: 0
+		.tagline 
+			width: 100%
+			display: none
+			text-align: center
+			font-size: 1.6em
+			line-height: 1.25em
+			top: 3em
+
+	header.main-header
+		padding: 0
+		margin: 0 
+
+	.sub-header 
+		margin-top: 0
+		&:before 
+			width: calc(100% - 56px)
+		&:after
+			right: -108px
+		.title 
+			font-size: 2.8rem
+			line-height: 3.6rem
+			width: 50%
+			top: 0
+			padding-left: 4% 
+			padding-left: 4vw 
+		.img-container 
+			height: 86px
+			width: 71px
+			float: right
+			margin: 0
+			padding-top: 1.8rem
+			padding-right: 3%
+		ul 
+			width: 100%
+			padding-top: 9.6rem
+			text-align: center
+		li 
+			top: 6rem
+			display: block
+			font-size: 1.5rem
+			line-height: 4rem
+			cursor: pointer
+			padding-right: 0
+		a
+			display: inline-block
+			width: 100%
+	.main-header .sub-header li:hover,
+	.main-header .sub-header li:active,
+	.main-header .sub-header li:focus 
+		background-color: $green
+
+	/* ------------ BIO ------------ */
+	.bio 
+		height: auto
+		margin-top: 0
+		margin-bottom: 6rem
+		.bio-pic 
+			display: inline-block
+			position: relative
+			float: none
+			clear: left
+			width: 70%
+			height: auto
+			margin: 1rem 15% 0 15%
+			text-align: center
+			transform: rotateZ(0deg)
+			-moz-transform: rotateZ(0deg)
+			-webkit-transform: rotateZ(0deg) 
+		.bio-text 
+			float: none
+			clear: left
+			min-width: 100%
+			max-width: 100%
+			text-align: center
+			font-size: 1.25rem
+			p 
+				margin-bottom: 1rem
+	.social-list.dark 
+		padding-top: 0
+
+
+	/* ------------ FILTER ------------ */
+
+	.site-filter 
+		margin-top: 1rem
+	.filter-line 
+		background-color: #cacaca
+		display: none
+	.inline-sort 
+		width: 66%
+		text-align: center
+	.menu 
+		width: 100%
+		margin: 0
+		padding: 0
+		.horizontal-sort 
+			display: none
+		li 
+			padding: 0
+			text-align: center
+	.menu-label 
+		display: inline-block
+		width: 92%
+		padding: 0 4%
+		text-align: center
+		background: #DCE6CF
+		.selected 
+			width: 100%
+			padding: 0
+		&:after 
+			display: none
+
+	/* ------------ PORTFOLIO ------------ */
+	section.portfolio 
+		margin-bottom: 0
+		.gallery
+			.folio-item 
+				width: 100%
+				height: auto
+			.hover-state 
+				opacity: 1
+				background-color: $dark_grey_trans
+			.folio-hover 
+				max-width: calc(100% - 2.51rem)
+				padding: 1.25rem
+				background: rgba(28,28,28,0.6)
+				border-radius: 8px 
+	/* ------------ RESUME ------------ */
+	section.resume 
+		margin-top: -2rem
+		.sub-header
+			.title 
+				top: 56px
+			ul 
+				padding-top: 3rem
+				padding-left: 4%
+				text-align: left
+			li 
+				font-size: 1rem
+		.container
+			article
+				&.experience
+					&.job
+						margin-top: 16px
+				.logo-container 
+					width: 100%
+					max-width: 100%
+					.logo 
+						width: 50%
+						padding-bottom: 50%
+						margin: 0 auto
+				.resume-content 
+					margin-top: 2rem
+					max-width: 100%
+					min-width: 100%
+					border-left: 0
+					border-top: 1px solid #5B753D
+					padding-left: 0
+					.resume-header 
+						margin-top: 3rem
+					.subsection-header 
+						width: 100%
+						padding-top: 1rem
+						text-align: center
+						.subsection-title 
+							width: 100%
+							font-size: 1.5rem
+						.subsection-duration 
+							margin: 0
+							display: block
+					.resume-list 
+						display: none
+						padding-left: 40px
+
+		.skills 
+			display: none
+
+	/* ------------ FOOTER ------------ */
+	.social-media 
+		width: 33%
+		height: 4.8rem
+		margin: 0.8rem 0
+	.social-media a 
+		width: 40%
+		margin: 0 30%
+
+
+
 

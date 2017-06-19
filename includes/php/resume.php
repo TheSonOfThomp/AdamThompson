@@ -98,7 +98,7 @@
 				</ul>
 			</div>
 		</article>
-		<article class="genesys job">
+<!-- 		<article class="genesys job">
 			<div class="logo-container">
 				<div class="logo vertical-center"></div>
 				<div class="company-site"><a href="http://www.genesyslabs.com" target="_blank">Genesys Labs</a></div>
@@ -115,7 +115,7 @@
 					<li class="resume-item">Designed a new procedure for evaluating and interviewing new job candidates</li>
 				</ul>
 			</div>
-		</article>
+		</article> -->
 	</section>
 	<section class="skills container" id="toolbox">
 		<div class="resume-header">
@@ -221,7 +221,7 @@
 				<div class="subsection-header">
 					<span class="subsection-title">Systems Design Engineering <span class="inline-note">with Cognitive Science Minor</span></span>
 					<span class="hidden">University of Waterloo, Systems Design, Mechatronics, Human Factors, User Interface, </span>
-					<span class="subsection-duration"><?php echo $term ?> - Class&nbspof&nbsp2017</span>
+					<span class="subsection-duration">Class&nbspof&nbsp2017</span>
 				</div>
 				<ul class="resume-list">
 					<li class="resume-item featured ux pm industrial">Cognitive Ergonomics <span class="inline-note">(SYDE 543)<span class="subsection-duration">Fall 2016</span></span>

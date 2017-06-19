@@ -3,6 +3,8 @@ var design_types = ["Product", "UX", "Web", "Interaction"];
 
 var filterResume = 0;
 
+var hideResumeText = false
+
 $(document).ready(function(){
 	//Rotate through the header 
 	var x = 0;
@@ -16,8 +18,8 @@ $(document).ready(function(){
 			x = 0;
 	},4000);
 
-	// Mobile - show Resume content
-	if ($(window).width() <= 768) {
+	// show Resume content
+	if ($(window).width() <= 768 || hideResumeText) {
 		$('.job').click(function(){
 			$('.resume-list',this).slideToggle();
 		});
