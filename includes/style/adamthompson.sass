@@ -249,6 +249,7 @@ section.portfolio
 		width: 100%
 		margin: 0
 		padding: 0
+		// background-color: $dark_grey
 
 		ul
 			position: relative
@@ -263,8 +264,9 @@ section.portfolio
 			display: none /* For Filtering */
 			overflow: hidden
 			float: left
-			width: 50%
-			height: 36.75vw /* 50% * 98% * 3/4 */
+			width: 33.333%
+			// height: 36.75vw // 50% * 98% * 3/4
+			height: 3/4 * 33.333vw
 			padding: 0
 			margin: 0 
 			img
@@ -276,12 +278,11 @@ section.portfolio
 			a
 				display: inline-block
 				width: 100%
-				height: auto
+				height: 100%
 
 			&:hover
 				.hover-state
 					opacity: 1
-					display: block
 			
 			.hover-state
 				opacity: 0
@@ -290,17 +291,25 @@ section.portfolio
 				bottom: 0
 				left: 0 
 				right: 0
-				height: 100%
 				width: 100%
+				height: 100%
 				text-align: center
 				background-color: $dark_grey_trans 
 				cursor: pointer
-				&:before
-					content: ''
-					display: inline-block
-					height: 100%
-					vertical-align: middle
-					margin-right: -0.25em /* Adjusts for spacing */
+				display: flex
+				align-items: center
+				justify-content: center
+
+				-webkit-transition: opacity 0.15s ease-in-out
+				-moz-transition: opacity 0.15s ease-in-out
+				transition: opacity 0.15s ease-in-out
+				-webkit-backface-visibility: hidden
+				// &:before
+				// 	content: ''
+				// 	display: inline-block
+				// 	height: 100%
+				// 	vertical-align: middle
+				// 	margin-right: -0.25em /* Adjusts for spacing */
 
 				.folio-hover
 					display: inline-block
@@ -854,6 +863,7 @@ footer
 	-webkit-transition: all 0.3s ease-in-out
 	-moz-transition: all 0.3s ease-in-out
 	transition: all 0.3s ease-in-out
+	-webkit-backface-visibility: hidden
 
 .fixed
 	position: fixed
