@@ -70,7 +70,7 @@
 		</li>
 
 		<!-- ********** KNOWROAMING APP ********** -->
-		<li class="folio-item ux featured" data-feature-rank="" data-published-date="2015-05-01">
+		<li class="folio-item ux featured" data-feature-rank="4" data-published-date="2015-05-01">
 			<a href="Portfolio/?p=knowroaming">
 				<img src="includes/portfolio_images/knowroaming/knowroaming.jpg">
 				<div class="hover-state">
@@ -172,7 +172,7 @@
 				</div>
 			</a>
 		</li> -->
-		
+
 		<!-- ********** MEDIAGO APP ********** -->
 		<li class="folio-item ux graphics featured" data-feature-rank="6" data-published-date="2013-12-25">
 			<a href="Portfolio/?p=mediago_app">

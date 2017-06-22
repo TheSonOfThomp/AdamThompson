@@ -33,8 +33,8 @@ $(document).ready(function(){
 	        target: '.folio-item'
 	    },
 	    load: {
-	        filter: '.featured'
-	        // sort: 'published-date:desc'
+	        filter: '.featured',
+	        sort: 'feature-rank:asc'
 	    }
 	});
 

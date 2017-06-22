@@ -18,9 +18,9 @@
 				<!-- <li class="filter" data-filter=".industrial">Industrial Design</li> -->
 				<!-- <li class="filter" data-filter=".pm">Product Management</li>  -->
 				<!-- <li class="filter" data-filter=".video">Video Production</li> -->
-				<!-- <?php if ($DEBUG)
-					echo '<li class="filter" data-filter=".folio-item">Everything</li>'
-					?> -->
+				<?php if ($DEBUG)
+					echo '<li class="filter" data-filter=".folio-item">All</li>'
+				?>
 		    </ul>
 		</div>
 	</div>

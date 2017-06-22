@@ -287,8 +287,6 @@ section.resume {
       font-family: "Raleway", "Lato", "Helvetica", sans-serif;
       font-size: 2rem;
       line-height: 2em; }
-  section.resume .resume-item {
-    display: none; }
   section.resume .container article {
     cursor: pointer; }
     section.resume .container article .logo-container {
@@ -385,7 +383,6 @@ section.resume {
       margin: 0;
       list-style: none; }
       section.resume .skills .program-list li {
-        display: none;
         position: relative;
         width: 7%;
         margin: 1rem 2.75% 1rem 2.75%;

@@ -6,9 +6,6 @@ include('../includes/plugins/ParsedownExtra.php');
 include('../includes/plugins/toc.php');
 ?>
 <title>Adam Thompson - <?php echo($p_title) ?></title>
-<!-- <link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/header.css" type="text/css">
-<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/css/mobile.css" type="text/css"> -->
-<!-- <link rel="stylesheet" type="text/css" href="<?php echo $root_path; ?>/includes/style/portfolio-hilight.css"> -->
 <link rel="stylesheet" type="text/css" href="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/theme/bitter/vanillabox.css">
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
