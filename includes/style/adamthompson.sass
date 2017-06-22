@@ -186,7 +186,7 @@ html
 		margin: 0
 		padding-left: 0
 
-	li
+	.filter
 		display: inline-block
 		padding: 0 16px
 		cursor: pointer
@@ -194,8 +194,8 @@ html
 
 		&:hover
 			background: $white_green
-		&:active, .active
-			color: $med_grey
+		&:active, &.active
+			color: $dark_grey
 			background: $light_green
 
 .site-filter
@@ -240,9 +240,10 @@ section.portfolio
 	position: relative
 	display: block
 	width: 100%
-	height: auto
+	max-height: 9/4 * 33vw
 	margin: 2em 0
 	text-align: center
+	overflow: hidden
 
 	.gallery
 		position: relative
@@ -261,7 +262,7 @@ section.portfolio
 		.folio-item
 			position: relative
 			display: inline-block
-			display: none /* For Filtering */
+			// display: none /* For Filtering */
 			overflow: hidden
 			float: left
 			width: 33.333%
@@ -932,9 +933,9 @@ footer
 		a
 			display: inline-block
 			width: 100%
-	.main-header .sub-header li:hover,
-	.main-header .sub-header li:active,
-	.main-header .sub-header li:focus 
+	li.filter:hover,
+	li.filter:active,
+	li.filter:focus 
 		background-color: $green
 
 	/* ------------ BIO ------------ */

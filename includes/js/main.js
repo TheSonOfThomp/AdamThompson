@@ -1,7 +1,7 @@
 //Toggle V1
 var design_types = ["Product", "UX", "Web", "Interaction"];
 
-var filterResume = 0;
+var filterResume = false;
 
 var hideResumeText = false
 
@@ -16,7 +16,7 @@ $(document).ready(function(){
 		// reset counter to avoid overflow
 		if (x == design_types.length)
 			x = 0;
-	},4000);
+	}, 4000);
 
 	// show Resume content
 	if ($(window).width() <= 768 || hideResumeText) {
@@ -28,56 +28,20 @@ $(document).ready(function(){
 		});
 	}
 
-	// $('.gallery .folio-item a').vanillabox();
-
-
-	// MixItUp Portfolio filter
-	$(function(){
-	// Instantiate MixItUp:
-		$('#gallery').mixItUp({
-			// Set what elements are the selectors
-			selectors: {
-				target: '.folio-item',
-				filter: '.filter'
-			},
-			// Set default filter
-			load: {
-				filter: '.featured'
-			}
-		});
+	var mixer = mixitup('#gallery', {
+	    selectors: {
+	        target: '.folio-item'
+	    },
+	    load: {
+	        filter: '.featured'
+	        // sort: 'published-date:desc'
+	    }
 	});
 
-	if (filterResume) {
-		//Mixitup Resume filter
-		$(function(){
-			// Instantiate MixItUp:
-			$('#resume').mixItUp({
-				// Set what elements are the selectors
-				selectors: {
-					target: '.resume-item',
-					filter: '.filter'
-			  	},
-			  	load: {
-					filter: '.featured'
-				}
-			});
-		});
-
-		  $('#resume').on('mixEnd' ,function(){
-		    console.log('Done Mixing');
-			$('.resume-item:visible').css('display','list-item');
-			var filter = $('.active').attr('data-filter');
-			if (filter) filter = filter.substr(1, filter.length-1);
-			filterNotification = getFilterNotification(filter);
-
-			$(".filter-notification").html(filterNotification);
-		  });
-
-
-	} else {
-		$('.resume-item').css('display','list-item');
-	}
-
+	$('.filter').click(function(){
+		$('.filter.active').removeClass('active');
+		$(this).addClass('active')
+	});
 });
 
 function getFilterNotification(filter) {

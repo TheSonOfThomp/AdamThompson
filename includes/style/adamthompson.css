@@ -155,15 +155,15 @@ html {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-  .menu li {
+  .menu .filter {
     display: inline-block;
     padding: 0 16px;
     cursor: pointer;
     color: #5B753D; }
-    .menu li:hover {
+    .menu .filter:hover {
       background: #EDF2E6; }
-    .menu li:active, .menu li .active {
-      color: #808080;
+    .menu .filter:active, .menu .filter.active {
+      color: #4a4a4a;
       background: #DCE6CF; }
 
 .site-filter {
@@ -204,9 +204,10 @@ section.portfolio {
   position: relative;
   display: block;
   width: 100%;
-  height: auto;
+  max-height: 74.25vw;
   margin: 2em 0;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
   section.portfolio .gallery {
     position: relative;
     width: 100%;
@@ -222,7 +223,6 @@ section.portfolio {
     section.portfolio .gallery .folio-item {
       position: relative;
       display: inline-block;
-      display: none;
       overflow: hidden;
       float: left;
       width: 33.333%;
@@ -829,9 +829,9 @@ footer {
       display: inline-block;
       width: 100%; }
 
-  .main-header .sub-header li:hover,
-  .main-header .sub-header li:active,
-  .main-header .sub-header li:focus {
+  li.filter:hover,
+  li.filter:active,
+  li.filter:focus {
     background-color: #5B753D; }
 
   /* ------------ BIO ------------ */

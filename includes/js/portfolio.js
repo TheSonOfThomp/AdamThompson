@@ -13,23 +13,23 @@ $(document).ready(function(){
   });
 
   // When a dropdown item is clicked
-  $('.dropdown li').click(function(){
-    var title = $(this).text();
-    // Change the Label title
-    $('.menu-label span').text(title);
+  // $('.dropdown li').click(function(){
+  //   var title = $(this).text();
+  //   // Change the Label title
+  //   $('.menu-label span').text(title);
     
-    // Close the dropdown
-    $('.dropdown').slideToggle();
+  //   // Close the dropdown
+  //   $('.dropdown').slideToggle();
     
-    if ($(this).attr('id') != "all") {
-      $('li#all').show();
-    } 
-    else {
-      $('li#all').hide();
-    }
-    // $('li.active').fadeIn().removeClass('active');
-    // $(this).addClass('active').fadeOut();
-  });
+  //   if ($(this).attr('id') != "all") {
+  //     $('li#all').show();
+  //   } 
+  //   else {
+  //     $('li#all').hide();
+  //   }
+  //   // $('li.active').fadeIn().removeClass('active');
+  //   // $(this).addClass('active').fadeOut();
+  // });
 
   var scroll_location = 0;
   // When a portfolio element is clicked
