@@ -27,9 +27,9 @@ include('../includes/plugins/toc.php');
 
 	<?php if ($useMarkdown) {
 		$Parsedown = new ParsedownExtra();
-		$markdown = file_get_contents($p.'.md');?>
+		$markdown = file_get_contents('markdown/'.$p.'.md');?>
 		<script type="text/javascript">
-		var toc = <?php echo markdown_toc($p.'.md');?>;
+		var toc = <?php echo markdown_toc('markdown/'.$p.'.md');?>;
 		</script>
 		<?php
 		echo $Parsedown->text($markdown);
@@ -44,6 +44,7 @@ include('../includes/plugins/toc.php');
 
 	</div>
 </article>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 

@@ -19,7 +19,7 @@
 
     	<!-- ********** TAP Metronome ********** -->
 		<li class="folio-item web software featured" data-feature-rank="5" data-published-date="2016-09-10">
-			<a href="Portfolio/?p=TAP">
+			<a href="Portfolio/?p=tap-metronome">
 				<img src="includes/portfolio_images/TAP-metronome.png">
 				<div class="hover-state">
 					<div class="folio-hover">
