@@ -85,7 +85,7 @@
 		<!-- ********** Colour Thermometer ********** -->
 		<li class="folio-item web software" data-feature-rank="" data-published-date="2017-01-01">
 			<a href="Portfolio/?p=colourtherm">
-				<img src="includes/portfolio_images/colourtherm.png">
+				<img src="includes/portfolio_images/colourtherm/colourtherm-toronto.jpg">
 					<div class="hover-state">
 					<div class="folio-hover">
 						<span class="folio-title">Colour Thermometer</span><br/>
