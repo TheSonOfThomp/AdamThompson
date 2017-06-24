@@ -1,4 +1,4 @@
-<section class="site-filter dropdown-filter hide">
+<section class="site-filter dropdown-filter">
 	<hr class="filter-line">
 	<div class="inline-sort">
 		<span class="sort-text hide-mobile">Filter portfolio by:</span></span>
