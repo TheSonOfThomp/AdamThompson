@@ -44,7 +44,7 @@
 
 		case 'colourtherm':
 			$p_title = 'Colour Thermometer';
-			$p_p1 = "The <a terget='_blank' href='".$root_path."/ColourThermometer'>Colour Thermometer</a> is a web app I built that converts the specified location's temperature, weather conditions and current time as an hsv (hue, saturation, variance) colour value, respectively. I built this in my spare time in the winter of 2015 for fun and to practice my JavaScript. <a href='https://github.com/Adam93MT/ColourThermometer'>Check it out on GitHub.</a> I was inspired by <a href='http://thecolourclock.co.uk' target='_blank'>The Colour Clock.</a>";
+			$useMarkdown = true;
 			break;
 
 		case 'noom_portion':

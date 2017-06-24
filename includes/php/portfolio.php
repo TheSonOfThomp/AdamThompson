@@ -83,7 +83,7 @@
 		</li>
 
 		<!-- ********** Colour Thermometer ********** -->
-		<li class="folio-item web software" data-feature-rank="" data-published-date="2015-04-31">
+		<li class="folio-item web software" data-feature-rank="" data-published-date="2017-01-01">
 			<a href="Portfolio/?p=colourtherm">
 				<img src="includes/portfolio_images/colourtherm.png">
 					<div class="hover-state">
