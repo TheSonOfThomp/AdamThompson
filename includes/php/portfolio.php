@@ -5,7 +5,7 @@
 <!-- ************************************** FEATURED ************************************** -->
 
     	<!-- ********** Chameleon ********** -->
-		<li class="folio-item mech software dsp audio signals ux industrial featured" data-feature-rank="2" data-published-date="2017-03-30">
+		<li class="folio-item mech software dsp audio signals ux industrial hardware featured" data-feature-rank="2" data-published-date="2017-04-01">
 			<a href="Portfolio/?p=chameleon">
 				<img src="includes/portfolio_images/chameleon/chameleon-front-render-with-logo.jpg">
 				<div class="hover-state">
@@ -44,7 +44,7 @@
 		</li>
 
 		<!-- ********** BOSE SPEAKER ********** -->
-		<li class="folio-item industrial " data-feature-rank="" data-published-date="2015-10-28">
+		<li class="folio-item industrial hardware" data-feature-rank="" data-published-date="2015-10-28">
 			<a href="Portfolio/?p=bose_speaker">
 				<img src="includes/portfolio_images/bose_speaker.jpg">
 				<div class="hover-state">
@@ -57,7 +57,7 @@
 		</li>
 
 		<!-- ********** SMRT WATR ********** -->
-		<li class="folio-item ux industrial software pm featured" data-feature-rank="3" data-published-date="2015-08-30">
+		<li class="folio-item ux hardware electrical software pm featured" data-feature-rank="3" data-published-date="2015-08-26">
 			<a href="Portfolio/?p=smrtwatr">
 				<img src="includes/portfolio_images/smrtwatr/smrtwatr.jpg">
 				<div class="hover-state">
@@ -83,13 +83,26 @@
 		</li>
 
 		<!-- ********** Colour Thermometer ********** -->
-		<li class="folio-item web software" data-feature-rank="" data-published-date="2017-01-01">
+		<li class="folio-item web software" data-feature-rank="" data-published-date="2017-05-25">
 			<a href="Portfolio/?p=colourtherm">
 				<img src="includes/portfolio_images/colourtherm/colourtherm-toronto.jpg">
 					<div class="hover-state">
 					<div class="folio-hover">
 						<span class="folio-title">Colour Thermometer</span><br/>
 						<span class="folio-type">Web Development</span>
+					</div>
+				</div>
+			</a>
+		</li>
+
+		<!-- ********** Analog Tuner ********** -->
+		<li class="folio-item electrical hardware" data-feature-rank="" data-published-date="2013-08-01">
+			<a href="Portfolio/?p=analog-tuner">
+				<img src="includes/portfolio_images/tuner-scope.jpg">
+				<div class="hover-state">
+					<div class="folio-hover">
+						<span class="folio-title">Analog Guitar Tuner</span><br/>
+						<span class="folio-type">Electrical</span>
 					</div>
 				</div>
 			</a>
@@ -129,6 +142,19 @@
 					<div class="folio-hover">
 						<span class="folio-title">KnowRoaming Intro Video</span><br/>
 						<span class="folio-type">Video</span>
+					</div>
+				</div>
+			</a>
+		</li> -->
+
+		<!-- ********** KNOWROAMING STAND ********** -->
+		<!-- <li class="folio-item industrial" data-feature-rank="" data-published-date="2015-04-05">
+			<a href="Portfolio/?p=KR_retail">
+				<img src="includes/portfolio_images/knowroaming/KR_retail.jpg">
+				<div class="hover-state">
+					<div class="folio-hover">
+						<span class="folio-title">KnowRoaming Retail Display</span><br/>
+						<span class="folio-type">Industrial Design</span>
 					</div>
 				</div>
 			</a>
@@ -186,31 +212,18 @@
 			</a>
 		</li>
 
-		<!-- ********** KNOWROAMING STAND ********** -->
-		<!-- <li class="folio-item industrial" data-feature-rank="" data-published-date="2015-04-05">
-			<a href="Portfolio/?p=KR_retail">
-				<img src="includes/portfolio_images/knowroaming/KR_retail.jpg">
+		<!-- ********** VU Meter ********** -->
+		<li class="folio-item electrical hardware" data-feature-rank="" data-published-date="2013-08-01">
+			<a href="Portfolio/?p=vu-meter">
+				<img src="includes/portfolio_images/vu-meter.jpg">
 				<div class="hover-state">
 					<div class="folio-hover">
-						<span class="folio-title">KnowRoaming Retail Display</span><br/>
-						<span class="folio-type">Industrial Design</span>
+						<span class="folio-title">Arduino VUMeter</span><br/>
+						<span class="folio-type">Electrical / Software</span>
 					</div>
 				</div>
 			</a>
-		</li> -->
-
-		<!-- ********** STiC DESIGN ********** -->
-		<!-- <li class="folio-item industrial" data-feature-rank="" data-published-date="2012-12-01">
-			<a href="Portfolio/?p=stic">
-				<img src="includes/portfolio_images/stic.png">
-				<div class="hover-state">
-					<div class="folio-hover">
-						<span class="folio-title">Ski Tip Connector</span><br/>
-						<span class="folio-type">Industrial Design</span>
-					</div>
-				</div>
-			</a>
-		</li> -->
+		</li>
 
 		<!-- ********** SAY NO TO COMIC SANS ********** -->
 		<li class="folio-item software web" data-feature-rank="" data-published-date="2013-05-04">
@@ -220,6 +233,20 @@
 					<div class="folio-hover">
 						<span class="folio-title">Say "No" to Comic Sans - Chrome Extension</span><br/>
 						<span class="folio-type">Software</span>
+					</div>
+				</div>
+			</a>
+		</li>
+
+
+		<!-- ********** STiC DESIGN ********** -->
+		<li class="folio-item industrial hardware" data-feature-rank="" data-published-date="2012-12-01">
+			<a href="Portfolio/?p=stic">
+				<img src="includes/portfolio_images/stic.png">
+				<div class="hover-state">
+					<div class="folio-hover">
+						<span class="folio-title">Ski Tip Connector</span><br/>
+						<span class="folio-type">Industrial Design</span>
 					</div>
 				</div>
 			</a>

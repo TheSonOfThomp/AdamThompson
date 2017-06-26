@@ -15,7 +15,7 @@
 
 				<!-- <li class="filter" data-filter=".web">Web</li> -->
 				<!-- <li class="filter" data-filter=".graphics">Graphic Design</li> -->
-				<!-- <li class="filter" data-filter=".industrial">Industrial Design</li> -->
+				<li class="filter" data-filter=".hardware" data-sort="published-date:desc">Hardware</li>
 				<!-- <li class="filter" data-filter=".pm">Product Management</li>  -->
 				<!-- <li class="filter" data-filter=".video">Video Production</li> -->
 				<?php if ($DEBUG)
