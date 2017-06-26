@@ -96,7 +96,7 @@
 		</li>
 
 		<!-- ********** Analog Tuner ********** -->
-		<li class="folio-item electrical hardware" data-feature-rank="" data-published-date="2013-08-01">
+		<li class="folio-item electrical hardware" data-feature-rank="" data-published-date="2014-11-30">
 			<a href="Portfolio/?p=analog-tuner">
 				<img src="includes/portfolio_images/tuner-scope.jpg">
 				<div class="hover-state">
