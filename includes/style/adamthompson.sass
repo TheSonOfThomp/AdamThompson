@@ -652,13 +652,12 @@ section.resume
 				display: inline-block
 				max-width: 90%
 				max-height: 440px
-				width: auto
 				height: auto
 				margin: 0
 
 			iframe
-				width: 90%
-				height: 540px
+				width: 80%
+				height: 440px
 
 			figcaption
 				text-align: center
@@ -666,6 +665,11 @@ section.resume
 				color: $med_grey
 				max-width: 80%
 				margin: 0 10%
+
+			&.images-2
+				img, iframe
+					max-width: 46%
+					padding: 1%
 
 		blockquote
 			border-left: 1px solid $green
@@ -820,51 +824,6 @@ footer
 				background-image: url('../image_assets/social/instagram_dark.png')
 			#soundcloud
 				background-image: url('../image_assets/social/soundcloud_dark.png')
-
-/* ------ HELPER CLASSES ------ */
-.hidden, .hide
-	display: none !important
-.mobile-only
-	display: none
-.container
-	width: 80%
-	margin: 0 10%
-	height: 100%
-.shrinkwrap
-	will-change: width
-	width: intrinsic /* For Safari, see https://developer.mozilla.org/en-US/docs/CSS/width */
-	width: -moz-fit-content
-	width: -webkit-fit-content
-	width: fit-content
-	height: 100%
-	margin: auto
-	@media screen and (min-width: 1160px)
-		min-width: 62rem
-.vertical-center
-	// text-align: center
-	&:before
-		content: ''
-		display: inline-block
-		height: 100%
-		vertical-align: middle
-		margin-right: -0.25em /* Adjusts for spacing */
-.horizontal-center
-	// text-align: center
-	&:before
-		content: ''
-		display: inline-block
-		width: 100%
-		horizontal-align: middle
-		margin-right: -0.25em /* Adjusts for spacing */
-
-.animate
-	-webkit-transition: all 0.3s ease-in-out
-	-moz-transition: all 0.3s ease-in-out
-	transition: all 0.3s ease-in-out
-	-webkit-backface-visibility: hidden
-
-.fixed
-	position: fixed
 
 /* ---------------------- MOBILE ---------------------- */
 @media screen and (max-width: 768px) 
@@ -1070,6 +1029,49 @@ footer
 		width: 40%
 		margin: 0 30%
 
+/* ------ HELPER CLASSES ------ */
+.hidden, .hide
+	display: none !important
+.mobile-only
+	display: none
+.container
+	width: 80%
+	margin: 0 10%
+	height: 100%
+.shrinkwrap
+	will-change: width
+	width: intrinsic /* For Safari, see https://developer.mozilla.org/en-US/docs/CSS/width */
+	width: -moz-fit-content
+	width: -webkit-fit-content
+	width: fit-content
+	height: 100%
+	margin: auto
+	@media screen and (min-width: 1160px)
+		min-width: 62rem
+.vertical-center
+	// text-align: center
+	&:before
+		content: ''
+		display: inline-block
+		height: 100%
+		vertical-align: middle
+		margin-right: -0.25em /* Adjusts for spacing */
+.horizontal-center
+	// text-align: center
+	&:before
+		content: ''
+		display: inline-block
+		width: 100%
+		horizontal-align: middle
+		margin-right: -0.25em /* Adjusts for spacing */
 
+.animate
+	-webkit-transition: all 0.3s ease-in-out
+	-moz-transition: all 0.3s ease-in-out
+	transition: all 0.3s ease-in-out
+	-webkit-backface-visibility: hidden
+
+.fixed
+	position: fixed
 
 

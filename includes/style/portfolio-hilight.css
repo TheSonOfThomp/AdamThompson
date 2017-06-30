@@ -168,6 +168,10 @@ header.main-header {
 	margin: 0;
 }
 
+.folio_image .images-2 img {
+	max-width: 50%;
+}
+
 .folio_image iframe {
 	width: 90%;
 	height: 540px;
