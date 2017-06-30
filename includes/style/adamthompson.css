@@ -558,6 +558,7 @@ section.resume {
     width: 100%;
     height: auto;
     margin: 0;
+    padding: 12px 0;
     text-align: center; }
     .portfolio-page .gallery-content .folio_image img {
       position: relative;

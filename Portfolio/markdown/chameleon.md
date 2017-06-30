@@ -4,9 +4,10 @@ Chameleon has won several prizes, including SYDE People's Choice, and the Norman
 
 I was the product lead in this project, and played a pivotal role in all aspects of product design including defining requirements & benchmarks, designing the attenuation system, measurement circuit, and control logic, and implementing standard test procedures and analyzing the results. 
 
+<!-- Everything in this article was done by me, with input from other group members where noted. -->
 
 
-<figure class='folio_image' id='img1'>
+<figure class='folio_image' id='cover-image'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/chameleon/chameleon-front-render-with-logo.jpg'>
 	</a>
@@ -53,7 +54,7 @@ The first iteration of the control logic attempted to create a pseudo-PID contro
 
 The second controller iteration did away with continuously variable attenuation, and focused on trying to attenuate, or not attenuate. This worked better, but the noise of the motor still influenced the sound inside the cup. Also, if reaction time was a priority, this design had too much inertia to close in a reasonable time frame.
 
-<figure class='folio_image video' id='video1'>
+<figure class='folio_image video' id='first-proto-video'>
 	<iframe src="https://www.youtube.com/embed/yUvlpVK7ays" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	<figcaption>The first, rotating disk prototype</figcaption>
 </figure>
@@ -64,7 +65,7 @@ Although this prototype was noisy and slow, it did afford some attenuation in th
 
 Our second concept was an evolution of the first, with a new actuation method. Since the first prototype was slow to react, I decided to replace the motor with a solenoid. I found out that using a solenoid to get a disk to rotate is harder than it sounds. 
 
-<figure class='folio_image images-2' id='img2'>
+<figure class='folio_image images-2' id='piston'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/chameleon/piston-math.jpg'>
 		<img src='../includes/portfolio_images/chameleon/piston-render.png'>
@@ -75,7 +76,7 @@ After a bunch of math and searching for a solenoid with a long enough stroke len
 
 The problem with this design though was that it could not achive both requirements of response time, and _fail safely_ simultaneously. By setting the default position of the disk, we could achieve fast response, but would sacrifice the fail safe. The solenoid here was also very heavy, and would very quickly put us over our weight restriction. We had to come up with a better design. 
  
- <figure class='folio_image video' id='video1'>
+ <figure class='folio_image video' id='solenoid-video'>
 	<iframe src="https://www.youtube.com/embed/GW6wDcbiR3k?list=PLnUG-U16QXpsAc74SRDsiHT3LXUmkgTNe" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	<figcaption>Solenoid-actuated Piston Design</figcaption>
 </figure>
@@ -87,7 +88,7 @@ The problem with this design though was that it could not achive both requiremen
 Around the same time as we were evaluating the solenoid-piston actuator, we prepared an experiment to determine what attenuator was actually the best. We had taken all our design ideas, and evaluated them based on our criteria using a decision matrix. We took the top three, and ran them through a rough a qualitative acoustic test. We played loud (but not harmful) noise, and asked participants to evaluate the attenuation heard for each design. While this method was certainly not scientific and has its biases, it was a quick process that provided interresting data. 
 
 
-<figure class='folio_image' id='img3'>
+<figure class='folio_image' id='three-attenuators'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/chameleon/3-attenuators.png'>
 	</a>
@@ -114,7 +115,7 @@ From only a few of these tests, it became clear that the "Pie slices" design (us
 
 While looking at the results of these tests, I came across research that was able to quantify the trends we were seeing. It suggested that the majority of attenuation variability essentially comes from closing small slit leaks, and variability decays exponentially as the aperture size increases [^Trompette]. That makes sense intuitively—if you think of closing a window to block noise from a party outside, there is no noticable difference in noise level until the window is nearly completely closed. In order to achieve useful continuously variable attenuation, we would need incredibly accurate control of an actuator in the first few degrees of rotation. 
 
-<figure class='folio_image' id='img3'>
+<figure class='folio_image' id='trompette-graph'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/chameleon/trompette-graph.png'>
 	</a>
@@ -134,7 +135,7 @@ Before we did away with the "Pie-slices" design I had been working on a lighter 
 
 The next actuator idea combined the electromagnet research I had been doing, with problems we had with the plug design. The design had small permanent magnets embedded into a plug, and electromagnets into the outer shell. By changing the polarity of the electromagnets, we should be able to get the plug to move linearly in and out. I made a small electromagnet, and was able to get a small magnet to move back and forth. 
 
- <figure class='folio_image video' id='video1'>
+ <figure class='folio_image video' id='knex'>
 	<iframe src="https://www.youtube.com/embed/P_6gGJK-_j8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	<figcaption></figcaption>
 </figure>
@@ -145,7 +146,7 @@ On paper, 4 electromagnets using a finishing nail as a core should be able to su
 
 One of our supervisors suggested late that afternoon that instead of using 4 small electromagnets we should use _one_, with a magnet in the middle since the magnetic field is stronger within the coil. I made a short coil and tested it out. Unfortunately, I had to push over 3 amps through the coil to get it to apply any force to the magnet.
 
-<figure class='folio_image' id='img3'>
+<figure class='folio_image' id='major-hack'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/chameleon/full-coil-emag.jpg'>
 	</a>
@@ -154,7 +155,7 @@ One of our supervisors suggested late that afternoon that instead of using 4 sma
 
 About to give up for the day, I gave it one more shot and taped the whole roll of magnet wire to the ear-cup. That worked really well, and attracted the plug with the magnet on it.
 
- <figure class='folio_image video' id='video1'>
+ <figure class='folio_image video' id='major-hack-video'>
 	<iframe src="https://www.youtube.com/embed/0WVfceDRWGI" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	<figcaption></figcaption>
 </figure>
@@ -164,7 +165,7 @@ About to give up for the day, I gave it one more shot and taped the whole roll o
 
 Inspiration came later that night for the next actuator idea while listening to music. The drivers in my headphones provided the same kind of motion I was trying to get—linear motion of a disk. I found an old speaker in the workshop and took it apart to observe how it worked. I was under the impression that it was the permanent magnet that moved in a loudspeaker, but I saw that it was actually the coil. This makes sense since the coil should have significantly less inertia, and would be easier to move at high frequencies.
 
-<figure class='folio_image' id='img3'>
+<figure class='folio_image' id='disassembled-speaker'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/chameleon/disassembled-speaker.jpg'>
 	</a>
@@ -173,15 +174,72 @@ Inspiration came later that night for the next actuator idea while listening to 
 
 After taking apart the speaker and understanding its operation, I attached our 3D printed pug to the end of the driver. The plug doesn’t have too much inertia and the driver can still push the plug. I hacked together a system to hold the speaker in the cup, and showed the plug creating a seal against the cup and pulling back.
 
- <figure class='folio_image video images-2' id='video1'>
+ <figure class='folio_image video images-2' id='speaker-video'>
 	<iframe src="https://www.youtube.com/embed/BedHsQAP5lA" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	<iframe src="https://www.youtube.com/embed/3MwTPf00DdE" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	<figcaption></figcaption>
 </figure>
 
-## Controller
+## Some Electronics
 
-Now that we have a proof-of-concept attenuator/actuator design, we'll change the subject a little, and look at the controller design. 
+Now that we have a proof-of-concept attenuator/actuator design, we'll change the subject a little, and look at the electronics, and controller design.
+ 
+
+#### Signal Measurement & Control Logic
+
+We had bought a Teensy as a faster, more powerful replacement to the Arduino UNO. The first step was to make sure the Teensy could read the incoming signal from the microphone. Powering the Teensy from a laptop, the mic from the bench supply, we successfully got an `analogRead` again. 
+
+The initial measurement circuit used an analog envelope filter to measure the peak noise level. This resulted in an exponential decay effect, and could result in the device behaving incorrectly. It would be better to use a sample-and-hold algorithm on the microcontroller itself.  The new algorithm would continously sample the audio, and hold the peak value. If the peak value ever exceeded the noise threshold, we would send a `close` command to the driver. If the peak level dropped below the threshold after a given safe window, the device would `open` again. As a heuristic, we selected a 5-second window as a slow-enough noise rate to avoid frequent opening and closing of the device—though this could be changed to suit a given scenario. Controller code can be found on [GitHub](https://github.com/dsschwarz/madd.audio/blob/master/ChameleonController/ChameleonController.ino)
+
+
+#### Driver Circuit
+
+Back when the plan was to use a DC motor, I had found some optical relay ICs in the workshop, and put together an [H-bridge](https://en.wikipedia.org/wiki/H_bridge). The new design was similar, and could make use of the same circuit to change the polarity. So, by sending 2 bits (`digitalWrite`) from the Teensy, we could quite easily change the polarity of the electromagnet. We discussed using a proper H-bridge IC, but these were physically too large, and were overkill for the task at hand.
+
+I spent some time in the lab testing this circuit, and making sure it would work with our speaker driver. The only real issue with the relay ciruit design was the potential to draw too much current since they were only rated to 500mA. I placed an 8Ω current-limiting resistor in the circuit to prevent this.
+
+#### Power Supply
+
+We now had to figure out how we were to provide power to two microphones, two speaker drivers, and microcontroller all at once. Not wanting to deal with power supply noise, we decided to use two 3.7V Li-Po batteries—one to power the Teensy and microphones, and the other to power the drivers. 
+
+A bug showed up in the measurement circuit once we made the switch to the new batteries, and the Teensy was no longer reading the signal from the microphone. I tested each part of that circuit, and realized that the op-amps we were using (LM833) didn’t have a very high output swing, and could not operate at lower than 5V differential. Luckily, we had low power amps (MCP6004) in the workshop, whose data sheets signified that they would do the job well with 3.7 V. With a lower voltage now the -6dB gain of the filter dropped the signal again by quite a fair amount, so I put in a second amplifier to bring the signal up again. This seems to have solved the issue, and the Teensy is now reading the signal fine.
+
+<figure class='folio_image' id='full-circuit-test'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/chameleon/full-circuit-test.jpg'>
+	</a>
+	<figcaption>A prototype of the full circuit, including measurement, control logic, and drivers</figcaption>
+</figure>
+
+The full circuit diagram can be found on [CircuitLab.com](https://www.circuitlab.com/circuit/55bkhx9ncr24/chameleon-full-v2/).
+
+## Speaker-driver Prototype
+
+Unfortunately, we discovered that the wires were very thin on most speakers, and it was incredibly hard to attach any leads to the coils. There was one model OK to work with, so we decided we would use that model for our prototype once we got the driver working. Thanks to Mike's skill in the machine shop, we were able to get a "standard" form of the speaker driver.
+
+Now that we knew what we were dealing with, I tweaked the CAD design, and also designed a brace to hold the speaker in place. Once I was satisfied with this design, I sent it to the printer.
+
+<figure class='folio_image images-2' id='speaker-driver-print1'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/chameleon/machined-driver.jpg'>
+		<img src='../includes/portfolio_images/chameleon/speaker-driver-print1.jpg'>
+	</a>
+	<figcaption>We had to cut the brace to make it fit. I changed the CAD specs for the next print</figcaption>
+</figure>
+
+Taking inspiration from one of our previous concepts, we put some small permanent magnets in the plug and ear-cup to make sure the device would be closed by default.
+
+We now had a design that we were happy with, and were sure would work. We were also pretty tight on time before we had to get test data, and sent two ear-cups to the printer. 
+
+Sadly, the model was placed too close to the edge of the print bed, and ended up fusing to the support material! We contacted a [professional machine shop in town](http://www.vdzmade.ca), and got a rush job. 
+
+<figure class='folio_image images-2' id='dumb-printer'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/chameleon/dumb-printer.jpg'>
+		<img src='../includes/portfolio_images/chameleon/good-printer.jpg'>
+	</a>
+	<figcaption>The print fused with the support material! We had to go to a professional print shop.</figcaption>
+</figure>
 
 --- 
 More details coming soon
