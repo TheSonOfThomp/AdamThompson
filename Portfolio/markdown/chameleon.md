@@ -1,6 +1,10 @@
-What if your ears could blink? Chameleon is a variable hearing protection device that changes its attenuation according to the environment. It is targeted towards users in periodically loud environments—environments with significant noise exposure, but with periods of quiet—such as construction sites, factories and machine shops. 
+What if your ears could blink? Chameleon is a variable hearing protection device that changes its attenuation according to the environment. Chameleon is targeted towards users in periodically loud environments—environments with significant noise exposure, but with periods of quiet where communication is key, such as construction sites, factories and machine shops. 
+
+Chameleon has won several prizes, including SYDE People's Choice, and the Norman Esch Entrepreneurship Award.
 
 I was the product lead in this project, and played a pivotal role in all aspects of product design including defining requirements & benchmarks, designing the attenuation system, measurement circuit, and control logic, and implementing standard test procedures and analyzing the results. 
+
+
 
 <figure class='folio_image' id='img1'>
 	<a target='_blank'>
@@ -36,15 +40,153 @@ From all our research we were able to define six major areas that the product sh
 
 ## Measurement Circuit
 
-Our first prototypes were of a measurement circuit—a system to calculate the volume in dB(A) from the mic's signal. The design of this piece was based on that of a [standard noise meter](youtube.com). In order to have a useful dB value which represents loudness as a human ear might hear it, the incoming sound signal is put through a band-pass filter called an [A-weight filter](wikipedia.org/A_weight_filter). I took a circuit design I found online for this filter, and simulated it to verify its behaviour before ordering parts. The filter behaved as expected, though it did have a constant amplitude drop of about -6dB. This is not a problem since the signal must be amplified before passing through the filter in the first place. This amplified and filtered signal is then input into the `analog read` pin of an Arduino Uno. Since the positive and negative gains of the analog filter and amplifiers are known, we can easily calculate the voltage at the output of the microphone. Since the sensitivity of the microphone is given, the incoming noise level in dB(A) can be caculated. This took a little calibration since the component values and mic input voltage weren't precise. In the end we were able to get a relatively accurate measurement of the noise level reaching the microphone (verified using the app NoiSee).
+Our first prototypes were of a measurement circuit—a system to calculate the volume in dB(A) from the mic's signal. The design of this piece was based on that of a [standard noise meter](youtube.com). In order to have a useful dB value which represents loudness as a human ear might hear it, the incoming sound signal is put through a band-pass filter called an [A-weight filter](wikipedia.org/A_weight_filter). I took a circuit design I found online for this filter, and simulated it to verify its behaviour before ordering parts. The filter behaved as expected, though it did have a constant amplitude drop of about -6dB. This is not a problem since the signal must be amplified before passing through the filter in the first place. This amplified and filtered signal is then input into the `analog read` pin of an Arduino Uno. Since the positive and negative gains of the analog filter and amplifiers are known, we can easily calculate the voltage at the output of the microphone. Since the sensitivity of the microphone is given, the incoming noise level in dB(A) can be caculated. This took a little calibration since the component values and mic input voltage weren't precise. In the end we were able to get a relatively accurate measurement of the noise level reaching the microphone (verified using an app the CDC recommends, [NoiSee](https://itunes.apple.com/us/app/noisee/id549239949?mt=8)).
 
-I often got questions when demoing the prototype about why the filtering was implemented in analog circuitry as opposed to digitally. The answer for the first prototype is that the Arduino Uno was the only microcontroller we had access to at this point, and that I was more familiar with analog filters vs. digital filters. Once we had decided to implement the final prototype using a Teensy 3.2, which has enough processing power to do this kind of filtering (and I had become more familiar with digital filtering) I decided to keep this section of the design the same so I could spend more time working on parts of the prototype that didn't work yet.
+I often got questions when demo-ing the prototype about why the filtering was implemented in analog circuitry as opposed to digitally. The answer for the first prototype is that the Arduino Uno was the only microcontroller we had access to at this point, and that I was more familiar with analog filters vs. digital filters. Once we had decided to implement the final prototype using a Teensy 3.2, which has enough processing power to do this kind of filtering (and I had become more familiar with digital filtering) I decided to keep this section of the design the same so I could spend more time working on parts of the prototype that didn't work yet. So once the measurement curcuit was designed, not much changed (other than the specific op-amps to deal with new power requirements). 
 
+## First Full Prototype 
+<!-- — Mechanical Design & Control Logic -->
+
+Our first prototype used a standard issue ear-muff, retro-fitted with two aluminum disks. Our desire early on was to have a device which could attenuate at all values between maximum an minimum attenuation. Using a mic placed inside the ear-cup, we measured the volume of noise reaching the ear, and used the Arduino to control the motor.
+
+The first iteration of the control logic attempted to create a pseudo-PID controller using the target sound level as the reference signal, and would rotate the disks until the incoming sound matched the reference. Due to the placement of the motor, the noise of the motor could be heard inside the ear-cup, and made it so the device was always closed. 
+
+The second controller iteration did away with continuously variable attenuation, and focused on trying to attenuate, or not attenuate. This worked better, but the noise of the motor still influenced the sound inside the cup. Also, if reaction time was a priority, this design had too much inertia to close in a reasonable time frame.
+
+<figure class='folio_image video' id='video1'>
+	<iframe src="https://www.youtube.com/embed/yUvlpVK7ays" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<figcaption>The first, rotating disk prototype</figcaption>
+</figure>
+
+Although this prototype was noisy and slow, it did afford some attenuation in the closed position—albeit with some slit leaks—validating our hypothesis of variable attenuation by opening and closing a hole. Our second prototype focused on designing a better attenuator/actuation method, and refining the circuit and controller code. We also spent some time validating attenuation methods, and testing our device.
+
+## Solenoid-Piston Prototype
+
+Our second concept was an evolution of the first, with a new actuation method. Since the first prototype was slow to react, I decided to replace the motor with a solenoid. I found out that using a solenoid to get a disk to rotate is harder than it sounds. 
+
+<figure class='folio_image images-2' id='img2'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/chameleon/piston-math.jpg'>
+		<img src='../includes/portfolio_images/chameleon/piston-render.png'>
+	</a>
+</figure>
+
+After a bunch of math and searching for a solenoid with a long enough stroke length, I finally designed a device that did what we wanted. When the solenoid turned on, the disk would rotate to open. When released, a counterweight would close it—satisfying the need to fail safely. The idea was that using PWM control of the solenoid, we could have a partly open device.
+
+The problem with this design though was that it could not achive both requirements of response time, and _fail safely_ simultaneously. By setting the default position of the disk, we could achieve fast response, but would sacrifice the fail safe. The solenoid here was also very heavy, and would very quickly put us over our weight restriction. We had to come up with a better design. 
+ 
+ <figure class='folio_image video' id='video1'>
+	<iframe src="https://www.youtube.com/embed/GW6wDcbiR3k?list=PLnUG-U16QXpsAc74SRDsiHT3LXUmkgTNe" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<figcaption>Solenoid-actuated Piston Design</figcaption>
+</figure>
+
+
+## A Fork in the Road
+<!-- Acoustic Tests -->
+
+Around the same time as we were evaluating the solenoid-piston actuator, we prepared an experiment to determine what attenuator was actually the best. We had taken all our design ideas, and evaluated them based on our criteria using a decision matrix. We took the top three, and ran them through a rough a qualitative acoustic test. We played loud (but not harmful) noise, and asked participants to evaluate the attenuation heard for each design. While this method was certainly not scientific and has its biases, it was a quick process that provided interresting data. 
+
+
+<figure class='folio_image' id='img3'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/chameleon/3-attenuators.png'>
+	</a>
+	<figcaption>Renders of the 3 Attenuator designs tested</figcaption>
+</figure>
+
+<!-- Table of Attenuator Test results -->
+
+| ATTENUATOR | NOTES |
+| --- | --- |
+| Only Aperture (control) | Not much noticeable attenuation, some slight muffling |
+| Plug | Good Attenuation. Comparable to real HPD |
+| Shutter (closed) | Good Attenuation. Similar to plug |
+| Shutter (open) | No noticeable attenuation. Similar to control |
+| Shutter (partly closed) | No Noticeable attenuation until aperture size was less than a millimetre. Some muffling as aperture got smaller. Reflects research by N. Trompette |
+| Pie-Slices (closed) | Some Attenuation. Seal wasn’t perfectly formed (sizes were misaligned) |
+| Pie-Slices (open) | No Noticeable attenuation. Similar to control |
+| Pie-slices (partly closed) | No Noticeable attenuation until aperture size was less than a millimetre. Similar to partly-closed shutter. |
+
+
+From only a few of these tests, it became clear that the "Pie slices" design (used in the solenoid prototype) was not the greatest performer, nor did the "Shutter" design succeed in achieving variable attenuation.
+
+### Backed by real science
+
+While looking at the results of these tests, I came across research that was able to quantify the trends we were seeing. It suggested that the majority of attenuation variability essentially comes from closing small slit leaks, and variability decays exponentially as the aperture size increases [^Trompette]. That makes sense intuitively—if you think of closing a window to block noise from a party outside, there is no noticable difference in noise level until the window is nearly completely closed. In order to achieve useful continuously variable attenuation, we would need incredibly accurate control of an actuator in the first few degrees of rotation. 
+
+<figure class='folio_image' id='img3'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/chameleon/trompette-graph.png'>
+	</a>
+	<figcaption>Graph showing the relationship between aperture size, and transmission loss. [Trompette et. al.]</figcaption>
+</figure>
+
+Since continuously variable attenuation was not absolutely necessary to the success of the device (and deadlines were approaching), we decided to abandon continuously variable attenuation for a simpler "binary attenuation" design—the best of which was a plug-type design.
+
+
+## Magnets (A New Prototype)
+
+<!-- We needed to come up with a new form of actuation since the solenoid was too heavy, and a new form of attenuation since the rotating disks were not entirely viable according to the acoustic tests. 
+ -->
+One of the reservations I had with a plug design early on was the difficulty we would have actuating it. Getting linear motion likely required a solenoid, and it's not entirely space-efficient to put a solenoid on its side, perpendicular to the head just to get a plug to move in and out. 
+
+Before we did away with the "Pie-slices" design I had been working on a lighter way of actuating that attenuator. Inspired by [this article](http://makezine.com/2015/08/18/3d-print-stepper-motor/), I entertained the idea of building a custom stepper that would be embedded into the ear-cup, and allow a disk to rotate in increments up to a certain angle.
+
+The next actuator idea combined the electromagnet research I had been doing, with problems we had with the plug design. The design had small permanent magnets embedded into a plug, and electromagnets into the outer shell. By changing the polarity of the electromagnets, we should be able to get the plug to move linearly in and out. I made a small electromagnet, and was able to get a small magnet to move back and forth. 
+
+ <figure class='folio_image video' id='video1'>
+	<iframe src="https://www.youtube.com/embed/P_6gGJK-_j8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<figcaption></figcaption>
+</figure>
+
+On paper, 4 electromagnets using a finishing nail as a core should be able to successfully push & pull the plug. After designing and printing a test cup however, we had a significant amount of trouble actually making the electromagnets even close to the designed size. 
+
+<!-- Our first try was to freely wrap the wire around a nail. This didn’t really work since there were no bounds and the coil would end up too long. Next we put a washer/nut on the nail, and spaced them correctly. The coil was wound between the barriers, then we sanded away the head of the nail, cut the other end to get the washer off, and cut it to size. This did not work great since the heat from sanding caused the enamel coating to melt, creating a short on the core. We then tried winding in the same way, but then slipping it onto a pre-cut nail as a core. This works in theory, but there were burrs on the cut nail, which scratched the enamel coating, again causing a short. If we had to make 4 of these, we would be in for a rough time. And we hadn’t even proven the concept yet. -->
+
+One of our supervisors suggested late that afternoon that instead of using 4 small electromagnets we should use _one_, with a magnet in the middle since the magnetic field is stronger within the coil. I made a short coil and tested it out. Unfortunately, I had to push over 3 amps through the coil to get it to apply any force to the magnet.
+
+<figure class='folio_image' id='img3'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/chameleon/full-coil-emag.jpg'>
+	</a>
+	<figcaption>Major Hack Alert! An entire spool of electromagnet wire strapped to our prototype</figcaption>
+</figure>
+
+About to give up for the day, I gave it one more shot and taped the whole roll of magnet wire to the ear-cup. That worked really well, and attracted the plug with the magnet on it.
+
+ <figure class='folio_image video' id='video1'>
+	<iframe src="https://www.youtube.com/embed/0WVfceDRWGI" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<figcaption></figcaption>
+</figure>
+
+## More magnets! 
+
+
+Inspiration came later that night for the next actuator idea while listening to music. The drivers in my headphones provided the same kind of motion I was trying to get—linear motion of a disk. I found an old speaker in the workshop and took it apart to observe how it worked. I was under the impression that it was the permanent magnet that moved in a loudspeaker, but I saw that it was actually the coil. This makes sense since the coil should have significantly less inertia, and would be easier to move at high frequencies.
+
+<figure class='folio_image' id='img3'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/chameleon/disassembled-speaker.jpg'>
+	</a>
+	<figcaption>A disassembled speaker</figcaption>
+</figure>
+
+After taking apart the speaker and understanding its operation, I attached our 3D printed pug to the end of the driver. The plug doesn’t have too much inertia and the driver can still push the plug. I hacked together a system to hold the speaker in the cup, and showed the plug creating a seal against the cup and pulling back.
+
+ <figure class='folio_image video images-2' id='video1'>
+	<iframe src="https://www.youtube.com/embed/BedHsQAP5lA" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<iframe src="https://www.youtube.com/embed/3MwTPf00DdE" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<figcaption></figcaption>
+</figure>
+
+## Controller
+
+Now that we have a proof-of-concept attenuator/actuator design, we'll change the subject a little, and look at the controller design. 
+
+--- 
 More details coming soon
 
 <!-- 
-
-## Control Logic
 
 ## Mechanical Design
 
@@ -63,3 +205,5 @@ More details coming soon
 [^Acton]: Acton, W. J., "Effects of Ear Protection on Communication", The Annals Occupational Hygeine, vol. 10, pp. 423-429 (1967)
 
 [^Berger]: E. H. Berger, "The Effects of Hearing Protectors on Auditory Communications", Aearo Company (1979)
+
+[^Trompette]: Trompette, N., Barbry, J.L., Sgard, F., Nelisse, H., "Sound transmission loss of rectangular and slit-shaped apertures: Experimental results and correlation with a modal model".  The Journal of the Acoustical Society of America, vol. 125, no. 31 (2009) Available: http://asa.scitation.org/doi/full/10.1121/1.3003084
