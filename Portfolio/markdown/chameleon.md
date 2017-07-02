@@ -14,9 +14,17 @@ I was the product lead in this project, and played a pivotal role in all aspects
 <figcaption></figcaption>
 </figure>
 
-## User Requirements & Benchmarks
+## Getting Started
 
-To determine whether we were solving a real problem, we interviewed and surveyed over a dozen potential users working in the targeted environments. Many users admitted openly that they didn't regularly use hearing protection—even when they knew they should—because it was inconvenient and uncomfortable. If they were wearing hearing protection and needed to talk to a coworker, they would need to take the hearing protector off. Because of this tediousness, many people wouldn't put on hearing protection during the loud periods between conversation. Other reasons cited were because of comfort—standard hearing protectors can put a lot of pressure on the head and feel isolating, while earplugs can be hard to insert, especially when wearing work gloves. Findings from these interviews were corroborated by a number of academic sources, which study the comfort, and social implications of hearing protection [^Hsu] [^Park] [^Stephenson&Stephenson] [^Gower] [^Acton] [^Berger].
+The bulk of the first term (4 months) of this project was spent refining our problem, researching user requirements, and learing about acoustics phyiscs. Though we started the Final-Year Design Project (FYDP) in September 2016, we didn't arrive at a reasonable problem statement until early October. This time was spent researching the audio and health spaces, and meeeting with experts like audiologists, acoustics professors, and audio electronics engineers to come up with a realistic and resolvable design problem statement:
+
+> Workers in variably loud environments, where communication is key, often do not wear hearing protection in order to more easily communicate, and to avoid the tedium of constant removal and re-application. 
+
+> We will design a hearing protection device to dynamically and effectively attenuate relevant moderate-to-loud noise as it occurs, and to not attenuate significantly at normal ambient sound levels.
+
+## User Requirements & Benchmarks
+ 
+To validate that we were solving a real problem, we interviewed and surveyed over a dozen potential users working in the targeted environments. Many users admitted openly that they didn't regularly use hearing protection—even when they knew they should—because it was inconvenient and uncomfortable. If they were wearing hearing protection and needed to talk to a coworker, they would need to take the hearing protector off. Because of this tediousness, many people wouldn't put on hearing protection during the loud periods between conversation. Other reasons cited were because of comfort—standard hearing protectors can put a lot of pressure on the head and feel isolating, while earplugs can be hard to insert, especially when wearing work gloves. Findings from these interviews were corroborated by a number of academic sources, which study the comfort, and social implications of hearing protection [^Hsu] [^Park] [^Stephenson&Stephenson] [^Gower] [^Acton] [^Berger].
 
 From all our research we were able to define six major areas that the product should perform in, and user requirements in each. We took these categories and set benchmarks based on government standards, the behaviour of other devices and other research. Durability was also an area of concern throughout the design process, given the use environment, but it was an oversight that we never explicitly defined durability benchmarks.
 
@@ -41,7 +49,48 @@ From all our research we were able to define six major areas that the product sh
 
 ## Measurement Circuit
 
-Our first prototypes were of a measurement circuit—a system to calculate the volume in dB(A) from the mic's signal. The design of this piece was based on that of a [standard noise meter](youtube.com). In order to have a useful dB value which represents loudness as a human ear might hear it, the incoming sound signal is put through a band-pass filter called an [A-weight filter](wikipedia.org/A_weight_filter). I took a circuit design I found online for this filter, and simulated it to verify its behaviour before ordering parts. The filter behaved as expected, though it did have a constant amplitude drop of about -6dB. This is not a problem since the signal must be amplified before passing through the filter in the first place. This amplified and filtered signal is then input into the `analog read` pin of an Arduino Uno. Since the positive and negative gains of the analog filter and amplifiers are known, we can easily calculate the voltage at the output of the microphone. Since the sensitivity of the microphone is given, the incoming noise level in dB(A) can be caculated. This took a little calibration since the component values and mic input voltage weren't precise. In the end we were able to get a relatively accurate measurement of the noise level reaching the microphone (verified using an app the CDC recommends, [NoiSee](https://itunes.apple.com/us/app/noisee/id549239949?mt=8)).
+Our first prototypes were of the measurement circuit—a system to calculate the Sound Pressure Level (SPL) in A-weighted decibels (dBA) from the mic's signal. The design of this piece was based on that of a [standard noise meter](https://www.youtube.com/watch?v=Gg8po2AM8PQ). In order to have a useful dB value that represents SPL as a human ear might hear it, the incoming sound signal is put through a special band-pass filter, known as an [A-weight filter](https://en.wikipedia.org/wiki/A-weighting). 
+
+<figure class='folio_image' id='cover-image'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/chameleon/Acoustic_weighting_curves.png'>
+	</a>
+<figcaption>A graph of the A-, B-, C- and D-weightings across the frequency range 10 Hz – 20 kHz (Wikipedia)</figcaption>
+</figure>
+
+I took a circuit I found online for this filter, double checked it had the right poles/zeroes, and simulated it in CircuitLab.com to verify its behaviour. The filter worked as expected, though it did have a constant negative gain of about -6dB. This is not a problem since the signal would need to be amplified before passing through the filter in the first place. 
+
+Next, in order to find the _amplitude_ of the incoming signal, I added a peak detector to the circuit. This removed the phase information, and left us with a DC signal representing the peak volume in the environment. 
+
+
+<figure class='folio_image' id='cover-image'>
+	<a target='_blank' href="https://www.circuitlab.com/circuit/sq7f7bt8tg4q/fydp-signal-analysis/">
+		<img src="https://www.circuitlab.com/circuit/sq7f7bt8tg4q/screenshot/540x405/"/>
+	</a>
+<figcaption>A Schematic or the original measurement circuit. <a href="https://www.circuitlab.com/circuit/sq7f7bt8tg4q/fydp-signal-analysis/">View on CircuitLab.com</a></figcaption>
+</figure>
+
+
+This DC signal was then input into an `analogRead` pin of an Arduino UNO. Since all the gains in the circuit are known, we can easily calculate the voltage at the output of the microphone. Since the sensitivity of the microphone is given, the incoming noise level in dB(A) can be caculated like so: 
+
+```Arduino
+// Microphone Calibration
+const double p0 = 0.00002; // Reference Pressure (Pa)
+const double sens = 1000 * pow(10,(-53/20)); // Microphone sensitivity in mV/Pa 
+											// convert sensitivity from dBV/Pa to mV/Pa
+const double A_filt = 0.502; // A-filter gain
+const double R1 = 4658; // Amplifier Resistor (Ohms)
+const double R2 = 98600; // Amplifier Resistor (Ohms)
+const double G = 1 + R2/R1; // Amplifier gain
+const double S_total = p0*sens*A_filt*2*G; // Overall Gain
+...
+vin = getInput(micPin);
+dBSPL = 20*log10(vin/S_total);
+```
+
+This took a little tweaking since the component values and mic input voltage weren't precise. In the end we were able to get a relatively accurate measurement of the noise level reaching the microphone which we verified the SPL this using an app the CDC recommends, [NoiSee](https://itunes.apple.com/us/app/noisee/id549239949?mt=8).
+
+---
 
 I often got questions when demo-ing the prototype about why the filtering was implemented in analog circuitry as opposed to digitally. The answer for the first prototype is that the Arduino Uno was the only microcontroller we had access to at this point, and that I was more familiar with analog filters vs. digital filters. Once we had decided to implement the final prototype using a Teensy 3.2, which has enough processing power to do this kind of filtering (and I had become more familiar with digital filtering) I decided to keep this section of the design the same so I could spend more time working on parts of the prototype that didn't work yet. So once the measurement curcuit was designed, not much changed (other than the specific op-amps to deal with new power requirements). 
 
@@ -250,7 +299,7 @@ More details coming soon
 
 ## Comfort and Ergonomics -->
 
-
+<!-- https://docs.google.com/document/d/1XtTZvYhVj5v4aW86qTLLmxoaYj2D98W86wKhhCvCnVU/pub -->
 
 [^Hsu]: Hsu, Yeh-Liang et al. "Comfort Evaluation Of Hearing Protection", International Journal of Industrial Ergonomics, vol.33, pp. 543-551 (2004)
 
