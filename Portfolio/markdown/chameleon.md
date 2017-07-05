@@ -24,9 +24,11 @@ The bulk of the first term (4 months) of this project was spent refining our pro
 
 ## User Requirements & Benchmarks
  
-To validate that we were solving a real problem, we interviewed and surveyed over a dozen potential users working in the targeted environments. Many users admitted openly that they didn't regularly use hearing protection—even when they knew they should—because it was inconvenient and uncomfortable. If they were wearing hearing protection and needed to talk to a coworker, they would need to take the hearing protector off. Because of this tediousness, many people wouldn't put on hearing protection during the loud periods between conversation. Other reasons cited were because of comfort—standard hearing protectors can put a lot of pressure on the head and feel isolating, while earplugs can be hard to insert, especially when wearing work gloves. Findings from these interviews were corroborated by a number of academic sources, which study the comfort, and social implications of hearing protection [^Hsu] [^Park] [^Stephenson&Stephenson] [^Gower] [^Acton] [^Berger].
+To validate that we were solving a real problem, we interviewed and surveyed over a dozen potential users working in the target environments. Many users admitted openly that they didn't regularly use hearing protection—even when they knew they should—because it was inconvenient and uncomfortable. If they were wearing hearing protection and needed to talk to a coworker, they would need to take the hearing protector off. Because of this tedium, many people wouldn't put on hearing protection during the loud periods between conversation. 
 
-From all our research we were able to define six major areas that the product should perform in, and user requirements in each. We took these categories and set benchmarks based on government standards, the behaviour of other devices and other research. Durability was also an area of concern throughout the design process, given the use environment, but it was an oversight that we never explicitly defined durability benchmarks.
+Other reasons cited were because of comfort—standard hearing protectors can put a lot of pressure on the head and feel isolating, while earplugs can be hard to insert, especially when wearing work gloves. Findings from these interviews were corroborated by a number of academic sources, which study the comfort, and social aspects of hearing protection [^Hsu] [^Park] [^Stephenson&Stephenson] [^Gower] [^Acton] [^Berger].
+
+From all our research we were able to define six major areas that the product should perform in, and user requirements in each. We took these categories and set benchmarks based on government standards, the behaviour of other devices and other research.
 
 <table>
 <thead><tr><th>Product Attribute</th><th>User Requirement</th><th>Metric</th><th>Unit</th><th>Min</th><th>Target</th><th>Max</th></tr></thead><tbody>
@@ -44,8 +46,10 @@ From all our research we were able to define six major areas that the product sh
  <tr><td>Cost</td><td>Should be competitively priced relative to similar products</td><td>Cost of Device</td><td>$</td><td> - </td><td>50</td><td>300</td></tr>
  <tr><td>&nbsp;</td><td>Should function for an entire workday</td><td>Operational time</td><td>Hours</td><td>8</td><td>12</td><td> - </td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>Power Consumption</td><td>Watts</td><td>0</td><td> - </td><td>1.85</td></tr>
- <tr><td>Measurement Accuracy</td><td>Should accurately measure noise level</td><td>Measurement Error at 4000Hz</td><td>dBSPL</td><td>0</td><td><3</td><td>3</td></tr>
+ <tr><td>Measurement Accuracy</td><td>Should accurately measure noise level</td><td>Measurement Error at 4kHz</td><td>dBSPL</td><td>0</td><td>-</td><td>3</td></tr>
 </tbody></table>
+
+Durability was also an area of concern throughout the design process, given the use environment, but it was an oversight that we never explicitly defined durability benchmarks.
 
 ## Measurement Circuit
 
@@ -84,8 +88,8 @@ const double R2 = 98600; // Amplifier Resistor (Ohms)
 const double G = 1 + R2/R1; // Amplifier gain
 const double S_total = p0*sens*A_filt*2*G; // Overall Gain
 ...
-vin = getInput(micPin);
-dBSPL = 20*log10(vin/S_total);
+double vin = getInput(micPin);
+double dBSPL = 20*log10(vin/S_total);
 ```
 
 This took a little tweaking since the component values and mic input voltage weren't precise. In the end we were able to get a relatively accurate measurement of the noise level reaching the microphone which we verified the SPL this using an app the CDC recommends, [NoiSee](https://itunes.apple.com/us/app/noisee/id549239949?mt=8).
@@ -97,18 +101,18 @@ I often got questions when demo-ing the prototype about why the filtering was im
 ## First Full Prototype 
 <!-- — Mechanical Design & Control Logic -->
 
-Our first prototype used a standard issue ear-muff, retro-fitted with two aluminum disks. Our desire early on was to have a device which could attenuate at all values between maximum an minimum attenuation. Using a mic placed inside the ear-cup, we measured the volume of noise reaching the ear, and used the Arduino to control the motor.
+Our first prototype used a standard issue ear-muff, retro-fitted with two aluminum disks. Our goal early on was to make a device which could attenuate at _all_ values between maximum an minimum attenuation. This could hypothetically be achieved by rotating the disks, and aligning them to alow enough sound to pass through. Using a mic placed inside the ear-cup, we measured the SPL reaching the ear, and used the Arduino to control a motor and rotate the top disk.
 
-The first iteration of the control logic attempted to create a pseudo-PID controller using the target sound level as the reference signal, and would rotate the disks until the incoming sound matched the reference. Due to the placement of the motor, the noise of the motor could be heard inside the ear-cup, and made it so the device was always closed. 
+The first iteration of the control logic attempted to create a pseudo-PID controller using the target SPL as the reference signal, and would rotate the disks until the incoming SPL matched the reference. Due to the placement of the motor though, the noise of the motor could be heard inside the ear-cup, and made it so the device would never find an equilibrium point. 
 
-The second controller iteration did away with continuously variable attenuation, and focused on trying to attenuate, or not attenuate. This worked better, but the noise of the motor still influenced the sound inside the cup. Also, if reaction time was a priority, this design had too much inertia to close in a reasonable time frame.
+The second controller iteration did away with continuously variable attenuation, and focused on trying to either attenuate, or not attenuate. This worked better, but the noise of the motor still influenced the sound inside the cup. Because of this, we had to write a line in the controller to ignore inputs immediately after openning for the device to work properly. Also, since reaction time was a priority, this design had too much inertia to close in a reasonable time frame.
 
 <figure class='folio_image video' id='first-proto-video'>
 	<iframe src="https://www.youtube.com/embed/yUvlpVK7ays" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	<figcaption>The first, rotating disk prototype</figcaption>
 </figure>
 
-Although this prototype was noisy and slow, it did afford some attenuation in the closed position—albeit with some slit leaks—validating our hypothesis of variable attenuation by opening and closing a hole. Our second prototype focused on designing a better attenuator/actuation method, and refining the circuit and controller code. We also spent some time validating attenuation methods, and testing our device.
+Although this prototype was noisy and slow, it did afford some attenuation in the closed position—albeit with some slit leaks—validating our hypothesis of variable attenuation by opening and closing a hole. Our second prototype focused on designing a better attenuator/actuation method, and refining the circuit and controller code. We also spent some time validating different attenuation methods, and testing the device.
 
 ## Solenoid-Piston Prototype
 
@@ -134,7 +138,7 @@ The problem with this design though was that it could not achive both requiremen
 ## A Fork in the Road
 <!-- Acoustic Tests -->
 
-Around the same time as we were evaluating the solenoid-piston actuator, we prepared an experiment to determine what attenuator was actually the best. We had taken all our design ideas, and evaluated them based on our criteria using a decision matrix. We took the top three, and ran them through a rough a qualitative acoustic test. We played loud (but not harmful) noise, and asked participants to evaluate the attenuation heard for each design. While this method was certainly not scientific and has its biases, it was a quick process that provided interresting data. 
+Around the same time as we were evaluating the solenoid-piston actuator, we prepared an experiment to determine what attenuator was actually the best. We had taken all our design ideas, and evaluated them based on our criteria using a decision matrix. We took the top three, and ran them through a rough a qualitative acoustic test. We retrofitted these designs into an ear-muff, and played loud (but not harmful) noise. We then and asked participants to evaluate the attenuation heard for each design. While this method was not entirely scientific, it was a quick process that provided interresting data. 
 
 
 <figure class='folio_image' id='three-attenuators'>
@@ -149,7 +153,7 @@ Around the same time as we were evaluating the solenoid-piston actuator, we prep
 | ATTENUATOR | NOTES |
 | --- | --- |
 | Only Aperture (control) | Not much noticeable attenuation, some slight muffling |
-| Plug | Good Attenuation. Comparable to real HPD |
+| Solid Plug | Good Attenuation. Comparable to real HPD |
 | Shutter (closed) | Good Attenuation. Similar to plug |
 | Shutter (open) | No noticeable attenuation. Similar to control |
 | Shutter (partly closed) | No Noticeable attenuation until aperture size was less than a millimetre. Some muffling as aperture got smaller. Reflects research by N. Trompette |
@@ -162,13 +166,15 @@ From only a few of these tests, it became clear that the "Pie slices" design (us
 
 ### Backed by real science
 
-While looking at the results of these tests, I came across research that was able to quantify the trends we were seeing. It suggested that the majority of attenuation variability essentially comes from closing small slit leaks, and variability decays exponentially as the aperture size increases [^Trompette]. That makes sense intuitively—if you think of closing a window to block noise from a party outside, there is no noticable difference in noise level until the window is nearly completely closed. In order to achieve useful continuously variable attenuation, we would need incredibly accurate control of an actuator in the first few degrees of rotation. 
+While looking at the results of these tests, I came across research that was able to quantify the trends we were seeing. It suggested that the majority of attenuation variability essentially comes from closing small slit leaks, and variability decays exponentially as the aperture size increases [^Trompette]. 
+
+That makes sense intuitively—take the analogy of closing a window to block noise from a party outside. There is no noticable difference in noise level until the window is nearly completely closed. In order to achieve useful continuously variable attenuation, we would need incredibly accurate control of an actuator in the first few degrees of rotation. 
 
 <figure class='folio_image' id='trompette-graph'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/chameleon/trompette-graph.png'>
 	</a>
-	<figcaption>Graph showing the relationship between aperture size, and transmission loss. [Trompette et. al.]</figcaption>
+	<figcaption>Graph showing the relationship between aperture size, and transmission loss. (Trompette et. al.)</figcaption>
 </figure>
 
 Since continuously variable attenuation was not absolutely necessary to the success of the device (and deadlines were approaching), we decided to abandon continuously variable attenuation for a simpler "binary attenuation" design—the best of which was a plug-type design.
@@ -178,18 +184,26 @@ Since continuously variable attenuation was not absolutely necessary to the succ
 
 <!-- We needed to come up with a new form of actuation since the solenoid was too heavy, and a new form of attenuation since the rotating disks were not entirely viable according to the acoustic tests. 
  -->
-One of the reservations I had with a plug design early on was the difficulty we would have actuating it. Getting linear motion likely required a solenoid, and it's not entirely space-efficient to put a solenoid on its side, perpendicular to the head just to get a plug to move in and out. 
+One of the reservations I had with a plug design was the difficulty we would have actuating it—that is, getting the plug to open and close. Getting linear motion would likely require a solenoid, and it's not entirely space-efficient to put a solenoid on its side, perpendicular to the head just to get a plug to move in and out. 
 
-Before we did away with the "Pie-slices" design I had been working on a lighter way of actuating that attenuator. Inspired by [this article](http://makezine.com/2015/08/18/3d-print-stepper-motor/), I entertained the idea of building a custom stepper that would be embedded into the ear-cup, and allow a disk to rotate in increments up to a certain angle.
+Before we did away with the "Pie-slices" design I had been working on a more efficient way of actuating that attenuator. Inspired by [this article](http://makezine.com/2015/08/18/3d-print-stepper-motor/), I entertained the idea of building a custom stepper that would be embedded into the ear-cup, and allow a disk to rotate in increments up to a certain angle. For this, I had to refresh my memory of electromagnetism. 
 
-The next actuator idea combined the electromagnet research I had been doing, with problems we had with the plug design. The design had small permanent magnets embedded into a plug, and electromagnets into the outer shell. By changing the polarity of the electromagnets, we should be able to get the plug to move linearly in and out. I made a small electromagnet, and was able to get a small magnet to move back and forth. 
+The next actuator idea combined the electromagnetism research I had been doing, with problems we had with the plug design. The design had small permanent magnets embedded into a plug, and electromagnets into the outer shell. By changing the polarity of the electromagnets, we should be able to get the plug to move linearly in and out. I made a small electromagnet, and was able to get a small magnet to move back and forth. 
 
  <figure class='folio_image video' id='knex'>
 	<iframe src="https://www.youtube.com/embed/P_6gGJK-_j8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	<figcaption></figcaption>
 </figure>
 
-On paper, 4 electromagnets using a finishing nail as a core should be able to successfully push & pull the plug. After designing and printing a test cup however, we had a significant amount of trouble actually making the electromagnets even close to the designed size. 
+On paper, 4 small electromagnets should be able to successfully push & pull the plug. After designing and printing a test cup however, we had a significant amount of trouble actually making the electromagnets even close to the designed size. 
+
+<figure class='folio_image images-2' id='trompette-graph'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/chameleon/pull-plug-cad1.png'>
+		<img src='../includes/portfolio_images/chameleon/pull-plug-cad2.png'>
+	</a>
+	<figcaption>CAD model of the 4-magnet plug design</figcaption>
+</figure>
 
 <!-- Our first try was to freely wrap the wire around a nail. This didn’t really work since there were no bounds and the coil would end up too long. Next we put a washer/nut on the nail, and spaced them correctly. The coil was wound between the barriers, then we sanded away the head of the nail, cut the other end to get the washer off, and cut it to size. This did not work great since the heat from sanding caused the enamel coating to melt, creating a short on the core. We then tried winding in the same way, but then slipping it onto a pre-cut nail as a core. This works in theory, but there were burrs on the cut nail, which scratched the enamel coating, again causing a short. If we had to make 4 of these, we would be in for a rough time. And we hadn’t even proven the concept yet. -->
 
