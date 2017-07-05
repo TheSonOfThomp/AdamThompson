@@ -1,4 +1,4 @@
 <?php 
-header("Location: Adam_Thompson-Resume.pdf");
+header("Location: Adam-Thompson-Resume.pdf");
 die();
 ?>
