@@ -225,14 +225,15 @@ html
 	.bio-text
 		position: relative
 		display: block
-		text-align: center
-		font-size: 1rem
-		line-height: 1.5em
-		font-weight: 100
 		margin-top: 2.5em
+		text-align: center
+		// font-family: $sans-serif
+		font-size: 16px
+		line-height: 2em
+		font-weight: 100
+
 		p
 			margin: 0
-			line-height: 1.5em
 
 /* ---------------------- PORTFOLIO ---------------------- */
 
@@ -344,6 +345,15 @@ section.resume
 			font-size: 2rem
 			line-height: 2em
 
+	.bubble-connector
+		display: none
+		height: 95%
+		width: 6px
+		background: #ddd
+		position: absolute
+		left: 5vw
+		margin-top: 32px
+
 	.container
 		article
 			cursor: pointer
@@ -400,7 +410,7 @@ section.resume
 						font-weight: 300
 				
 				.resume-list
-					// display: none
+					display: none
 					padding-left: 1rem
 					font-size: 1rem
 					line-height: 1.5em
@@ -826,7 +836,13 @@ footer
 			#soundcloud
 				background-image: url('../image_assets/social/soundcloud_dark.png')
 
+
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
 /* ---------------------- MOBILE ---------------------- */
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+
 @media screen and (max-width: 768px) 
 	main 
 		width: 100%
@@ -899,15 +915,18 @@ footer
 	.bio 
 		height: auto
 		margin-top: 0
-		margin-bottom: 6rem
+		margin-bottom: 0
+		.container
+			text-align: center
 		.bio-pic 
 			display: inline-block
 			position: relative
 			float: none
 			clear: left
-			width: 70%
+			width: 50%
+			max-width: 192px
 			height: auto
-			margin: 1rem 15% 0 15%
+			margin: 36px auto 0 auto
 			text-align: center
 			transform: rotateZ(0deg)
 			-moz-transform: rotateZ(0deg)
@@ -918,11 +937,17 @@ footer
 			min-width: 100%
 			max-width: 100%
 			text-align: center
-			font-size: 1.25rem
+			font-size: 16px
 			p 
 				margin-bottom: 1rem
-	.social-list.dark 
+	.social-list.dark,
+	.social-list.light
+		width: 100vw
+		margin: 0 -12%
 		padding-top: 0
+		display: inline-block
+
+
 
 
 	/* ------------ FILTER ------------ */
@@ -958,19 +983,23 @@ footer
 
 	/* ------------ PORTFOLIO ------------ */
 	section.portfolio 
-		margin-bottom: 0
+		margin: 0
+		max-height: none
 		.gallery
 			.folio-item 
 				width: 100%
 				height: auto
-			.hover-state 
-				opacity: 1
-				background-color: $dark_grey_trans
+				.hover-state 
+					opacity: 1
+					background-color: rgba(51,51,51,0.5)
+				&:active .hover-state
+					background-color: rgba(51,51,51,0.75)
 			.folio-hover 
 				max-width: calc(100% - 2.51rem)
 				padding: 1.25rem
 				background: rgba(28,28,28,0.6)
 				border-radius: 8px 
+
 	/* ------------ RESUME ------------ */
 	section.resume 
 		margin-top: -2rem
@@ -1029,6 +1058,8 @@ footer
 	.social-media a 
 		width: 40%
 		margin: 0 30%
+	footer
+		display: block
 
 /* ------ HELPER CLASSES ------ */
 .hidden, .hide

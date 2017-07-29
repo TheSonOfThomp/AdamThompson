@@ -3,7 +3,7 @@ var design_types = ["Product", "UX", "Web", "Interaction"];
 
 var filterResume = false;
 
-var hideResumeText = false
+var hideResumeText = true
 
 $(document).ready(function(){
 	//Rotate through the header 

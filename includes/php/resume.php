@@ -10,7 +10,7 @@
 		</div>
 	</div>
 	<section class="experience container" id="work-experience">
-
+		<div class="bubble-connector"></div>
 		<article class="zynga job">
 			<div class="logo-container">
 				<div class="logo vertical-center"></div>

@@ -190,14 +190,13 @@ html {
   .bio .bio-text {
     position: relative;
     display: block;
+    margin-top: 2.5em;
     text-align: center;
-    font-size: 1rem;
-    line-height: 1.5em;
-    font-weight: 100;
-    margin-top: 2.5em; }
+    font-size: 16px;
+    line-height: 2em;
+    font-weight: 100; }
     .bio .bio-text p {
-      margin: 0;
-      line-height: 1.5em; }
+      margin: 0; }
 
 /* ---------------------- PORTFOLIO ---------------------- */
 section.portfolio {
@@ -287,6 +286,14 @@ section.resume {
       font-family: "Raleway", "Lato", "Helvetica", sans-serif;
       font-size: 2rem;
       line-height: 2em; }
+  section.resume .bubble-connector {
+    display: none;
+    height: 95%;
+    width: 6px;
+    background: #ddd;
+    position: absolute;
+    left: 5vw;
+    margin-top: 32px; }
   section.resume .container article {
     cursor: pointer; }
     section.resume .container article .logo-container {
@@ -337,6 +344,7 @@ section.resume {
         font-size: 1rem;
         font-weight: 300; }
       section.resume .container article .resume-content .resume-list {
+        display: none;
         padding-left: 1rem;
         font-size: 1rem;
         line-height: 1.5em;
@@ -715,7 +723,11 @@ footer {
     .social-list.dark .social-media #soundcloud {
       background-image: url("../image_assets/social/soundcloud_dark.png"); }
 
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
 /* ---------------------- MOBILE ---------------------- */
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
 @media screen and (max-width: 768px) {
   main {
     width: 100%;
@@ -791,15 +803,18 @@ footer {
   .bio {
     height: auto;
     margin-top: 0;
-    margin-bottom: 6rem; }
+    margin-bottom: 0; }
+    .bio .container {
+      text-align: center; }
     .bio .bio-pic {
       display: inline-block;
       position: relative;
       float: none;
       clear: left;
-      width: 70%;
+      width: 50%;
+      max-width: 192px;
       height: auto;
-      margin: 1rem 15% 0 15%;
+      margin: 36px auto 0 auto;
       text-align: center;
       transform: rotateZ(0deg);
       -moz-transform: rotateZ(0deg);
@@ -810,12 +825,16 @@ footer {
       min-width: 100%;
       max-width: 100%;
       text-align: center;
-      font-size: 1.25rem; }
+      font-size: 16px; }
       .bio .bio-text p {
         margin-bottom: 1rem; }
 
-  .social-list.dark {
-    padding-top: 0; }
+  .social-list.dark,
+  .social-list.light {
+    width: 100vw;
+    margin: 0 -12%;
+    padding-top: 0;
+    display: inline-block; }
 
   /* ------------ FILTER ------------ */
   .site-filter {
@@ -853,13 +872,16 @@ footer {
 
   /* ------------ PORTFOLIO ------------ */
   section.portfolio {
-    margin-bottom: 0; }
+    margin: 0;
+    max-height: none; }
     section.portfolio .gallery .folio-item {
       width: 100%;
       height: auto; }
-    section.portfolio .gallery .hover-state {
-      opacity: 1;
-      background-color: rgba(51, 51, 51, 0.75); }
+      section.portfolio .gallery .folio-item .hover-state {
+        opacity: 1;
+        background-color: rgba(51, 51, 51, 0.5); }
+      section.portfolio .gallery .folio-item:active .hover-state {
+        background-color: rgba(51, 51, 51, 0.75); }
     section.portfolio .gallery .folio-hover {
       max-width: calc(100% - 2.51rem);
       padding: 1.25rem;
@@ -919,7 +941,10 @@ footer {
 
   .social-media a {
     width: 40%;
-    margin: 0 30%; } }
+    margin: 0 30%; }
+
+  footer {
+    display: block; } }
 /* ------ HELPER CLASSES ------ */
 .hidden, .hide {
   display: none !important; }
