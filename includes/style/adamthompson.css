@@ -276,8 +276,29 @@ section.portfolio {
 section.resume {
   min-height: 12em; }
   section.resume a {
-    text-decoration: underline;
+    text-decoration: underline; }
+  section.resume .sub-header .resume-link {
     display: none; }
+  section.resume .sub-header .linkedin-profile {
+    color: #008cc9;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: "Lato", "Helvetica", sans-serif;
+    font-weight: 400;
+    height: 32px;
+    padding: 8px 10px;
+    border: 1px solid #008cc9;
+    background-color: #FAFAFA;
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px; }
+    section.resume .sub-header .linkedin-profile:hover {
+      border: 2px solid #008cc9;
+      padding: 8px 10px; }
   section.resume .resume-header {
     padding-left: 1rem;
     width: 30%;

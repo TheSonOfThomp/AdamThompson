@@ -6,6 +6,7 @@ var filterResume = false;
 var hideResumeText = true
 
 $(document).ready(function(){
+	
 	//Rotate through the header 
 	var x = 0;
 	setInterval(function(){

@@ -14,8 +14,10 @@
 		<!-- <script type="text/javascript" src="<?php echo $root_path; ?>/
 		includes/js/vendor/jquery.mixitup.min.js"></script> -->
 		<script type="text/javascript" src="https://raw.githubusercontent.com/patrickkunka/mixitup/v3/dist/mixitup.min.js"></script>
+		<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/jquery.vanillabox-0.1.7.min.js"></script>
 		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/main.js"></script>
+
 		<!-- <script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/portfolio.js"></script> -->
 </head> 
 <body id= "<?php echo($page_id) ?>" onload="">
