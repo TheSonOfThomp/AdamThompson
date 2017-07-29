@@ -276,7 +276,8 @@ section.portfolio {
 section.resume {
   min-height: 12em; }
   section.resume a {
-    text-decoration: underline; }
+    text-decoration: underline;
+    display: none; }
   section.resume .resume-header {
     padding-left: 1rem;
     width: 30%;
