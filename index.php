@@ -21,6 +21,9 @@ include('includes/php/header.php'); ?>
 <?php 
 	include 'includes/php/resume.php';
 ?>
+<?php 
+	// include 'includes/php/contact.php';
+?>
 <?php
 	include 'includes/php/footer.php';
 ?>

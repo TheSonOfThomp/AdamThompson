@@ -208,7 +208,7 @@ html
 
 .bio
 	width: 100%
-	margin: 12vh 0 24vh 0
+	margin: 12vh 0
 
 	.bio-pic
 		position: relative
@@ -854,7 +854,7 @@ footer
 
 	&.dark
 		width: 56%
-		margin: 1em 22%
+		margin: 1em auto
 		.social-media
 			#twitter
 				background-image: url('../image_assets/social/twitter_dark.png')
@@ -1150,5 +1150,40 @@ footer
 
 .fixed
 	position: fixed
+
+.tooltip
+	position: relative
+	display: inline-block
+	// border-bottom: 1px dotted black /* If you want dots under the hoverable text */
+
+	/* Tooltip text */
+	.tooltiptext
+		visibility: hidden
+		width: 120px
+		bottom: 75%
+		left: 50%
+		margin-left: -60px /* Use half of the width (120/2 = 60), to center the tooltip */
+		padding: 5px 0
+
+		background-color: $dark_grey_trans
+		color: #fff
+		text-align: center
+		border-radius: 6px
+		/* Position the tooltip text - see examples below! */
+		position: absolute
+		z-index: 1
+
+	&:hover .tooltiptext
+		visibility: visible
+		&:after
+			content: " "
+			position: absolute
+			top: 100%  /* At the top of the tooltip */
+			left: 50%
+			margin-left: -5px
+			border-width: 5px
+			border-style: solid
+			border-color: $dark_grey_trans transparent transparent transparent
+
 
 

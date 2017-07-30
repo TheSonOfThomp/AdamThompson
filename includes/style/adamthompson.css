@@ -175,7 +175,7 @@ html {
 /* ---------------------- BIO & PIC ---------------------- */
 .bio {
   width: 100%;
-  margin: 12vh 0 24vh 0; }
+  margin: 12vh 0; }
   .bio .bio-pic {
     position: relative;
     display: block;
@@ -738,7 +738,7 @@ footer {
         background-image: url("../image_assets/social/instagram_light.png"); }
   .social-list.dark {
     width: 56%;
-    margin: 1em 22%; }
+    margin: 1em auto; }
     .social-list.dark .social-media #twitter {
       background-image: url("../image_assets/social/twitter_dark.png"); }
     .social-list.dark .social-media #linkedin {
@@ -1028,5 +1028,35 @@ footer {
 
 .fixed {
   position: fixed; }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* Tooltip text */ }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    bottom: 75%;
+    left: 50%;
+    margin-left: -60px;
+    padding: 5px 0;
+    background-color: rgba(51, 51, 51, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1; }
+  .tooltip:hover .tooltiptext {
+    visibility: visible; }
+    .tooltip:hover .tooltiptext:after {
+      content: " ";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: rgba(51, 51, 51, 0.75) transparent transparent transparent; }
 
 /*# sourceMappingURL=adamthompson.css.map */
