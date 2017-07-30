@@ -520,13 +520,16 @@ section.resume {
   background: #FAFAFAcc;
   -webkit-backdrop-filter: saturate(1.8) blur(20px);
   height: auto;
-  z-index: 5; }
+  z-index: 5;
+  position: fixed; }
+  .portfolio-page header.main-header.header-up {
+    top: -81px; }
 .portfolio-page .header, .portfolio-page .sub-header {
   margin: 0; }
   .portfolio-page .header .title, .portfolio-page .sub-header .title {
     text-align: center;
     padding: 16px 0;
-    font-size: 3rem;
+    font-size: 48px;
     border-bottom: 1px solid #4a4a4a;
     opacity: 1; }
   .portfolio-page .header:before, .portfolio-page .sub-header:before {
@@ -543,8 +546,10 @@ section.resume {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 0.75em;
+    padding-top: 0;
     text-align: center;
-    font-family: "Raleway", "Lato", "Helvetica", sans-serif; }
+    font-family: "Raleway", "Lato", "Helvetica", sans-serif;
+    padding-top: 81px; }
   .portfolio-page .gallery-content h1 {
     font-size: 40px; }
   .portfolio-page .gallery-content h2 {

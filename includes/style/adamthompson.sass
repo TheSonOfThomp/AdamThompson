@@ -606,18 +606,22 @@ section.resume
 		-webkit-backdrop-filter: saturate(1.8) blur(20px)
 		height: auto
 		z-index: 5
+		position: fixed
+		
+		&.header-up
+			top: -81px /* 48px + 32px + 1px */
 
 	.header
 		margin: 0
+
 		.title
 			text-align: center
 			padding: 16px 0
-			font-size: 3rem
+			font-size: 48px
 			border-bottom: 1px solid $dark_grey
 			opacity: 1
 		&:before
 			content: ''
-
 		.tagline
 			display: none
 			top: 2.5em
@@ -632,8 +636,10 @@ section.resume
 			width: 100%
 			margin: 0 auto
 			margin-bottom: 0.75em
+			padding-top: 0
 			text-align: center
 			font-family: $sans-serif
+			padding-top: 81px
 
 		h1
 			font-size: 40px
