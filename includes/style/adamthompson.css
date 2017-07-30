@@ -237,7 +237,7 @@ section.portfolio {
         display: inline-block;
         width: 100%;
         height: 100%; }
-      section.portfolio .gallery .folio-item:hover .hover-state {
+      section.portfolio .gallery .folio-item:hover .hover-state, section.portfolio .gallery .folio-item:focus .hover-state {
         opacity: 1; }
       section.portfolio .gallery .folio-item .hover-state {
         opacity: 0;
@@ -280,12 +280,7 @@ section.resume {
   section.resume .sub-header .resume-link {
     display: none; }
   section.resume .sub-header .linkedin-profile {
-    color: #008cc9;
-    font-size: 16px;
-    text-decoration: none;
-    font-family: "Lato", "Helvetica", sans-serif;
-    font-weight: 400;
-    height: 32px;
+    height: auto;
     padding: 8px 10px;
     border: 1px solid #008cc9;
     background-color: #FAFAFA;
@@ -299,6 +294,12 @@ section.resume {
     section.resume .sub-header .linkedin-profile:hover {
       border: 2px solid #008cc9;
       padding: 8px 10px; }
+    section.resume .sub-header .linkedin-profile span {
+      color: #008cc9;
+      font-size: 16px;
+      text-decoration: none;
+      font-family: "Lato", "Helvetica", sans-serif;
+      font-weight: 400; }
   section.resume .resume-header {
     padding-left: 1rem;
     width: 30%;
@@ -330,7 +331,7 @@ section.resume {
         padding-bottom: 80%;
         margin-right: 10%;
         border-radius: 100%;
-        background-color: #f2f2f2;
+        background-color: #eee;
         background-size: 80%;
         background-position: 50%;
         background-repeat: no-repeat; }

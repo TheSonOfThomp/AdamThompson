@@ -1,7 +1,7 @@
 <section class="bio">
 	<div class="container">
 		<div class="bio-pic">
-			<img alt="Portrait taken by Natasha Choo for the Water Boys a Cappella group" src="includes/image_assets/Adam_web.jpg">
+			<img alt="Portrait taken by Natasha Choo" src="includes/image_assets/Adam_web.jpg">
 		</div>
 		<span class="bio-text" id="about">
 			<p>Hi, I’m a <a target="_blank" href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering">Designer and Engineering grad</a> from UWaterloo.</p>

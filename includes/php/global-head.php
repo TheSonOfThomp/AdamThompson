@@ -1,5 +1,5 @@
 <?php $page_title = ucfirst($page_id);
-	include_once('mySchoolTime.php');
+	// include_once('mySchoolTime.php');
 	
 	if ($_SERVER['SERVER_NAME'] == "localhost") {
 		$DEBUG = true;
