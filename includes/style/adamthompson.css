@@ -280,6 +280,7 @@ section.resume {
   section.resume .sub-header .resume-link {
     display: none; }
   section.resume .sub-header .linkedin-profile {
+    text-decoration: none;
     height: auto;
     padding: 8px 10px;
     border: 1px solid #008cc9;

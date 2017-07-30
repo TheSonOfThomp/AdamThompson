@@ -4,9 +4,9 @@
 			<div class="title">Résumé <span class="filter-notification"></span></div>
 			<ul>
 				<li>
-					<button class="linkedin-profile" target="_blank" href="http://www.linkedin.com/in/adammthompson">
-						<span>LinkedIn Profile</span>
-					</button>
+					<a class="linkedin-profile" target="_blank" href="http://www.linkedin.com/in/adammthompson">
+					<span>LinkedIn Profile</span>
+					</a>
 					<a class="resume-link" target="_blank" href="<?php echo $root_path;?>/Resume">Download PDF</a>
 				</li>
 			</ul>
