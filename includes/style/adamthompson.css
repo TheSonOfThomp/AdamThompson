@@ -456,6 +456,8 @@ section.resume {
         background-image: url("../image_assets/apps/css3.png"); }
       section.resume .skills .program-list #jquery .app-logo {
         background-image: url("../image_assets/apps/jquery.png"); }
+      section.resume .skills .program-list #javascript .app-logo {
+        background-image: url("../image_assets/apps/js.png"); }
       section.resume .skills .program-list #coffeescript .app-logo {
         background-image: url("../image_assets/apps/coffeescript.png"); }
       section.resume .skills .program-list #arduino .app-logo {
