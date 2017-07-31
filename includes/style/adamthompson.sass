@@ -498,12 +498,9 @@ section.resume
 			list-style: none
 			li
 				position: relative
-				width: 7%
-				margin: 1rem 2.75% 1rem 2.75%
+				width: 12.5%
+				margin: 1rem 0
 				float: left
-				&:hover
-					margin-top: 0.5rem
-					margin-bottom: 1.5rem
 		
 				.app-name
 					position: relative
@@ -516,10 +513,20 @@ section.resume
 			
 				.app-logo
 					position: relative
-					padding-bottom: 100%
-					background-size: 100%
+					padding-bottom: 56%
+					background-size: 56%
+					background-position: 44% 0
 					background-repeat: no-repeat
 					border-radius: 0
+				&:hover
+					// padding-top: 0.5rem
+					// padding-bottom: 1.5rem
+					.app-name
+						font-weight: 500
+					.app-logo
+						// padding-bottom: 67%
+						// background-size: 67%
+
 			
 			#sketch .app-logo
 				background-image: url('../image_assets/apps/sketch.png')
