@@ -1,8 +1,9 @@
 <?php
-include('../includes/php/global-head.php');
-include('portfolio_switch.php');
+include_once('../includes/php/global-head.php');
+include_once('../includes/php/analyticstracking.php');
 include('../includes/plugins/Parsedown.php');
 include('../includes/plugins/ParsedownExtra.php');
+include('portfolio_switch.php');
 include('../includes/plugins/toc.php');
 ?>
 <title>Adam Thompson - <?php echo($p_title) ?></title>

@@ -21,8 +21,8 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">Product Manager (Poker)</span>
-					<span class="subsection-duration">May - August&nbsp2016</span>
+					<span class="subsection-title">Product Manager</span>
+					<span class="subsection-duration">Spring&nbsp2016</span>
 				</div>
 				<ul class="resume-list">
 					<li class="resume-item featured ux graphics pm">Performed background research, user analysis, and A/B testing as part of the design process for a new Subscriptions model</li>
@@ -41,12 +41,12 @@
 				<div class="subsection-header">
 					<span class="subsection-title">Product Designer</span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, Product Designer at Noom</span>
-					<span class="subsection-duration">September - December&nbsp2015</span>
+					<span class="subsection-duration">Fall&nbsp2015</span>
 				</div>
 				<ul class="resume-list">
 					<li class="resume-item featured ux graphics pm">Re-designed the <a href="Portfolio/?p=noom_logging">meal-logging experience</a> on iOS and Android to improve clarity and speed of navigation, evidenced by user-testing</li>
 					<li class="resume-item featured ux pm">Initiated multidisciplinary collaboration by insisting upon stakeholder meetings before attempting solutions, and managed the early design process for the coach dashboard </li>
-					<li class="resume-item featured ux graphics">Improved the <a href="Portfolio/?p=noom_portion">portion picker</a> interface to improve user confidence when logging food items, by adding a larger interaction area, more salient unit display, and a more intuitive confirmation button.</li>
+					<li class="resume-item featured ux graphics">Improved the "portion picker" interface to improve user confidence when logging food items, by adding a larger interaction area, more salient unit display, and a more intuitive confirmation button.</li>
 					<li class="resume-item featured ux graphics">Prototyped and iterated interaction designs using Sketch, Framer JS, and Origami, and tested using Usability Hub and UserTesting.com</li>
 				</ul>
 			</div>
@@ -58,9 +58,9 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">UX/Product Designer & Product Manager</span>
+					<span class="subsection-title">UX Designer & Product Manager</span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, Product Design, User Interface Designer at KnowRoaming</span>
-					<span class="subsection-duration">May&nbsp2014 - April&nbsp2015 (2 Terms)</span>
+					<span class="subsection-duration">Spring&nbsp2014 & Winter&nbsp2015</span>
 				</div>
 				<ul class="resume-list">
 
@@ -91,7 +91,7 @@
 				<div class="subsection-header">
 					<span class="subsection-title">UI/UX Designer</span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, User Interface Designer at Sony Network Entertainment</span>
-					<span class="subsection-duration">September - December&nbsp2013</span>
+					<span class="subsection-duration">Fall&nbsp2013</span>
 				</div>
 				<ul class="resume-list">
 					<li class="resume-item featured ux graphics">Led the design and development for a new music-dicovery feature in MediaGo. This feature has not yet been released.</li>
