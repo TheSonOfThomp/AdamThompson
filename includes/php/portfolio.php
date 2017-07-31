@@ -5,7 +5,9 @@
 <!-- ************************************** FEATURED ************************************** -->
 
     	<!-- ********** Chameleon ********** -->
-		<li class="folio-item mech software dsp audio signals ux industrial hardware featured" data-feature-rank="2" data-published-date="2017-04-01">
+		<li class="folio-item mech software dsp audio signals ux industrial hardware featured" 
+			data-feature-rank="2" 
+			data-published-date="2017-04-01">
 			<a href="Portfolio/?p=chameleon">
 				<img src="includes/portfolio_images/chameleon/chameleon-front-render-with-logo.jpg">
 				<div class="hover-state">
@@ -18,7 +20,9 @@
 		</li>
 
     	<!-- ********** TAP Metronome ********** -->
-		<li class="folio-item web software featured" data-feature-rank="5" data-published-date="2016-09-10">
+		<li class="folio-item web software featured" 
+			data-feature-rank="5" 
+			data-published-date="2016-09-10">
 			<a href="Portfolio/?p=tap-metronome">
 				<img src="includes/portfolio_images/tap-metronome.png">
 				<div class="hover-state">
@@ -31,7 +35,9 @@
 		</li>
 
     	<!-- ********** NOOM - Food Logging ********** -->
-		<li class="folio-item ux featured" data-feature-rank="1" data-published-date="2015-12-31">
+		<li class="folio-item ux featured" 
+			data-feature-rank="1" 
+			data-published-date="2015-12-31">
 			<a href="Portfolio/?p=noom_logging">
 				<img src="includes/portfolio_images/noom/noom_logging.png">
 				<div class="hover-state">
@@ -44,7 +50,9 @@
 		</li>
 
 		<!-- ********** BOSE SPEAKER ********** -->
-		<li class="folio-item industrial hardware" data-feature-rank="" data-published-date="2015-10-28">
+		<li class="folio-item industrial hardware" 
+			data-feature-rank="10" 
+			data-published-date="2015-10-28">
 			<a href="Portfolio/?p=bose_speaker">
 				<img src="includes/portfolio_images/bose_speaker.jpg">
 				<div class="hover-state">
@@ -57,7 +65,9 @@
 		</li>
 
 		<!-- ********** SMRT WATR ********** -->
-		<li class="folio-item ux hardware electrical software pm featured" data-feature-rank="3" data-published-date="2015-08-26">
+		<li class="folio-item ux hardware electrical software pm featured" 
+			data-feature-rank="3" 
+			data-published-date="2015-08-26">
 			<a href="Portfolio/?p=smrtwatr">
 				<img src="includes/portfolio_images/smrtwatr/smrtwatr.jpg">
 				<div class="hover-state">
@@ -70,7 +80,9 @@
 		</li>
 
 		<!-- ********** KNOWROAMING APP ********** -->
-		<li class="folio-item ux featured" data-feature-rank="4" data-published-date="2015-05-01">
+		<li class="folio-item ux featured" 
+			data-feature-rank="4" 
+			data-published-date="2015-05-01">
 			<a href="Portfolio/?p=knowroaming">
 				<img src="includes/portfolio_images/knowroaming/knowroaming.jpg">
 				<div class="hover-state">
@@ -83,7 +95,9 @@
 		</li>
 
 		<!-- ********** Colour Thermometer ********** -->
-		<li class="folio-item web software" data-feature-rank="" data-published-date="2017-05-25">
+		<li class="folio-item web software" 
+			data-feature-rank="7" 
+			data-published-date="2017-05-25">
 			<a href="Portfolio/?p=colourtherm">
 				<img src="includes/portfolio_images/colourtherm/colourtherm-toronto.jpg">
 					<div class="hover-state">
@@ -96,7 +110,9 @@
 		</li>
 
 		<!-- ********** Analog Tuner ********** -->
-		<li class="folio-item electrical hardware" data-feature-rank="" data-published-date="2014-11-30">
+		<li class="folio-item electrical hardware" 
+			data-feature-rank="11" 
+			data-published-date="2014-11-30">
 			<a href="Portfolio/?p=analog-tuner">
 				<img src="includes/portfolio_images/tuner-scope.jpg">
 				<div class="hover-state">
@@ -108,60 +124,10 @@
 			</a>
 		</li>
 
-		<!-- ********** KNOWROAMING GRAPHICS ********** -->
-		<!-- <li class="folio-item graphics" data-feature-rank="" data-published-date="2015-04-31">
-			<a href="Portfolio/?p=KR_promo">
-			<img src="includes/portfolio_images/knowroaming/promo/KR_promo.jpg">
-				<div class="hover-state">
-					<div class="folio-hover">
-						<span class="folio-title">KnowRoaming Promotions</span><br/>
-						<span class="folio-type">Graphics</span>
-					</div>
-				</div>
-			</a>
-		</li> -->
-
-		<!-- ********** KNOWROAMING APPLICATOR ********** -->
-		<!-- <li class="folio-item industrial" data-feature-rank="" data-published-date="2015-04-05">
-			<a href="Portfolio/?p=KR_applicator">
-				<img src="includes/portfolio_images/knowroaming/KR_applicator.png">
-				<div class="hover-state">
-					<div class="folio-hover">
-						<span class="folio-title">Multi-Use Sticker Applicator</span><br/>
-						<span class="folio-type">Industrial Design</span>
-					</div>
-				</div>
-			</a>
-		</li> -->
-
-		<!-- ********** KNOWROAMING INTRO VIDEO ********** -->
-		<!-- <li class="folio-item video" data-feature-rank="" data-published-date="2014-08-31">
-			<a href="Portfolio/?p=KR_video">
-				<img src="includes/portfolio_images/knowroaming/video/KR_video.jpg">
-				<div class="hover-state">
-					<div class="folio-hover">
-						<span class="folio-title">KnowRoaming Intro Video</span><br/>
-						<span class="folio-type">Video</span>
-					</div>
-				</div>
-			</a>
-		</li> -->
-
-		<!-- ********** KNOWROAMING STAND ********** -->
-		<!-- <li class="folio-item industrial" data-feature-rank="" data-published-date="2015-04-05">
-			<a href="Portfolio/?p=KR_retail">
-				<img src="includes/portfolio_images/knowroaming/KR_retail.jpg">
-				<div class="hover-state">
-					<div class="folio-hover">
-						<span class="folio-title">KnowRoaming Retail Display</span><br/>
-						<span class="folio-type">Industrial Design</span>
-					</div>
-				</div>
-			</a>
-		</li> -->
-
 		<!-- ********** KNOWROAMING WEBSITE ********** -->
-		<li class="folio-item ux" data-feature-rank="" data-published-date="2015-03-31">
+		<li class="folio-item ux" 
+			data-feature-rank="9" 
+			data-published-date="2015-03-31">
 			<a href="Portfolio/?p=KR_web">
 				<img src="includes/portfolio_images/knowroaming/web/KR_web.jpg">
 				<div class="hover-state">
@@ -173,34 +139,10 @@
 			</a>
 		</li>
 
-		<!-- ********** athletes.knowroaming ********** -->
-		<!-- <li class="folio-item web" data-feature-rank="" data-published-date="2015-03-31">
-			<a href="Portfolio/?p=KR_athletes">
-				<img src="includes/portfolio_images/knowroaming/KR_athletes.jpg">
-				<div class="hover-state">
-					<div class="folio-hover">
-						<span class="folio-title">KnowRoaming Athletes</span><br/>
-						<span class="folio-type">Web Design</span>
-					</div>
-				</div>
-			</a>
-		</li> -->
-
-		<!-- ********** PERSONAL FALCON LOGO ********** -->
-		<!-- <li class="folio-item graphics" data-feature-rank="" data-published-date="2015-02-15">
-			<a href="Portfolio/?p=falcon">
-				<img src="includes/portfolio_images/falcon.jpg">
-				<div class="hover-state">
-					<div class="folio-hover">
-						<span class="folio-title">Falcon Logo</span><br/>
-						<span class="folio-type">Graphic Design</span>
-					</div>
-				</div>
-			</a>
-		</li> -->
-
 		<!-- ********** MEDIAGO APP ********** -->
-		<li class="folio-item ux graphics featured" data-feature-rank="6" data-published-date="2013-12-25">
+		<li class="folio-item ux graphics featured" 
+			data-feature-rank="6" 
+			data-published-date="2013-12-25">
 			<a href="Portfolio/?p=mediago_app">
 				<img src="includes/portfolio_images/sony/mediago_app.jpg">
 				<div class="hover-state">
@@ -213,7 +155,9 @@
 		</li>
 
 		<!-- ********** VU Meter ********** -->
-		<li class="folio-item electrical hardware" data-feature-rank="" data-published-date="2013-08-01">
+		<li class="folio-item electrical hardware" 
+			data-feature-rank="12" 
+			data-published-date="2013-08-01">
 			<a href="Portfolio/?p=vu-meter">
 				<img src="includes/portfolio_images/vu-meter.jpg">
 				<div class="hover-state">
@@ -226,7 +170,9 @@
 		</li>
 
 		<!-- ********** SAY NO TO COMIC SANS ********** -->
-		<li class="folio-item software web" data-feature-rank="" data-published-date="2013-05-04">
+		<li class="folio-item software web" 
+			data-feature-rank="8" 
+			data-published-date="2013-05-04">
 			<a href="Portfolio/?p=comic_sans">
 				<img src="includes/portfolio_images/comic_sans.jpg">
 				<div class="hover-state">
@@ -238,9 +184,10 @@
 			</a>
 		</li>
 
-
 		<!-- ********** STiC DESIGN ********** -->
-		<li class="folio-item industrial hardware" data-feature-rank="" data-published-date="2012-12-01">
+		<li class="folio-item industrial hardware" 
+			data-feature-rank="13" 
+			data-published-date="2012-12-01">
 			<a href="Portfolio/?p=stic">
 				<img src="includes/portfolio_images/stic.png">
 				<div class="hover-state">
@@ -251,58 +198,6 @@
 				</div>
 			</a>
 		</li>
-
-		<!-- ********** KWASIND GRAPHICS ********** -->
-		<!-- <li class="folio-item graphics" data-feature-rank="" data-published-date="2012-01-01">	
-			<a href="Portfolio/?p=kwasind">
-				<img src="includes/portfolio_images/kwasind/kwasind.png">
-				<div class="hover-state">
-					<div class="folio-hover">
-						<span class="folio-title">Camp Kwasind Graphics</span><br/>
-						<span class="folio-type">Graphic Design</span>
-					</div>
-				</div>
-			</a>
-		</li> -->
-
-		<!-- ********** KWASIND VIDEO ********** -->
-		<!-- <li class="folio-item video" data-feature-rank="" data-published-date="2012-01-01">
-		<a href="Portfolio/?p=kwasind_video">
-		<img src="includes/portfolio_images/kwasind/kwasind_video.jpg">
-		<div class="hover-state">
-		<div class="folio-hover">
-		<span class="folio-title">Camp Kwasind Summer videos</span><br/>
-		<span class="folio-type">Video</span>
-		</div>
-		</div>
-		</a>
-		</li> -->
-
-		<!-- ********** MATRIX COUNTDOWN ********** -->
-		<!-- <li class="folio-item video" data-feature-rank="" data-published-date="2012-01-01">
-		<a href="Portfolio/?p=matrix_countdown">
-		<img src="includes/portfolio_images/matrix_countdown.jpg">
-		<div class="hover-state">
-		<div class="folio-hover">
-		<span class="folio-title">Matrix-Style Countdown video</span><br/>
-		<span class="folio-type">Video</span>
-		</div>
-		</div>
-		</a>
-		</li> -->
-
-		<!-- ********** MGM Video ********** -->
-		<!--  <li class="folio-item video" data-feature-rank="" data-published-date="2012-01-01">
-		<a href="Portfolio/?p=mgm_video">
-		<img src="includes/portfolio_images/mgm_video.jpg">
-		<div class="hover-state">
-		<div class="folio-hover">
-		<span class="folio-title">Mystery Guitar Man — Peter Gunn Theme</span><br/>
-		<span class="folio-type">Video</span>
-		</div>
-		</div>
-		</a>
-		</li> -->
 
     </ul>
   </div>
