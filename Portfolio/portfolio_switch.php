@@ -79,9 +79,9 @@
 			$p_title = "KnowRoaming Website";
 			$p_p1 = "I played a vital role in the redesign of KnowRoaming's new main site. In a meeting we discussed potenials to improve awareness of the KnowRoaming product and how to increase sales. I analyzed the current website and realized that there was little basic information about the product, and that a potential customer might not know enought about the product before they buy. We had statistics that viewers saw only half the page pefore leaving. That afternoon I sketched up a wireframe of a new website that improves on these issues. The goal of this redesign was to introduce the customer to the steps of using KnowRoaming (Application, Registration, Roaming, and Returning Home) one-by-one. By the time a visitor reaches the same section where they would have previously left, they have hopefully learned enough about the product to proceed.";
 			$p_p2 = "After presenting the wireframe and making some modifications as recommended by the marketing team, we began development of a Beta site. A version of the new site is accessible as a special Airlines promotion mini-site at <a href='http://www.knowroaming.com/airlines' target='_blank'>knowroaming.com/airlines</a>. Before I left in May, we had a meeting to discuss next steps, and the design will be implemented on the main site within a month. The new site will have many metrics in place for user analysis and A/B testing.";
-			$img1 = $img_path."web/knowroaming_pilots_wireframe.jpg";
+			$img1 = $img_path."knowroaming/web/knowroaming_pilots_wireframe.jpg";
 			$img1_caption = "A section of the initial wirefreame for the redesigned site.";
-			$img2 = $img_path."web/KR_web.jpg";
+			$img2 = $img_path."knowroaming/web/KR_web.jpg";
 			$img2_caption = "<a href='http://www.knowroaming.com/airlines' target='_blank'>The Airlines mini-site</a>";
 			break;
 
