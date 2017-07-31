@@ -281,17 +281,19 @@ section.resume {
     display: none; }
   section.resume .sub-header .linkedin-profile {
     text-decoration: none;
+    line-height: 32px;
     height: auto;
+    width: auto;
     padding: 8px 10px;
     border: 1px solid #008cc9;
     background-color: #FAFAFA;
     cursor: pointer;
     vertical-align: middle;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
-    border-radius: 2px; }
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px; }
     section.resume .sub-header .linkedin-profile:hover {
       border: 2px solid #008cc9;
       padding: 7px 9px; }
@@ -362,11 +364,12 @@ section.resume {
           display: inline;
           font-size: 1.25rem;
           font-style: italic; }
-      section.resume .container article .resume-content .subsection-header .subsection-duration {
+      section.resume .container article .resume-content .subsection-duration {
         margin-left: 1rem;
         font-family: "Lato", "Helvetica", sans-serif;
         font-size: 1rem;
-        font-weight: 300; }
+        font-weight: 300;
+        float: right; }
       section.resume .container article .resume-content .resume-list {
         display: none;
         padding-left: 1rem;
@@ -929,7 +932,9 @@ footer {
       padding-left: 4%;
       text-align: left; }
     section.resume .sub-header li {
-      font-size: 1rem; }
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 24px; }
     section.resume .container article.experience.job {
       margin-top: 16px; }
     section.resume .container article .logo-container {
@@ -957,11 +962,14 @@ footer {
           font-size: 1.5rem; }
         section.resume .container article .resume-content .subsection-header .subsection-duration {
           margin: 0;
-          display: block; }
+          display: block;
+          float: none; }
       section.resume .container article .resume-content .resume-list {
         display: none;
         padding-left: 40px; }
     section.resume .skills {
+      display: none; }
+    section.resume .education .resume-header {
       display: none; }
 
   /* ------------ FOOTER ------------ */

@@ -341,17 +341,19 @@ section.resume
 			display: none
 		.linkedin-profile
 			text-decoration: none
+			line-height: 32px	
 			height: auto
+			width: auto
 			padding: 8px 10px
 			border: 1px solid #008cc9
 			background-color: $white
 			cursor: pointer
 			vertical-align: middle
-			-webkit-border-radius: 2px
-			-moz-border-radius: 2px
-			-ms-border-radius: 2px
-			-o-border-radius: 2px
-			border-radius: 2px
+			-webkit-border-radius: 4px
+			-moz-border-radius: 4px
+			-ms-border-radius: 4px
+			-o-border-radius: 4px
+			border-radius: 4px
 			&:hover
 				border: 2px solid #008cc9
 				padding: 7px 9px
@@ -430,19 +432,21 @@ section.resume
 							display: inline
 							font-size: 1.25rem
 							font-style: italic
-					.subsection-duration
-						margin-left: 1rem
-						font-family: $sans-body
-						font-size: 1rem
-						font-weight: 300
-				
+
+				.subsection-duration
+					margin-left: 1rem
+					font-family: $sans-body
+					font-size: 1rem
+					font-weight: 300
+					float: right
+
 				.resume-list
 					display: none
 					padding-left: 1rem
 					font-size: 1rem
 					line-height: 1.5em
 					list-style-type: disc
-				
+
 					.resume-item
 						margin-bottom: 1em
 				
@@ -1047,6 +1051,8 @@ footer
 				text-align: left
 			li 
 				font-size: 1rem
+				text-align: center
+				margin-top: 24px
 		.container
 			article
 				&.experience
@@ -1078,12 +1084,16 @@ footer
 						.subsection-duration 
 							margin: 0
 							display: block
+							float: none
 					.resume-list 
 						display: none
 						padding-left: 40px
 
 		.skills 
 			display: none
+		.education
+			.resume-header
+				display: none
 
 	/* ------------ FOOTER ------------ */
 	.social-media 
