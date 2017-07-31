@@ -46,9 +46,5 @@ We set up a [Tornado Web](http://www.tornadoweb.org/en/stable/) Python server on
 I wasn't heavily involved in the design of most mechanical systems  -->
 
 [^flowchart]: SMRT WATR UX Flowchart
-<figure class='folio_image' id='smrtwatr-ux-flow'>
-	<a target='_blank'>
-		<img src='../includes/portfolio_images/smrtwatr/SMRTWATR flow.jpg' style="max-width: 100%; max-height: none;">
-	</a>
-<figcaption></figcaption>
+<img src='../includes/portfolio_images/smrtwatr/SMRTWATR flow.jpg' style="max-width: 100%; max-height: none;">
 </figure>
