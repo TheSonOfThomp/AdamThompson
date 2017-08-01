@@ -23,9 +23,11 @@ $(document).ready(function(){
 	if ($(window).width() <= 768 || hideResumeText) {
 		$('.job').click(function(){
 			$('.resume-list',this).slideToggle();
+			$('.show', this).toggleClass('more').toggleClass('less')
 		});
 		$('.school').click(function(){
 			$('.resume-list',this).slideToggle();
+			$('.show', this).toggleClass('more').toggleClass('less')
 		});
 	}
 
@@ -42,11 +44,6 @@ $(document).ready(function(){
 	$('.filter').click(function(){
 		$('.filter.active').removeClass('active');
 		$(this).addClass('active')
-	});
-
-	$('.resume-content').click(function(){
-		$('.show', this).toggleClass('more')
-		$('.show', this).toggleClass('less')
 	});
 });
 
