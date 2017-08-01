@@ -421,7 +421,7 @@ section.resume
 				@media screen and (max-width: $logo-size/0.8/0.2) 
 					&
 						padding: 0
-		
+
 				.subsection-header
 					display: flex
 					justify-content: space-between
@@ -429,10 +429,23 @@ section.resume
 						font-family: $sans-serif
 						font-size: 2rem
 						font-weight: 500
+						.show
+							text-decoration: none
+							display: block
+							font-size: 12px
+							&.more:after
+								content: ' more'
+							&.less:after
+								content: ' less'
+
 						.inline-note
 							display: inline
 							font-size: 1.25rem
 							font-style: italic
+						&:hover,
+						&:focus
+							.show
+								text-decoration: underline
 
 				.subsection-duration
 					font-family: $sans-body

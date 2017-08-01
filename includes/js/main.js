@@ -43,6 +43,11 @@ $(document).ready(function(){
 		$('.filter.active').removeClass('active');
 		$(this).addClass('active')
 	});
+
+	$('.resume-content').click(function(){
+		$('.show', this).toggleClass('more')
+		$('.show', this).toggleClass('less')
+	});
 });
 
 function getFilterNotification(filter) {

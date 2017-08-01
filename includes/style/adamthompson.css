@@ -363,10 +363,20 @@ section.resume {
           font-family: "Raleway", "Lato", "Helvetica", sans-serif;
           font-size: 2rem;
           font-weight: 500; }
+          section.resume .container article .resume-content .subsection-header .subsection-title .show {
+            text-decoration: none;
+            display: block;
+            font-size: 12px; }
+            section.resume .container article .resume-content .subsection-header .subsection-title .show.more:after {
+              content: " more"; }
+            section.resume .container article .resume-content .subsection-header .subsection-title .show.less:after {
+              content: " less"; }
           section.resume .container article .resume-content .subsection-header .subsection-title .inline-note {
             display: inline;
             font-size: 1.25rem;
             font-style: italic; }
+          section.resume .container article .resume-content .subsection-header .subsection-title:hover .show, section.resume .container article .resume-content .subsection-header .subsection-title:focus .show {
+            text-decoration: underline; }
       section.resume .container article .resume-content .subsection-duration {
         font-family: "Lato", "Helvetica", sans-serif;
         font-size: 1rem;

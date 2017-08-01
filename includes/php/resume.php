@@ -13,7 +13,6 @@
 		</div>
 	</div>
 	<section class="experience container" id="work-experience">
-		<div class="bubble-connector"></div>
 		<article class="zynga job">
 			<div class="logo-container">
 				<div class="logo vertical-center"></div>
@@ -21,7 +20,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">Product Manager</span>
+					<span class="subsection-title">Product Manager<a class="show more">Show</a></span>
 					<span class="subsection-duration">Spring&nbsp2016</span>
 				</div>
 				<ul class="resume-list">
@@ -39,7 +38,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">Product Designer</span>
+					<span class="subsection-title">Product Designer<a class="show more">Show</a></span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, Product Designer at Noom</span>
 					<span class="subsection-duration">Fall&nbsp2015</span>
 				</div>
@@ -58,7 +57,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">UX Designer & Product Manager</span>
+					<span class="subsection-title">UX Designer & Product Manager<a class="show more">Show</a></span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, Product Design, User Interface Designer at KnowRoaming</span>
 					<span class="subsection-duration">Spring&nbsp2014 & Winter&nbsp2015</span>
 				</div>
@@ -73,8 +72,7 @@
 
 					<h4>Product Management</h4>
 						<li class="resume-item featured ux pm web soft">Initiated and lead weekly design meetings with developers, customer service, marketing and company leadership to discuss the experience of the mobile apps, consumer facing and corporate websites, and other relevant topics.</li>
-						<li class="resume-item featured pm">Created, branded and optimized a core company service, now called <a href="https://support.knowroaming.com/hc/en-us/articles/203064825-What-is-ReachMe-" target="_blank">ReachMe</a>.</li>						
-
+						<li class="resume-item featured pm">Created, branded and optimized a core company service, now called <a href="https://support.knowroaming.com/hc/en-us/articles/203064825-What-is-ReachMe-" target="_blank">ReachMe</a>.</li>
 					<h4>Industrial Design</h4>
 						<li class="resume-item ux industrial">Designed and prototyped a <a href="Portfolio/?p=KR_retail">retail stand</a> for dispensing product boxes and displaying product information in retail stores.</li>
 						<li class="resume-item graphics industrial">Designed a new product <a href="Portfolio/?p=KR_package">package concept</a>, reducing the box side by 50% by leveraging unique features of the KnowRoaming product.</li>
@@ -89,7 +87,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">UI/UX Designer</span>
+					<span class="subsection-title">UI/UX Designer<a class="show more">Show</a></span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, User Interface Designer at Sony Network Entertainment</span>
 					<span class="subsection-duration">Fall&nbsp2013</span>
 				</div>
@@ -124,7 +122,7 @@
 		<div class="resume-header">
 			<span class="resume-title">My Toolbox <span class="filter-notification"></span></span>
 		</div>
-		<div class="skills-sub-header"><!-- Professional --></div>
+		<div class="skills-sub-header"></div>
 		<ul class="program-list"> <!-- must have a multiple of 8 -->
 			<li class="animate resume-item featured ux" id="sketch">
 				<div class="app-logo"></div><p class="app-name">Sketch</p>
