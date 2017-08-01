@@ -366,7 +366,8 @@ section.resume {
           section.resume .container article .resume-content .subsection-header .subsection-title .show {
             text-decoration: none;
             display: block;
-            font-size: 12px; }
+            font-size: 12px;
+            padding-top: 6px; }
             section.resume .container article .resume-content .subsection-header .subsection-title .show.more:after {
               content: " more"; }
             section.resume .container article .resume-content .subsection-header .subsection-title .show.less:after {
