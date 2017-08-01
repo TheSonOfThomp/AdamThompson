@@ -237,8 +237,8 @@ section.portfolio {
         display: inline-block;
         width: 100%;
         height: 100%; }
-      section.portfolio .gallery .folio-item:hover .hover-state, section.portfolio .gallery .folio-item:focus .hover-state {
-        opacity: 1; }
+        section.portfolio .gallery .folio-item a:hover .hover-state, section.portfolio .gallery .folio-item a:focus .hover-state {
+          opacity: 1; }
       section.portfolio .gallery .folio-item .hover-state {
         opacity: 0;
         position: absolute;
@@ -350,25 +350,29 @@ section.resume {
           color: #4a4a4a; }
     section.resume .container article .resume-content {
       width: 80%;
-      padding: 54px 0 0 0;
+      margin: auto;
       float: left;
       display: inline-block; }
       @media screen and (max-width: 900px) {
         section.resume .container article .resume-content {
           padding: 0; } }
-      section.resume .container article .resume-content .subsection-header .subsection-title {
-        font-family: "Raleway", "Lato", "Helvetica", sans-serif;
-        font-size: 2rem;
-        font-weight: 500; }
-        section.resume .container article .resume-content .subsection-header .subsection-title .inline-note {
-          display: inline;
-          font-size: 1.25rem;
-          font-style: italic; }
+      section.resume .container article .resume-content .subsection-header {
+        display: flex;
+        justify-content: space-between; }
+        section.resume .container article .resume-content .subsection-header .subsection-title {
+          font-family: "Raleway", "Lato", "Helvetica", sans-serif;
+          font-size: 2rem;
+          font-weight: 500; }
+          section.resume .container article .resume-content .subsection-header .subsection-title .inline-note {
+            display: inline;
+            font-size: 1.25rem;
+            font-style: italic; }
       section.resume .container article .resume-content .subsection-duration {
-        margin-left: 1rem;
         font-family: "Lato", "Helvetica", sans-serif;
         font-size: 1rem;
         font-weight: 300;
+        margin: auto 16px;
+        text-align: right;
         float: right; }
       section.resume .container article .resume-content .resume-list {
         display: none;
@@ -385,7 +389,7 @@ section.resume {
     position: relative;
     display: inline-block; }
     section.resume .experience .job {
-      display: block;
+      display: flex;
       position: relative;
       width: 100%;
       overflow: hidden;
@@ -515,6 +519,7 @@ section.resume {
     position: relative;
     display: inline-block; }
     section.resume .education .school {
+      display: flex;
       margin-top: 2rem; }
     section.resume .education #uwaterloo .logo {
       background-image: url("../image_assets/uwaterloo.gif"); }

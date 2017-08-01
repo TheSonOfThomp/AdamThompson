@@ -280,11 +280,10 @@ section.portfolio
 				display: inline-block
 				width: 100%
 				height: 100%
-
-			&:hover,
-			&:focus
-				.hover-state
-					opacity: 1
+				&:hover,
+				&:focus
+					.hover-state
+						opacity: 1
 			
 			.hover-state
 				opacity: 0
@@ -416,7 +415,7 @@ section.resume
 
 			.resume-content
 				width: 80%
-				padding: ($logo-size - 36px)/2 0 0 0
+				margin: auto
 				float: left
 				display: inline-block
 				@media screen and (max-width: $logo-size/0.8/0.2) 
@@ -424,6 +423,8 @@ section.resume
 						padding: 0
 		
 				.subsection-header
+					display: flex
+					justify-content: space-between
 					.subsection-title
 						font-family: $sans-serif
 						font-size: 2rem
@@ -434,10 +435,11 @@ section.resume
 							font-style: italic
 
 				.subsection-duration
-					margin-left: 1rem
 					font-family: $sans-body
 					font-size: 1rem
 					font-weight: 300
+					margin: auto 16px
+					text-align: right
 					float: right
 
 				.resume-list
@@ -458,7 +460,7 @@ section.resume
 		position: relative
 		display: inline-block
 		.job
-			display: block
+			display: flex
 			position: relative
 			width: 100%
 			overflow: hidden
@@ -605,6 +607,7 @@ section.resume
 		position: relative
 		display: inline-block
 		.school
+			display: flex
 			margin-top: 2rem
 		#uwaterloo .logo
 			background-image: url('../image_assets/uwaterloo.gif')

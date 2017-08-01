@@ -219,7 +219,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">Systems Design Engineering <span class="inline-note">with Cognitive Science Minor</span></span>
+					<span class="subsection-title">Systems Design Engineering <span class="inline-note">with&nbspCognitive&nbspScience Minor</span></span>
 					<span class="hidden">University of Waterloo, Systems Design, Mechatronics, Human Factors, User Interface, </span>
 					<span class="subsection-duration">Class&nbspof&nbsp2017</span>
 				</div>
