@@ -20,7 +20,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">Product Manager<a class="show more">Show</a></span>
+					<span class="subsection-title">Product Manager<button class="show more">Show</button></span>
 					<span class="subsection-duration">Spring&nbsp2016</span>
 				</div>
 				<ul class="resume-list">
@@ -38,7 +38,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">Product Designer<a class="show more">Show</a></span>
+					<span class="subsection-title">Product Designer<button class="show more">Show</button></span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, Product Designer at Noom</span>
 					<span class="subsection-duration">Fall&nbsp2015</span>
 				</div>
@@ -57,7 +57,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">UX Designer & Product Manager<a class="show more">Show</a></span>
+					<span class="subsection-title">UX Designer & Product Manager<button class="show more">Show</button></span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, Product Design, User Interface Designer at KnowRoaming</span>
 					<span class="subsection-duration">Spring&nbsp2014 & Winter&nbsp2015</span>
 				</div>
@@ -87,7 +87,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">UI/UX Designer<a class="show more">Show</a></span>
+					<span class="subsection-title">UI/UX Designer<button class="show more">Show</button></span>
 					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, User Interface Designer at Sony Network Entertainment</span>
 					<span class="subsection-duration">Fall&nbsp2013</span>
 				</div>
@@ -217,7 +217,7 @@
 			</div>
 			<div class="resume-content">
 				<div class="subsection-header">
-					<span class="subsection-title">Systems Design Engineering <span class="inline-note">with&nbspCognitive&nbspScience Minor</span><a class="show more">Show</a></span>
+					<span class="subsection-title">Systems Design Engineering <span class="inline-note">with&nbspCognitive&nbspScience Minor</span><button class="show more">Show</button></span>
 					<span class="hidden">University of Waterloo, Systems Design, Mechatronics, Human Factors, User Interface, </span>
 					<span class="subsection-duration">Class&nbspof&nbsp2017</span>
 				</div>

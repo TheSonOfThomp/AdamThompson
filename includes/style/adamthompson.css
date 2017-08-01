@@ -364,10 +364,14 @@ section.resume {
           font-size: 2rem;
           font-weight: 500; }
           section.resume .container article .resume-content .subsection-header .subsection-title .show {
-            text-decoration: none;
-            display: block;
+            color: #5B753D;
+            background: none;
+            border: none;
+            font-family: "Raleway", "Lato", "Helvetica", sans-serif;
             font-size: 12px;
-            padding-top: 6px; }
+            padding: 6px 0 0 0;
+            text-decoration: none;
+            display: block; }
             section.resume .container article .resume-content .subsection-header .subsection-title .show.more:after {
               content: " more"; }
             section.resume .container article .resume-content .subsection-header .subsection-title .show.less:after {
@@ -970,21 +974,30 @@ footer {
       section.resume .container article .resume-content .resume-header {
         margin-top: 3rem; }
       section.resume .container article .resume-content .subsection-header {
+        display: block;
         width: 100%;
         padding-top: 1rem;
         text-align: center; }
         section.resume .container article .resume-content .subsection-header .subsection-title {
+          display: block;
           width: 100%;
           font-size: 1.5rem; }
+          section.resume .container article .resume-content .subsection-header .subsection-title .show {
+            display: none; }
         section.resume .container article .resume-content .subsection-header .subsection-duration {
           margin: 0;
           display: block;
-          float: none; }
+          float: none;
+          text-align: center; }
       section.resume .container article .resume-content .resume-list {
         display: none;
         padding-left: 40px; }
+    section.resume .experience .job {
+      display: block; }
     section.resume .skills {
       display: none; }
+    section.resume .education .school {
+      display: block; }
     section.resume .education .resume-header {
       display: none; }
 
@@ -1001,7 +1014,7 @@ footer {
   footer {
     display: block; }
 
-  /* ------------ FOOTER ------------ */
+  /* ------------ Portfolio Page ------------ */
   .portfolio-page .gallery-content .portfolio-title {
     width: 90%; }
   .portfolio-page .gallery-content .col {

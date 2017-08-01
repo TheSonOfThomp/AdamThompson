@@ -430,10 +430,14 @@ section.resume
 						font-size: 2rem
 						font-weight: 500
 						.show
+							color: $green
+							background: none
+							border: none
+							font-family: $sans-serif
+							font-size: 12px
+							padding: 6px 0 0 0
 							text-decoration: none
 							display: block
-							font-size: 12px
-							padding-top: 6px
 							&.more:after
 								content: ' more'
 							&.less:after
@@ -1099,23 +1103,33 @@ footer
 					.resume-header 
 						margin-top: 3rem
 					.subsection-header 
+						display: block
 						width: 100%
 						padding-top: 1rem
 						text-align: center
 						.subsection-title 
+							display: block
 							width: 100%
 							font-size: 1.5rem
+							.show
+								display: none
 						.subsection-duration 
 							margin: 0
 							display: block
 							float: none
+							text-align: center
 					.resume-list 
 						display: none
 						padding-left: 40px
 
+		.experience	
+			.job
+				display: block
 		.skills 
 			display: none
 		.education
+			.school
+				display: block
 			.resume-header
 				display: none
 
@@ -1130,7 +1144,7 @@ footer
 	footer
 		display: block
 
-	/* ------------ FOOTER ------------ */
+	/* ------------ Portfolio Page ------------ */
 
 	.portfolio-page
 		.gallery-content

@@ -5,6 +5,11 @@ var filterResume = false;
 
 var hideResumeText = true
 
+function toggleContent(ths){
+	$('.resume-list',ths).slideToggle();
+	$('.show', ths).toggleClass('more').toggleClass('less')
+}
+
 $(document).ready(function(){
 	
 	//Rotate through the header 
@@ -22,12 +27,10 @@ $(document).ready(function(){
 	// show Resume content
 	if ($(window).width() <= 768 || hideResumeText) {
 		$('.job').click(function(){
-			$('.resume-list',this).slideToggle();
-			$('.show', this).toggleClass('more').toggleClass('less')
+			toggleContent(this)
 		});
 		$('.school').click(function(){
-			$('.resume-list',this).slideToggle();
-			$('.show', this).toggleClass('more').toggleClass('less')
+			toggleContent(this)
 		});
 	}
 
