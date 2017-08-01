@@ -50,7 +50,7 @@
 		</li>
 
 		<!-- ********** BOSE SPEAKER ********** -->
-		<li class="folio-item industrial hardware" 
+		<!-- <li class="folio-item industrial hardware" 
 			data-feature-rank="10" 
 			data-published-date="2015-10-28">
 			<a href="Portfolio/?p=bose_speaker">
@@ -62,7 +62,7 @@
 					</div>
 				</div>
 			</a>
-		</li>
+		</li> -->
 
 		<!-- ********** SMRT WATR ********** -->
 		<li class="folio-item ux hardware electrical software pm featured" 
