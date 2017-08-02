@@ -18,8 +18,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="keywords" content="design, user experience, product, industrial, gui">
-		<link rel="shortcut icon" type="image/png" href="<?php echo $root_path?>/includes/image_assets/@_light.png">
+		<meta name="keywords" content="design, user experience, product, industrial, UX, UI">
+
+		<link rel="shortcut icon" type="image/png" href="<?php echo $root_path?>/includes/image_assets/silhouette_icn.jpg">
 
 		<!-- STYLE & FONTS -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:300, 100' rel='stylesheet' type='text/css'>
