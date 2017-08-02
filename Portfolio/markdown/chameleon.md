@@ -16,7 +16,7 @@ I was the product lead in this project, and played a pivotal role in all aspects
 
 ## Getting Started
 
-The bulk of the first term (4 months) of this project was spent refining our problem, researching user requirements, and learing about acoustics phyiscs. Though we started the Final-Year Design Project (FYDP) in September 2016, we didn't arrive at a reasonable problem statement until early October. This time was spent researching the audio and health spaces, and meeeting with experts like audiologists, acoustics professors, and audio electronics engineers to come up with a realistic and resolvable design problem statement:
+The bulk of the first term (4 months) of this project was spent refining our problem, researching user requirements, as well as learning about acoustics physics. Though we started the Final-Year Design Project (FYDP) in September 2016, we didn't arrive at a reasonable problem area until early October. This time was spent researching music, audio and health spaces, and meeting audiologists, audio electronics engineers, and acoustics professors  to come up with a reasonable and realistic design problem statement:
 
 > Workers in variably loud environments, where communication is key, often do not wear hearing protection in order to more easily communicate, and to avoid the tedium of constant removal and re-application. 
 
@@ -75,7 +75,7 @@ Next, in order to find the _amplitude_ of the incoming signal, I added a peak de
 </figure>
 
 
-This DC signal was then input into an `analogRead` pin of an Arduino UNO. Since all the gains in the circuit are known, we can easily calculate the voltage at the output of the microphone. Since the sensitivity of the microphone is given, the incoming noise level in dB(A) can be caculated like so: 
+This DC signal was then input into an `analogRead` pin of an Arduino UNO. Since all the gains in the circuit are known, we can easily calculate the voltage at the output of the microphone. Since the sensitivity of the microphone is given, the incoming noise level in dB(A) can be calculated like so: 
 
 ```Arduino
 // Microphone Calibration
@@ -96,16 +96,16 @@ This took a little tweaking since the component values and mic input voltage wer
 
 ---
 
-I often got questions when demo-ing the prototype about why the filtering was implemented in analog circuitry as opposed to digitally. The answer for the first prototype is that the Arduino Uno was the only microcontroller we had access to at this point, and that I was more familiar with analog filters vs. digital filters. Once we had decided to implement the final prototype using a Teensy 3.2, which has enough processing power to do this kind of filtering (and I had become more familiar with digital filtering) I decided to keep this section of the design the same so I could spend more time working on parts of the prototype that didn't work yet. So once the measurement curcuit was designed, not much changed (other than the specific op-amps to deal with new power requirements). 
+I often got questions when demo-ing the prototype about why the filtering was implemented in analog circuitry as opposed to digitally. The answer for the first prototype is that the Arduino Uno was the only microcontroller we had access to at this point, and that I was more familiar with analog filters vs. digital filters. Once we had decided to implement the final prototype using a Teensy 3.2, which has enough processing power to do this kind of filtering (and I had become more familiar with digital filtering) I decided to keep this section of the design the same so I could spend more time working on parts of the prototype that didn't work yet. So once the measurement circuit was designed, not much changed (other than the specific op-amps to deal with new power requirements). 
 
 ## First Full Prototype 
 <!-- — Mechanical Design & Control Logic -->
 
-Our first prototype used a standard issue ear-muff, retro-fitted with two aluminum disks. Our goal early on was to make a device which could attenuate at _all_ values between maximum an minimum attenuation. This could hypothetically be achieved by rotating the disks, and aligning them to alow enough sound to pass through. Using a mic placed inside the ear-cup, we measured the SPL reaching the ear, and used the Arduino to control a motor and rotate the top disk.
+Our first prototype used a standard issue ear-muff, retro-fitted with two aluminum disks. Our goal early on was to make a device which could attenuate at _all_ values between maximum an minimum attenuation. This could hypothetically be achieved by rotating the disks, and aligning them to allow enough sound to pass through. Using a mic placed inside the ear-cup, we measured the SPL reaching the ear, and used the Arduino to control a motor and rotate the top disk.
 
 The first iteration of the control logic attempted to create a pseudo-PID controller using the target SPL as the reference signal, and would rotate the disks until the incoming SPL matched the reference. Due to the placement of the motor though, the noise of the motor could be heard inside the ear-cup, and made it so the device would never find an equilibrium point. 
 
-The second controller iteration did away with continuously variable attenuation, and focused on trying to either attenuate, or not attenuate. This worked better, but the noise of the motor still influenced the sound inside the cup. Because of this, we had to write a line in the controller to ignore inputs immediately after openning for the device to work properly. Also, since reaction time was a priority, this design had too much inertia to close in a reasonable time frame.
+The second controller iteration did away with continuously variable attenuation, and focused on trying to either attenuate, or not attenuate. This worked better, but the noise of the motor still influenced the sound inside the cup. Because of this, we had to write a line in the controller to ignore inputs immediately after opening for the device to work properly. Also, since reaction time was a priority, this design had too much inertia to close in a reasonable time frame.
 
 <figure class='folio_image video' id='first-proto-video'>
 	<iframe src="https://www.youtube.com/embed/yUvlpVK7ays" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -127,7 +127,7 @@ Our second concept was an evolution of the first, with a new actuation method. S
 
 After a bunch of math and searching for a solenoid with a long enough stroke length, I finally designed a device that did what we wanted. When the solenoid turned on, the disk would rotate to open. When released, a counterweight would close it—satisfying the need to fail safely. The idea was that using PWM control of the solenoid, we could have a partly open device.
 
-The problem with this design though was that it could not achive both requirements of response time, and _fail safely_ simultaneously. By setting the default position of the disk, we could achieve fast response, but would sacrifice the fail safe. The solenoid here was also very heavy, and would very quickly put us over our weight restriction. We had to come up with a better design. 
+The problem with this design though was that it could not achieve both requirements of response time, and _fail safely_ simultaneously. By setting the default position of the disk, we could achieve fast response, but would sacrifice the fail safe. The solenoid here was also very heavy, and would very quickly put us over our weight restriction. We had to come up with a better design. 
  
  <figure class='folio_image video' id='solenoid-video'>
 	<iframe src="https://www.youtube.com/embed/GW6wDcbiR3k?list=PLnUG-U16QXpsAc74SRDsiHT3LXUmkgTNe" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -138,7 +138,7 @@ The problem with this design though was that it could not achive both requiremen
 ## A Fork in the Road
 <!-- Acoustic Tests -->
 
-Around the same time as we were evaluating the solenoid-piston actuator, we prepared an experiment to determine what attenuator was actually the best. We had taken all our design ideas, and evaluated them based on our criteria using a decision matrix. We took the top three, and ran them through a rough a qualitative acoustic test. We retrofitted these designs into an ear-muff, and played loud (but not harmful) noise. We then and asked participants to evaluate the attenuation heard for each design. While this method was not entirely scientific, it was a quick process that provided interresting data. 
+Around the same time as we were evaluating the solenoid-piston actuator, we prepared an experiment to determine what attenuator was actually the best. We had taken all our design ideas, and evaluated them based on our criteria using a decision matrix. We took the top three, and ran them through a rough a qualitative acoustic test. We retrofitted these designs into an ear-muff, and played loud (but not harmful) noise. We then and asked participants to evaluate the attenuation heard for each design. While this method was not entirely scientific, it was a quick process that provided interesting data. 
 
 
 <figure class='folio_image' id='three-attenuators'>
@@ -168,7 +168,7 @@ From only a few of these tests, it became clear that the "Pie slices" design (us
 
 While looking at the results of these tests, I came across research that was able to quantify the trends we were seeing. It suggested that the majority of attenuation variability essentially comes from closing small slit leaks, and variability decays exponentially as the aperture size increases [^Trompette]. 
 
-That makes sense intuitively—take the analogy of closing a window to block noise from a party outside. There is no noticable difference in noise level until the window is nearly completely closed. In order to achieve useful continuously variable attenuation, we would need incredibly accurate control of an actuator in the first few degrees of rotation. 
+That makes sense intuitively—take the analogy of closing a window to block noise from a party outside. There is no noticeable difference in noise level until the window is nearly completely closed. In order to achieve useful continuously variable attenuation, we would need incredibly accurate control of an actuator in the first few degrees of rotation. 
 
 <figure class='folio_image' id='trompette-graph'>
 	<a target='_blank'>
@@ -252,14 +252,14 @@ Now that we have a proof-of-concept attenuator/actuator design, we'll change the
 
 We had bought a Teensy as a faster, more powerful replacement to the Arduino UNO. The first step was to make sure the Teensy could read the incoming signal from the microphone. Powering the Teensy from a laptop, the mic from the bench supply, we successfully got an `analogRead` again. 
 
-The initial measurement circuit used an analog envelope filter to measure the peak noise level. This resulted in an exponential decay effect, and could result in the device behaving incorrectly. It would be better to use a sample-and-hold algorithm on the microcontroller itself.  The new algorithm would continously sample the audio, and hold the peak value. If the peak value ever exceeded the noise threshold, we would send a `close` command to the driver. If the peak level dropped below the threshold after a given safe window, the device would `open` again. As a heuristic, we selected a 5-second window as a slow-enough noise rate to avoid frequent opening and closing of the device—though this could be changed to suit a given scenario. Controller code can be found on [GitHub](https://github.com/dsschwarz/madd.audio/blob/master/ChameleonController/ChameleonController.ino)
+The initial measurement circuit used an analog envelope filter to measure the peak noise level. This resulted in an exponential decay effect, and could result in the device behaving incorrectly. It would be better to use a sample-and-hold algorithm on the microcontroller itself.  The new algorithm would continuously sample the audio, and hold the peak value. If the peak value ever exceeded the noise threshold, we would send a `close` command to the driver. If the peak level dropped below the threshold after a given safe window, the device would `open` again. As a heuristic, we selected a 5-second window as a slow-enough noise rate to avoid frequent opening and closing of the device—though this could be changed to suit a given scenario. Controller code can be found on [GitHub](https://github.com/dsschwarz/madd.audio/blob/master/ChameleonController/ChameleonController.ino)
 
 
 #### Driver Circuit
 
 Back when the plan was to use a DC motor, I had found some optical relay ICs in the workshop, and put together an [H-bridge](https://en.wikipedia.org/wiki/H_bridge). The new design was similar, and could make use of the same circuit to change the polarity. So, by sending 2 bits (`digitalWrite`) from the Teensy, we could quite easily change the polarity of the electromagnet. We discussed using a proper H-bridge IC, but these were physically too large, and were overkill for the task at hand.
 
-I spent some time in the lab testing this circuit, and making sure it would work with our speaker driver. The only real issue with the relay ciruit design was the potential to draw too much current since they were only rated to 500mA. I placed an 8Ω current-limiting resistor in the circuit to prevent this.
+I spent some time in the lab testing this circuit, and making sure it would work with our speaker driver. The only real issue with the relay circuit design was the potential to draw too much current since they were only rated to 500mA. I placed an 8Ω current-limiting resistor in the circuit to prevent this.
 
 #### Power Supply
 

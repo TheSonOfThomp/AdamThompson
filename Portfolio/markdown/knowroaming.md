@@ -92,7 +92,7 @@ With the amount of unique actions needed to register and get ready to go, there 
 
 ## Design Iteration
 
-Once I had a good picture of the service and its users, I started sketching and making some wireframes for different parts of the app. I was at the company two seperate work-terms, and continued my work on the app where I left off. The design process here was incredibly iterative, and the design of some app sections informed and changed the design of other sections. I've tried to lay out the design process as clearly as possible.
+Once I had a good picture of the service and its users, I started sketching and making some wireframes for different parts of the app. I was at the company two separate work-terms, and continued my work on the app where I left off. The design process here was incredibly iterative, and the design of some app sections informed and changed the design of other sections. I've tried to lay out the design process as clearly as possible.
 
 ### Account Setup
 
@@ -111,7 +111,7 @@ After looking into all the tasks required to setup an account and discussing wit
 <figcaption></figcaption>
 </figure>
 
-A core offering by KnowRoaming is called _Call Forwarding_, a service that allows you to get calls on your home while abroad. To enrol in this service, a user would have to purchase a phone number their home region, and set up forwarding on their home SIM. Since several users were confused at why they would have to purchase a _local_ number for a roaming service, we decided to re-brand the service as ReachMe, which cost a monthly fee and required a single button press to activate in app.
+A core offering by KnowRoaming is called _Call Forwarding_, a service that allows you to get calls on your home while abroad. To enroll in this service, a user would have to purchase a phone number their home region, and set up forwarding on their home SIM. Since several users were confused at why they would have to purchase a _local_ number for a roaming service, we decided to re-brand the service as ReachMe, which cost a monthly fee and required a single button press to activate in app.
 
 #### Ready to Roam
 
@@ -149,7 +149,7 @@ I used this hierarchy to inform the home screen design, and the app's informatio
 
 #### Dashboard-Style Design
 
-A Dashboard-style homescreen would allow nearly all navigational components to be easily salient and discoverable. However, with at least 8 different actions with different relative importances, there was a high likelihood that the interface would become cluttered quite quickly, especially if new features would be added. I could make more important elements bigger, and lesser ones smaller, but the risk of clutter remained. 
+A Dashboard-style home screen would allow nearly all navigational components to be easily salient and discoverable. However, with at least 8 different actions with different relative importances, there was a high likelihood that the interface would become cluttered quite quickly, especially if new features would be added. I could make more important elements bigger, and lesser ones smaller, but the risk of clutter remained. 
 
 <figure class='folio_image' id='home-dash'>
 <a target='_blank'>
@@ -178,7 +178,7 @@ I did have qualms about the drawer though, for [discoverability reasons](https:/
 
 #### Tab Bar
 
-A tab bar is ubiquitous on both iOS and Android. With the ablility to show highly important information and actions with a default tab, place others in the tab bar, and even more still in a now-common "More" tab, the tab bar seemed like the best route to go.
+A tab bar is ubiquitous on both iOS and Android. With the ability to show highly important information and actions with a default tab, place others in the tab bar, and even more still in a now-common "More" tab, the tab bar seemed like the best route to go.
 
 While there are still some elements hidden, the more frequently used items are in the bar. This design avoids clutter that the dashboard had, and does not have the discoverability issue of the drawer (thanks to the word "More" under the hamburger icon).
 
@@ -191,7 +191,7 @@ While there are still some elements hidden, the more frequently used items are i
 <figcaption></figcaption>
 </figure>
 
-Using [Prototype on Paper](https://marvelapp.com/pop/) (now owned by Marvel), I made prototypes of these navigation patterns and tested on co-workers, friends and family. In retrospect I should've tested more rigorously, but time constraints (and inexperience at the time) were a major limiting factor at the time.
+Using [Prototype on Paper](https://marvelapp.com/pop/) (now owned by Marvel), I made prototypes of these navigation patterns and tested on co-workers, friends and family. In retrospect I should have tested more rigorously, but time constraints (and inexperience at the time) were a major limiting factor at the time.
 
 ### Use Cases
 
@@ -225,7 +225,7 @@ When a user arrives abroad, neither Android nor iOS will fully setup a data conn
 </figure>
 You might think this seems like the same as the first use case—and you wouldn't be entirely wrong. It is very similar, only with one major distinction. While the geographical case is the same, iOS users arriving back home after being abroad will still have the KnowRoaming data connection. In order to return to their home data plan, users need to redo the same process they took to establish their roaming data connection.
 
-From a UX standpoint this one was tricky, since this really shouldn't be necessary, but was due to technical limitations. It was difficult to counvince users that once arriving back home, their data connection wouldn't automatically reconnect like the regular cell service would.
+From a UX standpoint this one was tricky, since this really shouldn't be necessary, but was due to technical limitations. It was difficult to convince users that once arriving back home, their data connection wouldn't automatically reconnect like the regular cell service would.
 
 _**Home SIM while Abroad / Abroad on Home SIM**_
 
@@ -264,7 +264,7 @@ Once the major UX flow was mostly decided, I took to designing and refining diff
 
 #### Reload Screen
 
-When redesigning the account top-up/reload screen, I pressed for user editable amounts to allow for the ablility to top up with a precise the amount that the user wanted. This was vetoed for logistical and support reasons, and so I had to design for a number of discrete reload options, as well as the same number of Auto-Reload options. I quickly realized that if I put all the options on the screen at once, the screen would get really crowded, and likely overflow off the bottom of the screen. Trying o find ways to efficiently layout this information, I took inspiration from the Starbucks app at the time, which had a horizontally scrolling row to select how much you wanted to put on your Starbucks card. The idea would be to have enough horizontal room for 4.5 cells, which would cut off one cell and imply scrollability.
+When redesigning the account top-up/reload screen, I pressed for user editable amounts to allow for the ability to top up with a precise the amount that the user wanted. This was vetoed for logistical and support reasons, and so I had to design for a number of discrete reload options, as well as the same number of Auto-Reload options. I quickly realized that if I put all the options on the screen at once, the screen would get really crowded, and likely overflow off the bottom of the screen. Trying o find ways to efficiently layout this information, I took inspiration from the Starbucks app at the time, which had a horizontally scrolling row to select how much you wanted to put on your Starbucks card. The idea would be to have enough horizontal room for 4.5 cells, which would cut off one cell and imply scrollability.
 
 I brought this idea to our lead iOS developer, and we brainstormed ideas on how to implement something like this. She came up with a rotated custom list UI element which worked perfectly. I was happy with the result, and we implemented this for both the Reload and Auto-Reload amounts. 
 
@@ -277,7 +277,7 @@ I brought this idea to our lead iOS developer, and we brainstormed ideas on how 
 
 #### Usage Screen
 
-Another tricky screen to design the layour for was the usage screen. I tried to come up with some creative ways of showing a user how many minutes, messages and megabytes they had used in the past day, week, month or year. I had several pages of mockups showing different charts and graphs, but I couldn't get all the information and options laid out nicely on the screen. We finally decided to keep it simple, and go with a basic list of all the events within the given time period.
+Another tricky screen to design the layout for was the usage screen. I tried to come up with some creative ways of showing a user how many minutes, messages and megabytes they had used in the past day, week, month or year. I had several pages of mockups showing different charts and graphs, but I couldn't get all the information and options laid out nicely on the screen. We finally decided to keep it simple, and go with a basic list of all the events within the given time period.
 
 Even when keeping the data simple, allowing selection from both four different time ranges and three different types of usage was a challenge. The instinct would be to use two layers of segmented controls, but after mocking that up and making some prototypes, these designs didn't seem right. The segmented control pattern is rarely doubled up in practice, and generally works as a secondary tab bar. A backup pattern would be needed for one of either the time range or usage type.
 
@@ -292,7 +292,7 @@ To solve this problem, I still went with a similar pattern, but with a different
 
 #### Design for the "Thumb Zone"
 
-There have been many blog posts about designing for the [thumb zone](http://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php), or sometimes the "stretch zone" as it's sometimes called. There are three rough regions on a mobile device: easy-, ok- and hard-to-reach with the thmb for a single handed user. When I was laying out components in the UI, I kept the thumb zone in mind, and kept priority interacion zones within the easy- or ok-to-reach zones. The hard-to-reach areas should be reserved for feedback-only or infrequent interactions.
+There have been many blog posts about designing for the [thumb zone](http://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php), or sometimes the "stretch zone" as it's sometimes called. There are three rough regions on a mobile device: easy-, ok- and hard-to-reach with the thumb for a single handed user. When I was laying out components in the UI, I kept the thumb zone in mind, and kept priority interaction zones within the easy- or ok-to-reach zones. The hard-to-reach areas should be reserved for feedback-only or infrequent interactions.
 
 <figure class='folio_image' id='thumbzone'>
 <a target='_blank'>
@@ -303,7 +303,7 @@ There have been many blog posts about designing for the [thumb zone](http://www.
 
 #### Reminders and Pop-ups
 
-Everyone hates pop-ups, but sometimes the're necessary. However, previous versons of the KnowRoaming app overused pop-ups, showing one essentially everytime a user returned to the app outside of about a one hour window. There were some pop-ups that were necessary though. Certain pop-ups contained highly important contextual information when a user arrives abroad or changes networks reminding them what actions to take. I took to redesigning this reminder to first make it fit btter visually, and second make it convey the information (hopefully) more clearly. This reminder will appear only once every few times the user ooens the app (I don't recall the exact interval), as well as when a cell network change is detected. Users also have the ability to disable the notification. 
+Everyone hates pop-ups, but sometimes they're necessary. However, previous versions of the KnowRoaming app overused pop-ups, showing one essentially every time a user returned to the app outside of about a one hour window. There were some pop-ups that were necessary though. Certain pop-ups contained highly important contextual information when a user arrives abroad or changes networks reminding them what actions to take. I took to redesigning this reminder to first make it fit better visually, and second make it convey the information (hopefully) more clearly. This reminder will appear only once every few times the user opens the app (I don't recall the exact interval), as well as when a cell network change is detected. Users also have the ability to disable the notification. 
 
 <figure class='folio_image' id='reminders'>
 <a target='_blank'>
@@ -315,7 +315,7 @@ Everyone hates pop-ups, but sometimes the're necessary. However, previous verson
 
 ### Typography
 
-Early in the design process, I tried using some fonts from KnowRoaming's logotype and marketing materials, specifically [Brandon Grotesque](https://typekit.com/fonts/brandon-grotesque) and [Futura](https://typekit.com/fonts/futura-pt)—two approachable sans-serif fonts. These mockups never seemed to look right since these fonts were designed for print, and weren't always readable on the phone screen. After exploring some other fonts, I decided that the simplest decision would be to use the system fonts: Helvetica Neue for iOS (at the time), and Roboto for Android. After experimenting with several fonts while designng both the app and other graphics, I was able to create a [style guide](../KnowRoaming_Style_Guide_2015.pdf) which includes colour, typography, logo use, and other elements. Also included in the style guide guidelines for colours and font weights to use on different background colours.
+Early in the design process, I tried using some fonts from KnowRoaming's logotype and marketing materials, specifically [Brandon Grotesque](https://typekit.com/fonts/brandon-grotesque) and [Futura](https://typekit.com/fonts/futura-pt)—two approachable sans-serif fonts. These mockups never seemed to look right since these fonts were designed for print, and weren't always readable on the phone screen. After exploring some other fonts, I decided that the simplest decision would be to use the system fonts: Helvetica Neue for iOS (at the time), and Roboto for Android. After experimenting with several fonts while designing both the app and other graphics, I was able to create a [style guide](../KnowRoaming_Style_Guide_2015.pdf) which includes colour, typography, logo use, and other elements. Also included in the style guide guidelines for colours and font weights to use on different background colours.
 
 <figure class='folio_image' id='style-typography'>
 <a target='_blank'>
@@ -326,7 +326,7 @@ Early in the design process, I tried using some fonts from KnowRoaming's logotyp
 
 ### Colour
 
-Also included in this style guide, is a colour guideline. When KnowRoaming had hired a full-time graphic designer, the two of us worked together to standardze the colours we used, and for what functions in the UI. Since the company logo had already been designed, it was only natural to use the included light and dark blues as the primary colours in the app. Additional blues were selected as button-press states, for dark text, and a light blue as an off-white background. 
+Also included in this style guide, is a colour guideline. When KnowRoaming had hired a full-time graphic designer, the two of us worked together to standardize the colours we used, and for what functions in the UI. Since the company logo had already been designed, it was only natural to use the included light and dark blues as the primary colours in the app. Additional blues were selected as button-press states, for dark text, and a light blue as an off-white background. 
 
 <figure class='folio_image' id='style-blue'>
 <a target='_blank'>
@@ -348,7 +348,7 @@ We also outlined secondary colours: Gold, Teal, Red and Lavender. These colours 
 
 #### ReachMe Logo
 
-Since I was one of the original ideators of the ReachMe service branding, I created a logo for the unique service. The design was fairly straightforward, and to be honset, derivative. The icon uses the bubbles featured in the company logo, connected with lines to signify connectedness. The logotype simply echoes the company logo font weights.
+Since I was one of the original creators of the ReachMe service branding, I created a logo for the unique service. The design was fairly straightforward, and to be honest, derivative. The icon uses the bubbles featured in the company logo, connected with lines to signify connectedness. The logotype simply echoes the company logo font weights.
 
 <figure class='folio_image' id='reachme_logo'>
 <a target='_blank'>
@@ -366,9 +366,9 @@ Since I was one of the original ideators of the ReachMe service branding, I crea
 <figcaption>A limited selection of KnowRoaming icons</figcaption>
 </figure>
 
-On the home screen, icons representing the user's current state, the actons they can perform in that state, and tab bar icons were all necessary. To create these icons, I first took inspiration from existing iconsets on sites like [Iconfinder](http://www.iconfinder.com). Based on some common symbols, I created an icon set in a unified KnowRoaming style—a thin stroke with rounded end-caps, in keeping with the iOS design language at the time.
+On the home screen, icons representing the user's current state, the actions they can perform in that state, and tab bar icons were all necessary. To create these icons, I first took inspiration from existing icon sets on sites like [Iconfinder](http://www.iconfinder.com). Based on some common symbols, I created an icon set in a unified KnowRoaming style—a thin stroke with rounded end-caps, in keeping with the iOS design language at the time.
 
-The "Setup Data" icons were interresting to design, since they were fairly unique compared to the other icons. I started with a (hopefully) ubiquitous symbol for "internet"—the globe—and added elements to symbolize the state of being abroad or returning home. After some iterating on these elements, I arrived at the following icons.
+The "Setup Data" icons were interesting to design, since they were fairly unique compared to the other icons. I started with a (hopefully) ubiquitous symbol for "internet"—the globe—and added elements to symbolize the state of being abroad or returning home. After some iterating on these elements, I arrived at the following icons.
 
 <figure class='folio_image' id='data-icons'>
 <a target='_blank'>
@@ -381,7 +381,7 @@ The "Setup Data" icons were interresting to design, since they were fairly uniqu
 
 ## Conclusion (tl;dr)
 
-To close this massively long article, I'll say that this was an amazing experience, and I learned a lot independently about design; the process and the craft. If I could go back and do this again, I would definitely invest more in true user testing. We didn't have many resources, so most of the testing was done on co-workers, friends and family—a process I like to call "guerilla user-testing". Actually reaching out and talking to users (something that terrified me then, and still does a little), as well as investing in user-testing software (like usertesting.com) would likely have sped up the design process. Creating some designs and getting feedback within a few days could have given me real answers as opposed to educated hunches which were never really proven.
+To close this massively long article, I'll say that this was an amazing experience, and I learned a lot independently about design; the process and the craft. If I could go back and do this again, I would definitely invest more in true user testing. We didn't have many resources, so most of the testing was done on co-workers, friends and family—a process I like to call "guerrilla user-testing". Actually reaching out and talking to users (something that terrified me then, and still does a little), as well as investing in user-testing software (like usertesting.com) would likely have sped up the design process. Creating some designs and getting feedback within a few days could have given me real answers as opposed to educated hunches which were never really proven.
  
 <!-- ### Motion Design
 
