@@ -233,7 +233,9 @@ html
 		font-weight: 100
 
 		p
-			margin: 0
+			margin: 0 auto
+			width: 66%
+
 
 /* ---------------------- PORTFOLIO ---------------------- */
 
@@ -318,6 +320,10 @@ section.portfolio
 					color: $white
 					line-height: 1.8rem
 					font-weight: 500
+					-webkit-backdrop-filter: blur(20px)
+					span
+						display: inline-block
+						margin: auto 12px
 					.folio-title
 						font-size: 1.5rem
 						font-family: $sans-serif
@@ -852,7 +858,7 @@ footer
 			display: block
 			width: 20%
 			height: 100%
-			margin: 0 40%
+			margin: 0 auto
 			background-size: contain
 			background-position: 50%
 			background-repeat: no-repeat
@@ -919,7 +925,7 @@ footer
 	.mobile-only 
 		display: inline
 
-	/* ------------ HEADER ------------ */
+	/* ------------ HEADER - MOBILE ------------ */
 	.header, .sub-header
 		height: auto
 		margin-top: 0
@@ -978,7 +984,7 @@ footer
 	li.filter:focus 
 		background-color: $green
 
-	/* ------------ BIO ------------ */
+	/* ------------ BIO - MOBILE ------------ */
 	.bio 
 		height: auto
 		margin-top: 0
@@ -1007,17 +1013,20 @@ footer
 			font-size: 16px
 			p 
 				margin-bottom: 1rem
+				width: 100%	
 	.social-list.dark,
 	.social-list.light
 		width: 100vw
 		margin: 0 -12%
 		padding-top: 0
 		display: inline-block
+		.social-media
+			a
+				width: 30%
 
 
 
-
-	/* ------------ FILTER ------------ */
+	/* ------------ FILTER - MOBILE ------------ */
 
 	.site-filter 
 		margin-top: 1rem
@@ -1048,7 +1057,7 @@ footer
 		&:after 
 			display: none
 
-	/* ------------ PORTFOLIO ------------ */
+	/* ------------ PORTFOLIO - MOBILE ------------ */
 	section.portfolio 
 		margin: 0
 		max-height: none
@@ -1067,7 +1076,7 @@ footer
 				background: rgba(28,28,28,0.6)
 				border-radius: 8px 
 
-	/* ------------ RESUME ------------ */
+	/* ------------ RESUME - MOBILE ------------ */
 	section.resume 
 		margin-top: -2rem
 		.sub-header
@@ -1079,7 +1088,6 @@ footer
 				text-align: left
 			li 
 				font-size: 1rem
-				text-align: center
 				margin-top: 24px
 		.container
 			article
@@ -1133,7 +1141,7 @@ footer
 			.resume-header
 				display: none
 
-	/* ------------ FOOTER ------------ */
+	/* ------------ FOOTER - MOBILE ------------ */
 	.social-media 
 		width: 33%
 		height: 4.8rem
@@ -1144,7 +1152,7 @@ footer
 	footer
 		display: block
 
-	/* ------------ Portfolio Page ------------ */
+	/* ------------ Portfolio Page - MOBILE ------------ */
 
 	.portfolio-page
 		.gallery-content
