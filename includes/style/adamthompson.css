@@ -257,14 +257,14 @@ section.portfolio {
         -webkit-transition: opacity 0.15s ease-in-out;
         -moz-transition: opacity 0.15s ease-in-out;
         transition: opacity 0.15s ease-in-out;
-        -webkit-backface-visibility: hidden; }
+        -webkit-backface-visibility: hidden;
+        -webkit-backdrop-filter: blur(4px); }
         section.portfolio .gallery .folio-item .hover-state .folio-hover {
           display: inline-block;
           vertical-align: middle;
           color: #FAFAFA;
           line-height: 1.8rem;
-          font-weight: 500;
-          -webkit-backdrop-filter: blur(20px); }
+          font-weight: 500; }
           section.portfolio .gallery .folio-item .hover-state .folio-hover span {
             display: inline-block;
             margin: auto 12px; }
