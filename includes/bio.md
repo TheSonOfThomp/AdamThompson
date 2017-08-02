@@ -1,2 +1,2 @@
-Hey, I've designed apps and sites with Noom, KnowRoaming, and Sony and studied Systems Design Engineering at the University of Waterloo. 
+Hey, I've designed with Noom, KnowRoaming, and Sony and studied Systems Design Engineering at the University of Waterloo. 
 I’m a big-picture problem solver—always looking for the best solution to the right problem. I have a passion for music, travel and healthcare. Let's work together and make something great.

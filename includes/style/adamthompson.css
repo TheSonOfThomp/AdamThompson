@@ -11,7 +11,7 @@ html {
     padding: 0;
     margin: 0;
     font-family: "Merriweather", "Garamond", "Times New Roman", serif;
-    color: #4a4a4a;
+    color: #505050;
     font-weight: 100;
     overflow-x: hidden; }
   html main {
@@ -162,7 +162,7 @@ html {
     .menu .filter:hover {
       background: #EDF2E6; }
     .menu .filter:active, .menu .filter.active {
-      color: #4a4a4a;
+      color: #505050;
       background: #DCE6CF; }
 
 .site-filter {
@@ -191,7 +191,7 @@ html {
     display: block;
     margin-top: 2.5em;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 2em;
     font-weight: 100; }
     .bio .bio-text p {
@@ -311,7 +311,7 @@ section.resume {
     padding-left: 1rem;
     width: 30%;
     font-weight: 400;
-    border-bottom: 1px solid #4a4a4a; }
+    border-bottom: 1px solid #505050; }
     section.resume .resume-header .resume-title {
       font-family: "Raleway", "Lato", "Helvetica", sans-serif;
       font-size: 2rem;
@@ -351,7 +351,7 @@ section.resume {
         text-align: center; }
         section.resume .container article .logo-container .company-site a {
           text-decoration: none;
-          color: #4a4a4a; }
+          color: #505050; }
     section.resume .container article .resume-content {
       width: 80%;
       margin: auto;
@@ -560,7 +560,7 @@ section.resume {
     text-align: center;
     padding: 16px 0;
     font-size: 48px;
-    border-bottom: 1px solid #4a4a4a;
+    border-bottom: 1px solid #505050;
     opacity: 1; }
   .portfolio-page .header:before, .portfolio-page .sub-header:before {
     content: ""; }
@@ -701,7 +701,7 @@ footer {
   margin-top: 4rem;
   font-size: 12px;
   line-height: 1.6rem;
-  background-color: #4a4a4a;
+  background-color: #505050;
   color: #FAFAFA;
   padding-bottom: 0.5rem; }
   footer .container {

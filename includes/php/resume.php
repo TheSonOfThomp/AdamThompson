@@ -13,6 +13,9 @@
 		</div>
 	</div>
 	<section class="experience container" id="work-experience">
+		<!-- <div class="resume-header">
+			<span class="resume-title">Experience<span class="filter-notification"></span></span>
+		</div> -->
 		<article class="zynga job">
 			<div class="logo-container">
 				<div class="logo vertical-center"></div>
