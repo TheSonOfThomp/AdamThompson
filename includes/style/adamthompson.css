@@ -95,8 +95,7 @@ html {
     @media (max-width: 1280px) {
       .header .tagline, .sub-header .tagline {
         font-size: 1.6em;
-        line-height: 1.25em;
-        padding-top: 3em; } }
+        line-height: 1.25em; } }
     .header .tagline em, .sub-header .tagline em {
       color: #5B753D; }
   .header ul, .sub-header ul {

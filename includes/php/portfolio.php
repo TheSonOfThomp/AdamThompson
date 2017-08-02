@@ -95,7 +95,7 @@
 		</li>
 
 		<!-- ********** Colour Thermometer ********** -->
-		<li class="folio-item web software" 
+		<li class="folio-item web ux software" 
 			data-feature-rank="7" 
 			data-published-date="2017-05-25">
 			<a href="Portfolio/?p=colourtherm">
