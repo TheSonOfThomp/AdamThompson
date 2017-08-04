@@ -1,4 +1,4 @@
-I worked at Sony Network Entertainment for my first design job in the fall of 2013. While working there, I designed several concept images to improve the look and feel of the app. The version pictured got the best feedback throughout the office, however was not implemented due to a lack of resources in the department
+I worked at Sony Network Entertainment for my first UX design internship in the fall of 2013. While working there, I designed several concept images to improve the look and feel of the app. The version pictured got the best feedback throughout the office, however was not implemented due to a lack of resources in the department.
 
 <figure class='folio_image' id='img1'>
 	<a target='_blank'>
