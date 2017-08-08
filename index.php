@@ -16,7 +16,7 @@ include('includes/php/header.php'); ?>
 	// include 'includes/php/gallery-hilight.php'
 ?>
 <?php
-	// include 'includes/php/about.php';
+	include 'includes/php/blog.php';
 ?>
 <?php 
 	include 'includes/php/resume.php';

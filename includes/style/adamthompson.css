@@ -71,7 +71,6 @@ html {
   width: 100%;
   margin: 0;
   margin-top: 0;
-  overflow: hidden;
   color: inherit; }
   .header .title, .sub-header .title {
     position: relative;
@@ -163,7 +162,8 @@ html {
       background: #EDF2E6; }
     .menu .filter:active, .menu .filter.active {
       color: #505050;
-      background: #DCE6CF; }
+      background: #DCE6CF;
+      border-radius: 4px; }
 
 .site-filter {
   text-align: center; }
@@ -174,7 +174,7 @@ html {
 /* ---------------------- BIO & PIC ---------------------- */
 .bio {
   width: 100%;
-  margin: 12vh 0; }
+  margin: 12vh 0 0 0; }
   .bio .bio-pic {
     position: relative;
     display: block;
@@ -191,9 +191,10 @@ html {
     display: block;
     margin-top: 2.5em;
     text-align: center;
-    font-size: 14px;
+    font-family: "Lato", "Helvetica", sans-serif;
+    font-size: 15px;
     line-height: 2em;
-    font-weight: 100; }
+    font-weight: 400; }
     .bio .bio-text p {
       margin: 0 auto;
       width: 66%; }
@@ -276,6 +277,21 @@ section.portfolio {
             font-weight: lighter;
             font-style: italic; }
 
+/* ---------------------- BLOG ---------------------- */
+section.blog a {
+  text-decoration: none;
+  cursor: pointer; }
+  section.blog a:hover, section.blog a:active {
+    text-decoration: underline; }
+section.blog .date_published {
+  color: #505050;
+  font-family: "Lato", "Helvetica", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: auto 16px;
+  text-align: right;
+  float: right; }
+
 /* ---------------------- RESUME ---------------------- */
 section.resume {
   min-height: 12em; }
@@ -353,9 +369,8 @@ section.resume {
           text-decoration: none;
           color: #505050; }
     section.resume .container article .resume-content {
-      width: 80%;
-      margin: auto;
-      float: left;
+      width: 100%;
+      margin: auto 0;
       display: inline-block; }
       @media screen and (max-width: 900px) {
         section.resume .container article .resume-content {
@@ -716,7 +731,7 @@ footer {
 
 /* ---------------------- Social Bar ---------------------- */
 .social-list {
-  display: block;
+  display: inline-block;
   position: relative;
   padding: 0;
   margin: 0;
@@ -767,7 +782,7 @@ footer {
         background-image: url("../image_assets/social/instagram_light.png"); }
   .social-list.dark {
     width: 56%;
-    margin: 1em auto; }
+    margin: 1em 22%; }
     .social-list.dark .social-media #twitter {
       background-image: url("../image_assets/social/twitter_dark.png"); }
     .social-list.dark .social-media #linkedin {
@@ -792,7 +807,7 @@ footer {
     margin: 0; }
 
   .hide-mobile {
-    display: none; }
+    display: none !important; }
 
   .mobile-only {
     display: inline; }
@@ -883,7 +898,7 @@ footer {
       min-width: 100%;
       max-width: 100%;
       text-align: center;
-      font-size: 16px; }
+      line-height: 1.2em; }
       .bio .bio-text p {
         margin-bottom: 1rem;
         width: 100%; }
@@ -1038,7 +1053,9 @@ footer {
 .container {
   width: 80%;
   margin: 0 10%;
-  height: 100%; }
+  height: 100%;
+  position: relative;
+  display: inline-block; }
 
 .shrinkwrap {
   will-change: width;

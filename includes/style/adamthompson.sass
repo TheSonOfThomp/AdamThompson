@@ -95,7 +95,7 @@ html
 	width: 100%
 	margin: 0
 	margin-top: 0
-	overflow: hidden
+	// overflow: hidden
 	color: inherit
 	.title
 		position: relative
@@ -196,6 +196,7 @@ html
 		&:active, &.active
 			color: $dark_grey
 			background: $light_green
+			border-radius: 4px
 
 .site-filter
 	text-align: center
@@ -207,7 +208,7 @@ html
 
 .bio
 	width: 100%
-	margin: 12vh 0
+	margin: 12vh 0 0 0
 
 	.bio-pic
 		position: relative
@@ -226,10 +227,10 @@ html
 		display: block
 		margin-top: 2.5em
 		text-align: center
-		// font-family: $sans-serif
-		font-size: 14px
+		font-family: $sans-body
+		font-size: 15px
 		line-height: 2em
-		font-weight: 100
+		font-weight: 400
 
 		p
 			margin: 0 auto
@@ -331,6 +332,25 @@ section.portfolio
 						font-weight: lighter
 						font-style: italic
 
+/* ---------------------- BLOG ---------------------- */
+
+section.blog
+	a
+		text-decoration: none
+		cursor: pointer
+		&:hover,&:active
+			text-decoration: underline
+	.date_published	
+		color: $dark_grey
+		font-family: $sans-body
+		font-size: 16px
+		font-weight: 300
+		margin: auto 16px
+		text-align: right
+		float: right
+
+
+
 /* ---------------------- RESUME ---------------------- */
 
 section.resume
@@ -419,9 +439,8 @@ section.resume
 						color: $dark_grey
 
 			.resume-content
-				width: 80%
-				margin: auto
-				float: left
+				width: 100%
+				margin: auto 0
 				display: inline-block
 				@media screen and (max-width: $logo-size/0.8/0.2) 
 					&
@@ -833,7 +852,7 @@ footer
 
 /* ---------------------- Social Bar ---------------------- */
 .social-list
-	display: block
+	display: inline-block
 	position: relative
 	padding: 0
 	margin: 0
@@ -893,7 +912,7 @@ footer
 
 	&.dark
 		width: 56%
-		margin: 1em auto
+		margin: 1em 22%
 		.social-media
 			#twitter
 				background-image: url('../image_assets/social/twitter_dark.png')
@@ -920,7 +939,7 @@ footer
 		width: 100%
 		margin: 0
 	.hide-mobile 
-		display: none
+		display: none !important
 	.mobile-only 
 		display: inline
 
@@ -1009,7 +1028,7 @@ footer
 			min-width: 100%
 			max-width: 100%
 			text-align: center
-			font-size: 16px
+			line-height: 1.2em
 			p 
 				margin-bottom: 1rem
 				width: 100%	
@@ -1172,6 +1191,8 @@ footer
 	width: 80%
 	margin: 0 10%
 	height: 100%
+	position: relative
+	display: inline-block
 .shrinkwrap
 	will-change: width
 	width: intrinsic /* For Safari, see https://developer.mozilla.org/en-US/docs/CSS/width */
