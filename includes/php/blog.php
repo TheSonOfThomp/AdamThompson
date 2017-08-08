@@ -1,7 +1,7 @@
 <?
 
 $medium_user = "@thesonofthomp";
-$min_posts = 0;
+$min_posts = 2;
 $url = "https://medium.com/feed/".$medium_user;
 $rss = file_get_contents($url);
 $x = new SimpleXmlElement($rss);
