@@ -20,8 +20,8 @@
 		</li>
 
     	<!-- ********** TAP Metronome ********** -->
-		<li class="folio-item web software featured" 
-			data-feature-rank="5" 
+		<li class="folio-item web software ux featured" 
+			data-feature-rank="6" 
 			data-published-date="2016-09-10">
 			<a href="Portfolio/?p=tap-metronome">
 				<img src="includes/portfolio_images/tap-metronome.png">
@@ -95,8 +95,8 @@
 		</li>
 
 		<!-- ********** Colour Thermometer ********** -->
-		<li class="folio-item web ux software" 
-			data-feature-rank="7" 
+		<li class="folio-item web ux software featured" 
+			data-feature-rank="5" 
 			data-published-date="2017-05-25">
 			<a href="Portfolio/?p=colourtherm">
 				<img src="includes/portfolio_images/colourtherm/colourtherm-toronto.jpg">
@@ -140,8 +140,8 @@
 		</li>
 
 		<!-- ********** MEDIAGO APP ********** -->
-		<li class="folio-item ux graphics featured" 
-			data-feature-rank="6" 
+		<li class="folio-item ux graphics " 
+			data-feature-rank="7" 
 			data-published-date="2013-12-25">
 			<a href="Portfolio/?p=mediago_app">
 				<img src="includes/portfolio_images/sony/mediago_app.jpg">
