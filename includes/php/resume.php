@@ -28,7 +28,7 @@
 				</div>
 				<ul class="resume-list">
 					<li class="resume-item featured ux graphics pm">Performed background research, user analysis, and A/B testing as part of the design process for a new Subscriptions model</li>
-					<li class="resume-item featured ux pm">Configured final tuning parameters and UX flow for a viral engagement feature which increased Facebok feed app entry by 36%</li>
+					<li class="resume-item featured ux pm">Configured final tuning parameters and UX flow for a viral engagement feature which increased Facebook feed app entry by 36%</li>
 					<li class="resume-item featured ux graphics">Designed the initial UX wireframes and feature specifications for a hand replay feature expected to increase Daily Active Users</li>
 					<li class="resume-item featured ux graphics">Analyzed player demographics by monthly spend to better know the sources of revenue, and which players to target for new features</li>
 				</ul>
