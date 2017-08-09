@@ -12,14 +12,20 @@ html {
     margin: 0;
     font-family: "Merriweather", "Garamond", "Times New Roman", serif;
     color: #505050;
-    font-weight: 100;
+    font-weight: 300;
     overflow-x: hidden; }
   html main {
     display: block;
     width: 100%;
     margin: 0;
     padding: 0;
-    background: #FAFAFA; }
+    background: #FAFAFA;
+    background: -moz-linear-gradient(top, #FAFAFA 0%, #FBFFF5 100%);
+    background: -webkit-gradient(linear, left top, left botton, color-stop(0%, #FAFAFA), color-stop(100%, #FBFFF5));
+    background: -webkit-linear-gradient(top, #FAFAFA 0%, #FBFFF5 100%);
+    background: -o-linear-gradient(top, #FAFAFA 0%, #FBFFF5 100%);
+    background: -ms-linear-gradient(top, #FAFAFA 0%, #FBFFF5 100%);
+    background: linear-gradient(to bottom, #FAFAFA 0%, #FBFFF5 100%); }
   html header {
     display: block;
     margin: 0;
@@ -34,7 +40,7 @@ html {
     padding: 0;
     width: 100%; }
   html h1 {
-    font-family: "Raleway", "Lato", "Helvetica", sans-serif;
+    font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
     font-size: 4rem;
     line-height: 1em;
     font-weight: 200; }
@@ -42,16 +48,16 @@ html {
     font-family: "Merriweather", "Garamond", "Times New Roman", serif;
     font-size: 3rem;
     line-height: 1.5em;
-    font-weight: 200;
+    font-weight: 300;
     /*text-decoration: underline */ }
   html h3 {
-    font-family: "Lato", "Helvetica", sans-serif;
+    font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
     /*text-decoration: underline */ }
   html h4 {
-    font-family: "Lato", "Helvetica", sans-serif;
+    font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
     font-size: 1.75rem;
     line-height: 1em;
     font-weight: 300;
@@ -79,7 +85,7 @@ html {
     line-height: 1em;
     font-weight: 500;
     padding-top: 48px;
-    font-family: "Raleway", "Lato", "Helvetica", sans-serif;
+    font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
     z-index: 100; }
   .header .tagline, .sub-header .tagline {
     position: relative;
@@ -123,50 +129,51 @@ html {
   text-align: left; }
 
 /* ---------- Horizontal List Filter ---------- */
+.site-filter {
+  text-align: center; }
+
 .inline-sort {
   position: relative;
   display: inline-block;
-  font-size: 1em;
+  font-size: 15px;
   line-height: 3em;
-  background-color: #FAFAFA; }
-
-.sort-text {
-  display: inline-block;
-  position: relative;
-  float: left;
-  font-weight: 500;
-  top: 0; }
-
-.menu-label {
-  display: none; }
-
-.menu {
-  position: relative;
-  display: inline-block;
-  float: left;
-  margin: 0;
-  text-align: left;
-  padding-left: 16px; }
-  .menu ul {
-    position: relative;
-    width: 100%;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-  .menu .filter {
+  font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif; }
+  .inline-sort .sort-text {
     display: inline-block;
-    padding: 0 16px;
-    cursor: pointer;
-    color: #5B753D; }
-    .menu .filter:hover {
-      background: #EDF2E6; }
-    .menu .filter:active, .menu .filter.active {
-      color: #505050;
-      background: #DCE6CF;
-      border-radius: 4px; }
-
-.site-filter {
-  text-align: center; }
+    position: relative;
+    float: left;
+    font-weight: 400;
+    top: 0; }
+  .inline-sort .menu {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin: 0;
+    text-align: left;
+    padding-left: 16px;
+    font-weight: 400; }
+    .inline-sort .menu .menu-label {
+      display: none; }
+    .inline-sort .menu ul {
+      position: relative;
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding-left: 0; }
+      .inline-sort .menu ul .filter {
+        display: inline-block;
+        padding: 0 16px;
+        cursor: pointer;
+        color: #5B753D;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px; }
+        .inline-sort .menu ul .filter:hover {
+          background: #EDF2E6; }
+        .inline-sort .menu ul .filter:active, .inline-sort .menu ul .filter.active {
+          color: #505050;
+          background: #DCE6CF; }
 
 .filter-line {
   display: none; }
@@ -179,19 +186,25 @@ html {
     position: relative;
     display: block;
     margin: auto;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
     border-radius: 100%;
     width: 12rem;
     height: 12rem; }
     .bio .bio-pic img {
       width: 100%;
       height: 100%;
+      -webkit-border-radius: 40%;
+      -moz-border-radius: 40%;
+      -ms-border-radius: 40%;
       border-radius: 40%; }
   .bio .bio-text {
     position: relative;
     display: block;
     margin-top: 2.5em;
     text-align: center;
-    font-family: "Lato", "Helvetica", sans-serif;
+    font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
     font-size: 15px;
     line-height: 2em;
     font-weight: 400; }
@@ -271,7 +284,7 @@ section.portfolio {
             margin: auto 12px; }
           section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-title {
             font-size: 1.5rem;
-            font-family: "Raleway", "Lato", "Helvetica", sans-serif; }
+            font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif; }
           section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-type {
             font-size: 1rem;
             font-weight: lighter;
@@ -285,7 +298,7 @@ section.blog a {
     text-decoration: underline; }
 section.blog .date_published {
   color: #505050;
-  font-family: "Lato", "Helvetica", sans-serif;
+  font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 300;
   margin: auto 16px;
@@ -312,7 +325,6 @@ section.resume {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
-    -o-border-radius: 4px;
     border-radius: 4px; }
     section.resume .sub-header .linkedin-profile:hover {
       border: 2px solid #008cc9;
@@ -321,7 +333,7 @@ section.resume {
       color: #008cc9;
       font-size: 16px;
       text-decoration: none;
-      font-family: "Lato", "Helvetica", sans-serif;
+      font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
       font-weight: 400; }
   section.resume .resume-header {
     padding-left: 1rem;
@@ -329,7 +341,7 @@ section.resume {
     font-weight: 400;
     border-bottom: 1px solid #505050; }
     section.resume .resume-header .resume-title {
-      font-family: "Raleway", "Lato", "Helvetica", sans-serif;
+      font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
       font-size: 2rem;
       line-height: 2em; }
   section.resume .bubble-connector {
@@ -353,6 +365,9 @@ section.resume {
         height: 0;
         padding-bottom: 80%;
         margin-right: 10%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
         border-radius: 100%;
         background-color: #eee;
         background-size: 80%;
@@ -361,7 +376,7 @@ section.resume {
       section.resume .container article .logo-container .company-site {
         display: none;
         margin-top: 0.8rem;
-        font-family: "Lato", "Helvetica", sans-serif;
+        font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
         font-size: 1rem;
         font-weight: 300;
         text-align: center; }
@@ -379,14 +394,14 @@ section.resume {
         display: flex;
         justify-content: space-between; }
         section.resume .container article .resume-content .subsection-header .subsection-title {
-          font-family: "Raleway", "Lato", "Helvetica", sans-serif;
+          font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
           font-size: 2rem;
           font-weight: 500; }
           section.resume .container article .resume-content .subsection-header .subsection-title .show {
             color: #5B753D;
             background: none;
             border: none;
-            font-family: "Raleway", "Lato", "Helvetica", sans-serif;
+            font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
             font-size: 12px;
             padding: 6px 0 0 0;
             text-decoration: none;
@@ -402,7 +417,7 @@ section.resume {
           section.resume .container article .resume-content .subsection-header .subsection-title:hover .show, section.resume .container article .resume-content .subsection-header .subsection-title:focus .show {
             text-decoration: underline; }
       section.resume .container article .resume-content .subsection-duration {
-        font-family: "Lato", "Helvetica", sans-serif;
+        font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
         font-size: 1rem;
         font-weight: 300;
         margin: auto 16px;
@@ -446,7 +461,7 @@ section.resume {
     section.resume .skills .skills-sub-header {
       padding-left: 1rem;
       padding-top: 1.5rem;
-      font-family: "Raleway", "Lato", "Helvetica", sans-serif;
+      font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
       font-size: 1.5rem;
       line-height: 2em; }
     section.resume .skills .program-list {
@@ -474,6 +489,9 @@ section.resume {
           background-size: 56%;
           background-position: 44% 0;
           background-repeat: no-repeat;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          -ms-border-radius: 0;
           border-radius: 0; }
         section.resume .skills .program-list li:hover .app-name {
           font-weight: 500; }
@@ -593,7 +611,7 @@ section.resume {
     margin-bottom: 0.75em;
     padding-top: 0;
     text-align: center;
-    font-family: "Raleway", "Lato", "Helvetica", sans-serif;
+    font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
     padding-top: 81px; }
   .portfolio-page .gallery-content h1 {
     font-size: 40px; }
@@ -727,7 +745,8 @@ footer {
       display: block;
       text-align: center;
       color: #FAFAFA;
-      top: 1rem; }
+      margin: auto;
+      bottom: 0; }
 
 /* ---------------------- Social Bar ---------------------- */
 .social-list {
@@ -762,6 +781,9 @@ footer {
       padding-bottom: 100%;
       background-size: 100%;
       background-repeat: no-repeat;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
       border-radius: 0; }
   .social-list.light {
     width: 64%;
@@ -963,6 +985,9 @@ footer {
       max-width: calc(100% - 2.51rem);
       padding: 1.25rem;
       background: rgba(28, 28, 28, 0.6);
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
       border-radius: 8px; }
 
   /* ------------ RESUME - MOBILE ------------ */
@@ -1106,6 +1131,9 @@ footer {
     background-color: rgba(51, 51, 51, 0.75);
     color: #fff;
     text-align: center;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
     border-radius: 6px;
     /* Position the tooltip text - see examples below! */
     position: absolute;

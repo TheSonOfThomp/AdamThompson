@@ -23,8 +23,13 @@
 		<link rel="shortcut icon" type="image/png" href="<?php echo $root_path?>/includes/image_assets/silhouette_icn.jpg">
 
 		<!-- STYLE & FONTS -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:300, 100' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Raleway:200, 300' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+			<!-- Raleway -->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:200,300' rel='stylesheet' type='text/css'>
+			<!-- Merriweather -->
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:300,300italic' rel='stylesheet' type='text/css'>
+			<!-- Montserrat -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+			<!-- Lato -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
 
 		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/style/adamthompson.css" type="text/css">

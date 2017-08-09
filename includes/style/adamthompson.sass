@@ -1,7 +1,7 @@
 $serif: "Merriweather", "Garamond", "Times New Roman", serif
-$sans-serif: "Raleway", "Lato", "Helvetica", sans-serif
+$sans-serif: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif
 $sans-title: $sans-serif
-$sans-body: "Lato", "Helvetica", sans-serif
+$sans-body: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif
 
 // Neutrals
 $white: #FAFAFA
@@ -10,9 +10,8 @@ $light_grey: #CECECE
 $med_grey: #808080
 $dark_grey: #505050
 $dark_grey_trans: rgba(51,51,51,0.75)
-// $dark_grey_trans: #4A4A4Acc
-
 // Greens
+$bg_green: #FBFFF5
 $white_green: #EDF2E6
 $light_green: #DCE6CF
 $green: #5B753D
@@ -21,6 +20,21 @@ $green: #5B753D
 	background: $light_green /* WebKit/Blink Browsers */
 *::-moz-selection 
 	background: $light_green /* Gecko Browsers */
+
+=linearGradient($top, $bottom, $end)
+	background: $top /* Old browsers */
+	background: -moz-linear-gradient(top,  $top 0%, $bottom $end) /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left botton, color-stop(0%, $top), color-stop($end, $bottom)) /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $top 0%, $bottom $end) /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $top 0%, $bottom $end) /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $top 0%, $bottom $end) /* IE10+ */
+	background: linear-gradient(to bottom,  $top 0%, $bottom $end) /* W3C */
+
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius:    $radius
+	-ms-border-radius:     $radius
+	border-radius:         $radius
 
 html
 	font-size: 16px
@@ -31,7 +45,7 @@ html
 		margin: 0
 		font-family: $serif
 		color: $dark_grey
-		font-weight: 100
+		font-weight: 300
 		overflow-x: hidden
 
 	main
@@ -39,7 +53,7 @@ html
 		width: 100%
 		margin: 0
 		padding: 0
-		background: $white
+		+linearGradient($white, $bg_green, 100%)
 
 	header
 		display: block
@@ -65,7 +79,7 @@ html
 		font-family: $serif
 		font-size: 3rem
 		line-height: 1.5em
-		font-weight: 200
+		font-weight: 300
 		/*text-decoration: underline*/
 	h3
 		font-family: $sans-body
@@ -153,53 +167,52 @@ html
 		text-align: left
 
 /* ---------- Horizontal List Filter ---------- */
+.site-filter
+	text-align: center
+
 .inline-sort
 	position: relative
 	display: inline-block
-	font-size: 1em
+	font-size: 15px
 	line-height: 3em
-	background-color: $white
+	font-family: $sans-body
 
-.sort-text
-	display: inline-block
-	position: relative
-	float: left
-	font-weight: 500
-	top: 0
-
-.menu-label
-	display: none
-
-.menu
-	position: relative
-	display: inline-block
-	float: left
-	margin: 0
-	text-align: left
-	padding-left: 16px
-
-	ul
-		position: relative
-		width: 100%
-		list-style: none
-		margin: 0
-		padding-left: 0
-
-	.filter
+	.sort-text
 		display: inline-block
-		padding: 0 16px
-		cursor: pointer
-		color: $green
+		position: relative
+		float: left
+		font-weight: 400
+		top: 0
 
-		&:hover
-			background: $white_green
-		&:active, &.active
-			color: $dark_grey
-			background: $light_green
-			border-radius: 4px
+	.menu
+		position: relative
+		display: inline-block
+		float: left
+		margin: 0
+		text-align: left
+		padding-left: 16px
+		font-weight: 400
 
-.site-filter
-	text-align: center
+		.menu-label
+			display: none
+		ul
+			position: relative
+			width: 100%
+			list-style: none
+			margin: 0
+			padding-left: 0
+
+			.filter
+				display: inline-block
+				padding: 0 16px
+				cursor: pointer
+				color: $green
+				+border-radius(4px)
+				&:hover
+					background: $white_green
+				&:active, &.active
+					color: $dark_grey
+					background: $light_green
 
 .filter-line
 	display: none
@@ -214,14 +227,14 @@ html
 		position: relative
 		display: block
 		margin: auto
-		border-radius: 100%
+		+border-radius(100%)
 		width: 12rem
 		height: 12rem
 
 		img
 			width: 100%
 			height: 100%
-			border-radius: 40%
+			+border-radius(40%)
 	.bio-text
 		position: relative
 		display: block
@@ -373,11 +386,7 @@ section.resume
 			background-color: $white
 			cursor: pointer
 			vertical-align: middle
-			-webkit-border-radius: 4px
-			-moz-border-radius: 4px
-			-ms-border-radius: 4px
-			-o-border-radius: 4px
-			border-radius: 4px
+			+border-radius(4px)
 			&:hover
 				border: 2px solid #008cc9
 				padding: 7px 9px
@@ -422,7 +431,7 @@ section.resume
 					height: 0
 					padding-bottom: 80%
 					margin-right: 10%
-					border-radius: 100%	
+					+border-radius(100%)
 					background-color: #eee
 					background-size: 80%
 					background-position: 50%
@@ -561,7 +570,7 @@ section.resume
 					background-size: 56%
 					background-position: 44% 0
 					background-repeat: no-repeat
-					border-radius: 0
+					+border-radius(0)
 				&:hover
 					// padding-top: 0.5rem
 					// padding-bottom: 1.5rem
@@ -848,7 +857,8 @@ footer
 			display: block
 			text-align: center
 			color: $white
-			top: 1rem
+			margin: auto
+			bottom: 0
 
 /* ---------------------- Social Bar ---------------------- */
 .social-list
@@ -885,7 +895,7 @@ footer
 			padding-bottom: 100%
 			background-size: 100%
 			background-repeat: no-repeat
-			border-radius: 0
+			+border-radius(0)
 
 		:last-child
 			padding-right: 0
@@ -1092,7 +1102,7 @@ footer
 				max-width: calc(100% - 2.51rem)
 				padding: 1.25rem
 				background: rgba(28,28,28,0.6)
-				border-radius: 8px 
+				+border-radius(8px)
 
 	/* ------------ RESUME - MOBILE ------------ */
 	section.resume 
@@ -1246,7 +1256,7 @@ footer
 		background-color: $dark_grey_trans
 		color: #fff
 		text-align: center
-		border-radius: 6px
+		+border-radius(6px)
 		/* Position the tooltip text - see examples below! */
 		position: absolute
 		z-index: 1
