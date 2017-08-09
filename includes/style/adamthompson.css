@@ -181,11 +181,11 @@ html {
 /* ---------------------- BIO & PIC ---------------------- */
 .bio {
   width: 100%;
-  margin: 12vh 0 0 0; }
+  margin: 0; }
   .bio .bio-pic {
     position: relative;
     display: block;
-    margin: auto;
+    margin: 64px auto;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
@@ -202,7 +202,6 @@ html {
   .bio .bio-text {
     position: relative;
     display: block;
-    margin-top: 2.5em;
     text-align: center;
     font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
     font-size: 15px;
@@ -1120,6 +1119,9 @@ footer {
 .tooltip {
   position: relative;
   display: inline-block;
+  font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
   /* Tooltip text */ }
   .tooltip .tooltiptext {
     visibility: hidden;
