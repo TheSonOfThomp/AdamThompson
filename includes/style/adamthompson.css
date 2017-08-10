@@ -51,13 +51,13 @@ html {
     font-weight: 300;
     /*text-decoration: underline */ }
   html h3 {
-    font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
+    font-family: "Lato", "Helvetica", "Arial", sans-serif;
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
     /*text-decoration: underline */ }
   html h4 {
-    font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
+    font-family: "Lato", "Helvetica", "Arial", sans-serif;
     font-size: 1.75rem;
     line-height: 1em;
     font-weight: 300;
@@ -137,7 +137,7 @@ html {
   display: inline-block;
   font-size: 15px;
   line-height: 3em;
-  font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif; }
+  font-family: "Lato", "Helvetica", "Arial", sans-serif; }
   .inline-sort .sort-text {
     display: inline-block;
     position: relative;
@@ -203,7 +203,7 @@ html {
     position: relative;
     display: block;
     text-align: center;
-    font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
+    font-family: "Lato", "Helvetica", "Arial", sans-serif;
     font-size: 15px;
     line-height: 2em;
     font-weight: 400; }
@@ -297,7 +297,7 @@ section.blog a {
     text-decoration: underline; }
 section.blog .date_published {
   color: #505050;
-  font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 300;
   margin: auto 16px;
@@ -332,7 +332,7 @@ section.resume {
       color: #008cc9;
       font-size: 16px;
       text-decoration: none;
-      font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
+      font-family: "Lato", "Helvetica", "Arial", sans-serif;
       font-weight: 400; }
   section.resume .resume-header {
     padding-left: 1rem;
@@ -375,7 +375,7 @@ section.resume {
       section.resume .container article .logo-container .company-site {
         display: none;
         margin-top: 0.8rem;
-        font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
+        font-family: "Lato", "Helvetica", "Arial", sans-serif;
         font-size: 1rem;
         font-weight: 300;
         text-align: center; }
@@ -416,7 +416,7 @@ section.resume {
           section.resume .container article .resume-content .subsection-header .subsection-title:hover .show, section.resume .container article .resume-content .subsection-header .subsection-title:focus .show {
             text-decoration: underline; }
       section.resume .container article .resume-content .subsection-duration {
-        font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
+        font-family: "Lato", "Helvetica", "Arial", sans-serif;
         font-size: 1rem;
         font-weight: 300;
         margin: auto 16px;
@@ -1119,7 +1119,7 @@ footer {
 .tooltip {
   position: relative;
   display: inline-block;
-  font-family: "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 300;
   /* Tooltip text */ }

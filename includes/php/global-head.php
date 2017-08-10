@@ -28,8 +28,8 @@
 			<!-- Merriweather -->
 		<link href='http://fonts.googleapis.com/css?family=Merriweather:300,300italic' rel='stylesheet' type='text/css'>
 			<!-- Montserrat -->
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet"> -->
 			<!-- Lato -->
-		<!-- <link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'> -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
 
 		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/style/adamthompson.css" type="text/css">
