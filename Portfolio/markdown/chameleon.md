@@ -1,3 +1,5 @@
+#Chameleon Hearing Protection
+
 What if your ears could blink? Chameleon is a variable hearing protection device that changes its attenuation according to the environment. Chameleon is targeted towards users in periodically loud environments—environments with significant noise exposure, but with periods of quiet where communication is key, such as construction sites, factories and machine shops. 
 
 Chameleon has won several prizes, including SYDE People's Choice, and the Norman Esch Entrepreneurship Award.

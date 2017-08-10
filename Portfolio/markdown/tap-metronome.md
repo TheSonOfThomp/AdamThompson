@@ -1,3 +1,5 @@
+#TAP Metronome
+
 <figure class='folio_image' id='img1'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/tap-metronome.png'>

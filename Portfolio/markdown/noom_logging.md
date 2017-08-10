@@ -1,3 +1,5 @@
+#Improving Food Logging at Noom
+
 Meal logging is a must-have feature in Noom Coach. Therefore it must to be quick and intuitive to log the food you’ve eaten and get insightful feedback. With the help of the UX research team and the input of other designers and engineers, I was able to fix some big problems with the food logging experience, and re-design it to be as straight-forward and intuitive as possible.
 
 <figure class='folio_image' id='img1'>

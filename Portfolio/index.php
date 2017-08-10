@@ -3,7 +3,6 @@ include_once('../includes/php/global-head.php');
 include_once('../includes/php/analyticstracking.php');
 include('../includes/plugins/Parsedown.php');
 include('../includes/plugins/ParsedownExtra.php');
-include('portfolio_switch.php');
 include('../includes/plugins/toc.php');
 ?>
 <title>Adam Thompson - <?php echo($p_title) ?></title>
@@ -26,7 +25,8 @@ include('../includes/plugins/toc.php');
 	<h1 class="portfolio-title"><?php echo $p_title ?></h2>	
 		<div class="col single-column">
 
-	<?php if ($useMarkdown) {
+	<?
+		$p = $_GET['p'];
 		$Parsedown = new ParsedownExtra();
 		$markdown = file_get_contents('markdown/'.$p.'.md');?>
 		<script type="text/javascript">
@@ -34,13 +34,6 @@ include('../includes/plugins/toc.php');
 		</script>
 		<?php
 		echo $Parsedown->text($markdown);
-	}
-	else if ($useTemplate) {
-		include('portfolio-template.php');
-	}
-	else {
-		include($HTML_FILE);
-	}
 	?>
 
 	</div>

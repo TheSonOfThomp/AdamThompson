@@ -1,3 +1,5 @@
+#KnowRoaming App Redesign
+
 I worked at KnowRoaming as a co-op student from May 2014 to April 2015 (with 4 months of school in between). This was my first ever app design job, and had no supervision from a senior designer; it wasn't until my second term when the company hired a full-time designer. This experience helped me learn and grow a lot as a designer. The following is an attempt to capture my design process at the time.
 
 ---
