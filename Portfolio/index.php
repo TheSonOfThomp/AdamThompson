@@ -12,6 +12,19 @@ include('../includes/plugins/toc.php');
 <script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/jquery.mixitup.min.js"></script>
 <script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/jquery.vanillabox-0.1.7.min.js"></script>
 <script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/portfolio.js"></script>
+
+<?
+	$p = $_GET['p'];
+	$Parsedown = new ParsedownExtra();
+	$markdown = file_get_contents('markdown/'.$p.'.md');
+	if (!$markdown) {
+		echo '<meta http-equiv="Refresh" content="0;'.$root_path.'">';
+		break;
+	}
+	?>
+	<script type="text/javascript">
+		var toc = <?php echo markdown_toc('markdown/'.$p.'.md');?>;
+	</script>
 </head>
 <!-- ********** /HEAD ********** -->
 
@@ -22,17 +35,8 @@ include('../includes/plugins/toc.php');
 	<div id="toc hide">
 	</div>
 	<!-- TODO: ADD LEFT ALIGNED LOGO/MONOGRAM -->
-	<h1 class="portfolio-title"><?php echo $p_title ?></h2>	
-		<div class="col single-column">
-
-	<?
-		$p = $_GET['p'];
-		$Parsedown = new ParsedownExtra();
-		$markdown = file_get_contents('markdown/'.$p.'.md');?>
-		<script type="text/javascript">
-		var toc = <?php echo markdown_toc('markdown/'.$p.'.md');?>;
-		</script>
-		<?php
+	<div class="col single-column">
+	<?php
 		echo $Parsedown->text($markdown);
 	?>
 
