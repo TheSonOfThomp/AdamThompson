@@ -13,13 +13,12 @@ include('../includes/plugins/toc.php');
 <script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/jquery.vanillabox-0.1.7.min.js"></script>
 <script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/portfolio.js"></script>
 
-<?
+<?php
 	$p = $_GET['p'];
 	$Parsedown = new ParsedownExtra();
 	$markdown = file_get_contents('markdown/'.$p.'.md');
 	if (!$markdown) {
 		echo '<meta http-equiv="Refresh" content="0;'.$root_path.'">';
-		break;
 	}
 	?>
 	<script type="text/javascript">
@@ -36,9 +35,9 @@ include('../includes/plugins/toc.php');
 	</div>
 	<!-- TODO: ADD LEFT ALIGNED LOGO/MONOGRAM -->
 	<div class="col single-column">
-	<?php
-		echo $Parsedown->text($markdown);
-	?>
+<?php
+	echo $Parsedown->text($markdown);
+?>
 
 	</div>
 </article>
