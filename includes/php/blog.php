@@ -1,4 +1,4 @@
-<?
+<?php
 
 $medium_user = "@thesonofthomp";
 $min_posts = 2;
@@ -18,7 +18,7 @@ if (sizeof($x->channel->item) >= $min_posts) {
 	</div>
 	<div class="container">
 	<ul>
-<?
+<?php
 	foreach($x->channel->item as $entry) {
 		echo "<li><a href='$entry->link' title='$entry->title' target='_blank'>" . $entry->title . "<span class='date_published'> " . date("M j, Y", strtotime($entry->pubDate)) . "</span></a></li>";
 	}	
@@ -26,6 +26,6 @@ if (sizeof($x->channel->item) >= $min_posts) {
 	</ul>
 	</div>
 </section>
-<?
+<?php
 }
 ?>
