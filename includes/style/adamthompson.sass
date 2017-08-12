@@ -467,8 +467,8 @@ section.resume
 							border: none
 							font-family: $sans-serif
 							font-size: 12px
-							padding: 6px 0 0 0
 							text-decoration: none
+							padding: 4px 0 0 0
 							display: block
 							&.more:after
 								content: ' more'
@@ -494,17 +494,17 @@ section.resume
 
 				.resume-list
 					display: none
-					padding-left: 1rem
-					font-size: 1rem
+					padding-left: 16px
+					font-size: 14px
 					line-height: 1.5em
 					list-style-type: disc
 
 					.resume-item
 						margin-bottom: 1em
-				
 						.list-description
 							font-family: $serif
-							font-size: 1rem
+							font-size: 14px
+							margin-right: 16px
 
 	.experience
 		position: relative
@@ -1253,13 +1253,14 @@ footer
 	.tooltiptext
 		visibility: hidden
 		width: 120px
-		bottom: 75%
+		// bottom: 75% // for Top tooltip
+		top: 70% // for Bottom tooltip
 		left: 50%
 		margin-left: -60px /* Use half of the width (120/2 = 60), to center the tooltip */
 		padding: 5px 0
-
-		background-color: $dark_grey_trans
-		color: #fff
+		// background-color: $light_green
+		color: $dark_grey
+		font-weight: 500
 		text-align: center
 		+border-radius(6px)
 		/* Position the tooltip text - see examples below! */
@@ -1269,6 +1270,7 @@ footer
 	&:hover .tooltiptext
 		visibility: visible
 		&:after
+			display: none
 			content: " "
 			position: absolute
 			top: 100%  /* At the top of the tooltip */

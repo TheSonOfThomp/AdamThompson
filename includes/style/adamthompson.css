@@ -402,8 +402,8 @@ section.resume {
             border: none;
             font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
             font-size: 12px;
-            padding: 6px 0 0 0;
             text-decoration: none;
+            padding: 4px 0 0 0;
             display: block; }
             section.resume .container article .resume-content .subsection-header .subsection-title .show.more:after {
               content: " more"; }
@@ -424,15 +424,16 @@ section.resume {
         float: right; }
       section.resume .container article .resume-content .resume-list {
         display: none;
-        padding-left: 1rem;
-        font-size: 1rem;
+        padding-left: 16px;
+        font-size: 14px;
         line-height: 1.5em;
         list-style-type: disc; }
         section.resume .container article .resume-content .resume-list .resume-item {
           margin-bottom: 1em; }
           section.resume .container article .resume-content .resume-list .resume-item .list-description {
             font-family: "Merriweather", "Garamond", "Times New Roman", serif;
-            font-size: 1rem; }
+            font-size: 14px;
+            margin-right: 16px; }
   section.resume .experience {
     position: relative;
     display: inline-block; }
@@ -1131,12 +1132,12 @@ footer {
   .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
-    bottom: 75%;
+    top: 70%;
     left: 50%;
     margin-left: -60px;
     padding: 5px 0;
-    background-color: rgba(51, 51, 51, 0.75);
-    color: #fff;
+    color: #505050;
+    font-weight: 500;
     text-align: center;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -1148,6 +1149,7 @@ footer {
   .tooltip:hover .tooltiptext {
     visibility: visible; }
     .tooltip:hover .tooltiptext:after {
+      display: none;
       content: " ";
       position: absolute;
       top: 100%;
