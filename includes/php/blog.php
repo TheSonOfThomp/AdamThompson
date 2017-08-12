@@ -5,8 +5,8 @@ $min_posts = 2;
 $url = "https://medium.com/feed/".$medium_user;
 $rss = file_get_contents($url);
 $x = new SimpleXmlElement($rss);
+
 if (sizeof($x->channel->item) >= $min_posts) {
-	
 ?>
 <section class="blog" id="blog">
 	<div class="sub-header">
