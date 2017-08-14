@@ -31,5 +31,8 @@
 		<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet"> -->
 			<!-- Lato -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+			<!-- ACTA and Europa -->
+		<script src="https://use.typekit.net/onu2sfw.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/style/adamthompson.css" type="text/css">
