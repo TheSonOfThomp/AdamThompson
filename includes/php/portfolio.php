@@ -6,7 +6,7 @@
 
     	<!-- ********** Chameleon ********** -->
 		<li class="folio-item mech software dsp audio signals ux industrial hardware featured" 
-			data-feature-rank="2" 
+			data-feature-rank="4" 
 			data-published-date="2017-04-01">
 			<a href="Portfolio/?p=chameleon">
 				<img src="includes/portfolio_images/chameleon/chameleon-front-render-with-logo.jpg">
@@ -66,7 +66,7 @@
 
 		<!-- ********** SMRT WATR ********** -->
 		<li class="folio-item ux hardware electrical software pm featured" 
-			data-feature-rank="3" 
+			data-feature-rank="2" 
 			data-published-date="2015-08-26">
 			<a href="Portfolio/?p=smrtwatr">
 				<img src="includes/portfolio_images/smrtwatr/smrtwatr.jpg">
@@ -81,7 +81,7 @@
 
 		<!-- ********** KNOWROAMING APP ********** -->
 		<li class="folio-item ux featured" 
-			data-feature-rank="4" 
+			data-feature-rank="3" 
 			data-published-date="2015-05-01">
 			<a href="Portfolio/?p=knowroaming">
 				<img src="includes/portfolio_images/knowroaming/knowroaming.jpg">
