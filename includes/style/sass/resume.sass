@@ -1,0 +1,308 @@
+/* ---------------------- RESUME ---------------------- */
+
+section.resume
+	min-height: 12em
+
+	a
+		text-decoration: underline
+
+
+	.sub-header
+		.resume-link
+			display: none
+		.linkedin-profile
+			text-decoration: none
+			line-height: 32px	
+			height: auto
+			width: auto
+			padding: 8px 10px
+			border: 1px solid #008cc9
+			background-color: $white
+			cursor: pointer
+			vertical-align: middle
+			+border-radius(4px)
+			&:hover
+				border: 2px solid #008cc9
+				padding: 7px 9px
+			span
+				color: #008cc9
+				font-size: 16px
+				text-decoration: none
+				font-family: $sans-body
+				font-weight: 400
+
+	.resume-header
+		padding-left: 1rem
+		width: 30%
+		font-weight: 400
+		border-bottom: 1px solid $dark_grey
+		.resume-title
+			font-family: $sans-serif
+			font-size: 2rem
+			line-height: 2em
+
+	.bubble-connector
+		display: none
+		height: 95%
+		width: 6px
+		background: #ddd
+		position: absolute
+		left: 5vw
+		margin-top: 32px
+
+	.container
+		article
+			cursor: pointer
+			$logo-size: 144px
+			.logo-container
+				width: $logo-size/0.8
+				max-width: 20%
+				height: 100%
+				float: left
+				display: inline-block
+				.logo
+					width: 80%
+					height: 0
+					padding-bottom: 80%
+					margin-right: 10%
+					+border-radius(100%)
+					background-color: #eee
+					background-size: 80%
+					background-position: 50%
+					background-repeat: no-repeat
+				.company-site
+					display: none
+					margin-top: 0.8rem
+					font-family: $sans-body
+					font-size: 1rem
+					font-weight: 300
+					text-align: center
+					a
+						text-decoration: none
+						color: $dark_grey
+
+			.resume-content
+				width: 100%
+				margin: auto 0
+				display: inline-block
+				@media screen and (max-width: $logo-size/0.8/0.2) 
+					&
+						padding: 0
+
+				h4
+					font-family: $sans-body
+					font-size: 1.75rem
+					line-height: 1em
+					font-weight: 300
+					color: $med_grey
+
+				.subsection-header
+					display: flex
+					justify-content: space-between
+					.subsection-title
+						font-family: $sans-serif
+						font-size: 2rem
+						font-weight: 500
+						.show
+							color: $green
+							background: none
+							border: none
+							font-family: $sans-serif
+							font-size: 12px
+							text-decoration: none
+							padding: 4px 0 0 0
+							display: block
+							&.more:after
+								content: ' more'
+							&.less:after
+								content: ' less'
+
+						.inline-note
+							display: inline
+							font-size: 1.25rem
+							font-style: italic
+						&:hover,
+						&:focus
+							.show
+								text-decoration: underline
+
+				.subsection-duration
+					font-family: $sans-body
+					font-size: 1rem
+					font-weight: 300
+					margin: auto 16px
+					text-align: right
+					float: right
+
+				.resume-list
+					display: none
+					padding-left: 16px
+					font-size: 14px
+					line-height: 1.5em
+					list-style-type: disc
+
+					.resume-item
+						margin-bottom: 1em
+						.list-description
+							font-family: $serif
+							font-size: 14px
+							margin-right: 16px
+
+	.experience
+		position: relative
+		display: inline-block
+		.job
+			display: flex
+			position: relative
+			width: 100%
+			overflow: hidden
+			margin-top: 32px
+			
+		.zynga .logo
+			background-image: url("../image_assets/zynga_logo.png")
+
+		.noom .logo
+			background-image: url("../image_assets/noom_logo.png")
+
+		.knowroaming .logo
+			background-image: url("../image_assets/knowroaming_logo.png")
+			background-position: 50% 46%
+
+		.sony .logo
+			background-image: url("../image_assets/sony_logo.png")	
+
+		.genesys .logo
+			background-image: url("../image_assets/genesys_logo.png")
+				
+	.skills
+		position: relative
+		display: inline-block
+		margin-top: 2rem
+		.skills-sub-header
+			padding-left: 1rem
+			padding-top: 1.5rem
+			font-family: $sans-serif
+			font-size: 1.5rem
+			line-height: 2em	
+		.program-list
+			display: block
+			position: relative
+			padding: 0
+			margin: 0
+			list-style: none
+			li
+				position: relative
+				width: 12.5%
+				margin: 1rem 0
+				float: left
+		
+				.app-name
+					position: relative
+					margin: 0
+					padding-top: 0.5em
+					font-size: 1rem
+					line-height: 1rem
+					min-height: 2rem
+					text-align: center
+			
+				.app-logo
+					position: relative
+					padding-bottom: 56%
+					background-size: 56%
+					background-position: 44% 0
+					background-repeat: no-repeat
+					+border-radius(0)
+				&:hover
+					// padding-top: 0.5rem
+					// padding-bottom: 1.5rem
+					.app-name
+						font-weight: 500
+					.app-logo
+						// padding-bottom: 67%
+						// background-size: 67%
+
+			
+			#sketch .app-logo
+				background-image: url('../image_assets/apps/sketch.png')
+			#photoshop .app-logo
+				background-image: url('../image_assets/apps/photoshop.png')
+			#ai .app-logo
+				background-image: url('../image_assets/apps/ai.png')
+			#indesign .app-logo
+				background-image: url('../image_assets/apps/indd.png')
+			#balsamiq .app-logo
+				background-image: url('../image_assets/apps/balsamiq.png')
+			#framer .app-logo
+				background-image: url('../image_assets/apps/framer.png')
+			#origami .app-logo
+				background-image: url('../image_assets/apps/origami.png')
+			#html5 .app-logo
+				background-image: url('../image_assets/apps/html5.png')
+			#css3 .app-logo
+				background-image: url('../image_assets/apps/css3.png')
+			#jquery .app-logo
+				background-image: url('../image_assets/apps/jquery.png')
+			#javascript .app-logo
+				background-image: url('../image_assets/apps/js.png')
+			#coffeescript .app-logo
+				background-image: url('../image_assets/apps/coffeescript.png')
+			#arduino .app-logo
+				background-image: url('../image_assets/apps/arduino.png')
+			#xcode .app-logo
+				background-image: url('../image_assets/apps/xcode.png')
+			#php .app-logo
+				background-image: url('../image_assets/apps/php.png')
+			#cpp .app-logo
+				background-image: url('../image_assets/apps/cpp.png')
+			#java .app-logo
+				background-image: url('../image_assets/apps/java.png')
+			#swift .app-logo
+				background-image: url('../image_assets/apps/swift.png')
+			#python .app-logo
+				background-image: url('../image_assets/apps/python.png')
+			#matlab .app-logo
+				background-image: url('../image_assets/apps/matlab.png')
+			#git .app-logo
+				background-image: url('../image_assets/apps/git.png')
+			#bootstrap .app-logo
+				background-image: url('../image_assets/apps/bootstrap.png')
+			#sass .app-logo
+				background-image: url('../image_assets/apps/sass.png')
+			#excel .app-logo
+				background-image: url('../image_assets/apps/excel.png')
+			#sql .app-logo
+				background-image: url('../image_assets/apps/sql.png')	
+			#autocad .app-logo
+				background-image: url('../image_assets/apps/autocad.png')
+			#inventor .app-logo
+				background-image: url('../image_assets/apps/inventor.png')
+			#rhino .app-logo
+				background-image: url('../image_assets/apps/rhino.png')
+			#max .app-logo
+				background-image: url('../image_assets/apps/max.png')
+			#c4d .app-logo
+				background-image: url('../image_assets/apps/c4d.png')
+			#ae .app-logo
+				background-image: url('../image_assets/apps/ae.png')
+			#premiere .app-logo
+				background-image: url('../image_assets/apps/premiere.png')
+			#final_cut .app-logo
+				background-image: url('../image_assets/apps/final_cut.png')
+			#espresso .app-logo
+				background-image: url('../image_assets/apps/espresso.png')
+			#sublime .app-logo
+				background-image: url('../image_assets/apps/sublime.png')
+			#coda .app-logo
+				background-image: url('../image_assets/apps/coda.png')
+
+	.education
+		position: relative
+		display: inline-block
+		.school
+			display: flex
+			margin-top: 2rem
+		#uwaterloo .logo
+			background-image: url('../image_assets/uwaterloo.gif')
+
+		#fhci .logo
+			background-image: url('../image_assets/fhci.png')

@@ -1,0 +1,76 @@
+/* ---------------------- Social Bar ---------------------- */
+.social-list
+	display: inline-block
+	position: relative
+	padding: 0
+	margin: 0
+	list-style: none
+
+	.animate.social-media
+		&:hover
+			padding-top: 0.5rem
+			padding-bottom: 1.5rem
+
+	.social-media
+		display: inline-block
+		position: relative
+		width: 20%
+		height: 3.4rem
+		min-height: 56px
+		padding: 1.5rem 0
+		float: left
+
+		a
+			display: block
+			width: 20%
+			height: 100%
+			margin: 0 auto
+			background-size: contain
+			background-position: 50%
+			background-repeat: no-repeat
+		.social-logo
+			position: relative
+			padding-bottom: 100%
+			background-size: 100%
+			background-repeat: no-repeat
+			+border-radius(0)
+
+		:last-child
+			padding-right: 0
+		:first-child
+			border-left: none
+
+	&.light
+		width: 64%
+		margin: 0 18%
+		padding: 0.2rem 0
+		height: 3.4rem
+		.social-media
+			padding: 0 0
+			#twitter
+				background-image: url('../image_assets/social/twitter_light.png')
+			#linkedin
+				background-image: url('../image_assets/social/linkedin_light.png')
+			#git
+				background-image: url('../image_assets/social/git_light.png')
+			#email
+				background-image: url('../image_assets/social/email_light.png')
+			#instagram
+				background-image: url('../image_assets/social/instagram_light.png')
+
+	&.dark
+		width: 56%
+		margin: 1em 22%
+		.social-media
+			#twitter
+				background-image: url('../image_assets/social/twitter_dark.png')
+			#linkedin
+				background-image: url('../image_assets/social/linkedin_dark.png')
+			#git
+				background-image: url('../image_assets/social/git_dark.png')
+			#email
+				background-image: url('../image_assets/social/email_dark.png')
+			#instagram
+				background-image: url('../image_assets/social/instagram_dark.png')
+			#soundcloud
+				background-image: url('../image_assets/social/soundcloud_dark.png')

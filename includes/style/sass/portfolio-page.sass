@@ -1,0 +1,171 @@
+/* ---------------------- PORTFOLIO PAGE ---------------------- */
+
+.portfolio-page
+	header.main-header
+		background: $white_trans
+		-webkit-backdrop-filter: saturate(1.8) blur(20px)
+		height: auto
+		z-index: 5
+		position: fixed
+		
+		&.header-up
+			top: -81px /* 48px + 32px + 1px */
+
+	.header
+		margin: 0
+
+		.title
+			text-align: center
+			padding: 16px 0
+			font-size: 48px
+			border-bottom: 1px solid $dark_grey
+			opacity: 1
+		&:before
+			content: ''
+		.tagline
+			display: none
+			top: 2.5em
+
+	.gallery-content
+		position: relative
+		display: inline-block
+		width: 100%
+		margin: 81px auto 0 auto
+
+		.portfolio-title
+			width: 100%
+			margin: 0 auto
+			margin-bottom: 0.75em
+			padding-top: 0
+			text-align: center
+			font-family: $sans-serif
+			padding-top: 81px
+
+		h1
+			font-size: 40px
+			text-align: center
+		h2
+			font-size: 32px
+			font-style: normal
+			font-weight: bold
+			color: $green
+		h3
+			font-size: 32px
+			font-weight: 300
+		h4
+			font-size: 28px
+			font-weight: 300	
+		h5
+			font-size: 24px
+			color: $med_grey
+			font-weight: normal
+		h6
+			font-size: 20px
+			color: $med_grey
+			font-weight: normal
+			font-style: italic
+			margin: 0
+		p
+			line-height: 1.6em
+
+		.cover-photo
+			width: 100%
+
+		.col
+			position: relative
+			font-size: 16px
+			line-height: 1.5em	
+		.single-column
+			width: 100%
+			max-width: 720px
+			margin: 0 auto
+
+		.folio_paragraph
+			width: 100%
+			line-height: 1.75em
+		.folio_image
+			display: inherit
+			position: relative
+			width: 100%
+			height: auto
+			margin: 0
+			padding: 12px 0
+			text-align: center
+			img
+				position: relative
+				display: inline-block
+				max-width: 90%
+				max-height: 440px
+				height: auto
+				margin: 0
+
+			iframe
+				width: 80%
+				height: 440px
+
+			figcaption
+				text-align: center
+				font-size: 1rem
+				color: $med_grey
+				max-width: 80%
+				margin: 0 10%
+
+			&.images-2
+				img, iframe
+					max-width: 46%
+					padding: 1%
+
+		blockquote
+			border-left: 1px solid $green
+			padding-left: 1em
+			color: $med_grey
+
+		table
+			font-size: 12px
+			line-height: 1.2em
+			border: none
+			width: 100%
+			*
+				margin: 0
+
+		.footnotes
+			font-size: 12px
+
+		sup a::before
+			content: '['
+		sup a::after
+			content: ']'
+
+/* ------ Table of Contents ------ */
+@media screen and (max-width: 1175px)
+	#toc
+		display: none
+
+	/* TODO: Implement drop-down TOC*/
+
+/*TODO Implement current location highlight */
+#toc
+	position: fixed
+	top: 112px
+	z-index: 1
+	width: 20%
+	max-width: 360px
+
+#toc a
+	display: block
+	cursor: pointer
+	font-size: 14px
+	text-decoration: none
+	font-weight: 500
+	margin: 0 2vw
+
+// #toc .toc-h1
+
+#toc .toc-h2
+	padding-left: 16px
+	font-family: "Lato", "Helvetica", sans-serif
+
+#toc .toc-h
+	padding-left: 32px
+	font-family: "Lato", "Helvetica", sans-serif
+	opacity: 0.8

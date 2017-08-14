@@ -19,61 +19,117 @@ html {
     width: 100%;
     margin: 0;
     padding: 0;
-    background: #FAFAFA;
-    background: -moz-linear-gradient(top, #FAFAFA 0%, #FBFFF5 100%);
-    background: -webkit-gradient(linear, left top, left botton, color-stop(0%, #FAFAFA), color-stop(100%, #FBFFF5));
-    background: -webkit-linear-gradient(top, #FAFAFA 0%, #FBFFF5 100%);
-    background: -o-linear-gradient(top, #FAFAFA 0%, #FBFFF5 100%);
-    background: -ms-linear-gradient(top, #FAFAFA 0%, #FBFFF5 100%);
-    background: linear-gradient(to bottom, #FAFAFA 0%, #FBFFF5 100%); }
-  html header {
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 12rem; }
-    html header .main-header {
-      padding-top: 1rem; }
+    background-color: #FAFAFA; }
   html section {
     display: block;
     margin: 0;
     padding: 0;
     width: 100%; }
-  html h1 {
-    font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
-    font-size: 4rem;
-    line-height: 1em;
-    font-weight: 200; }
-  html h2 {
-    font-family: "Merriweather", "Garamond", "Times New Roman", serif;
-    font-size: 3rem;
-    line-height: 1.5em;
-    font-weight: 300;
-    /*text-decoration: underline */ }
-  html h3 {
-    font-family: "Lato", "Helvetica", "Arial", sans-serif;
-    font-size: 2rem;
-    line-height: 1.5em;
-    font-weight: 400;
-    /*text-decoration: underline */ }
-  html h4 {
-    font-family: "Lato", "Helvetica", "Arial", sans-serif;
-    font-size: 1.75rem;
-    line-height: 1em;
-    font-weight: 300;
-    color: #808080; }
   html a {
     color: #5B753D;
     font-weight: inherit;
     -webkit-tap-highlight-color: transparent;
     visited-color: #5B753D; }
 
+/* ------ HELPER CLASSES ------ */
+.hidden, .hide {
+  display: none !important; }
+
+.mobile-only {
+  display: none; }
+
+.container {
+  width: 80%;
+  margin: 0 10%;
+  height: 100%;
+  position: relative;
+  display: inline-block; }
+
+.shrinkwrap {
+  will-change: width;
+  width: intrinsic;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  height: 100%;
+  margin: auto; }
+  @media screen and (min-width: 1160px) {
+    .shrinkwrap {
+      min-width: 62rem; } }
+
+.vertical-center:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; }
+
+.horizontal-center:before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  horizontal-align: middle;
+  margin-right: -0.25em; }
+
+.animate {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-backface-visibility: hidden; }
+
+.fixed {
+  position: fixed; }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  /* Tooltip text */ }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    top: 70%;
+    left: 50%;
+    margin-left: -60px;
+    padding: 5px 0;
+    color: #505050;
+    font-weight: 500;
+    text-align: center;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1; }
+  .tooltip:hover .tooltiptext {
+    visibility: visible; }
+    .tooltip:hover .tooltiptext:after {
+      display: none;
+      content: " ";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: rgba(51, 51, 51, 0.75) transparent transparent transparent; }
+
 /* -------------------- HEADER -------------------- */
+header {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto; }
+  header .main-header {
+    padding-top: 1rem; }
+
 .header, .sub-header {
   position: relative;
   display: inline-block;
-  float: left;
-  height: 100%;
   width: 100%;
   margin: 0;
   margin-top: 0;
@@ -83,9 +139,9 @@ html {
     display: block;
     float: none;
     line-height: 1em;
-    font-weight: 500;
-    padding-top: 48px;
     font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    padding-top: 48px;
     z-index: 100; }
   .header .tagline, .sub-header .tagline {
     position: relative;
@@ -128,6 +184,109 @@ html {
   font-size: 3.5rem;
   text-align: left; }
 
+/* ---------------------- Social Bar ---------------------- */
+.social-list {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  .social-list .animate.social-media:hover {
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem; }
+  .social-list .social-media {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 3.4rem;
+    min-height: 56px;
+    padding: 1.5rem 0;
+    float: left;
+    last-child-padding-right: 0;
+    first-child-border-left: none; }
+    .social-list .social-media a {
+      display: block;
+      width: 20%;
+      height: 100%;
+      margin: 0 auto;
+      background-size: contain;
+      background-position: 50%;
+      background-repeat: no-repeat; }
+    .social-list .social-media .social-logo {
+      position: relative;
+      padding-bottom: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0; }
+  .social-list.light {
+    width: 64%;
+    margin: 0 18%;
+    padding: 0.2rem 0;
+    height: 3.4rem; }
+    .social-list.light .social-media {
+      padding: 0 0; }
+      .social-list.light .social-media #twitter {
+        background-image: url("../image_assets/social/twitter_light.png"); }
+      .social-list.light .social-media #linkedin {
+        background-image: url("../image_assets/social/linkedin_light.png"); }
+      .social-list.light .social-media #git {
+        background-image: url("../image_assets/social/git_light.png"); }
+      .social-list.light .social-media #email {
+        background-image: url("../image_assets/social/email_light.png"); }
+      .social-list.light .social-media #instagram {
+        background-image: url("../image_assets/social/instagram_light.png"); }
+  .social-list.dark {
+    width: 56%;
+    margin: 1em 22%; }
+    .social-list.dark .social-media #twitter {
+      background-image: url("../image_assets/social/twitter_dark.png"); }
+    .social-list.dark .social-media #linkedin {
+      background-image: url("../image_assets/social/linkedin_dark.png"); }
+    .social-list.dark .social-media #git {
+      background-image: url("../image_assets/social/git_dark.png"); }
+    .social-list.dark .social-media #email {
+      background-image: url("../image_assets/social/email_dark.png"); }
+    .social-list.dark .social-media #instagram {
+      background-image: url("../image_assets/social/instagram_dark.png"); }
+    .social-list.dark .social-media #soundcloud {
+      background-image: url("../image_assets/social/soundcloud_dark.png"); }
+
+/* ---------------------- BIO & PIC ---------------------- */
+.bio {
+  width: 100%;
+  margin: 0; }
+  .bio .bio-pic {
+    position: relative;
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: 64px auto;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%; }
+    .bio .bio-pic img {
+      width: 100%;
+      height: 100%;
+      -webkit-border-radius: 40%;
+      -moz-border-radius: 40%;
+      -ms-border-radius: 40%;
+      border-radius: 40%; }
+  .bio .bio-text {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-family: "Lato", "Helvetica", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 2em;
+    font-weight: 400; }
+    .bio .bio-text p {
+      margin: 0 auto;
+      width: 66%; }
+
 /* ---------- Horizontal List Filter ---------- */
 .site-filter {
   text-align: center; }
@@ -139,7 +298,7 @@ html {
   line-height: 3em;
   font-family: "Lato", "Helvetica", "Arial", sans-serif; }
   .inline-sort .sort-text {
-    display: inline-block;
+    display: none;
     position: relative;
     float: left;
     font-weight: 400;
@@ -177,39 +336,6 @@ html {
 
 .filter-line {
   display: none; }
-
-/* ---------------------- BIO & PIC ---------------------- */
-.bio {
-  width: 100%;
-  margin: 0; }
-  .bio .bio-pic {
-    position: relative;
-    display: block;
-    margin: 64px auto;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    border-radius: 100%;
-    width: 12rem;
-    height: 12rem; }
-    .bio .bio-pic img {
-      width: 100%;
-      height: 100%;
-      -webkit-border-radius: 40%;
-      -moz-border-radius: 40%;
-      -ms-border-radius: 40%;
-      border-radius: 40%; }
-  .bio .bio-text {
-    position: relative;
-    display: block;
-    text-align: center;
-    font-family: "Lato", "Helvetica", "Arial", sans-serif;
-    font-size: 15px;
-    line-height: 2em;
-    font-weight: 400; }
-    .bio .bio-text p {
-      margin: 0 auto;
-      width: 66%; }
 
 /* ---------------------- PORTFOLIO ---------------------- */
 section.portfolio {
@@ -389,6 +515,12 @@ section.resume {
       @media screen and (max-width: 900px) {
         section.resume .container article .resume-content {
           padding: 0; } }
+      section.resume .container article .resume-content h4 {
+        font-family: "Lato", "Helvetica", "Arial", sans-serif;
+        font-size: 1.75rem;
+        line-height: 1em;
+        font-weight: 300;
+        color: #808080; }
       section.resume .container article .resume-content .subsection-header {
         display: flex;
         justify-content: space-between; }
@@ -578,6 +710,27 @@ section.resume {
     section.resume .education #fhci .logo {
       background-image: url("../image_assets/fhci.png"); }
 
+/* ---------------------- FOOTER ---------------------- */
+footer {
+  width: 100%;
+  height: 6.4rem;
+  margin-top: 4rem;
+  font-size: 12px;
+  line-height: 1.6rem;
+  background-color: #505050;
+  color: #FAFAFA;
+  padding-bottom: 0.5rem; }
+  footer .container {
+    position: relative;
+    min-height: inherit; }
+    footer .container .copyright {
+      position: relative;
+      display: block;
+      text-align: center;
+      color: #FAFAFA;
+      margin: auto;
+      bottom: 0; }
+
 /* ---------------------- PORTFOLIO PAGE ---------------------- */
 .portfolio-page header.main-header {
   background: rgba(250, 250, 250, 0.8);
@@ -726,98 +879,7 @@ section.resume {
 #toc .toc-h {
   padding-left: 32px;
   font-family: "Lato", "Helvetica", sans-serif;
-  opacity: 0.8;
-  /* ---------------------- FOOTER ---------------------- */ }
-
-footer {
-  width: 100%;
-  height: 6.4rem;
-  margin-top: 4rem;
-  font-size: 12px;
-  line-height: 1.6rem;
-  background-color: #505050;
-  color: #FAFAFA;
-  padding-bottom: 0.5rem; }
-  footer .container {
-    position: relative;
-    min-height: inherit; }
-    footer .container .copyright {
-      position: relative;
-      display: block;
-      text-align: center;
-      color: #FAFAFA;
-      margin: auto;
-      bottom: 0; }
-
-/* ---------------------- Social Bar ---------------------- */
-.social-list {
-  display: inline-block;
-  position: relative;
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-  .social-list .animate.social-media:hover {
-    padding-top: 0.5rem;
-    padding-bottom: 1.5rem; }
-  .social-list .social-media {
-    display: inline-block;
-    position: relative;
-    width: 20%;
-    height: 3.4rem;
-    min-height: 56px;
-    padding: 1.5rem 0;
-    float: left;
-    last-child-padding-right: 0;
-    first-child-border-left: none; }
-    .social-list .social-media a {
-      display: block;
-      width: 20%;
-      height: 100%;
-      margin: 0 auto;
-      background-size: contain;
-      background-position: 50%;
-      background-repeat: no-repeat; }
-    .social-list .social-media .social-logo {
-      position: relative;
-      padding-bottom: 100%;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      -ms-border-radius: 0;
-      border-radius: 0; }
-  .social-list.light {
-    width: 64%;
-    margin: 0 18%;
-    padding: 0.2rem 0;
-    height: 3.4rem; }
-    .social-list.light .social-media {
-      padding: 0 0; }
-      .social-list.light .social-media #twitter {
-        background-image: url("../image_assets/social/twitter_light.png"); }
-      .social-list.light .social-media #linkedin {
-        background-image: url("../image_assets/social/linkedin_light.png"); }
-      .social-list.light .social-media #git {
-        background-image: url("../image_assets/social/git_light.png"); }
-      .social-list.light .social-media #email {
-        background-image: url("../image_assets/social/email_light.png"); }
-      .social-list.light .social-media #instagram {
-        background-image: url("../image_assets/social/instagram_light.png"); }
-  .social-list.dark {
-    width: 56%;
-    margin: 1em 22%; }
-    .social-list.dark .social-media #twitter {
-      background-image: url("../image_assets/social/twitter_dark.png"); }
-    .social-list.dark .social-media #linkedin {
-      background-image: url("../image_assets/social/linkedin_dark.png"); }
-    .social-list.dark .social-media #git {
-      background-image: url("../image_assets/social/git_dark.png"); }
-    .social-list.dark .social-media #email {
-      background-image: url("../image_assets/social/email_dark.png"); }
-    .social-list.dark .social-media #instagram {
-      background-image: url("../image_assets/social/instagram_dark.png"); }
-    .social-list.dark .social-media #soundcloud {
-      background-image: url("../image_assets/social/soundcloud_dark.png"); }
+  opacity: 0.8; }
 
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
@@ -1073,90 +1135,5 @@ footer {
     width: 90%; }
   .portfolio-page .gallery-content figure .table {
     display: none; } }
-/* ------ HELPER CLASSES ------ */
-.hidden, .hide {
-  display: none !important; }
-
-.mobile-only {
-  display: none; }
-
-.container {
-  width: 80%;
-  margin: 0 10%;
-  height: 100%;
-  position: relative;
-  display: inline-block; }
-
-.shrinkwrap {
-  will-change: width;
-  width: intrinsic;
-  width: -moz-fit-content;
-  width: -webkit-fit-content;
-  width: fit-content;
-  height: 100%;
-  margin: auto; }
-  @media screen and (min-width: 1160px) {
-    .shrinkwrap {
-      min-width: 62rem; } }
-
-.vertical-center:before {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em; }
-
-.horizontal-center:before {
-  content: "";
-  display: inline-block;
-  width: 100%;
-  horizontal-align: middle;
-  margin-right: -0.25em; }
-
-.animate {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  -webkit-backface-visibility: hidden; }
-
-.fixed {
-  position: fixed; }
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-  font-family: "Lato", "Helvetica", "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  /* Tooltip text */ }
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    top: 70%;
-    left: 50%;
-    margin-left: -60px;
-    padding: 5px 0;
-    color: #505050;
-    font-weight: 500;
-    text-align: center;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    border-radius: 6px;
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1; }
-  .tooltip:hover .tooltiptext {
-    visibility: visible; }
-    .tooltip:hover .tooltiptext:after {
-      display: none;
-      content: " ";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: rgba(51, 51, 51, 0.75) transparent transparent transparent; }
 
 /*# sourceMappingURL=adamthompson.css.map */
