@@ -13,16 +13,16 @@ function toggleContent(ths){
 $(document).ready(function(){
 	
 	//Rotate through the header 
-	var x = 0;
-	setInterval(function(){
-		$(".tagline em#tag1").fadeOut(function() {
-			$(this).text(design_types[x]);
-		}).fadeIn(1000);
-		x++;
-		// reset counter to avoid overflow
-		if (x == design_types.length)
-			x = 0;
-	}, 4000);
+	// var x = 0;
+	// setInterval(function(){
+	// 	$(".tagline #tag1").fadeOut(function() {
+	// 		$(this).text(design_types[x]);
+	// 	}).fadeIn(1000);
+	// 	x++;
+	// 	// reset counter to avoid overflow
+	// 	if (x == design_types.length)
+	// 		x = 0;
+	// }, 4000);
 
 	// show Resume content
 	if ($(window).width() <= 768 || hideResumeText) {
