@@ -1,74 +1,60 @@
 /* -------------------- HEADER -------------------- */
-header
-	display: inline-block
-	margin: 0
-	padding: 0
-	width: 100%
-	height: auto
-	.main-header
-		padding-top: 1rem
-
-.header
+.main-header
 	position: relative
 	display: inline-block
 	width: 100%
+	height: auto
 	margin: 0
-	margin-top: 0
-	color: inherit
-	.title
-		position: relative
-		display: block
-		float: none
-		line-height: 1em
-		font-family: $sans-serif
-		font-weight: 400
-		// font-family: $serif
-		// font-weight: 100
-		padding-top: 48px
-		z-index: 100
-	.tagline
-		position: relative
-		display: block
-		width: 36rem
-		text-align: right
-		margin: auto
-		font-weight: 100
-		font-size: 2rem
-		line-height: 1em
-		padding-top: 16px 
+	margin-top: $global-margin
+	color: $black
 
-		@media (max-width: 1280px)
-			font-size: 1.6em
-			line-height: 1.25em
+	.header-contents
+		margin: $global-margin 0
+		.title
+			position: relative
+			display: block
+			font-family: $serif
+			font-weight: 400
+			font-size: 90px
+			text-align: center
+		.tagline
+			position: relative
+			display: block
+			width: 42rem
+			text-align: right
+			margin: auto
+			font-family: $serif
+			font-weight: 300
+			font-size: 36px
+			line-height: 1em
+			padding-top: 8px 
 
-		em
-			color: $green
+			@media (max-width: 1280px)
+				font-size: 1.6em
+				line-height: 1.25em
 
-	ul
-		position: relative
-		display: block
-		list-style: none
-		padding-left: 0
-		margin-top: 0
-		padding-top: 24px
-		font-size: 1.2em
-		font-weight: 200
-		color: $green
-	li
-		display: inline
-		padding-right: 1em
+			#tag
+				color: $green
 	a
-		color: inherit
+		color: $black
 		text-decoration: none
+		&:hover
+			text-decoration: none
 
-.header 
-	.title
-		font-size: 4.5rem
-		text-align: center
+.section-header
+	color: $black
+	font-family: $serif
+	font-size: 2.5rem
+	font-weight: 400
+	text-align: left
+	line-height: 1em
+	margin: 32px 0 16px 0// Total height = $global-margin
+	max-width: 33%
+	border-bottom: 1px solid $black
 
-.sub-header 
-	@extend .header
-	.title
-		font-size: 3.5rem
-		text-align: left
+.subsection-header
+	color: $black
+	font-family: $serif
+	font-size: 2rem
+	margin: 32px auto
 

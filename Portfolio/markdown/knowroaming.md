@@ -424,3 +424,10 @@ Among the other improvements were the Reload, ReachMe and Checkout workflow, the
 			$img5_caption =  "The new login screen, featuring double parallax (on supported devices)"; -->
 
 <!-- To be Continued... -->
+
+<div class="folio-nav prev">
+	<a href="?p=noom">Noom</a>
+</div>
+<div class="folio-nav next">
+	<a href="?p=smrtwatr">SMRT WATR</a>
+</div>

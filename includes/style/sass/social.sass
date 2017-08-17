@@ -40,11 +40,13 @@
 		:first-child
 			border-left: none
 
-	&.light
+	&.body
 		width: 64%
 		margin: 0 18%
-		padding: 0.2rem 0
-		height: 3.4rem
+		.tooltiptext
+			visibility: visible
+
+	&.light
 		.social-media
 			padding: 0 0
 			#twitter
@@ -59,8 +61,6 @@
 				background-image: url('../image_assets/social/instagram_light.png')
 
 	&.dark
-		width: 56%
-		margin: 1em 22%
 		.social-media
 			#twitter
 				background-image: url('../image_assets/social/twitter_dark.png')
@@ -74,3 +74,10 @@
 				background-image: url('../image_assets/social/instagram_dark.png')
 			#soundcloud
 				background-image: url('../image_assets/social/soundcloud_dark.png')
+
+footer
+	.social-list
+		width: 50%
+		margin: 0 25%
+		padding: 0.2rem 0
+		height: 3.4rem

@@ -108,3 +108,9 @@ There were still some small UI fixes that needed to be done before I could offic
 <figcaption>The final prototype I sent to the development team</figcaption>
 </figure>
 
+<div class="folio-nav prev">
+	<a href="../">Home</a>
+</div>
+<div class="folio-nav next">
+	<a href="?p=knowroaming">KnowRoaming</a>
+</div>

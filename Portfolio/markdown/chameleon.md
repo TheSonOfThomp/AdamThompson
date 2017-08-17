@@ -330,3 +330,12 @@ More details coming soon
 [^Berger]: E. H. Berger, "The Effects of Hearing Protectors on Auditory Communications", Aearo Company (1979)
 
 [^Trompette]: Trompette, N., Barbry, J.L., Sgard, F., Nelisse, H., "Sound transmission loss of rectangular and slit-shaped apertures: Experimental results and correlation with a modal model".  The Journal of the Acoustical Society of America, vol. 125, no. 31 (2009) Available: http://asa.scitation.org/doi/full/10.1121/1.3003084
+
+
+
+<div class="folio-nav prev">
+	<a href="?p=smrtwatr">SMRT WATR</a>
+</div>
+<div class="folio-nav next home">
+	<a href="../">Home</a>
+</div>

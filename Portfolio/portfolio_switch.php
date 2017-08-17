@@ -9,6 +9,7 @@
 	switch ($p) {
 		// SHOWCASE //
 		case 'noom_logging':
+			$p_title = "Improving Food Logging at Noom";
 			break;
 
 		case 'chameleon':

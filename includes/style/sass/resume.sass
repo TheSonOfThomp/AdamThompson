@@ -1,35 +1,9 @@
 /* ---------------------- RESUME ---------------------- */
 
 section.resume
-	min-height: 12em
 
-	a
-		text-decoration: underline
-
-
-	.sub-header
-		.resume-link
-			display: none
-		.linkedin-profile
-			text-decoration: none
-			line-height: 32px	
-			height: auto
-			width: auto
-			padding: 8px 10px
-			border: 1px solid #008cc9
-			background-color: $white
-			cursor: pointer
-			vertical-align: middle
-			+border-radius(4px)
-			&:hover
-				border: 2px solid #008cc9
-				padding: 7px 9px
-			span
-				color: #008cc9
-				font-size: 16px
-				text-decoration: none
-				font-family: $sans-body
-				font-weight: 400
+	.button
+		margin: 0 auto
 
 	.resume-header
 		padding-left: 1rem
@@ -40,25 +14,19 @@ section.resume
 			font-family: $sans-serif
 			font-size: 2rem
 			line-height: 2em
-
-	.bubble-connector
-		display: none
-		height: 95%
-		width: 6px
-		background: #ddd
-		position: absolute
-		left: 5vw
-		margin-top: 32px
+	.subsection-header
+		margin-left: 24px
 
 	.container
 		article
+			width: 100%
+			margin: auto
 			cursor: pointer
-			$logo-size: 144px
+
+			$logo-size: 160px
 			.logo-container
-				width: $logo-size/0.8
-				max-width: 20%
+				width: $logo-size
 				height: 100%
-				float: left
 				display: inline-block
 				.logo
 					width: 80%
@@ -70,16 +38,53 @@ section.resume
 					background-size: 80%
 					background-position: 50%
 					background-repeat: no-repeat
-				.company-site
-					display: none
-					margin-top: 0.8rem
-					font-family: $sans-body
-					font-size: 1rem
-					font-weight: 300
-					text-align: center
 					a
 						text-decoration: none
 						color: $dark_grey
+
+			.content-header
+				display: flex
+				width: 100%
+				margin: auto
+				// justify-content: center
+				.header-text
+					margin: auto 0
+				.item-title
+					font-family: $serif
+					font-size: 2rem
+					font-weight: 400
+					display: block
+					margin: auto
+					span
+						font-size: 1.5rem
+				.item-duration
+					font-family: $sans-serif
+					font-size: 1rem
+					font-weight: 300
+					margin: auto
+				.show
+					color: $green
+					background: none
+					border: none
+					font-family: $sans-serif
+					font-size: 12px
+					text-decoration: none
+					padding: 4px 0 0 12px
+					display: inline-block
+					cursor: pointer
+					&.more:after
+						content: ' more'
+					&.less:after
+						content: ' less'
+
+				.inline-note
+					display: inline
+					font-size: 1.25rem
+					font-style: italic
+				&:hover,
+				&:focus
+					.show
+						text-decoration: underline
 
 			.resume-content
 				width: 100%
@@ -96,50 +101,13 @@ section.resume
 					font-weight: 300
 					color: $med_grey
 
-				.subsection-header
-					display: flex
-					justify-content: space-between
-					.subsection-title
-						font-family: $sans-serif
-						font-size: 2rem
-						font-weight: 500
-						.show
-							color: $green
-							background: none
-							border: none
-							font-family: $sans-serif
-							font-size: 12px
-							text-decoration: none
-							padding: 4px 0 0 0
-							display: block
-							&.more:after
-								content: ' more'
-							&.less:after
-								content: ' less'
-
-						.inline-note
-							display: inline
-							font-size: 1.25rem
-							font-style: italic
-						&:hover,
-						&:focus
-							.show
-								text-decoration: underline
-
-				.subsection-duration
-					font-family: $sans-body
-					font-size: 1rem
-					font-weight: 300
-					margin: auto 16px
-					text-align: right
-					float: right
-
 				.resume-list
 					display: none
-					padding-left: 16px
-					font-size: 14px
+					padding-left: 20px
 					line-height: 1.5em
 					list-style-type: disc
+					font-family: $sans-serif
+					font-weight: 400
 
 					.resume-item
 						margin-bottom: 1em
@@ -152,9 +120,8 @@ section.resume
 		position: relative
 		display: inline-block
 		.job
-			display: flex
+			// display: flex
 			position: relative
-			width: 100%
 			overflow: hidden
 			margin-top: 32px
 			
@@ -192,7 +159,7 @@ section.resume
 			list-style: none
 			li
 				position: relative
-				width: 12.5%
+				width: 10%
 				margin: 1rem 0
 				float: left
 		
@@ -209,7 +176,7 @@ section.resume
 					position: relative
 					padding-bottom: 56%
 					background-size: 56%
-					background-position: 44% 0
+					background-position: 50% 0
 					background-repeat: no-repeat
 					+border-radius(0)
 				&:hover
@@ -299,8 +266,8 @@ section.resume
 		position: relative
 		display: inline-block
 		.school
-			display: flex
-			margin-top: 2rem
+			// display: flex
+			// margin-top: 2rem
 		#uwaterloo .logo
 			background-image: url('../image_assets/uwaterloo.gif')
 

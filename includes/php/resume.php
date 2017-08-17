@@ -1,31 +1,25 @@
 <section class="resume" id="resume">
-	<div class="sub-header">
-		<div class="container">
-			<div class="title">Résumé <span class="filter-notification"></span></div>
-			<ul>
-				<li>
-					<a class="linkedin-profile" target="_blank" href="http://www.linkedin.com/in/adammthompson">
-					<span>LinkedIn Profile</span>
-					</a>
-					<a class="resume-link" target="_blank" href="<?php echo $root_path;?>/Resume">Download PDF</a>
-				</li>
-			</ul>
-		</div>
+	<div class="container">
+		<div class="section-header">Résumé</div>
+		<!-- <a class="button" target="_blank" href="http://www.linkedin.com/in/adammthompson">LinkedIn Profile</a> -->
 	</div>
+	
 	<section class="experience container" id="work-experience">
-		<!-- <div class="resume-header">
-			<span class="resume-title">Experience<span class="filter-notification"></span></span>
-		</div> -->
 		<article class="zynga job">
-			<div class="logo-container">
-				<div class="logo vertical-center"></div>
-				<div class="company-site"><a href="http://www.zynga.com" target="_blank">Zynga</a></div>
+			
+			<div class="content-header">
+				<div class="logo-container">
+					<a href="http://www.zynga.com" target="_blank">
+					<div class="logo"></div>
+					</a>
+				</div>
+				<div class="header-text">
+					<span class="item-title">Product Manager</span>
+					<span class="item-duration">Spring&nbsp2016</span>
+					<button class="show more">Show</button>
+				</div>
 			</div>
 			<div class="resume-content">
-				<div class="subsection-header">
-					<span class="subsection-title">Product Manager<button class="show more">Show</button></span>
-					<span class="subsection-duration">Spring&nbsp2016</span>
-				</div>
 				<ul class="resume-list">
 					<li class="resume-item featured ux graphics pm">Performed background research, user analysis, and A/B testing as part of the design process for a new Subscriptions model</li>
 					<li class="resume-item featured ux pm">Configured final tuning parameters and UX flow for a viral engagement feature which increased Facebook feed app entry by 36%</li>
@@ -35,16 +29,18 @@
 			</div>
 		</article>
 		<article class="noom job">
-			<div class="logo-container">
-				<div class="logo vertical-center"></div>
-				<div class="company-site"><a href="http://www.noom.com" target="_blank">Noom</a></div>
+			
+			<div class="content-header">
+				<div class="logo-container">
+					<a href="http://www.noom.com" target="_blank"><div class="logo vertical-center"></div></a>
+				</div>
+				<div class="header-text">
+					<span class="item-title">Product Designer</span>
+					<span class="item-duration">Fall&nbsp2015</span>
+					<button class="show more">Show</button>
+				</div>
 			</div>
 			<div class="resume-content">
-				<div class="subsection-header">
-					<span class="subsection-title">Product Designer<button class="show more">Show</button></span>
-					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, Product Designer at Noom</span>
-					<span class="subsection-duration">Fall&nbsp2015</span>
-				</div>
 				<ul class="resume-list">
 					<li class="resume-item featured ux graphics pm">Re-designed the <a href="Portfolio/?p=noom_logging">meal-logging experience</a> on iOS and Android to improve clarity and speed of navigation, evidenced by user-testing</li>
 					<li class="resume-item featured ux pm">Initiated multidisciplinary collaboration by insisting upon stakeholder meetings before attempting solutions, and managed the early design process for the coach dashboard </li>
@@ -54,18 +50,18 @@
 			</div>
 		</article>
 		<article class="knowroaming job">
-			<div class="logo-container">
-				<div class="logo vertical-center"></div>
-				<div class="company-site"><a href="http://www.knowroaming.com" target="_blank">KnowRoaming</a></div>
+			<div class="content-header">
+				<div class="logo-container">
+					<a href="http://www.knowroaming.com" target="_blank"><div class="logo vertical-center"></div></a>
+				</div>
+				<div class="header-text">
+					<span class="item-title">UX Designer & Product Manager</span>
+					<span class="item-duration">Spring&nbsp2014 & Winter&nbsp2015</span>
+					<button class="show more">Show</button>
+				</div>
 			</div>
 			<div class="resume-content">
-				<div class="subsection-header">
-					<span class="subsection-title">UX Designer & Product Manager<button class="show more">Show</button></span>
-					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, Product Design, User Interface Designer at KnowRoaming</span>
-					<span class="subsection-duration">Spring&nbsp2014 & Winter&nbsp2015</span>
-				</div>
 				<ul class="resume-list">
-
 					<h4>UX Design</h4>
 						<li class="resume-item featured ux graphics industrial">Redesigned both <a href="Portfolio/?p=KR_app">iOS and Android apps</a> from the ground up. I reworked everything from the registration workflow, to the in app experience at home and abroad using the KnowRoaming SIM Sticker.</li>
 						<li class="resume-item featured ux graphics industrial pm">Leveraged customer feedback to iterate on the flow of the app to better correspond with the users' mental model of the 3 use-phases of the product.</li>
@@ -84,16 +80,17 @@
 			</div>
 		</article>
 		<article class="sony job">
-			<div class="logo-container">
-				<div class="logo vertical-center"></div>
-				<div class="company-site"><a href="http://mediago.sony.com" target="_blank">Sony Network Entertainment</a></div>
+			<div class="content-header">
+				<div class="logo-container">
+					<a href="http://mediago.sony.com" target="_blank"><div class="logo vertical-center"></div></a>
+				</div>
+				<div class="header-text">
+					<span class="item-title">UI/UX Designer</span>
+					<span class="item-duration">Fall&nbsp2013</span>
+					<button class="show more">Show</button>
+				</div>
 			</div>
 			<div class="resume-content">
-				<div class="subsection-header">
-					<span class="subsection-title">UI/UX Designer<button class="show more">Show</button></span>
-					<span class="hidden">UX Designer, UI Designer, UI/UX Designer, User Interface Designer at Sony Network Entertainment</span>
-					<span class="subsection-duration">Fall&nbsp2013</span>
-				</div>
 				<ul class="resume-list">
 					<li class="resume-item featured ux graphics">Led the design and development for a new music-dicovery feature in MediaGo. This feature has not yet been released.</li>
 					<li class="resume-item featured ux web">Developed the front-end for the new feature using HTML, SASS and jQuery</li>
@@ -102,30 +99,11 @@
 				</ul>
 			</div>
 		</article>
-<!-- 		<article class="genesys job">
-			<div class="logo-container">
-				<div class="logo vertical-center"></div>
-				<div class="company-site"><a href="http://www.genesyslabs.com" target="_blank">Genesys Labs</a></div>
-			</div>
-			<div class="resume-content">
-				<div class="subsection-header">
-					<span class="subsection-title">IT &amp Engineering HR Assistant</span>
-					<span class="subsection-duration">January - April&nbsp2013</span>
-				</div>
-				<ul class="resume-list">
-					<li class="resume-item featured pm">Organized an open house event &amp designed and assisted in designing event related media</li>
-					<li class="resume-item featured">Edited and improved php code for meeting room booking freeware</li>
-					<li class="resume-item featured">Performed maintenance and setup on existing internal network, &amp servers</li>
-					<li class="resume-item">Designed a new procedure for evaluating and interviewing new job candidates</li>
-				</ul>
-			</div>
-		</article> -->
 	</section>
+
 	<section class="skills container" id="toolbox">
-		<div class="resume-header">
-			<span class="resume-title">My Toolbox <span class="filter-notification"></span></span>
+		<div class="subsection-header">My Toolbox
 		</div>
-		<div class="skills-sub-header"></div>
 		<ul class="program-list"> <!-- must have a multiple of 8 -->
 			<li class="animate resume-item featured ux" id="sketch">
 				<div class="app-logo"></div><p class="app-name">Sketch</p>
@@ -160,6 +138,9 @@
 			<li class="animate resume-item featured ux web soft" id="coffeescript">
 				<div class="app-logo"></div><p class="app-name">CoffeeScript</p>
 			</li>
+			<li class="animate resume-item featured web soft" id="php">
+				<div class="app-logo"></div><p class="app-name">PHP</p>
+			</li>
 			<li class="animate resume-item web soft us" id="python">
 				<div class="app-logo"></div><p class="app-name">Python</p>
 			</li>
@@ -167,12 +148,9 @@
 			<li class="animate resume-item featured web soft ux" id="swift">
 				<div class="app-logo"></div><p class="app-name">Swift</p>
 			</li>
-			<li class="animate resume-item featured web soft" id="php">
-				<div class="app-logo"></div><p class="app-name">PHP</p>
-			</li>
-			<li class="animate resume-item web soft" id="cpp">
+<!-- 			<li class="animate resume-item web soft" id="cpp">
 				<div class="app-logo"></div><p class="app-name">C++</p>
-			</li>
+			</li> -->
 			<li class="animate resume-item web soft" id="java">
 				<div class="app-logo"></div><p class="app-name">Java</p>
 			</li>
@@ -194,62 +172,63 @@
 			<li class="animate resume-item featured industrial" id="inventor">
 				<div class="app-logo"></div><p class="app-name">Inventor</p>
 			</li>
-			<li class="animate resume-item web soft ux" id="excel">
+<!-- 			<li class="animate resume-item web soft ux" id="excel">
 				<div class="app-logo"></div><p class="app-name">Excel</p>
-			</li>
-			<li class="animate resume-item web soft us" id="sql">
+			</li> -->
+<!-- 			<li class="animate resume-item web soft us" id="sql">
 				<div class="app-logo"></div><p class="app-name">SQL</p>
-			</li>
+			</li> -->
 			<li class="animate resume-item web soft ux" id="git">
 				<div class="app-logo"></div><p class="app-name">Git</p>
 			</li>
-			<li class="animate resume-item web soft us" id="xcode">
+<!-- 			<li class="animate resume-item web soft us" id="xcode">
 				<div class="app-logo"></div><p class="app-name">XCode</p>
-			</li>	
+			</li> -->	
 
 		</ul>
 	</section>
 	<section class="education container" id="classes">
-		<div class="resume-header">
-			<span class="resume-title">Education <span class="filter-notification"></span></span>
-		</div>
+		<div class="subsection-header">Education</div>
 		<article class="school" id="uwaterloo">
-			<div class="logo-container">
-				<div class="logo"></div>
-				<span class="company-site">University of Waterloo</span>
+			<div class="content-header">
+				<div class="logo-container">
+					<a href="http://www.uwaterloo.ca" target="_blank"><div class="logo"></div></a>
+				</div>
+				<div class="header-text">
+					<span class="item-title">Systems Design Engineering <span>with&nbspCognitive&nbspScience Minor</span>
+					</span>
+					<span class="item-duration">Class&nbspof&nbsp2017</span>
+					<button class="show more">Show</button>
+				</div>
 			</div>
 			<div class="resume-content">
-				<div class="subsection-header">
-					<span class="subsection-title">Systems Design Engineering <span class="inline-note">with&nbspCognitive&nbspScience Minor</span><button class="show more">Show</button></span>
-					<span class="hidden">University of Waterloo, Systems Design, Mechatronics, Human Factors, User Interface, </span>
-					<span class="subsection-duration">Class&nbspof&nbsp2017</span>
-				</div>
 				<ul class="resume-list">
-					<li class="resume-item featured ux pm industrial">Cognitive Ergonomics <span class="inline-note">(SYDE 543)<span class="subsection-duration">Fall 2016</span></span>
+					<li class="resume-item featured ux pm industrial">Cognitive Ergonomics <span class="inline-note">(SYDE 543)<span class="item-duration">Fall 2016</span></span>
 						<div class="list-description">This course focuses on the role engineering psychology research plays in design of the information displays and devices associated with simple and complex cognitive tasks.</div>
 					</li>
-					<li class="resume-item featured ux pm industrial">Intro to Control Systems <span class="inline-note">(SYDE 352)<span class="subsection-duration">Winter 2016</span></span>
+					<li class="resume-item featured ux pm industrial">Intro to Control Systems <span class="inline-note">(SYDE 352)<span class="item-duration">Winter 2016</span></span>
 						<div class="list-description">Classical and state space representations of control systems. Stability, controllability, observability and sensitivity. Frequency domain behaviour, Bode plots, Nyquist stability criteria. Pole placement, PID, phase-lead and phase-lag controllers.</div>
 					</li>
-					<li class="resume-item featured ux pm industrial">User Centred Design <span class="inline-note">(SYDE 348)<span class="subsection-duration">Winter 2016</span></span>
+					<li class="resume-item featured ux pm industrial">User Centred Design <span class="inline-note">(SYDE 348)<span class="item-duration">Winter 2016</span></span>
 						<div class="list-description">The focus in this coures was on human factors and usability methods and techniques that should be applied throughout the design process, including: function and task analysis, usability analysis, prototyping and evaluation, user interaction styles, interface design, user designing to guidelines and standards</div>
 					</li>
-					<li class="resume-item featured ux pm industrial">Engineering Design <span class="inline-note">(SYDE 361)<span class="subsection-duration">Spring 2015</span></span>
+					<li class="resume-item featured ux pm industrial">Engineering Design <span class="inline-note">(SYDE 361)<span class="item-duration">Spring 2015</span></span>
 						<div class="list-description">In this class, we learned about the design process; from problem definition to ideation and prototyping. We practiced what we were learning with a term-long design project. Our team designed an <a href="Portfolio/?p=smrtwatr">interactive water fountain</a></div>
 					</li>
-					<!-- <li class="resume-item featured industrial">Mechanics of Deformable Solids <span class="inline-note">(SYDE 286)<span class="subsection-duration">Fall 2014</span></span>
+					<!-- <li class="resume-item featured industrial">Mechanics of Deformable Solids <span class="inline-note">(SYDE 286)<span class="item-duration">Fall 2014</span></span>
 						<div class="list-description">We explored the mechanics involved in stress and strain on common engineering materials. Our final was to build a cardboard bridge and estimate its failure load.</div>
 					</li> -->
-					<li class="resume-item featured industrial">Circuits & Instrumentation <span class="inline-note">(SYDE 292)<span class="subsection-duration">Fall 2014</span></span>
+					<li class="resume-item featured industrial">Circuits & Instrumentation <span class="inline-note">(SYDE 292)<span class="item-duration">Fall 2014</span></span>
 						<div class="list-description">This course covered op-amps, analog filters and various transducers. We covered measurement and instrumentation devices, and hight, low and band-pass filters. My final project involved designing and building a single-note guitar tuner using an instrumentation amplifier, and a series of band-pass filters</div>
 					</li>
-					<!-- <li class="resume-item featured ux">Intro to Cognitive Science <span class="inline-note">(PSYCH 256)<span class="subsection-duration">Fall 2014</span></span>
+					<!-- <li class="resume-item featured ux">Intro to Cognitive Science <span class="inline-note">(PSYCH 256)<span class="item-duration">Fall 2014</span></span>
 						<div class="list-description">This course was an introduction to the field of cognitive science. We covered many of the approaches to the field such as the Computational-Reperesentational Understandind of the Mind (CRUM), and others.</div>
 					</li> -->
-				<!-- 	<li class="resume-item featured ux">Human Factors in Design <span class="inline-note">(SYDE 162)<span class="subsection-duration">Spring 2013</span></span>
+				<!-- 	<li class="resume-item featured ux">Human Factors in Design <span class="inline-note">(SYDE 162)<span class="item-duration">Spring 2013</span></span>
 						<div class="list-description">We were introduced to needs-analysis, user interviews, ergonimics and user testing.</div>
 					</li> -->
 				</ul>
+				</div>
 			</div>
 		</article>
 		<article class="school hidden" id="fhci">

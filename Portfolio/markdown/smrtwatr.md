@@ -50,3 +50,10 @@ I wasn't heavily involved in the design of most mechanical systems  -->
 [^flowchart]: SMRT WATR UX Flowchart
 <img src='../includes/portfolio_images/smrtwatr/SMRTWATR flow.jpg' style="max-width: 100%; max-height: none;">
 </figure>
+
+<div class="folio-nav prev">
+	<a href="?p=knowroaming">KnowRoaming</a>
+</div>
+<div class="folio-nav next">
+	<a href="?p=chameleon">Chameleon</a>
+</div>

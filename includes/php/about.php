@@ -1,9 +1,44 @@
 <section class="about" id="about">
-	<div id="about_div">
-		<h1>About Adam</h1>
-		<img id="profile_img" id="bevel"; src="includes/image_assets/WBsqr.png" title="Photo by Natasha Choo" alt="WebsitePic" align="right"/>
-		<p class="about_text" align="left";>
-		Hi! I'm Adam, currently in my <? echo $term;?> term of Systems Design Engineering at the University of Waterloo. I'm passionate about products, and their design, usability and functionality. I love a project that can take advantage of both my artsy and nerdy sides. In the past I have worked at KnowRoaming and Sony as a User Experience designer, and have worked on several freelance projects.</p>
-		<p class="about_text" align="left";></p>	
+	<div class="container">
+		<h1 class="section-header">More About Me</h1>
+		<div class="content flex" id="bio">
+			<div class="bio-pic">
+				<img alt="Portrait taken by Natasha Choo" src="includes/image_assets/Adam_web.jpg">
+			</div>
+			<p class="about-text">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet convallis viverra. Suspendisse condimentum lacinia massa, at pharetra diam ultrices sit amet. Vivamus malesuada urna non dictum luctus. Nunc ante metus, lacinia non congue placerat, rutrum placerat risus. Sed scelerisque augue quis urna dapibus accumsan.
+			</p>	
+		</div>
+
+<!-- 		<div class="subsection-header">Recent News</div>
+		<div class="content" id="achievements">
+			<ul>
+				<li><a href="">The Water Boys take 5th at ICCA finals in New York City</a></li>
+				<li><a href="">Chameleon wins University of Waterloo's Norman Esch Entrepreneurship award</a></li>
+			</ul>
+		</div> -->
+
+<ul class="social-list body dark" id="social">
+		<li class="social-media tooltip">
+			<a id="email" href="mailto:adam.m.thompson@icloud.com?Subject=Hey!" target="_blank"></a>
+			<span class="tooltiptext">Email</span>
+		</li>
+		<li class="social-media tooltip">
+			<a id="twitter" href="https://www.twitter.com/TheSonOfThomp" target="_blank"></a>
+			<span class="tooltiptext">Twitter</span>
+		</li>
+		<li class="social-media tooltip">
+			<a id="linkedin" href="https://ca.linkedin.com/in/adammthompson" target="_blank"></a>
+			<span class="tooltiptext">LinkedIn</span>
+		</li>
+		<li class="social-media tooltip hide-mobile">
+			<a id="git" href="http://www.github.com/Adam93MT" target="_blank"></a>
+			<span class="tooltiptext">GitHub</span>
+		</li>
+		<li class="social-media tooltip hide-mobile">
+			<a id="instagram" href="https://www.instagram.com/TheSonOfThomp" target="_blank"></a>
+			<span class="tooltiptext">Instagram</span>
+		</li>
+	</ul>
 	</div>
 </section>

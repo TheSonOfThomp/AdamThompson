@@ -5,7 +5,7 @@ include('../includes/plugins/Parsedown.php');
 include('../includes/plugins/ParsedownExtra.php');
 include('../includes/plugins/toc.php');
 ?>
-<title>Adam Thompson - <?php echo($p_title) ?></title>
+<title>Adam Thompson <?php echo($p_title) ?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/theme/bitter/vanillabox.css">
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -17,9 +17,9 @@ include('../includes/plugins/toc.php');
 	$p = $_GET['p'];
 	$Parsedown = new ParsedownExtra();
 	$markdown = file_get_contents('markdown/'.$p.'.md');
-	if (!$markdown) {
-		echo '<meta http-equiv="Refresh" content="0;'.$root_path.'">';
-	}
+	// if (!$markdown) {
+	// 	echo '<meta http-equiv="Refresh" content="0;'.$root_path.'">';
+	// }
 	?>
 	<script type="text/javascript">
 		var toc = <?php echo markdown_toc('markdown/'.$p.'.md');?>;
