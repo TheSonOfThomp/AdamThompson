@@ -80,5 +80,5 @@
 
     </ul>
   </div>
-  <a class="button" href="<?php echo $root_path ?>/Portfolio">See more work</a>
+  <!-- <a class="button" href="<?php echo $root_path ?>/Portfolio">See more work</a> -->
 </section>
