@@ -3,14 +3,18 @@
 
 h2
 	color: $green
-.noom h2
-	color: #4271d7
-.knowroaming h2
-	color: #4286b5
-.smrtwatr h2
-	color: #18828f
-.chameleon h2
-	color: #2e8c5d
+.noom 
+	h2, a, .tldr-title
+		color: #4271d7
+.knowroaming 
+	h2, a, .tldr-title
+		color: #4286b5
+.smrtwatr 
+	h2, a, .tldr-title
+		color: #756393
+.chameleon 
+	h2, a, .tldr-title
+		color: #2e8c5d
 
 
 .portfolio-page
@@ -38,7 +42,28 @@ h2
 			content: ''
 		.tagline
 			display: none
-			top: 2.5em
+
+	.tldr
+		display: flex
+		justify-content: space-between
+		text-align: center
+		line-height: 1.5em
+		.one-third
+			width: 30%
+			margin: 0 auto
+		.tldr-title
+			font-family: $sans-serif
+			font-size: 18px
+			font-weight: 600
+		.tldr-content
+			font-family: $sans-serif
+		.inline
+			// text-align: left
+			.tldr-title
+				display: inline-block
+			.tldr-content
+				display: inline
+
 
 	.gallery-content
 		position: relative
@@ -74,6 +99,7 @@ h2
 			font-size: 24px
 			font-weight: 400
 			margin-top: 0
+			color: $dark_grey
 		h4
 			font-size: 28px
 			font-weight: 300	
@@ -123,6 +149,9 @@ h2
 				max-height: 440px
 				height: auto
 				margin: 0
+			&#hero
+				img
+					max-height: none
 
 			iframe
 				width: 80%

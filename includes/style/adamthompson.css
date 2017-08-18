@@ -681,16 +681,16 @@ footer {
 h2 {
   color: #5B753D; }
 
-.noom h2 {
+.noom h2, .noom a, .noom .tldr-title {
   color: #4271d7; }
 
-.knowroaming h2 {
+.knowroaming h2, .knowroaming a, .knowroaming .tldr-title {
   color: #4286b5; }
 
-.smrtwatr h2 {
-  color: #18828f; }
+.smrtwatr h2, .smrtwatr a, .smrtwatr .tldr-title {
+  color: #756393; }
 
-.chameleon h2 {
+.chameleon h2, .chameleon a, .chameleon .tldr-title {
   color: #2e8c5d; }
 
 .portfolio-page header.main-header {
@@ -714,8 +714,25 @@ h2 {
   .portfolio-page header.main-header:before {
     content: ""; }
   .portfolio-page header.main-header .tagline {
-    display: none;
-    top: 2.5em; }
+    display: none; }
+.portfolio-page .tldr {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  line-height: 1.5em; }
+  .portfolio-page .tldr .one-third {
+    width: 30%;
+    margin: 0 auto; }
+  .portfolio-page .tldr .tldr-title {
+    font-family: "europa", "gill sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600; }
+  .portfolio-page .tldr .tldr-content {
+    font-family: "europa", "gill sans", sans-serif; }
+  .portfolio-page .tldr .inline .tldr-title {
+    display: inline-block; }
+  .portfolio-page .tldr .inline .tldr-content {
+    display: inline; }
 .portfolio-page .gallery-content {
   position: relative;
   display: inline-block;
@@ -744,7 +761,8 @@ h2 {
   .portfolio-page .gallery-content h3 {
     font-size: 24px;
     font-weight: 400;
-    margin-top: 0; }
+    margin-top: 0;
+    color: #505050; }
   .portfolio-page .gallery-content h4 {
     font-size: 28px;
     font-weight: 300; }
@@ -789,6 +807,8 @@ h2 {
       max-height: 440px;
       height: auto;
       margin: 0; }
+    .portfolio-page .gallery-content .folio_image#hero img {
+      max-height: none; }
     .portfolio-page .gallery-content .folio_image iframe {
       width: 80%;
       height: 440px; }

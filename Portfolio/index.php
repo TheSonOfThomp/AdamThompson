@@ -9,7 +9,6 @@ include('../includes/plugins/toc.php');
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/jquery.mixitup.min.js"></script>
-<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/jquery.vanillabox-0.1.7.min.js"></script>
 <script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/portfolio.js"></script>
 
 <?php
