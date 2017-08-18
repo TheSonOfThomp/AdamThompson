@@ -678,6 +678,21 @@ footer {
       font-size: 14px; }
 
 /* ---------------------- PORTFOLIO PAGE ---------------------- */
+h2 {
+  color: #5B753D; }
+
+.noom h2 {
+  color: #4271d7; }
+
+.knowroaming h2 {
+  color: #4286b5; }
+
+.smrtwatr h2 {
+  color: #18828f; }
+
+.chameleon h2 {
+  color: #2e8c5d; }
+
 .portfolio-page header.main-header {
   display: none;
   background: rgba(250, 250, 250, 0.75);
@@ -705,7 +720,7 @@ footer {
   position: relative;
   display: inline-block;
   width: 100%;
-  margin: auto; }
+  margin: auto auto 72px auto; }
   .portfolio-page .gallery-content .portfolio-title {
     width: 100%;
     margin: 0 auto;
@@ -715,20 +730,21 @@ footer {
     font-family: "europa", "gill sans", sans-serif;
     padding-top: 81px; }
   .portfolio-page .gallery-content h1 {
-    font-size: 56px;
+    font-size: 72px;
     font-family: "acta-display", "didot", serif;
     font-weight: 300;
     text-align: center;
     margin: 72px auto; }
   .portfolio-page .gallery-content h2 {
-    font-size: 64px;
+    font-size: 48px;
     font-family: "europa", "gill sans", sans-serif;
     font-style: normal;
     font-weight: bold;
-    color: #5B753D; }
+    margin-bottom: 0; }
   .portfolio-page .gallery-content h3 {
-    font-size: 32px;
-    font-weight: 300; }
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 0; }
   .portfolio-page .gallery-content h4 {
     font-size: 28px;
     font-weight: 300; }
@@ -769,7 +785,7 @@ footer {
     .portfolio-page .gallery-content .folio_image img {
       position: relative;
       display: inline-block;
-      max-width: 90%;
+      max-width: 100%;
       max-height: 440px;
       height: auto;
       margin: 0; }
