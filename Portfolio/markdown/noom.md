@@ -1,112 +1,115 @@
-#Improving Food Logging at Noom
+#Noom
 
-Meal logging is a must-have feature in Noom Coach. Therefore it must to be quick and intuitive to log the food you’ve eaten and get insightful feedback. With the help of the UX research team and the input of other designers and engineers, I was able to fix some big problems with the food logging experience, and re-design it to be as straight-forward and intuitive as possible.
+##Overview
+###Who, what, where
+I worked for four months as a co-op student in midtown Manhattan at Noom—a health and lifestyle tech company focused on combating obesity, diabetes, hypertension, through behaviour change. My role as a product designer was to confer with PMs and the UX Research team to identify points of friction for our users, design and test solutions to these issues, and coordinate production with developers.
 
-<figure class='folio_image' id='img1'>
-	<a target='_blank'>
-		<img src='../includes/portfolio_images/noom/noom_logging.jpg'>
-	</a>
-</figure>
+Meal logging is a must-have feature in Noom Coach. Noom Coach is an app which tracks, and gives users feedback on their eating habits to help fight chronic illness. Therefore it must to be quick and intuitive to log the food you’ve eaten and get insightful feedback.
+<!-- With the help of the UX research team and the input of other designers and engineers, I was able to fix some big problems with the food logging experience, and re-design it to be as straight-forward and intuitive as possible. -->
 
-## Why did we do this?
+##Problem
+###Finding and defining the goal
 
-Through user testing we got to see what users did (and didn’t do) in the app. The biggest issue we saw was that users were having difficulty navigating between the search view and the cart view (to view foods already logged). The buttons to view the cart, and to add more items were not nearly salient enough to be the primary action; the back buttons on either screen were counter intuitive, and didn’t work the way anyone expected them to.
+By observing users' behaviour through sites like usertesting.com, we got to see what they did (and didn’t do) in the app. One of the biggest issues we saw was that users were having difficulty navigating between different views in the food logging flow. Users were unsure of what to do, and there was a lot of guessing going on to navigate between views. People weren't noticing the buttons to change views, back buttons didn't work the way they expected them to, and the UI changed depending on the entry case.
 
 <figure class='folio_image video' id='img2'>
 	<iframe src="https://player.vimeo.com/video/157767468" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	<figcaption>I want to log a meal. The arrow button in the left corner — where does that take me? That little check mark in the right corner — can I click it? And if I do, where does it take me, and how can I get back?</figcaption>
+	<figcaption>I want to log a meal. That little check mark in the right corner — can I click it? And if I do, where does it take me, and how can I get back? The arrow button in the left corner — where does is take me? </figcaption>
 </figure>
 
-The exact problems were not identical between the Android and iOS apps, but there were significant problems with each. On iOS, users were flat-out confused about the behaviour of some buttons, whereas on Android, users were missing out on critical information. When an Android user pressed the back arrow their meal would be saved, and they would arrive back on the home screen. At face value this makes sense, however it doesn’t provide the user experience promised by Noom: to learn about your meals in order to make healthier choices in the future. We saw this as another symptom of a broken food-logging workflow.
-
-Whether this odd navigation was designed or (more likely) an oversight, we recognized it was a problem that needed fixing, so I set out to re-think the meal-logging experience with better, more intuitive navigation in mind.
-
-### Design Constraints
-
-To keep the scope of this project down, the team decided that I would focus only on what happens after a user selects a meal, and before they receive feedback (though we discussed ways to improve meal selection in the future). Knowing that navigation was the key area of focus, I wanted to establish all the possible variants of navigation that could occur. This turned out to be a bit more complex than I had anticipated.
-Not only can users log new meals, but they can also edit their past meals. Editing a meal to add a forgotten item or to update the portion size shouldn’t require any extra steps or re-learning than a new meal. The food logging workflow should not only be excellent when logging a new meal, but should also be just as intuitive when making edits.
-
-## How did we do this?
-
-Once we had determined what problems that needed to be solved, I got to brainstorming solutions. I made flowcharts and wireframes to see what solutions might work, and to get a better handle on the problem. When I had an idea the team and I liked, I made higher-fidelity mockups in Sketch. For the more promising versions I made interactive prototypes using Marvel, Framer and Origami. We then used the mockups and prototypes to test; both on co-workers and users on UserTesting and UsabilityHub. With these test results, I refined the mockups, or went back to sketching and brainstorming. After dozens of iterations we arrived at the final version of the Noom food logging experience.
-
-### Brainstorming
-
-To start, I made some rough sketches and of how the screens would need to flow together. These flow charts helped me get a better handle of the problem, and see how I might make both navigation scenarios intuitive.
+I made flowcharts of the existing workflow to better understand why the app wasn't matching our users' conceptual model. After drawing this, I could see why users would get confused. The *back* button on the _search_ view behaved the same as the *check* button (...sometimes. There were some cases where this didn't happen). Additionally, different entry cases created subtly different behaviour, further contributing to the confusion. It was clear that this chaotic workflow would need to be ironed out.
 
 <figure class='folio_image' id='img2'>
 	<a target='_blank'>
-		<img src='../includes/portfolio_images/noom/noom_logging-rough-flowchart.jpg'>
+		<img src='../includes/portfolio_images/noom/noom_existing.jpg'>
+	</a>
+<figcaption>The chaotic flowchart that is the existing solution</figcaption>
+</figure>
+
+##Requirements
+Once we had determined what problems that needed to be solved, we needed to create requirements. There were several specific criteria we created, which all boiled down to:
+
+**Users will act with confidence:** All interactive elements will have a single clear purpose.
+
+**Users will not get lost:** All cases will have an understandable  flow and architecture.
+
+These requirements guided the design process, and allowed me to quickly evaluate potential designs.
+
+##Iteration
+ <!-- I tried making new, less chaotic flowcharts and wireframes to see what solutions might work and get a better handle on the nuances of the problem.  -->
+
+Knowing that the app's information architecture was at the core of the problem, I wanted to establish all the possible entry points and navigation cases that could occur. This turned out to be a bit more complex than I had anticipated.
+
+Not only can users log new meals, but they can also edit their past meals. Editing a meal to add an item or to update the portion size shouldn’t require any extra steps or new patterns than a new meal. The food logging workflow should not only be excellent when logging a new meal, but should also be just as intuitive when making edits.
+
+###The Basics
+
+The most basic solutions to the problem of navigation confusion involve eliminating different cases and settling on a single, universal flow for all entry cases—either starting a user in the search view first, or in the meal summary view first. The issue though is that one of the entry cases now requires navigation through a meaningless screen to achieve the goal.
+
+<figure class='folio_image images-2' id='img2'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/noom/noom_search_first.jpg'>
+		<img src='../includes/portfolio_images/noom/noom_cart_first.jpg'>
 	</a>
 <figcaption></figcaption>
 </figure>
 
-The flowchart here shows the two most basic solutions, — one starting a user in the search view first, the other in the cart (meal summary) view first. For example, in a “Search First” model, users would be able to exit meal logging from the search view, or go forward to the cart. From the cart view, the user can go back to search, or complete the flow.
+A third solution was to build a hybrid of these first two—a conditional UI which starts the user in a different screen depending on whether the user has logged the meal already or not. This is quite similar to the current solution, but with more thoughtful UI buttons. This makes the navigation smooth in both cases, however the user will still need to remember which case they're in to know the behaviour of the buttons.
 
-In a perfect world, we’d be done here. However, since we needed the workflow to be quick and intuitive for users in all scenarios, neither of these two iterations would cut it. Each version neglects a portion of the users we need to design for:
+### Going Back
 
-- Users who are logging a new meal don’t want to press another button to start logging.
-
-- Users who’ve already logged the meal don’t want to press another button to remember what they forgot.
-
-A third solution was to build a hybrid of the first two; a conditional UI which starts the user in a different screen depending on whether the user has logged the meal already or not.
-
-<figure class='folio_image' id='img2'>
-	<a target='_blank'>
-		<img src='../includes/portfolio_images/noom/noom_logging-va.jpg'>
-	</a>
-<figcaption>The top sketch illustrates navigation when editing a meal, the bottom when starting a new meal. Notice the different icons on the search screens in each scenario.</figcaption>
-</figure>
-
-### A Common Theme
-
-Since a user can log a new meal, or edit one, and start the workflow with either the search or cart view, both of these screens needed a way to get out (and go back to the home screen). To keep each view consistent across scenarios meant there needed to be a way to get out from every screen. One of the only ways to convey this behaviour in the UI was to use a cross icon; a back arrow is too ambiguous. “Am I going back home, or to the first screen?”. This was the fourth major iteration, and it seemed promising. I iterated on this version, changing the locations and styles of buttons until we had a few styles that we liked, and worked well. Testing the individual screens and button styles was promising, and showed a lot of improvement from the original workflow.
+Since a user can start the workflow with either the search or cart view, and to keep each view consistent across entry cases, both of these screens needed an intuitive way to return to the home screen.
+Traditionally this has been done with the back arrow, but we noticed this was too ambiguous. Am I going back home, or to the previous screen? After some research and experimentation with icons, we found that one of the clearest ways to convey this behaviour in the UI was to use a _cross_ (or x) icon.
 
 <figure class='folio_image' id='img2'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/noom/noom_logging-vc.png'>
 	</a>
-<figcaption></figcaption>
+<figcaption>Testing the individual screens and button styles was promising, and showed a lot of improvement from the original workflow.</figcaption>
 </figure>
 
-There was a small problem with this One-X model though. If the screens were independent, and moved from one to the other, the behaviour of the close buttons could get confusing. If one view animated to another, I worried that the meaning of Close might still be ambiguous for the second screen.“Will it close the whole flow, or just the screen I’m on?”. As mentioned before, only closing the current screen (and effectively going back) doesn’t make much sense architecturally, since the behaviour would change depending on the context. This worry was proven during user interviews, where we found that there was a near 50/50 split between users who expected to close the entire flow vs. the current screen. These screens needed to be the same, but different.
+Using one-X, I able to design a conditional interface with identical behaviour across all cases. Whether the user was editing, or logging a new meal each view would behave the same. 
 
-### One Screen
+There was a small problem with this model though. If the screens were independent, and transitioned from one to the other, the behaviour of the close buttons might get confusing. If one view animated to another, I worried that the meaning of Close might still be ambiguous for the second screen.“Will it close the whole flow, or just the screen I’m on?”. As mentioned before, only closing the current screen (and effectively going back) doesn’t make much sense architecturally, since the behaviour would change depending on the context. 
 
-That’s when it hit me: these weren’t two screens I was designing, rather two parts of the same experience. For the next few days I iterated like crazy; I knew I was on the right track with the One-Screen concept.
+This worry was substantiated during user interviews, where we found that there was a near 50/50 split between users who expected to close the entire flow vs. the current screen. These screens needed to be the same, but different.
 
-There would be only one close button for both views, and an easy way to flip between each mode. The blue header would be a consistent element across the views; the close button would always be there. This design also had the benefit of not having to worry about how the Add More button looked. The search view would minimize to show the cart, and then open back up when a user taps the search bar. Since the search bar and other input methods were always visible, adding more to a meal would be as simple as tapping an input method.
+That’s when it hit me: these weren’t two separate screens I was designing, rather two parts of one experience. By designing the interaction thoughtfully, I needed to convey the feeling of a single context in these two views.
 
-I sketched and mocked up how these interactions would work and brought them to our daily design sync. The team was on board. I made a prototype in Origami to show how the flow might feel.
+##Prototyping
+###One Screen to rule them all
+
+The next iteration behaved the same as the previous, except for the transition, so I made a prototype in Origami to show how the flow might feel and how the two parts of the experience would interact.
+
+There would be only one close button for both modes, and an easy way to flip between them. The search view would minimize to show the cart, and then open back up when a user taps the search bar. Since the search bar and other input methods were always visible, adding more to a meal would be as simple as tapping an input method.
 
 <figure class='folio_image' id='img2'>
 	<iframe src="https://player.vimeo.com/video/157767592" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<figcaption></figcaption>
+<figcaption>I may have gone a little overboard with the interaction design and animation on this iteration, and would need to tone it down if I wanted to get the design built. </figcaption>
 </figure>
 
-Then we had a team meeting which included a product manager and developer. We would have few resources available to implement this fix (if any), so the development effort would have to be justified by the usability benefits gained from the re-design.
+###Dialing it back
 
+I took a look at the essential elements of the previous iteration, which were 1) a single header and close button, and 2) a simple transition between views. By keeping a static close button and making the header a uniform size, it was possible to achieve the feeling of a single context for meal logging. I made some simplifications to the prototype and arrived at a (hopefully) final design.
+
+<figure class='folio_image' id='img2'>
+	<iframe src="https://player.vimeo.com/video/157767466" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<figcaption>An updated One-X design—The final prototype I sent to the development team</figcaption>
+</figure>
+
+##Testing and Validation
 ### Witherto’s and Whyfor’s
 
-Wanting to show that One-Screen did in fact rule them all, I created a decision matrix for all the major iterations and the usability criteria for the redesign. Based on data from user tests for both the old app and new prototypes, I was able to fill a good portion of the chart. From these values, I evaluated the relative score of the other designs. As it turned out, One-Screen did score the highest in terms of usability, though only by a small margin.
-
-Once I included the development estimate, the One-X model pulled ahead. After discussing this chart to the rest of the team, we agreed that the benefits of One-Screen didn’t justify the increased development time, and we would move forward with the One-X model.
+With the help of our User Research team, we tested aspects of each of the six designs using various methods, and ranked each design's performance in each of the usability criteria. We arranged these in a decision matrix, and included the developer estimate for each design. 
 
 <figure class='folio_image' id='img2'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/noom/noom_logging-matrix.png'>
 	</a>
-<figcaption>The Decision Matrix I used to rank and justify the designs</figcaption>
+<figcaption>The Decision Matrix we used to rank and justify the design decisions</figcaption>
 </figure>
 
-## Finishing Touches
-
-There were still some small UI fixes that needed to be done before I could officially spec and hand over the design, so I kept the Sketch file open and kept working. After discussing how the navigation bar was implemented, I found a way to make the One-X model even better. As it turned out, it was possible to transition between two screens while keeping one navigation bar (or primary toolbar on Android) in place. The One-Screen version was technical overkill (I admit, I was a little overzealous), and the problems it solved could just as easily be solved by modifying the One-X version. By keeping a static close button and making the header a uniform size, it was possible to achieve the feeling of a single context for meal logging. We did some validation of this and I added it to the matrix. The rest of the team was on board with these changes, and we were ready to spec. I sent the designs to Zeplin, and the improved meal logging experience was ready to be built!
-
-<figure class='folio_image' id='img2'>
-	<iframe src="https://player.vimeo.com/video/157767466" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<figcaption>The final prototype I sent to the development team</figcaption>
-</figure>
+After taking the final prototype and usability decision matrix to a developer meeting, the rest of the team was on board. I sent the designs to Zeplin, and the improved meal logging experience was ready to be built!
 
 <div class="folio-nav prev">
 	<a href="../">Home</a>
