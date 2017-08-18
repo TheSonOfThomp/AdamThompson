@@ -1,14 +1,43 @@
 #Noom
 
+<div class="tldr">
+	<div class="one-third">
+		<div class="tldr-title">Problem</div>
+		<div class="tldr-content">Users are having difficulty navigating a core section of the app.</div>
+	</div>
+	<div class="one-third">
+		<div class="tldr-title">Solution</div>
+		<div class="tldr-content">Restructure the app architecture, and increase clarity of UI elements.</div>
+	</div>
+	<div class="one-third">
+			<div class="inline">
+				<div class="tldr-title">Skills: </div>
+				<div class="tldr-content">UX, Information Architecture, UI, Interaction</div>
+			</div>
+			<div class="inline">
+				<div class="tldr-title">Tools: </div>
+				<div class="tldr-content">Sketch, Marvel, Framer, Origami</div>
+			</div>
+	</div>
+</div>
+
 ##Overview
 ###Who, what, where
 I worked for four months as a co-op student in midtown Manhattan at Noom—a health and lifestyle tech company focused on combating obesity, diabetes, hypertension, through behaviour change. My role as a product designer was to confer with PMs and the UX Research team to identify points of friction for our users, design and test solutions to these issues, and coordinate production with developers.
 
 Meal logging is a must-have feature in Noom Coach. Noom Coach is an app which tracks, and gives users feedback on their eating habits to help fight chronic illness. Therefore it must to be quick and intuitive to log the food you’ve eaten and get insightful feedback.
-<!-- With the help of the UX research team and the input of other designers and engineers, I was able to fix some big problems with the food logging experience, and re-design it to be as straight-forward and intuitive as possible. -->
+
+In my time at Noom, I redesigned the information architecture, user flow, UI and interaction of the meal-logging task.
+
+<figure class='folio_image' id='hero'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/noom/noom_logging.jpg'>
+	</a>
+<figcaption>The chaotic flowchart that is the existing solution</figcaption>
+</figure>
 
 ##Problem
-###Finding and defining the goal
+###Getting where you want to go
 
 By observing users' behaviour through sites like usertesting.com, we got to see what they did (and didn’t do) in the app. One of the biggest issues we saw was that users were having difficulty navigating between different views in the food logging flow. Users were unsure of what to do, and there was a lot of guessing going on to navigate between views. People weren't noticing the buttons to change views, back buttons didn't work the way they expected them to, and the UI changed depending on the entry case.
 

@@ -1,5 +1,28 @@
-#KnowRoaming App Redesign
+#KnowRoaming
 
+<div class="tldr">
+	<div class="one-third">
+		<div class="tldr-title">Problem</div>
+		<div class="tldr-content">The existing app has grown too fast, and has no coherent structure or visual design.</div>
+	</div>
+	<div class="one-third">
+		<div class="tldr-title">Solution</div>
+		<div class="tldr-content">Overhaul the entire app structure and design and rebuild the app from the ground up.</div>
+	</div>
+	<div class="one-third">
+			<div class="inline">
+				<div class="tldr-title">Skills: </div>
+				<div class="tldr-content">UX, Information Architecture, UI, Interaction, Front-End Dev</div>
+			</div>
+			<div class="inline">
+				<div class="tldr-title">Tools:</div>
+				<div class="tldr-content">Sketch, Balsamiq, Photoshop, Illustrator, Marvel</div>
+			</div>
+	</div>
+</div>
+
+##Overview
+###Eliminating mobile "Bill-Shock"
 I worked at KnowRoaming as a co-op student from May 2014 to April 2015 (with 4 months of school in between). This was my first ever app design job, and had no supervision from a senior designer; it wasn't until my second term when the company hired a full-time designer. This experience helped me learn and grow a lot as a designer. The following is an attempt to capture my design process at the time.
 
 ---

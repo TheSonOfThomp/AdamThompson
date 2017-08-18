@@ -1,10 +1,34 @@
-#SMRT WATR - The Interactive Water Fountain
+#SMRT WATR
 
+<div class="tldr">
+	<div class="one-third">
+		<div class="tldr-title">Challenge</div>
+		<div class="tldr-content">Design a water-themed IoT product</div>
+	</div>
+	<div class="one-third">
+		<div class="tldr-title">Outcome</div>
+		<div class="tldr-content">An internet-connected water fountain and associated web game.</div>
+	</div>
+	<div class="one-third">
+			
+			<div class="inline">
+				<div class="tldr-title">Skills: </div>
+				<div class="tldr-content">UX, Front-End Dev, Back-End Dev</div>
+			</div>
+			<div class="inline">
+				<div class="tldr-title">Tools: </div>
+				<div class="tldr-content">Sketch, JavaScript, Python</div>
+			</div>
+	</div>
+</div>
+
+##Overview
+### The Interactive Water Fountain
 SMRT WATR (pronounced "smart water") is an interactive fountain and mobile game IoT experience. For our 3rd year engineering project, [Josh Bradshaw](http://joshbradshaw.ca), [Isaac Hunter](https://isaachunter.ca), [Shubh Jagani](http://www.shubhjagani.com), [Matt Jones](https://www.linkedin.com/in/matt--jones/), [Emma Cooper](https://www.linkedin.com/in/emmacooper2562/), and I designed and built a dynamic fountain which changes based on the results of a web-based quiz game. Users could sign in to the web app at smrtwatr.me, and join a quiz match with three other people. As a player answered a question correctly, their corner of the fountain would get higher in response. The player with the highest score after all questions could control the fountain for 30 seconds, selecting from a list of pre-set routines. 
 
 My main contributions to this project were UX and front-end development, as well as some backend development and mechanical design.
 
-<figure class='folio_image' id='smrtwatr-ui'>
+<figure class='folio_image' id='hero'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/smrtwatr/smrtwatr.jpg'>
 	</a>
