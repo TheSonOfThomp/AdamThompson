@@ -1093,6 +1093,18 @@ h2 {
     display: block; }
 
   /* ------------ Portfolio Page - MOBILE ------------ */
+  .portfolio-page .tldr {
+    display: inline-block; }
+    .portfolio-page .tldr .one-third {
+      width: 50%;
+      display: inline-block;
+      margin: 16px auto; }
+      .portfolio-page .tldr .one-third .inline {
+        margin: 16px auto; }
+        .portfolio-page .tldr .one-third .inline .tldr-content {
+          display: inline-block; }
+  .portfolio-page .gallery-content h1 {
+    font-size: 64px; }
   .portfolio-page .gallery-content .portfolio-title {
     width: 90%; }
   .portfolio-page .gallery-content .col {
