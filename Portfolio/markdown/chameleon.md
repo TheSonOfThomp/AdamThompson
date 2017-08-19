@@ -102,7 +102,7 @@ Next, in order to find the _amplitude_ of the incoming signal, I added a peak de
 
 This DC signal was then input into an `analogRead` pin of an Arduino UNO. Since all the gains in the circuit are known, we can easily calculate the voltage at the output of the microphone. Since the sensitivity of the microphone is given, the incoming noise level in dB(A) can be calculated like so: 
 
-```Arduino
+<!-- ```Arduino
 // Microphone Calibration
 const double p0 = 0.00002; // Reference Pressure (Pa)
 const double sens = 1000 * pow(10,(-53/20)); // Microphone sensitivity in mV/Pa 
@@ -115,7 +115,7 @@ const double S_total = p0*sens*A_filt*2*G; // Overall Gain
 ...
 double vin = getInput(micPin);
 double dBSPL = 20*log10(vin/S_total);
-```
+``` -->
 
 This took a little tweaking since the component values and mic input voltage weren't precise. In the end we were able to get a relatively accurate measurement of the noise level reaching the microphone which we verified the SPL this using an app the CDC recommends, [NoiSee](https://itunes.apple.com/us/app/noisee/id549239949?mt=8).
 
@@ -205,11 +205,9 @@ That makes sense intuitively—take the analogy of closing a window to block noi
 Since continuously variable attenuation was not absolutely necessary to the success of the device (and deadlines were approaching), we decided to abandon continuously variable attenuation for a simpler "binary attenuation" design—the best of which was a plug-type design.
 
 
-## Magnets (A New Prototype)
+<!-- ## Magnets (A New Prototype) -->
 
-<!-- We needed to come up with a new form of actuation since the solenoid was too heavy, and a new form of attenuation since the rotating disks were not entirely viable according to the acoustic tests. 
- -->
-One of the reservations I had with a plug design was the difficulty we would have actuating it—that is, getting the plug to open and close. Getting linear motion would likely require a solenoid, and it's not entirely space-efficient to put a solenoid on its side, perpendicular to the head just to get a plug to move in and out. 
+<!-- One of the reservations I had with a plug design was the difficulty we would have actuating it—that is, getting the plug to open and close. Getting linear motion would likely require a solenoid, and it's not entirely space-efficient to put a solenoid on its side, perpendicular to the head just to get a plug to move in and out. 
 
 Before we did away with the "Pie-slices" design I had been working on a more efficient way of actuating that attenuator. Inspired by [this article](http://makezine.com/2015/08/18/3d-print-stepper-motor/), I entertained the idea of building a custom stepper that would be embedded into the ear-cup, and allow a disk to rotate in increments up to a certain angle. For this, I had to refresh my memory of electromagnetism. 
 
@@ -228,10 +226,10 @@ On paper, 4 small electromagnets should be able to successfully push & pull the 
 		<img src='../includes/portfolio_images/chameleon/pull-plug-cad2.png'>
 	</a>
 	<figcaption>CAD model of the 4-magnet plug design</figcaption>
-</figure>
+</figure> -->
 
 <!-- Our first try was to freely wrap the wire around a nail. This didn’t really work since there were no bounds and the coil would end up too long. Next we put a washer/nut on the nail, and spaced them correctly. The coil was wound between the barriers, then we sanded away the head of the nail, cut the other end to get the washer off, and cut it to size. This did not work great since the heat from sanding caused the enamel coating to melt, creating a short on the core. We then tried winding in the same way, but then slipping it onto a pre-cut nail as a core. This works in theory, but there were burrs on the cut nail, which scratched the enamel coating, again causing a short. If we had to make 4 of these, we would be in for a rough time. And we hadn’t even proven the concept yet. -->
-
+<!-- 
 One of our supervisors suggested late that afternoon that instead of using 4 small electromagnets we should use _one_, with a magnet in the middle since the magnetic field is stronger within the coil. I made a short coil and tested it out. Unfortunately, I had to push over 3 amps through the coil to get it to apply any force to the magnet.
 
 <figure class='folio_image' id='major-hack'>
@@ -327,7 +325,7 @@ Sadly, the model was placed too close to the edge of the print bed, and ended up
 		<img src='../includes/portfolio_images/chameleon/good-printer.jpg'>
 	</a>
 	<figcaption>The print fused with the support material! We had to go to a professional print shop.</figcaption>
-</figure>
+</figure> -->
 
 --- 
 More details coming soon
