@@ -678,21 +678,16 @@ footer {
       font-size: 14px; }
 
 /* ---------------------- PORTFOLIO PAGE ---------------------- */
-h2 {
+.portfolio-page .home h2, .portfolio-page .home a {
   color: #5B753D; }
-
-.noom h2, .noom a, .noom .tldr-title {
+.portfolio-page .noom h2, .portfolio-page .noom a, .portfolio-page .noom .tldr-title {
   color: #4271d7; }
-
-.knowroaming h2, .knowroaming a, .knowroaming .tldr-title {
+.portfolio-page .knowroaming h2, .portfolio-page .knowroaming a, .portfolio-page .knowroaming .tldr-title {
   color: #4286b5; }
-
-.smrtwatr h2, .smrtwatr a, .smrtwatr .tldr-title {
+.portfolio-page .smrtwatr h2, .portfolio-page .smrtwatr a, .portfolio-page .smrtwatr .tldr-title {
   color: #756393; }
-
-.chameleon h2, .chameleon a, .chameleon .tldr-title {
+.portfolio-page .chameleon h2, .portfolio-page .chameleon a, .portfolio-page .chameleon .tldr-title {
   color: #2e8c5d; }
-
 .portfolio-page header.main-header {
   display: none;
   background: rgba(250, 250, 250, 0.75);
@@ -938,7 +933,7 @@ h2 {
     .main-header .header-contents {
       margin: 36px auto; }
       .main-header .header-contents .title {
-        font-size: 72px;
+        font-size: 60px;
         width: 80%;
         margin: auto; }
       .main-header .header-contents .tagline {
@@ -1017,12 +1012,12 @@ h2 {
         text-align: left; }
 
   /* ------------ SOCIAL - MOBILE ------------ */
-  .social-list.body {
+  .social-list {
     width: 100%;
     margin: 0;
     display: flex;
     justify-content: center; }
-    .social-list.body .social-media {
+    .social-list .social-media {
       width: 33%;
       padding: 0; }
 
