@@ -273,7 +273,16 @@ footer .social-list {
   width: 50%;
   margin: 0 25%;
   padding: 0.2rem 0;
-  height: 3.4rem; }
+  height: 3rem; }
+  footer .social-list .social-media a {
+    display: block;
+    width: 25%;
+    height: 100%;
+    margin: 0 auto;
+    color: #FAFAFA;
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat; }
 
 /* ---------------------- BIO & PIC ---------------------- */
 .bio {
@@ -982,7 +991,8 @@ footer {
       margin: 36px auto; }
       .bio .bio-text p {
         margin-bottom: 1rem;
-        width: 100%; }
+        width: 100%;
+        line-height: 1.5em; }
 
   /* ------------ PORTFOLIO - MOBILE ------------ */
   section.portfolio {
@@ -1029,6 +1039,10 @@ footer {
     .social-list .social-media {
       width: 33%;
       padding: 0; }
+      .social-list .social-media a {
+        font-weight: 400; }
+        .social-list .social-media a .social-logo {
+          width: 25%; }
 
   /* ------------ RESUME - MOBILE ------------ */
   section.resume .container article {
@@ -1084,17 +1098,13 @@ footer {
     display: none; }
 
   /* ------------ FOOTER - MOBILE ------------ */
-  .social-media {
-    width: 33%;
-    height: 4.8rem;
-    margin: 0.8rem 0; }
-
-  .social-media a {
-    width: 40%;
-    margin: 0 30%; }
-
   footer {
     display: block; }
+    footer .social-list .social-media {
+      width: 33%;
+      margin: 0.8rem 0; }
+      footer .social-list .social-media a {
+        width: 40%; }
 
   /* ------------ Portfolio Page - MOBILE ------------ */
   .portfolio-page .tldr {
