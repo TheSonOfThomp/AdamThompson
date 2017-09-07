@@ -1117,6 +1117,8 @@ footer {
         margin: 16px auto; }
         .portfolio-page .tldr .one-third .inline .tldr-content {
           display: inline-block; }
+  .portfolio-page .gallery-content.knowroaming h1 {
+    font-size: 56px; }
   .portfolio-page .gallery-content h1 {
     font-size: 64px; }
   .portfolio-page .gallery-content .portfolio-title {
