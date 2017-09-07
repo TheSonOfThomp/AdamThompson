@@ -75,9 +75,9 @@ I wasn't heavily involved in the design of most mechanical systems  -->
 <img src='../includes/portfolio_images/smrtwatr/SMRTWATR flow.jpg' style="max-width: 100%; max-height: none;">
 </figure>
 
-<div class="folio-nav prev">
+<div class="folio-nav prev knowroaming">
 	<a href="?p=knowroaming">KnowRoaming</a>
 </div>
-<div class="folio-nav next">
+<div class="folio-nav next chameleon">
 	<a href="?p=chameleon">Chameleon</a>
 </div>

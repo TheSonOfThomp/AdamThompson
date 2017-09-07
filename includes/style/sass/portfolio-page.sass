@@ -3,20 +3,33 @@
 
 .portfolio-page
 	.home
-		h2, a
+		h2, a, &.folio-nav a
 			color: $green
 	.noom 
-		h2, a, .tldr-title
+		h2, a, .tldr-title, &.folio-nav a
 			color: #4271d7
+		&.folio-nav:hover
+			background: #CFD5E6
+			border-color: #4271d7
 	.knowroaming 
-		h2, a, .tldr-title
+		h2, a, .tldr-title, &.folio-nav a
 			color: #4286b5
+		&.folio-nav:hover
+			background: #CFDCE6
+			border-color: #4286b5
 	.smrtwatr 
-		h2, a, .tldr-title
+		h2, a, .tldr-title, &.folio-nav a
 			color: #756393
+		&.folio-nav:hover
+			background: #D7CFE6
+			border-color: #756393
 	.chameleon 
-		h2, a, .tldr-title
+		h2, a, .tldr-title, &.folio-nav a
 			color: #2e8c5d
+		&.folio-nav:hover
+			background: #CFE6DA
+			border-color: #2e8c5d
+
 	header.main-header
 		display: none
 		background: $white_trans

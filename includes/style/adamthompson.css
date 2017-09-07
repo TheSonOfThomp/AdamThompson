@@ -210,7 +210,9 @@ html {
   position: relative;
   padding: 0;
   margin: 0;
-  list-style: none; }
+  list-style: none;
+  width: 64%;
+  margin: 0 18%; }
   .social-list .animate.social-media:hover {
     padding-top: 0.5rem;
     padding-bottom: 1.5rem; }
@@ -218,34 +220,30 @@ html {
     display: inline-block;
     position: relative;
     width: 20%;
-    height: 3.4rem;
-    min-height: 56px;
+    height: 3rem;
     padding: 1.5rem 0;
     float: left;
     last-child-padding-right: 0;
     first-child-border-left: none; }
     .social-list .social-media a {
       display: block;
-      width: 20%;
+      width: 100%;
       height: 100%;
       margin: 0 auto;
-      background-size: contain;
-      background-position: 50%;
-      background-repeat: no-repeat; }
-    .social-list .social-media .social-logo {
-      position: relative;
-      padding-bottom: 100%;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      -ms-border-radius: 0;
-      border-radius: 0; }
-  .social-list.body {
-    width: 64%;
-    margin: 0 18%; }
-    .social-list.body .tooltiptext {
-      visibility: visible; }
+      color: #333333; }
+      .social-list .social-media a:hover {
+        font-weight: 400; }
+      .social-list .social-media a .social-name {
+        text-align: center;
+        display: inline-block;
+        width: 100%; }
+      .social-list .social-media a .social-logo {
+        width: 15%;
+        height: 100%;
+        margin: 0 auto;
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat; }
   .social-list.light .social-media {
     padding: 0 0; }
     .social-list.light .social-media #twitter {
@@ -288,7 +286,7 @@ footer .social-list {
     font-family: "europa", "gill sans", sans-serif;
     font-size: 18px;
     line-height: 2em;
-    font-weight: 400;
+    font-weight: 300;
     padding: 72px 0; }
     .bio .bio-text p {
       margin: 0 auto;
@@ -504,7 +502,7 @@ section.resume .container article {
       color: #808080; }
     section.resume .container article .resume-content .resume-list {
       display: none;
-      padding-left: 20px;
+      padding-left: 160px;
       line-height: 1.5em;
       list-style-type: disc;
       font-family: "europa", "gill sans", sans-serif;
@@ -548,7 +546,8 @@ section.resume .skills {
     position: relative;
     padding: 0;
     margin: 0;
-    list-style: none; }
+    list-style: none;
+    font-family: "europa", "gill sans", sans-serif; }
     section.resume .skills .program-list li {
       position: relative;
       width: 10%;
@@ -572,8 +571,6 @@ section.resume .skills {
         -moz-border-radius: 0;
         -ms-border-radius: 0;
         border-radius: 0; }
-      section.resume .skills .program-list li:hover .app-name {
-        font-weight: 500; }
     section.resume .skills .program-list #sketch .app-logo {
       background-image: url("../image_assets/apps/sketch.png"); }
     section.resume .skills .program-list #photoshop .app-logo {
@@ -678,16 +675,28 @@ footer {
       font-size: 14px; }
 
 /* ---------------------- PORTFOLIO PAGE ---------------------- */
-.portfolio-page .home h2, .portfolio-page .home a {
+.portfolio-page .home h2, .portfolio-page .home a, .portfolio-page .home.folio-nav a {
   color: #5B753D; }
-.portfolio-page .noom h2, .portfolio-page .noom a, .portfolio-page .noom .tldr-title {
+.portfolio-page .noom h2, .portfolio-page .noom a, .portfolio-page .noom .tldr-title, .portfolio-page .noom.folio-nav a {
   color: #4271d7; }
-.portfolio-page .knowroaming h2, .portfolio-page .knowroaming a, .portfolio-page .knowroaming .tldr-title {
+.portfolio-page .noom.folio-nav:hover {
+  background: #CFD5E6;
+  border-color: #4271d7; }
+.portfolio-page .knowroaming h2, .portfolio-page .knowroaming a, .portfolio-page .knowroaming .tldr-title, .portfolio-page .knowroaming.folio-nav a {
   color: #4286b5; }
-.portfolio-page .smrtwatr h2, .portfolio-page .smrtwatr a, .portfolio-page .smrtwatr .tldr-title {
+.portfolio-page .knowroaming.folio-nav:hover {
+  background: #CFDCE6;
+  border-color: #4286b5; }
+.portfolio-page .smrtwatr h2, .portfolio-page .smrtwatr a, .portfolio-page .smrtwatr .tldr-title, .portfolio-page .smrtwatr.folio-nav a {
   color: #756393; }
-.portfolio-page .chameleon h2, .portfolio-page .chameleon a, .portfolio-page .chameleon .tldr-title {
+.portfolio-page .smrtwatr.folio-nav:hover {
+  background: #D7CFE6;
+  border-color: #756393; }
+.portfolio-page .chameleon h2, .portfolio-page .chameleon a, .portfolio-page .chameleon .tldr-title, .portfolio-page .chameleon.folio-nav a {
   color: #2e8c5d; }
+.portfolio-page .chameleon.folio-nav:hover {
+  background: #CFE6DA;
+  border-color: #2e8c5d; }
 .portfolio-page header.main-header {
   display: none;
   background: rgba(250, 250, 250, 0.75);

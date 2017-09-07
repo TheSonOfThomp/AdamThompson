@@ -354,7 +354,7 @@ More details coming soon
 
 
 
-<div class="folio-nav prev">
+<div class="folio-nav prev smrtwatr">
 	<a href="?p=smrtwatr">SMRT WATR</a>
 </div>
 <div class="folio-nav next home">

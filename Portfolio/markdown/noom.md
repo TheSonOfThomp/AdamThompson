@@ -140,9 +140,9 @@ With the help of our User Research team, we tested aspects of each of the six de
 
 After taking the final prototype and usability decision matrix to a developer meeting, the rest of the team was on board. I sent the designs to Zeplin, and the improved meal logging experience was ready to be built!
 
-<div class="folio-nav prev">
+<div class="folio-nav prev home">
 	<a href="../">Home</a>
 </div>
-<div class="folio-nav next">
+<div class="folio-nav next knowroaming">
 	<a href="?p=knowroaming">KnowRoaming</a>
 </div>

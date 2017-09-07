@@ -448,9 +448,9 @@ Among the other improvements were the Reload, ReachMe and Checkout workflow, the
 
 <!-- To be Continued... -->
 
-<div class="folio-nav prev">
+<div class="folio-nav prev noom">
 	<a href="?p=noom">Noom</a>
 </div>
-<div class="folio-nav next">
+<div class="folio-nav next smrtwatr">
 	<a href="?p=smrtwatr">SMRT WATR</a>
 </div>
