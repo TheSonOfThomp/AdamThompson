@@ -1,93 +1,94 @@
 /* ---------------------- PORTFOLIO ---------------------- */
+$portfolio-margin: 16px
 section.portfolio
 	position: relative
 	display: block
 	width: 100%
-	max-height: 9/4 * 33vw
-	margin: 2em 0
+	margin: $global-margin auto
 	text-align: center
-	overflow: hidden
 
 	.gallery
 		position: relative
-		width: 100%
-		margin: 0
-		padding: 0
-		// background-color: $dark_grey
+		width: auto
+		margin: $portfolio-margin
 
 		ul
 			position: relative
 			display: inline-block
-			width: 100%
 			margin: 0 
 			padding: 0
 			list-style: none
+
 		.folio-item
 			position: relative
 			display: inline-block
 			overflow: hidden
 			float: left
-			width: 33.333%
-			// height: 36.75vw // 50% * 98% * 3/4
-			height: 3/4 * 33.333vw
+			width: 50%
 			padding: 0
 			margin: 0 
-			img
-				position: relative
-				width: 100%
-				height: auto
-				cursor: pointer
 
 			a
 				display: inline-block
-				width: 100%
-				height: 100%
+				margin: $portfolio-margin
 				&:hover,
 				&:focus
 					.hover-state
 						opacity: 1
+					// img
+						// width: 110%
+				img
+					position: relative
+					width: 100%
+					height: auto
+					cursor: pointer
+					margin-left: 0
+					// +animate-elements(width, 0.15s, ease-in-out)
 			
 			.hover-state
 				opacity: 0
 				position: absolute
 				top: 0 
-				bottom: 0
+				bottom: 4px // it works
 				left: 0 
 				right: 0
-				width: 100%
-				height: 100%
+				margin: $portfolio-margin
 				text-align: center
-				background-color: $dark_grey_trans 
+				background-color: $white_trans 
 				cursor: pointer
 				display: flex
 				align-items: center
 				justify-content: center
 
-				-webkit-transition: opacity 0.15s ease-in-out
-				-moz-transition: opacity 0.15s ease-in-out
-				transition: opacity 0.15s ease-in-out
+				+animate-elements(opacity, 0.15s, ease-in-out)
 				-webkit-backface-visibility: hidden
-				-webkit-backdrop-filter: blur(4px)
-				// &:before
-				// 	content: ''
-				// 	display: inline-block
-				// 	height: 100%
-				// 	vertical-align: middle
-				// 	margin-right: -0.25em /* Adjusts for spacing */
+				-webkit-backdrop-filter: saturate(1.8) blur(4px)
 
 				.folio-hover
 					display: inline-block
 					vertical-align: middle
-					color: $white
+					color: $black
 					line-height: 1.8rem
 					font-weight: 500
 					span
 						display: inline-block
 						margin: auto 12px
 					.folio-title
-						font-size: 1.5rem
+						font-size: 2rem
+						font-family: $serif
+					.folio-description
+						font-size: 1.2rem
+						font-family: $sans-serif
+						padding: 8px 0
+					.folio-platform
+						display: none
+						font-size: 1rem
 						font-family: $sans-serif
 					.folio-type
+						display: none
 						font-size: 1rem
-						font-weight: lighter
 						font-style: italic
+
+	.button
+		font-size: 18px
+		width: 25%

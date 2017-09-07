@@ -5,6 +5,7 @@
 /* ---------------------------------------------------- */
 
 @media screen and (max-width: 768px) 
+	$global-margin: 36px
 	html main 
 		width: 100%
 		margin: 0
@@ -14,63 +15,19 @@
 		display: inline
 
 	/* ------------ HEADER - MOBILE ------------ */
-	.header, .sub-header
+	.main-header
 		height: auto
-		margin-top: 0
 		padding-top: 0
-		.main-header .container 
-			width: 100%
-			margin: 0
-		.tagline 
-			width: 100%
-			display: none
-			text-align: center
-			font-size: 1.6em
-			line-height: 1.25em
-			top: 3em
-
-	header.main-header
-		padding: 0
-		margin: 0 
-
-	.sub-header 
-		margin-top: 0
-		&:before 
-			width: calc(100% - 56px)
-		&:after
-			right: -108px
-		.title 
-			font-size: 2.8rem
-			line-height: 3.6rem
-			width: 50%
-			top: 0
-			padding-left: 4% 
-			padding-left: 4vw 
-		.img-container 
-			height: 86px
-			width: 71px
-			float: right
-			margin: 0
-			padding-top: 1.8rem
-			padding-right: 3%
-		ul 
-			width: 100%
-			padding-top: 9.6rem
-			text-align: center
-		li 
-			top: 6rem
-			display: block
-			font-size: 1.5rem
-			line-height: 4rem
-			cursor: pointer
-			padding-right: 0
-		a
-			display: inline-block
-			width: 100%
-	li.filter:hover,
-	li.filter:active,
-	li.filter:focus 
-		background-color: $green
+		.header-contents
+			margin: $global-margin auto
+			.title
+				font-size: 60px
+				width: 80%
+				margin: auto
+			.tagline 
+				display: none
+	.section-header
+		max-width: 100%
 
 	/* ------------ BIO - MOBILE ------------ */
 	.bio 
@@ -99,52 +56,12 @@
 			max-width: 100%
 			text-align: center
 			line-height: 1.2em
+			padding: 0
+			margin: $global-margin auto	
 			p 
 				margin-bottom: 1rem
-				width: 100%	
-	.social-list.dark,
-	.social-list.light
-		width: 100vw
-		margin: 0 -12%
-		padding-top: 0
-		display: inline-block
-		.social-media
-			width: 33.33%
-			a
-				width: 33.33%
-
-
-
-	/* ------------ FILTER - MOBILE ------------ */
-
-	.site-filter 
-		margin-top: 1rem
-	.filter-line 
-		background-color: #cacaca
-		display: none
-	.inline-sort 
-		width: 66%
-		text-align: center
-	.menu 
-		width: 100%
-		margin: 0
-		padding: 0
-		.horizontal-sort 
-			display: none
-		li 
-			padding: 0
-			text-align: center
-	.menu-label 
-		display: inline-block
-		width: 92%
-		padding: 0 4%
-		text-align: center
-		background: #DCE6CF
-		.selected 
-			width: 100%
-			padding: 0
-		&:after 
-			display: none
+				width: 100%
+				line-height: 1.5em	
 
 	/* ------------ PORTFOLIO - MOBILE ------------ */
 	section.portfolio 
@@ -156,37 +73,59 @@
 				height: auto
 				.hover-state 
 					opacity: 1
-					background-color: rgba(51,51,51,0.5)
+					background-color: $white_trans
 					-webkit-backdrop-filter: blur(0px)
 				&:active .hover-state
-					background-color: rgba(51,51,51,0.75)
+					background-color: $white
+					border: 1px solid $med_grey
 			.folio-hover 
-				max-width: calc(100% - 2.51rem)
+				max-width: 80%
 				padding: 1.25rem
-				background: rgba(28,28,28,0.6)
+				background: rgba(251,251,251,0.6)
 				+border-radius(8px)
+
+
+	/* ------------ ABOUT - MOBILE ------------ */
+
+	section.about
+		.container
+			text-align: center
+			#bio
+				display: inline-block
+				margin: $global-margin auto
+				text-align: center
+				.bio-pic
+					margin: auto
+				.about-text
+					margin: 24px 0
+					text-align: left
+	/* ------------ SOCIAL - MOBILE ------------ */
+
+	.social-list
+		width: 100%
+		margin: 0
+		display: flex
+		justify-content: center 
+		.social-media
+			width: 33%
+			padding: 0
+			a
+				font-weight: 400
+				.social-logo
+					width: 25%
 
 	/* ------------ RESUME - MOBILE ------------ */
 	section.resume 
-		margin-top: -2rem
-		.sub-header
-			.title 
-				top: 56px
-			ul 
-				padding-top: 3rem
-				padding-left: 4%
-				text-align: left
-			li 
-				font-size: 1rem
-				margin-top: 24px
 		.container
 			article
-				&.experience
-					&.job
-						margin-top: 16px
-				.logo-container 
-					width: 100%
-					max-width: 100%
+				margin-top: 32px
+				.content-header
+					display: inline-block
+					margin: auto
+					text-align: center
+					.logo-container 
+						width: 80%
+						max-width: 80%
 					.logo 
 						width: 50%
 						padding-bottom: 50%
@@ -226,26 +165,43 @@
 		.skills 
 			display: none
 		.education
+			.subsection-header
+				display: none
 			.school
 				display: block
 			.resume-header
 				display: none
 
 	/* ------------ FOOTER - MOBILE ------------ */
-	.social-media 
-		width: 33%
-		height: 4.8rem
-		margin: 0.8rem 0
-	.social-media a 
-		width: 40%
-		margin: 0 30%
 	footer
 		display: block
+		.social-list
+			.social-media 
+				width: 33%
+				margin: 0.8rem 0
+				a 
+					width: 40%
+					// margin: 0 30/%
 
 	/* ------------ Portfolio Page - MOBILE ------------ */
 
 	.portfolio-page
+		.tldr
+			display: inline-block
+			.one-third
+				width: 50%
+				display: inline-block
+				margin: 16px auto
+				.inline
+					margin: 16px auto
+					.tldr-content
+						display: inline-block
 		.gallery-content
+			&.knowroaming h1
+				font-size: 48px
+			h1
+				font-size: 64px
+
 			.portfolio-title
 				width: 90%
 			.col
@@ -253,3 +209,8 @@
 			figure
 				.table
 					display: none
+		.folio-nav
+			min-width: 50%
+			background-color: $white
+			&:hover, &:active
+				background-color: $white_green

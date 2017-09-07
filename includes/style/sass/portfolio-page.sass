@@ -1,19 +1,49 @@
 /* ---------------------- PORTFOLIO PAGE ---------------------- */
 
+
 .portfolio-page
+	.home
+		h2, a, &.folio-nav a
+			color: $green
+	.noom 
+		h2, a, .tldr-title, &.folio-nav a
+			color: #4271d7
+		&.folio-nav:hover
+			background: #CFD5E6
+			border-color: #4271d7
+	.knowroaming 
+		h2, a, .tldr-title, &.folio-nav a
+			color: #4286b5
+		&.folio-nav:hover
+			background: #CFDCE6
+			border-color: #4286b5
+	.smrtwatr 
+		h2, a, .tldr-title, &.folio-nav a
+			color: #756393
+		&.folio-nav:hover
+			background: #D7CFE6
+			border-color: #756393
+	.chameleon 
+		h2, a, .tldr-title, &.folio-nav a
+			color: #2e8c5d
+		&.folio-nav:hover
+			background: #CFE6DA
+			border-color: #2e8c5d
+
 	header.main-header
+		display: none
 		background: $white_trans
 		-webkit-backdrop-filter: saturate(1.8) blur(20px)
 		height: auto
 		z-index: 5
 		position: fixed
+		margin: 0
 		
 		&.header-up
-			top: -81px /* 48px + 32px + 1px */
+			top: -92px /* 48px + 32px + 1px */
 
-	.header
-		margin: 0
-
+		.header-contents
+			margin: 0
 		.title
 			text-align: center
 			padding: 16px 0
@@ -24,13 +54,35 @@
 			content: ''
 		.tagline
 			display: none
-			top: 2.5em
+
+	.tldr
+		display: flex
+		justify-content: space-between
+		text-align: center
+		line-height: 1.5em
+		.one-third
+			width: 30%
+			margin: 0 auto
+		.tldr-title
+			font-family: $sans-serif
+			font-size: 18px
+			font-weight: 600
+		.tldr-content
+			font-family: $sans-serif
+		.inline
+			// text-align: left
+			.tldr-title
+				display: inline-block
+			.tldr-content
+				display: inline
+
 
 	.gallery-content
 		position: relative
 		display: inline-block
 		width: 100%
-		margin: 81px auto 0 auto
+		// margin: 92px auto 0 auto
+		margin: auto auto $global-margin auto
 
 		.portfolio-title
 			width: 100%
@@ -42,16 +94,24 @@
 			padding-top: 81px
 
 		h1
-			font-size: 40px
+			font-size: 96px
+			font-family: $serif
+			font-weight: 300
 			text-align: center
+			margin: $global-margin auto
 		h2
-			font-size: 32px
+			font-size: 56px
+			font-family: $sans-serif
 			font-style: normal
 			font-weight: bold
-			color: $green
+			// color: $brand-color
+			margin-bottom: 0 
+
 		h3
-			font-size: 32px
-			font-weight: 300
+			font-size: 24px
+			font-weight: 400
+			margin-top: 0
+			color: $dark_grey
 		h4
 			font-size: 28px
 			font-weight: 300	
@@ -66,7 +126,11 @@
 			font-style: italic
 			margin: 0
 		p
-			line-height: 1.6em
+			font-family: 'Merriweather'
+			// font-weight: 400
+			color: $dark_grey
+			// font-size: 16px
+			line-height: 2em
 
 		.cover-photo
 			width: 100%
@@ -74,7 +138,6 @@
 		.col
 			position: relative
 			font-size: 16px
-			line-height: 1.5em	
 		.single-column
 			width: 100%
 			max-width: 720px
@@ -94,10 +157,13 @@
 			img
 				position: relative
 				display: inline-block
-				max-width: 90%
+				max-width: 100%
 				max-height: 440px
 				height: auto
 				margin: 0
+			&#hero
+				img
+					max-height: none
 
 			iframe
 				width: 80%
@@ -106,7 +172,9 @@
 			figcaption
 				text-align: center
 				font-size: 1rem
+				font-family: 'Merriweather', serif
 				color: $med_grey
+				line-height: 1.5em
 				max-width: 80%
 				margin: 0 10%
 
@@ -135,6 +203,51 @@
 			content: '['
 		sup a::after
 			content: ']'
+
+/* ------ Navigation ------ */
+.folio-nav 
+	position: fixed
+	display: block
+	top: 0%
+	font-family: $sans-serif
+	font-weight: 400
+	font-size: 1rem
+	cursor: pointer
+	
+	a 
+		display: inline-block
+		min-width: 64px
+		padding: 4px
+		text-decoration: none
+		color: $dark_grey
+		&:hover
+			text-decoration: none
+			color: $green
+	a:before
+		position: relative
+		display: block
+		color: $black
+		text-decoration: none
+	&.prev
+		a:before
+			content: 'Prev:'
+		left: 0
+		text-align: left
+		padding-left: 8px
+		padding-right: 8px
+		border-left: 8px solid $med_grey
+	&.next
+		a:before
+			content: 'Next:'
+		right: 0
+		text-align: right
+		padding-right: 8px
+		padding-left: 8px
+		border-right: 8px solid $med_grey
+
+	&:hover
+		background: $light_green
+		border-color: $green
 
 /* ------ Table of Contents ------ */
 @media screen and (max-width: 1175px)

@@ -7,11 +7,11 @@
 html {
   font-size: 16px; }
   html body {
-    background: #CECECE;
+    background: #FAFAFA;
     padding: 0;
     margin: 0;
-    font-family: "Merriweather", "Garamond", "Times New Roman", serif;
-    color: #505050;
+    font-family: "acta-display", "didot", serif;
+    color: #333333;
     font-weight: 300;
     overflow-x: hidden; }
   html main {
@@ -22,14 +22,17 @@ html {
     background-color: #FAFAFA; }
   html section {
     display: block;
-    margin: 0;
+    margin: 72px 0;
     padding: 0;
     width: 100%; }
   html a {
     color: #5B753D;
     font-weight: inherit;
     -webkit-tap-highlight-color: transparent;
-    visited-color: #5B753D; }
+    text-decoration: none;
+    cursor: pointer; }
+    html a:hover {
+      text-decoration: underline; }
 
 /* ------ HELPER CLASSES ------ */
 .hidden, .hide {
@@ -44,6 +47,9 @@ html {
   height: 100%;
   position: relative;
   display: inline-block; }
+  .container .content {
+    width: 90%;
+    margin: auto; }
 
 .shrinkwrap {
   will-change: width;
@@ -72,19 +78,42 @@ html {
   margin-right: -0.25em; }
 
 .animate {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   -webkit-backface-visibility: hidden; }
 
 .fixed {
   position: fixed; }
 
+.flex {
+  display: flex;
+  justify-content: center; }
+
+.button {
+  display: inline-block;
+  font-family: "europa", "gill sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5B753D;
+  text-decoration: none;
+  padding: 16px;
+  border: 1px solid #5B753D;
+  -webkit-transition: color 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out; }
+  .button:hover {
+    color: #FAFAFA;
+    background-color: #5B753D; }
+
 .tooltip {
   position: relative;
   display: inline-block;
-  font-family: "Lato", "Helvetica", "Arial", sans-serif;
-  font-size: 14px;
+  font-family: "europa", "gill sans", sans-serif;
+  font-size: 16px;
   font-weight: 300;
   /* Tooltip text */ }
   .tooltip .tooltiptext {
@@ -118,71 +147,62 @@ html {
       border-color: rgba(51, 51, 51, 0.75) transparent transparent transparent; }
 
 /* -------------------- HEADER -------------------- */
-header {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: auto; }
-  header .main-header {
-    padding-top: 1rem; }
-
-.header, .sub-header {
+.main-header {
   position: relative;
   display: inline-block;
   width: 100%;
+  height: auto;
   margin: 0;
-  margin-top: 0;
-  color: inherit; }
-  .header .title, .sub-header .title {
-    position: relative;
-    display: block;
-    float: none;
-    line-height: 1em;
-    font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
-    font-weight: 400;
-    padding-top: 48px;
-    z-index: 100; }
-  .header .tagline, .sub-header .tagline {
-    position: relative;
-    display: block;
-    width: 36rem;
-    text-align: right;
-    margin: auto;
-    font-weight: 100;
-    font-size: 2rem;
-    line-height: 1em;
-    padding-top: 16px; }
-    @media (max-width: 1280px) {
-      .header .tagline, .sub-header .tagline {
-        font-size: 1.6em;
-        line-height: 1.25em; } }
-    .header .tagline em, .sub-header .tagline em {
-      color: #5B753D; }
-  .header ul, .sub-header ul {
-    position: relative;
-    display: block;
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    padding-top: 24px;
-    font-size: 1.2em;
-    font-weight: 200;
-    color: #5B753D; }
-  .header li, .sub-header li {
-    display: inline;
-    padding-right: 1em; }
-  .header a, .sub-header a {
-    color: inherit;
+  margin-top: 72px;
+  color: #333333; }
+  .main-header .header-contents {
+    margin: 72px 0; }
+    .main-header .header-contents .title {
+      position: relative;
+      display: block;
+      font-family: "acta-display", "didot", serif;
+      font-weight: 400;
+      font-size: 90px;
+      text-align: center; }
+    .main-header .header-contents .tagline {
+      position: relative;
+      display: block;
+      width: 42rem;
+      text-align: right;
+      margin: auto;
+      font-family: "acta-display", "didot", serif;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 1em;
+      padding-top: 8px; }
+      @media (max-width: 1280px) {
+        .main-header .header-contents .tagline {
+          font-size: 1.6em;
+          line-height: 1.25em; } }
+      .main-header .header-contents .tagline #tag {
+        color: #5B753D; }
+  .main-header a {
+    color: #333333;
     text-decoration: none; }
+    .main-header a:hover {
+      text-decoration: none; }
 
-.header .title, .sub-header .title {
-  font-size: 4.5rem;
-  text-align: center; }
+.section-header {
+  color: #333333;
+  font-family: "acta-display", "didot", serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1em;
+  margin: 32px 0 16px 0;
+  max-width: 33%;
+  border-bottom: 1px solid #333333; }
 
-.sub-header .title {
-  font-size: 3.5rem;
-  text-align: left; }
+.subsection-header {
+  color: #333333;
+  font-family: "acta-display", "didot", serif;
+  font-size: 2rem;
+  margin: 32px auto; }
 
 /* ---------------------- Social Bar ---------------------- */
 .social-list {
@@ -190,7 +210,9 @@ header {
   position: relative;
   padding: 0;
   margin: 0;
-  list-style: none; }
+  list-style: none;
+  width: 64%;
+  margin: 0 18%; }
   .social-list .animate.social-media:hover {
     padding-top: 0.5rem;
     padding-bottom: 1.5rem; }
@@ -198,163 +220,101 @@ header {
     display: inline-block;
     position: relative;
     width: 20%;
-    height: 3.4rem;
-    min-height: 56px;
+    height: 3rem;
     padding: 1.5rem 0;
     float: left;
     last-child-padding-right: 0;
     first-child-border-left: none; }
     .social-list .social-media a {
       display: block;
-      width: 20%;
+      width: 100%;
       height: 100%;
       margin: 0 auto;
-      background-size: contain;
-      background-position: 50%;
-      background-repeat: no-repeat; }
-    .social-list .social-media .social-logo {
-      position: relative;
-      padding-bottom: 100%;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      -ms-border-radius: 0;
-      border-radius: 0; }
-  .social-list.light {
-    width: 64%;
-    margin: 0 18%;
-    padding: 0.2rem 0;
-    height: 3.4rem; }
-    .social-list.light .social-media {
-      padding: 0 0; }
-      .social-list.light .social-media #twitter {
-        background-image: url("../image_assets/social/twitter_light.png"); }
-      .social-list.light .social-media #linkedin {
-        background-image: url("../image_assets/social/linkedin_light.png"); }
-      .social-list.light .social-media #git {
-        background-image: url("../image_assets/social/git_light.png"); }
-      .social-list.light .social-media #email {
-        background-image: url("../image_assets/social/email_light.png"); }
-      .social-list.light .social-media #instagram {
-        background-image: url("../image_assets/social/instagram_light.png"); }
-  .social-list.dark {
-    width: 56%;
-    margin: 1em 22%; }
-    .social-list.dark .social-media #twitter {
-      background-image: url("../image_assets/social/twitter_dark.png"); }
-    .social-list.dark .social-media #linkedin {
-      background-image: url("../image_assets/social/linkedin_dark.png"); }
-    .social-list.dark .social-media #git {
-      background-image: url("../image_assets/social/git_dark.png"); }
-    .social-list.dark .social-media #email {
-      background-image: url("../image_assets/social/email_dark.png"); }
-    .social-list.dark .social-media #instagram {
-      background-image: url("../image_assets/social/instagram_dark.png"); }
-    .social-list.dark .social-media #soundcloud {
-      background-image: url("../image_assets/social/soundcloud_dark.png"); }
+      color: #333333; }
+      .social-list .social-media a:hover {
+        font-weight: 400; }
+      .social-list .social-media a .social-name {
+        text-align: center;
+        display: inline-block;
+        width: 100%; }
+      .social-list .social-media a .social-logo {
+        width: 15%;
+        height: 100%;
+        margin: 0 auto;
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat; }
+  .social-list.light .social-media {
+    padding: 0 0; }
+    .social-list.light .social-media #twitter {
+      background-image: url("../image_assets/social/twitter_light.png"); }
+    .social-list.light .social-media #linkedin {
+      background-image: url("../image_assets/social/linkedin_light.png"); }
+    .social-list.light .social-media #git {
+      background-image: url("../image_assets/social/git_light.png"); }
+    .social-list.light .social-media #email {
+      background-image: url("../image_assets/social/email_light.png"); }
+    .social-list.light .social-media #instagram {
+      background-image: url("../image_assets/social/instagram_light.png"); }
+  .social-list.dark .social-media #twitter {
+    background-image: url("../image_assets/social/twitter_dark.png"); }
+  .social-list.dark .social-media #linkedin {
+    background-image: url("../image_assets/social/linkedin_dark.png"); }
+  .social-list.dark .social-media #git {
+    background-image: url("../image_assets/social/git_dark.png"); }
+  .social-list.dark .social-media #email {
+    background-image: url("../image_assets/social/email_dark.png"); }
+  .social-list.dark .social-media #instagram {
+    background-image: url("../image_assets/social/instagram_dark.png"); }
+  .social-list.dark .social-media #soundcloud {
+    background-image: url("../image_assets/social/soundcloud_dark.png"); }
+
+footer .social-list {
+  width: 50%;
+  margin: 0 25%;
+  padding: 0.2rem 0;
+  height: 3rem; }
+  footer .social-list .social-media a {
+    display: block;
+    width: 25%;
+    height: 100%;
+    margin: 0 auto;
+    color: #FAFAFA;
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat; }
 
 /* ---------------------- BIO & PIC ---------------------- */
 .bio {
   width: 100%;
   margin: 0; }
-  .bio .bio-pic {
-    position: relative;
-    display: block;
-    width: 160px;
-    height: 160px;
-    margin: 64px auto;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    border-radius: 100%; }
-    .bio .bio-pic img {
-      width: 100%;
-      height: 100%;
-      -webkit-border-radius: 40%;
-      -moz-border-radius: 40%;
-      -ms-border-radius: 40%;
-      border-radius: 40%; }
   .bio .bio-text {
     position: relative;
     display: block;
     text-align: center;
-    font-family: "Lato", "Helvetica", "Arial", sans-serif;
-    font-size: 15px;
+    font-family: "europa", "gill sans", sans-serif;
+    font-size: 18px;
     line-height: 2em;
-    font-weight: 400; }
+    font-weight: 300;
+    padding: 72px 0; }
     .bio .bio-text p {
       margin: 0 auto;
       width: 66%; }
-
-/* ---------- Horizontal List Filter ---------- */
-.site-filter {
-  text-align: center; }
-
-.inline-sort {
-  position: relative;
-  display: inline-block;
-  font-size: 15px;
-  line-height: 3em;
-  font-family: "Lato", "Helvetica", "Arial", sans-serif; }
-  .inline-sort .sort-text {
-    display: none;
-    position: relative;
-    float: left;
-    font-weight: 400;
-    top: 0; }
-  .inline-sort .menu {
-    position: relative;
-    display: inline-block;
-    float: left;
-    margin: 0;
-    text-align: left;
-    padding-left: 16px;
-    font-weight: 400; }
-    .inline-sort .menu .menu-label {
-      display: none; }
-    .inline-sort .menu ul {
-      position: relative;
-      width: 100%;
-      list-style: none;
-      margin: 0;
-      padding-left: 0; }
-      .inline-sort .menu ul .filter {
-        display: inline-block;
-        padding: 0 16px;
-        cursor: pointer;
-        color: #5B753D;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -ms-border-radius: 4px;
-        border-radius: 4px; }
-        .inline-sort .menu ul .filter:hover {
-          background: #EDF2E6; }
-        .inline-sort .menu ul .filter:active, .inline-sort .menu ul .filter.active {
-          color: #505050;
-          background: #DCE6CF; }
-
-.filter-line {
-  display: none; }
 
 /* ---------------------- PORTFOLIO ---------------------- */
 section.portfolio {
   position: relative;
   display: block;
   width: 100%;
-  max-height: 74.25vw;
-  margin: 2em 0;
-  text-align: center;
-  overflow: hidden; }
+  margin: 72px auto;
+  text-align: center; }
   section.portfolio .gallery {
     position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 0; }
+    width: auto;
+    margin: 16px; }
     section.portfolio .gallery ul {
       position: relative;
       display: inline-block;
-      width: 100%;
       margin: 0;
       padding: 0;
       list-style: none; }
@@ -363,32 +323,30 @@ section.portfolio {
       display: inline-block;
       overflow: hidden;
       float: left;
-      width: 33.333%;
-      height: 24.99975vw;
+      width: 50%;
       padding: 0;
       margin: 0; }
-      section.portfolio .gallery .folio-item img {
-        position: relative;
-        width: 100%;
-        height: auto;
-        cursor: pointer; }
       section.portfolio .gallery .folio-item a {
         display: inline-block;
-        width: 100%;
-        height: 100%; }
+        margin: 16px; }
         section.portfolio .gallery .folio-item a:hover .hover-state, section.portfolio .gallery .folio-item a:focus .hover-state {
           opacity: 1; }
+        section.portfolio .gallery .folio-item a img {
+          position: relative;
+          width: 100%;
+          height: auto;
+          cursor: pointer;
+          margin-left: 0; }
       section.portfolio .gallery .folio-item .hover-state {
         opacity: 0;
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: 4px;
         left: 0;
         right: 0;
-        width: 100%;
-        height: 100%;
+        margin: 16px;
         text-align: center;
-        background-color: rgba(51, 51, 51, 0.75);
+        background-color: rgba(250, 250, 250, 0.75);
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -397,23 +355,54 @@ section.portfolio {
         -moz-transition: opacity 0.15s ease-in-out;
         transition: opacity 0.15s ease-in-out;
         -webkit-backface-visibility: hidden;
-        -webkit-backdrop-filter: blur(4px); }
+        -webkit-backdrop-filter: saturate(1.8) blur(4px); }
         section.portfolio .gallery .folio-item .hover-state .folio-hover {
           display: inline-block;
           vertical-align: middle;
-          color: #FAFAFA;
+          color: #333333;
           line-height: 1.8rem;
           font-weight: 500; }
           section.portfolio .gallery .folio-item .hover-state .folio-hover span {
             display: inline-block;
             margin: auto 12px; }
           section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-title {
-            font-size: 1.5rem;
-            font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif; }
-          section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-type {
+            font-size: 2rem;
+            font-family: "acta-display", "didot", serif; }
+          section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-description {
+            font-size: 1.2rem;
+            font-family: "europa", "gill sans", sans-serif;
+            padding: 8px 0; }
+          section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-platform {
+            display: none;
             font-size: 1rem;
-            font-weight: lighter;
+            font-family: "europa", "gill sans", sans-serif; }
+          section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-type {
+            display: none;
+            font-size: 1rem;
             font-style: italic; }
+  section.portfolio .button {
+    font-size: 18px;
+    width: 25%; }
+
+section.about #bio {
+  margin: 72px auto; }
+section.about .bio-pic {
+  min-width: 160px;
+  max-width: 200px; }
+  section.about .bio-pic img {
+    width: 100%;
+    height: auto;
+    -webkit-border-radius: 40%;
+    -moz-border-radius: 40%;
+    -ms-border-radius: 40%;
+    border-radius: 40%; }
+section.about .about-text {
+  margin: auto 48px;
+  font-family: "europa", "gill sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px; }
+section.about #achievements {
+  font-weight: 400; }
 
 /* ---------------------- BLOG ---------------------- */
 section.blog a {
@@ -423,7 +412,7 @@ section.blog a {
     text-decoration: underline; }
 section.blog .date_published {
   color: #505050;
-  font-family: "Lato", "Helvetica", "Arial", sans-serif;
+  font-family: "europa", "gill sans", sans-serif;
   font-size: 16px;
   font-weight: 300;
   margin: auto 16px;
@@ -431,352 +420,362 @@ section.blog .date_published {
   float: right; }
 
 /* ---------------------- RESUME ---------------------- */
-section.resume {
-  min-height: 12em; }
-  section.resume a {
-    text-decoration: underline; }
-  section.resume .sub-header .resume-link {
-    display: none; }
-  section.resume .sub-header .linkedin-profile {
-    text-decoration: none;
-    line-height: 32px;
-    height: auto;
-    width: auto;
-    padding: 8px 10px;
-    border: 1px solid #008cc9;
-    background-color: #FAFAFA;
-    cursor: pointer;
-    vertical-align: middle;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px; }
-    section.resume .sub-header .linkedin-profile:hover {
-      border: 2px solid #008cc9;
-      padding: 7px 9px; }
-    section.resume .sub-header .linkedin-profile span {
-      color: #008cc9;
-      font-size: 16px;
-      text-decoration: none;
-      font-family: "Lato", "Helvetica", "Arial", sans-serif;
-      font-weight: 400; }
-  section.resume .resume-header {
-    padding-left: 1rem;
-    width: 30%;
-    font-weight: 400;
-    border-bottom: 1px solid #505050; }
-    section.resume .resume-header .resume-title {
-      font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
+section.resume .button {
+  margin: 0 auto; }
+section.resume .resume-header {
+  padding-left: 1rem;
+  width: 30%;
+  font-weight: 400;
+  border-bottom: 1px solid #505050; }
+  section.resume .resume-header .resume-title {
+    font-family: "europa", "gill sans", sans-serif;
+    font-size: 2rem;
+    line-height: 2em; }
+section.resume .subsection-header {
+  margin-left: 24px; }
+section.resume .container article {
+  width: 100%;
+  margin: auto;
+  cursor: pointer; }
+  section.resume .container article .logo-container {
+    width: 160px;
+    height: 100%;
+    display: inline-block; }
+    section.resume .container article .logo-container .logo {
+      width: 80%;
+      height: 0;
+      padding-bottom: 80%;
+      margin-right: 10%;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      border-radius: 100%;
+      background-color: #eee;
+      background-size: 80%;
+      background-position: 50%;
+      background-repeat: no-repeat; }
+      section.resume .container article .logo-container .logo a {
+        text-decoration: none;
+        color: #505050; }
+  section.resume .container article .content-header {
+    display: flex;
+    width: 100%;
+    margin: auto; }
+    section.resume .container article .content-header .header-text {
+      margin: auto 0; }
+    section.resume .container article .content-header .item-title {
+      font-family: "acta-display", "didot", serif;
       font-size: 2rem;
-      line-height: 2em; }
-  section.resume .bubble-connector {
-    display: none;
-    height: 95%;
-    width: 6px;
-    background: #ddd;
-    position: absolute;
-    left: 5vw;
-    margin-top: 32px; }
-  section.resume .container article {
-    cursor: pointer; }
-    section.resume .container article .logo-container {
-      width: 180px;
-      max-width: 20%;
-      height: 100%;
-      float: left;
-      display: inline-block; }
-      section.resume .container article .logo-container .logo {
-        width: 80%;
-        height: 0;
-        padding-bottom: 80%;
-        margin-right: 10%;
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        -ms-border-radius: 100%;
-        border-radius: 100%;
-        background-color: #eee;
-        background-size: 80%;
-        background-position: 50%;
-        background-repeat: no-repeat; }
-      section.resume .container article .logo-container .company-site {
-        display: none;
-        margin-top: 0.8rem;
-        font-family: "Lato", "Helvetica", "Arial", sans-serif;
-        font-size: 1rem;
-        font-weight: 300;
-        text-align: center; }
-        section.resume .container article .logo-container .company-site a {
-          text-decoration: none;
-          color: #505050; }
-    section.resume .container article .resume-content {
-      width: 100%;
-      margin: auto 0;
-      display: inline-block; }
-      @media screen and (max-width: 900px) {
-        section.resume .container article .resume-content {
-          padding: 0; } }
-      section.resume .container article .resume-content h4 {
-        font-family: "Lato", "Helvetica", "Arial", sans-serif;
-        font-size: 1.75rem;
-        line-height: 1em;
-        font-weight: 300;
-        color: #808080; }
-      section.resume .container article .resume-content .subsection-header {
-        display: flex;
-        justify-content: space-between; }
-        section.resume .container article .resume-content .subsection-header .subsection-title {
-          font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
-          font-size: 2rem;
-          font-weight: 500; }
-          section.resume .container article .resume-content .subsection-header .subsection-title .show {
-            color: #5B753D;
-            background: none;
-            border: none;
-            font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
-            font-size: 12px;
-            text-decoration: none;
-            padding: 4px 0 0 0;
-            display: block; }
-            section.resume .container article .resume-content .subsection-header .subsection-title .show.more:after {
-              content: " more"; }
-            section.resume .container article .resume-content .subsection-header .subsection-title .show.less:after {
-              content: " less"; }
-          section.resume .container article .resume-content .subsection-header .subsection-title .inline-note {
-            display: inline;
-            font-size: 1.25rem;
-            font-style: italic; }
-          section.resume .container article .resume-content .subsection-header .subsection-title:hover .show, section.resume .container article .resume-content .subsection-header .subsection-title:focus .show {
-            text-decoration: underline; }
-      section.resume .container article .resume-content .subsection-duration {
-        font-family: "Lato", "Helvetica", "Arial", sans-serif;
-        font-size: 1rem;
-        font-weight: 300;
-        margin: auto 16px;
-        text-align: right;
-        float: right; }
-      section.resume .container article .resume-content .resume-list {
-        display: none;
-        padding-left: 16px;
-        font-size: 14px;
-        line-height: 1.5em;
-        list-style-type: disc; }
-        section.resume .container article .resume-content .resume-list .resume-item {
-          margin-bottom: 1em; }
-          section.resume .container article .resume-content .resume-list .resume-item .list-description {
-            font-family: "Merriweather", "Garamond", "Times New Roman", serif;
-            font-size: 14px;
-            margin-right: 16px; }
-  section.resume .experience {
-    position: relative;
-    display: inline-block; }
-    section.resume .experience .job {
-      display: flex;
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      margin-top: 32px; }
-    section.resume .experience .zynga .logo {
-      background-image: url("../image_assets/zynga_logo.png"); }
-    section.resume .experience .noom .logo {
-      background-image: url("../image_assets/noom_logo.png"); }
-    section.resume .experience .knowroaming .logo {
-      background-image: url("../image_assets/knowroaming_logo.png");
-      background-position: 50% 46%; }
-    section.resume .experience .sony .logo {
-      background-image: url("../image_assets/sony_logo.png"); }
-    section.resume .experience .genesys .logo {
-      background-image: url("../image_assets/genesys_logo.png"); }
-  section.resume .skills {
-    position: relative;
-    display: inline-block;
-    margin-top: 2rem; }
-    section.resume .skills .skills-sub-header {
-      padding-left: 1rem;
-      padding-top: 1.5rem;
-      font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
-      font-size: 1.5rem;
-      line-height: 2em; }
-    section.resume .skills .program-list {
+      font-weight: 400;
       display: block;
-      position: relative;
-      padding: 0;
-      margin: 0;
-      list-style: none; }
-      section.resume .skills .program-list li {
-        position: relative;
-        width: 12.5%;
-        margin: 1rem 0;
-        float: left; }
-        section.resume .skills .program-list li .app-name {
-          position: relative;
-          margin: 0;
-          padding-top: 0.5em;
-          font-size: 1rem;
-          line-height: 1rem;
-          min-height: 2rem;
-          text-align: center; }
-        section.resume .skills .program-list li .app-logo {
-          position: relative;
-          padding-bottom: 56%;
-          background-size: 56%;
-          background-position: 44% 0;
-          background-repeat: no-repeat;
-          -webkit-border-radius: 0;
-          -moz-border-radius: 0;
-          -ms-border-radius: 0;
-          border-radius: 0; }
-        section.resume .skills .program-list li:hover .app-name {
-          font-weight: 500; }
-      section.resume .skills .program-list #sketch .app-logo {
-        background-image: url("../image_assets/apps/sketch.png"); }
-      section.resume .skills .program-list #photoshop .app-logo {
-        background-image: url("../image_assets/apps/photoshop.png"); }
-      section.resume .skills .program-list #ai .app-logo {
-        background-image: url("../image_assets/apps/ai.png"); }
-      section.resume .skills .program-list #indesign .app-logo {
-        background-image: url("../image_assets/apps/indd.png"); }
-      section.resume .skills .program-list #balsamiq .app-logo {
-        background-image: url("../image_assets/apps/balsamiq.png"); }
-      section.resume .skills .program-list #framer .app-logo {
-        background-image: url("../image_assets/apps/framer.png"); }
-      section.resume .skills .program-list #origami .app-logo {
-        background-image: url("../image_assets/apps/origami.png"); }
-      section.resume .skills .program-list #html5 .app-logo {
-        background-image: url("../image_assets/apps/html5.png"); }
-      section.resume .skills .program-list #css3 .app-logo {
-        background-image: url("../image_assets/apps/css3.png"); }
-      section.resume .skills .program-list #jquery .app-logo {
-        background-image: url("../image_assets/apps/jquery.png"); }
-      section.resume .skills .program-list #javascript .app-logo {
-        background-image: url("../image_assets/apps/js.png"); }
-      section.resume .skills .program-list #coffeescript .app-logo {
-        background-image: url("../image_assets/apps/coffeescript.png"); }
-      section.resume .skills .program-list #arduino .app-logo {
-        background-image: url("../image_assets/apps/arduino.png"); }
-      section.resume .skills .program-list #xcode .app-logo {
-        background-image: url("../image_assets/apps/xcode.png"); }
-      section.resume .skills .program-list #php .app-logo {
-        background-image: url("../image_assets/apps/php.png"); }
-      section.resume .skills .program-list #cpp .app-logo {
-        background-image: url("../image_assets/apps/cpp.png"); }
-      section.resume .skills .program-list #java .app-logo {
-        background-image: url("../image_assets/apps/java.png"); }
-      section.resume .skills .program-list #swift .app-logo {
-        background-image: url("../image_assets/apps/swift.png"); }
-      section.resume .skills .program-list #python .app-logo {
-        background-image: url("../image_assets/apps/python.png"); }
-      section.resume .skills .program-list #matlab .app-logo {
-        background-image: url("../image_assets/apps/matlab.png"); }
-      section.resume .skills .program-list #git .app-logo {
-        background-image: url("../image_assets/apps/git.png"); }
-      section.resume .skills .program-list #bootstrap .app-logo {
-        background-image: url("../image_assets/apps/bootstrap.png"); }
-      section.resume .skills .program-list #sass .app-logo {
-        background-image: url("../image_assets/apps/sass.png"); }
-      section.resume .skills .program-list #excel .app-logo {
-        background-image: url("../image_assets/apps/excel.png"); }
-      section.resume .skills .program-list #sql .app-logo {
-        background-image: url("../image_assets/apps/sql.png"); }
-      section.resume .skills .program-list #autocad .app-logo {
-        background-image: url("../image_assets/apps/autocad.png"); }
-      section.resume .skills .program-list #inventor .app-logo {
-        background-image: url("../image_assets/apps/inventor.png"); }
-      section.resume .skills .program-list #rhino .app-logo {
-        background-image: url("../image_assets/apps/rhino.png"); }
-      section.resume .skills .program-list #max .app-logo {
-        background-image: url("../image_assets/apps/max.png"); }
-      section.resume .skills .program-list #c4d .app-logo {
-        background-image: url("../image_assets/apps/c4d.png"); }
-      section.resume .skills .program-list #ae .app-logo {
-        background-image: url("../image_assets/apps/ae.png"); }
-      section.resume .skills .program-list #premiere .app-logo {
-        background-image: url("../image_assets/apps/premiere.png"); }
-      section.resume .skills .program-list #final_cut .app-logo {
-        background-image: url("../image_assets/apps/final_cut.png"); }
-      section.resume .skills .program-list #espresso .app-logo {
-        background-image: url("../image_assets/apps/espresso.png"); }
-      section.resume .skills .program-list #sublime .app-logo {
-        background-image: url("../image_assets/apps/sublime.png"); }
-      section.resume .skills .program-list #coda .app-logo {
-        background-image: url("../image_assets/apps/coda.png"); }
-  section.resume .education {
-    position: relative;
+      margin: auto; }
+      section.resume .container article .content-header .item-title span {
+        font-size: 1.5rem; }
+    section.resume .container article .content-header .item-duration {
+      font-family: "europa", "gill sans", sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      margin: auto; }
+    section.resume .container article .content-header .show {
+      color: #5B753D;
+      background: none;
+      border: none;
+      font-family: "europa", "gill sans", sans-serif;
+      font-size: 12px;
+      text-decoration: none;
+      padding: 4px 0 0 12px;
+      display: inline-block;
+      cursor: pointer; }
+      section.resume .container article .content-header .show.more:after {
+        content: " more"; }
+      section.resume .container article .content-header .show.less:after {
+        content: " less"; }
+    section.resume .container article .content-header .inline-note {
+      display: inline;
+      font-size: 1.25rem;
+      font-style: italic; }
+    section.resume .container article .content-header:hover .show, section.resume .container article .content-header:focus .show {
+      text-decoration: underline; }
+  section.resume .container article .resume-content {
+    width: 100%;
+    margin: auto 0;
     display: inline-block; }
-    section.resume .education .school {
-      display: flex;
-      margin-top: 2rem; }
-    section.resume .education #uwaterloo .logo {
-      background-image: url("../image_assets/uwaterloo.gif"); }
-    section.resume .education #fhci .logo {
-      background-image: url("../image_assets/fhci.png"); }
+    @media screen and (max-width: 1000px) {
+      section.resume .container article .resume-content {
+        padding: 0; } }
+    section.resume .container article .resume-content h4 {
+      font-family: "europa", "gill sans", sans-serif;
+      font-size: 1.75rem;
+      line-height: 1em;
+      font-weight: 300;
+      color: #808080; }
+    section.resume .container article .resume-content .resume-list {
+      display: none;
+      padding-left: 160px;
+      line-height: 1.5em;
+      list-style-type: disc;
+      font-family: "europa", "gill sans", sans-serif;
+      font-weight: 400; }
+      section.resume .container article .resume-content .resume-list .resume-item {
+        margin-bottom: 1em; }
+        section.resume .container article .resume-content .resume-list .resume-item .list-description {
+          font-family: "acta-display", "didot", serif;
+          font-size: 14px;
+          margin-right: 16px; }
+section.resume .experience {
+  position: relative;
+  display: inline-block; }
+  section.resume .experience .job {
+    position: relative;
+    overflow: hidden;
+    margin-top: 32px; }
+  section.resume .experience .zynga .logo {
+    background-image: url("../image_assets/zynga_logo.png"); }
+  section.resume .experience .noom .logo {
+    background-image: url("../image_assets/noom_logo.png"); }
+  section.resume .experience .knowroaming .logo {
+    background-image: url("../image_assets/knowroaming_logo.png");
+    background-position: 50% 46%; }
+  section.resume .experience .sony .logo {
+    background-image: url("../image_assets/sony_logo.png"); }
+  section.resume .experience .genesys .logo {
+    background-image: url("../image_assets/genesys_logo.png"); }
+section.resume .skills {
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem; }
+  section.resume .skills .skills-sub-header {
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+    font-family: "europa", "gill sans", sans-serif;
+    font-size: 1.5rem;
+    line-height: 2em; }
+  section.resume .skills .program-list {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: "europa", "gill sans", sans-serif; }
+    section.resume .skills .program-list li {
+      position: relative;
+      width: 10%;
+      margin: 1rem 0;
+      float: left; }
+      section.resume .skills .program-list li .app-name {
+        position: relative;
+        margin: 0;
+        padding-top: 0.5em;
+        font-size: 1rem;
+        line-height: 1rem;
+        min-height: 2rem;
+        text-align: center; }
+      section.resume .skills .program-list li .app-logo {
+        position: relative;
+        padding-bottom: 56%;
+        background-size: 56%;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0; }
+    section.resume .skills .program-list #sketch .app-logo {
+      background-image: url("../image_assets/apps/sketch.png"); }
+    section.resume .skills .program-list #photoshop .app-logo {
+      background-image: url("../image_assets/apps/photoshop.png"); }
+    section.resume .skills .program-list #ai .app-logo {
+      background-image: url("../image_assets/apps/ai.png"); }
+    section.resume .skills .program-list #indesign .app-logo {
+      background-image: url("../image_assets/apps/indd.png"); }
+    section.resume .skills .program-list #balsamiq .app-logo {
+      background-image: url("../image_assets/apps/balsamiq.png"); }
+    section.resume .skills .program-list #framer .app-logo {
+      background-image: url("../image_assets/apps/framer.png"); }
+    section.resume .skills .program-list #origami .app-logo {
+      background-image: url("../image_assets/apps/origami.png"); }
+    section.resume .skills .program-list #html5 .app-logo {
+      background-image: url("../image_assets/apps/html5.png"); }
+    section.resume .skills .program-list #css3 .app-logo {
+      background-image: url("../image_assets/apps/css3.png"); }
+    section.resume .skills .program-list #jquery .app-logo {
+      background-image: url("../image_assets/apps/jquery.png"); }
+    section.resume .skills .program-list #javascript .app-logo {
+      background-image: url("../image_assets/apps/js.png"); }
+    section.resume .skills .program-list #coffeescript .app-logo {
+      background-image: url("../image_assets/apps/coffeescript.png"); }
+    section.resume .skills .program-list #arduino .app-logo {
+      background-image: url("../image_assets/apps/arduino.png"); }
+    section.resume .skills .program-list #xcode .app-logo {
+      background-image: url("../image_assets/apps/xcode.png"); }
+    section.resume .skills .program-list #php .app-logo {
+      background-image: url("../image_assets/apps/php.png"); }
+    section.resume .skills .program-list #cpp .app-logo {
+      background-image: url("../image_assets/apps/cpp.png"); }
+    section.resume .skills .program-list #java .app-logo {
+      background-image: url("../image_assets/apps/java.png"); }
+    section.resume .skills .program-list #swift .app-logo {
+      background-image: url("../image_assets/apps/swift.png"); }
+    section.resume .skills .program-list #python .app-logo {
+      background-image: url("../image_assets/apps/python.png"); }
+    section.resume .skills .program-list #matlab .app-logo {
+      background-image: url("../image_assets/apps/matlab.png"); }
+    section.resume .skills .program-list #git .app-logo {
+      background-image: url("../image_assets/apps/git.png"); }
+    section.resume .skills .program-list #bootstrap .app-logo {
+      background-image: url("../image_assets/apps/bootstrap.png"); }
+    section.resume .skills .program-list #sass .app-logo {
+      background-image: url("../image_assets/apps/sass.png"); }
+    section.resume .skills .program-list #excel .app-logo {
+      background-image: url("../image_assets/apps/excel.png"); }
+    section.resume .skills .program-list #sql .app-logo {
+      background-image: url("../image_assets/apps/sql.png"); }
+    section.resume .skills .program-list #autocad .app-logo {
+      background-image: url("../image_assets/apps/autocad.png"); }
+    section.resume .skills .program-list #inventor .app-logo {
+      background-image: url("../image_assets/apps/inventor.png"); }
+    section.resume .skills .program-list #rhino .app-logo {
+      background-image: url("../image_assets/apps/rhino.png"); }
+    section.resume .skills .program-list #max .app-logo {
+      background-image: url("../image_assets/apps/max.png"); }
+    section.resume .skills .program-list #c4d .app-logo {
+      background-image: url("../image_assets/apps/c4d.png"); }
+    section.resume .skills .program-list #ae .app-logo {
+      background-image: url("../image_assets/apps/ae.png"); }
+    section.resume .skills .program-list #premiere .app-logo {
+      background-image: url("../image_assets/apps/premiere.png"); }
+    section.resume .skills .program-list #final_cut .app-logo {
+      background-image: url("../image_assets/apps/final_cut.png"); }
+    section.resume .skills .program-list #espresso .app-logo {
+      background-image: url("../image_assets/apps/espresso.png"); }
+    section.resume .skills .program-list #sublime .app-logo {
+      background-image: url("../image_assets/apps/sublime.png"); }
+    section.resume .skills .program-list #coda .app-logo {
+      background-image: url("../image_assets/apps/coda.png"); }
+section.resume .education {
+  position: relative;
+  display: inline-block; }
+  section.resume .education #uwaterloo .logo {
+    background-image: url("../image_assets/uwaterloo.gif"); }
+  section.resume .education #fhci .logo {
+    background-image: url("../image_assets/fhci.png"); }
 
 /* ---------------------- FOOTER ---------------------- */
 footer {
   width: 100%;
-  height: 6.4rem;
-  margin-top: 4rem;
+  height: 128px;
+  margin-top: 72px;
   font-size: 12px;
   line-height: 1.6rem;
-  background-color: #505050;
+  background-color: #333333;
   color: #FAFAFA;
-  padding-bottom: 0.5rem; }
+  padding-bottom: 24px; }
   footer .container {
     position: relative;
     min-height: inherit; }
     footer .container .copyright {
-      position: relative;
+      position: absolute;
       display: block;
+      width: 100%;
+      bottom: 0;
       text-align: center;
       color: #FAFAFA;
-      margin: auto;
-      bottom: 0; }
+      font-family: "europa", "gill sans", sans-serif;
+      font-size: 14px; }
 
 /* ---------------------- PORTFOLIO PAGE ---------------------- */
+.portfolio-page .home h2, .portfolio-page .home a, .portfolio-page .home.folio-nav a {
+  color: #5B753D; }
+.portfolio-page .noom h2, .portfolio-page .noom a, .portfolio-page .noom .tldr-title, .portfolio-page .noom.folio-nav a {
+  color: #4271d7; }
+.portfolio-page .noom.folio-nav:hover {
+  background: #CFD5E6;
+  border-color: #4271d7; }
+.portfolio-page .knowroaming h2, .portfolio-page .knowroaming a, .portfolio-page .knowroaming .tldr-title, .portfolio-page .knowroaming.folio-nav a {
+  color: #4286b5; }
+.portfolio-page .knowroaming.folio-nav:hover {
+  background: #CFDCE6;
+  border-color: #4286b5; }
+.portfolio-page .smrtwatr h2, .portfolio-page .smrtwatr a, .portfolio-page .smrtwatr .tldr-title, .portfolio-page .smrtwatr.folio-nav a {
+  color: #756393; }
+.portfolio-page .smrtwatr.folio-nav:hover {
+  background: #D7CFE6;
+  border-color: #756393; }
+.portfolio-page .chameleon h2, .portfolio-page .chameleon a, .portfolio-page .chameleon .tldr-title, .portfolio-page .chameleon.folio-nav a {
+  color: #2e8c5d; }
+.portfolio-page .chameleon.folio-nav:hover {
+  background: #CFE6DA;
+  border-color: #2e8c5d; }
 .portfolio-page header.main-header {
-  background: rgba(250, 250, 250, 0.8);
+  display: none;
+  background: rgba(250, 250, 250, 0.75);
   -webkit-backdrop-filter: saturate(1.8) blur(20px);
   height: auto;
   z-index: 5;
-  position: fixed; }
-  .portfolio-page header.main-header.header-up {
-    top: -81px; }
-.portfolio-page .header, .portfolio-page .sub-header {
+  position: fixed;
   margin: 0; }
-  .portfolio-page .header .title, .portfolio-page .sub-header .title {
+  .portfolio-page header.main-header.header-up {
+    top: -92px; }
+  .portfolio-page header.main-header .header-contents {
+    margin: 0; }
+  .portfolio-page header.main-header .title {
     text-align: center;
     padding: 16px 0;
     font-size: 48px;
     border-bottom: 1px solid #505050;
     opacity: 1; }
-  .portfolio-page .header:before, .portfolio-page .sub-header:before {
+  .portfolio-page header.main-header:before {
     content: ""; }
-  .portfolio-page .header .tagline, .portfolio-page .sub-header .tagline {
-    display: none;
-    top: 2.5em; }
+  .portfolio-page header.main-header .tagline {
+    display: none; }
+.portfolio-page .tldr {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  line-height: 1.5em; }
+  .portfolio-page .tldr .one-third {
+    width: 30%;
+    margin: 0 auto; }
+  .portfolio-page .tldr .tldr-title {
+    font-family: "europa", "gill sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600; }
+  .portfolio-page .tldr .tldr-content {
+    font-family: "europa", "gill sans", sans-serif; }
+  .portfolio-page .tldr .inline .tldr-title {
+    display: inline-block; }
+  .portfolio-page .tldr .inline .tldr-content {
+    display: inline; }
 .portfolio-page .gallery-content {
   position: relative;
   display: inline-block;
   width: 100%;
-  margin: 81px auto 0 auto; }
+  margin: auto auto 72px auto; }
   .portfolio-page .gallery-content .portfolio-title {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 0.75em;
     padding-top: 0;
     text-align: center;
-    font-family: "Raleway", "Montserrat", "Lato", "Helvetica", "Arial", sans-serif;
+    font-family: "europa", "gill sans", sans-serif;
     padding-top: 81px; }
   .portfolio-page .gallery-content h1 {
-    font-size: 40px;
-    text-align: center; }
+    font-size: 96px;
+    font-family: "acta-display", "didot", serif;
+    font-weight: 300;
+    text-align: center;
+    margin: 72px auto; }
   .portfolio-page .gallery-content h2 {
-    font-size: 32px;
+    font-size: 56px;
+    font-family: "europa", "gill sans", sans-serif;
     font-style: normal;
     font-weight: bold;
-    color: #5B753D; }
+    margin-bottom: 0; }
   .portfolio-page .gallery-content h3 {
-    font-size: 32px;
-    font-weight: 300; }
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 0;
+    color: #505050; }
   .portfolio-page .gallery-content h4 {
     font-size: 28px;
     font-weight: 300; }
@@ -791,13 +790,14 @@ footer {
     font-style: italic;
     margin: 0; }
   .portfolio-page .gallery-content p {
-    line-height: 1.6em; }
+    font-family: "Merriweather";
+    color: #505050;
+    line-height: 2em; }
   .portfolio-page .gallery-content .cover-photo {
     width: 100%; }
   .portfolio-page .gallery-content .col {
     position: relative;
-    font-size: 16px;
-    line-height: 1.5em; }
+    font-size: 16px; }
   .portfolio-page .gallery-content .single-column {
     width: 100%;
     max-width: 720px;
@@ -816,17 +816,21 @@ footer {
     .portfolio-page .gallery-content .folio_image img {
       position: relative;
       display: inline-block;
-      max-width: 90%;
+      max-width: 100%;
       max-height: 440px;
       height: auto;
       margin: 0; }
+    .portfolio-page .gallery-content .folio_image#hero img {
+      max-height: none; }
     .portfolio-page .gallery-content .folio_image iframe {
       width: 80%;
       height: 440px; }
     .portfolio-page .gallery-content .folio_image figcaption {
       text-align: center;
       font-size: 1rem;
+      font-family: "Merriweather", serif;
       color: #808080;
+      line-height: 1.5em;
       max-width: 80%;
       margin: 0 10%; }
     .portfolio-page .gallery-content .folio_image.images-2 img, .portfolio-page .gallery-content .folio_image.images-2 iframe {
@@ -849,6 +853,49 @@ footer {
     content: "["; }
   .portfolio-page .gallery-content sup a::after {
     content: "]"; }
+
+/* ------ Navigation ------ */
+.folio-nav {
+  position: fixed;
+  display: block;
+  top: 0%;
+  font-family: "europa", "gill sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer; }
+  .folio-nav a {
+    display: inline-block;
+    min-width: 64px;
+    padding: 4px;
+    text-decoration: none;
+    color: #505050; }
+    .folio-nav a:hover {
+      text-decoration: none;
+      color: #5B753D; }
+  .folio-nav a:before {
+    position: relative;
+    display: block;
+    color: #333333;
+    text-decoration: none; }
+  .folio-nav.prev {
+    left: 0;
+    text-align: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-left: 8px solid #808080; }
+    .folio-nav.prev a:before {
+      content: "Prev:"; }
+  .folio-nav.next {
+    right: 0;
+    text-align: right;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-right: 8px solid #808080; }
+    .folio-nav.next a:before {
+      content: "Next:"; }
+  .folio-nav:hover {
+    background: #DCE6CF;
+    border-color: #5B753D; }
 
 /* ------ Table of Contents ------ */
 @media screen and (max-width: 1175px) {
@@ -898,64 +945,20 @@ footer {
     display: inline; }
 
   /* ------------ HEADER - MOBILE ------------ */
-  .header, .sub-header, .sub-header {
+  .main-header {
     height: auto;
-    margin-top: 0;
     padding-top: 0; }
-    .header .main-header .container, .sub-header .main-header .container, .sub-header .main-header .container {
-      width: 100%;
-      margin: 0; }
-    .header .tagline, .sub-header .tagline, .sub-header .tagline {
-      width: 100%;
-      display: none;
-      text-align: center;
-      font-size: 1.6em;
-      line-height: 1.25em;
-      top: 3em; }
+    .main-header .header-contents {
+      margin: 36px auto; }
+      .main-header .header-contents .title {
+        font-size: 60px;
+        width: 80%;
+        margin: auto; }
+      .main-header .header-contents .tagline {
+        display: none; }
 
-  header.main-header {
-    padding: 0;
-    margin: 0; }
-
-  .sub-header {
-    margin-top: 0; }
-    .sub-header:before {
-      width: calc(100% - 56px); }
-    .sub-header:after {
-      right: -108px; }
-    .sub-header .title {
-      font-size: 2.8rem;
-      line-height: 3.6rem;
-      width: 50%;
-      top: 0;
-      padding-left: 4%;
-      padding-left: 4vw; }
-    .sub-header .img-container {
-      height: 86px;
-      width: 71px;
-      float: right;
-      margin: 0;
-      padding-top: 1.8rem;
-      padding-right: 3%; }
-    .sub-header ul {
-      width: 100%;
-      padding-top: 9.6rem;
-      text-align: center; }
-    .sub-header li {
-      top: 6rem;
-      display: block;
-      font-size: 1.5rem;
-      line-height: 4rem;
-      cursor: pointer;
-      padding-right: 0; }
-    .sub-header a {
-      display: inline-block;
-      width: 100%; }
-
-  li.filter:hover,
-  li.filter:active,
-  li.filter:focus {
-    background-color: #5B753D; }
+  .section-header {
+    max-width: 100%; }
 
   /* ------------ BIO - MOBILE ------------ */
   .bio {
@@ -983,57 +986,13 @@ footer {
       min-width: 100%;
       max-width: 100%;
       text-align: center;
-      line-height: 1.2em; }
+      line-height: 1.2em;
+      padding: 0;
+      margin: 36px auto; }
       .bio .bio-text p {
         margin-bottom: 1rem;
-        width: 100%; }
-
-  .social-list.dark,
-  .social-list.light {
-    width: 100vw;
-    margin: 0 -12%;
-    padding-top: 0;
-    display: inline-block; }
-    .social-list.dark .social-media,
-    .social-list.light .social-media {
-      width: 33.33%; }
-      .social-list.dark .social-media a,
-      .social-list.light .social-media a {
-        width: 33.33%; }
-
-  /* ------------ FILTER - MOBILE ------------ */
-  .site-filter {
-    margin-top: 1rem; }
-
-  .filter-line {
-    background-color: #cacaca;
-    display: none; }
-
-  .inline-sort {
-    width: 66%;
-    text-align: center; }
-
-  .menu {
-    width: 100%;
-    margin: 0;
-    padding: 0; }
-    .menu .horizontal-sort {
-      display: none; }
-    .menu li {
-      padding: 0;
-      text-align: center; }
-
-  .menu-label {
-    display: inline-block;
-    width: 92%;
-    padding: 0 4%;
-    text-align: center;
-    background: #DCE6CF; }
-    .menu-label .selected {
-      width: 100%;
-      padding: 0; }
-    .menu-label:after {
-      display: none; }
+        width: 100%;
+        line-height: 1.5em; }
 
   /* ------------ PORTFOLIO - MOBILE ------------ */
   section.portfolio {
@@ -1044,37 +1003,58 @@ footer {
       height: auto; }
       section.portfolio .gallery .folio-item .hover-state {
         opacity: 1;
-        background-color: rgba(51, 51, 51, 0.5);
+        background-color: rgba(250, 250, 250, 0.75);
         -webkit-backdrop-filter: blur(0px); }
       section.portfolio .gallery .folio-item:active .hover-state {
-        background-color: rgba(51, 51, 51, 0.75); }
+        background-color: #FAFAFA;
+        border: 1px solid #808080; }
     section.portfolio .gallery .folio-hover {
-      max-width: calc(100% - 2.51rem);
+      max-width: 80%;
       padding: 1.25rem;
-      background: rgba(28, 28, 28, 0.6);
+      background: rgba(251, 251, 251, 0.6);
       -webkit-border-radius: 8px;
       -moz-border-radius: 8px;
       -ms-border-radius: 8px;
       border-radius: 8px; }
 
+  /* ------------ ABOUT - MOBILE ------------ */
+  section.about .container {
+    text-align: center; }
+    section.about .container #bio {
+      display: inline-block;
+      margin: 36px auto;
+      text-align: center; }
+      section.about .container #bio .bio-pic {
+        margin: auto; }
+      section.about .container #bio .about-text {
+        margin: 24px 0;
+        text-align: left; }
+
+  /* ------------ SOCIAL - MOBILE ------------ */
+  .social-list {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; }
+    .social-list .social-media {
+      width: 33%;
+      padding: 0; }
+      .social-list .social-media a {
+        font-weight: 400; }
+        .social-list .social-media a .social-logo {
+          width: 25%; }
+
   /* ------------ RESUME - MOBILE ------------ */
-  section.resume {
-    margin-top: -2rem; }
-    section.resume .sub-header .title {
-      top: 56px; }
-    section.resume .sub-header ul {
-      padding-top: 3rem;
-      padding-left: 4%;
-      text-align: left; }
-    section.resume .sub-header li {
-      font-size: 1rem;
-      margin-top: 24px; }
-    section.resume .container article.experience.job {
-      margin-top: 16px; }
-    section.resume .container article .logo-container {
-      width: 100%;
-      max-width: 100%; }
-      section.resume .container article .logo-container .logo {
+  section.resume .container article {
+    margin-top: 32px; }
+    section.resume .container article .content-header {
+      display: inline-block;
+      margin: auto;
+      text-align: center; }
+      section.resume .container article .content-header .logo-container {
+        width: 80%;
+        max-width: 80%; }
+      section.resume .container article .content-header .logo {
         width: 50%;
         padding-bottom: 50%;
         margin: 0 auto; }
@@ -1106,34 +1086,51 @@ footer {
       section.resume .container article .resume-content .resume-list {
         display: none;
         padding-left: 40px; }
-    section.resume .experience .job {
-      display: block; }
-    section.resume .skills {
-      display: none; }
-    section.resume .education .school {
-      display: block; }
-    section.resume .education .resume-header {
-      display: none; }
+  section.resume .experience .job {
+    display: block; }
+  section.resume .skills {
+    display: none; }
+  section.resume .education .subsection-header {
+    display: none; }
+  section.resume .education .school {
+    display: block; }
+  section.resume .education .resume-header {
+    display: none; }
 
   /* ------------ FOOTER - MOBILE ------------ */
-  .social-media {
-    width: 33%;
-    height: 4.8rem;
-    margin: 0.8rem 0; }
-
-  .social-media a {
-    width: 40%;
-    margin: 0 30%; }
-
   footer {
     display: block; }
+    footer .social-list .social-media {
+      width: 33%;
+      margin: 0.8rem 0; }
+      footer .social-list .social-media a {
+        width: 40%; }
 
   /* ------------ Portfolio Page - MOBILE ------------ */
+  .portfolio-page .tldr {
+    display: inline-block; }
+    .portfolio-page .tldr .one-third {
+      width: 50%;
+      display: inline-block;
+      margin: 16px auto; }
+      .portfolio-page .tldr .one-third .inline {
+        margin: 16px auto; }
+        .portfolio-page .tldr .one-third .inline .tldr-content {
+          display: inline-block; }
+  .portfolio-page .gallery-content.knowroaming h1 {
+    font-size: 48px; }
+  .portfolio-page .gallery-content h1 {
+    font-size: 64px; }
   .portfolio-page .gallery-content .portfolio-title {
     width: 90%; }
   .portfolio-page .gallery-content .col {
     width: 90%; }
   .portfolio-page .gallery-content figure .table {
-    display: none; } }
+    display: none; }
+  .portfolio-page .folio-nav {
+    min-width: 50%;
+    background-color: #FAFAFA; }
+    .portfolio-page .folio-nav:hover, .portfolio-page .folio-nav:active {
+      background-color: #EDF2E6; } }
 
 /*# sourceMappingURL=adamthompson.css.map */

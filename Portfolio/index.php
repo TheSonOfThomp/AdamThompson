@@ -5,12 +5,10 @@ include('../includes/plugins/Parsedown.php');
 include('../includes/plugins/ParsedownExtra.php');
 include('../includes/plugins/toc.php');
 ?>
-<title>Adam Thompson - <?php echo($p_title) ?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/theme/bitter/vanillabox.css">
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/jquery.mixitup.min.js"></script>
-<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/jquery.vanillabox-0.1.7.min.js"></script>
 <script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/portfolio.js"></script>
 
 <?php
@@ -24,15 +22,16 @@ include('../includes/plugins/toc.php');
 	<script type="text/javascript">
 		var toc = <?php echo markdown_toc('markdown/'.$p.'.md');?>;
 	</script>
+	<title>Adam Thompson - <?php echo($p) ?></title>
 </head>
 <!-- ********** /HEAD ********** -->
 
 <main class="portfolio-page">
 <?php include('../includes/php/header.php'); ?>
 
-<article class="gallery-content">
-	<div id="toc hide">
-	</div>
+<article class="gallery-content <?php echo $p ?>">
+	<!-- <div id="toc hide">
+	</div> -->
 	<!-- TODO: ADD LEFT ALIGNED LOGO/MONOGRAM -->
 	<div class="col single-column">
 <?php
