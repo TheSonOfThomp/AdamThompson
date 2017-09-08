@@ -7,7 +7,7 @@
 	</div>
 	<div class="one-third">
 		<div class="tldr-title">Solution</div>
-		<div class="tldr-content">Restructure the task architecture, and increase clarity of UI elements.</div>
+		<div class="tldr-content">Rethink the task architecture, and increase clarity of UI elements.</div>
 	</div>
 	<div class="one-third">
 			<div class="inline">
@@ -65,7 +65,6 @@ Once we had determined what problems that needed to be solved, we needed to crea
 These requirements guided the design process, and allowed me to quickly evaluate potential designs.
 
 ##Iteration
- <!-- I tried making new, less chaotic flowcharts and wireframes to see what solutions might work and get a better handle on the nuances of the problem.  -->
 
 Knowing that the app's information architecture was at the core of the problem, I wanted to establish all the possible entry points and navigation cases that could occur. This turned out to be a bit more complex than I had anticipated.
 
