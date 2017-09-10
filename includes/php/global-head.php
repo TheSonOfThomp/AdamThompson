@@ -3,7 +3,7 @@
 	
 	if ($_SERVER['SERVER_NAME'] == "localhost") {
 		$DEBUG = true;
-		$root_path = 'http://localhost:9999/adam-thompson-4';
+		$root_path = 'http://localhost:9999/AdamThompson';
 	}
 	else {
 		$DEBUG = false;
