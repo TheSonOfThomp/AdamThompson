@@ -684,24 +684,24 @@ footer {
       font-size: 14px; }
 
 /* ---------------------- PORTFOLIO PAGE ---------------------- */
-.portfolio-page .home h2, .portfolio-page .home a, .portfolio-page .home.folio-nav a {
+.portfolio-page .home h2, .portfolio-page .home p a, .portfolio-page .home.folio-nav a:hover {
   color: #5B753D; }
-.portfolio-page .noom h2, .portfolio-page .noom a, .portfolio-page .noom .tldr-title, .portfolio-page .noom.folio-nav a {
+.portfolio-page .noom h2, .portfolio-page .noom p a, .portfolio-page .noom .tldr-title, .portfolio-page .noom.folio-nav a:hover {
   color: #4271d7; }
 .portfolio-page .noom.folio-nav:hover {
   background: #CFD5E6;
   border-color: #4271d7; }
-.portfolio-page .knowroaming h2, .portfolio-page .knowroaming a, .portfolio-page .knowroaming .tldr-title, .portfolio-page .knowroaming.folio-nav a {
+.portfolio-page .knowroaming h2, .portfolio-page .knowroaming p a, .portfolio-page .knowroaming .tldr-title, .portfolio-page .knowroaming.folio-nav a:hover {
   color: #4286b5; }
 .portfolio-page .knowroaming.folio-nav:hover {
   background: #CFDCE6;
   border-color: #4286b5; }
-.portfolio-page .smrtwatr h2, .portfolio-page .smrtwatr a, .portfolio-page .smrtwatr .tldr-title, .portfolio-page .smrtwatr.folio-nav a {
+.portfolio-page .smrtwatr h2, .portfolio-page .smrtwatr p a, .portfolio-page .smrtwatr .tldr-title, .portfolio-page .smrtwatr.folio-nav a:hover {
   color: #756393; }
 .portfolio-page .smrtwatr.folio-nav:hover {
   background: #D7CFE6;
   border-color: #756393; }
-.portfolio-page .chameleon h2, .portfolio-page .chameleon a, .portfolio-page .chameleon .tldr-title, .portfolio-page .chameleon.folio-nav a {
+.portfolio-page .chameleon h2, .portfolio-page .chameleon p a, .portfolio-page .chameleon .tldr-title, .portfolio-page .chameleon.folio-nav a:hover {
   color: #2e8c5d; }
 .portfolio-page .chameleon.folio-nav:hover {
   background: #CFE6DA;
@@ -860,7 +860,7 @@ footer {
 .folio-nav {
   position: fixed;
   display: block;
-  top: 0%;
+  bottom: 0;
   font-family: "europa", "gill sans", sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -1130,6 +1130,8 @@ footer {
   .portfolio-page .gallery-content figure .table {
     display: none; }
   .portfolio-page .folio-nav {
+    position: absolute;
+    bottom: -72px;
     width: 50%;
     max-width: 50%;
     background-color: #FAFAFA; }
