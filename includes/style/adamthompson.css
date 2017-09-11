@@ -684,6 +684,9 @@ footer {
       font-size: 14px; }
 
 /* ---------------------- PORTFOLIO PAGE ---------------------- */
+.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading div, .wf-loading p {
+  visibility: hidden; }
+
 .portfolio-page .home h2, .portfolio-page .home p a, .portfolio-page .home.folio-nav a:hover {
   color: #5B753D; }
 .portfolio-page .noom.gallery-content {
