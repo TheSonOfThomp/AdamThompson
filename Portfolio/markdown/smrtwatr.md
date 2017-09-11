@@ -7,7 +7,7 @@
 	</div>
 	<div class="one-third">
 		<div class="tldr-title">Outcome</div>
-		<div class="tldr-content">An internet-connected water fountain and associated web game.</div>
+		<div class="tldr-content">An internet-connected water fountain and web game.</div>
 	</div>
 	<div class="one-third">
 			
@@ -35,7 +35,9 @@ My main contributions to this project were UX and front-end development, as well
 <figcaption></figcaption>
 </figure>
 
-For our design class we were required to design something to do with *water*, using the Internet of Things. Out of several different options, we were inspired by several public fountains and noticed that many of these were rarely appreciated as more than just decoration. People were more involved in their smartphones than interacting with either the fountain, or with others. We wanted to change that. 
+##Challenge
+
+For our design class we were challenged to design a product using the Internet of Things on the topic of *water*. Out of several different options, we were inspired by different public fountains and noticed that many of these were rarely appreciated as more than just decoration. People were more involved in their smartphones than in interacting with the fountain or with other people. We wanted to change that. 
 
 ## User Experience
 
