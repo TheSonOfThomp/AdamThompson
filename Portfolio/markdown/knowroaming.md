@@ -8,7 +8,7 @@
 	</div>
 	<div class="one-third">
 		<div class="tldr-title">Solution</div>
-		<div class="tldr-content">Restructure the app, and redesign using consistent visual language.</div>
+		<div class="tldr-content">Restructure the app, and show the user only the necessary information.</div>
 	</div>
 	<div class="one-third">
 			<div class="inline">
@@ -22,11 +22,11 @@
 	</div>
 </div>
 
-##Overview
-###Re-designing an account management app
-I worked at KnowRoaming as a co-op student in Spring 2014 and Winter 2015. This experience helped me learn and grow a lot as a designer.
+##Role
+### ... Designer
+I worked at KnowRoaming as a co-op student in Spring 2014 and Winter 2015. In my time there I wore many hats, from graphic designer, industrial designer, web developer and UX designer.
 
-In addition to graphic design, web development and some industrial design, my primary task was to improve the general user experience of the account management app. In coordination with the stakeholders, COO, developers, and customer service, I reworked everything from the registration workflow, to the in app experience both at home and abroad. 
+Despite all these hats, my primary task though was to improve and redesign the account management app. In coordination with the stakeholders, COO, developers, and customer service, I reworked everything from the visual design, the registration flow, to the in app experience both at home and abroad. 
 
 ##Context
 ###Eliminating _Bill Shock_
@@ -60,19 +60,17 @@ The main takeaway from exploring the existing app was that there was little to n
 I wanted to get some information from people who are more familiar with the app, but I had no way of personally contacting existing users. Fortunately we had a great support team who were in contact with users daily. I talked with them regularly, and had them compile a list of some common issues. This provided me with some good confirmation of the issues I had found, as well as some new insights.
 
 ## Requirements
-From usability heuristics and data we gathered from users we were able to generate a number of requirements about different sections of the app. More broadly, these requirements consisted of:
+From usability heuristics and data we gathered from users we were able to generate a number of requirements about different sections of the app. More broadly, these requirements were:
 
-**Users will know what to do:** Any new or infrequent task will clearly explained and the user will be guided through.
+**Users will be confident:** Users will be sure that both the KnowRoaming hardware and account are set up correctly before continuing.
 
-**Users will be confident:** The Application will ensure the KnowRoaming hardware and account is setup correctly before continuing.
+**Users will know what's up:** Key account information will be easily visible and accessible to the user.
 
-**Users will know what's happening:** Key account status metrics will be easily visible and accessible to the user.
-
-**Users will be able to find important functions:** All key functions will not be more than two levels deep in the information architecture. Other functions will be easily discoverable.
+**Users will be able to find things:** All major functions will be discoverable, and won't require 'drilling down'.
 
 ##Iteration
 ### Basic Architecture
-To satisfy the final two requirements, the app would need to have a fairly flat architecture. KnowRoaming is a complex system, and while the new app would do as much as it could to eliminate confusion and unnecessary interaction, there are still many things the user needs to at least be aware of. From the main screen of the app, the user  needs to be able to access all of the following:
+In order to be confident and know what's up, a user needs to be able to see and do a number of different things. From our knowledge of the product and common user comments, we created a prioritized list of these items.
 
 1. Current Network/SIM card
 2. Summary of Status (Ready to Roam)
@@ -80,52 +78,79 @@ To satisfy the final two requirements, the app would need to have a fairly flat 
 4. Current APN
 5. Account Balance
 6. Reload account
-7. ReachMe
+7. ReachMe/Call Forwarding
 8. Usage, My Numbers, Rate Calculator
 9. Account Settings
 
-A first attempt to satisfy all these requirements was a dashboard-style home screen design. 
 
+### A Super-Flat Architecture
+One way achieve all of this would be through a very flat architecture. By showing all possible actions on the home-screen, there would be nothing left out. 
+
+<figure class='folio_image' id='super-flat'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/super-flat-architecture.png'>
+</a>
+<figcaption>A super-flat architecture diagram</figcaption>
+</figure>
+
+In practice though this proved to be cluttered and didn't convey any real hierarchy. It also wasn't very future proof if other more important features were added. We needed to come up with a more elegant navigation structure—one that prioritized all the information effectively.
+<!-- 
 <figure class='folio_image' id='home-dash'>
 <a target='_blank'>
 	<img src='../includes/portfolio_images/knowroaming/sketch-home-dashboard.jpg'>
 </a>
 <figcaption>The dashboard design.</figcaption>
-</figure>
+</figure> -->
+
 
 ### Navigation
-The Dashboard design was very cluttered, didn't convey any specific hierarchy, and wasn't very future proof if other features were added.
 
-A Drawer Style navigation would be able to convey a hierarchy of information, and allows all navigation elements to be viewed at once. If new functions were to be added later, they would be able to find an appropriate spot in the drawer.
+A drawer-style navigation would be able to do just that, and still allow nearly all navigation elements to be viewed at a glance. If new functions were to be added later, they would be able to find an appropriate spot in the drawer.
 
 <figure class='folio_image' id='home-drawer'>
 <a target='_blank'>
-	<img src='../includes/portfolio_images/knowroaming/home-openDrawer.png'>
 	<img src='../includes/portfolio_images/knowroaming/home-drawer.png'>
+	<img src='../includes/portfolio_images/knowroaming/home-openDrawer.png'>
+	
 </a>
 <figcaption></figcaption>
 </figure>
 
-This prototype tested relatively well in-house, but the 'hamburger menu' was not always clear, and some users took a while to find the drawer. Given that the app would frequently be used by non digital-natives, an [undiscoverable drawer](https://uxdesign.cc/death-by-hamburger-2d1db115352a#.865mhybml) would not be the best navigation option. 
+This prototype tested relatively well in-house, but the 'hamburger menu' wasn't always found right away. Given that the app would frequently be used by non digital-natives, an [undiscoverable drawer](https://uxdesign.cc/death-by-hamburger-2d1db115352a#.865mhybml) would not be the best navigation option. 
 
-On top of discoverability issues, this design didn't clearly convey if the user was _Ready to Roam_, which does not satisfy the second requirement. 
+On top of this, we noticed this home screen design didn't convey clearly enough if the user was _Ready to Roam_. We would have to design a home screen that showed this information at-a-glance so the user could be confident in their setup.
 
-The next iteration returned to a tab-bar for navigation, and put important information regarding _Ready to Roam_ status in a prominent location.
+### Ready to Roam
+We decided to go back to a tab-bar for navigation, and I started sketching a few home-screen designs to see how we could show _Ready to Roam_ at-a-glance. 
+
+<figure class='folio_image' id='ready-to-roam'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/sketch-ReadyToRoam1.jpg'>
+	<img src='../includes/portfolio_images/knowroaming/sketch-home-bubbles.jpg'>
+</a>
+<figcaption>A circular and top-to-bottom checklist design</figcaption>
+</figure>
+
+We got a lot of traction in-house with the top-to-bottom checklist design, so I made a higher-fidelity mockup to see how it performed in small scale tests. With this design, a user could be sure at a glance they were _Ready to Roam_ as the bubbles on the home screen filled in.  
 
 <figure class='folio_image' id='home-drawer'>
 <a target='_blank'>
 	<img src='../includes/portfolio_images/knowroaming/home-bubbles.png'>
 </a>
-<figcaption></figcaption>
+<figcaption>Ready to Roam Checklist on the home-screen</figcaption>
 </figure>
-
-With this design, a user could be sure at a glance they were _Ready to Roam_ as the bubbles on the home screen filled in.  
 
 ### Use Cases
 
-Until now, I hadn't considered where the user would be when using the app, and what actions they could take at a certain time. 
+While the checklist style design tested very well in small scale usability tests, there was one significant problem with it.
+There are certain actions, such as setting up data or subscribing to ReachMe, that are key to being _Ready to Roam_, but can't be done everywhere. 
+This led to confusion, and given the complexity of the system, we wanted our users to be confident that everything was setup properly.
+We eliminated these actions from the home screen to make sure a user is confident wherever they are.
 
-At home, before leaving, is where a user will do most of their account setup and management. There are only two actions needed to achieve _Ready to Roam_ status at home.
+
+###1) At Home
+
+At home is where a user will do most of their account setup and management. To achieve _Ready to Roam_ status at home, all a user need to do is add a balance, and subscribe to ReachMe, the optional (but recommended) call-forwarding service.
 
 <figure class='folio_image' id='phases-home'>
 <a target='_blank'>
@@ -134,7 +159,8 @@ At home, before leaving, is where a user will do most of their account setup and
 <figcaption>At Home phase</figcaption>
 </figure>
 
-Once the user arrives abroad, the first thing a they must is set up their internet connection. Once the data connection has been established, users can use their device just like at home, and _Ready to Roam_ status is restored, as long as they have a sufficient balance. 
+###2) Abroad
+Once the user arrives abroad, the first thing a they need to do is set up their internet connection. Once the data connection has been established, users can use their device just like at home, and _Ready to Roam_ status is restored, as long as they have a sufficient balance. 
 
 <figure class='folio_image' id='phases-abroad'>
 <a target='_blank'>
@@ -143,8 +169,8 @@ Once the user arrives abroad, the first thing a they must is set up their intern
 <figcaption>Abroad phase</figcaption>
 </figure>
 
-
-Arriving back home, the user needs to reset their internet connection in order to user data back at home. This is the only task required in the _Back Home_ phase. Once done, the user returns to the standard _At Home_ phase.
+###3) Back Home
+Arriving back home, the user must reset their internet connection in order to use data back at home. This is the only task required in the _Back Home_ phase. When complete, the user returns to the _At Home_ phase.
 
 <figure class='folio_image' id='phases-back-home'>
 <a target='_blank'>
@@ -153,7 +179,7 @@ Arriving back home, the user needs to reset their internet connection in order t
 <figcaption>Back Home phase</figcaption>
 </figure>
 
-By splitting the home screen into three separate phases, with different UI in each, we were able to increase user confidence that they were doing the right thing, and could use their phone as usual.
+By splitting the home screen into three separate phases with different UI in each, we were able to increase user confidence that they were doing the right thing, and could use their phone as usual.
 
 <figure class='folio_image' id='phases-flowchart'>
 <a target='_blank'>
@@ -167,7 +193,7 @@ By splitting the home screen into three separate phases, with different UI in ea
 
 KnowRoaming is a complex system; involving partner networks, a SIM Sticker, the mobile OS and an app, there is a lot to teach the user and coach them through set up.
 
-When a user finishes the registration process (also redesigned), they are presented with a short tutorial, explaining the three phases, and how to know they are _Ready to Roam_.
+When a user finishes the registration process, they are presented with a short tutorial, explaining the three phases, and how to know they are _Ready to Roam_.
 
 <figure class='folio_image' id='totorial'>
 <a target='_blank'>
@@ -191,9 +217,9 @@ At the beginning of each phase, a set of coachmarks is shown to familiarize the 
 
 ##Conclusion
 ###I could go on...
-There was a lot involved in restructuring this app. And although I could write about it all—from rebranding core offerings (ReachMe), to creating a consistent visual style, I've limited this article to the basic architecture and navigation overhaul.
+There was a lot involved in restructuring this app. And although I could write about how I created a consistent design language, designed the layout of each screen, rebranded core offerings (ReachMe), build a landing page for sponsorships, and even designed a new retail stand, I've limited this article to the basic architecture and navigation overhaul.
 
-With the exception of certain small changes for new features, the KnowRoaming app maintains the same core architecture to date.
+With the exception of certain small changes to allow for new features, the KnowRoaming app maintains the same core 3-phase architecture to date.
 
 <!-- 
 ##Considerations

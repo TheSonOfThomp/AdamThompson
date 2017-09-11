@@ -357,6 +357,6 @@ More details coming soon
 <div class="folio-nav prev smrtwatr">
 	<a href="?p=smrtwatr">SMRT WATR</a>
 </div>
-<div class="folio-nav next home">
-	<a href="../">Home</a>
+<div class="folio-nav next zynga">
+	<a href="?p=zynga">Zynga</a>
 </div>

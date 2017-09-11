@@ -7,7 +7,7 @@
 html {
   font-size: 16px; }
   html body {
-    background: #FAFAFA;
+    background: #FEFEFE;
     padding: 0;
     margin: 0;
     font-family: "acta-display", "didot", serif;
@@ -19,7 +19,7 @@ html {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #FAFAFA; }
+    background-color: #FEFEFE; }
   html section {
     display: block;
     margin: 72px 0;
@@ -106,7 +106,7 @@ html {
   -moz-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out; }
   .button:hover {
-    color: #FAFAFA;
+    color: #FEFEFE;
     background-color: #5B753D; }
 
 .tooltip {
@@ -279,7 +279,7 @@ footer .social-list {
     width: 25%;
     height: 100%;
     margin: 0 auto;
-    color: #FAFAFA;
+    color: #FEFEFE;
     background-size: contain;
     background-position: 50%;
     background-repeat: no-repeat; }
@@ -668,7 +668,7 @@ footer {
   font-size: 12px;
   line-height: 1.6rem;
   background-color: #333333;
-  color: #FAFAFA;
+  color: #FEFEFE;
   padding-bottom: 24px; }
   footer .container {
     position: relative;
@@ -679,33 +679,48 @@ footer {
       width: 100%;
       bottom: 0;
       text-align: center;
-      color: #FAFAFA;
+      color: #FEFEFE;
       font-family: "europa", "gill sans", sans-serif;
       font-size: 14px; }
 
 /* ---------------------- PORTFOLIO PAGE ---------------------- */
 .portfolio-page .home h2, .portfolio-page .home p a, .portfolio-page .home.folio-nav a:hover {
   color: #5B753D; }
+.portfolio-page .noom.gallery-content {
+  border-top: 72px solid #4271d7; }
 .portfolio-page .noom h2, .portfolio-page .noom p a, .portfolio-page .noom .tldr-title, .portfolio-page .noom.folio-nav a:hover {
   color: #4271d7; }
 .portfolio-page .noom.folio-nav:hover {
   background: #CFD5E6;
   border-color: #4271d7; }
+.portfolio-page .knowroaming.gallery-content {
+  border-top: 72px solid #4286b5; }
 .portfolio-page .knowroaming h2, .portfolio-page .knowroaming p a, .portfolio-page .knowroaming .tldr-title, .portfolio-page .knowroaming.folio-nav a:hover {
   color: #4286b5; }
 .portfolio-page .knowroaming.folio-nav:hover {
   background: #CFDCE6;
   border-color: #4286b5; }
+.portfolio-page .smrtwatr.gallery-content {
+  border-top: 72px solid #756393; }
 .portfolio-page .smrtwatr h2, .portfolio-page .smrtwatr p a, .portfolio-page .smrtwatr .tldr-title, .portfolio-page .smrtwatr.folio-nav a:hover {
   color: #756393; }
 .portfolio-page .smrtwatr.folio-nav:hover {
   background: #D7CFE6;
   border-color: #756393; }
+.portfolio-page .chameleon.gallery-content {
+  border-top: 72px solid #2e8c5d; }
 .portfolio-page .chameleon h2, .portfolio-page .chameleon p a, .portfolio-page .chameleon .tldr-title, .portfolio-page .chameleon.folio-nav a:hover {
   color: #2e8c5d; }
 .portfolio-page .chameleon.folio-nav:hover {
   background: #CFE6DA;
   border-color: #2e8c5d; }
+.portfolio-page .zynga.gallery-content {
+  border-top: 72px solid #DD3B30; }
+.portfolio-page .zynga h2, .portfolio-page .zynga p a, .portfolio-page .zynga .tldr-title, .portfolio-page .zynga.folio-nav a:hover {
+  color: #DD3B30; }
+.portfolio-page .zynga.folio-nav:hover {
+  background: #E6D0CF;
+  border-color: #DD3B30; }
 .portfolio-page header.main-header {
   display: none;
   background: rgba(250, 250, 250, 0.75);
@@ -766,7 +781,7 @@ footer {
     text-align: center;
     margin: 72px auto; }
   .portfolio-page .gallery-content h2 {
-    font-size: 56px;
+    font-size: 64px;
     font-family: "europa", "gill sans", sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -795,6 +810,12 @@ footer {
     font-family: "Merriweather";
     color: #505050;
     line-height: 2em; }
+  .portfolio-page .gallery-content ol {
+    font-family: "Merriweather";
+    color: #505050;
+    line-height: 1.8em;
+    width: 66%;
+    margin: auto; }
   .portfolio-page .gallery-content .cover-photo {
     width: 100%; }
   .portfolio-page .gallery-content .col {
@@ -815,6 +836,9 @@ footer {
     margin: 0;
     padding: 12px 0;
     text-align: center; }
+    .portfolio-page .gallery-content .folio_image.extended {
+      width: 150%;
+      margin-left: -25%; }
     .portfolio-page .gallery-content .folio_image img {
       position: relative;
       display: inline-block;
@@ -843,6 +867,8 @@ footer {
     padding-left: 1em;
     color: #808080; }
   .portfolio-page .gallery-content table {
+    font-family: "Merriweather";
+    color: #505050;
     font-size: 12px;
     line-height: 1.2em;
     border: none;
@@ -851,6 +877,8 @@ footer {
       margin: 0; }
   .portfolio-page .gallery-content .footnotes {
     font-size: 12px; }
+    .portfolio-page .gallery-content .footnotes ol {
+      width: 100%; }
   .portfolio-page .gallery-content sup a::before {
     content: "["; }
   .portfolio-page .gallery-content sup a::after {
@@ -860,7 +888,7 @@ footer {
 .folio-nav {
   position: fixed;
   display: block;
-  bottom: 0;
+  bottom: 50%;
   font-family: "europa", "gill sans", sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -1008,7 +1036,7 @@ footer {
         background-color: rgba(250, 250, 250, 0.75);
         -webkit-backdrop-filter: blur(0px); }
       section.portfolio .gallery .folio-item:active .hover-state {
-        background-color: #FAFAFA;
+        background-color: #FEFEFE;
         border: 1px solid #808080; }
     section.portfolio .gallery .folio-hover {
       max-width: 80%;
@@ -1123,6 +1151,8 @@ footer {
     font-size: 48px; }
   .portfolio-page .gallery-content h1 {
     font-size: 64px; }
+  .portfolio-page .gallery-content h2 {
+    font-size: 56px; }
   .portfolio-page .gallery-content .portfolio-title {
     width: 90%; }
   .portfolio-page .gallery-content .col {
@@ -1134,7 +1164,7 @@ footer {
     bottom: -72px;
     width: 50%;
     max-width: 50%;
-    background-color: #FAFAFA; }
+    background-color: #FEFEFE; }
     .portfolio-page .folio-nav:hover, .portfolio-page .folio-nav:active {
       background-color: #EDF2E6; } }
 

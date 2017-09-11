@@ -6,7 +6,7 @@
 				<img alt="Portrait taken by Natasha Choo" src="includes/image_assets/Adam_web.jpg">
 			</div>
 			<p class="about-text">
-			With a degree in <a target="_blank" href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering">Systems Design Engineering</a>, I'm a multifaceted product designer, bringing a holistic process to product design. While I have more experience in software design, I'm not limited to the medium. I've designed at Noom, KnowRoaming, Sony and Zynga, and have won the <a target="_blank" href="https://uwaterloo.ca/engineering/news/six-teams-win-10000-each-annual-esch-awards">Norman Esch Entrepreneurship award</a> with Chameleon Hearing Protection.
+			With a degree in <a target="_blank" href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering">Systems Design Engineering</a>, I'm a multifaceted product designer, bringing a holistic process to product design. While I have more experience in software design, the holistic design process can be applied to all types of products. I've designed at Noom, KnowRoaming, Sony and Zynga, and have won the <a target="_blank" href="https://uwaterloo.ca/engineering/news/six-teams-win-10000-each-annual-esch-awards">Norman Esch Entrepreneurship award</a> with Chameleon Hearing Protection.
 			<br/><br/>
 			When I'm not making products, I enjoy making music. In April 2017 I had the amazing opportunity to sing at the Beacon Theatre in New York with <a target="_blank" href="http://www.570news.com/2017/04/05/uw-capella-group-shot-world-title/"> the Water Boys</a> for the ICCA finals.
 			</p>	

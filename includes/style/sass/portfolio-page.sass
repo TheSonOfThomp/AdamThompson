@@ -1,25 +1,36 @@
 /* ---------------------- PORTFOLIO PAGE ---------------------- */
 
+$noom: #4271d7
+$knowroaming: #4286b5
+$smrtwatr: #756393
+$chameleon: #2e8c5d
+$zynga: #DD3B30
 
 .portfolio-page
 	.home
 		h2,p a, &.folio-nav a:hover
 			color: $green
 	.noom 
+		&.gallery-content
+			border-top: $global-margin solid $noom
 		h2, p a, .tldr-title, 
 		&.folio-nav a:hover
-			color: #4271d7
+			color: $noom
 		&.folio-nav:hover
 			background: #CFD5E6
-			border-color: #4271d7
+			border-color: $noom
 	.knowroaming 
+		&.gallery-content
+			border-top: $global-margin solid $knowroaming
 		h2, p a, .tldr-title, 
 		&.folio-nav a:hover
-			color: #4286b5
+			color: $knowroaming
 		&.folio-nav:hover
 			background: #CFDCE6
-			border-color: #4286b5
+			border-color: $knowroaming
 	.smrtwatr 
+		&.gallery-content
+			border-top: $global-margin solid $smrtwatr
 		h2, p a, .tldr-title, 
 		&.folio-nav a:hover
 			color: #756393
@@ -27,12 +38,24 @@
 			background: #D7CFE6
 			border-color: #756393
 	.chameleon 
+		&.gallery-content
+			border-top: $global-margin solid $chameleon
 		h2, p a, .tldr-title, 
 		&.folio-nav a:hover
 			color: #2e8c5d
 		&.folio-nav:hover
 			background: #CFE6DA
 			border-color: #2e8c5d
+	.zynga
+		&.gallery-content
+			border-top: $global-margin solid $zynga
+		h2, p a, .tldr-title, 
+		&.folio-nav a:hover
+			color: $zynga
+		&.folio-nav:hover
+			background: #E6D0CF
+			border-color: $zynga
+	
 
 	header.main-header
 		display: none
@@ -104,7 +127,7 @@
 			text-align: center
 			margin: $global-margin auto
 		h2
-			font-size: 56px
+			font-size: 64px
 			font-family: $sans-serif
 			font-style: normal
 			font-weight: bold
@@ -138,6 +161,14 @@
 			// font-size: 16px
 			line-height: 2em
 
+		ol
+			font-family: 'Merriweather'
+			color: $dark_grey
+			line-height: 1.8em
+			width: 66%
+			margin: auto
+
+
 		.cover-photo
 			width: 100%
 
@@ -152,6 +183,7 @@
 		.folio_paragraph
 			width: 100%
 			line-height: 1.75em
+
 		.folio_image
 			display: inherit
 			position: relative
@@ -160,6 +192,11 @@
 			margin: 0
 			padding: 12px 0
 			text-align: center
+
+			&.extended
+				width: 150%
+				margin-left: -25%
+
 			img
 				position: relative
 				display: inline-block
@@ -195,6 +232,8 @@
 			color: $med_grey
 
 		table
+			font-family: 'Merriweather'
+			color: $dark_grey
 			font-size: 12px
 			line-height: 1.2em
 			border: none
@@ -204,6 +243,8 @@
 
 		.footnotes
 			font-size: 12px
+			ol
+				width: 100%
 
 		sup a::before
 			content: '['
@@ -214,7 +255,7 @@
 .folio-nav 
 	position: fixed
 	display: block
-	bottom: 0
+	bottom: 50%
 	font-family: $sans-serif
 	font-weight: 400
 	font-size: 1rem
