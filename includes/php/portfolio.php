@@ -4,7 +4,7 @@
     <ul>
         <!-- ********** NOOM - Food Logging ********** -->
 		<li class="folio-item ux featured" 
-			data-feature-rank="1" 
+			data-feature-rank="2" 
 			data-published-date="2015-12-31">
 			<a href="Portfolio/?p=noom">
 				<img src="includes/portfolio_images/noom/noom_logging.png">
@@ -12,7 +12,7 @@
 					<div class="folio-hover">
 						<span class="folio-title">Noom</span>
 						<br/>
-						<span class="folio-description">Improving the core meal-logging experience.</span>
+						<span class="folio-description">Simplifying the core meal-logging experience.</span>
 						<br/>
 						<span class="folio-platform">Mobile</span>
 						<span class="folio-type">Product Design</span>
@@ -23,7 +23,7 @@
 
 		<!-- ********** KNOWROAMING APP ********** -->
 		<li class="folio-item ux featured" 
-			data-feature-rank="2" 
+			data-feature-rank="3" 
 			data-published-date="2015-05-01">
 			<a href="Portfolio/?p=knowroaming">
 				<img src="includes/portfolio_images/knowroaming/knowroaming.jpg">
@@ -61,7 +61,7 @@
 
 		<!-- ********** SMRT WATR ********** -->
 		<li class="folio-item ux hardware electrical software pm featured" 
-			data-feature-rank="3" 
+			data-feature-rank="1" 
 			data-published-date="2015-08-26">
 			<a href="Portfolio/?p=smrtwatr">
 				<img src="includes/portfolio_images/smrtwatr/smrtwatr.jpg">

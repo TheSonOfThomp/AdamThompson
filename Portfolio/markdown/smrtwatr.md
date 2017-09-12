@@ -1,32 +1,18 @@
-#SMRT WATR
+# SMRT WATR
 
-<div class="tldr">
-	<div class="one-third">
-		<div class="tldr-title">Challenge</div>
-		<div class="tldr-content">Design a water-themed IoT product</div>
-	</div>
-	<div class="one-third">
-		<div class="tldr-title">Outcome</div>
-		<div class="tldr-content">An internet-connected water fountain and web game.</div>
-	</div>
-	<div class="one-third">
-			
-			<div class="inline">
-				<div class="tldr-title">Skills: </div>
-				<div class="tldr-content">UX, Front-End Dev, Back-End Dev</div>
-			</div>
-			<div class="inline">
-				<div class="tldr-title">Tools: </div>
-				<div class="tldr-content">Sketch, JavaScript, Python</div>
-			</div>
-	</div>
+<div class="folio-nav prev home">
+	<a href="../">Home</a>
+</div>
+<div class="folio-nav next noom">
+	<a href="?p=noom">Noom</a>
 </div>
 
-##Overview
-### The Interactive Water Fountain
-SMRT WATR (pronounced "smart water") is an interactive fountain and mobile game IoT experience. For our 3rd year engineering project, [Josh Bradshaw](http://joshbradshaw.ca), [Isaac Hunter](https://isaachunter.ca), [Shubh Jagani](http://www.shubhjagani.com), [Matt Jones](https://www.linkedin.com/in/matt--jones/), [Emma Cooper](https://www.linkedin.com/in/emmacooper2562/), and I designed and built a dynamic fountain which changes based on the results of a web-based quiz game. Users could sign in to the web app at smrtwatr.me, and join a quiz match with three other people. As a player answered a question correctly, their corner of the fountain would get higher in response. The player with the highest score after all questions could control the fountain for 30 seconds, selecting from a list of pre-set routines. 
 
-My main contributions to this project were UX and front-end development, as well as some backend development and mechanical design.
+## We made a water fountain that's as interesting as your smartphone.
+
+### We noticed people were more involved in their smartphones than fountains or even other people. We wanted to change that.
+
+### We created a multiplayer quiz game that reacted to users' answers, and where the winner was given control of a specially designed fountain for a time. It was a huge hit!
 
 <figure class='folio_image' id='hero'>
 	<a target='_blank'>
@@ -35,21 +21,42 @@ My main contributions to this project were UX and front-end development, as well
 <figcaption></figcaption>
 </figure>
 
+SMRT WATR (smart water) is an interactive fountain and mobile game IoT experience I developed along with [Josh Bradshaw](http://joshbradshaw.ca), [Isaac Hunter](https://isaachunter.ca), [Shubh Jagani](http://www.shubhjagani.com), [Matt Jones](https://www.linkedin.com/in/matt--jones/), and [Emma Cooper](https://www.linkedin.com/in/emmacooper2562/).
+
 ##Challenge
 
-For our design class we were challenged to design a product using the Internet of Things on the topic of *water*. Out of several different options, we were inspired by different public fountains and noticed that many of these were rarely appreciated as more than just decoration. People were more involved in their smartphones than in interacting with the fountain or with other people. We wanted to change that. 
+We were challenged to design something to do with *water* using the Internet of Things. From many different topics, we were inspired by different public fountains and noticed that many of these were rarely appreciated as more than just decoration, or worse, an obstruction. People were more involved in their smartphones than in interacting with the fountain or with other people. We wanted to change that. 
 
-## User Experience
+## Interaction
 
-The user experience for this project involves both a digital product (the web-app), and a physical product (the fountain), and how the two interact together. From the beginning we wanted actions performed on the phone to affect the fountain in the real world. We entertained a number of different interaction options, including *make-it-rain*, inspired by throwing real coins into a fountain where users could donate to throw virtual currency into the fountain, or to gain control of the fountain for a length of time, and a crowed-sourced performance, where users could select an action which would be placed in a performance queue.
+I was the lead UX designer and front-end developer for this project, and focused on the user's interaction with their mobile device, and how this would affect the fountain. Our mandate, as an IoT product, was that actions performed on the mobile device would affect the fountain in the real world. 
 
-After considering which ideas would create the highest levels and engagement, we decided to design a quiz game where the winner would be given control of the fountain's behaviour for a limited amount of time. (A quiz also had the benefit allow us to keep our given name "Smart Water").
+We entertained a number of different ways users might interact with the fountain, including *make-it-rain*, inspired by throwing real coins into a fountain. In this proposal, users could donate to "throw" virtual currency into the fountain and see real time reactions from the fountain. A second concept was a crowed-sourced performance, where users could select an action which would be placed in a performance queue.
 
-After some brainstorming and discussion, I was able to flesh out the task flow in of the entire fountain/game experience in the flow-chart below [^flowchart].
+<figure class='folio_image' id='other-options'>
+	<a target='_blank'>
+		<img src='../includes/portfolio_images/smrtwatr/make-a-wish.jpg'>
+	</a>
+<figcaption>Mockup of the Make-A-Wish concept</figcaption>
+</figure>
 
-### User Interface
+## The Concept
 
-With a workflow established, I got to UI design. The priority screens were a home screen, lobby, in-game UI and the endgame routine. Using Sketch, I mocked up these screens, and tested on my group mates and other classmates. Using their feedback, I improved and refined my designs. 
+After considering expected engagement and social potential we decided to build a quiz game that allowed users to interact with both other players as well as the fountain. The fountain would react to each question, responding appropriately as each user answered a question. 
+
+If a user answered correctly, the fountain would light up in their player colour and increase the jet in their corner. If they answered incorrectly, the jet in their corner would drop until the next question. 
+
+## User Flow
+
+I worked on streamlining the user flow for all users, considering what would happen if there were not enough users or too many users. We were able to flesh out a task flow for the entire user engagement loop.
+
+<img src='../includes/portfolio_images/smrtwatr/SMRTWATR flow.jpg' style="max-width: 100%; max-height: none;">
+</figure>
+
+
+## User Interface
+
+I mocked up screens for the gem, and tested them on my group mates and other classmates. Using their feedback, I improved and refined my designs.
 
 <figure class='folio_image' id='smrtwatr-lobby&ingame'>
 	<a target='_blank'>
@@ -63,23 +70,26 @@ With a workflow established, I got to UI design. The priority screens were a hom
 		<img src='../includes/portfolio_images/smrtwatr/smrtwatr-endgame.png'>
 	</a>
 <figcaption>Screenshots of the Endgame UI</figcaption>
-</figure>
+</figure> 
 
 ## Implementation
 
-We set up a [Tornado Web](http://www.tornadoweb.org/en/stable/) Python server on a Raspberry Pi to serve the web UI, and to communicate with the fountain's controller. Tornado supports html templates, and can dynamically change the UI on the fly. This was unlike any web development I had ever done, but I got used to it pretty quickly, and wrote all of the app's HTML and SASS, as well as some server-side logic. All front-end, back-end, and controller code is available on [GitHub](https://github.com/Adam93MT/SMRTWATR).
-<!-- 
-## The Fountain
+We set up a [Tornado Web](http://www.tornadoweb.org/en/stable/) server on a Raspberry Pi to serve the web UI, and to communicate with the fountain's controller. Tornado supports `html` templates, and can dynamically change the UI on the fly. I wrote all of the app's `html` and `sass`, as well as some server-side logic using `node.js`. 
 
-I wasn't heavily involved in the design of most mechanical systems  -->
+Check out the front-end, back-end, and controller code is available on [GitHub](https://github.com/Adam93MT/SMRTWATR).
 
-[^flowchart]: SMRT WATR UX Flowchart
-<img src='../includes/portfolio_images/smrtwatr/SMRTWATR flow.jpg' style="max-width: 100%; max-height: none;">
+I also helped design and build the fountain basin itself, and worked on a mechanical solution to attach the fountain jets to servos.
+
+## Demo
+
+We showed off our fountain and game at the end of the term. It was a huge hit, and we won the People's Choice award.
+
+<figure class='folio_image' id='smrtwatr-demo'>
+	<a target='_blank'>
+		<iframe src="https://www.youtube.com/embed/x0ej92Pg6EA" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</a>
+<figcaption></figcaption>
 </figure>
 
-<div class="folio-nav prev knowroaming">
-	<a href="?p=knowroaming">KnowRoaming</a>
-</div>
-<div class="folio-nav next chameleon">
-	<a href="?p=chameleon">Chameleon</a>
-</div>
+
+
