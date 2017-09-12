@@ -7,7 +7,7 @@ $chameleon: #2e8c5d
 $zynga: #DD3B30
 
 .wf-loading
-	h1, h2, h3, div, p
+	h1, h2, h3, a, .tldr, .folio-nav
 		visibility: hidden
 
 .portfolio-page
@@ -60,31 +60,33 @@ $zynga: #DD3B30
 			background: #E6D0CF
 			border-color: $zynga
 
-	header.main-header
-		display: none
-		background: $white_trans
-		-webkit-backdrop-filter: saturate(1.8) blur(20px)
-		height: auto
-		z-index: 5
-		position: fixed
-		margin: 0
-		
-		&.header-up
-			top: -92px /* 48px + 32px + 1px */
+	header
+		position: absolute
+		display: flex
+		justify-content: center
+		top: 0
+		z-index: 10
+		width: 100%
+		height: $global-margin
+		text-align: center
+		.head-shot
+			position: relative
+			display: block
+			width: 48px
+			height: 48px
+			background-image: url('../image_assets/silhouette_icn.jpg')
+			background-position: 50%
+			background-size: cover
+			border-radius: 50%
+			margin: auto
 
-		.header-contents
-			margin: 0
-		.title
-			text-align: center
-			padding: 16px 0
-			font-size: 48px
-			border-bottom: 1px solid $dark_grey
-			opacity: 1
-		&:before
-			content: ''
-		.tagline
-			display: none
-
+		.home-link
+			position: relative
+			display: block
+			margin: auto
+			font-family: $serif
+			font-size: 20px
+			color: $white
 	.tldr
 		display: flex
 		justify-content: space-between
@@ -130,42 +132,32 @@ $zynga: #DD3B30
 			text-align: center
 			margin: $global-margin auto
 		h2
-			font-size: 64px
+			font-size: 56px
 			font-family: $sans-serif
 			font-style: normal
 			font-weight: bold
-			// color: $brand-color
-			margin-bottom: 0 
-
+			margin-top: 24px
+			margin-bottom: 24px
 		h3
-			font-size: 28px
-			font-family: $sans-serif
+			font-size: 24px
 			font-weight: 300
-			margin-top: 0
-			margin-bottom: 16px
+			font-family: $sans-serif
 			color: $dark_grey
 		h4
-			font-size: 28px
-			font-weight: 300	
-		h5
-			font-size: 24px
-			color: $med_grey
-			font-weight: normal
-		h6
 			font-size: 20px
-			color: $med_grey
-			font-weight: normal
-			font-style: italic
-			margin: 0
-		p
-			font-family: 'Merriweather'
-			// font-weight: 400
+			font-weight: 300
+			font-family: $sans-serif
 			color: $dark_grey
-			// font-size: 16px
+		p
+			// font-family: 'Merriweather'
+			font-family: $sans-serif
+			font-size: 18px
+			color: $black
 			line-height: 2em
 
 		ol
-			font-family: 'Merriweather'
+			// font-family: 'Merriweather'
+			font-family: $sans-serif
 			color: $dark_grey
 			line-height: 1.8em
 			width: 66%
@@ -207,6 +199,7 @@ $zynga: #DD3B30
 				max-height: 440px
 				height: auto
 				margin: 4px
+
 			&#hero
 				img
 					max-height: none
@@ -218,7 +211,7 @@ $zynga: #DD3B30
 			figcaption
 				text-align: center
 				font-size: 1rem
-				font-family: 'Merriweather', serif
+				font-family: $sans-serif
 				color: $med_grey
 				line-height: 1.5em
 				max-width: 80%
@@ -235,7 +228,8 @@ $zynga: #DD3B30
 			color: $med_grey
 
 		table
-			font-family: 'Merriweather'
+			// font-family: 'Merriweather'
+			font-family: $sans-serif
 			color: $dark_grey
 			font-size: 12px
 			line-height: 1.2em

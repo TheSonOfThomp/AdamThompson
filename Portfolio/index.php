@@ -5,7 +5,6 @@ include('../includes/plugins/Parsedown.php');
 include('../includes/plugins/ParsedownExtra.php');
 include('../includes/plugins/toc.php');
 ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $root_path; ?>/includes/js/vendor/vanillabox/theme/bitter/vanillabox.css">
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/jquery.mixitup.min.js"></script>
@@ -27,11 +26,11 @@ include('../includes/plugins/toc.php');
 <!-- ********** /HEAD ********** -->
 
 <main class="portfolio-page">
-<?php include('../includes/php/header.php'); ?>
+<header>
+	<a class="home-link" href="../">Adam Thompson</a>
+</header>
 
 <article class="gallery-content <?php echo $p ?>">
-	<!-- <div id="toc hide">
-	</div> -->
 	<!-- TODO: ADD LEFT ALIGNED LOGO/MONOGRAM -->
 	<div class="col single-column">
 <?php
@@ -92,9 +91,9 @@ include('../includes/plugins/toc.php');
 			}
 		});
 		
-		$('.folio_image a').vanillabox({
-			loop: true,
-		});
+		// $('.folio_image a').vanillabox({
+		// 	loop: true,
+		// });
 	});
 
 	// Add make all links open a new tab
