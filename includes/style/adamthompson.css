@@ -809,6 +809,8 @@ footer {
     font-size: 18px;
     color: #333333;
     line-height: 2em; }
+    .portfolio-page .gallery-content p a {
+      font-weight: 400; }
   .portfolio-page .gallery-content ol {
     font-family: "europa", "gill sans", sans-serif;
     color: #505050;

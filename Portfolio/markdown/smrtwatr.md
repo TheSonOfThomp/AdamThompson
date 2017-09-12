@@ -27,9 +27,9 @@ SMRT WATR (smart water) is an interactive fountain and mobile game IoT experienc
 
 We were challenged to design something to do with *water* using the Internet of Things. From many different topics, we were inspired by different public fountains and noticed that many of these were rarely appreciated as more than just decoration, or worse, an obstruction. People were more involved in their smartphones than in interacting with the fountain or with other people. We wanted to change that. 
 
-## Interaction
-
 I was the lead UX designer and front-end developer for this project, and focused on the user's interaction with their mobile device, and how this would affect the fountain. Our mandate, as an IoT product, was that actions performed on the mobile device would affect the fountain in the real world. 
+
+## Interaction
 
 We entertained a number of different ways users might interact with the fountain, including *make-it-rain*, inspired by throwing real coins into a fountain. In this proposal, users could donate to "throw" virtual currency into the fountain and see real time reactions from the fountain. A second concept was a crowed-sourced performance, where users could select an action which would be placed in a performance queue.
 
@@ -74,9 +74,9 @@ I mocked up screens for the gem, and tested them on my group mates and other cla
 
 ## Implementation
 
-We set up a [Tornado Web](http://www.tornadoweb.org/en/stable/) server on a Raspberry Pi to serve the web UI, and to communicate with the fountain's controller. Tornado supports `html` templates, and can dynamically change the UI on the fly. I wrote all of the app's `html` and `sass`, as well as some server-side logic using `node.js`. 
+We set up a [Tornado](http://www.tornadoweb.org/en/stable/) server on a Raspberry Pi to serve the web UI, and to communicate with the fountain's controller. Tornado supports `html` templates, and can dynamically change the UI on the fly. I wrote all of the app's front-end styling and logic, as well as some server-side logic using `node.js`. 
 
-Check out the front-end, back-end, and controller code is available on [GitHub](https://github.com/Adam93MT/SMRTWATR).
+Check out the front-end, back-end, and controller code available on [GitHub](https://github.com/Adam93MT/SMRTWATR).
 
 I also helped design and build the fountain basin itself, and worked on a mechanical solution to attach the fountain jets to servos.
 
