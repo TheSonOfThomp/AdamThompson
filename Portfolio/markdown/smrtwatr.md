@@ -10,9 +10,9 @@
 
 ## We made a water fountain that's as interesting as your smartphone.
 
-### We noticed people were more involved in their smartphones than fountains or even other people. We wanted to change that.
+### We noticed people were involved in their smartphones more than their surroundings or even other people. We wanted to change that.
 
-### We created a multiplayer quiz game that reacted to users' answers, and where the winner was given control of a specially designed fountain for a time. It was a huge hit!
+### We created a multiplayer quiz game and a fountain that reacts to users' answers, where the winner was given control of a specially designed fountain for a time. It was a huge hit!
 
 <figure class='folio_image' id='hero'>
 	<a target='_blank'>
@@ -25,9 +25,9 @@ SMRT WATR (smart water) is an interactive fountain and mobile game IoT experienc
 
 ##Challenge
 
-We were challenged to design something to do with *water* using the Internet of Things. From many different topics, we were inspired by different public fountains and noticed that many of these were rarely appreciated as more than just decoration, or worse, an obstruction. People were more involved in their smartphones than in interacting with the fountain or with other people. We wanted to change that. 
+We were challenged to design something to do with *water* using the Internet of Things. We were inspired by different public fountains and noticed that many were rarely appreciated as more than just decoration, or worse, an obstruction. People were more involved in their smartphones than in interacting with fountains or with other people. We wanted to change that. 
 
-I was the lead UX designer and front-end developer for this project, and focused on the user's interaction with their mobile device, and how this would affect the fountain. Our mandate, as an IoT product, was that actions performed on the mobile device would affect the fountain in the real world. 
+I was the lead UX designer and front-end developer for this project, and focused on the user's interaction with their mobile device, and the effect on the fountain. As an IoT product, actions performed on the mobile device would affect the fountain in the real world. 
 
 ## Interaction
 
@@ -85,11 +85,6 @@ I also helped design and build the fountain basin itself, and worked on a mechan
 We showed off our fountain and game at the end of the term. It was a huge hit, and we won the People's Choice award.
 
 <figure class='folio_image' id='smrtwatr-demo'>
-	<a target='_blank'>
-		<iframe src="https://www.youtube.com/embed/x0ej92Pg6EA" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	</a>
+	<iframe src="https://www.youtube.com/embed/x0ej92Pg6EA" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <figcaption></figcaption>
 </figure>
-
-
-
