@@ -733,22 +733,12 @@ footer {
   width: 100%;
   height: 72px;
   text-align: center; }
-  .portfolio-page header .head-shot {
-    position: relative;
-    display: block;
-    width: 48px;
-    height: 48px;
-    background-image: url("../image_assets/silhouette_icn.jpg");
-    background-position: 50%;
-    background-size: cover;
-    border-radius: 50%;
-    margin: auto; }
   .portfolio-page header .home-link {
     position: relative;
     display: block;
     margin: auto;
     font-family: "acta-display", "didot", serif;
-    font-size: 20px;
+    font-size: 24px;
     color: #FEFEFE; }
 .portfolio-page .tldr {
   display: flex;
@@ -850,7 +840,7 @@ footer {
     .portfolio-page .gallery-content .folio_image#hero img {
       max-height: none; }
     .portfolio-page .gallery-content .folio_image iframe {
-      width: 80%;
+      width: 100%;
       height: 440px; }
     .portfolio-page .gallery-content .folio_image figcaption {
       text-align: center;
