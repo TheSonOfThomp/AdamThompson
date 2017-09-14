@@ -1,8 +1,8 @@
 *::selection {
-  background: #DCE6CF; }
+  background: #D9FAC8; }
 
 *::-moz-selection {
-  background: #DCE6CF; }
+  background: #D9FAC8; }
 
 html {
   font-size: 16px; }
@@ -10,7 +10,7 @@ html {
     background: #FEFEFE;
     padding: 0;
     margin: 0;
-    font-family: "acta-display", "didot", serif;
+    font-family: "europa", "gill sans", sans-serif;
     color: #333333;
     font-weight: 300;
     overflow-x: hidden; }
@@ -26,11 +26,12 @@ html {
     padding: 0;
     width: 100%; }
   html a {
-    color: #5B753D;
+    color: #55A82F;
     font-weight: inherit;
     -webkit-tap-highlight-color: transparent;
     text-decoration: none;
-    cursor: pointer; }
+    cursor: pointer;
+    font-weight: 400; }
     html a:hover {
       text-decoration: underline; }
 
@@ -95,10 +96,10 @@ html {
   font-family: "europa", "gill sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: #5B753D;
+  color: #55A82F;
   text-decoration: none;
   padding: 16px;
-  border: 1px solid #5B753D;
+  border: 1px solid #55A82F;
   -webkit-transition: color 0.15s ease-in-out;
   -moz-transition: color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out;
@@ -107,7 +108,7 @@ html {
   transition: background-color 0.15s ease-in-out; }
   .button:hover {
     color: #FEFEFE;
-    background-color: #5B753D; }
+    background-color: #55A82F; }
 
 .tooltip {
   position: relative;
@@ -147,60 +148,57 @@ html {
       border-color: rgba(51, 51, 51, 0.75) transparent transparent transparent; }
 
 /* -------------------- HEADER -------------------- */
-.main-header {
+header.main-header {
   position: relative;
   display: inline-block;
   width: 100%;
   height: auto;
-  margin: 0;
-  margin-top: 72px;
+  margin: 144px 0 72px 0;
   color: #333333; }
-  .main-header .header-contents {
-    margin: 72px 0; }
-    .main-header .header-contents .title {
+  header.main-header .header-contents {
+    margin: 72px 0;
+    text-align: center; }
+    header.main-header .header-contents .title {
       position: relative;
-      display: block;
-      font-family: "acta-display", "didot", serif;
+      display: inline-block;
+      font-family: "europa", "gill sans", sans-serif;
       font-weight: 400;
       font-size: 90px;
       text-align: center; }
-    .main-header .header-contents .tagline {
+    header.main-header .header-contents .tagline {
       position: relative;
       display: block;
-      width: 42rem;
       text-align: right;
       margin: auto;
-      font-family: "acta-display", "didot", serif;
+      font-family: "europa", "gill sans", sans-serif;
       font-weight: 300;
       font-size: 36px;
       line-height: 1em;
       padding-top: 8px; }
-      @media (max-width: 1280px) {
-        .main-header .header-contents .tagline {
-          font-size: 1.6em;
-          line-height: 1.25em; } }
-      .main-header .header-contents .tagline #tag {
-        color: #5B753D; }
-  .main-header a {
+    header.main-header .header-contents .tag {
+      color: #55A82F; }
+  header.main-header a {
     color: #333333;
     text-decoration: none; }
-    .main-header a:hover {
+    header.main-header a:hover {
       text-decoration: none; }
 
 .section-header {
   color: #333333;
-  font-family: "acta-display", "didot", serif;
+  font-family: "europa", "gill sans", sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   text-align: left;
   line-height: 1em;
   margin: 32px 0 16px 0;
   max-width: 33%;
-  border-bottom: 1px solid #333333; }
+  padding-bottom: 8px;
+  border-bottom: 3px solid #333333; }
 
 .subsection-header {
   color: #333333;
-  font-family: "acta-display", "didot", serif;
+  font-family: "europa", "gill sans", sans-serif;
+  font-weight: 300;
   font-size: 2rem;
   margin: 32px auto; }
 
@@ -232,7 +230,7 @@ html {
       margin: 0 auto;
       color: #333333; }
       .social-list .social-media a:hover {
-        font-weight: 400; }
+        font-weight: 600; }
       .social-list .social-media a .social-name {
         text-align: center;
         display: inline-block;
@@ -367,7 +365,8 @@ section.portfolio {
             margin: auto 12px; }
           section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-title {
             font-size: 2rem;
-            font-family: "acta-display", "didot", serif; }
+            font-family: "europa", "gill sans", sans-serif;
+            font-weight: 600; }
           section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-description {
             font-size: 1.2rem;
             font-family: "europa", "gill sans", sans-serif;
@@ -380,6 +379,14 @@ section.portfolio {
             display: none;
             font-size: 1rem;
             font-style: italic; }
+      section.portfolio .gallery .folio-item#noom .folio-title {
+        color: #4271d7; }
+      section.portfolio .gallery .folio-item#smrtwatr .folio-title {
+        color: #756393; }
+      section.portfolio .gallery .folio-item#knowroaming .folio-title {
+        color: #4286b5; }
+      section.portfolio .gallery .folio-item#chameleon .folio-title {
+        color: #2e8c5d; }
   section.portfolio .button {
     font-size: 18px;
     width: 25%; }
@@ -400,14 +407,17 @@ section.about .about-text {
   margin: auto 48px;
   font-family: "europa", "gill sans", sans-serif;
   font-weight: 300;
-  font-size: 18px; }
+  font-size: 20px; }
 section.about #achievements {
   font-weight: 400; }
 
 /* ---------------------- BLOG ---------------------- */
 section.blog a {
   text-decoration: none;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2em; }
   section.blog a:hover, section.blog a:active {
     text-decoration: underline; }
 section.blog .date_published {
@@ -431,8 +441,6 @@ section.resume .resume-header {
     font-family: "europa", "gill sans", sans-serif;
     font-size: 2rem;
     line-height: 2em; }
-section.resume .subsection-header {
-  margin-left: 24px; }
 section.resume .container article {
   width: 100%;
   margin: auto;
@@ -446,12 +454,7 @@ section.resume .container article {
       height: 0;
       padding-bottom: 80%;
       margin-right: 10%;
-      -webkit-border-radius: 100%;
-      -moz-border-radius: 100%;
-      -ms-border-radius: 100%;
-      border-radius: 100%;
-      background-color: #eee;
-      background-size: 80%;
+      background-size: 100%;
       background-position: 50%;
       background-repeat: no-repeat; }
       section.resume .container article .logo-container .logo a {
@@ -464,28 +467,29 @@ section.resume .container article {
     section.resume .container article .content-header .header-text {
       margin: auto 0; }
     section.resume .container article .content-header .item-title {
-      font-family: "acta-display", "didot", serif;
+      font-family: "europa", "gill sans", sans-serif;
       font-size: 2rem;
       font-weight: 400;
-      display: block;
-      margin: auto; }
+      display: inline-block;
+      margin: auto;
+      padding-right: 12px; }
       section.resume .container article .content-header .item-title span {
         font-size: 1.5rem; }
-    section.resume .container article .content-header .item-duration {
+    section.resume .container article .content-header .item-duration, section.resume .container article .content-header .item-location {
       font-family: "europa", "gill sans", sans-serif;
-      font-size: 1rem;
+      font-size: 16px;
       font-weight: 300;
       margin: auto; }
     section.resume .container article .content-header .show {
-      color: #5B753D;
+      color: #55A82F;
       background: none;
       border: none;
       font-family: "europa", "gill sans", sans-serif;
       font-size: 12px;
       text-decoration: none;
-      padding: 4px 0 0 12px;
       display: inline-block;
-      cursor: pointer; }
+      cursor: pointer;
+      padding-left: 12px; }
       section.resume .container article .content-header .show.more:after {
         content: " more"; }
       section.resume .container article .content-header .show.less:after {
@@ -511,7 +515,6 @@ section.resume .container article {
       color: #808080; }
     section.resume .container article .resume-content .resume-list {
       display: none;
-      padding-left: 160px;
       line-height: 1.5em;
       list-style-type: disc;
       font-family: "europa", "gill sans", sans-serif;
@@ -574,12 +577,19 @@ section.resume .skills {
         position: relative;
         padding-bottom: 56%;
         background-size: 56%;
-        background-position: 50% 0;
+        background-position: 50%;
         background-repeat: no-repeat;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         -ms-border-radius: 0;
         border-radius: 0; }
+      section.resume .skills .program-list li:hover .app-name {
+        font-weight: 500; }
+    @media screen and (max-width: 920px) {
+      section.resume .skills .program-list li {
+        width: 25%; }
+      section.resume .skills .program-list .app-name {
+        display: none; } }
     section.resume .skills .program-list #sketch .app-logo {
       background-image: url("../image_assets/apps/sketch.png"); }
     section.resume .skills .program-list #photoshop .app-logo {
@@ -663,7 +673,7 @@ section.resume .education {
 /* ---------------------- FOOTER ---------------------- */
 footer {
   width: 100%;
-  height: 128px;
+  height: 72px;
   margin-top: 72px;
   font-size: 12px;
   line-height: 1.6rem;
@@ -671,8 +681,7 @@ footer {
   color: #FEFEFE;
   padding-bottom: 24px; }
   footer .container {
-    position: relative;
-    min-height: inherit; }
+    position: relative; }
     footer .container .copyright {
       position: absolute;
       display: block;
@@ -688,7 +697,7 @@ footer {
   visibility: hidden; }
 
 .portfolio-page .home h2, .portfolio-page .home p a, .portfolio-page .home.folio-nav a:hover {
-  color: #5B753D; }
+  color: #55A82F; }
 .portfolio-page .noom.gallery-content {
   border-top: 72px solid #4271d7; }
 .portfolio-page .noom h2, .portfolio-page .noom p a, .portfolio-page .noom .tldr-title, .portfolio-page .noom.folio-nav a:hover {
@@ -737,7 +746,7 @@ footer {
     position: relative;
     display: block;
     margin: auto;
-    font-family: "acta-display", "didot", serif;
+    font-family: "europa", "gill sans", sans-serif;
     font-size: 24px;
     color: #FEFEFE; }
 .portfolio-page .tldr {
@@ -773,7 +782,7 @@ footer {
     padding-top: 81px; }
   .portfolio-page .gallery-content h1 {
     font-size: 96px;
-    font-family: "acta-display", "didot", serif;
+    font-family: "europa", "gill sans", sans-serif;
     font-weight: 300;
     text-align: center;
     margin: 72px auto; }
@@ -795,8 +804,8 @@ footer {
     font-family: "europa", "gill sans", sans-serif;
     color: #505050; }
   .portfolio-page .gallery-content p {
-    font-family: "europa", "gill sans", sans-serif;
-    font-size: 18px;
+    font-family: "Merriweather";
+    font-size: 16px;
     color: #333333;
     line-height: 2em; }
     .portfolio-page .gallery-content p a {
@@ -854,7 +863,7 @@ footer {
       max-width: 46%;
       padding: 1%; }
   .portfolio-page .gallery-content blockquote {
-    border-left: 1px solid #5B753D;
+    border-left: 1px solid #55A82F;
     padding-left: 1em;
     color: #808080; }
   .portfolio-page .gallery-content table {
@@ -892,7 +901,7 @@ footer {
     color: #505050; }
     .folio-nav a:hover {
       text-decoration: none;
-      color: #5B753D; }
+      color: #55A82F; }
   .folio-nav a:before {
     position: relative;
     display: block;
@@ -915,8 +924,8 @@ footer {
     .folio-nav.next a:before {
       content: "Next:"; }
   .folio-nav:hover {
-    background: #DCE6CF;
-    border-color: #5B753D; }
+    background: #D9FAC8;
+    border-color: #55A82F; }
 
 /* ------ Table of Contents ------ */
 @media screen and (max-width: 1175px) {
@@ -976,7 +985,8 @@ footer {
         width: 80%;
         margin: auto; }
       .main-header .header-contents .tagline {
-        display: none; }
+        text-align: center;
+        font-size: 24px; }
 
   .section-header {
     max-width: 100%; }
@@ -1079,6 +1089,10 @@ footer {
         width: 50%;
         padding-bottom: 50%;
         margin: 0 auto; }
+      section.resume .container article .content-header .item-title {
+        display: block; }
+      section.resume .container article .content-header .item-duration {
+        padding-left: 0; }
     section.resume .container article .resume-content {
       margin-top: 2rem;
       max-width: 100%;
@@ -1157,6 +1171,23 @@ footer {
     max-width: 50%;
     background-color: #FEFEFE; }
     .portfolio-page .folio-nav:hover, .portfolio-page .folio-nav:active {
-      background-color: #EDF2E6; } }
+      background-color: #EEFFE5; } }
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+/* ----------------------- LARGE ---------------------- */
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+  header.main-header .header-contents .title {
+    font-size: 112px; }
+  header.main-header .header-contents .tagline {
+    font-size: 48px; }
+
+  section.portfolio .gallery {
+    margin: 48px; }
+    section.portfolio .gallery .folio-item {
+      width: 50%; }
+      section.portfolio .gallery .folio-item a {
+        margin: 48px; } }
 
 /*# sourceMappingURL=adamthompson.css.map */

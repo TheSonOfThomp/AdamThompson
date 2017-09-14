@@ -14,8 +14,6 @@ section.resume
 			font-family: $sans-serif
 			font-size: 2rem
 			line-height: 2em
-	.subsection-header
-		margin-left: 24px
 
 	.container
 		article
@@ -33,9 +31,9 @@ section.resume
 					height: 0
 					padding-bottom: 80%
 					margin-right: 10%
-					+border-radius(100%)
-					background-color: #eee
-					background-size: 80%
+					// +border-radius(100%)
+					// background-color: #eee
+					background-size: 100%
 					background-position: 50%
 					background-repeat: no-repeat
 					a
@@ -50,18 +48,21 @@ section.resume
 				.header-text
 					margin: auto 0
 				.item-title
-					font-family: $serif
+					font-family: $sans-serif
 					font-size: 2rem
 					font-weight: 400
-					display: block
+					display: inline-block // block allows duration to go below
 					margin: auto
+					padding-right: 12px
 					span
 						font-size: 1.5rem
-				.item-duration
+				.item-duration, .item-location
 					font-family: $sans-serif
-					font-size: 1rem
+					font-size: 16px
 					font-weight: 300
 					margin: auto
+
+
 				.show
 					color: $green
 					background: none
@@ -69,9 +70,9 @@ section.resume
 					font-family: $sans-serif
 					font-size: 12px
 					text-decoration: none
-					padding: 4px 0 0 12px
 					display: inline-block
 					cursor: pointer
+					padding-left: 12px
 					&.more:after
 						content: ' more'
 					&.less:after
@@ -103,7 +104,7 @@ section.resume
 
 				.resume-list
 					display: none
-					padding-left: 160px
+					// padding-left: 160px
 					line-height: 1.5em
 					list-style-type: disc
 					font-family: $sans-serif
@@ -177,18 +178,23 @@ section.resume
 					position: relative
 					padding-bottom: 56%
 					background-size: 56%
-					background-position: 50% 0
+					background-position: 50%
 					background-repeat: no-repeat
 					+border-radius(0)
 				&:hover
 					// padding-top: 0.5rem
 					// padding-bottom: 1.5rem
 					.app-name
-						// font-weight: 500
+						font-weight: 500
 					.app-logo
 						// padding-bottom: 67%
-						// background-size: 67%
-
+						// background-size: 60%
+						// background-position: 50%
+			@media screen and (max-width: 920px)
+				li
+					width: 25%
+				.app-name
+					display: none 
 			
 			#sketch .app-logo
 				background-image: url('../image_assets/apps/sketch.png')

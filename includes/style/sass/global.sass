@@ -1,11 +1,10 @@
+// -------- Fonts -------- //
 $serif: 'acta-display', 'didot', serif
 $sans-serif: 'europa', 'gill sans', sans-serif
 $sans-body: 'europa', 'gill sans', sans-serif
-
-// $sans-serif: 'Merriweather'
-// $serif: 'Raleway'
-
-// Neutrals
+ 
+// -------- Colours -------- //
+// --- Neutrals --- //
 $white: #FEFEFE
 $white_trans: rgba(250,250,250,0.75)
 $light_grey: #CECECE
@@ -13,13 +12,29 @@ $med_grey: #808080
 $dark_grey: #505050
 $dark_grey_trans: rgba(51,51,51,0.75)
 $black: #333333
-// Greens
-$bg_green: #FBFFF5
-$white_green: #EDF2E6
-$white_green_trans: rgba(237,242,230,0.75)
-$light_green: #DCE6CF
-$green: #5B753D
 
+// --- Greens --- //
+// $bg_green: #FBFFF5
+// $white_green: #EDF2E6
+// $white_green_trans: rgba(237,242,230,0.75)
+// $light_green: #DCE6CF
+// $green: #5B753D
+
+// --- Brighter Greens --- //
+$white_green: #EEFFE5
+$white_green_trans: rgba(238,255,229,0.75)
+$light_green: #D9FAC8
+$green: #55A82F
+$dark_green: #2B5C12
+
+// --- Brand Colours --- //
+$noom: #4271d7
+$knowroaming: #4286b5
+$smrtwatr: #756393
+$chameleon: #2e8c5d
+$zynga: #DD3B30
+
+// -------- Measurements -------- //
 $global-margin: 72px
 
 *::selection
@@ -54,7 +69,7 @@ html
 		background: $white
 		padding: 0
 		margin: 0
-		font-family: $serif
+		font-family: $sans-serif
 		color: $black
 		font-weight: 300
 		overflow-x: hidden
@@ -79,6 +94,7 @@ html
 		-webkit-tap-highlight-color: rgba(0,0,0,0)
 		text-decoration: none
 		cursor: pointer
+		font-weight: 400
 		&:hover
 			text-decoration: underline
 

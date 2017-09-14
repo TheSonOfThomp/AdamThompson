@@ -1,6 +1,6 @@
 <section class="resume" id="resume">
 	<div class="container">
-		<div class="section-header">Résumé</div>
+		<div class="section-header">Resume</div>
 		<!-- <a class="button" target="_blank" href="http://www.linkedin.com/in/adammthompson">LinkedIn Profile</a> -->
 	</div>
 	
@@ -15,6 +15,7 @@
 				</div>
 				<div class="header-text">
 					<span class="item-title">Product Manager</span>
+					<span class="item-location">Toronto,</span>
 					<span class="item-duration">Spring&nbsp2016</span>
 					<button class="show more">Show</button>
 				</div>
@@ -36,6 +37,7 @@
 				</div>
 				<div class="header-text">
 					<span class="item-title">Product Designer</span>
+					<span class="item-location">New York,</span>
 					<span class="item-duration">Fall&nbsp2015</span>
 					<button class="show more">Show</button>
 				</div>
@@ -56,7 +58,8 @@
 				</div>
 				<div class="header-text">
 					<span class="item-title">UX Designer & Product Manager</span>
-					<span class="item-duration">Spring&nbsp2014 & Winter&nbsp2015</span>
+					<span class="item-location">Toronto,</span>
+					<span class="item-duration">Spring&nbsp2014/Winter&nbsp2015</span>
 					<button class="show more">Show</button>
 				</div>
 			</div>
@@ -86,6 +89,7 @@
 				</div>
 				<div class="header-text">
 					<span class="item-title">UI/UX Designer</span>
+					<span class="item-location">Waterloo,</span>
 					<span class="item-duration">Fall&nbsp2013</span>
 					<button class="show more">Show</button>
 				</div>

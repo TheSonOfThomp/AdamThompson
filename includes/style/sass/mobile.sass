@@ -25,7 +25,8 @@
 				width: 80%
 				margin: auto
 			.tagline 
-				display: none
+				text-align: center
+				font-size: 24px
 	.section-header
 		max-width: 100%
 
@@ -130,6 +131,10 @@
 						width: 50%
 						padding-bottom: 50%
 						margin: 0 auto
+					.item-title
+						display: block
+					.item-duration
+						padding-left: 0
 				.resume-content 
 					margin-top: 2rem
 					max-width: 100%
@@ -220,3 +225,26 @@
 			// -webkit-backdrop-filter: saturate(1.8) blur(20px)
 			&:hover, &:active
 				background-color: $white_green
+
+
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+/* ----------------------- LARGE ---------------------- */
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+@media screen and (min-width: 1441px) 
+	header.main-header
+		.header-contents
+			.title
+				font-size: 112px
+			.tagline
+				font-size: 48px
+	section.portfolio
+		$portfolio-margin: 48px
+		.gallery
+			margin: $portfolio-margin
+			.folio-item
+				width: 50%
+				a
+					margin: $portfolio-margin
+

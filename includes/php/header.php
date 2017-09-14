@@ -3,9 +3,12 @@
 </div> -->
 <header class="main-header">
 	<div class="header-contents">
-		<div class="title"><a href="<?php echo $root_path; ?>/">Adam Thompson <?php ($DEBUG); ?></a></div>
-		<div class="tagline animate">
-			<span id="tag">Product</span> Designer
+		<div class="title">
+			<a href="<?php echo $root_path; ?>/">Adam Thompson
+			</a>
+			<div class="tagline">
+				<span class="tag">Product</span> Designer
+			</div>
 		</div>
 	</div>
 </header>
