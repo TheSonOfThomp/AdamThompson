@@ -11,6 +11,7 @@ section.portfolio
 		position: relative
 		width: auto
 		margin: $portfolio-margin
+		display: block
 
 		ul
 			position: relative
@@ -24,10 +25,11 @@ section.portfolio
 			display: inline-block
 			overflow: hidden
 			float: left
-			width: 50%
 			padding: 0
-			margin: 0 
-
+			margin: 0
+			width: 50%
+			&.folio-rest
+				width: 33%
 			a
 				display: inline-block
 				margin: $portfolio-margin
@@ -35,8 +37,6 @@ section.portfolio
 				&:focus
 					.hover-state
 						opacity: 1
-					// img
-						// width: 110%
 				img
 					position: relative
 					width: 100%
@@ -60,7 +60,8 @@ section.portfolio
 				align-items: center
 				justify-content: center
 
-				+animate-elements(opacity, 0.15s, ease-in-out)
+				
+
 				-webkit-backface-visibility: hidden
 				-webkit-backdrop-filter: saturate(1.8) blur(4px)
 
@@ -108,3 +109,8 @@ section.portfolio
 	.button
 		font-size: 18px
 		width: 50%
+		.fa
+			padding: 0 2px
+			font-size: 16px
+
+

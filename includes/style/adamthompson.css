@@ -34,6 +34,9 @@ html {
     font-weight: 400; }
     html a:hover {
       text-decoration: underline; }
+  html .fa {
+    font-size: 0.8em;
+    padding: 0 0.5em; }
 
 /* ------ HELPER CLASSES ------ */
 .hidden, .hide {
@@ -167,7 +170,7 @@ header.main-header {
       display: inline-block;
       font-family: "europa", "gill sans", sans-serif;
       font-weight: 400;
-      font-size: 90px;
+      font-size: 96px;
       text-align: center; }
     header.main-header .header-contents .tagline {
       position: relative;
@@ -313,7 +316,8 @@ section.portfolio {
   section.portfolio .gallery {
     position: relative;
     width: auto;
-    margin: 16px; }
+    margin: 16px;
+    display: block; }
     section.portfolio .gallery ul {
       position: relative;
       display: inline-block;
@@ -325,9 +329,11 @@ section.portfolio {
       display: inline-block;
       overflow: hidden;
       float: left;
-      width: 50%;
       padding: 0;
-      margin: 0; }
+      margin: 0;
+      width: 50%; }
+      section.portfolio .gallery .folio-item.folio-rest {
+        width: 33%; }
       section.portfolio .gallery .folio-item a {
         display: inline-block;
         margin: 16px; }
@@ -348,14 +354,11 @@ section.portfolio {
         right: 0;
         margin: 16px;
         text-align: center;
-        background-color: rgba(250, 250, 250, 0.75);
+        background-color: rgba(250, 250, 250, 0.9);
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        -webkit-transition: opacity 0.15s ease-in-out;
-        -moz-transition: opacity 0.15s ease-in-out;
-        transition: opacity 0.15s ease-in-out;
         -webkit-backface-visibility: hidden;
         -webkit-backdrop-filter: saturate(1.8) blur(4px); }
         section.portfolio .gallery .folio-item .hover-state .folio-hover {
@@ -394,6 +397,9 @@ section.portfolio {
   section.portfolio .button {
     font-size: 18px;
     width: 50%; }
+    section.portfolio .button .fa {
+      padding: 0 2px;
+      font-size: 16px; }
 
 section.about #bio {
   margin: 72px auto; }
@@ -741,18 +747,21 @@ footer {
   position: absolute;
   display: flex;
   justify-content: center;
+  vertical-align: middle;
   top: 0;
   z-index: 10;
   width: 100%;
   height: 72px;
   text-align: center; }
-  .portfolio-page header .home-link {
-    position: relative;
-    display: block;
-    margin: auto;
-    font-family: "europa", "gill sans", sans-serif;
-    font-size: 24px;
+  .portfolio-page header.small-header {
     color: #FEFEFE; }
+    .portfolio-page header.small-header a {
+      position: relative;
+      display: inline-block;
+      margin: auto;
+      font-family: "europa", "gill sans", sans-serif;
+      font-size: 24px;
+      color: #FEFEFE; }
 .portfolio-page .tldr {
   display: flex;
   justify-content: space-between;
@@ -775,7 +784,8 @@ footer {
   position: relative;
   display: inline-block;
   width: 100%;
-  margin: auto auto 72px auto; }
+  margin: auto auto 72px auto;
+  border-top: 72px solid #55A82F; }
   .portfolio-page .gallery-content .portfolio-title {
     width: 100%;
     margin: 0 auto;
@@ -931,6 +941,38 @@ footer {
     background: #D9FAC8;
     border-color: #55A82F; }
 
+body.portfolio header.portfolio {
+  margin: 72px 0;
+  padding: 0;
+  text-align: center; }
+  body.portfolio header.portfolio .title {
+    font-size: 64px;
+    display: inline-block;
+    margin: auto;
+    padding: 0; }
+    body.portfolio header.portfolio .title a {
+      color: #333333; }
+  body.portfolio header.portfolio .tagline {
+    text-align: right;
+    font-size: 32px;
+    color: #55A82F; }
+  body.portfolio header.portfolio.sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: left;
+    margin: 0;
+    background-color: #FEFEFE;
+    z-index: 10; }
+    body.portfolio header.portfolio.sticky .title {
+      font-size: 48px;
+      margin-left: 32px;
+      padding: 12px 0; }
+    body.portfolio header.portfolio.sticky .tagline {
+      display: inline-block; }
+body.portfolio section.portfolio.sticky {
+  margin-top: 270px; }
+
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
 /* ---------------------- MOBILE ---------------------- */
@@ -1007,7 +1049,7 @@ footer {
       height: auto; }
       section.portfolio .gallery .folio-item .hover-state {
         opacity: 1;
-        background-color: rgba(250, 250, 250, 0.75);
+        background-color: rgba(250, 250, 250, 0.9);
         -webkit-backdrop-filter: blur(0px); }
       section.portfolio .gallery .folio-item:active .hover-state {
         background-color: #FEFEFE;

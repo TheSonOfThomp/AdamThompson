@@ -22,6 +22,7 @@
 
 		<link rel="shortcut icon" type="image/png" href="<?php echo $root_path?>/includes/image_assets/silhouette_icn.jpg">
 
+
 		<!-- STYLE & FONTS -->
 			<!-- Raleway -->
 		<!-- <link href='http://fonts.googleapis.com/css?family=Raleway:200,300' rel='stylesheet' type='text/css'> -->
@@ -36,3 +37,6 @@
 		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/typekit.js"></script>
 
 		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/style/adamthompson.css" type="text/css">
+
+		<!-- Font Awesome -->
+		<script src="https://use.fontawesome.com/47706e48a4.js"></script>

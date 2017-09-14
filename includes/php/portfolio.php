@@ -1,89 +1,72 @@
+<?php 
+	$json_path = $root_path."/Portfolio/portfolio.json";
+	$json_string = file_get_contents($json_path);
+	$folio_obj = json_decode($json_string, true);
+	$featured = $folio_obj["portfolio-featured"];
+	$folio_rest = $folio_obj["portfolio"];
+?>
+
 <section class="portfolio" id="portfolio">
-<!-- <div class="section-header">Selected Work</div> -->
-  <div class="gallery" id="gallery">
+  <div class="gallery featured" id="gallery">
     <ul>
-        
-    	<!-- ********** SMRT WATR ********** -->
-		<li class="folio-item ux hardware electrical software pm featured" 
-			id="smrtwatr"
-			data-feature-rank="1" 
-			data-published-date="2015-08-26">
-			<a href="Portfolio/?p=smrtwatr">
-				<img src="includes/portfolio_images/smrtwatr/smrtwatr.jpg">
-				<div class="hover-state">
-					<div class="folio-hover">
-						<span class="folio-title">SMRT WATR</span>
-						<br/>
-						<span class="folio-description">The interactive water fountain.</span>
-						<br/>
-						<span class="folio-platform">Mobile / Hardware</span>
-						<span class="folio-type">UX / Full-stack / Mechanical Design</span>
-					</div>
-				</div>
-			</a>
-		</li>
+    <?php
+    	foreach ($featured as $item) {
+    ?>
 
-        <!-- ********** NOOM - Food Logging ********** -->
-		<li class="folio-item ux featured" 
-			id="noom"
-			data-feature-rank="2" 
-			data-published-date="2015-12-31">
-			<a href="Portfolio/?p=noom">
-				<img src="includes/portfolio_images/noom/noom_logging.png">
-				<div class="hover-state">
-					<div class="folio-hover">
-						<span class="folio-title">Noom</span>
-						<br/>
-						<span class="folio-description">Simplifying a core experience.</span>
-						<br/>
-						<span class="folio-platform">Mobile</span>
-						<span class="folio-type">Product Design</span>
-					</div>
-				</div>
-			</a>
-		</li>
+	<li class="folio-item featured 
+		<?php foreach ($item['tags'] as $tag) { echo ' '.$tag;}?>" 
+		id="<?php echo $item['id']?>" 
+		data-published-date="<?php echo $item['date']?>">
+		
+		<a href="<?php echo $root_path ?>/Portfolio/?p=<?php echo $item['id']?>&f=1">
+			<img src="<?php echo $root_path ?>/includes/portfolio_images/<?php echo $item['image_url']?>">
+			<div class="hover-state">
+			<div class="folio-hover">
+				<span class="folio-title"><?php echo $item["name"]?></span>
+				<br/>
+				<span class="folio-description"><?php echo $item["description"]?></span>
+				<span class="folio-type"><?php echo $item["type"]?></span>
+			</div>
+			</div>
+		</a>
+	</li>
 
-		<!-- ********** KNOWROAMING APP ********** -->
-		<li class="folio-item ux featured" 
-			id="knowroaming"
-			data-feature-rank="3" 
-			data-published-date="2015-05-01">
-			<a href="Portfolio/?p=knowroaming">
-				<img src="includes/portfolio_images/knowroaming/knowroaming.jpg">
-				<div class="hover-state">
-					<div class="folio-hover">
-						<span class="folio-title">KnowRoaming</span>
-						<br/>
-						<span class="folio-description">Bringing clarity to a complex system</span>
-						<br/>
-						<span class="folio-platform">Mobile</span>
-						<span class="folio-type">UX / Product Management</span>
-					</div>
-				</div>
-			</a>
-		</li>		
-
-		<!-- ********** Chameleon ********** -->
-		<li class="folio-item mech software dsp audio signals ux industrial hardware featured" 
-			id="chameleon"
-			data-feature-rank="4" 
-			data-published-date="2017-04-01">
-			<a href="Portfolio/?p=chameleon">
-				<img src="includes/portfolio_images/chameleon/chameleon-hero.jpg">
-				<div class="hover-state">
-					<div class="folio-hover">
-						<span class="folio-title">Chameleon Hearing Protection</span>
-						<br/>
-						<span class="folio-description">What if your ears could blink?</span>
-						<br/>
-						<span class="folio-platform">Hardware</span>
-						<span class="folio-type">Product Design</span>
-					</div>
-				</div>
-			</a>
-		</li>
+<?php } ?>
 
     </ul>
   </div>
-  <a class="button" href="<?php echo $root_path ?>/Portfolio">See more work</a>
+  <!-- Are we looking at the portfolio on the home page, or in the portfolio page? -->
+ 	<?php 
+ 	if (!$see_more) { ?>
+ 		<a class="button" href="<?php echo $root_path ?>/Portfolio" >See more work <i class="fa fa-arrow-right" aria-hidden="true"></i>
+ 		</a>
+ 	<?php }
+ 	else { ?>
+ 	  <div class="gallery featured" id="gallery">
+ 	  <ul>
+ 	<?php
+    	foreach ($folio_rest as $item) {
+    ?>
+
+ 	<li class="folio-item folio-rest
+		<?php foreach ($item['tags'] as $tag) { echo ' '.$tag;}?>" 
+		id="<?php echo $item['id']?>" 
+		data-published-date="<?php echo $item['date']?>">
+		
+		<a href="<?php echo $root_path ?>/Portfolio/?p=<?php echo $item['id']?>">
+			<img src="<?php echo $root_path ?>/includes/portfolio_images/<?php echo $item['image_url']?>">
+			<div class="hover-state">
+			<div class="folio-hover">
+				<span class="folio-title"><?php echo $item["name"]?></span>
+				<br/>
+				<span class="folio-description"><?php echo $item["description"]?></span>
+				<span class="folio-type"><?php echo $item["type"]?></span>
+			</div>
+			</div>
+		</a>
+	</li>
+ 	<?php } }?>
+
+ 	</ul>
+ 	</div>
 </section>
