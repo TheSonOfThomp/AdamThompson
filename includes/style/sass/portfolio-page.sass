@@ -133,8 +133,7 @@
 			font-family: $sans-serif
 			color: $dark_grey
 		p
-			font-family: 'Merriweather'
-			// font-family: $sans-serif
+			font-family: $body-font
 			font-size: 16px
 			color: $black
 			line-height: 2em
@@ -142,8 +141,7 @@
 				font-weight: 400
 
 		ol
-			// font-family: 'Merriweather'
-			font-family: $sans-serif
+			font-family: $body-font
 			color: $dark_grey
 			line-height: 1.8em
 			width: 66%
@@ -214,8 +212,7 @@
 			color: $med_grey
 
 		table
-			// font-family: 'Merriweather'
-			font-family: $sans-serif
+			font-family: $body-font
 			color: $dark_grey
 			font-size: 12px
 			line-height: 1.2em
@@ -278,37 +275,3 @@
 	&:hover
 		background: $light_green
 		border-color: $green
-
-/* ------ Table of Contents ------ */
-@media screen and (max-width: 1175px)
-	#toc
-		display: none
-
-	/* TODO: Implement drop-down TOC*/
-
-/*TODO Implement current location highlight */
-#toc
-	position: fixed
-	top: 112px
-	z-index: 1
-	width: 20%
-	max-width: 360px
-
-#toc a
-	display: block
-	cursor: pointer
-	font-size: 14px
-	text-decoration: none
-	font-weight: 500
-	margin: 0 2vw
-
-// #toc .toc-h1
-
-#toc .toc-h2
-	padding-left: 16px
-	font-family: "Lato", "Helvetica", sans-serif
-
-#toc .toc-h
-	padding-left: 32px
-	font-family: "Lato", "Helvetica", sans-serif
-	opacity: 0.8

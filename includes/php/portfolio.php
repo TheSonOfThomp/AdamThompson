@@ -34,7 +34,7 @@
 					<div class="folio-hover">
 						<span class="folio-title">Noom</span>
 						<br/>
-						<span class="folio-description">Simplifying the core meal-logging experience.</span>
+						<span class="folio-description">Simplifying a core experience.</span>
 						<br/>
 						<span class="folio-platform">Mobile</span>
 						<span class="folio-type">Product Design</span>
@@ -54,7 +54,7 @@
 					<div class="folio-hover">
 						<span class="folio-title">KnowRoaming</span>
 						<br/>
-						<span class="folio-description">Eliminating mobile bill-shock.</span>
+						<span class="folio-description">Bringing clarity to a complex system</span>
 						<br/>
 						<span class="folio-platform">Mobile</span>
 						<span class="folio-type">UX / Product Management</span>
@@ -85,5 +85,5 @@
 
     </ul>
   </div>
-  <!-- <a class="button" href="<?php echo $root_path ?>/Portfolio">See more work</a> -->
+  <a class="button" href="<?php echo $root_path ?>/Portfolio">See more work</a>
 </section>

@@ -99,13 +99,17 @@ html {
   color: #55A82F;
   text-decoration: none;
   padding: 16px;
-  border: 1px solid #55A82F;
+  border: 2px solid #55A82F;
   -webkit-transition: color 0.15s ease-in-out;
   -moz-transition: color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out; }
+  transition: background-color 0.15s ease-in-out;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px; }
   .button:hover {
     color: #FEFEFE;
     background-color: #55A82F; }
@@ -389,7 +393,7 @@ section.portfolio {
         color: #2e8c5d; }
   section.portfolio .button {
     font-size: 18px;
-    width: 25%; }
+    width: 50%; }
 
 section.about #bio {
   margin: 72px auto; }
@@ -522,7 +526,7 @@ section.resume .container article {
       section.resume .container article .resume-content .resume-list .resume-item {
         margin-bottom: 1em; }
         section.resume .container article .resume-content .resume-list .resume-item .list-description {
-          font-family: "acta-display", "didot", serif;
+          font-family: "europa", "gill sans", sans-serif;
           font-size: 14px;
           margin-right: 16px; }
 section.resume .experience {
@@ -804,14 +808,14 @@ footer {
     font-family: "europa", "gill sans", sans-serif;
     color: #505050; }
   .portfolio-page .gallery-content p {
-    font-family: "Merriweather";
+    font-family: "Merriweather", serif;
     font-size: 16px;
     color: #333333;
     line-height: 2em; }
     .portfolio-page .gallery-content p a {
       font-weight: 400; }
   .portfolio-page .gallery-content ol {
-    font-family: "europa", "gill sans", sans-serif;
+    font-family: "Merriweather", serif;
     color: #505050;
     line-height: 1.8em;
     width: 66%;
@@ -867,7 +871,7 @@ footer {
     padding-left: 1em;
     color: #808080; }
   .portfolio-page .gallery-content table {
-    font-family: "europa", "gill sans", sans-serif;
+    font-family: "Merriweather", serif;
     color: #505050;
     font-size: 12px;
     line-height: 1.2em;
@@ -927,37 +931,6 @@ footer {
     background: #D9FAC8;
     border-color: #55A82F; }
 
-/* ------ Table of Contents ------ */
-@media screen and (max-width: 1175px) {
-  #toc {
-    display: none; }
-
-  /* TODO: Implement drop-down TOC */ }
-/*TODO Implement current location highlight */
-#toc {
-  position: fixed;
-  top: 112px;
-  z-index: 1;
-  width: 20%;
-  max-width: 360px; }
-
-#toc a {
-  display: block;
-  cursor: pointer;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 2vw; }
-
-#toc .toc-h2 {
-  padding-left: 16px;
-  font-family: "Lato", "Helvetica", sans-serif; }
-
-#toc .toc-h {
-  padding-left: 32px;
-  font-family: "Lato", "Helvetica", sans-serif;
-  opacity: 0.8; }
-
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
 /* ---------------------- MOBILE ---------------------- */
@@ -975,16 +948,16 @@ footer {
     display: inline; }
 
   /* ------------ HEADER - MOBILE ------------ */
-  .main-header {
+  header.main-header {
     height: auto;
     padding-top: 0; }
-    .main-header .header-contents {
+    header.main-header .header-contents {
       margin: 36px auto; }
-      .main-header .header-contents .title {
+      header.main-header .header-contents .title {
         font-size: 60px;
-        width: 80%;
+        width: 90%;
         margin: auto; }
-      .main-header .header-contents .tagline {
+      header.main-header .header-contents .tagline {
         text-align: center;
         font-size: 24px; }
 
