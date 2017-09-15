@@ -42,7 +42,7 @@
  		</a>
  	<?php }
  	else { ?>
- 	  <div class="gallery featured" id="gallery">
+ 	  <div class="gallery more-portfolio" id="gallery">
  	  <ul>
  	<?php
     	foreach ($folio_rest as $item) {

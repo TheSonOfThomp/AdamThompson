@@ -1,5 +1,5 @@
 /* ---------------------- PORTFOLIO ---------------------- */
-$portfolio-margin: 16px
+$portfolio-margin: 24px
 section.portfolio
 	position: relative
 	display: block
@@ -22,7 +22,7 @@ section.portfolio
 
 		.folio-item
 			position: relative
-			display: inline-block
+			display: inline-table
 			overflow: hidden
 			float: left
 			padding: 0
@@ -36,7 +36,11 @@ section.portfolio
 				&:hover,
 				&:focus
 					.hover-state
-						opacity: 1
+						// opacity: 1
+						// background-color: $white_trans
+						// +backdrop-filter(saturate(1))
+						// +backdrop-filter(blur(4px))
+
 				img
 					position: relative
 					width: 100%
@@ -46,28 +50,38 @@ section.portfolio
 					// +animate-elements(width, 0.15s, ease-in-out)
 			
 			.hover-state
-				opacity: 0
+				// opacity: 0
+				// +backdrop-filter(saturate(1))
+				// +backdrop-filter(blur(0px))
+				background-color: $transparent
+				// +animate-elements(background-color, 0.15s, ease-in-out)
+				// +animate-elements(backdrop-filter, 0.15s, ease-in-out)
+				// +animate-elements(-webkit-backdrop-filter, 0.15s, ease-in-out)
+				-webkit-backdrop-filter
 				position: absolute
 				top: 0 
-				bottom: 4px // it works
+				// bottom: 4px // it works
+				bottom: 0
 				left: 0 
 				right: 0
 				margin: $portfolio-margin
-				text-align: center
-				background-color: $white_trans 
+				text-align: left
 				cursor: pointer
 				display: flex
 				align-items: center
 				justify-content: center
-
-				
-
+				-webkit-transform-style: preserve-3d
 				-webkit-backface-visibility: hidden
-				-webkit-backdrop-filter: saturate(1.8) blur(4px)
 
 				.folio-hover
-					display: inline-block
-					vertical-align: middle
+					// display: inline-block
+					// vertical-align: middle
+					position: absolute
+					left: 0
+					bottom: 0
+					padding: 32px 32px 0px 8px
+					max-width: 80%
+					background-color: $white
 					color: $black
 					line-height: 1.8rem
 					font-weight: 500
@@ -75,9 +89,13 @@ section.portfolio
 						display: inline-block
 						margin: auto 12px
 					.folio-title
-						font-size: 2rem
+						font-size: 2.8rem
+						line-height: 1em
 						font-family: $sans-serif
 						font-weight: 600
+						color: $black
+						+animate-elements(color, 0.1s, ease-in-out)
+						// +animate-elements(font-size, 0.15s, ease-in-out)
 
 					.folio-description
 						font-size: 1.2rem
@@ -93,18 +111,40 @@ section.portfolio
 						display: none
 						font-size: 1rem
 						font-style: italic
+				@media screen and (max-width: 960px)
+					.folio-hover
+						// background-color: $white_trans
+						padding: 20px 20px 0px 8px
+						.folio-title
+							font-size: 2rem
 			&#noom
-				.folio-title
-					color: $noom
+				a:hover
+					.folio-title
+						color: $noom
 			&#smrtwatr
-				.folio-title
-					color: $smrtwatr
+				a:hover
+					.folio-title
+						color: $smrtwatr
 			&#knowroaming
-				.folio-title
-					color: $knowroaming
+				a:hover
+					.folio-title
+						color: $knowroaming
 			&#chameleon
-				.folio-title
-					color: $chameleon
+				a:hover
+					.folio-title
+						color: $chameleon
+		
+
+		&.more-portfolio
+			.folio-item
+				.hover-state
+					.folio-hover
+						padding: 16px 16px 0px 4px
+						.folio-title
+							font-size: 1.5rem
+							font-weight: 600
+						.folio-description
+							display: none
 
 	.button
 		font-size: 18px

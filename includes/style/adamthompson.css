@@ -316,7 +316,7 @@ section.portfolio {
   section.portfolio .gallery {
     position: relative;
     width: auto;
-    margin: 16px;
+    margin: 24px;
     display: block; }
     section.portfolio .gallery ul {
       position: relative;
@@ -326,7 +326,7 @@ section.portfolio {
       list-style: none; }
     section.portfolio .gallery .folio-item {
       position: relative;
-      display: inline-block;
+      display: inline-table;
       overflow: hidden;
       float: left;
       padding: 0;
@@ -336,9 +336,7 @@ section.portfolio {
         width: 33%; }
       section.portfolio .gallery .folio-item a {
         display: inline-block;
-        margin: 16px; }
-        section.portfolio .gallery .folio-item a:hover .hover-state, section.portfolio .gallery .folio-item a:focus .hover-state {
-          opacity: 1; }
+        margin: 24px; }
         section.portfolio .gallery .folio-item a img {
           position: relative;
           width: 100%;
@@ -346,24 +344,27 @@ section.portfolio {
           cursor: pointer;
           margin-left: 0; }
       section.portfolio .gallery .folio-item .hover-state {
-        opacity: 0;
+        background-color: rgba(250, 250, 250, 0);
         position: absolute;
         top: 0;
-        bottom: 4px;
+        bottom: 0;
         left: 0;
         right: 0;
-        margin: 16px;
-        text-align: center;
-        background-color: rgba(250, 250, 250, 0.8);
+        margin: 24px;
+        text-align: left;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        -webkit-backface-visibility: hidden;
-        -webkit-backdrop-filter: saturate(1.8) blur(4px); }
+        -webkit-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden; }
         section.portfolio .gallery .folio-item .hover-state .folio-hover {
-          display: inline-block;
-          vertical-align: middle;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          padding: 32px 32px 0px 8px;
+          max-width: 80%;
+          background-color: #FEFEFE;
           color: #333333;
           line-height: 1.8rem;
           font-weight: 500; }
@@ -371,9 +372,14 @@ section.portfolio {
             display: inline-block;
             margin: auto 12px; }
           section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-title {
-            font-size: 2rem;
+            font-size: 2.8rem;
+            line-height: 1em;
             font-family: "europa", "gill sans", sans-serif;
-            font-weight: 600; }
+            font-weight: 600;
+            color: #333333;
+            -webkit-transition: color 0.1s ease-in-out;
+            -moz-transition: color 0.1s ease-in-out;
+            transition: color 0.1s ease-in-out; }
           section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-description {
             font-size: 1.2rem;
             font-family: "europa", "gill sans", sans-serif;
@@ -386,14 +392,26 @@ section.portfolio {
             display: none;
             font-size: 1rem;
             font-style: italic; }
-      section.portfolio .gallery .folio-item#noom .folio-title {
+        @media screen and (max-width: 960px) {
+          section.portfolio .gallery .folio-item .hover-state .folio-hover {
+            padding: 20px 20px 0px 8px; }
+            section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-title {
+              font-size: 2rem; } }
+      section.portfolio .gallery .folio-item#noom a:hover .folio-title {
         color: #4271d7; }
-      section.portfolio .gallery .folio-item#smrtwatr .folio-title {
+      section.portfolio .gallery .folio-item#smrtwatr a:hover .folio-title {
         color: #756393; }
-      section.portfolio .gallery .folio-item#knowroaming .folio-title {
+      section.portfolio .gallery .folio-item#knowroaming a:hover .folio-title {
         color: #4286b5; }
-      section.portfolio .gallery .folio-item#chameleon .folio-title {
+      section.portfolio .gallery .folio-item#chameleon a:hover .folio-title {
         color: #2e8c5d; }
+    section.portfolio .gallery.more-portfolio .folio-item .hover-state .folio-hover {
+      padding: 16px 16px 0px 4px; }
+      section.portfolio .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-title {
+        font-size: 1.5rem;
+        font-weight: 600; }
+      section.portfolio .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-description {
+        display: none; }
   section.portfolio .button {
     font-size: 18px;
     width: 50%; }
@@ -1054,21 +1072,32 @@ body.portfolio section.portfolio.sticky {
     section.portfolio .gallery .folio-item {
       width: 100%;
       height: auto; }
-      section.portfolio .gallery .folio-item .hover-state {
-        opacity: 1;
-        background-color: rgba(250, 250, 250, 0.8);
-        -webkit-backdrop-filter: blur(0px); }
-      section.portfolio .gallery .folio-item:active .hover-state {
-        background-color: #FEFEFE;
-        border: 1px solid #808080; }
-    section.portfolio .gallery .folio-hover {
-      max-width: 80%;
-      padding: 1.25rem;
-      background: rgba(251, 251, 251, 0.6);
-      -webkit-border-radius: 8px;
-      -moz-border-radius: 8px;
-      -ms-border-radius: 8px;
-      border-radius: 8px; }
+      section.portfolio .gallery .folio-item a {
+        margin: 8px; }
+        section.portfolio .gallery .folio-item a:active .hover-state {
+          backdrop-filter: saturate(2);
+          -webkit-backdrop-filter: saturate(2);
+          background-color: rgba(250, 250, 250, 0.8); }
+        section.portfolio .gallery .folio-item a .hover-state {
+          opacity: 1;
+          margin: 8px; }
+          section.portfolio .gallery .folio-item a .hover-state .folio-hover {
+            max-width: 80%;
+            padding: 16px 16px 0px 4px;
+            background-color: rgba(250, 250, 250, 0.8);
+            max-width: 100%; }
+            section.portfolio .gallery .folio-item a .hover-state .folio-hover .folio-title {
+              font-size: 2rem; }
+      section.portfolio .gallery .folio-item#noom .folio-title {
+        color: #4271d7; }
+      section.portfolio .gallery .folio-item#smrtwatr .folio-title {
+        color: #756393; }
+      section.portfolio .gallery .folio-item#knowroaming .folio-title {
+        color: #4286b5; }
+      section.portfolio .gallery .folio-item#chameleon .folio-title {
+        color: #2e8c5d; }
+    section.portfolio .button {
+      display: none; }
 
   /* ------------ ABOUT - MOBILE ------------ */
   section.about .container {

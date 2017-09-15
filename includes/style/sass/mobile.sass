@@ -66,24 +66,43 @@
 
 	/* ------------ PORTFOLIO - MOBILE ------------ */
 	section.portfolio 
+		$portfolio-margin: 8px
 		margin: 0
 		max-height: none
 		.gallery
 			.folio-item 
 				width: 100%
 				height: auto
-				.hover-state 
-					opacity: 1
-					background-color: $white_trans
-					-webkit-backdrop-filter: blur(0px)
-				&:active .hover-state
-					background-color: $white
-					border: 1px solid $med_grey
-			.folio-hover 
-				max-width: 80%
-				padding: 1.25rem
-				background: rgba(251,251,251,0.6)
-				+border-radius(8px)
+				a
+					margin: $portfolio-margin
+					&:active .hover-state
+						+backdrop-filter(saturate(2))
+						background-color: $white_trans
+						// border: 1px solid $med_grey
+					.hover-state
+						opacity: 1
+						margin: $portfolio-margin
+						.folio-hover 
+							max-width: 80%
+							padding: 16px 16px 0px 4px
+							background-color: $white_trans
+							max-width: 100%
+							.folio-title
+								font-size: 2rem
+				&#noom
+					.folio-title
+						color: $noom
+				&#smrtwatr
+					.folio-title
+						color: $smrtwatr
+				&#knowroaming
+					.folio-title
+						color: $knowroaming
+				&#chameleon
+					.folio-title
+						color: $chameleon
+		.button
+			display: none			
 
 
 	/* ------------ ABOUT - MOBILE ------------ */
