@@ -18,7 +18,7 @@
 		id="<?php echo $item['id']?>" 
 		data-published-date="<?php echo $item['date']?>">
 		
-		<a href="<?php echo $root_path ?>/Portfolio/?p=<?php echo $item['id']?>&f=1">
+		<a href="<?php echo $root_path ?>/Portfolio/?p=<?php echo $item['id']?>">
 			<img src="<?php echo $root_path ?>/includes/portfolio_images/<?php echo $item['image_url']?>">
 			<div class="hover-state">
 			<div class="folio-hover">

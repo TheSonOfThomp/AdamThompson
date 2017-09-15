@@ -1,9 +1,9 @@
 # Chameleon
 
-<div class="folio-nav prev knowroaming">
-	<a href="?p=knowroaming">KnowRoaming</a>
+<div class="folio-nav next noom">
+	<a href="?p=noom">Noom</a>
 </div>
-<div class="folio-nav next home">
+<div class="folio-nav prev home">
 	<a href="../">Home</a>
 </div>
 

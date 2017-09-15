@@ -104,95 +104,8 @@
 			</div>
 		</article>
 	</section>
-
-	<section class="skills container" id="toolbox">
-		<div class="subsection-header">My Toolbox
-		</div>
-		<ul class="program-list"> <!-- must have a multiple of 8 -->
-			<li class="animate resume-item featured ux" id="sketch">
-				<div class="app-logo"></div><p class="app-name">Sketch</p>
-			</li>
-			<li class="animate resume-item featured ux graphics" id="photoshop">
-				<div class="app-logo"></div><p class="app-name">Photoshop</p>
-			</li>
-			<li class="animate resume-item ux graphics" id="ai">
-				<div class="app-logo"></div><p class="app-name">Illustrator</p>
-			</li>
-			<li class="animate resume-item ux" id="balsamiq">
-				<div class="app-logo"></div><p class="app-name">Balsamiq</p>
-			</li>
-
-			<li class="animate resume-item soft ux" id="framer">
-				<div class="app-logo"></div><p class="app-name">Framer</p>
-			</li>
-
-			<li class="animate resume-item soft ux" id="origami">
-				<div class="app-logo"></div><p class="app-name">Origami</p>
-			</li>
-
-			<li class="animate resume-item featured ux web soft" id="html5">
-				<div class="app-logo"></div><p class="app-name">HTML5</p>
-			</li>	
-<!-- 			<li class="animate resume-item featured ux web soft" id="css3">
-				<div class="app-logo"></div><p class="app-name">CSS 3</p>
-			</li>	 -->
-			<li class="animate resume-item ux web soft" id="javascript">
-				<div class="app-logo"></div><p class="app-name">JavaScript</p>
-			</li>				
-			<li class="animate resume-item featured ux web soft" id="coffeescript">
-				<div class="app-logo"></div><p class="app-name">CoffeeScript</p>
-			</li>
-			<li class="animate resume-item featured web soft" id="php">
-				<div class="app-logo"></div><p class="app-name">PHP</p>
-			</li>
-			<li class="animate resume-item web soft us" id="python">
-				<div class="app-logo"></div><p class="app-name">Python</p>
-			</li>
-
-			<li class="animate resume-item featured web soft ux" id="swift">
-				<div class="app-logo"></div><p class="app-name">Swift</p>
-			</li>
-<!-- 			<li class="animate resume-item web soft" id="cpp">
-				<div class="app-logo"></div><p class="app-name">C++</p>
-			</li> -->
-			<li class="animate resume-item web soft" id="java">
-				<div class="app-logo"></div><p class="app-name">Java</p>
-			</li>
-			<li class="animate resume-item featured soft" id="arduino">
-				<div class="app-logo"></div><p class="app-name">Arduino</p>
-			</li>
-			<li class="animate resume-item web soft us" id="matlab">
-				<div class="app-logo"></div><p class="app-name">MATLAB</p>
-			</li>
-			<li class="animate resume-item graphics" id="ae">
-				<div class="app-logo"></div><p class="app-name">After Effects</p>
-			</li>
-			<li class="animate resume-item graphics" id="indesign">
-				<div class="app-logo"></div><p class="app-name">InDesign</p>
-			</li>
-			<li class="animate resume-item featured industrial" id="autocad">
-				<div class="app-logo"></div><p class="app-name">AutoCad</p>
-			</li>
-			<li class="animate resume-item featured industrial" id="inventor">
-				<div class="app-logo"></div><p class="app-name">Inventor</p>
-			</li>
-<!-- 			<li class="animate resume-item web soft ux" id="excel">
-				<div class="app-logo"></div><p class="app-name">Excel</p>
-			</li> -->
-<!-- 			<li class="animate resume-item web soft us" id="sql">
-				<div class="app-logo"></div><p class="app-name">SQL</p>
-			</li> -->
-			<li class="animate resume-item web soft ux" id="git">
-				<div class="app-logo"></div><p class="app-name">Git</p>
-			</li>
-<!-- 			<li class="animate resume-item web soft us" id="xcode">
-				<div class="app-logo"></div><p class="app-name">XCode</p>
-			</li> -->	
-
-		</ul>
-	</section>
-	<section class="education container" id="classes">
-		<div class="subsection-header">Education</div>
+		<section class="education container" id="classes">
+		<!-- <div class="subsection-header">Education</div> -->
 		<article class="school" id="uwaterloo">
 			<div class="content-header">
 				<div class="logo-container">
@@ -241,5 +154,77 @@
 				<span class="company-site">Forest Heights Collegiate Institute</span>
 			</div>
 		</article>
+	</section>
+
+	<section class="skills container" id="toolbox">
+		<div class="subsection-header">My Toolbox
+		</div>
+		<ul class="program-list"> 
+			<li class="animate resume-item featured ux" id="sketch">
+				<div class="app-logo"></div><p class="app-name">Sketch</p>
+			</li>
+			<li class="animate resume-item featured ux graphics" id="photoshop">
+				<div class="app-logo"></div><p class="app-name">Photoshop</p>
+			</li>
+			<li class="animate resume-item ux graphics" id="ai">
+				<div class="app-logo"></div><p class="app-name">Illustrator</p>
+			</li>
+			<li class="animate resume-item ux" id="balsamiq">
+				<div class="app-logo"></div><p class="app-name">Balsamiq</p>
+			</li>
+
+			<li class="animate resume-item soft ux" id="framer">
+				<div class="app-logo"></div><p class="app-name">Framer</p>
+			</li>
+
+			<li class="animate resume-item soft ux" id="origami">
+				<div class="app-logo"></div><p class="app-name">Origami</p>
+			</li>
+
+			<li class="animate resume-item featured ux web soft" id="html5">
+				<div class="app-logo"></div><p class="app-name">HTML5</p>
+			</li>	
+			<li class="animate resume-item ux web soft" id="javascript">
+				<div class="app-logo"></div><p class="app-name">JavaScript</p>
+			</li>				
+			<li class="animate resume-item featured ux web soft" id="coffeescript">
+				<div class="app-logo"></div><p class="app-name">CoffeeScript</p>
+			</li>
+			<li class="animate resume-item featured web soft" id="php">
+				<div class="app-logo"></div><p class="app-name">PHP</p>
+			</li>
+			<li class="animate resume-item web soft us" id="python">
+				<div class="app-logo"></div><p class="app-name">Python</p>
+			</li>
+
+			<li class="animate resume-item featured web soft ux" id="swift">
+				<div class="app-logo"></div><p class="app-name">Swift</p>
+			</li>
+
+			<li class="animate resume-item web soft" id="java">
+				<div class="app-logo"></div><p class="app-name">Java</p>
+			</li>
+			<li class="animate resume-item featured soft" id="arduino">
+				<div class="app-logo"></div><p class="app-name">Arduino</p>
+			</li>
+			<li class="animate resume-item web soft us" id="matlab">
+				<div class="app-logo"></div><p class="app-name">MATLAB</p>
+			</li>
+			<li class="animate resume-item graphics" id="ae">
+				<div class="app-logo"></div><p class="app-name">After Effects</p>
+			</li>
+			<li class="animate resume-item graphics" id="indesign">
+				<div class="app-logo"></div><p class="app-name">InDesign</p>
+			</li>
+			<li class="animate resume-item featured industrial" id="autocad">
+				<div class="app-logo"></div><p class="app-name">AutoCad</p>
+			</li>
+			<li class="animate resume-item featured industrial" id="inventor">
+				<div class="app-logo"></div><p class="app-name">Inventor</p>
+			</li>
+			<li class="animate resume-item web soft ux" id="git">
+				<div class="app-logo"></div><p class="app-name">Git</p>
+			</li>
+		</ul>
 	</section>
 </section>

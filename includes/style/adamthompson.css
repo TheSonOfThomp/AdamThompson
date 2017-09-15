@@ -1,8 +1,8 @@
 *::selection {
-  background: #D9FAC8; }
+  background: #E1FAD4; }
 
 *::-moz-selection {
-  background: #D9FAC8; }
+  background: #E1FAD4; }
 
 html {
   font-size: 16px; }
@@ -491,15 +491,15 @@ section.resume .container article {
       font-weight: 300;
       margin: auto; }
     section.resume .container article .content-header .show {
+      display: block;
       color: #55A82F;
       background: none;
       border: none;
       font-family: "europa", "gill sans", sans-serif;
       font-size: 12px;
       text-decoration: none;
-      display: inline-block;
       cursor: pointer;
-      padding-left: 12px; }
+      padding: 0; }
       section.resume .container article .content-header .show.more:after {
         content: " more"; }
       section.resume .container article .content-header .show.less:after {
@@ -683,7 +683,7 @@ section.resume .education {
 /* ---------------------- FOOTER ---------------------- */
 footer {
   width: 100%;
-  height: 72px;
+  height: 48px;
   margin-top: 72px;
   font-size: 12px;
   line-height: 1.6rem;
@@ -805,7 +805,7 @@ footer {
     font-family: "europa", "gill sans", sans-serif;
     font-weight: 300;
     text-align: center;
-    margin: 72px auto; }
+    margin: 36px auto; }
   .portfolio-page .gallery-content h2 {
     font-size: 56px;
     font-family: "europa", "gill sans", sans-serif;
@@ -945,7 +945,7 @@ footer {
     .folio-nav.next a:before {
       content: "Next:"; }
   .folio-nav:hover {
-    background: #D9FAC8;
+    background: #E1FAD4;
     border-color: #55A82F; }
 
 body.portfolio header.portfolio {
@@ -1115,12 +1115,16 @@ body.portfolio section.portfolio.sticky {
         display: block; }
       section.resume .container article .content-header .item-duration {
         padding-left: 0; }
+      section.resume .container article .content-header .show {
+        display: block;
+        margin: 16px auto 0 auto;
+        font-size: 16px;
+        text-decoration: underline; }
     section.resume .container article .resume-content {
       margin-top: 2rem;
       max-width: 100%;
       min-width: 100%;
       border-left: 0;
-      border-top: 1px solid #5B753D;
       padding-left: 0; }
       section.resume .container article .resume-content .resume-header {
         margin-top: 3rem; }

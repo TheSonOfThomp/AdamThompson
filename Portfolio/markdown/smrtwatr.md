@@ -1,11 +1,13 @@
 # SMRT WATR
 
-<div class="folio-nav prev home">
+<div class="folio-nav prev knowroaming">
+	<a href="?p=knowroaming">KnowRoaming</a>
+</div>
+
+<div class="folio-nav next home">
 	<a href="../">Home</a>
 </div>
-<div class="folio-nav next noom">
-	<a href="?p=noom">Noom</a>
-</div>
+
 
 
 ## We made a water fountain that's as interesting as your smartphone.

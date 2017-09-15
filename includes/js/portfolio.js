@@ -1,11 +1,5 @@
 $(document).ready(function(){
-	// $('li#all').hide();
 	
-  // $(".horizontal-sort li").click(function(){
-  //   $(".horizontal-sort li").removeClass("selected");
-  //   $(this).addClass("selected")
-  // });
-
 });
 
 // --- Sticky header --- //

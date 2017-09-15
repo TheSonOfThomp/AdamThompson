@@ -1,6 +1,5 @@
 <?php
 	$p = $_GET['p'];
-	$f = $_GET['f'];
 	$Parsedown = new ParsedownExtra();
 	$markdown = file_get_contents($root_path.'/Portfolio/markdown/'.$p.'.md');
 	if ($p && !$markdown) {
@@ -14,10 +13,12 @@
 
 <main class="portfolio-page <?php echo $p ?>">
 	<header class="small-header <?php echo $p ?>">
-			<!-- <?php if (!$f) { ?> -->
-			<a class="back" onclick="window.history.back()"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Back</a>
-			<!-- <?php } ?> -->
+			<a class="back hide" onclick="window.history.back()"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Portfolio</a>
 			<a href="<?php echo $root_path; ?>/">Adam Thompson</a>
+			<script type="text/javascript">
+			if (document.referrer == "<?php echo $root_path ?>/Portfolio/")
+				$('a.back').removeClass('hide');
+			</script>
 	</header>
 
 	<article class="gallery-content <?php echo $p ?>">

@@ -1,5 +1,5 @@
-<div class="folio-nav prev smrtwatr">
-	<a href="?p=smrtwatr">SMRT WATR</a>
+<div class="folio-nav prev chameleon">
+	<a href="?p=chameleon">Chameleon</a>
 </div>
 <div class="folio-nav next knowroaming">
 	<a href="?p=knowroaming">KnowRoaming</a>

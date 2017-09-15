@@ -1,5 +1,12 @@
 # KnowRoaming
 
+<div class="folio-nav prev noom">
+	<a href="?p=noom">Noom</a>
+</div>
+<div class="folio-nav next smrtwatr">
+	<a href="?p=smrtwatr">SMRT WATR</a>
+</div>
+
 ## I made a case-based UI that displays only the important information.
 
 ### Users were never quite sure if their account was set up properly before traveling abroad. This made them uneasy and unsure whether to trust the product. 
@@ -12,10 +19,3 @@
 	</a>
 <figcaption></figcaption>
 </figure>
-
-<div class="folio-nav prev noom">
-	<a href="?p=noom">Noom</a>
-</div>
-<div class="folio-nav next chameleon">
-	<a href="?p=chameleon">Chameleon</a>
-</div>
