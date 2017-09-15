@@ -12,19 +12,19 @@
 </head>
 <!-- ********** /HEAD ********** -->
 
-<main class="portfolio-page">
-<header class="small-header">
-		<?php if (!$f) { ?>
-			<a href="<?php echo $root_path; ?>/Portfolio">Portfolio</a>
-		<?php } ?>
-		<a href="<?php echo $root_path; ?>/">Adam Thompson</a>
-</header>
+<main class="portfolio-page <?php echo $p ?>">
+	<header class="small-header <?php echo $p ?>">
+			<!-- <?php if (!$f) { ?> -->
+			<a class="back" onclick="window.history.back()"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Back</a>
+			<!-- <?php } ?> -->
+			<a href="<?php echo $root_path; ?>/">Adam Thompson</a>
+	</header>
 
-<article class="gallery-content <?php echo $p ?>">
-	<div class="col single-column">
-	<?php
-		echo $Parsedown->text($markdown);
-	?>
-	</div>
-</article>
+	<article class="gallery-content <?php echo $p ?>">
+		<div class="col single-column">
+		<?php
+			echo $Parsedown->text($markdown);
+		?>
+		</div>
+	</article>
 </main>

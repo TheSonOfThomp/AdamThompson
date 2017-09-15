@@ -9,8 +9,8 @@
 		h2,p a, &.folio-nav a:hover
 			color: $green
 	.noom 
-		&.gallery-content
-			border-top: $global-margin solid $noom
+		&.small-header
+			background-color: $noom
 		h2, p a, .tldr-title, 
 		&.folio-nav a:hover
 			color: $noom
@@ -18,8 +18,8 @@
 			background: #CFD5E6
 			border-color: $noom
 	.knowroaming 
-		&.gallery-content
-			border-top: $global-margin solid $knowroaming
+		&.small-header
+			background-color: $knowroaming
 		h2, p a, .tldr-title, 
 		&.folio-nav a:hover
 			color: $knowroaming
@@ -27,26 +27,26 @@
 			background: #CFDCE6
 			border-color: $knowroaming
 	.smrtwatr 
-		&.gallery-content
-			border-top: $global-margin solid $smrtwatr
+		&.small-header
+			background-color: $smrtwatr
 		h2, p a, .tldr-title, 
 		&.folio-nav a:hover
-			color: #756393
+			color: $smrtwatr
 		&.folio-nav:hover
 			background: #D7CFE6
-			border-color: #756393
+			border-color: $smrtwatr
 	.chameleon 
-		&.gallery-content
-			border-top: $global-margin solid $chameleon
+		&.small-header
+			background-color: $chameleon
 		h2, p a, .tldr-title, 
 		&.folio-nav a:hover
-			color: #2e8c5d
+			color: $chameleon
 		&.folio-nav:hover
 			background: #CFE6DA
-			border-color: #2e8c5d
+			border-color: $chameleon
 	.zynga
-		&.gallery-content
-			border-top: $global-margin solid $zynga
+		&.small-header
+			background-color: $zynga
 		h2, p a, .tldr-title, 
 		&.folio-nav a:hover
 			color: $zynga
@@ -64,6 +64,7 @@
 		width: 100%
 		height: $global-margin
 		text-align: center
+		background-color: $dark_grey
 
 		&.small-header
 			color: $white
@@ -74,6 +75,11 @@
 				font-family: $sans-serif
 				font-size: 24px
 				color: $white
+				&.back
+					position: absolute
+					top: 50%
+					left: 0
+					transform: translate(0, -50%)
 	.tldr
 		display: flex
 		justify-content: space-between
@@ -102,7 +108,7 @@
 		width: 100%
 		// margin: 92px auto 0 auto
 		margin: auto auto $global-margin auto
-		border-top: $global-margin solid $green
+		border-top: $global-margin solid $dark_grey
 
 		.portfolio-title
 			width: 100%
@@ -244,6 +250,7 @@
 	font-weight: 400
 	font-size: 1rem
 	cursor: pointer
+	background-color: $white_trans
 	
 	a 
 		display: inline-block

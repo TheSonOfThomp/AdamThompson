@@ -20,7 +20,7 @@ include('../includes/plugins/ParsedownExtra.php');
 		<title>Adam Thompson - Portfolio</title>
 		</head>
 		<body class="portfolio">
-			<header class="portfolio">
+			<header class="portfolio sticky">
 				<div class="title">
 					<a href="<?php echo $root_path; ?>/">Adam Thompson</a>
 					<div class="tagline">Portfolio</div>
