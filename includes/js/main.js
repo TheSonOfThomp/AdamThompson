@@ -1,7 +1,8 @@
 var hideResumeText = true
 
 $(document).ready(function(){
-
+	resizePortfolio()
+	// Toggle the Show More/Less buttons in Resume
 	function toggleContent(ths){
 		$('.resume-list',ths).slideToggle();
 		$('.show', ths).toggleClass('more').toggleClass('less')
@@ -29,6 +30,20 @@ $(document).ready(function(){
 	// });
 });
 
+$(window).resize(function(){
+	resizePortfolio();
+});
+
+function resizePortfolio(){
+	// Portfolio grid misalignment fix on Firefox
+	// (display: inline-table works for Chrome/Safari)
+	var ratio = 3.0/4.0;
+	$('.gallery ul').children().each(function(){
+		$('img', this).width('100%');
+		$('img', this).height(Math.floor($('img', this).width() * ratio))
+	})
+
+}
 // function toggleMorePortfolio() {
 // 	$('.more-portfolio').slideToggle(); // Toggle display
 // 	$('.button .show').toggleClass('more').toggleClass('less');
