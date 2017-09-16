@@ -791,24 +791,6 @@ footer {
         top: 50%;
         left: 0;
         transform: translate(0, -50%); }
-.portfolio-page .tldr {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  line-height: 1.5em; }
-  .portfolio-page .tldr .one-third {
-    width: 30%;
-    margin: 0 auto; }
-  .portfolio-page .tldr .tldr-title {
-    font-family: "europa", "gill sans", sans-serif;
-    font-size: 18px;
-    font-weight: 600; }
-  .portfolio-page .tldr .tldr-content {
-    font-family: "europa", "gill sans", sans-serif; }
-  .portfolio-page .tldr .inline .tldr-title {
-    display: inline-block; }
-  .portfolio-page .tldr .inline .tldr-content {
-    display: inline; }
 .portfolio-page .gallery-content {
   position: relative;
   display: inline-block;
@@ -864,9 +846,12 @@ footer {
     position: relative;
     font-size: 16px; }
   .portfolio-page .gallery-content .single-column {
-    width: 100%;
-    max-width: 720px;
     margin: 0 auto; }
+    .portfolio-page .gallery-content .single-column h1, .portfolio-page .gallery-content .single-column h2, .portfolio-page .gallery-content .single-column h3, .portfolio-page .gallery-content .single-column h4, .portfolio-page .gallery-content .single-column h5, .portfolio-page .gallery-content .single-column h6, .portfolio-page .gallery-content .single-column p, .portfolio-page .gallery-content .single-column ol {
+      width: 100%;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto; }
   .portfolio-page .gallery-content .folio_paragraph {
     width: 100%;
     line-height: 1.75em; }
@@ -874,13 +859,11 @@ footer {
     display: inherit;
     position: relative;
     width: 100%;
+    max-width: 920px;
     height: auto;
-    margin: 0;
+    margin: 0 auto;
     padding: 12px 0;
     text-align: center; }
-    .portfolio-page .gallery-content .folio_image.extended {
-      width: 150%;
-      margin-left: -25%; }
     .portfolio-page .gallery-content .folio_image img {
       position: relative;
       display: inline-block;
@@ -891,19 +874,20 @@ footer {
     .portfolio-page .gallery-content .folio_image#hero img {
       max-height: none; }
     .portfolio-page .gallery-content .folio_image iframe {
-      width: 100%;
-      height: 440px; }
+      width: 80%;
+      height: 560px; }
     .portfolio-page .gallery-content .folio_image figcaption {
       text-align: center;
       font-size: 1rem;
       font-family: "europa", "gill sans", sans-serif;
       color: #808080;
       line-height: 1.5em;
-      max-width: 80%;
-      margin: 0 10%; }
+      max-width: 50%;
+      margin: 0 auto; }
     .portfolio-page .gallery-content .folio_image.images-2 img, .portfolio-page .gallery-content .folio_image.images-2 iframe {
-      max-width: 46%;
-      padding: 1%; }
+      max-width: 40%;
+      padding: 1%;
+      margin: auto; }
   .portfolio-page .gallery-content blockquote {
     border-left: 1px solid #55A82F;
     padding-left: 1em;
@@ -935,7 +919,8 @@ footer {
   font-weight: 400;
   font-size: 1rem;
   cursor: pointer;
-  background-color: rgba(250, 250, 250, 0.8); }
+  background-color: rgba(250, 250, 250, 0.8);
+  z-index: 10; }
   .folio-nav a {
     display: inline-block;
     min-width: 64px;
