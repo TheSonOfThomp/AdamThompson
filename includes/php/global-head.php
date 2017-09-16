@@ -28,10 +28,11 @@
 
 			<!-- Europa -->
 		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/typekit.js"></script>
+			
 			<!-- Font Awesome -->
 		<script src="https://use.fontawesome.com/47706e48a4.js"></script>
 
+		<!-- Custom Style and JS -->
 		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/style/adamthompson.css" type="text/css">
-
 
 		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/main.js"></script>

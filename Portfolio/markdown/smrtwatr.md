@@ -14,7 +14,7 @@
 
 ### We noticed people were involved in their smartphones more than their surroundings or even other people. We wanted to change that.
 
-### We created a multiplayer quiz game and a fountain that reacts to users' answers, where the winner was given control of a specially designed fountain for a time. It was a huge hit!
+#### We created a multiplayer quiz game and a fountain that reacts to users' answers, where the winner was given control of a specially designed fountain for a time. It was a huge hit!
 
 <figure class='folio_image' id='hero'>
 	<a target='_blank'>

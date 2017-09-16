@@ -11,7 +11,7 @@
 
 ### Users were having trouble navigating the core meal-logging flow since the buttons weren’t obvious, and changed behaviour depending on use case. We needed to fix this.
 
-### We consolidated the user flow and UI, making it consistent in all use cases. Through meticulous user-testing we designed an interface that eliminated hesitation and uncertainty.
+#### We consolidated the user flow and UI, making it consistent in all use cases. Through meticulous user-testing we designed an interface that eliminated hesitation and uncertainty.
 
 <figure class='folio_image' id='hero'>
 	<a target='_blank'>
