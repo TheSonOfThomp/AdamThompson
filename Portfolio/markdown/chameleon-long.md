@@ -1,6 +1,6 @@
 #Chameleon
 
-<div class="tldr">
+<!-- <div class="tldr">
 	<div class="one-third">
 		<div class="tldr-title">Problem</div>
 		<div class="tldr-content">Workers in loud environments often must decide between communication and hearing protection</div>
@@ -10,16 +10,16 @@
 		<div class="tldr-content">An automatic, variable-attenuation hearing protection device.</div>
 	</div>
 	<div class="one-third">
-			<!-- <div class="inline">
+			<div class="inline">
 				<div class="tldr-title">Tools: </div>
 				<div class="tldr-content"></div>
-			</div> -->
+			</div>
 			<div class="inline">
 				<div class="tldr-title">Skills: </div>
 				<div class="tldr-content">User Research, Product Development, Circuit Design, CAD, Benchmark Testing</div>
 			</div>
 	</div>
-</div>
+</div> -->
 
 ## Overview
 ###What if your ears could blink? 
@@ -205,9 +205,9 @@ That makes sense intuitively—take the analogy of closing a window to block noi
 Since continuously variable attenuation was not absolutely necessary to the success of the device (and deadlines were approaching), we decided to abandon continuously variable attenuation for a simpler "binary attenuation" design—the best of which was a plug-type design.
 
 
-<!-- ## Magnets (A New Prototype) -->
+## Magnets (A New Prototype)
 
-<!-- One of the reservations I had with a plug design was the difficulty we would have actuating it—that is, getting the plug to open and close. Getting linear motion would likely require a solenoid, and it's not entirely space-efficient to put a solenoid on its side, perpendicular to the head just to get a plug to move in and out. 
+One of the reservations I had with a plug design was the difficulty we would have actuating it—that is, getting the plug to open and close. Getting linear motion would likely require a solenoid, and it's not entirely space-efficient to put a solenoid on its side, perpendicular to the head just to get a plug to move in and out. 
 
 Before we did away with the "Pie-slices" design I had been working on a more efficient way of actuating that attenuator. Inspired by [this article](http://makezine.com/2015/08/18/3d-print-stepper-motor/), I entertained the idea of building a custom stepper that would be embedded into the ear-cup, and allow a disk to rotate in increments up to a certain angle. For this, I had to refresh my memory of electromagnetism. 
 
@@ -226,10 +226,10 @@ On paper, 4 small electromagnets should be able to successfully push & pull the 
 		<img src='../includes/portfolio_images/chameleon/pull-plug-cad2.png'>
 	</a>
 	<figcaption>CAD model of the 4-magnet plug design</figcaption>
-</figure> -->
+</figure>
 
 <!-- Our first try was to freely wrap the wire around a nail. This didn’t really work since there were no bounds and the coil would end up too long. Next we put a washer/nut on the nail, and spaced them correctly. The coil was wound between the barriers, then we sanded away the head of the nail, cut the other end to get the washer off, and cut it to size. This did not work great since the heat from sanding caused the enamel coating to melt, creating a short on the core. We then tried winding in the same way, but then slipping it onto a pre-cut nail as a core. This works in theory, but there were burrs on the cut nail, which scratched the enamel coating, again causing a short. If we had to make 4 of these, we would be in for a rough time. And we hadn’t even proven the concept yet. -->
-<!-- 
+
 One of our supervisors suggested late that afternoon that instead of using 4 small electromagnets we should use _one_, with a magnet in the middle since the magnetic field is stronger within the coil. I made a short coil and tested it out. Unfortunately, I had to push over 3 amps through the coil to get it to apply any force to the magnet.
 
 <figure class='folio_image' id='major-hack'>
@@ -325,7 +325,7 @@ Sadly, the model was placed too close to the edge of the print bed, and ended up
 		<img src='../includes/portfolio_images/chameleon/good-printer.jpg'>
 	</a>
 	<figcaption>The print fused with the support material! We had to go to a professional print shop.</figcaption>
-</figure> -->
+</figure>
 
 --- 
 More details coming soon
@@ -351,12 +351,3 @@ More details coming soon
 [^Berger]: E. H. Berger, "The Effects of Hearing Protectors on Auditory Communications", Aearo Company (1979)
 
 [^Trompette]: Trompette, N., Barbry, J.L., Sgard, F., Nelisse, H., "Sound transmission loss of rectangular and slit-shaped apertures: Experimental results and correlation with a modal model".  The Journal of the Acoustical Society of America, vol. 125, no. 31 (2009) Available: http://asa.scitation.org/doi/full/10.1121/1.3003084
-
-
-
-<div class="folio-nav prev smrtwatr">
-	<a href="?p=smrtwatr">SMRT WATR</a>
-</div>
-<div class="folio-nav next zynga">
-	<a href="?p=zynga">Zynga</a>
-</div>

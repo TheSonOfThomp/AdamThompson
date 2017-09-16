@@ -115,12 +115,12 @@
 			margin: 24px 0
 		h3
 			font-size: 24px
-			font-weight: 300
+			font-weight: 400
 			font-family: $sans-serif
 			color: $dark_grey
 		h4
 			font-size: 20px
-			font-weight: 300
+			font-weight: 400
 			font-family: $sans-serif
 			color: $dark_grey
 		p
@@ -150,7 +150,7 @@
 			// width: 100%
 			// max-width: 720px
 			margin: 0 auto
-			h1, h2, h3, h4, h5, h6, p, ol
+			h1, h2, h3, h4, h5, h6, p, ol, table, hr
 				width: 100%
 				max-width: 720px
 				margin-left: auto
@@ -215,6 +215,8 @@
 			width: 100%
 			*
 				margin: 0
+		hr
+			margin: $global-margin auto
 
 		.footnotes
 			font-size: 12px
@@ -222,9 +224,9 @@
 				width: 100%
 
 		sup a::before
-			content: '['
+			// content: '['
 		sup a::after
-			content: ']'
+			// content: ']'
 
 /* ------ Navigation ------ */
 .folio-nav 

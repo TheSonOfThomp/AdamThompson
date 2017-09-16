@@ -821,12 +821,12 @@ footer {
     margin: 24px 0; }
   .portfolio-page .gallery-content h3 {
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     font-family: "europa", "gill sans", sans-serif;
     color: #505050; }
   .portfolio-page .gallery-content h4 {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     font-family: "europa", "gill sans", sans-serif;
     color: #505050; }
   .portfolio-page .gallery-content p {
@@ -849,7 +849,7 @@ footer {
     font-size: 16px; }
   .portfolio-page .gallery-content .single-column {
     margin: 0 auto; }
-    .portfolio-page .gallery-content .single-column h1, .portfolio-page .gallery-content .single-column h2, .portfolio-page .gallery-content .single-column h3, .portfolio-page .gallery-content .single-column h4, .portfolio-page .gallery-content .single-column h5, .portfolio-page .gallery-content .single-column h6, .portfolio-page .gallery-content .single-column p, .portfolio-page .gallery-content .single-column ol {
+    .portfolio-page .gallery-content .single-column h1, .portfolio-page .gallery-content .single-column h2, .portfolio-page .gallery-content .single-column h3, .portfolio-page .gallery-content .single-column h4, .portfolio-page .gallery-content .single-column h5, .portfolio-page .gallery-content .single-column h6, .portfolio-page .gallery-content .single-column p, .portfolio-page .gallery-content .single-column ol, .portfolio-page .gallery-content .single-column table, .portfolio-page .gallery-content .single-column hr {
       width: 100%;
       max-width: 720px;
       margin-left: auto;
@@ -903,14 +903,12 @@ footer {
     width: 100%; }
     .portfolio-page .gallery-content table * {
       margin: 0; }
+  .portfolio-page .gallery-content hr {
+    margin: 72px auto; }
   .portfolio-page .gallery-content .footnotes {
     font-size: 12px; }
     .portfolio-page .gallery-content .footnotes ol {
       width: 100%; }
-  .portfolio-page .gallery-content sup a::before {
-    content: "["; }
-  .portfolio-page .gallery-content sup a::after {
-    content: "]"; }
 
 /* ------ Navigation ------ */
 .folio-nav {
