@@ -22,6 +22,9 @@
 
 		<link rel="shortcut icon" type="image/png" href="<?php echo $root_path?>/includes/image_assets/silhouette_icn.jpg">
 
+		<!-- SCRIPTS -->
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 		<!-- STYLE & FONTS -->
 			<!-- Merriweather -->
 		<link href='http://fonts.googleapis.com/css?family=Merriweather:300,300italic' rel='stylesheet' type='text/css'>

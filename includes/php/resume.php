@@ -15,7 +15,7 @@
 				</div>
 				<div class="header-text">
 					<span class="item-title">Product Manager</span>
-					<span class="item-location">Toronto,</span>
+					<span class="item-location">Toronto</span>
 					<span class="item-duration">Spring&nbsp2016</span>
 					<button class="show more">Show</button>
 				</div>
@@ -37,7 +37,7 @@
 				</div>
 				<div class="header-text">
 					<span class="item-title">Product Designer</span>
-					<span class="item-location">New York,</span>
+					<span class="item-location">New York</span>
 					<span class="item-duration">Fall&nbsp2015</span>
 					<button class="show more">Show</button>
 				</div>
@@ -58,7 +58,7 @@
 				</div>
 				<div class="header-text">
 					<span class="item-title">UX Designer & Product Manager</span>
-					<span class="item-location">Toronto,</span>
+					<span class="item-location">Toronto</span>
 					<span class="item-duration">Spring&nbsp2014/Winter&nbsp2015</span>
 					<button class="show more">Show</button>
 				</div>
@@ -89,7 +89,7 @@
 				</div>
 				<div class="header-text">
 					<span class="item-title">UI/UX Designer</span>
-					<span class="item-location">Waterloo,</span>
+					<span class="item-location">Waterloo</span>
 					<span class="item-duration">Fall&nbsp2013</span>
 					<button class="show more">Show</button>
 				</div>
@@ -112,7 +112,7 @@
 					<a href="http://www.uwaterloo.ca" target="_blank"><div class="logo"></div></a>
 				</div>
 				<div class="header-text">
-					<span class="item-title">Systems Design Engineering <span>with&nbspCognitive&nbspScience Minor</span>
+					<span class="item-title">Systems Design Engineering <span id="minor">&nbspCognitive&nbspScience Minor</span>
 					</span>
 					<span class="item-duration">Class&nbspof&nbsp2017</span>
 					<button class="show more">Show</button>

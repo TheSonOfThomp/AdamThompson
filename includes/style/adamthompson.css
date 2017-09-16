@@ -506,13 +506,15 @@ section.resume .container article {
       display: inline-block;
       margin: auto;
       padding-right: 12px; }
-      section.resume .container article .content-header .item-title span {
-        font-size: 1.5rem; }
+      section.resume .container article .content-header .item-title span#minor {
+        font-size: 1.2rem; }
     section.resume .container article .content-header .item-duration, section.resume .container article .content-header .item-location {
       font-family: "europa", "gill sans", sans-serif;
       font-size: 16px;
       font-weight: 300;
       margin: auto; }
+    section.resume .container article .content-header .item-location:after {
+      content: " - "; }
     section.resume .container article .content-header .show {
       display: block;
       color: #55A82F;
