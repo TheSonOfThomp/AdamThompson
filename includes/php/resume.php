@@ -169,40 +169,27 @@
 			<li class="animate resume-item ux graphics" id="ai">
 				<div class="app-logo"></div><p class="app-name">Illustrator</p>
 			</li>
-			<li class="animate resume-item ux" id="balsamiq">
-				<div class="app-logo"></div><p class="app-name">Balsamiq</p>
-			</li>
-
 			<li class="animate resume-item soft ux" id="framer">
 				<div class="app-logo"></div><p class="app-name">Framer</p>
 			</li>
 
 			<li class="animate resume-item soft ux" id="origami">
 				<div class="app-logo"></div><p class="app-name">Origami</p>
-			</li>
-
-			<li class="animate resume-item featured ux web soft" id="html5">
-				<div class="app-logo"></div><p class="app-name">HTML5</p>
 			</li>	
+			<li class="animate resume-item ux" id="balsamiq">
+				<div class="app-logo"></div><p class="app-name">Balsamiq</p>
+			</li>
 			<li class="animate resume-item ux web soft" id="javascript">
 				<div class="app-logo"></div><p class="app-name">JavaScript</p>
-			</li>				
-			<li class="animate resume-item featured ux web soft" id="coffeescript">
-				<div class="app-logo"></div><p class="app-name">CoffeeScript</p>
-			</li>
-			<li class="animate resume-item featured web soft" id="php">
-				<div class="app-logo"></div><p class="app-name">PHP</p>
-			</li>
+			</li>		
+			<li class="animate resume-item featured ux web soft" id="html5">
+				<div class="app-logo"></div><p class="app-name">HTML</p>
+			</li>		
 			<li class="animate resume-item web soft us" id="python">
 				<div class="app-logo"></div><p class="app-name">Python</p>
 			</li>
-
 			<li class="animate resume-item featured web soft ux" id="swift">
 				<div class="app-logo"></div><p class="app-name">Swift</p>
-			</li>
-
-			<li class="animate resume-item web soft" id="java">
-				<div class="app-logo"></div><p class="app-name">Java</p>
 			</li>
 			<li class="animate resume-item featured soft" id="arduino">
 				<div class="app-logo"></div><p class="app-name">Arduino</p>
@@ -221,9 +208,6 @@
 			</li>
 			<li class="animate resume-item featured industrial" id="inventor">
 				<div class="app-logo"></div><p class="app-name">Inventor</p>
-			</li>
-			<li class="animate resume-item web soft ux" id="git">
-				<div class="app-logo"></div><p class="app-name">Git</p>
 			</li>
 		</ul>
 	</section>

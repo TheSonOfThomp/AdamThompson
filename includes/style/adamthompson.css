@@ -597,17 +597,20 @@ section.resume .skills {
     font-family: "europa", "gill sans", sans-serif; }
     section.resume .skills .program-list li {
       position: relative;
-      width: 10%;
+      width: 12.5%;
       margin: 1rem 0;
       float: left; }
       section.resume .skills .program-list li .app-name {
         position: relative;
         margin: 0;
         padding-top: 0.5em;
-        font-size: 1rem;
-        line-height: 1rem;
-        min-height: 2rem;
-        text-align: center; }
+        font-size: 18px;
+        text-align: center;
+        font-weight: 500;
+        opacity: 0;
+        -webkit-transition: opacity 0.1s ease-in-out;
+        -moz-transition: opacity 0.1s ease-in-out;
+        transition: opacity 0.1s ease-in-out; }
       section.resume .skills .program-list li .app-logo {
         position: relative;
         padding-bottom: 56%;
@@ -619,7 +622,7 @@ section.resume .skills {
         -ms-border-radius: 0;
         border-radius: 0; }
       section.resume .skills .program-list li:hover .app-name {
-        font-weight: 500; }
+        opacity: 1; }
     @media screen and (max-width: 920px) {
       section.resume .skills .program-list li {
         width: 25%; }
@@ -640,7 +643,7 @@ section.resume .skills {
     section.resume .skills .program-list #origami .app-logo {
       background-image: url("../image_assets/apps/origami.png"); }
     section.resume .skills .program-list #html5 .app-logo {
-      background-image: url("../image_assets/apps/html5.png"); }
+      background-image: url("../image_assets/apps/html.png"); }
     section.resume .skills .program-list #css3 .app-logo {
       background-image: url("../image_assets/apps/css3.png"); }
     section.resume .skills .program-list #jquery .app-logo {
