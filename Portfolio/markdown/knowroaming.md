@@ -7,11 +7,11 @@
 	<a href="?p=smrtwatr">SMRT WATR</a>
 </div>
 
-## I designed a case-based UI to show only the important information.
+## I designed an interface to show only the important information.
 
 ### People were never quite sure if things were set up properly before traveling abroad. This made them uneasy and unsure whether to trust the product. 
 
-#### I overhauled the visual style, layout and architecture of the app to make it simpler, more understandable and more informative.
+#### I overhauled the layout, architecture and visual style of the app to make it simpler, and more informative. The options available on the home screen change to match the actions you can take at each phase of your trip.
 
 <figure class='folio_image' id='hero'>
 		<img src='../includes/portfolio_images/knowroaming/knowroaming.jpg'>
@@ -20,11 +20,11 @@
 
 ## Problem
 
-KnowRoaming is a small company based in Toronto that makes a smart SIM sticker—a layer on your existing SIM card that connects you while you're abroad. KnowRoaming develops an iOS and Android app to manage the prepaid account, among other things.
+KnowRoaming is a small company based in Toronto that makes a smart SIM sticker—a layer on your SIM card that connects you while abroad. To manage the prepaid account, among other things, KnowRoaming has an iOS and Android app.
 
 As features were added to the app over time it became cluttered, with no coherent structure or visual design. There were frequent complaints that the app was difficult to navigate, and customers were never sure that the sticker, account and the rest of the KnowRoaming system were setup properly.
 
-User's not trusting the product was a big issue, and needed to be addressed. It was my responsibility to overhaul the app structure and UI to make it more cohesive and understandable.
+Not trusting the product was a big issue, and needed to be addressed. It was my responsibility to overhaul the app structure and UI to make it more cohesive and understandable.
 
 <figure class='folio_image' id='img2'>
 		<img src='../includes/portfolio_images/knowroaming/knowroaming_old_old_app.jpg'>
@@ -33,7 +33,16 @@ User's not trusting the product was a big issue, and needed to be addressed. It 
 
 ## Navigation
 
-There are a lot of functions in KnowRoaming, from rate calculator, to phone number management. We needed a way to efficiently layout these functions for users. One prototype we tried used drawer-style navigation, which let nearly all navigation elements to be viewed at a glance, with a dashboard-style home screen.
+There are a lot of functions in KnowRoaming, from rate calculator, to phone number management, and we needed a way to efficiently layout these functions for users in as flat an architecture as possible.
+
+<figure class='folio_image' id='super-flat'>
+<a target='_blank'>
+	<img src='../includes/portfolio_images/knowroaming/super-flat-architecture.png'>
+</a>
+<figcaption></figcaption>
+</figure>
+
+Since we couldn't easily fit all the options on the home screen, a prototype we tried used drawer-style navigation. This let nearly all navigation elements to be viewed at a glance, with a dashboard-style home screen.
 
 
 <figure class='folio_image' id='home-drawer'>
@@ -42,7 +51,7 @@ There are a lot of functions in KnowRoaming, from rate calculator, to phone numb
 <figcaption>Pressing "Am I Ready to Roam?" would guide the user through a travel checklist.</figcaption>
 </figure>
 
-This prototype tested well in-house, but the "hamburger menu" wasn't always found right away. Given that a primary persona was non digital-natives, an [undiscoverable drawer](https://uxdesign.cc/death-by-hamburger-2d1db115352a#.865mhybml) would not be the best navigation option. 
+This prototype tested well in-house, but the "hamburger menu" wasn't always found right away. Given that one primary persona was non digital-natives, an [undiscoverable drawer](https://uxdesign.cc/death-by-hamburger-2d1db115352a#.865mhybml) would not be the best navigation option. 
 
 ## Ready to Roam
 
@@ -55,7 +64,7 @@ We also found the "Ready to Roam" functionality was too hidden, and would need t
 <figcaption>Three styles of homescreen checklist designs.</figcaption>
 </figure>
 
-I made some sketches of different ways to make "Ready to Roam" status more prevalent. After some testing and better mocks, we saw that the vertical-bubbles were the best and clearest choice.
+I made some sketches of different ways to make "Ready to Roam" status more prominent. After some testing and better mocks, we saw that the vertical-bubbles were the best and clearest choice.
 Users could quickly be sure they were "Ready to Roam" when the bubbles on the home screen filled in.
 
 <figure class='folio_image' id='home-bubbles'>
@@ -88,11 +97,7 @@ KnowRoaming is a complex system. Involving multiple cell networks, a SIM Sticker
 After registration, users are presented with a short tutorial, explaining the three phases, and how to know they are "Ready to Roam". We also designed coach marks that play whenever a user changes phases.
 
 <figure class='folio_image' id='tutorial'>
-	<img src='../includes/portfolio_images/knowroaming/tutorial/tutorial-1.png'>
 	<img src='../includes/portfolio_images/knowroaming/tutorial/tutorial-2.png'>
-</figure>
-
-<figure class='folio_image' id='tutorial'>
 	<img src='../includes/portfolio_images/knowroaming/tutorial/tutorial-3.png'>
 	<img src='../includes/portfolio_images/knowroaming/tutorial/tutorial-4.png'>
 <figcaption>The tutorial that plays once a user finishes registration</figcaption>
