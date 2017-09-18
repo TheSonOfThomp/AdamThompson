@@ -21,24 +21,26 @@ section.resume
 			margin: auto
 			cursor: pointer
 
-			$logo-size: 160px
+			$logo-size: 96px
+
 			.logo-container
 				width: $logo-size
+				min-width: $logo-size
 				height: 100%
 				display: inline-block
+				line-height: 0
+				margin: 0 24px 0 0
 				.logo
-					width: 80%
+					width: 100%
 					height: 0
-					padding-bottom: 80%
-					margin-right: 10%
-					// +border-radius(100%)
-					// background-color: #eee
+					padding-bottom: 100%
+					margin: auto
 					background-size: 100%
 					background-position: 50%
 					background-repeat: no-repeat
-					a
-						text-decoration: none
-						color: $dark_grey
+				a
+					text-decoration: none
+					color: $dark_grey
 
 			.content-header
 				display: flex
@@ -47,24 +49,34 @@ section.resume
 				// justify-content: center
 				.header-text
 					margin: auto 0
+					text-align: left 
+				.item-institution
+					font-family: $sans-serif
+					font-size: 2.5rem
+					font-weight: 600
+					display: inline-block
+					margin: 0
+					padding-right: 0.25em
+
 				.item-title
 					font-family: $sans-serif
 					font-size: 2rem
 					font-weight: 400
 					display: inline-block // block allows duration to go below
 					margin: auto
-					padding-right: 12px
-					span#minor
-						font-size: 1.2rem
-						// font-weight: 300
+					padding-right: 20px
+
 				.item-duration, .item-location
 					font-family: $sans-serif
-					font-size: 16px
-					font-weight: 300
+					font-size: 18px
+					font-weight: 400
+					color: $dark_grey
 					margin: auto
 				.item-location:after 
 					content: ' - '
-
+				
+				.minor
+					@extend .item-location
 
 				.show
 					display: block
@@ -72,7 +84,7 @@ section.resume
 					background: none
 					border: none
 					font-family: $sans-serif
-					font-size: 12px
+					font-size: 16px
 					text-decoration: none
 					cursor: pointer
 					padding: 0
@@ -80,11 +92,16 @@ section.resume
 						content: ' more'
 					&.less:after
 						content: ' less'
+				
+
+				.block-note
+					display: block
 
 				.inline-note
 					display: inline
 					font-size: 1.25rem
 					font-style: italic
+
 				&:hover,
 				&:focus
 					.show
@@ -94,6 +111,7 @@ section.resume
 				width: 100%
 				margin: auto 0
 				display: inline-block
+				text-align: left 
 				@media screen and (max-width: $logo-size/0.8/0.2) 
 					&
 						padding: 0
@@ -123,32 +141,40 @@ section.resume
 	.experience
 		position: relative
 		display: inline-block
-		.job
+		// margin-bottom: $global-margin
+
+		.job, .school
 			// display: flex
 			position: relative
 			overflow: hidden
-			margin-top: 32px
+			display: inline-block
+			width: 90%
+			margin: $global-margin/2 auto
 			
-		.zynga .logo
+		#zynga .logo
 			background-image: url("../image_assets/zynga_logo.png")
 
-		.noom .logo
+		#noom .logo
 			background-image: url("../image_assets/noom_logo.png")
 
-		.knowroaming .logo
+		#knowroaming .logo
 			background-image: url("../image_assets/knowroaming_logo.png")
 			background-position: 50% 46%
 
-		.sony .logo
+		#sony .logo
 			background-image: url("../image_assets/sony_logo.png")	
 
-		.genesys .logo
+		#genesys .logo
 			background-image: url("../image_assets/genesys_logo.png")
-				
+
+		#uwaterloo .logo
+			background-image: url('../image_assets/uwaterloo_logo.png')
+
 	.skills
 		position: relative
 		display: inline-block
-		margin-top: 2rem
+		margin-top: $global-margin
+
 		.skills-sub-header
 			padding-left: 1rem
 			padding-top: 1.5rem
@@ -274,15 +300,3 @@ section.resume
 				background-image: url('../image_assets/apps/sublime.png')
 			#coda .app-logo
 				background-image: url('../image_assets/apps/coda.png')
-
-	.education
-		position: relative
-		display: inline-block
-		.school
-			// display: flex
-			// margin-top: 2rem
-		#uwaterloo .logo
-			background-image: url('../image_assets/uwaterloo.gif')
-
-		#fhci .logo
-			background-image: url('../image_assets/fhci.png')

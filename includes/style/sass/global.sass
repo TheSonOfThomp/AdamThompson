@@ -173,16 +173,20 @@ html
 .button
 	display: inline-block
 	font-family: $sans-serif
-	font-size: 1rem
+	font-size: 16px
 	font-weight: 400
-	color: $green
+	color: $black
 	text-decoration: none
-	padding: 16px
-	border: 2px solid $green
+	padding: 1em
+	margin: 1em
+	border: 2px solid $black
 	+animate-elements(color, 0.15s, ease-in-out)
 	+animate-elements(background-color, 0.15s, ease-in-out)
 	+border-radius(1px)
 
 	&:hover
 		color: $white
-		background-color: $green
+		background-color: $black
+
+	&.large
+		width: 50%

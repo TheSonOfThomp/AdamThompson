@@ -21,7 +21,7 @@ html {
     padding: 0;
     background-color: #FEFEFE; }
   html section {
-    display: block;
+    display: inline-block;
     margin: 72px 0;
     padding: 0;
     width: 100%; }
@@ -50,7 +50,8 @@ html {
   margin: 0 10%;
   height: 100%;
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  text-align: center; }
   .container .content {
     width: 90%;
     margin: auto; }
@@ -97,62 +98,28 @@ html {
 .button {
   display: inline-block;
   font-family: "europa", "gill sans", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
-  color: #55A82F;
+  color: #333333;
   text-decoration: none;
-  padding: 16px;
-  border: 2px solid #55A82F;
+  padding: 1em;
+  margin: 1em;
+  border: 2px solid #333333;
   -webkit-transition: color 0.15s ease-in-out;
   -moz-transition: color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  border-radius: 8px; }
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  border-radius: 1px; }
   .button:hover {
     color: #FEFEFE;
-    background-color: #55A82F; }
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-  font-family: "europa", "gill sans", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  /* Tooltip text */ }
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    top: 70%;
-    left: 50%;
-    margin-left: -60px;
-    padding: 5px 0;
-    color: #505050;
-    font-weight: 500;
-    text-align: center;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    border-radius: 6px;
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1; }
-  .tooltip:hover .tooltiptext {
-    visibility: visible; }
-    .tooltip:hover .tooltiptext:after {
-      display: none;
-      content: " ";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: rgba(51, 51, 51, 0.75) transparent transparent transparent; }
+    background-color: #333333; }
+  .button.large {
+    width: 50%; }
 
 /* -------------------- HEADER -------------------- */
 header.main-header {
@@ -193,14 +160,13 @@ header.main-header {
 .section-header {
   color: #333333;
   font-family: "europa", "gill sans", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 4rem;
+  font-weight: 600;
   text-align: left;
   line-height: 1em;
   margin: 32px 0 16px 0;
   max-width: 33%;
-  padding-bottom: 8px;
-  border-bottom: 3px solid #333333; }
+  padding-bottom: 8px; }
 
 .subsection-header {
   color: #333333;
@@ -216,8 +182,8 @@ header.main-header {
   padding: 0;
   margin: 0;
   list-style: none;
-  width: 64%;
-  margin: 0 18%; }
+  width: 72%;
+  margin: auto auto; }
   .social-list .animate.social-media:hover {
     padding-top: 0.5rem;
     padding-bottom: 1.5rem; }
@@ -236,15 +202,19 @@ header.main-header {
       height: 100%;
       margin: 0 auto;
       color: #333333; }
-      .social-list .social-media a:hover {
-        font-weight: 600; }
       .social-list .social-media a .social-name {
+        padding-top: 0.5em;
         text-align: center;
         display: inline-block;
-        width: 100%; }
+        width: 100%;
+        -webkit-transition: font-weight 0.1s ease-in-out;
+        -moz-transition: font-weight 0.1s ease-in-out;
+        transition: font-weight 0.1s ease-in-out; }
+      .social-list .social-media a:hover .social-name {
+        font-weight: 600; }
       .social-list .social-media a .social-logo {
-        width: 15%;
-        height: 100%;
+        width: 20%;
+        padding-bottom: 20%;
         margin: 0 auto;
         background-size: contain;
         background-position: 50%;
@@ -424,43 +394,54 @@ section.portfolio {
       padding: 0 2px;
       font-size: 16px; }
 
-section.about #bio {
-  margin: 72px auto; }
 section.about .bio-pic {
-  min-width: 160px;
-  max-width: 200px; }
+  width: 176px;
+  display: inline-block;
+  float: left;
+  margin: 0 36px 4px 0;
+  line-height: 0;
+  -webkit-box-shadow: -20px -20px 0 #333333;
+  -moz-box-shadow: -20px -20px 0 #333333;
+  box-shadow: -20px -20px 0 #333333; }
   section.about .bio-pic img {
     width: 100%;
-    height: auto;
-    -webkit-border-radius: 40%;
-    -moz-border-radius: 40%;
-    -ms-border-radius: 40%;
-    border-radius: 40%; }
+    height: auto; }
 section.about .about-text {
-  margin: auto 48px;
+  float: none;
+  margin: auto 72px;
+  text-align: left;
   font-family: "europa", "gill sans", sans-serif;
   font-weight: 300;
-  font-size: 20px; }
+  font-size: 20px;
+  line-height: 1.5em; }
+  section.about .about-text p {
+    margin: 1em auto; }
 section.about #achievements {
   font-weight: 400; }
+section.about .social-list {
+  margin-top: 36px; }
 
 /* ---------------------- BLOG ---------------------- */
-section.blog a {
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 2em; }
-  section.blog a:hover, section.blog a:active {
-    text-decoration: underline; }
-section.blog .date_published {
-  color: #505050;
-  font-family: "europa", "gill sans", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  margin: auto 16px;
-  text-align: right;
-  float: right; }
+section.blog ul {
+  text-align: left;
+  list-style-type: none;
+  margin: auto; }
+  section.blog ul a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 2.5em; }
+    section.blog ul a:hover, section.blog ul a:active {
+      text-decoration: underline; }
+  section.blog ul .date_published {
+    color: #505050;
+    font-family: "europa", "gill sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: auto 16px;
+    text-align: right;
+    float: right; }
 
 /* ---------------------- RESUME ---------------------- */
 section.resume .button {
@@ -479,41 +460,51 @@ section.resume .container article {
   margin: auto;
   cursor: pointer; }
   section.resume .container article .logo-container {
-    width: 160px;
+    width: 96px;
+    min-width: 96px;
     height: 100%;
-    display: inline-block; }
+    display: inline-block;
+    line-height: 0;
+    margin: 0 24px 0 0; }
     section.resume .container article .logo-container .logo {
-      width: 80%;
+      width: 100%;
       height: 0;
-      padding-bottom: 80%;
-      margin-right: 10%;
+      padding-bottom: 100%;
+      margin: auto;
       background-size: 100%;
       background-position: 50%;
       background-repeat: no-repeat; }
-      section.resume .container article .logo-container .logo a {
-        text-decoration: none;
-        color: #505050; }
+    section.resume .container article .logo-container a {
+      text-decoration: none;
+      color: #505050; }
   section.resume .container article .content-header {
     display: flex;
     width: 100%;
     margin: auto; }
     section.resume .container article .content-header .header-text {
-      margin: auto 0; }
+      margin: auto 0;
+      text-align: left; }
+    section.resume .container article .content-header .item-institution {
+      font-family: "europa", "gill sans", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      display: inline-block;
+      margin: 0;
+      padding-right: 0.25em; }
     section.resume .container article .content-header .item-title {
       font-family: "europa", "gill sans", sans-serif;
       font-size: 2rem;
       font-weight: 400;
       display: inline-block;
       margin: auto;
-      padding-right: 12px; }
-      section.resume .container article .content-header .item-title span#minor {
-        font-size: 1.2rem; }
-    section.resume .container article .content-header .item-duration, section.resume .container article .content-header .item-location {
+      padding-right: 20px; }
+    section.resume .container article .content-header .item-duration, section.resume .container article .content-header .item-location, section.resume .container article .content-header .minor {
       font-family: "europa", "gill sans", sans-serif;
-      font-size: 16px;
-      font-weight: 300;
+      font-size: 18px;
+      font-weight: 400;
+      color: #505050;
       margin: auto; }
-    section.resume .container article .content-header .item-location:after {
+    section.resume .container article .content-header .item-location:after, section.resume .container article .content-header .minor:after {
       content: " - "; }
     section.resume .container article .content-header .show {
       display: block;
@@ -521,7 +512,7 @@ section.resume .container article {
       background: none;
       border: none;
       font-family: "europa", "gill sans", sans-serif;
-      font-size: 12px;
+      font-size: 16px;
       text-decoration: none;
       cursor: pointer;
       padding: 0; }
@@ -529,6 +520,8 @@ section.resume .container article {
         content: " more"; }
       section.resume .container article .content-header .show.less:after {
         content: " less"; }
+    section.resume .container article .content-header .block-note {
+      display: block; }
     section.resume .container article .content-header .inline-note {
       display: inline;
       font-size: 1.25rem;
@@ -538,8 +531,9 @@ section.resume .container article {
   section.resume .container article .resume-content {
     width: 100%;
     margin: auto 0;
-    display: inline-block; }
-    @media screen and (max-width: 1000px) {
+    display: inline-block;
+    text-align: left; }
+    @media screen and (max-width: 600px) {
       section.resume .container article .resume-content {
         padding: 0; } }
     section.resume .container article .resume-content h4 {
@@ -563,25 +557,29 @@ section.resume .container article {
 section.resume .experience {
   position: relative;
   display: inline-block; }
-  section.resume .experience .job {
+  section.resume .experience .job, section.resume .experience .school {
     position: relative;
     overflow: hidden;
-    margin-top: 32px; }
-  section.resume .experience .zynga .logo {
+    display: inline-block;
+    width: 90%;
+    margin: 36px auto; }
+  section.resume .experience #zynga .logo {
     background-image: url("../image_assets/zynga_logo.png"); }
-  section.resume .experience .noom .logo {
+  section.resume .experience #noom .logo {
     background-image: url("../image_assets/noom_logo.png"); }
-  section.resume .experience .knowroaming .logo {
+  section.resume .experience #knowroaming .logo {
     background-image: url("../image_assets/knowroaming_logo.png");
     background-position: 50% 46%; }
-  section.resume .experience .sony .logo {
+  section.resume .experience #sony .logo {
     background-image: url("../image_assets/sony_logo.png"); }
-  section.resume .experience .genesys .logo {
+  section.resume .experience #genesys .logo {
     background-image: url("../image_assets/genesys_logo.png"); }
+  section.resume .experience #uwaterloo .logo {
+    background-image: url("../image_assets/uwaterloo_logo.png"); }
 section.resume .skills {
   position: relative;
   display: inline-block;
-  margin-top: 2rem; }
+  margin-top: 72px; }
   section.resume .skills .skills-sub-header {
     padding-left: 1rem;
     padding-top: 1.5rem;
@@ -700,13 +698,6 @@ section.resume .skills {
       background-image: url("../image_assets/apps/sublime.png"); }
     section.resume .skills .program-list #coda .app-logo {
       background-image: url("../image_assets/apps/coda.png"); }
-section.resume .education {
-  position: relative;
-  display: inline-block; }
-  section.resume .education #uwaterloo .logo {
-    background-image: url("../image_assets/uwaterloo.gif"); }
-  section.resume .education #fhci .logo {
-    background-image: url("../image_assets/fhci.png"); }
 
 /* ---------------------- FOOTER ---------------------- */
 footer {
