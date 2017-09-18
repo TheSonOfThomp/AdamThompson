@@ -743,11 +743,11 @@ footer {
 .portfolio-page .noom.folio-nav:hover, .portfolio-page .noom.folio-nav:active {
   background: #CFD5E6;
   border-color: #4271d7; }
-.portfolio-page .knowroaming.small-header {
+.portfolio-page .knowroaming.small-header, .portfolio-page [class^="kr_"].small-header, .portfolio-page [class*=" kr_"].small-header {
   background-color: #4286b5; }
-.portfolio-page .knowroaming h2, .portfolio-page .knowroaming p a, .portfolio-page .knowroaming .tldr-title, .portfolio-page .knowroaming.folio-nav a:hover {
+.portfolio-page .knowroaming h2, .portfolio-page .knowroaming p a, .portfolio-page .knowroaming .tldr-title, .portfolio-page .knowroaming.folio-nav a:hover, .portfolio-page [class^="kr_"] h2, .portfolio-page [class^="kr_"] p a, .portfolio-page [class^="kr_"] .tldr-title, .portfolio-page [class^="kr_"].folio-nav a:hover, .portfolio-page [class*=" kr_"] h2, .portfolio-page [class*=" kr_"] p a, .portfolio-page [class*=" kr_"] .tldr-title, .portfolio-page [class*=" kr_"].folio-nav a:hover {
   color: #4286b5; }
-.portfolio-page .knowroaming.folio-nav:hover, .portfolio-page .knowroaming.folio-nav:active {
+.portfolio-page .knowroaming.folio-nav:hover, .portfolio-page .knowroaming.folio-nav:active, .portfolio-page [class^="kr_"].folio-nav:hover, .portfolio-page [class^="kr_"].folio-nav:active, .portfolio-page [class*=" kr_"].folio-nav:hover, .portfolio-page [class*=" kr_"].folio-nav:active {
   background: #CFDCE6;
   border-color: #4286b5; }
 .portfolio-page .smrtwatr.small-header {
@@ -772,7 +772,7 @@ footer {
   background: #E6D0CF;
   border-color: #DD3B30; }
 .portfolio-page header {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   vertical-align: middle;
@@ -800,8 +800,7 @@ footer {
   position: relative;
   display: inline-block;
   width: 100%;
-  margin: auto auto 72px auto;
-  border-top: 72px solid #505050; }
+  margin: auto auto 72px auto; }
   .portfolio-page .gallery-content .portfolio-title {
     width: 100%;
     margin: 0 auto;
@@ -875,7 +874,7 @@ footer {
       max-width: 100%;
       max-height: 440px;
       height: auto;
-      margin: 4px; }
+      margin: 8px; }
     .portfolio-page .gallery-content .folio_image#hero img {
       max-height: none; }
     .portfolio-page .gallery-content .folio_image iframe {

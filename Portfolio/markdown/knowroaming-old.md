@@ -113,7 +113,7 @@ A drawer-style navigation would be able to do just that, and still allow nearly 
 	<img src='../includes/portfolio_images/knowroaming/home-openDrawer.png'>
 	
 </a>
-<figcaption></figcaption>
+<figcaption>Pressing "Am I Ready to Roam?" would guide the user through a travel checklist.</figcaption>
 </figure>
 
 This prototype tested relatively well in-house, but the 'hamburger menu' wasn't always found right away. Given that the app would frequently be used by non digital-natives, an [undiscoverable drawer](https://uxdesign.cc/death-by-hamburger-2d1db115352a#.865mhybml) would not be the best navigation option. 
