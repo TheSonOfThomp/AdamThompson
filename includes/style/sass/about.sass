@@ -1,18 +1,37 @@
 section.about
 	#bio
-		margin: $global-margin auto
+		// margin: $global-margin auto
 	.bio-pic
-		min-width: 160px
-		max-width: 200px
+		width: 176px
+		display: inline-block
+		float: left
+		margin: 0 36px 4px 0
+		line-height: 0
+		+box-shadow(-20px, -20px, 0, $black, false)
+		// +box-shadow(16px, 16px, 0, $green, false)
+		// border-top: 16px solid $black
+		// border-left: 16px solid $black
+
 		img
 			width: 100%
 			height: auto
-			+border-radius(40%)
+			// +border-radius(40%)
 	.about-text
-		margin: auto 48px
+		display inline-block
+		float: none
+		margin: auto $global-margin
+
+		text-align: left
 		font-family: $sans-serif
 		font-weight: 300
 		font-size: 20px
+		line-height: 1.5em
+
+		p
+			margin: 1em auto
 
 	#achievements
 		font-weight: 400
+
+	.social-list
+		margin-top: $global-margin/2

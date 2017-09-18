@@ -5,8 +5,8 @@
 	padding: 0
 	margin: 0
 	list-style: none
-	width: 64%
-	margin: 0 18%
+	width: 72%
+	margin: auto auto
 
 	.animate.social-media
 		&:hover
@@ -27,15 +27,24 @@
 			height: 100%
 			margin: 0 auto
 			color: $black
-			&:hover
-				font-weight: 600
+
 			.social-name
+				padding-top: 0.5em
 				text-align: center
 				display: inline-block
 				width: 100%
+				// opacity: 0
+				+animate-elements(font-weight, 0.1s, ease-in-out)
+
+			&:hover
+				.social-name
+					// opacity: 1
+					font-weight: 600
+
 			.social-logo
-				width: 15%
-				height: 100%
+				$logo-size: 20%
+				width: $logo-size
+				padding-bottom: $logo-size
 				margin: 0 auto
 				background-size: contain
 				background-position: 50%
