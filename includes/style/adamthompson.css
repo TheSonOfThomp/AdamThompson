@@ -738,35 +738,35 @@ footer {
   color: #55A82F; }
 .portfolio-page .noom.small-header {
   background-color: #4271d7; }
-.portfolio-page .noom h2, .portfolio-page .noom p a, .portfolio-page .noom .tldr-title, .portfolio-page .noom.folio-nav a:hover {
+.portfolio-page .noom h2, .portfolio-page .noom p a, .portfolio-page .noom figure a, .portfolio-page .noom .tldr-title, .portfolio-page .noom.folio-nav a:hover {
   color: #4271d7; }
 .portfolio-page .noom.folio-nav:hover, .portfolio-page .noom.folio-nav:active {
   background: #CFD5E6;
   border-color: #4271d7; }
 .portfolio-page .knowroaming.small-header, .portfolio-page [class^="kr_"].small-header, .portfolio-page [class*=" kr_"].small-header {
   background-color: #4286b5; }
-.portfolio-page .knowroaming h2, .portfolio-page .knowroaming p a, .portfolio-page .knowroaming .tldr-title, .portfolio-page .knowroaming.folio-nav a:hover, .portfolio-page [class^="kr_"] h2, .portfolio-page [class^="kr_"] p a, .portfolio-page [class^="kr_"] .tldr-title, .portfolio-page [class^="kr_"].folio-nav a:hover, .portfolio-page [class*=" kr_"] h2, .portfolio-page [class*=" kr_"] p a, .portfolio-page [class*=" kr_"] .tldr-title, .portfolio-page [class*=" kr_"].folio-nav a:hover {
+.portfolio-page .knowroaming h2, .portfolio-page .knowroaming p a, .portfolio-page .knowroaming figure a, .portfolio-page .knowroaming .tldr-title, .portfolio-page .knowroaming.folio-nav a:hover, .portfolio-page [class^="kr_"] h2, .portfolio-page [class^="kr_"] p a, .portfolio-page [class^="kr_"] figure a, .portfolio-page [class^="kr_"] .tldr-title, .portfolio-page [class^="kr_"].folio-nav a:hover, .portfolio-page [class*=" kr_"] h2, .portfolio-page [class*=" kr_"] p a, .portfolio-page [class*=" kr_"] figure a, .portfolio-page [class*=" kr_"] .tldr-title, .portfolio-page [class*=" kr_"].folio-nav a:hover {
   color: #4286b5; }
 .portfolio-page .knowroaming.folio-nav:hover, .portfolio-page .knowroaming.folio-nav:active, .portfolio-page [class^="kr_"].folio-nav:hover, .portfolio-page [class^="kr_"].folio-nav:active, .portfolio-page [class*=" kr_"].folio-nav:hover, .portfolio-page [class*=" kr_"].folio-nav:active {
   background: #CFDCE6;
   border-color: #4286b5; }
 .portfolio-page .smrtwatr.small-header {
   background-color: #756393; }
-.portfolio-page .smrtwatr h2, .portfolio-page .smrtwatr p a, .portfolio-page .smrtwatr .tldr-title, .portfolio-page .smrtwatr.folio-nav a:hover {
+.portfolio-page .smrtwatr h2, .portfolio-page .smrtwatr p a, .portfolio-page .smrtwatr figure a, .portfolio-page .smrtwatr .tldr-title, .portfolio-page .smrtwatr.folio-nav a:hover {
   color: #756393; }
 .portfolio-page .smrtwatr.folio-nav:hover, .portfolio-page .smrtwatr.folio-nav:active {
   background: #D7CFE6;
   border-color: #756393; }
 .portfolio-page .chameleon.small-header {
   background-color: #2e8c5d; }
-.portfolio-page .chameleon h2, .portfolio-page .chameleon p a, .portfolio-page .chameleon .tldr-title, .portfolio-page .chameleon.folio-nav a:hover {
+.portfolio-page .chameleon h2, .portfolio-page .chameleon p a, .portfolio-page .chameleon figure a, .portfolio-page .chameleon .tldr-title, .portfolio-page .chameleon.folio-nav a:hover {
   color: #2e8c5d; }
 .portfolio-page .chameleon.folio-nav:hover, .portfolio-page .chameleon.folio-nav:active {
   background: #CFE6DA;
   border-color: #2e8c5d; }
 .portfolio-page .zynga.small-header {
   background-color: #DD3B30; }
-.portfolio-page .zynga h2, .portfolio-page .zynga p a, .portfolio-page .zynga .tldr-title, .portfolio-page .zynga.folio-nav a:hover {
+.portfolio-page .zynga h2, .portfolio-page .zynga p a, .portfolio-page .zynga figure a, .portfolio-page .zynga .tldr-title, .portfolio-page .zynga.folio-nav a:hover {
   color: #DD3B30; }
 .portfolio-page .zynga.folio-nav:hover, .portfolio-page .zynga.folio-nav:active {
   background: #E6D0CF;
@@ -885,6 +885,7 @@ footer {
       font-size: 1rem;
       font-family: "europa", "gill sans", sans-serif;
       color: #808080;
+      font-weight: 500;
       line-height: 1.5em;
       max-width: 50%;
       margin: 0 auto; }

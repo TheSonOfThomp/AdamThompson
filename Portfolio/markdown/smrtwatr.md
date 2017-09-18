@@ -8,8 +8,6 @@
 	<a href="../">Home</a>
 </div>
 
-
-
 ## We made a water fountain that's as interesting as your smartphone.
 
 ### We noticed people were involved in their smartphones more than their surroundings or even other people. We wanted to change that.
@@ -17,9 +15,7 @@
 #### We created a multiplayer quiz game and a fountain that reacts to users' answers, where the winner was given control of a specially designed fountain for a time. It was a huge hit!
 
 <figure class='folio_image' id='hero'>
-	<a target='_blank'>
 		<img src='../includes/portfolio_images/smrtwatr/smrtwatr.jpg'>
-	</a>
 <figcaption></figcaption>
 </figure>
 
@@ -36,9 +32,7 @@ I was the lead UX designer and front-end developer for this project, and focused
 We entertained a number of different ways users might interact with the fountain, including *make-it-rain*, inspired by throwing real coins into a fountain. In this proposal, users could donate to "throw" virtual currency into the fountain and see real time reactions from the fountain. A second concept was a crowed-sourced performance, where users could select an action which would be placed in a performance queue.
 
 <figure class='folio_image' id='other-options'>
-	<a target='_blank'>
 		<img src='../includes/portfolio_images/smrtwatr/make-a-wish.jpg'>
-	</a>
 <figcaption>Mockup of the Make-A-Wish concept</figcaption>
 </figure>
 
@@ -52,33 +46,29 @@ If a user answered correctly, the fountain would light up in their player colour
 
 I worked on streamlining the user flow for all users, considering what would happen if there were not enough users or too many users. We were able to flesh out a task flow for the entire user engagement loop.
 
-<img src='../includes/portfolio_images/smrtwatr/SMRTWATR flow.jpg' style="max-width: 100%; max-height: none;">
+<figure class='folio_image' id='flowhart'>
+		<img src='../includes/portfolio_images/smrtwatr/SMRTWATR-flow.jpg'>
+<figcaption><a href="../includes/portfolio_images/smrtwatr/SMRTWATR-flow.pdf">See the full chart</a></figcaption>
 </figure>
-
 
 ## User Interface
 
 I mocked up screens for the gem, and tested them on my group mates and other classmates. Using their feedback, I improved and refined my designs.
 
 <figure class='folio_image' id='smrtwatr-lobby&ingame'>
-	<a target='_blank'>
 		<img src='../includes/portfolio_images/smrtwatr/smrtwatr-lobby&ingame.png'>
-	</a>
-<figcaption>Screenshots of the Lobby & In-game UI</figcaption>
 </figure>
 
 <figure class='folio_image' id='smrtwatr-endgame'>
-	<a target='_blank'>
 		<img src='../includes/portfolio_images/smrtwatr/smrtwatr-endgame.png'>
-	</a>
-<figcaption>Screenshots of the Endgame UI</figcaption>
+<figcaption>Screenshots of the Lobby, In-game and Endgame UI</figcaption>
 </figure> 
 
 ## Implementation
 
 We set up a [Tornado](http://www.tornadoweb.org/en/stable/) server on a Raspberry Pi to serve the web UI, and to communicate with the fountain's controller. Tornado supports `html` templates, and can dynamically change the UI on the fly. I wrote all of the app's front-end styling and logic, as well as some server-side logic using `node.js`. 
 
-Check out the front-end, back-end, and controller code available on [GitHub](https://github.com/Adam93MT/SMRTWATR).
+Check out the front-end, back-end, and controller code on [GitHub](https://github.com/Adam93MT/SMRTWATR).
 
 I also helped design and build the fountain basin itself, and worked on a mechanical solution to attach the fountain jets to servos.
 
