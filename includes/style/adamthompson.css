@@ -164,9 +164,8 @@ header.main-header {
   font-weight: 600;
   text-align: left;
   line-height: 1em;
-  margin: 32px 0 16px 0;
-  max-width: 33%;
-  padding-bottom: 8px; }
+  margin: 36px 0;
+  text-align: center; }
 
 .subsection-header {
   color: #333333;
@@ -211,7 +210,8 @@ header.main-header {
         -moz-transition: font-weight 0.1s ease-in-out;
         transition: font-weight 0.1s ease-in-out; }
       .social-list .social-media a:hover .social-name {
-        font-weight: 600; }
+        font-weight: 600;
+        text-decoration: underline; }
       .social-list .social-media a .social-logo {
         width: 20%;
         padding-bottom: 20%;
@@ -465,7 +465,7 @@ section.resume .container article {
     height: 100%;
     display: inline-block;
     line-height: 0;
-    margin: 0 24px 0 0; }
+    margin: 0 36px 0 0; }
     section.resume .container article .logo-container .logo {
       width: 100%;
       height: 0;
@@ -529,10 +529,10 @@ section.resume .container article {
     section.resume .container article .content-header:hover .show, section.resume .container article .content-header:focus .show {
       text-decoration: underline; }
   section.resume .container article .resume-content {
-    width: 100%;
     margin: auto 0;
     display: inline-block;
-    text-align: left; }
+    text-align: left;
+    margin-left: 132px; }
     @media screen and (max-width: 600px) {
       section.resume .container article .resume-content {
         padding: 0; } }
@@ -544,12 +544,19 @@ section.resume .container article {
       color: #808080; }
     section.resume .container article .resume-content .resume-list {
       display: none;
+      padding-left: 24px;
       line-height: 1.5em;
       list-style-type: disc;
       font-family: "europa", "gill sans", sans-serif;
       font-weight: 400; }
       section.resume .container article .resume-content .resume-list .resume-item {
         margin-bottom: 1em; }
+        section.resume .container article .resume-content .resume-list .resume-item .item-code:before {
+          content: "(";
+          margin-right: -3px; }
+        section.resume .container article .resume-content .resume-list .resume-item .item-code:after {
+          content: ")";
+          margin-left: -3px; }
         section.resume .container article .resume-content .resume-list .resume-item .list-description {
           font-family: "europa", "gill sans", sans-serif;
           font-size: 14px;
@@ -559,7 +566,6 @@ section.resume .experience {
   display: inline-block; }
   section.resume .experience .job, section.resume .experience .school {
     position: relative;
-    overflow: hidden;
     display: inline-block;
     width: 90%;
     margin: 36px auto; }
@@ -571,7 +577,7 @@ section.resume .experience {
     background-image: url("../image_assets/knowroaming_logo.png");
     background-position: 50% 46%; }
   section.resume .experience #sony .logo {
-    background-image: url("../image_assets/sony_logo.png"); }
+    background-image: url("../image_assets/playstation_logo.png"); }
   section.resume .experience #genesys .logo {
     background-image: url("../image_assets/genesys_logo.png"); }
   section.resume .experience #uwaterloo .logo {
@@ -990,6 +996,8 @@ body.portfolio section.portfolio.sticky {
   html main {
     width: 100%;
     margin: 0; }
+  html section {
+    margin: 36px 0; }
 
   .hide-mobile {
     display: none !important; }
@@ -1054,18 +1062,19 @@ body.portfolio section.portfolio.sticky {
     max-height: none; }
     section.portfolio .gallery .folio-item {
       width: 100%;
-      height: auto; }
+      height: auto;
+      margin: 8px 0; }
       section.portfolio .gallery .folio-item a {
         margin: 8px; }
         section.portfolio .gallery .folio-item a:active .hover-state {
           backdrop-filter: saturate(2);
           -webkit-backdrop-filter: saturate(2);
-          background-color: rgba(250, 250, 250, 0.8); }
+          background-color: #FEFEFE; }
         section.portfolio .gallery .folio-item a .hover-state {
           opacity: 1;
           margin: 8px; }
           section.portfolio .gallery .folio-item a .hover-state .folio-hover {
-            max-width: 80%;
+            width: 100%;
             padding: 16px 16px 0px 4px;
             background-color: rgba(250, 250, 250, 0.8);
             max-width: 100%; }
@@ -1090,7 +1099,8 @@ body.portfolio section.portfolio.sticky {
       margin: 36px auto;
       text-align: center; }
       section.about .container #bio .bio-pic {
-        margin: auto; }
+        margin: auto;
+        float: none; }
       section.about .container #bio .about-text {
         margin: 24px 0;
         text-align: left; }
@@ -1107,7 +1117,16 @@ body.portfolio section.portfolio.sticky {
       .social-list .social-media a {
         font-weight: 400; }
         .social-list .social-media a .social-logo {
-          width: 25%; }
+          width: 25%;
+          padding-bottom: 25%; }
+
+  /* ------------ Blog - MOBILE ------------ */
+  section.blog ul {
+    list-style: disc; }
+    section.blog ul a {
+      font-size: 16px; }
+      section.blog ul a .date_published {
+        display: none; }
 
   /* ------------ RESUME - MOBILE ------------ */
   section.resume .container article {
@@ -1118,22 +1137,26 @@ body.portfolio section.portfolio.sticky {
       text-align: center; }
       section.resume .container article .content-header .logo-container {
         width: 80%;
-        max-width: 80%; }
+        max-width: 80%;
+        margin: 0; }
       section.resume .container article .content-header .logo {
         width: 50%;
         padding-bottom: 50%;
         margin: 0 auto; }
+      section.resume .container article .content-header .item-institution {
+        margin-top: 16px; }
       section.resume .container article .content-header .item-title {
         display: block; }
       section.resume .container article .content-header .item-duration {
         padding-left: 0; }
       section.resume .container article .content-header .show {
         display: block;
-        margin: 16px auto 0 auto;
-        font-size: 16px;
+        margin: 16px 0;
+        text-align: left;
+        font-size: 14px;
         text-decoration: underline; }
     section.resume .container article .resume-content {
-      margin-top: 2rem;
+      margin-left: 0;
       max-width: 100%;
       min-width: 100%;
       border-left: 0;
@@ -1158,7 +1181,9 @@ body.portfolio section.portfolio.sticky {
           text-align: center; }
       section.resume .container article .resume-content .resume-list {
         display: none;
-        padding-left: 40px; }
+        padding-left: 0px; }
+        section.resume .container article .resume-content .resume-list .item-code {
+          display: block; }
   section.resume .experience .job {
     display: block; }
   section.resume .skills {
@@ -1173,11 +1198,9 @@ body.portfolio section.portfolio.sticky {
   /* ------------ FOOTER - MOBILE ------------ */
   footer {
     display: block; }
-    footer .social-list .social-media {
-      width: 33%;
-      margin: 0.8rem 0; }
-      footer .social-list .social-media a {
-        width: 40%; }
+    footer .container .copyright {
+      position: relative;
+      margin-top: 8px; }
 
   /* ------------ Portfolio Page - MOBILE ------------ */
   .portfolio-page .tldr {

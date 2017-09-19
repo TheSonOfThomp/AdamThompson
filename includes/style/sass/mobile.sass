@@ -6,9 +6,12 @@
 
 @media screen and (max-width: 768px) 
 	$global-margin: 36px
-	html main 
-		width: 100%
-		margin: 0
+	html 
+		main 
+			width: 100%
+			margin: 0
+		section
+			margin: $global-margin 0
 	.hide-mobile 
 		display: none !important
 	.mobile-only 
@@ -73,17 +76,18 @@
 			.folio-item 
 				width: 100%
 				height: auto
+				margin: $portfolio-margin 0
 				a
 					margin: $portfolio-margin
 					&:active .hover-state
 						+backdrop-filter(saturate(2))
-						background-color: $white_trans
+						background-color: $white
 						// border: 1px solid $med_grey
 					.hover-state
 						opacity: 1
 						margin: $portfolio-margin
 						.folio-hover 
-							max-width: 80%
+							width: 100%
 							padding: 16px 16px 0px 4px
 							background-color: $white_trans
 							max-width: 100%
@@ -116,9 +120,11 @@
 				text-align: center
 				.bio-pic
 					margin: auto
+					float: none
 				.about-text
 					margin: 24px 0
 					text-align: left
+
 	/* ------------ SOCIAL - MOBILE ------------ */
 
 	.social-list
@@ -133,6 +139,19 @@
 				font-weight: 400
 				.social-logo
 					width: 25%
+					padding-bottom: 25%
+
+	/* ------------ Blog - MOBILE ------------ */
+
+	section.blog
+
+		ul
+			list-style: disc
+			a
+				font-size: 16px
+				.date_published
+					display: none
+
 
 	/* ------------ RESUME - MOBILE ------------ */
 	section.resume 
@@ -146,21 +165,26 @@
 					.logo-container 
 						width: 80%
 						max-width: 80%
+						margin: 0
 					.logo 
 						width: 50%
 						padding-bottom: 50%
 						margin: 0 auto
+					.item-institution
+						margin-top: 16px
 					.item-title
 						display: block
 					.item-duration
 						padding-left: 0
 					.show
 						display: block
-						margin: 16px auto 0 auto
-						font-size: 16px
+						margin: 16px 0
+						text-align: left
+						font-size: 14px
 						text-decoration: underline
 				.resume-content 
-					margin-top: 2rem
+					// margin-top: 2rem
+					margin-left: 0
 					max-width: 100%
 					min-width: 100%
 					border-left: 0
@@ -184,15 +208,19 @@
 							display: block
 							float: none
 							text-align: center
+
 					.resume-list 
 						display: none
-						padding-left: 40px
+						padding-left: 0px
+						.item-code
+							display: block
 
 		.experience	
 			.job
 				display: block
 		.skills 
 			display: none
+
 		.education
 			.subsection-header
 				display: none
@@ -204,13 +232,10 @@
 	/* ------------ FOOTER - MOBILE ------------ */
 	footer
 		display: block
-		.social-list
-			.social-media 
-				width: 33%
-				margin: 0.8rem 0
-				a 
-					width: 40%
-					// margin: 0 30/%
+		.container
+			.copyright
+				position: relative
+				margin-top: 8px
 
 	/* ------------ Portfolio Page - MOBILE ------------ */
 

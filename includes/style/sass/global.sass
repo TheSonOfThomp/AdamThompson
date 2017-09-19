@@ -60,23 +60,23 @@ $global-margin: 72px
 
 =animate-elements($what, $when, $how)
 	-webkit-transition: $what $when $how
-	-moz-transition: $what $when $how
-	transition: $what $when $how
+	-moz-transition: 	$what $when $how
+	transition: 		$what $when $how
 
 =backdrop-filter($filter)
-	backdrop-filter: $filter
+	backdrop-filter: 		 $filter
 	-webkit-backdrop-filter: $filter
 
 
 =box-shadow($top, $left, $blur, $color, $inset: false)
 	@if $inset 
 		-webkit-box-shadow:inset $top $left $blur $color
-		-moz-box-shadow:inset $top $left $blur $color
-		box-shadow:inset $top $left $blur $color
+		-moz-box-shadow:inset 	 $top $left $blur $color
+		box-shadow:inset 		 $top $left $blur $color
 	@else
 		-webkit-box-shadow: $top $left $blur $color
-		-moz-box-shadow: $top $left $blur $color
-		box-shadow: $top $left $blur $color
+		-moz-box-shadow: 	$top $left $blur $color
+		box-shadow: 		$top $left $blur $color
 
 html
 	font-size: 16px

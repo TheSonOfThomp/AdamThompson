@@ -105,7 +105,7 @@
 						{ ?>
 							<li class="resume-item">
 								<?php echo $course['name']; ?>
-								<span class="inline-note">
+								<span class="item-code">
 									<?php echo $course['code']; ?>
 								</span>
 								<span class="item-duration">

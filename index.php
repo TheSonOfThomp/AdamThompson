@@ -1,4 +1,5 @@
-<?php $page_id = "Adam Thompson";
+<?php 
+$page_id = "Adam Thompson";
 include('includes/php/main-head.php'); ?>
 <!-- BODY -->
 <main>
