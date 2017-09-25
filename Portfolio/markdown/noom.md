@@ -31,7 +31,7 @@ Noom—based in midtown Manhattan—combats obesity, diabetes, and hypertension 
 <figcaption>People didn't realize the <em>check</em> was a button, and were never quite sure what the back button would do.</figcaption>
 </figure>
 
-We observed users' behaviour and saw that they were unsure of what to do when navigating between different views while logging food. People weren't noticing the _back_ or _check_ buttons, and the buttons didn't always work the way people expected them to. On top of that, the UI and flow would subtly change depending on the entry case.
+We observed users' and saw that they were often unsure of what to do when navigating between different views while logging food. People weren't noticing the _back_ or _check_ buttons, and the buttons didn't always work the way people expected them to. On top of that, the UI and flow would subtly change depending on the entry case.
 
 <figure class='folio_image' id='img2'>
 		<img src='../includes/portfolio_images/noom/noom_existing.jpg'>

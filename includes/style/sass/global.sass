@@ -78,8 +78,15 @@ $global-margin: 72px
 		-moz-box-shadow: 	$top $left $blur $color
 		box-shadow: 		$top $left $blur $color
 
+=calt() 
+	font-variant-ligatures: contextual
+	-moz-font-feature-settings: "calt" 1
+	-webkit-font-feature-settings: "calt" 1
+	font-feature-settings: "calt" 1
+
 html
 	font-size: 16px
+	+calt()
 
 	body 
 		background: $white

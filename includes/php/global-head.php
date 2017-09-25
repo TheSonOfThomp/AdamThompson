@@ -29,7 +29,7 @@
 			<!-- Merriweather -->
 		<link href='http://fonts.googleapis.com/css?family=Merriweather:300,300italic' rel='stylesheet' type='text/css'>
 
-			<!-- Europa -->
+			<!-- TypeKit -->
 		<script type="text/javascript" src="<?php echo $root_path; ?>/includes/js/vendor/typekit.js"></script>
 			
 			<!-- Font Awesome -->

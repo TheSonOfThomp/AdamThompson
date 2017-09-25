@@ -1,26 +1,5 @@
 #Zynga Poker
 
-<div class="tldr">
-	<div class="one-third">
-		<div class="tldr-title">Problem</div>
-		<div class="tldr-content">Compared to other Zynga games, Poker does not have enough users entering through the Facebook news feed.</div>
-	</div>
-	<div class="one-third">
-		<div class="tldr-title">Solution</div>
-		<div class="tldr-content">Create a new social feature that drives users to share onto their Facebook feed, and enter through other's feeds.</div>
-	</div>
-	<div class="one-third">
-			<div class="inline">
-				<div class="tldr-title">Skills: </div>
-				<div class="tldr-content">UX, Information Architecture, Data Analysis, UI</div>
-			</div>
-			<div class="inline">
-				<div class="tldr-title">Tools:</div>
-				<div class="tldr-content">Balsamiq, Excel</div>
-			</div>
-	</div>
-</div>
-
 ##Role
 
 At Zynga Toronto, I worked as a product manager on the web Poker app—the company's oldest running game. Though the game is old, there was still a loyal player base that was hungry for new features. I crunched data, researched competitive apps and created UX flows to design and maintain new and existing features in Zynga Poker.

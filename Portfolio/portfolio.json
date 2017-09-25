@@ -66,6 +66,33 @@
 			"tags": ["web", "software", "ui"]
 		},
 		{
+			"id": "kr_athletes",
+			"name": "KnowRoaming Athletes",
+			"description": "",
+			"image_url": "knowroaming/web/KR_athletes.jpg",
+			"date": "2015-03-25",
+			"type": "Web Development",
+			"tags": ["web", "software", "ui"]
+		},
+		{
+			"id": "kr_marketing",
+			"name": "KnowRoaming Promo Material",
+			"description": "",
+			"image_url": "knowroaming/promo/KnowRoaming_pass.png",
+			"date": "",
+			"type": "Graphic Design",
+			"tags": ["graphic", "design", "marketing"]
+		},
+		{
+			"id": "kr_retail",
+			"name": "KnowRoaming Retail Stand",
+			"description": "",
+			"image_url": "knowroaming/retail/KR_retail.jpg",
+			"date": "",
+			"type": "Industrial Design",
+			"tags": ["id", "design", "marketing", "retail", "product"]
+		},
+		{
 			"id": "bose-speaker",
 			"name": "Bose Speaker Sketch",
 			"description": "",

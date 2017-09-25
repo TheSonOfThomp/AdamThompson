@@ -5,7 +5,11 @@
   background: #E1FAD4; }
 
 html {
-  font-size: 16px; }
+  font-size: 16px;
+  font-variant-ligatures: contextual;
+  -moz-font-feature-settings: "calt" 1;
+  -webkit-font-feature-settings: "calt" 1;
+  font-feature-settings: "calt" 1; }
   html body {
     background: #FEFEFE;
     padding: 0;
@@ -1253,5 +1257,21 @@ body.portfolio section.portfolio.sticky {
       width: 50%; }
       section.portfolio .gallery .folio-item a {
         margin: 48px; } }
+@media print {
+  section.about,
+  section.blog,
+  section.resume,
+  footer {
+    display: none; }
+
+  section.portfolio .gallery .folio-item .hover-state .folio-hover {
+    background-color: rgba(250, 250, 250, 0.8); }
+    section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-title {
+      font-size: 2rem; }
+  section.portfolio .gallery.more-portfolio .folio-item .hover-state .folio-hover {
+    padding: 16px 16px 0px 4px; }
+    section.portfolio .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-title {
+      font-size: 1.2rem;
+      font-weight: 600; } }
 
 /*# sourceMappingURL=adamthompson.css.map */

@@ -8,7 +8,7 @@
 	<a href="../">Home</a>
 </div>
 
-## We made a water fountain that's as interesting as your smartphone.
+## A water fountain that's as interesting as your smartphone.
 
 ### We noticed people were involved in their smartphones more than their surroundings or even other people. We wanted to change that.
 

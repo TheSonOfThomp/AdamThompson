@@ -7,7 +7,7 @@
 
 # Chameleon
 
-## We made adaptive hearing protection that reacts to the environment.
+## Adaptive hearing protection that reacts to the environment.
 
 ### People often don't wear hearing protection in environments like construction sites or factories because they need to communicate, and taking hearing protection on and off is inefficient.
 
