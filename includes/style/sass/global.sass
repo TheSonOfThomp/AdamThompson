@@ -78,15 +78,15 @@ $global-margin: 72px
 		-moz-box-shadow: 	$top $left $blur $color
 		box-shadow: 		$top $left $blur $color
 
-=calt() 
-	font-variant-ligatures: contextual
-	-moz-font-feature-settings: "calt" 1
-	-webkit-font-feature-settings: "calt" 1
-	font-feature-settings: "calt" 1
+=alternateChars()
+	-moz-font-feature-settings:		"ss01", "onum"
+	-ms-font-feature-settings:		"ss01", "onum"
+	-webkit-font-feature-settings:	"ss01", "onum"
+	font-feature-settings:			"ss01", "onum"
 
 html
 	font-size: 16px
-	+calt()
+	+alternateChars()
 
 	body 
 		background: $white

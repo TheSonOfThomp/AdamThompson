@@ -6,10 +6,10 @@
 
 html {
   font-size: 16px;
-  font-variant-ligatures: contextual;
-  -moz-font-feature-settings: "calt" 1;
-  -webkit-font-feature-settings: "calt" 1;
-  font-feature-settings: "calt" 1; }
+  -moz-font-feature-settings: "ss01", "onum";
+  -ms-font-feature-settings: "ss01", "onum";
+  -webkit-font-feature-settings: "ss01", "onum";
+  font-feature-settings: "ss01", "onum"; }
   html body {
     background: #FEFEFE;
     padding: 0;
