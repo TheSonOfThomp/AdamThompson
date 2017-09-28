@@ -161,11 +161,11 @@
 			<li class="animate resume-item featured web soft ux" id="swift">
 				<div class="app-logo"></div><p class="app-name">Swift</p>
 			</li>
+			<li class="animate resume-item web soft" id="react">
+				<div class="app-logo"></div><p class="app-name">React</p>
+			</li>
 			<li class="animate resume-item featured soft" id="arduino">
 				<div class="app-logo"></div><p class="app-name">Arduino</p>
-			</li>
-			<li class="animate resume-item web soft us" id="matlab">
-				<div class="app-logo"></div><p class="app-name">MATLAB</p>
 			</li>
 			<li class="animate resume-item graphics" id="ae">
 				<div class="app-logo"></div><p class="app-name">After Effects</p>

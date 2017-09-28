@@ -409,7 +409,7 @@
 		["PHP", ["php", "dev", "web"]],
 		["C++", ["cpp", "dev"]],
 		["Python", ["python", "dev", "front-end", "web", "dsp"]],
-		["MATLAB", ["matlab", "dev", "research", "dsp"]],
+		["React", ["react", "dev", "prototype", "web", "ios", "Android"]],
 		["Git", ["git", "dev"]],
 		["XCode", ["xcode", "ios", "swift"]],
 		["AutoCad", ["cad", "autocad", "3d", "autodesk"]],
@@ -420,7 +420,8 @@
 		["InDesign", ["indesign","graphic"]],
 		["After Effects", ["ae", "video"]],
 		["Final Cut X", ["fcx", "video"]],
-		["3DS Max", ["3ds", "3D", "video"]]
+		["3DS Max", ["3ds", "3D", "video"]],
+		["MATLAB", ["matlab", "dev", "research", "dsp"]],
 	]
 
 }

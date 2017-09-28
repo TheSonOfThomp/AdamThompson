@@ -660,6 +660,8 @@ section.resume .skills {
       background-image: url("../image_assets/apps/js.png"); }
     section.resume .skills .program-list #coffeescript .app-logo {
       background-image: url("../image_assets/apps/coffeescript.png"); }
+    section.resume .skills .program-list #react .app-logo {
+      background-image: url("../image_assets/apps/react.png"); }
     section.resume .skills .program-list #arduino .app-logo {
       background-image: url("../image_assets/apps/arduino.png"); }
     section.resume .skills .program-list #xcode .app-logo {
