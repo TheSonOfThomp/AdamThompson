@@ -421,7 +421,7 @@
 		["After Effects", ["ae", "video"]],
 		["Final Cut X", ["fcx", "video"]],
 		["3DS Max", ["3ds", "3D", "video"]],
-		["MATLAB", ["matlab", "dev", "research", "dsp"]],
+		["MATLAB", ["matlab", "dev", "research", "dsp"]]
 	]
 
 }
