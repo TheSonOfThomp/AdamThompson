@@ -22,7 +22,7 @@
 
 ## Problem
 
-Noom—based in midtown Manhattan—combats obesity, diabetes, and hypertension through behaviour change. Meal logging is a must-have feature in the app that gives constructive feedback on users' eating habits. It must be quick and intuitive to log the food you’ve eaten and get insightful feedback.
+Noom—based in midtown Manhattan—combats obesity, diabetes, and hypertension with lifestyle and behaviour change. Meal logging is a must-have feature in the app that gives constructive feedback on users' eating habits. Logging the food you’ve eaten must be quick and intuitive, and give insightful feedback.
 
 <figure class='folio_image' id='img2'>
 	<a target='_blank'>
@@ -50,11 +50,11 @@ We knew we would have to simplify the workflow and make the interface much more 
 
 A main cause of confusion was that the interface and flow were different depending on whether you were logging a new meal or editing an old one. The most basic solution to solving the confusion was to eliminate different cases, and settle on a single, universal flow for all cases.
 
-<figure class='folio_image images-2' id='img2'>
+<!-- <figure class='folio_image images-2' id='img2'>
 		<img class="or" src='../includes/portfolio_images/noom/noom_search_first.jpg'>
 		<img src='../includes/portfolio_images/noom/noom_cart_first.jpg'>
 <figcaption>Two potential user flows</figcaption>
-</figure>
+</figure> -->
 
 The issue is that one of the entry cases now requires navigation through a meaningless screen to achieve the goal.
 
@@ -78,14 +78,14 @@ When the screens animated from one to the other, the behaviour of the _close_ bu
 
 These weren’t two _separate_ screens, but two parts of one experience. By designing the interaction and animation thoughtfully, I could convey the feeling of a single context in these two views.
 
-I made this Origami prototype next, and while it is a little over-designed, I think the interactions are great. 
+I made this Origami prototype next, and while the interactions are a little over-designed, they effectively convey the single-context of food logging. 
 
 <figure class='folio_image' id='img2'>
 	<iframe src="https://player.vimeo.com/video/157767592/?title=0&amp;byline=0&amp;loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <figcaption>I would need to tone down the animation if I wanted to get developers to build this.</figcaption>
 </figure>
 
-Finally, we had a single close button for both views, and an intuitive way to flip between them. By keeping a static close button and making the header a uniform size, it was possible to achieve the feeling of a single context for meal logging.
+Finally, we had a single close button for both views, and an intuitive way to flip between them. I toned down the interaction to make it simpler to build, and by keeping a static close button and making the header a uniform size, it was possible to achieve the feeling of a single context for meal logging.
 
 <figure class='folio_image' id='img2'>
 	<iframe src="https://player.vimeo.com/video/157767466/?title=0&amp;byline=0&amp;loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
