@@ -8,7 +8,7 @@
 	<a href="../">Home</a>
 </div>
 
-## A water fountain that's as interesting as your smartphone.
+## The water fountain that's as interesting as your smartphone.
 
 ### We noticed people were involved in their smartphones more than their surroundings or even other people. We wanted to change that.
 
@@ -53,7 +53,7 @@ I worked on streamlining the user flow for all users, considering what would hap
 
 ## User Interface
 
-I mocked up screens for the gem, and tested them on my group mates and other classmates. Using their feedback, I improved and refined my designs.
+I mocked up screens for the quiz game, and tested them on my group mates and other classmates. Using their feedback, I improved and refined my designs.
 
 <figure class='folio_image' id='smrtwatr-lobby&ingame'>
 		<img src='../includes/portfolio_images/smrtwatr/smrtwatr-lobby&ingame.png'>
