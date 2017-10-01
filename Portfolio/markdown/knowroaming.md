@@ -7,7 +7,7 @@
 	<a href="?p=smrtwatr">SMRT WATR</a>
 </div>
 
-## I designed an interface to show only the important information.
+## An interface showing the important information, no matter where you are.
 
 ### People were never quite sure if things were set up properly before traveling abroad. This made them uneasy and unsure whether to trust the product. 
 
@@ -33,7 +33,7 @@ Not trusting the product was a big issue, and needed to be addressed. It was my 
 
 ## Navigation
 
-There are a lot of functions in KnowRoaming, from rate calculator, to phone number management, and we needed a way to efficiently layout these functions for users in as flat an architecture as possible.
+There are a lot of functions in KnowRoaming that needed to make it into the app, from rate calculator, to phone number management. We needed a way to efficiently layout these functions for users in as flat an architecture as possible.
 
 <figure class='folio_image' id='super-flat'>
 <a target='_blank'>
@@ -53,9 +53,18 @@ Since we couldn't easily fit all the options on the home screen, a prototype we 
 
 This prototype tested well in-house, but the "hamburger menu" wasn't always found right away. Given that one primary persona was non digital-natives, an [undiscoverable drawer](https://uxdesign.cc/death-by-hamburger-2d1db115352a#.865mhybml) would not be the best navigation option. 
 
-## Ready to Roam
+I went back to a tab bar design but took inspiration and Yelp, adding a unique central tab, and a _more_ drawer tab. 
 
-We also found the "Ready to Roam" functionality was too hidden, and would need to be a more prominent feature on the home screen. 
+<!-- <figure class='folio_image' id='tab-bars'>
+	<img src='../includes/portfolio_images/knowroaming/tab-bar1.png'>
+	<img src='../includes/portfolio_images/knowroaming/tab-bar2.png'>
+<figcaption>Pressing "Am I Ready to Roam?" would guide the user through a travel checklist.</figcaption>
+</figure> -->
+
+In addition to the rest of what I mention in this article, I also re-designed each screen linked on the tab bar and home screen.
+
+## Ready to Roam
+We also noticed the "Ready to Roam" functionality was too hidden, and would need to be a more prominent feature on the home screen. 
 
 <figure class='folio_image' id='ready-to-roam'>
 	<img src='../includes/portfolio_images/knowroaming/sketch-ReadyToRoam1.jpg'>
@@ -72,7 +81,7 @@ Users could quickly be sure they were "Ready to Roam" when the bubbles on the ho
 <figcaption>Ready to Roam Checklist on the home-screen</figcaption>
 </figure>
 
-We shipped this version of the homescreen and saw good feedback on the new UI style. But users can't setup their roaming data connection at home, so their bubbles were not filling until they landed abroad. This was doing nothing to improve user confidence. 
+We shipped this version of the homescreen and saw good feedback on the new UI style. But there were bubbles on the home screen that were never filled at home—users can't setup their roaming internet connection until they arrive abroad. This resulted in continued calls into customer support about user trust confidence. 
 
 
 ## Three Phases
