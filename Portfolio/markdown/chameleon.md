@@ -7,7 +7,7 @@
 
 # Chameleon
 
-## Adaptive hearing protection that reacts to the environment.
+## Adaptive hearing protection that reacts to your environment.
 
 ### People often don't wear hearing protection in environments like construction sites or factories because they need to communicate, and taking hearing protection on and off is inefficient.
 
@@ -22,7 +22,7 @@
 
 ## Problem
 
-We surveyed and interviewed people who work in construction, manufacturing, and live music[^live-music] about their hearing protection use. A vast majority answered that while they know they should wear, protection they often don't. When asked why, they said they often needed to talk at work, and it's tedious to constantly remove hearing protection and put it back on.
+We surveyed and interviewed people who work in construction, manufacturing, and live music production[^live-music] about their hearing protection use. A vast majority answered that while they know they should wear, protection they often don't. When asked why, they said they often needed to talk at work, and it's tedious to constantly remove hearing protection and put it back on.
 
 <!-- talk about NIHL -->
 
@@ -42,10 +42,16 @@ Based on our research insights, we came up with a number of areas our device sho
 
 **Measurement:** Should accurately measure the noise level, and conform to ANSI standards.
 
+## User Stories
+
+I started to draw up flows and storyboards for the ideal use of the device. Storyboards helped identify different use scenarios (who's talking? who's making the noise?), and functions we had initially overlooked (like override buttons to preemptively close the device), but a user flow was not very helpful, since the primary goal is to not interfere with the wearer's work. Any user flow was a straight line from the beginning off the day to the end. 
+
+We found that the user story: "As a worker, I want to protect my hearing and still be able to communicate when working" helped us focus in during development.
+
+
 ## Prototypes
 ### Full Prototype Mk. 1
-
-Our first system prototype was a retrofit on an existing ear-cup, and was used to test the measurement, control logic and mechanical components of the system. 
+Over the next couple months we worked on the electrical and software systems, as well as testing different ways to dynamically attenuate. Our first system prototype was a retrofit on an existing ear-cup, and was used to test the measurement, control logic and mechanical components of the system. 
 
 <figure class='folio_image video' id='first-proto-video'>
 	<iframe src="https://www.youtube.com/embed/yUvlpVK7ays?loop=1" frameborder="0" loop="1" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -69,9 +75,15 @@ After a few dozen smaller scale prototypes to test each part of the system indep
 
 We showcased our prototype at the Systems Design Engineering Symposium where we won People's Choice award. We also won the Norman Esch Entrepreneurship Award for our pitch and product demo!
 
+<figure class='folio_image video' id='symposium-demo-video'>
+	<iframe src="https://www.youtube.com/embed/3ss9hONATuw?loop=1" frameborder="0" loop="1" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<figcaption>Showing off the prototype at the Systems Design Engineering Symposium</figcaption>
+</figure>
+
+
 <figure class='folio_image' id='hero'>
 		<img src='../includes/portfolio_images/chameleon/prototype-demo.jpg'>
-<figcaption>Demonstrating the prototype at Norman Esch finals.</figcaption>
+<figcaption>Demonstrating the prototype at Norman Esch finals, where we<a href="https://uwaterloo.ca/engineering/news/six-teams-win-10000-each-annual-esch-awards" target="_blank"> won a $10,000 prize</a> for our pitch and demo!</figcaption>
 </figure>
 
 
