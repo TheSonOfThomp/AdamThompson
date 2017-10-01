@@ -2,6 +2,16 @@ $(document).ready(function(){
 	
 });
 
+$(document).scroll(function(){
+	console.log('scroll')
+	if ($(this).scrollTop() > 100) {
+		$('header.sticky').addClass('shadow')
+	}
+	else {
+		$('header.sticky').removeClass('shadow')
+	}
+});
+
 // --- Sticky header --- //
 // var last_st = 0
 // var DELTA = 10

@@ -969,6 +969,10 @@ body.portfolio header.portfolio {
     margin: 0;
     background-color: #FEFEFE;
     z-index: 10; }
+    body.portfolio header.portfolio.sticky.shadow {
+      -webkit-box-shadow: 2px 2px 4px #505050;
+      -moz-box-shadow: 2px 2px 4px #505050;
+      box-shadow: 2px 2px 4px #505050; }
     body.portfolio header.portfolio.sticky .title {
       font-size: 48px;
       margin-left: 32px;

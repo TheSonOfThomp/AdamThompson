@@ -303,7 +303,9 @@ body.portfolio
 			margin: 0
 			background-color: $white
 			z-index: 10
-			// -webkit-backdrop-filter: blur(4px)	
+			&.shadow
+				+box-shadow(2px, 2px, 4px, $dark_grey, $inset: false)
+
 			.title
 				font-size: 48px
 				margin-left: 32px
