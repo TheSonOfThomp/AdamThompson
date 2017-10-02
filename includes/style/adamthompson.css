@@ -6,10 +6,10 @@
 
 html {
   font-size: 16px;
-  -moz-font-feature-settings: "ss01", "onum";
-  -ms-font-feature-settings: "ss01", "onum";
-  -webkit-font-feature-settings: "ss01", "onum";
-  font-feature-settings: "ss01", "onum"; }
+  -moz-font-feature-settings: "ss01";
+  -ms-font-feature-settings: "ss01";
+  -webkit-font-feature-settings: "ss01";
+  font-feature-settings: "ss01"; }
   html body {
     background: #FEFEFE;
     padding: 0;
