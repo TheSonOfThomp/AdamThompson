@@ -1093,18 +1093,20 @@ body.portfolio section.portfolio.sticky {
       display: none; }
 
   /* ------------ ABOUT - MOBILE ------------ */
-  section.about .container {
-    text-align: center; }
-    section.about .container #bio {
-      display: inline-block;
-      margin: 36px auto;
+  section.about {
+    margin-top: 36px; }
+    section.about .container {
       text-align: center; }
-      section.about .container #bio .bio-pic {
-        margin: auto;
-        float: none; }
-      section.about .container #bio .about-text {
-        margin: 24px 0;
-        text-align: left; }
+      section.about .container #bio {
+        display: inline-block;
+        margin: 36px auto;
+        text-align: center; }
+        section.about .container #bio .bio-pic {
+          margin: auto;
+          float: none; }
+        section.about .container #bio .about-text {
+          margin: 24px 0;
+          text-align: left; }
 
   /* ------------ SOCIAL - MOBILE ------------ */
   section.about .social-list {
@@ -1188,8 +1190,9 @@ body.portfolio section.portfolio.sticky {
         padding-left: 0px; }
         section.resume .container article .resume-content .resume-list .item-code {
           display: block; }
-  section.resume .experience .job {
-    display: block; }
+  section.resume .experience .job, section.resume .experience .school {
+    display: block;
+    margin-top: 72px; }
   section.resume .skills {
     display: none; }
   section.resume .education .subsection-header {
