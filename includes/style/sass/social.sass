@@ -1,61 +1,71 @@
 /* ---------------------- Social Bar ---------------------- */
-.social-list
+.social-container
 	display: flex
-	position: relative
-	padding: 0
-	margin: 0
-	list-style: none
+	justify-content: center
 	width: 100%
-	max-width: 768px
-	margin: auto auto
-
-	.animate.social-media
-		&:hover
-			padding-top: 0.5rem
-			padding-bottom: 1.5rem
-
-	li.social-media
-		display: inline-block
+	max-width: $max-width
+	.button
+		width: 33%
+		margin-left: 0
+	.social-list
+		display: flex
 		position: relative
-		width: 25%
-		padding: 1.5rem 0
-		// float: left
+		padding: 0
+		margin: 0
+		list-style: none
+		width: 100%
+		max-width: $max-width
+		margin: auto auto
 
-		a
-			display: block
-			width: 100%
-			height: 100%
-			margin: 0 auto
-			color: $black
-
-			.social-name
-				padding-top: 0.2em
-				text-align: center
-				display: inline-block
-				width: 100%
-				// opacity: 0
-				// +animate-elements(font-weight, 0.2s, ease-in-out)
-
+		.animate.social-media
 			&:hover
-				.social-name
-					// opacity: 1
-					font-weight: 600
-					// color: $green
-					// text-decoration: underline
+				padding-top: 0.5rem
+				padding-bottom: 1.5rem
 
-			.social-logo
-				$logo-size: 20%
-				width: $logo-size
-				// padding-bottom: $logo-size
+		li.social-media
+			display: inline-block
+			position: relative
+			width: 12%
+			margin: auto
+			margin-right: 0
+			// padding: 1.5rem 0
+			// float: left
+
+			a
+				display: block
+				width: 100%
+				height: 100%
 				margin: 0 auto
-				background-size: contain
-				background-position: 50%
-				background-repeat: no-repeat
+				color: $black
 
-		:last-child
-			padding-right: 0
-		:first-child
-			border-left: none
+				.social-name
+					padding-top: 0.1em
+					text-align: center
+					display: inline-block
+					width: 100%
+					// opacity: 0
+					// +animate-elements(font-weight, 0.2s, ease-in-out)
+
+				&:hover
+					.social-name
+						// opacity: 1
+						font-weight: 600
+						// color: $green
+						// text-decoration: underline
+
+				.social-logo
+					$logo-size: 36%
+					width: $logo-size
+					// padding-bottom: $logo-size
+					margin: 0 auto
+					background-size: contain
+					background-position: 50%
+					background-repeat: no-repeat
+
+			:last-child
+				margin-right: 0
+			:first-child
+				border-left: none
 
 	&.light
 		.social-media

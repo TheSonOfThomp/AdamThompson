@@ -1,4 +1,5 @@
 <div class="social-container">
+	<a class="button" href="mailto:adam.m.thompson@icloud.com?Subject=Hi!">Get in touch!<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 	<ul class="social-list dark" id="social">
 		<li class="social-media tooltip">
 			<a href="https://www.instagram.com/TheSonOfThomp" target="_blank">
@@ -25,5 +26,4 @@
 			</a>
 		</li>
 	</ul>
-	<a class="button large" href="mailto:adam.m.thompson@icloud.com?Subject=Hi!">Get in touch!<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 </div>

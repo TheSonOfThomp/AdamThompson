@@ -37,6 +37,7 @@ $zynga: #DD3B30
 
 // -------- Measurements -------- //
 $global-margin: 72px
+$max-width: 960px
 
 *::selection
 	background: $light_green /* WebKit/Blink Browsers */
@@ -132,7 +133,7 @@ html
 	display: none
 .container
 	width: 80%
-	max-width: 1000px
+	max-width: $max-width
 	margin: 0 auto
 	height: 100%
 	position: relative
@@ -140,8 +141,8 @@ html
 	text-align: center
 	
 	.content
-		width: 90%
-		max-width: 960px
+		width: 100%
+		max-width: $max-width
 		margin: auto
 .shrinkwrap
 	will-change: width
