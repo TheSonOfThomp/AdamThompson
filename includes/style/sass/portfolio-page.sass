@@ -221,8 +221,11 @@
 
 		.footnotes
 			font-size: 12px
+			text-align: center
 			ol
+				text-align: left
 				width: 100%
+				max-width: 720px
 
 		sup a::before
 			// content: '['
@@ -260,17 +263,17 @@
 			content: 'Prev:'
 		left: 0
 		text-align: left
-		padding-left: 8px
-		padding-right: 8px
 		border-left: 8px solid $med_grey
+		a
+			padding-left: 12px
 	&.next
 		a:before
 			content: 'Next:'
 		right: 0
 		text-align: right
-		padding-right: 8px
-		padding-left: 8px
 		border-right: 8px solid $med_grey
+		a
+			padding-right: 12px
 
 	&:hover, &:active
 		background: $light_green

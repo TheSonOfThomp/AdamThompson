@@ -263,6 +263,9 @@
 					.tldr-content
 						display: inline-block
 		.gallery-content
+			.folio_image
+				iframe
+					height: auto
 			&.knowroaming h1
 				font-size: 48px
 			h1
@@ -278,16 +281,19 @@
 				.table
 					display: none
 		.folio-nav
-			position: absolute
-			bottom: -$global-margin*2
+			// position: absolute
+			bottom: 0
 			width: 50%
 			max-width: 50%
-			background-color: $white
+			background-color: $white_trans
+			+backdrop-filter(blur(4px))
 			border-left: 0
 			border-right: 0
 			border-bottom: 8px solid $med_grey
 			&:hover, &:active
 				background-color: $white_green
+		.footnotes
+			display: none
 
 
 /* ---------------------------------------------------- */
