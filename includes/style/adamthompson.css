@@ -554,7 +554,8 @@ section.resume .container article {
           margin-right: 16px; }
 section.resume .experience {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 72px; }
   section.resume .experience .job, section.resume .experience .school {
     position: relative;
     display: inline-block;
