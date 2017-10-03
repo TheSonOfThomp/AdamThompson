@@ -392,6 +392,9 @@ section.portfolio {
 
 section.about {
   margin-top: 108px; }
+  section.about #bio {
+    margin-top: 36px;
+    display: inline-block; }
   section.about .bio-pic {
     width: 176px;
     display: inline-block;

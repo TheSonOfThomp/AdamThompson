@@ -1,6 +1,6 @@
 <section class="about" id="about">
 	<div class="container">
-		<!-- <h1 class="section-header">About me</h1> -->
+		<h1 class="section-header">About me</h1>
 		<div class="content" id="bio">
 			<div class="bio-pic">
 				<img alt="Portrait taken by Natasha Choo" src="includes/image_assets/Adam_web.jpg">
