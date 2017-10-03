@@ -298,16 +298,23 @@
 @media screen and (min-width: 1441px) 
 	header.main-header
 		.header-contents
+			margin: $global-margin*2 0
 			.title
 				font-size: 112px
 			.tagline
 				font-size: 48px
 	section.portfolio
-		$portfolio-margin: 48px
+		$portfolio-margin: 64px
 		.gallery
 			margin: $portfolio-margin
 			.folio-item
 				width: 50%
 				a
 					margin: $portfolio-margin
+					.hover-state
+						margin: $portfolio-margin
+	section.resume
+		section.skills
+			ul.program-list
+				max-width: 1200px
 

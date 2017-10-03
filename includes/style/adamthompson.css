@@ -28,7 +28,8 @@ html {
     display: inline-block;
     margin: 72px 0;
     padding: 0;
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
   html a {
     color: #55A82F;
     font-weight: inherit;
@@ -51,7 +52,8 @@ html {
 
 .container {
   width: 80%;
-  margin: 0 10%;
+  max-width: 1000px;
+  margin: 0 auto;
   height: 100%;
   position: relative;
   display: inline-block;
@@ -287,8 +289,7 @@ section.portfolio {
       float: left;
       padding: 0;
       margin: 0;
-      width: 50%;
-      max-width: 720px; }
+      width: 50%; }
       section.portfolio .gallery .folio-item.folio-rest {
         width: 33%; }
       section.portfolio .gallery .folio-item a {
@@ -1249,17 +1250,24 @@ body.portfolio section.portfolio.sticky {
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
 @media screen and (min-width: 1441px) {
-  header.main-header .header-contents .title {
-    font-size: 112px; }
-  header.main-header .header-contents .tagline {
-    font-size: 48px; }
+  header.main-header .header-contents {
+    margin: 144px 0; }
+    header.main-header .header-contents .title {
+      font-size: 112px; }
+    header.main-header .header-contents .tagline {
+      font-size: 48px; }
 
   section.portfolio .gallery {
-    margin: 48px; }
+    margin: 64px; }
     section.portfolio .gallery .folio-item {
       width: 50%; }
       section.portfolio .gallery .folio-item a {
-        margin: 48px; } }
+        margin: 64px; }
+        section.portfolio .gallery .folio-item a .hover-state {
+          margin: 64px; }
+
+  section.resume section.skills ul.program-list {
+    max-width: 1200px; } }
 @media print {
   section.about,
   section.blog,
