@@ -187,12 +187,13 @@ header.main-header {
 
 /* ---------------------- Social Bar ---------------------- */
 .social-list {
-  display: block;
+  display: flex;
   position: relative;
   padding: 0;
   margin: 0;
   list-style: none;
-  width: 72%;
+  width: 100%;
+  max-width: 768px;
   margin: auto auto; }
   .social-list .animate.social-media:hover {
     padding-top: 0.5rem;
@@ -201,9 +202,7 @@ header.main-header {
     display: inline-block;
     position: relative;
     width: 25%;
-    height: 3rem;
     padding: 1.5rem 0;
-    float: left;
     last-child-padding-right: 0;
     first-child-border-left: none; }
     .social-list li.social-media a {
@@ -217,9 +216,9 @@ header.main-header {
         text-align: center;
         display: inline-block;
         width: 100%;
-        -webkit-transition: font-weight 0.1s ease-in-out;
-        -moz-transition: font-weight 0.1s ease-in-out;
-        transition: font-weight 0.1s ease-in-out; }
+        -webkit-transition: font-weight 0.2s ease-in-out;
+        -moz-transition: font-weight 0.2s ease-in-out;
+        transition: font-weight 0.2s ease-in-out; }
       .social-list li.social-media a:hover .social-name {
         font-weight: 600; }
       .social-list li.social-media a .social-logo {
@@ -288,7 +287,8 @@ section.portfolio {
       float: left;
       padding: 0;
       margin: 0;
-      width: 50%; }
+      width: 50%;
+      max-width: 720px; }
       section.portfolio .gallery .folio-item.folio-rest {
         width: 33%; }
       section.portfolio .gallery .folio-item a {
@@ -1062,16 +1062,16 @@ body.portfolio section.portfolio.sticky {
     section.portfolio .gallery .folio-item {
       width: 100%;
       height: auto;
-      margin: 8px 0; }
+      margin: 16px 0; }
       section.portfolio .gallery .folio-item a {
-        margin: 8px; }
+        margin: 16px; }
         section.portfolio .gallery .folio-item a:active .hover-state {
           backdrop-filter: saturate(2);
           -webkit-backdrop-filter: saturate(2);
           background-color: #FEFEFE; }
         section.portfolio .gallery .folio-item a .hover-state {
           opacity: 1;
-          margin: 8px; }
+          margin: 16px; }
           section.portfolio .gallery .folio-item a .hover-state .folio-hover {
             width: 100%;
             padding: 16px 16px 0px 4px;
@@ -1079,6 +1079,8 @@ body.portfolio section.portfolio.sticky {
             max-width: 100%; }
             section.portfolio .gallery .folio-item a .hover-state .folio-hover .folio-title {
               font-size: 2rem; }
+            section.portfolio .gallery .folio-item a .hover-state .folio-hover .folio-description {
+              padding-bottom: 16px; }
       section.portfolio .gallery .folio-item#noom .folio-title {
         color: #4271d7; }
       section.portfolio .gallery .folio-item#smrtwatr .folio-title {
@@ -1105,19 +1107,20 @@ body.portfolio section.portfolio.sticky {
         text-align: left; }
 
   /* ------------ SOCIAL - MOBILE ------------ */
-  .social-list {
+  section.about .social-list {
     width: 100%;
     margin: 0;
-    display: flex;
-    justify-content: center; }
-    .social-list .social-media {
+    margin-top: 72px; }
+    section.about .social-list li.social-media {
+      height: auto;
       width: 33%;
       padding: 0; }
-      .social-list .social-media a {
+      section.about .social-list li.social-media a {
         font-weight: 400; }
-        .social-list .social-media a .social-logo {
-          width: 25%;
-          padding-bottom: 25%; }
+        section.about .social-list li.social-media a .social-name {
+          display: none; }
+        section.about .social-list li.social-media a .social-logo {
+          width: 33%; }
 
   /* ------------ Blog - MOBILE ------------ */
   section.blog ul {

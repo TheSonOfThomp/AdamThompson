@@ -1,11 +1,12 @@
 /* ---------------------- Social Bar ---------------------- */
 .social-list
-	display: block
+	display: flex
 	position: relative
 	padding: 0
 	margin: 0
 	list-style: none
-	width: 72%
+	width: 100%
+	max-width: 768px
 	margin: auto auto
 
 	.animate.social-media
@@ -17,9 +18,8 @@
 		display: inline-block
 		position: relative
 		width: 25%
-		height: 3rem
 		padding: 1.5rem 0
-		float: left
+		// float: left
 
 		a
 			display: block
@@ -34,7 +34,7 @@
 				display: inline-block
 				width: 100%
 				// opacity: 0
-				+animate-elements(font-weight, 0.1s, ease-in-out)
+				+animate-elements(font-weight, 0.2s, ease-in-out)
 
 			&:hover
 				.social-name

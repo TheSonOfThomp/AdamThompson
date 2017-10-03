@@ -70,7 +70,7 @@
 
 	/* ------------ PORTFOLIO - MOBILE ------------ */
 	section.portfolio 
-		$portfolio-margin: 8px
+		$portfolio-margin: 16px
 		margin: 0
 		max-height: none
 		.gallery
@@ -94,6 +94,8 @@
 							max-width: 100%
 							.folio-title
 								font-size: 2rem
+							.folio-description
+								padding-bottom: 16px
 				&#noom
 					.folio-title
 						color: $noom
@@ -127,20 +129,24 @@
 					text-align: left
 
 	/* ------------ SOCIAL - MOBILE ------------ */
-
-	.social-list
-		width: 100%
-		margin: 0
-		display: flex
-		justify-content: center 
-		.social-media
-			width: 33%
-			padding: 0
-			a
-				font-weight: 400
-				.social-logo
-					width: 25%
-					padding-bottom: 25%
+	section.about
+		.social-list
+			width: 100%
+			margin: 0
+			margin-top: $global-margin*2
+			// display: flex
+			// justify-content: center 
+			li.social-media
+				height: auto
+				width: 33%
+				padding: 0
+				a
+					font-weight: 400
+					.social-name
+						display: none
+					.social-logo
+						width: 33%
+						// padding-bottom: 25%
 
 	/* ------------ Blog - MOBILE ------------ */
 
