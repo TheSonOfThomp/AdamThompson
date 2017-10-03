@@ -10,7 +10,7 @@
 		$root_path = 'http://adamthompson.ca';
 	}
 
-	$show_resume = false
+	$show_resume = $_GET['resume'];
 	
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

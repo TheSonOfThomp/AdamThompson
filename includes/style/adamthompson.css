@@ -52,15 +52,15 @@ html {
 
 .container {
   width: 80%;
-  max-width: 960px;
+  max-width: 920px;
   margin: 0 auto;
   height: 100%;
   position: relative;
-  display: inline-block;
+  display: block;
   text-align: center; }
   .container .content {
     width: 100%;
-    max-width: 960px;
+    max-width: 920px;
     margin: auto; }
 
 .shrinkwrap {
@@ -192,7 +192,7 @@ header.main-header {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 960px; }
+  max-width: 920px; }
   .social-container .button {
     width: 33%;
     margin-left: 0; }
@@ -203,7 +203,7 @@ header.main-header {
     margin: 0;
     list-style: none;
     width: 100%;
-    max-width: 960px;
+    max-width: 920px;
     margin: auto auto; }
     .social-container .social-list .animate.social-media:hover {
       padding-top: 0.5rem;
@@ -385,7 +385,7 @@ section.portfolio {
   section.portfolio .button {
     font-size: 18px;
     width: 50%;
-    max-width: 960px; }
+    max-width: 920px; }
     section.portfolio .button .fa {
       padding: 0 2px;
       font-size: 16px; }
@@ -562,7 +562,6 @@ section.resume .container article {
           margin-right: 16px; }
 section.resume .experience {
   position: relative;
-  display: inline-block;
   margin-bottom: 72px; }
   section.resume .experience .job, section.resume .experience .school {
     position: relative;
