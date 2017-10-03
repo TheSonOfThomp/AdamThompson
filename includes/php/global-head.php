@@ -9,6 +9,8 @@
 		$DEBUG = false;
 		$root_path = 'http://adamthompson.ca';
 	}
+
+	$show_resume = false
 	
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
