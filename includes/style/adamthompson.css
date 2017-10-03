@@ -217,10 +217,7 @@ header.main-header {
         padding-top: 0.2em;
         text-align: center;
         display: inline-block;
-        width: 100%;
-        -webkit-transition: font-weight 0.2s ease-in-out;
-        -moz-transition: font-weight 0.2s ease-in-out;
-        transition: font-weight 0.2s ease-in-out; }
+        width: 100%; }
       .social-list li.social-media a:hover .social-name {
         font-weight: 600; }
       .social-list li.social-media a .social-logo {
@@ -275,7 +272,8 @@ section.portfolio {
     position: relative;
     width: auto;
     margin: 24px;
-    display: block; }
+    display: inline-block;
+    max-width: 1440px; }
     section.portfolio .gallery ul {
       position: relative;
       display: inline-block;
@@ -709,7 +707,8 @@ footer {
   line-height: 1.6rem;
   background-color: #333333;
   color: #FEFEFE;
-  padding-bottom: 24px; }
+  padding-bottom: 24px;
+  text-align: center; }
   footer .container {
     position: relative; }
     footer .container .copyright {
@@ -1258,13 +1257,13 @@ body.portfolio section.portfolio.sticky {
       font-size: 48px; }
 
   section.portfolio .gallery {
-    margin: 64px; }
+    margin: 0; }
     section.portfolio .gallery .folio-item {
       width: 50%; }
       section.portfolio .gallery .folio-item a {
-        margin: 64px; }
+        margin: 36px; }
         section.portfolio .gallery .folio-item a .hover-state {
-          margin: 64px; }
+          margin: 36px; }
 
   section.resume section.skills ul.program-list {
     max-width: 1200px; } }

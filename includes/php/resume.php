@@ -127,7 +127,7 @@
 	</section>
 
 	<section class="skills container" id="toolbox">
-		<div class="subsection-header">My Toolbox
+		<div class="section-header">My Toolbox
 		</div>
 		<ul class="program-list"> 
 			<li class="animate resume-item featured ux" id="sketch">
