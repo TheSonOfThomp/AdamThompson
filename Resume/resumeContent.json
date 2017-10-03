@@ -397,10 +397,10 @@
 
 	"skills": [
 		["Sketch", ["sketch", "ui", "ux", "wireframe"]], 
-		["Photoshop", ["ps", "photoshop", "ui", "graphic"]], 
-		["Balsamiq", ["balsamiq", "ux", "wireframe", "pm"]],
 		["Framer", ["framer", "ux", "ui", "js", "coffeescript", "prototype"]],
 		["Origami", ["origami", "ux", "ui", "prototype"]],
+		["Photoshop", ["ps", "photoshop", "ui", "graphic"]], 
+		["Balsamiq", ["balsamiq", "ux", "wireframe", "pm"]],
 		["HTML", ["html", "web", "front-end", "prototype"]],
 		["CSS", ["css", "web", "front-end" ]],
 		["jQuery", ["jQuery","js", "web", "front-end", "dev"]],

@@ -58,6 +58,7 @@ html {
   text-align: center; }
   .container .content {
     width: 90%;
+    max-width: 960px;
     margin: auto; }
 
 .shrinkwrap {
@@ -171,12 +172,11 @@ header.main-header {
 .section-header {
   color: #333333;
   font-family: "europa", "gill sans", sans-serif;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 600;
   text-align: left;
   line-height: 1em;
-  margin: 36px 0;
-  text-align: center; }
+  margin: 36px 0; }
 
 .subsection-header {
   color: #333333;
@@ -381,40 +381,43 @@ section.portfolio {
       padding: 0 2px;
       font-size: 16px; }
 
-section.about .bio-pic {
-  width: 176px;
-  display: inline-block;
-  float: left;
-  margin: 0 36px 4px 0;
-  line-height: 0;
-  -webkit-box-shadow: -20px -20px 0 #333333;
-  -moz-box-shadow: -20px -20px 0 #333333;
-  box-shadow: -20px -20px 0 #333333; }
-  section.about .bio-pic img {
-    width: 100%;
-    height: auto; }
-section.about .about-text {
-  float: none;
-  margin: auto 72px;
-  text-align: left;
-  font-family: "europa", "gill sans", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 1.5em; }
-  section.about .about-text p {
-    margin: 1em auto; }
-section.about #achievements {
-  font-weight: 400; }
-section.about .social-list {
-  margin-top: 36px; }
-section.about .button {
-  margin-top: 72px; }
+section.about {
+  margin-top: 108px; }
+  section.about .bio-pic {
+    width: 176px;
+    display: inline-block;
+    float: left;
+    margin: 0 36px 4px 0;
+    line-height: 0;
+    -webkit-box-shadow: -20px -20px 0 #333333;
+    -moz-box-shadow: -20px -20px 0 #333333;
+    box-shadow: -20px -20px 0 #333333; }
+    section.about .bio-pic img {
+      width: 100%;
+      height: auto; }
+  section.about .about-text {
+    float: none;
+    margin: auto 72px;
+    text-align: left;
+    font-family: "europa", "gill sans", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5em; }
+    section.about .about-text p {
+      margin: 1em auto; }
+  section.about #achievements {
+    font-weight: 400; }
+  section.about .social-list {
+    margin-top: 36px; }
+  section.about .button {
+    margin-top: 72px; }
 
 /* ---------------------- BLOG ---------------------- */
 section.blog ul {
   text-align: left;
   list-style-type: none;
-  margin: auto; }
+  margin: auto;
+  padding: 0; }
   section.blog ul a {
     text-decoration: none;
     cursor: pointer;
@@ -519,7 +522,7 @@ section.resume .container article {
       text-decoration: underline; }
   section.resume .container article .resume-content {
     margin: auto 0;
-    display: inline-block;
+    display: block;
     text-align: left;
     margin-left: 132px; }
     @media screen and (max-width: 600px) {
@@ -556,7 +559,7 @@ section.resume .experience {
   section.resume .experience .job, section.resume .experience .school {
     position: relative;
     display: inline-block;
-    width: 90%;
+    width: 100%;
     margin: 36px auto; }
   section.resume .experience #zynga .logo {
     background-image: url("../image_assets/zynga_logo.png"); }
@@ -1015,7 +1018,8 @@ body.portfolio section.portfolio.sticky {
         font-size: 24px; }
 
   .section-header {
-    max-width: 100%; }
+    max-width: 100%;
+    text-align: center; }
 
   /* ------------ BIO - MOBILE ------------ */
   .bio {
@@ -1129,10 +1133,12 @@ body.portfolio section.portfolio.sticky {
     section.resume .container article .content-header {
       display: inline-block;
       margin: auto;
-      text-align: center; }
+      text-align: center;
+      width: 100%;
+      max-width: 360px; }
       section.resume .container article .content-header .logo-container {
         width: 80%;
-        max-width: 80%;
+        max-width: 256px;
         margin: 0; }
       section.resume .container article .content-header .logo {
         width: 50%;
