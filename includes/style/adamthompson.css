@@ -393,7 +393,6 @@ section.portfolio {
 section.about {
   margin-top: 108px; }
   section.about #bio {
-    margin-top: 36px;
     display: inline-block; }
   section.about .bio-pic {
     width: 176px;
@@ -417,10 +416,12 @@ section.about {
     line-height: 1.5em; }
     section.about .about-text p {
       margin: 1em auto; }
+      section.about .about-text p:first-child {
+        margin-top: 0; }
   section.about #achievements {
     font-weight: 400; }
   section.about .social-container {
-    margin-top: 72px; }
+    margin-top: 36px; }
 
 /* ---------------------- BLOG ---------------------- */
 section.blog ul {
