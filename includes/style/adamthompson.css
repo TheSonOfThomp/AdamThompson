@@ -213,9 +213,7 @@ header.main-header {
       position: relative;
       width: 12%;
       margin: auto;
-      margin-right: 0;
-      last-child-margin-right: 0;
-      first-child-border-left: none; }
+      margin-left: 0; }
       .social-container .social-list li.social-media a {
         display: block;
         width: 100%;
@@ -1124,20 +1122,24 @@ body.portfolio section.portfolio.sticky {
           text-align: left; }
 
   /* ------------ SOCIAL - MOBILE ------------ */
-  section.about .social-list {
-    width: 100%;
-    margin: 0;
-    margin-top: 72px; }
-    section.about .social-list li.social-media {
-      height: auto;
-      width: 33%;
-      padding: 0; }
-      section.about .social-list li.social-media a {
-        font-weight: 400; }
-        section.about .social-list li.social-media a .social-name {
-          display: none; }
-        section.about .social-list li.social-media a .social-logo {
-          width: 33%; }
+  section.about .social-container {
+    display: block; }
+    section.about .social-container .button {
+      margin: 1rem;
+      margin-top: 36px; }
+    section.about .social-container .social-list {
+      width: 100%;
+      margin: 0; }
+      section.about .social-container .social-list li.social-media {
+        height: auto;
+        width: 33%;
+        padding: 0; }
+        section.about .social-container .social-list li.social-media a {
+          font-weight: 400; }
+          section.about .social-container .social-list li.social-media a .social-name {
+            display: none; }
+          section.about .social-container .social-list li.social-media a .social-logo {
+            width: 33%; }
 
   /* ------------ Blog - MOBILE ------------ */
   section.blog ul {
