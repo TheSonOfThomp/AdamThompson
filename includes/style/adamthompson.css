@@ -195,7 +195,7 @@ header.main-header {
   max-width: 920px; }
   .social-container .button {
     width: 33%;
-    margin-left: 0; }
+    margin-right: 0; }
   .social-container .social-list {
     display: flex;
     position: relative;
@@ -219,16 +219,27 @@ header.main-header {
         width: 100%;
         height: 100%;
         margin: 0 auto;
-        color: #333333; }
+        color: #333333;
+        padding: 1em 0;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        border-radius: 2px;
+        -webkit-transition: background-color 0.1s ease-in-out;
+        -moz-transition: background-color 0.1s ease-in-out;
+        transition: background-color 0.1s ease-in-out; }
         .social-container .social-list li.social-media a .social-name {
           padding-top: 0.1em;
           text-align: center;
           display: inline-block;
-          width: 100%; }
-        .social-container .social-list li.social-media a:hover .social-name {
-          font-weight: 600; }
+          width: 100%;
+          display: none; }
+        .social-container .social-list li.social-media a:hover {
+          background-color: #E9FFE0; }
+          .social-container .social-list li.social-media a:hover .social-name {
+            font-weight: 600; }
         .social-container .social-list li.social-media a .social-logo {
-          width: 36%;
+          width: 40%;
           margin: 0 auto;
           background-size: contain;
           background-position: 50%;
@@ -382,8 +393,9 @@ section.portfolio {
         display: none; }
   section.portfolio .button {
     font-size: 18px;
-    width: 50%;
-    max-width: 920px; }
+    width: 100%;
+    max-width: 920px;
+    padding: 1em 0; }
     section.portfolio .button .fa {
       padding: 0 2px;
       font-size: 16px; }
@@ -1262,7 +1274,7 @@ body.portfolio section.portfolio.sticky {
     border-right: 0;
     border-bottom: 8px solid #808080; }
     .portfolio-page .folio-nav:hover, .portfolio-page .folio-nav:active {
-      background-color: #EEFFE5; }
+      background-color: #E9FFE0; }
   .portfolio-page .footnotes {
     display: none; } }
 /* ---------------------------------------------------- */

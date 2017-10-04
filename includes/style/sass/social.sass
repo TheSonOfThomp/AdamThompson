@@ -6,7 +6,7 @@
 	max-width: $max-width
 	.button
 		width: 33%
-		margin-left: 0
+		margin-right: 0
 	.social-list
 		display: flex
 		position: relative
@@ -28,8 +28,6 @@
 			width: 12%
 			margin: auto
 			margin-left: 0
-			// padding: 1.5rem 0
-			// float: left
 
 			a
 				display: block
@@ -37,16 +35,20 @@
 				height: 100%
 				margin: 0 auto
 				color: $black
+				padding: 1em 0
+				+border-radius(2px)
+				+animate-elements(background-color, 0.1s, ease-in-out)
 
 				.social-name
 					padding-top: 0.1em
 					text-align: center
 					display: inline-block
 					width: 100%
-					// opacity: 0
-					// +animate-elements(font-weight, 0.2s, ease-in-out)
+					display: none
 					
 				&:hover
+					background-color: $white_green
+					// +box-shadow(0px, 1px, 2px, $black)
 					.social-name
 						// opacity: 1
 						font-weight: 600
@@ -54,7 +56,7 @@
 						// text-decoration: underline
 
 				.social-logo
-					$logo-size: 36%
+					$logo-size: 40%
 					width: $logo-size
 					// padding-bottom: $logo-size
 					margin: 0 auto
