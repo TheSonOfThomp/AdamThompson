@@ -7,11 +7,14 @@
 
 # Chameleon
 
+<div class="tldr" markdown=1>
 ## Adaptive hearing protection that reacts to your environment.
 
-### People often don't wear hearing protection in environments like construction sites or factories because they need to communicate, and taking hearing protection on and off is inefficient.
+### We found that people don't like to wear hearing protection in environments that change often—like construction sites or factories—because they need to communicate, and constantly removing hearing protection is annoying and inefficient.
 
-#### Chameleon is hearing protection that responds to the volume of the environment. When it's quiet, Chameleon allows you to hear as if you're not wearing hearing protection. When it's gets loud, it reacts in an instant to protect your hearing until the environment is safe again.
+### Chameleon is hearing protection that responds to the volume of the environment. When it's quiet, Chameleon allows you to hear as if you're not wearing hearing protection. When it's gets loud, it reacts in an instant to protect your hearing until the environment is safe again.
+
+</div>
 
 <figure class='folio_image' id='hero'>
 	<a target='_blank'>

@@ -7,11 +7,13 @@
 
 # Noom
 
+<div class="tldr" markdown=1>
 ## I simplified a confusing interface without compromising functionality.
 
 ### Users were having trouble navigating the core meal-logging flow because the buttons weren’t obvious and changed behaviour depending on use case. We needed to fix this.
 
-#### We consolidated the user flow and UI, making it consistent in all use cases. Through meticulous user-testing we designed an interface that eliminated hesitation and uncertainty.
+### We consolidated the user flow and UI, making it consistent in all use cases. Through meticulous user-testing we designed an interface that eliminated hesitation and uncertainty.
+</div>
 
 <figure class='folio_image' id='hero'>
 	<a target='_blank'>
@@ -105,3 +107,9 @@ We also tested different _cart_, and _add more_ button designs. The buttons in t
 	</a>
 <figcaption>The decision matrix we used to rank and justify the design decisions</figcaption>
 </figure>
+
+## A Legacy
+The Noom app features this version of the meal-logging workflow to date, and while my internship finished before the feature launched, I was told by the VP Engineering that the modifications I made to the workflow made a significant impact to user-reported ease in meal logging (a tracked KPI). 
+
+I'm grateful to have been part of a great design team that recently won the [2017 Red Dot Award](https://www.newswire.com/news/noom-coach-is-awarded-the-2017-red-dot-award-for-outstanding-design-19935974) for outstanding design.
+

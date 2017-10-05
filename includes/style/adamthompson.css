@@ -823,27 +823,30 @@ footer {
     font-family: "europa", "gill sans", sans-serif;
     padding-top: 81px; }
   .portfolio-page .gallery-content h1 {
-    font-size: 96px;
+    font-size: 72px;
     font-family: "europa", "gill sans", sans-serif;
     font-weight: 600;
     text-align: left;
-    margin: 16px auto; }
+    margin: 24px auto 0 auto; }
   .portfolio-page .gallery-content h2 {
     font-size: 56px;
     font-family: "europa", "gill sans", sans-serif;
     font-style: normal;
     font-weight: bold;
-    margin: 24px 0; }
+    margin: 0 auto 24px auto; }
   .portfolio-page .gallery-content h3 {
-    font-size: 24px;
-    font-weight: 400;
-    font-family: "europa", "gill sans", sans-serif;
-    color: #505050; }
+    font-size: 18px;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: #505050;
+    margin: 16px auto; }
   .portfolio-page .gallery-content h4 {
-    font-size: 20px;
-    font-weight: 400;
-    font-family: "europa", "gill sans", sans-serif;
-    color: #505050; }
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Merriweather", serif;
+    color: #333333;
+    margin: 16px auto; }
   .portfolio-page .gallery-content p {
     font-family: "Merriweather", serif;
     font-size: 16px;
@@ -857,6 +860,10 @@ footer {
     line-height: 1.8em;
     width: 66%;
     margin: auto; }
+  .portfolio-page .gallery-content .tldr h2 {
+    font-size: 36px; }
+  .portfolio-page .gallery-content .tldr h4 {
+    font-weight: 300; }
   .portfolio-page .gallery-content .cover-photo {
     width: 100%; }
   .portfolio-page .gallery-content .col {

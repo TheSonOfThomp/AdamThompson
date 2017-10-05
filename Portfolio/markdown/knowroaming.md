@@ -7,11 +7,13 @@
 	<a href="?p=smrtwatr">SMRT WATR</a>
 </div>
 
+<div class="tldr" markdown=1>
 ## An interface showing the important information, no matter where you are.
 
 ### People were never quite sure if things were set up properly before traveling abroad. This made them uneasy and unsure whether to trust the product. 
 
-#### I overhauled the layout, architecture and visual style of the app to make it simpler, and more informative. The options available on the home screen change to match the actions you can take at each phase of your trip.
+### I overhauled the layout, architecture and visual style of the app to make it simpler, and more informative. The options available on the home screen change to match the actions you can take at each phase of your trip.
+</div>
 
 <figure class='folio_image' id='hero'>
 		<img src='../includes/portfolio_images/knowroaming/knowroaming.jpg'>
