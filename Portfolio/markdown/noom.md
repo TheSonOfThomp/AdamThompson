@@ -10,9 +10,9 @@
 <div class="tldr" markdown=1>
 ## I simplified a confusing interface without compromising functionality.
 
-### Users were having trouble navigating the core meal-logging flow because the buttons weren’t obvious and changed behaviour depending on use case. We needed to fix this.
+#### Users were having trouble navigating the core meal-logging flow because the buttons weren’t obvious and changed behaviour depending on use case. We needed to fix this.
 
-### We consolidated the user flow and UI, making it consistent in all use cases. Through meticulous user-testing we designed an interface that eliminated hesitation and uncertainty.
+#### We consolidated the user flow and UI, making it consistent in all use cases. Through meticulous user-testing we designed an interface that eliminated hesitation and uncertainty.
 </div>
 
 <figure class='folio_image' id='hero'>
