@@ -6,7 +6,7 @@
 	$folio_rest = $folio_obj["portfolio"];
 ?>
 
-<section class="portfolio" id="portfolio">
+<section class="portfolio brutal" id="portfolio">
   <div class="gallery featured" id="gallery">
     <ul>
     <?php

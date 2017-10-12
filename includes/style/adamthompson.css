@@ -460,6 +460,130 @@ section.portfolio {
       padding: 0 2px;
       font-size: 16px; }
 
+/* ---------------------- NEW BRUTALIST PORTFOLIO ---------------------- */
+section.portfolio.brutal {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 72px auto;
+  text-align: center; }
+  section.portfolio.brutal .gallery {
+    position: relative;
+    width: auto;
+    margin: 16px;
+    display: inline-block;
+    max-width: 920px; }
+    section.portfolio.brutal .gallery ul {
+      position: relative;
+      display: inline-block;
+      padding: 0;
+      list-style: none; }
+    section.portfolio.brutal .gallery .folio-item {
+      position: relative;
+      display: inline-table;
+      overflow: hidden;
+      float: left;
+      padding: 0;
+      margin: 0;
+      width: 100%; }
+      section.portfolio.brutal .gallery .folio-item.folio-rest {
+        width: 33%; }
+      section.portfolio.brutal .gallery .folio-item a {
+        display: inline-block;
+        background-color: #FEFEFE;
+        border: 8px solid #FEFEFE;
+        -webkit-transition: border-color 0.15s ease-in-out;
+        -moz-transition: border-color 0.15s ease-in-out;
+        transition: border-color 0.15s ease-in-out; }
+        section.portfolio.brutal .gallery .folio-item a img {
+          position: relative;
+          width: 80%;
+          height: auto;
+          cursor: pointer;
+          margin: auto;
+          z-index: 0; }
+      section.portfolio.brutal .gallery .folio-item .hover-state {
+        background-color: rgba(250, 250, 250, 0);
+        position: relative;
+        z-index: 10;
+        margin: 32px;
+        margin-bottom: 0;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden; }
+        section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover {
+          position: relative;
+          max-width: 80%;
+          background-color: #FEFEFE;
+          color: #333333;
+          line-height: 1.8rem;
+          font-weight: 500; }
+          section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover span {
+            display: inline-block;
+            margin: auto 12px; }
+          section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover .folio-title {
+            font-size: 48px;
+            line-height: 1em;
+            font-family: "europa", "gill sans", sans-serif;
+            font-weight: 600;
+            color: #333333;
+            -webkit-transition: color 0.1s ease-in-out;
+            -moz-transition: color 0.1s ease-in-out;
+            transition: color 0.1s ease-in-out; }
+          section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover .folio-description {
+            font-size: 20px;
+            font-family: "europa", "gill sans", sans-serif;
+            padding: 8px 0; }
+          section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover .folio-platform {
+            display: none;
+            font-size: 1rem;
+            font-family: "europa", "gill sans", sans-serif; }
+          section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover .folio-type {
+            display: none;
+            font-size: 1rem;
+            font-style: italic; }
+        @media screen and (max-width: 960px) {
+          section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover {
+            padding: 20px 20px 0px 8px; }
+            section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover .folio-title {
+              font-size: 2rem; } }
+      section.portfolio.brutal .gallery .folio-item#noom a:hover {
+        border: 8px solid #4271d7; }
+        section.portfolio.brutal .gallery .folio-item#noom a:hover .folio-title {
+          color: #4271d7; }
+      section.portfolio.brutal .gallery .folio-item#smrtwatr a:hover {
+        border: 8px solid #756393; }
+        section.portfolio.brutal .gallery .folio-item#smrtwatr a:hover .folio-title {
+          color: #756393; }
+      section.portfolio.brutal .gallery .folio-item#knowroaming a:hover {
+        border: 8px solid #4286b5; }
+        section.portfolio.brutal .gallery .folio-item#knowroaming a:hover .folio-title {
+          color: #4286b5; }
+      section.portfolio.brutal .gallery .folio-item#chameleon a:hover {
+        border: 8px solid #2e8c5d; }
+        section.portfolio.brutal .gallery .folio-item#chameleon a:hover .folio-title {
+          color: #2e8c5d; }
+    section.portfolio.brutal .gallery.more-portfolio .folio-item .hover-state .folio-hover {
+      padding: 16px 16px 0px 4px; }
+      section.portfolio.brutal .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-title {
+        font-size: 1.5rem;
+        font-weight: 600; }
+      section.portfolio.brutal .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-description {
+        display: none; }
+  section.portfolio.brutal .button {
+    margin-top: 72px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 920px;
+    padding: 1em 0; }
+    section.portfolio.brutal .button .fa {
+      padding: 0 2px;
+      font-size: 16px; }
+
 section.about {
   margin-top: 108px; }
   section.about #bio {

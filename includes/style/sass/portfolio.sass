@@ -157,4 +157,186 @@ section.portfolio
 			padding: 0 2px
 			font-size: 16px
 
+/* ---------------------- NEW BRUTALIST PORTFOLIO ---------------------- */
+section.portfolio.brutal
+
+	$portfolio-margin: 16px
+	$border-size: $portfolio-margin/2
+
+	position: relative
+	display: block
+	width: 100%
+	margin: $global-margin auto
+	text-align: center
+
+	.gallery
+		position: relative
+		width: auto
+		margin: $portfolio-margin
+		display: inline-block
+		// max-width: 1440px
+		max-width: $max-width
+
+		ul
+			position: relative
+			display: inline-block
+			// margin: $portfolio-margin 
+			padding: 0
+			list-style: none
+
+		.folio-item
+			position: relative
+			display: inline-table
+			overflow: hidden
+			float: left
+			padding: 0
+			margin: 0
+			// width: 50%
+			width: 100%
+
+			&.folio-rest
+				width: 33%
+			a
+				display: inline-block
+				// margin: $portfolio-margin
+				background-color: $white
+				border: $border-size solid $white
+				+animate-elements(border-color, 0.15s, ease-in-out)
+				// +animate-elements(margin, 0.15s, ease-in-out)
+
+				
+				&:hover,
+				&:focus
+					.hover-state
+
+				img
+					position: relative
+					width: 80%
+					height: auto
+					cursor: pointer
+					margin: auto
+					z-index: 0
+					// +animate-elements(width, 0.15s, ease-in-out)
+			
+			.hover-state
+				background-color: $transparent
+				position: relative
+				// position: absolute
+				// top: 0 
+				// bottom: 4px // it works
+				// bottom: 0
+				// left: 0 
+				// right: 0
+				z-index: 10
+				margin: $portfolio-margin*2
+				margin-bottom: 0
+				text-align: left
+				cursor: pointer
+				display: flex
+				align-items: center
+				justify-content: center
+				-webkit-transform-style: preserve-3d
+				-webkit-backface-visibility: hidden
+
+				.folio-hover
+					// display: inline-block
+					// vertical-align: middle
+					// position: absolute
+					// left: $border-size
+					// top: $border-size
+					// padding: 32px 32px 8px 8px
+					position: relative
+					// padding: 16px 16px 8px 8px
+					max-width: 80%
+					background-color: $white
+					color: $black
+					line-height: 1.8rem
+					font-weight: 500
+					span
+						display: inline-block
+						margin: auto 12px
+					
+					.folio-title
+						font-size: 48px
+						line-height: 1em
+						font-family: $sans-serif
+						font-weight: 600
+						color: $black
+						+animate-elements(color, 0.1s, ease-in-out)
+						// +animate-elements(font-size, 0.15s, ease-in-out)
+
+					.folio-description
+						font-size: 20px
+						font-family: $sans-serif
+						padding: 8px 0
+						// font-style: italic
+						// font-weight: 600
+					.folio-platform
+						display: none
+						font-size: 1rem
+						font-family: $sans-serif
+					.folio-type
+						display: none
+						font-size: 1rem
+						font-style: italic
+				@media screen and (max-width: 960px)
+					.folio-hover
+						// background-color: $white_trans
+						padding: 20px 20px 0px 8px
+						.folio-title
+							font-size: 2rem
+			&#noom
+				a:hover
+					// background-color: $noom
+					border: $border-size solid $noom
+					// +radialGradient($noom_light , $noom )
+					.folio-title
+						color: $noom
+			&#smrtwatr
+				a:hover
+					// background-color: $smrtwatr
+					border: $border-size solid $smrtwatr
+					// +radialGradient($smrtwatr_light , $smrtwatr)
+					.folio-title
+						color: $smrtwatr
+			&#knowroaming
+				a:hover
+					// background-color: $knowroaming
+					border: $border-size solid $knowroaming
+					// +radialGradient($knowroaming_light , $knowroaming)
+					.folio-title
+						color: $knowroaming
+			&#chameleon
+				a:hover
+					// background-color: $chameleon
+					border: $border-size solid $chameleon
+					// +radialGradient($chameleon_light , $chameleon)
+					.folio-title
+						color: $chameleon
+		
+
+		&.more-portfolio
+			.folio-item
+				.hover-state
+					.folio-hover
+						padding: 16px 16px 0px 4px
+						.folio-title
+							font-size: 1.5rem
+							font-weight: 600
+						.folio-description
+							display: none
+
+	.button
+		margin-top: $global-margin
+		font-size: 18px
+		width: 100%
+		max-width: $max-width
+		padding: 1em 0
+		.fa
+			padding: 0 2px
+			font-size: 16px
+
+
+
+
 
