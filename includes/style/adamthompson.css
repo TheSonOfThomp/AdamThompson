@@ -147,13 +147,15 @@ header.main-header {
   text-align: center; }
   header.main-header .header-contents {
     margin: auto;
-    width: 80%;
-    max-width: 920px; }
+    width: 100%; }
     header.main-header .header-contents em {
       font-style: normal; }
     header.main-header .header-contents .title {
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      width: 80%;
+      max-width: 920px;
+      margin: auto; }
       header.main-header .header-contents .title a.name {
         white-space: nowrap;
         font-size: 36px;
@@ -189,6 +191,10 @@ header.main-header {
       font-weight: 400;
       text-align: center;
       margin: 144px auto; }
+      header.main-header .header-contents .hero > * {
+        width: 80%;
+        max-width: 920px;
+        margin: auto; }
       header.main-header .header-contents .hero .headline {
         position: relative;
         font-size: 96px;
@@ -204,6 +210,8 @@ header.main-header {
         z-index: 10; }
       header.main-header .header-contents .hero .bg-letter {
         position: absolute;
+        max-width: none;
+        width: 100%;
         top: 50%;
         transform: translateY(-50%);
         left: 0;
@@ -212,8 +220,15 @@ header.main-header {
         color: #55A82F;
         font-weight: 600;
         font-size: 512px;
-        opacity: 0.16;
         z-index: 0; }
+        header.main-header .header-contents .hero .bg-letter #u {
+          position: absolute;
+          left: 0;
+          transform: translate(-20%, -50%); }
+        header.main-header .header-contents .hero .bg-letter #x {
+          position: absolute;
+          right: 0;
+          transform: translate(20%, -50%); }
   header.main-header.green-bg {
     background-color: #55A82F; }
     header.main-header.green-bg .title a.name {
