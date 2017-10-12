@@ -1,6 +1,7 @@
 /* ---------------------- PORTFOLIO ---------------------- */
 $portfolio-margin: 24px
-section.portfolio
+
+section.portfolio.default
 	position: relative
 	display: block
 	width: 100%
@@ -52,13 +53,8 @@ section.portfolio
 					// +animate-elements(width, 0.15s, ease-in-out)
 			
 			.hover-state
-				// opacity: 0
-				// +backdrop-filter(saturate(1))
-				// +backdrop-filter(blur(0px))
 				background-color: $transparent
 				+animate-elements(background-color, 0.15s, ease-in-out)
-				// +animate-elements(backdrop-filter, 0.15s, ease-in-out)
-				// +animate-elements(-webkit-backdrop-filter, 0.15s, ease-in-out)
 				-webkit-backdrop-filter
 				position: absolute
 				top: 0 
@@ -74,6 +70,7 @@ section.portfolio
 				justify-content: center
 				-webkit-transform-style: preserve-3d
 				-webkit-backface-visibility: hidden
+				z-index: 10
 
 				.folio-hover
 					// display: inline-block
@@ -120,18 +117,30 @@ section.portfolio
 						.folio-title
 							font-size: 2rem
 			&#noom
+				img
+					background-color: $noom
+					+radialGradient($noom_light, $noom)
 				a:hover
 					.folio-title
 						color: $noom
 			&#smrtwatr
+				img
+					background-color: $smrtwatr
+					+radialGradient($smrtwatr_light, $smrtwatr)
 				a:hover
 					.folio-title
 						color: $smrtwatr
 			&#knowroaming
+				img
+					background-color: $knowroaming
+					+radialGradient($knowroaming_light, $knowroaming)
 				a:hover
 					.folio-title
 						color: $knowroaming
 			&#chameleon
+				img
+					background-color: $chameleon
+					+radialGradient($chameleon_light, $chameleon)
 				a:hover
 					.folio-title
 						color: $chameleon
@@ -156,6 +165,17 @@ section.portfolio
 		.fa
 			padding: 0 2px
 			font-size: 16px
+
+/* ---------------------- Full Width PORTFOLIO ---------------------- */
+
+section.portfolio.full-width
+	
+	.gallery
+		margin: 0
+		max-width: none
+		ul
+			margin: 0 -$portfolio-margin
+
 
 /* ---------------------- NEW BRUTALIST PORTFOLIO ---------------------- */
 section.portfolio.brutal

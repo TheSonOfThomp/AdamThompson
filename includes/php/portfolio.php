@@ -6,7 +6,7 @@
 	$folio_rest = $folio_obj["portfolio"];
 ?>
 
-<section class="portfolio brutal" id="portfolio">
+<section class="portfolio default full-width" id="portfolio">
   <div class="gallery featured" id="gallery">
     <ul>
     <?php
@@ -19,15 +19,15 @@
 		data-published-date="<?php echo $item['date']?>">
 		
 		<a href="<?php echo $root_path ?>/Portfolio/?p=<?php echo $item['id']?>">
-			<img src="<?php echo $root_path ?>/includes/portfolio_images/<?php echo $item['image_url']?>">
 			<div class="hover-state">
-			<div class="folio-hover">
-				<span class="folio-title"><?php echo $item["name"]?></span>
-				<br/>
-				<span class="folio-description"><?php echo $item["description"]?></span>
-				<span class="folio-type"><?php echo $item["type"]?></span>
+				<div class="folio-hover">
+					<span class="folio-title"><?php echo $item["name"]?></span>
+					<br/>
+					<span class="folio-description"><?php echo $item["description"]?></span>
+					<span class="folio-type"><?php echo $item["type"]?></span>
+				</div>
 			</div>
-			</div>
+			<img src="<?php echo $root_path ?>/includes/portfolio_images/<?php echo $item['image_url']?>">
 		</a>
 	</li>
 

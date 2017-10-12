@@ -340,25 +340,25 @@ footer .social-list {
 
 /* ---------------------- BIO & PIC ---------------------- */
 /* ---------------------- PORTFOLIO ---------------------- */
-section.portfolio {
+section.portfolio.default {
   position: relative;
   display: block;
   width: 100%;
   margin: 72px auto;
   text-align: center; }
-  section.portfolio .gallery {
+  section.portfolio.default .gallery {
     position: relative;
     width: auto;
     margin: 24px;
     display: inline-block;
     max-width: 1440px; }
-    section.portfolio .gallery ul {
+    section.portfolio.default .gallery ul {
       position: relative;
       display: inline-block;
       margin: 0;
       padding: 0;
       list-style: none; }
-    section.portfolio .gallery .folio-item {
+    section.portfolio.default .gallery .folio-item {
       position: relative;
       display: inline-table;
       overflow: hidden;
@@ -366,20 +366,20 @@ section.portfolio {
       padding: 0;
       margin: 0;
       width: 50%; }
-      section.portfolio .gallery .folio-item.folio-rest {
+      section.portfolio.default .gallery .folio-item.folio-rest {
         width: 33%; }
-      section.portfolio .gallery .folio-item a {
+      section.portfolio.default .gallery .folio-item a {
         display: inline-block;
         margin: 24px; }
-        section.portfolio .gallery .folio-item a:hover .hover-state, section.portfolio .gallery .folio-item a:focus .hover-state {
+        section.portfolio.default .gallery .folio-item a:hover .hover-state, section.portfolio.default .gallery .folio-item a:focus .hover-state {
           background-color: rgba(250, 250, 250, 0.8); }
-        section.portfolio .gallery .folio-item a img {
+        section.portfolio.default .gallery .folio-item a img {
           position: relative;
           width: 100%;
           height: auto;
           cursor: pointer;
           margin-left: 0; }
-      section.portfolio .gallery .folio-item .hover-state {
+      section.portfolio.default .gallery .folio-item .hover-state {
         background-color: rgba(250, 250, 250, 0);
         -webkit-transition: background-color 0.15s ease-in-out;
         -moz-transition: background-color 0.15s ease-in-out;
@@ -396,8 +396,9 @@ section.portfolio {
         align-items: center;
         justify-content: center;
         -webkit-transform-style: preserve-3d;
-        -webkit-backface-visibility: hidden; }
-        section.portfolio .gallery .folio-item .hover-state .folio-hover {
+        -webkit-backface-visibility: hidden;
+        z-index: 10; }
+        section.portfolio.default .gallery .folio-item .hover-state .folio-hover {
           position: absolute;
           left: 0;
           bottom: 0;
@@ -407,10 +408,10 @@ section.portfolio {
           color: #333333;
           line-height: 1.8rem;
           font-weight: 500; }
-          section.portfolio .gallery .folio-item .hover-state .folio-hover span {
+          section.portfolio.default .gallery .folio-item .hover-state .folio-hover span {
             display: inline-block;
             margin: auto 12px; }
-          section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-title {
+          section.portfolio.default .gallery .folio-item .hover-state .folio-hover .folio-title {
             font-size: 2.8rem;
             line-height: 1em;
             font-family: "europa", "gill sans", sans-serif;
@@ -419,46 +420,89 @@ section.portfolio {
             -webkit-transition: color 0.1s ease-in-out;
             -moz-transition: color 0.1s ease-in-out;
             transition: color 0.1s ease-in-out; }
-          section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-description {
+          section.portfolio.default .gallery .folio-item .hover-state .folio-hover .folio-description {
             font-size: 1.2rem;
             font-family: "europa", "gill sans", sans-serif;
             padding: 8px 0; }
-          section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-platform {
+          section.portfolio.default .gallery .folio-item .hover-state .folio-hover .folio-platform {
             display: none;
             font-size: 1rem;
             font-family: "europa", "gill sans", sans-serif; }
-          section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-type {
+          section.portfolio.default .gallery .folio-item .hover-state .folio-hover .folio-type {
             display: none;
             font-size: 1rem;
             font-style: italic; }
         @media screen and (max-width: 960px) {
-          section.portfolio .gallery .folio-item .hover-state .folio-hover {
+          section.portfolio.default .gallery .folio-item .hover-state .folio-hover {
             padding: 20px 20px 0px 8px; }
-            section.portfolio .gallery .folio-item .hover-state .folio-hover .folio-title {
+            section.portfolio.default .gallery .folio-item .hover-state .folio-hover .folio-title {
               font-size: 2rem; } }
-      section.portfolio .gallery .folio-item#noom a:hover .folio-title {
+      section.portfolio.default .gallery .folio-item#noom img {
+        background-color: #4271d7;
+        background: -moz-radial-gradient(center, circle cover, #719AFC 0%, #4271d7 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #719AFC), color-stop(100%, #4271d7));
+        background: -webkit-radial-gradient(center, circle cover, #719AFC 0%, #4271d7 100%);
+        background: -o-radial-gradient(center, circle cover, #719AFC 0%, #4271d7 100%);
+        background: -ms-radial-gradient(center, circle cover, #719AFC 0%, #4271d7 100%);
+        background: radial-gradient(center, circle cover, #719AFC 0%, #4271d7 100%);
+        background-color: #4271d7; }
+      section.portfolio.default .gallery .folio-item#noom a:hover .folio-title {
         color: #4271d7; }
-      section.portfolio .gallery .folio-item#smrtwatr a:hover .folio-title {
+      section.portfolio.default .gallery .folio-item#smrtwatr img {
+        background-color: #756393;
+        background: -moz-radial-gradient(center, circle cover, #AB9FC1 0%, #756393 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #AB9FC1), color-stop(100%, #756393));
+        background: -webkit-radial-gradient(center, circle cover, #AB9FC1 0%, #756393 100%);
+        background: -o-radial-gradient(center, circle cover, #AB9FC1 0%, #756393 100%);
+        background: -ms-radial-gradient(center, circle cover, #AB9FC1 0%, #756393 100%);
+        background: radial-gradient(center, circle cover, #AB9FC1 0%, #756393 100%);
+        background-color: #756393; }
+      section.portfolio.default .gallery .folio-item#smrtwatr a:hover .folio-title {
         color: #756393; }
-      section.portfolio .gallery .folio-item#knowroaming a:hover .folio-title {
+      section.portfolio.default .gallery .folio-item#knowroaming img {
+        background-color: #4286b5;
+        background: -moz-radial-gradient(center, circle cover, #6DAFDB 0%, #4286b5 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #6DAFDB), color-stop(100%, #4286b5));
+        background: -webkit-radial-gradient(center, circle cover, #6DAFDB 0%, #4286b5 100%);
+        background: -o-radial-gradient(center, circle cover, #6DAFDB 0%, #4286b5 100%);
+        background: -ms-radial-gradient(center, circle cover, #6DAFDB 0%, #4286b5 100%);
+        background: radial-gradient(center, circle cover, #6DAFDB 0%, #4286b5 100%);
+        background-color: #4286b5; }
+      section.portfolio.default .gallery .folio-item#knowroaming a:hover .folio-title {
         color: #4286b5; }
-      section.portfolio .gallery .folio-item#chameleon a:hover .folio-title {
+      section.portfolio.default .gallery .folio-item#chameleon img {
+        background-color: #2e8c5d;
+        background: -moz-radial-gradient(center, circle cover, #73D3A2 0%, #2e8c5d 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #73D3A2), color-stop(100%, #2e8c5d));
+        background: -webkit-radial-gradient(center, circle cover, #73D3A2 0%, #2e8c5d 100%);
+        background: -o-radial-gradient(center, circle cover, #73D3A2 0%, #2e8c5d 100%);
+        background: -ms-radial-gradient(center, circle cover, #73D3A2 0%, #2e8c5d 100%);
+        background: radial-gradient(center, circle cover, #73D3A2 0%, #2e8c5d 100%);
+        background-color: #2e8c5d; }
+      section.portfolio.default .gallery .folio-item#chameleon a:hover .folio-title {
         color: #2e8c5d; }
-    section.portfolio .gallery.more-portfolio .folio-item .hover-state .folio-hover {
+    section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover {
       padding: 16px 16px 0px 4px; }
-      section.portfolio .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-title {
+      section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-title {
         font-size: 1.5rem;
         font-weight: 600; }
-      section.portfolio .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-description {
+      section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-description {
         display: none; }
-  section.portfolio .button {
+  section.portfolio.default .button {
     font-size: 18px;
     width: 100%;
     max-width: 920px;
     padding: 1em 0; }
-    section.portfolio .button .fa {
+    section.portfolio.default .button .fa {
       padding: 0 2px;
       font-size: 16px; }
+
+/* ---------------------- Full Width PORTFOLIO ---------------------- */
+section.portfolio.full-width .gallery {
+  margin: 0;
+  max-width: none; }
+  section.portfolio.full-width .gallery ul {
+    margin: -24px; }
 
 /* ---------------------- NEW BRUTALIST PORTFOLIO ---------------------- */
 section.portfolio.brutal {

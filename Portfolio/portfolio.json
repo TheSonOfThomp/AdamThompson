@@ -1,19 +1,10 @@
 {
 	"portfolio-featured": [
 		{
-			"id": "chameleon",
-			"name": "Chameleon",
-			"description": "What if your ears could blink?",
-			"image_url": "chameleon/chameleon-hero.jpg",
-			"date": "2017-04-01",
-			"type": "Product Design",
-			"tags": ["mech", "software", "dsp", "audio", "signals", "ux", "industrial", "hardware"]
-		},
-		{
 			"id": "noom",
 			"name": "Noom",
 			"description": "Simplifying a core experience.",
-			"image_url": "noom/noom_logging.jpg",
+			"image_url": "noom/noom_logging-isolated.png",
 			"date": "2017-12-20",
 			"type": "Product Design",
 			"tags": ["ux", "software", "ui"]
@@ -22,16 +13,25 @@
 			"id": "knowroaming",
 			"name": "KnowRoaming",
 			"description": "Bringing clarity to a complex system.",
-			"image_url": "knowroaming/knowroaming.jpg",
+			"image_url": "knowroaming/knowroaming-app-isolated.png",
 			"date": "2015-05-01",
 			"type": "Product Design",
 			"tags": ["ux", "software", "ui"]
 		},
 		{
+			"id": "chameleon",
+			"name": "Chameleon",
+			"description": "What if your ears could blink?",
+			"image_url": "chameleon/chameleon-side-render-isolated.png",
+			"date": "2017-04-01",
+			"type": "Product Design",
+			"tags": ["mech", "software", "dsp", "audio", "signals", "ux", "industrial", "hardware"]
+		},
+		{
 			"id": "smrtwatr",
 			"name": "SMRT WATR",
 			"description": "The interactive water fountain.",
-			"image_url": "smrtwatr/smrtwatr.jpg",
+			"image_url": "smrtwatr/smrtwatr-isolated.png",
 			"date": "2015-08-26",
 			"type": "Product Design",
 			"tags": ["mech", "software", "ux", "ui", "hardware"]
