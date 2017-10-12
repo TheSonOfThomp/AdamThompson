@@ -1,40 +1,110 @@
 /* -------------------- HEADER -------------------- */
 header.main-header
-	position: relative
-	display: inline-block
+	// display: flex
 	width: 100%
-	height: auto
-	margin: $global-margin*2 0 $global-margin 0
+	padding: 32px 0 $global-margin 0
 	color: $black
+	// color: $white
+	// background-color: $green
+	text-align: center
 
 	.header-contents
-		margin: $global-margin 0
-		text-align: center
+		// flex: 0
+		margin: auto
+		// text-align: left
+		width: 80%
+		max-width: $max-width
+		em
+			font-style: normal
+			// color: $green
+
 		.title
+			display: flex
+			justify-content: space-between 
+			// justify-content: center
+			a.name
+				white-space: nowrap
+				font-size: 36px
+				// color: $green
+				// color: $white
+				color: $black
+				text-decoration: none
+				display: inline-block
+				cursor: pointer
+				&:hover
+					text-decoration: none
+			
+			.tagline
+				// text-align: left
+				// margin: auto
+				font-family: $sans-serif
+				font-weight: 300
+				font-size: 32px
+				// line-height: 1em
+				display: inline-block
+			ul
+				padding: 0
+				margin: 0
+				display: flex	
+				justify-content: center
+				li
+					list-style: none
+					display: inline-block
+					line-height: 32px
+					padding: 0 16px
+					margin: auto
+					color: $green
+					a:hover
+						text-decoration: none
+						border-bottom: 2px solid $green
+
+		.hero
 			position: relative
-			display: inline-block
 			font-family: $sans-serif
 			font-weight: 400
-			font-size: 96px
 			text-align: center
-		.tagline
-			position: relative
-			display: block
-			text-align: right
-			margin: auto
-			font-family: $sans-serif
-			font-weight: 300
-			font-size: 36px
-			line-height: 1em
-			padding-top: 8px 
+			margin: $global-margin*2 auto
 
-		.tag
-			color: $green
-	a
-		color: $black
-		text-decoration: none
-		&:hover
-			text-decoration: none
+			.headline
+				position: relative
+				font-size: 96px
+				font-weight: 600
+				z-index: 10
+
+			.bio-text
+				position: relative
+				text-align: center
+				font-family: $sans-serif
+				font-size: 20px
+				line-height: 2em
+				font-weight: 300
+				z-index: 10
+
+			.bg-letter
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				right: 0
+				margin: auto
+				// color: $white
+				color: $green
+				font-weight: 600
+				font-size: 512px
+				opacity: 0.16
+				z-index: 0
+
+	&.green-bg
+		background-color: $green
+		.title
+			a.name
+				color: $white
+			li a
+				color: $white
+		.hero
+			color: $white
+			.bg-letter
+				color: $white
 
 .section-header
 	color: $black
