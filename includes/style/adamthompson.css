@@ -31,7 +31,7 @@ html {
     width: 100%;
     text-align: center; }
   html a {
-    color: #55A82F;
+    color: #2AC51B;
     font-weight: inherit;
     -webkit-tap-highlight-color: transparent;
     text-decoration: none;
@@ -132,18 +132,19 @@ html {
     width: 100%;
     max-width: 920px; }
   .button.green {
-    color: #55A82F;
+    color: #2AC51B;
     font-weight: 600;
-    border: 2px solid #55A82F; }
+    border: 2px solid #2AC51B; }
     .button.green:hover {
       color: #FEFEFE;
-      background-color: #55A82F; }
+      background-color: #2AC51B; }
 
 /* -------------------- HEADER -------------------- */
 header.main-header {
   width: 100%;
   padding: 32px 0 72px 0;
   color: #333333;
+  overflow: hidden;
   text-align: center; }
   header.main-header .header-contents {
     margin: auto;
@@ -181,10 +182,10 @@ header.main-header {
           line-height: 32px;
           padding: 0 16px;
           margin: auto;
-          color: #55A82F; }
+          color: #2AC51B; }
           header.main-header .header-contents .title ul li a:hover {
             text-decoration: none;
-            border-bottom: 2px solid #55A82F; }
+            border-bottom: 2px solid #2AC51B; }
     header.main-header .header-contents .hero {
       position: relative;
       font-family: "europa", "gill sans", sans-serif;
@@ -217,20 +218,23 @@ header.main-header {
         left: 0;
         right: 0;
         margin: auto;
-        color: #55A82F;
+        color: #2AC51B;
         font-weight: 600;
         font-size: 512px;
+        opacity: 0.15;
         z-index: 0; }
-        header.main-header .header-contents .hero .bg-letter #u {
-          position: absolute;
-          left: 0;
-          transform: translate(-20%, -50%); }
-        header.main-header .header-contents .hero .bg-letter #x {
-          position: absolute;
-          right: 0;
-          transform: translate(20%, -50%); }
+        header.main-header .header-contents .hero .bg-letter.split-ux {
+          opacity: 1; }
+          header.main-header .header-contents .hero .bg-letter.split-ux #u {
+            position: absolute;
+            left: 0;
+            transform: translate(-20%, -50%); }
+          header.main-header .header-contents .hero .bg-letter.split-ux #x {
+            position: absolute;
+            right: 0;
+            transform: translate(20%, -50%); }
   header.main-header.green-bg {
-    background-color: #55A82F; }
+    background-color: #2AC51B; }
     header.main-header.green-bg .title a.name {
       color: #FEFEFE; }
     header.main-header.green-bg .title li a {
@@ -238,7 +242,10 @@ header.main-header {
     header.main-header.green-bg .hero {
       color: #FEFEFE; }
       header.main-header.green-bg .hero .bg-letter {
+        opacity: 0.25;
         color: #FEFEFE; }
+        header.main-header.green-bg .hero .bg-letter.split-ux {
+          opacity: 0.55; }
 
 .section-header {
   color: #333333;
@@ -574,7 +581,7 @@ section.resume .container article {
       content: " - "; }
     section.resume .container article .content-header .show {
       display: block;
-      color: #55A82F;
+      color: #2AC51B;
       background: none;
       border: none;
       font-family: "europa", "gill sans", sans-serif;
@@ -801,7 +808,7 @@ footer {
   visibility: hidden; }
 
 .portfolio-page .home h2, .portfolio-page .home p a, .portfolio-page .home.folio-nav a:hover {
-  color: #55A82F; }
+  color: #2AC51B; }
 .portfolio-page .noom.small-header {
   background-color: #4271d7; }
 .portfolio-page .noom h2, .portfolio-page .noom p a, .portfolio-page .noom figure a, .portfolio-page .noom .tldr-title, .portfolio-page .noom.folio-nav a:hover {
@@ -968,7 +975,7 @@ footer {
       padding: 1%;
       margin: auto; }
   .portfolio-page .gallery-content blockquote {
-    border-left: 1px solid #55A82F;
+    border-left: 1px solid #2AC51B;
     padding-left: 1em;
     color: #808080; }
   .portfolio-page .gallery-content table {
@@ -1009,7 +1016,7 @@ footer {
     color: #505050; }
     .folio-nav a:hover {
       text-decoration: none;
-      color: #55A82F; }
+      color: #2AC51B; }
   .folio-nav a:before {
     position: relative;
     display: block;
@@ -1033,7 +1040,7 @@ footer {
       padding-right: 12px; }
   .folio-nav:hover, .folio-nav:active {
     background: #E1FAD4;
-    border-color: #55A82F; }
+    border-color: #2AC51B; }
 
 body.portfolio header.portfolio {
   margin: 72px 0;
@@ -1049,7 +1056,7 @@ body.portfolio header.portfolio {
   body.portfolio header.portfolio .tagline {
     text-align: right;
     font-size: 32px;
-    color: #55A82F; }
+    color: #2AC51B; }
   body.portfolio header.portfolio.sticky {
     position: fixed;
     width: 100%;

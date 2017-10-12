@@ -6,6 +6,7 @@ header.main-header
 	color: $black
 	// color: $white
 	// background-color: $green
+	overflow: hidden
 	text-align: center
 
 	.header-contents
@@ -99,17 +100,19 @@ header.main-header
 				color: $green
 				font-weight: 600
 				font-size: 512px
-				// opacity: 0.6
+				opacity: 0.15
 				z-index: 0
 				$letter-shift: 20%
-				#u
-					position: absolute
-					left: 0
-					transform: translate(-$letter-shift, -50%)
-				#x
-					position: absolute
-					right: 0
-					transform: translate($letter-shift, -50%)
+				&.split-ux
+					opacity: 1
+					#u
+						position: absolute
+						left: 0
+						transform: translate(-$letter-shift, -50%)
+					#x
+						position: absolute
+						right: 0
+						transform: translate($letter-shift, -50%)
 
 	&.green-bg
 		background-color: $green
@@ -121,7 +124,10 @@ header.main-header
 		.hero
 			color: $white
 			.bg-letter
+				opacity: 0.25
 				color: $white
+				&.split-ux
+					opacity: 0.55
 
 .section-header
 	color: $black
