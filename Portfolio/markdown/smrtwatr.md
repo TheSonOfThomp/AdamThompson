@@ -68,7 +68,7 @@ I mocked up screens for the quiz game, and tested them on my group mates and oth
 
 ## Implementation
 
-We set up a [Tornado](http://www.tornadoweb.org/en/stable/) server on a Raspberry Pi to serve the web UI, and to communicate with the fountain's controller. Tornado supports `html` templates, and can dynamically change the UI on the fly. I wrote all of the app's front-end styling and logic, as well as some server-side logic using `node.js`. 
+We set up a [Tornado](http://www.tornadoweb.org/en/stable/) server on a Raspberry Pi to serve the web UI, and to communicate with the fountain's controller. Tornado supports WebSocket and `html` templates to dynamically change the UI for separate clients on the fly. I wrote all of the app's front-end styling and logic, as well as some server-side logic using `node.js`. 
 
 Check out the front-end, back-end, and controller code on [GitHub](https://github.com/Adam93MT/SMRTWATR).
 
