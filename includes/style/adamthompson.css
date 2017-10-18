@@ -166,11 +166,6 @@ header.main-header {
         cursor: pointer; }
         header.main-header .header-contents .title a.name:hover {
           text-decoration: none; }
-      header.main-header .header-contents .title .tagline {
-        font-family: "europa", "gill sans", sans-serif;
-        font-weight: 300;
-        font-size: 32px;
-        display: inline-block; }
       header.main-header .header-contents .title .hamburger-icon {
         display: none;
         font-size: 32px;
@@ -194,53 +189,54 @@ header.main-header {
           header.main-header .header-contents .title .hamburger-list li a:hover {
             text-decoration: none;
             border-bottom: 2px solid #2AC51B; }
-    header.main-header .header-contents .hero {
+  header.main-header .hero {
+    position: relative;
+    font-family: "europa", "gill sans", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin: 144px auto; }
+    header.main-header .hero > * {
+      width: 80%;
+      max-width: 920px;
+      margin: auto; }
+    header.main-header .hero .headline {
       position: relative;
-      font-family: "europa", "gill sans", sans-serif;
-      font-weight: 400;
+      font-size: 96px;
+      font-weight: 600;
+      z-index: 10; }
+    header.main-header .hero .bio-text {
+      width: 50%;
+      position: relative;
       text-align: center;
-      margin: 144px auto; }
-      header.main-header .header-contents .hero > * {
-        width: 80%;
-        max-width: 920px;
-        margin: auto; }
-      header.main-header .header-contents .hero .headline {
-        position: relative;
-        font-size: 96px;
-        font-weight: 600;
-        z-index: 10; }
-      header.main-header .header-contents .hero .bio-text {
-        position: relative;
-        text-align: center;
-        font-family: "europa", "gill sans", sans-serif;
-        font-size: 20px;
-        line-height: 2em;
-        font-weight: 300;
-        z-index: 10; }
-      header.main-header .header-contents .hero .bg-letter {
-        position: absolute;
-        max-width: none;
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        right: 0;
-        margin: auto;
-        color: #2AC51B;
-        font-weight: 600;
-        font-size: 512px;
-        opacity: 0.15;
-        z-index: 0; }
-        header.main-header .header-contents .hero .bg-letter.split-ux {
-          opacity: 1; }
-          header.main-header .header-contents .hero .bg-letter.split-ux #u {
-            position: absolute;
-            left: 0;
-            transform: translate(-20%, -50%); }
-          header.main-header .header-contents .hero .bg-letter.split-ux #x {
-            position: absolute;
-            right: 0;
-            transform: translate(20%, -50%); }
+      font-family: "europa", "gill sans", sans-serif;
+      font-size: 20px;
+      line-height: 2em;
+      font-weight: 300;
+      z-index: 10; }
+    header.main-header .hero .bg-letter {
+      position: absolute;
+      max-width: none;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      margin: auto;
+      color: #2AC51B;
+      font-weight: 600;
+      font-size: 512px;
+      opacity: 0.15;
+      z-index: 0; }
+      header.main-header .hero .bg-letter.split-ux {
+        opacity: 1; }
+        header.main-header .hero .bg-letter.split-ux #u {
+          position: absolute;
+          left: 0;
+          transform: translate(-20%, -50%); }
+        header.main-header .hero .bg-letter.split-ux #x {
+          position: absolute;
+          right: 0;
+          transform: translate(20%, -50%); }
   header.main-header.green-bg {
     background-color: #2AC51B; }
     header.main-header.green-bg .title a.name {
@@ -1280,94 +1276,88 @@ body.portfolio section.portfolio.sticky {
       margin: 36px auto; }
       header.main-header .header-contents .title {
         font-size: 60px;
-        width: 90%;
-        margin: auto; }
+        width: 100%;
+        margin: auto;
+        display: block;
+        text-align: center; }
         header.main-header .header-contents .title .hamburger-icon {
-          display: flex; }
+          display: none;
+          margin: none; }
           header.main-header .header-contents .title .hamburger-icon .fa-times {
             display: none; }
         header.main-header .header-contents .title .hamburger-list {
-          display: none;
+          display: block;
           font-size: 20px; }
           header.main-header .header-contents .title .hamburger-list li {
             display: block;
-            text-align: right; }
+            text-align: center; }
             header.main-header .header-contents .title .hamburger-list li .fa {
               padding-right: 0; }
+    header.main-header .hero .headline {
+      font-size: 56px; }
+    header.main-header .hero .bio-text {
+      display: none; }
+    header.main-header .hero .bg-letter,
+    header.main-header .hero .bg-letter.split-ux {
+      opacity: 0.2;
+      font-size: 384px; }
 
   .section-header {
     max-width: 100%;
     text-align: center; }
 
   /* ------------ BIO - MOBILE ------------ */
-  .bio {
-    height: auto;
-    margin-top: 0;
-    margin-bottom: 0; }
-    .bio .container {
-      text-align: center; }
-    .bio .bio-pic {
-      display: inline-block;
-      position: relative;
-      float: none;
-      clear: left;
-      width: 50%;
-      max-width: 192px;
-      height: auto;
-      margin: 36px auto;
-      text-align: center;
-      transform: rotateZ(0deg);
-      -moz-transform: rotateZ(0deg);
-      -webkit-transform: rotateZ(0deg); }
-    .bio .bio-text {
-      float: none;
-      clear: left;
-      min-width: 100%;
-      max-width: 100%;
-      text-align: center;
-      line-height: 1.2em;
-      padding: 0;
-      margin: 36px auto; }
-      .bio .bio-text p {
-        margin-bottom: 1rem;
-        width: 100%;
-        line-height: 1.5em; }
-
   /* ------------ PORTFOLIO - MOBILE ------------ */
-  section.portfolio {
+  section.portfolio,
+  section.portfolio.default {
     margin: 0;
     max-height: none; }
-    section.portfolio .gallery .folio-item {
-      width: 100%;
-      height: auto;
-      margin: 16px 0; }
-      section.portfolio .gallery .folio-item a {
-        margin: 16px; }
-        section.portfolio .gallery .folio-item a:active .hover-state {
-          backdrop-filter: saturate(2);
-          -webkit-backdrop-filter: saturate(2);
-          background-color: #FEFEFE; }
-        section.portfolio .gallery .folio-item a .hover-state {
-          opacity: 1;
-          margin: 16px; }
-          section.portfolio .gallery .folio-item a .hover-state .folio-hover {
-            width: 100%;
-            padding: 16px 16px 0px 4px;
-            background-color: rgba(250, 250, 250, 0.8);
-            max-width: 100%; }
-            section.portfolio .gallery .folio-item a .hover-state .folio-hover .folio-title {
-              font-size: 2rem; }
-            section.portfolio .gallery .folio-item a .hover-state .folio-hover .folio-description {
-              padding-bottom: 16px; }
-      section.portfolio .gallery .folio-item#noom .folio-title {
+    section.portfolio .gallery ul,
+    section.portfolio.default .gallery ul {
+      margin: 0; }
+      section.portfolio .gallery ul .folio-item,
+      section.portfolio.default .gallery ul .folio-item {
+        width: 100%;
+        height: auto;
+        margin: 8px 0; }
+        section.portfolio .gallery ul .folio-item a,
+        section.portfolio.default .gallery ul .folio-item a {
+          margin: 0; }
+          section.portfolio .gallery ul .folio-item a:active .hover-state,
+          section.portfolio.default .gallery ul .folio-item a:active .hover-state {
+            backdrop-filter: saturate(2);
+            -webkit-backdrop-filter: saturate(2);
+            background-color: #FEFEFE; }
+          section.portfolio .gallery ul .folio-item a .hover-state,
+          section.portfolio.default .gallery ul .folio-item a .hover-state {
+            opacity: 1;
+            margin: 0; }
+            section.portfolio .gallery ul .folio-item a .hover-state .folio-hover,
+            section.portfolio.default .gallery ul .folio-item a .hover-state .folio-hover {
+              width: 100%;
+              padding: 16px 16px 0px 4px;
+              background-color: rgba(250, 250, 250, 0.8);
+              max-width: 100%; }
+              section.portfolio .gallery ul .folio-item a .hover-state .folio-hover .folio-title,
+              section.portfolio.default .gallery ul .folio-item a .hover-state .folio-hover .folio-title {
+                font-size: 2rem; }
+              section.portfolio .gallery ul .folio-item a .hover-state .folio-hover .folio-description,
+              section.portfolio.default .gallery ul .folio-item a .hover-state .folio-hover .folio-description {
+                padding-bottom: 16px; }
+      section.portfolio .gallery ul#noom .folio-title,
+      section.portfolio.default .gallery ul#noom .folio-title {
         color: #4271d7; }
-      section.portfolio .gallery .folio-item#smrtwatr .folio-title {
+      section.portfolio .gallery ul#smrtwatr .folio-title,
+      section.portfolio.default .gallery ul#smrtwatr .folio-title {
         color: #756393; }
-      section.portfolio .gallery .folio-item#knowroaming .folio-title {
+      section.portfolio .gallery ul#knowroaming .folio-title,
+      section.portfolio.default .gallery ul#knowroaming .folio-title {
         color: #4286b5; }
-      section.portfolio .gallery .folio-item#chameleon .folio-title {
+      section.portfolio .gallery ul#chameleon .folio-title,
+      section.portfolio.default .gallery ul#chameleon .folio-title {
         color: #2e8c5d; }
-    section.portfolio .button {
+    section.portfolio .button,
+    section.portfolio.default .button {
       display: none; }
 
   /* ------------ ABOUT - MOBILE ------------ */
@@ -1390,8 +1380,8 @@ body.portfolio section.portfolio.sticky {
   section.about .social-container {
     display: block; }
     section.about .social-container .button {
-      margin: 1rem;
-      margin-top: 36px; }
+      margin: 1rem 0;
+      width: 100%; }
     section.about .social-container .social-list {
       width: 100%;
       margin: 0; }

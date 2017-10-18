@@ -36,12 +36,7 @@ header.main-header
 				cursor: pointer
 				&:hover
 					text-decoration: none
-			
-			.tagline
-				font-family: $sans-serif
-				font-weight: 300
-				font-size: 32px
-				display: inline-block
+
 			.hamburger-icon
 				display: none
 				font-size: 32px
@@ -67,58 +62,59 @@ header.main-header
 						text-decoration: none
 						border-bottom: 2px solid $green
 
-		.hero
+	.hero
+		position: relative
+		font-family: $sans-serif
+		font-weight: 400
+		text-align: center
+		margin: $global-margin*2 auto
+
+		> * 
+			width: 80%
+			max-width: $max-width
+			margin: auto
+		.headline
 			position: relative
-			font-family: $sans-serif
-			font-weight: 400
+			font-size: 96px
+			font-weight: 600
+			z-index: 10
+
+		.bio-text
+			width: 50%
+			position: relative
 			text-align: center
-			margin: $global-margin*2 auto
+			font-family: $sans-serif
+			font-size: 20px
+			line-height: 2em
+			font-weight: 300
+			z-index: 10
 
-			> * 
-				width: 80%
-				max-width: $max-width
-				margin: auto
-			.headline
-				position: relative
-				font-size: 96px
-				font-weight: 600
-				z-index: 10
-
-			.bio-text
-				position: relative
-				text-align: center
-				font-family: $sans-serif
-				font-size: 20px
-				line-height: 2em
-				font-weight: 300
-				z-index: 10
-
-			.bg-letter
-				position: absolute
-				max-width: none
-				width: 100%
-				top: 50%
-				transform: translateY(-50%)
-				left: 0
-				right: 0
-				margin: auto
-				// color: $white
-				color: $green
-				font-weight: 600
-				font-size: 512px
-				opacity: 0.15
-				z-index: 0
-				$letter-shift: 20%
-				&.split-ux
-					opacity: 1
-					#u
-						position: absolute
-						left: 0
-						transform: translate(-$letter-shift, -50%)
-					#x
-						position: absolute
-						right: 0
-						transform: translate($letter-shift, -50%)
+		.bg-letter
+			position: absolute
+			max-width: none
+			width: 100%
+			top: 50%
+			transform: translateY(-50%)
+			left: 0
+			right: 0
+			margin: auto
+			// color: $white
+			color: $green
+			font-weight: 600
+			font-size: 512px
+			opacity: 0.15
+			z-index: 0
+			$letter-shift: 20%
+			&.split-ux
+				opacity: 1
+				#u
+					position: absolute
+					left: 0
+					transform: translate(-$letter-shift, -50%)
+				#x
+					position: absolute
+					right: 0
+					transform: translate($letter-shift, -50%)
 
 	&.green-bg
 		background-color: $green
