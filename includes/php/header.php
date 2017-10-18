@@ -2,11 +2,7 @@
 	<div class="header-contents">
 		<div class="title">
 			<a href="http://localhost:9999/AdamThompson/" class="name"><em>Adam</em> Thompson</a>
-			<a class="hamburger-icon">
-				<i class="fa fa-bars" aria-hidden="true"></i>
-				<i class="fa fa-times" aria-hidden="true"></i>
-			</a>
-			<ul class="hamburger-list">
+			<ul class="nav-list">
 				<li><a href="#portfolio">Work</a></li>
 				<li><a href="#about">About</a></li>
 				<li><a href="mailto:adam.m.thompson@icloud.com">Contact</a><i class="fa fa-arrow-right" aria-hidden="true"></i></li>

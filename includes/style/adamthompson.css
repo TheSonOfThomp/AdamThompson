@@ -166,27 +166,19 @@ header.main-header {
         cursor: pointer; }
         header.main-header .header-contents .title a.name:hover {
           text-decoration: none; }
-      header.main-header .header-contents .title .hamburger-icon {
-        display: none;
-        font-size: 32px;
-        padding-top: 12px; }
-        header.main-header .header-contents .title .hamburger-icon:hover {
-          text-decoration: none; }
-        header.main-header .header-contents .title .hamburger-icon .fa {
-          height: 1em; }
-      header.main-header .header-contents .title .hamburger-list {
+      header.main-header .header-contents .title .nav-list {
         padding: 0;
         margin: 0;
         display: flex;
         justify-content: center; }
-        header.main-header .header-contents .title .hamburger-list li {
+        header.main-header .header-contents .title .nav-list li {
           list-style: none;
           display: inline-block;
           line-height: 32px;
           padding: 0 16px;
           margin: auto;
           color: #2AC51B; }
-          header.main-header .header-contents .title .hamburger-list li a:hover {
+          header.main-header .header-contents .title .nav-list li a:hover {
             text-decoration: none;
             border-bottom: 2px solid #2AC51B; }
   header.main-header .hero {
@@ -1275,23 +1267,19 @@ body.portfolio section.portfolio.sticky {
     header.main-header .header-contents {
       margin: 36px auto; }
       header.main-header .header-contents .title {
-        font-size: 60px;
         width: 100%;
         margin: auto;
         display: block;
         text-align: center; }
-        header.main-header .header-contents .title .hamburger-icon {
-          display: none;
-          margin: none; }
-          header.main-header .header-contents .title .hamburger-icon .fa-times {
-            display: none; }
-        header.main-header .header-contents .title .hamburger-list {
-          display: block;
-          font-size: 20px; }
-          header.main-header .header-contents .title .hamburger-list li {
+        header.main-header .header-contents .title .nav-list {
+          padding-top: 16px;
+          font-size: 16px; }
+          header.main-header .header-contents .title .nav-list li {
             display: block;
             text-align: center; }
-            header.main-header .header-contents .title .hamburger-list li .fa {
+            header.main-header .header-contents .title .nav-list li a {
+              border-bottom: 2px solid #2AC51B; }
+            header.main-header .header-contents .title .nav-list li .fa {
               padding-right: 0; }
     header.main-header .hero .headline {
       font-size: 56px; }
@@ -1306,7 +1294,6 @@ body.portfolio section.portfolio.sticky {
     max-width: 100%;
     text-align: center; }
 
-  /* ------------ BIO - MOBILE ------------ */
   /* ------------ PORTFOLIO - MOBILE ------------ */
   section.portfolio,
   section.portfolio.default {
