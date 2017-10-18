@@ -1,5 +1,5 @@
-<div class="folio-nav prev chameleon">
-	<a href="?p=chameleon">Chameleon</a>
+<div class="folio-nav prev home">
+	<a href="../">Home</a>
 </div>
 <div class="folio-nav next knowroaming">
 	<a href="?p=knowroaming">KnowRoaming</a>

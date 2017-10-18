@@ -1,7 +1,7 @@
 # SMRT WATR
 
-<div class="folio-nav prev knowroaming">
-	<a href="?p=knowroaming">KnowRoaming</a>
+<div class="folio-nav prev chameleon">
+	<a href="?p=chameleon">Chameleon</a>
 </div>
 
 <div class="folio-nav next home">
