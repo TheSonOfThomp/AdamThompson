@@ -1,7 +1,15 @@
 var hideResumeText = true
 
 $(document).ready(function(){
-	// resizePortfolio()
+
+	$('.hamburger-icon').click(function(){
+		$('.hamburger-list').slideToggle()
+		$('.fa-bars', this).toggle()
+		$('.fa-times', this).toggle()
+	});
+
+	
+
 	// Toggle the Show More/Less buttons in Resume
 	function toggleContent(ths){
 		$('.resume-list',ths).slideToggle();
@@ -14,20 +22,6 @@ $(document).ready(function(){
 		toggleContent(this)
 	});
 
-	// var mixer = mixitup('#gallery', {
-	//     selectors: {
-	//         target: '.folio-item'
-	//     },
-	//     load: {
-	//         filter: '.featured',
-	//         sort: 'feature-rank:asc'
-	//     }
-	// });
-
-	// $('.filter').click(function(){
-	// 	$('.filter.active').removeClass('active');
-	// 	$(this).addClass('active')
-	// });
 });
 
 // $(window).resize(function(){

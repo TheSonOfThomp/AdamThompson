@@ -171,19 +171,27 @@ header.main-header {
         font-weight: 300;
         font-size: 32px;
         display: inline-block; }
-      header.main-header .header-contents .title ul {
+      header.main-header .header-contents .title .hamburger-icon {
+        display: none;
+        font-size: 32px;
+        padding-top: 12px; }
+        header.main-header .header-contents .title .hamburger-icon:hover {
+          text-decoration: none; }
+        header.main-header .header-contents .title .hamburger-icon .fa {
+          height: 1em; }
+      header.main-header .header-contents .title .hamburger-list {
         padding: 0;
         margin: 0;
         display: flex;
         justify-content: center; }
-        header.main-header .header-contents .title ul li {
+        header.main-header .header-contents .title .hamburger-list li {
           list-style: none;
           display: inline-block;
           line-height: 32px;
           padding: 0 16px;
           margin: auto;
           color: #2AC51B; }
-          header.main-header .header-contents .title ul li a:hover {
+          header.main-header .header-contents .title .hamburger-list li a:hover {
             text-decoration: none;
             border-bottom: 2px solid #2AC51B; }
     header.main-header .header-contents .hero {
@@ -1274,9 +1282,18 @@ body.portfolio section.portfolio.sticky {
         font-size: 60px;
         width: 90%;
         margin: auto; }
-      header.main-header .header-contents .tagline {
-        text-align: center;
-        font-size: 24px; }
+        header.main-header .header-contents .title .hamburger-icon {
+          display: flex; }
+          header.main-header .header-contents .title .hamburger-icon .fa-times {
+            display: none; }
+        header.main-header .header-contents .title .hamburger-list {
+          display: none;
+          font-size: 20px; }
+          header.main-header .header-contents .title .hamburger-list li {
+            display: block;
+            text-align: right; }
+            header.main-header .header-contents .title .hamburger-list li .fa {
+              padding-right: 0; }
 
   .section-header {
     max-width: 100%;
