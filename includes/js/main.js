@@ -8,6 +8,17 @@ $(document).ready(function(){
 		$('.fa-times', this).toggle()
 	});
 
+	$('#nav-portfolio').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $("#portfolio").offset().top
+	    }, 1000);
+	})
+
+	$('#nav-about').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $("#about").offset().top
+	    }, 1000);
+	})
 	// Toggle the Show More/Less buttons in Resume
 	// function toggleContent(ths){
 	// 	$('.resume-list',ths).slideToggle();
@@ -21,7 +32,6 @@ $(document).ready(function(){
 	// });
 
 });
-
 
 function resizePortfolio(){
 	// Portfolio grid misalignment fix on Firefox

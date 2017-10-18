@@ -3,8 +3,8 @@
 		<div class="title">
 			<a href="http://localhost:9999/AdamThompson/" class="name"><em>Adam</em> Thompson</a>
 			<ul class="nav-list">
-				<li><a href="#portfolio">Work</a></li>
-				<li><a href="#about">About</a></li>
+				<li><a id="nav-portfolio">Work</a></li>
+				<li><a id="nav-about">About</a></li>
 				<li><a href="mailto:adam.m.thompson@icloud.com">Contact</a><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
 			</ul>
 		</div>	
