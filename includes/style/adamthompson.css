@@ -1252,7 +1252,7 @@ body.portfolio section.portfolio.sticky {
     width: 100%;
     margin: 0; }
   html section {
-    margin: 36px 0; }
+    margin: 48px 0; }
 
   .hide-mobile {
     display: none !important; }
@@ -1265,7 +1265,7 @@ body.portfolio section.portfolio.sticky {
     height: auto;
     padding-top: 0; }
     header.main-header .header-contents {
-      margin: 36px auto; }
+      margin: 48px auto; }
       header.main-header .header-contents .title {
         width: 100%;
         margin: auto;
@@ -1273,22 +1273,24 @@ body.portfolio section.portfolio.sticky {
         text-align: center; }
         header.main-header .header-contents .title .nav-list {
           padding-top: 16px;
-          font-size: 16px; }
+          font-size: 16px;
+          display: block; }
           header.main-header .header-contents .title .nav-list li {
             display: block;
+            padding: 16px;
             text-align: center; }
-            header.main-header .header-contents .title .nav-list li a {
-              border-bottom: 2px solid #2AC51B; }
             header.main-header .header-contents .title .nav-list li .fa {
               padding-right: 0; }
-    header.main-header .hero .headline {
-      font-size: 56px; }
-    header.main-header .hero .bio-text {
-      display: none; }
-    header.main-header .hero .bg-letter,
-    header.main-header .hero .bg-letter.split-ux {
-      opacity: 0.2;
-      font-size: 384px; }
+    header.main-header .hero {
+      margin: 48px 0; }
+      header.main-header .hero .headline {
+        font-size: 56px; }
+      header.main-header .hero .bio-text {
+        display: none; }
+      header.main-header .hero .bg-letter,
+      header.main-header .hero .bg-letter.split-ux {
+        opacity: 0.2;
+        font-size: 384px; }
 
   .section-header {
     max-width: 100%;
@@ -1349,12 +1351,12 @@ body.portfolio section.portfolio.sticky {
 
   /* ------------ ABOUT - MOBILE ------------ */
   section.about {
-    margin-top: 36px; }
+    margin-top: 48px; }
     section.about .container {
       text-align: center; }
       section.about .container #bio {
         display: inline-block;
-        margin: 36px auto;
+        margin: 48px auto;
         text-align: center; }
         section.about .container #bio .bio-pic {
           margin: auto;
@@ -1451,7 +1453,7 @@ body.portfolio section.portfolio.sticky {
           display: block; }
   section.resume .experience .job, section.resume .experience .school {
     display: block;
-    margin-top: 72px; }
+    margin-top: 96px; }
   section.resume .skills {
     display: none; }
   section.resume .education .subsection-header {
