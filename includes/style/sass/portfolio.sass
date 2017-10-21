@@ -1,5 +1,5 @@
 /* ---------------------- PORTFOLIO ---------------------- */
-$portfolio-margin: 24px
+$portfolio-margin: 20px
 
 section.portfolio.default
 	position: relative
@@ -66,7 +66,7 @@ section.portfolio.default
 				justify-content: center
 				-webkit-transform-style: preserve-3d
 				-webkit-backface-visibility: hidden
-				z-index: 10
+				z-index: 5
 
 				.folio-hover
 					// display: inline-block
@@ -141,6 +141,7 @@ section.portfolio.default
 		
 
 		&.more-portfolio
+			margin-top: $portfolio-margin * 2
 			.folio-item
 				.hover-state
 					.folio-hover
@@ -156,6 +157,7 @@ section.portfolio.default
 		width: 100%
 		max-width: $max-width
 		padding: 1em 0
+		margin-top: $portfolio-margin * 2
 		.fa
 			padding: 0 2px
 			font-size: 16px

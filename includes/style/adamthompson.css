@@ -103,14 +103,14 @@ html {
   justify-content: center; }
 
 .button {
-  display: inline-block;
+  display: block;
   font-family: "europa", "gill sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #333333;
   text-decoration: none;
   padding: 1em 0;
-  margin: 1em 0;
+  margin: 1em auto;
   border: 2px solid #333333;
   -webkit-transition: color 0.15s ease-in-out;
   -moz-transition: color 0.15s ease-in-out;
@@ -345,7 +345,7 @@ section.portfolio.default {
   section.portfolio.default .gallery {
     position: relative;
     width: auto;
-    margin: 24px;
+    margin: 20px;
     display: inline-block;
     max-width: 1440px; }
     section.portfolio.default .gallery ul {
@@ -366,7 +366,7 @@ section.portfolio.default {
         width: 33%; }
       section.portfolio.default .gallery .folio-item a {
         display: inline-block;
-        margin: 24px; }
+        margin: 20px; }
         section.portfolio.default .gallery .folio-item a:hover .hover-state, section.portfolio.default .gallery .folio-item a:focus .hover-state {
           background-color: rgba(250, 250, 250, 0.8); }
         section.portfolio.default .gallery .folio-item a img {
@@ -385,7 +385,7 @@ section.portfolio.default {
         bottom: 0;
         left: 0;
         right: 0;
-        margin: 24px;
+        margin: 20px;
         text-align: left;
         cursor: pointer;
         display: flex;
@@ -393,7 +393,7 @@ section.portfolio.default {
         justify-content: center;
         -webkit-transform-style: preserve-3d;
         -webkit-backface-visibility: hidden;
-        z-index: 10; }
+        z-index: 5; }
         section.portfolio.default .gallery .folio-item .hover-state .folio-hover {
           position: absolute;
           left: 0;
@@ -477,18 +477,21 @@ section.portfolio.default {
         background-color: #2e8c5d; }
       section.portfolio.default .gallery .folio-item#chameleon a:hover .folio-title {
         color: #2e8c5d; }
-    section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover {
-      padding: 16px 16px 0px 4px; }
-      section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-title {
-        font-size: 1.5rem;
-        font-weight: 600; }
-      section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-description {
-        display: none; }
+    section.portfolio.default .gallery.more-portfolio {
+      margin-top: 40px; }
+      section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover {
+        padding: 16px 16px 0px 4px; }
+        section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-title {
+          font-size: 1.5rem;
+          font-weight: 600; }
+        section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-description {
+          display: none; }
   section.portfolio.default .button {
     font-size: 18px;
     width: 100%;
     max-width: 920px;
-    padding: 1em 0; }
+    padding: 1em 0;
+    margin-top: 40px; }
     section.portfolio.default .button .fa {
       padding: 0 2px;
       font-size: 16px; }
@@ -498,7 +501,7 @@ section.portfolio.full-width .gallery {
   margin: 0;
   max-width: none; }
   section.portfolio.full-width .gallery ul {
-    margin: -24px; }
+    margin: -20px; }
 
 /* ---------------------- NEW BRUTALIST PORTFOLIO ---------------------- */
 section.portfolio.brutal {
@@ -1252,7 +1255,7 @@ body.portfolio section.portfolio.sticky {
     width: 100%;
     margin: 0; }
   html section {
-    margin: 48px 0; }
+    margin: 36px 0; }
 
   .hide-mobile {
     display: none !important; }
@@ -1265,7 +1268,7 @@ body.portfolio section.portfolio.sticky {
     height: auto;
     padding-top: 0; }
     header.main-header .header-contents {
-      margin: 48px auto; }
+      margin: 36px auto; }
       header.main-header .header-contents .title {
         width: 100%;
         margin: auto;
@@ -1282,7 +1285,7 @@ body.portfolio section.portfolio.sticky {
             header.main-header .header-contents .title .nav-list li .fa {
               padding-right: 0; }
     header.main-header .hero {
-      margin: 48px 0; }
+      margin: 36px 0; }
       header.main-header .hero .headline {
         font-size: 56px; }
       header.main-header .hero .bio-text {
@@ -1351,12 +1354,12 @@ body.portfolio section.portfolio.sticky {
 
   /* ------------ ABOUT - MOBILE ------------ */
   section.about {
-    margin-top: 48px; }
+    margin-top: 36px; }
     section.about .container {
       text-align: center; }
       section.about .container #bio {
         display: inline-block;
-        margin: 48px auto;
+        margin: 36px auto;
         text-align: center; }
         section.about .container #bio .bio-pic {
           margin: auto;
@@ -1453,7 +1456,7 @@ body.portfolio section.portfolio.sticky {
           display: block; }
   section.resume .experience .job, section.resume .experience .school {
     display: block;
-    margin-top: 96px; }
+    margin-top: 72px; }
   section.resume .skills {
     display: none; }
   section.resume .education .subsection-header {
