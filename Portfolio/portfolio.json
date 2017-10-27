@@ -40,7 +40,7 @@
 			"id": "tap",
 			"name": "Tap Metronome",
 			"description": "For easy band practice.",
-			"image_url": "tap/tap-metronome-purple.png",
+			"image_url": "tap/tap-metronome-blue.png",
 			"date": "2017-10-14",
 			"type": "iOS Development",
 			"tags": ["ios", "software", "ux", "ui"]

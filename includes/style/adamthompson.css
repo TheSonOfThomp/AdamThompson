@@ -479,16 +479,16 @@ section.portfolio.default {
       section.portfolio.default .gallery .folio-item#chameleon a:hover .folio-title {
         color: #2e8c5d; }
       section.portfolio.default .gallery .folio-item#tap img {
-        background-color: #AA95E8;
-        background: -moz-radial-gradient(center, circle cover, #8D76CC 0%, #AA95E8 100%);
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #8D76CC), color-stop(100%, #AA95E8));
-        background: -webkit-radial-gradient(center, circle cover, #8D76CC 0%, #AA95E8 100%);
-        background: -o-radial-gradient(center, circle cover, #8D76CC 0%, #AA95E8 100%);
-        background: -ms-radial-gradient(center, circle cover, #8D76CC 0%, #AA95E8 100%);
-        background: radial-gradient(center, circle cover, #8D76CC 0%, #AA95E8 100%);
-        background-color: #AA95E8; }
+        background-color: #518CB8;
+        background: -moz-radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #83AECC), color-stop(100%, #518CB8));
+        background: -webkit-radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
+        background: -o-radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
+        background: -ms-radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
+        background: radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
+        background-color: #518CB8; }
       section.portfolio.default .gallery .folio-item#tap a:hover .folio-title {
-        color: #AA95E8; }
+        color: #518CB8; }
     section.portfolio.default .gallery.more-portfolio {
       margin-top: 32px; }
       section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover {
@@ -503,7 +503,7 @@ section.portfolio.default {
     width: 100%;
     max-width: 920px;
     padding: 1em 0;
-    margin-top: 72px; }
+    margin-top: 32px; }
     section.portfolio.default .button .fa {
       padding: 0 2px;
       font-size: 16px; }
@@ -1024,12 +1024,12 @@ footer {
   background: #E6D0CF;
   border-color: #DD3B30; }
 .portfolio-page .tap.small-header {
-  background-color: #AA95E8; }
+  background-color: #518CB8; }
 .portfolio-page .tap h2, .portfolio-page .tap p a, .portfolio-page .tap figure a, .portfolio-page .tap .tldr-title, .portfolio-page .tap.folio-nav a:hover {
-  color: #AA95E8; }
+  color: #518CB8; }
 .portfolio-page .tap.folio-nav:hover, .portfolio-page .tap.folio-nav:active {
-  background: #E6D0CF;
-  border-color: #AA95E8; }
+  background: #CEE4F5;
+  border-color: #518CB8; }
 .portfolio-page header {
   position: relative;
   display: flex;

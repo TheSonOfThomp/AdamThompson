@@ -4,8 +4,8 @@
 	<a href="?p=chameleon">Chameleon</a>
 </div>
 
-<div class="folio-nav next home">
-	<a href="../">Home</a>
+<div class="folio-nav next tap">
+	<a href="?p=tap">TAP</a>
 </div>
 
 <div class="tldr" markdown=1>
