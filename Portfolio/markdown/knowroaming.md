@@ -3,8 +3,8 @@
 <div class="folio-nav prev noom">
 	<a href="?p=noom">Noom</a>
 </div>
-<div class="folio-nav next smrtwatr">
-	<a href="?p=smrtwatr">SMRT WATR</a>
+<div class="folio-nav next chameleon">
+	<a href="?p=chameleon">Chameleon</a>
 </div>
 
 <div class="tldr" markdown=1>

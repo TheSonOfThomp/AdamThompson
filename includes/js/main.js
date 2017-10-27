@@ -1,38 +1,37 @@
 var hideResumeText = true
 
 $(document).ready(function(){
-	// resizePortfolio()
+
+	$('.hamburger-icon').click(function(){
+		$('.hamburger-list').slideToggle()
+		$('.fa-bars', this).toggle()
+		$('.fa-times', this).toggle()
+	});
+
+	$('#nav-portfolio').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $("#portfolio").offset().top
+	    }, 1000);
+	})
+
+	$('#nav-about').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $("#about").offset().top
+	    }, 1000);
+	})
 	// Toggle the Show More/Less buttons in Resume
-	function toggleContent(ths){
-		$('.resume-list',ths).slideToggle();
-		$('.show', ths).toggleClass('more').toggleClass('less')
-	}
-	$('.job').click(function(){
-		toggleContent(this)
-	});
-	$('.school').click(function(){
-		toggleContent(this)
-	});
-
-	// var mixer = mixitup('#gallery', {
-	//     selectors: {
-	//         target: '.folio-item'
-	//     },
-	//     load: {
-	//         filter: '.featured',
-	//         sort: 'feature-rank:asc'
-	//     }
+	// function toggleContent(ths){
+	// 	$('.resume-list',ths).slideToggle();
+	// 	$('.show', ths).toggleClass('more').toggleClass('less')
+	// }
+	// $('.job').click(function(){
+	// 	toggleContent(this)
+	// });
+	// $('.school').click(function(){
+	// 	toggleContent(this)
 	// });
 
-	// $('.filter').click(function(){
-	// 	$('.filter.active').removeClass('active');
-	// 	$(this).addClass('active')
-	// });
 });
-
-// $(window).resize(function(){
-// 	resizePortfolio();
-// });
 
 function resizePortfolio(){
 	// Portfolio grid misalignment fix on Firefox
@@ -45,10 +44,3 @@ function resizePortfolio(){
 	})
 
 }
-// function toggleMorePortfolio() {
-// 	$('.more-portfolio').slideToggle(); // Toggle display
-// 	$('.button .show').toggleClass('more').toggleClass('less');
-// 	if ($('.button .show').hasClass('more')) {
-// 		$(window).scrollTop($('.about').position().top)
-// 	}
-// }
