@@ -1,5 +1,5 @@
 /* ---------------------- PORTFOLIO ---------------------- */
-$portfolio-margin: 16px
+$portfolio-margin: 8px
 
 section.portfolio.default
 	position: relative
@@ -146,7 +146,21 @@ section.portfolio.default
 				a:hover
 					.folio-title
 						color: $tap
-		
+			&#your-project
+				margin-bottom: -2px
+				img
+					background-color: $yours
+					+radialGradient($yours_light, $yours)
+				.folio-hover
+					left: 2px
+					bottom: 2px
+
+				a
+					// margin-right: 2*$portfolio-margin
+					border: 2px dotted $med_grey
+					&:hover, &:focus
+						.hover-state
+							background-color: $transparent
 
 		&.more-portfolio
 			margin-top: $portfolio-margin * 2
