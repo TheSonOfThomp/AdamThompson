@@ -24,78 +24,66 @@
 		.header-contents
 			margin: $global-margin auto
 			.title
-				font-size: 60px
-				width: 90%
+				width: 100%
 				margin: auto
-			.tagline 
+				display: block
 				text-align: center
-				font-size: 24px
+				
+				.nav-list
+					padding-top: 16px
+					font-size: 16px
+					display: block
+					li
+						display: block
+						padding: 16px
+						text-align: center
+						.fa
+							padding-right: 0
+		.hero
+			margin: $global-margin 0
+			.headline
+				font-size: 56px
+			.bio-text
+				display: none
+			.bg-letter, 
+			.bg-letter.split-ux
+				opacity: 0.2
+				font-size: 384px
 	.section-header
 		max-width: 100%
 		text-align: center
 
-	/* ------------ BIO - MOBILE ------------ */
-	.bio 
-		height: auto
-		margin-top: 0
-		margin-bottom: 0
-		.container
-			text-align: center
-		.bio-pic 
-			display: inline-block
-			position: relative
-			float: none
-			clear: left
-			width: 50%
-			max-width: 192px
-			height: auto
-			margin: 36px auto
-			text-align: center
-			transform: rotateZ(0deg)
-			-moz-transform: rotateZ(0deg)
-			-webkit-transform: rotateZ(0deg) 
-		.bio-text 
-			float: none
-			clear: left
-			min-width: 100%
-			max-width: 100%
-			text-align: center
-			line-height: 1.2em
-			padding: 0
-			margin: $global-margin auto	
-			p 
-				margin-bottom: 1rem
-				width: 100%
-				line-height: 1.5em	
-
 	/* ------------ PORTFOLIO - MOBILE ------------ */
-	section.portfolio 
-		$portfolio-margin: 16px
+	section.portfolio,
+	section.portfolio.default
+		$portfolio-margin: 8px
 		margin: 0
 		max-height: none
 		.gallery
-			.folio-item 
-				width: 100%
-				height: auto
-				margin: $portfolio-margin 0
-				a
-					margin: $portfolio-margin
-					&:active .hover-state
-						+backdrop-filter(saturate(2))
-						background-color: $white
-						// border: 1px solid $med_grey
-					.hover-state
-						opacity: 1
-						margin: $portfolio-margin
-						.folio-hover 
-							width: 100%
-							padding: 16px 16px 0px 4px
-							background-color: $white_trans
-							max-width: 100%
-							.folio-title
-								font-size: 2rem
-							.folio-description
-								padding-bottom: 16px
+			ul
+				margin: 0
+				.folio-item 
+					width: 100%
+					height: auto
+					margin: $portfolio-margin 0
+					a
+						margin: 0
+						&:active .hover-state
+							+backdrop-filter(saturate(2))
+							background-color: $white
+							// border: 1px solid $med_grey
+						.hover-state
+							opacity: 1
+							margin: 0
+							.folio-hover 
+								width: 100%
+								padding: 16px 16px 0px 4px
+								background-color: $white_trans
+								max-width: 100%
+								.folio-title
+									font-size: 2rem
+								.folio-description
+									padding-bottom: 16px
 				&#noom
 					.folio-title
 						color: $noom
@@ -134,8 +122,8 @@
 		.social-container
 			display: block
 			.button
-				margin: 1rem
-				margin-top: $global-margin
+				margin: 1rem 0
+				width: 100%
 			.social-list
 				width: 100%
 				margin: 0
@@ -153,6 +141,7 @@
 						.social-logo
 							width: 33%
 							// padding-bottom: 25%
+
 
 	/* ------------ Blog - MOBILE ------------ */
 

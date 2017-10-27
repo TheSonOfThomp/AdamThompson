@@ -2,7 +2,8 @@
 // $display-font: 'acta-display', 'didot', serif
 $sans-serif: 'europa', 'gill sans', sans-serif
 $body-font: 'Merriweather', serif
- 
+
+
 // -------- Colours -------- //
 // --- Neutrals --- //
 $white: #FEFEFE
@@ -14,7 +15,7 @@ $dark_grey_trans: rgba(51,51,51,0.75)
 $black: #333333
 $transparent: rgba(250,250,250,0)
 
-// --- Greens --- //
+// --- Duller Greens --- //
 // $bg_green: #FBFFF5
 // $white_green: #EDF2E6
 // $white_green_trans: rgba(237,242,230,0.75)
@@ -25,15 +26,31 @@ $transparent: rgba(250,250,250,0)
 $white_green: #E9FFE0
 $white_green_trans: rgba(238,255,229,0.75)
 $light_green: #E1FAD4
-$green: #55A82F
+// $green: #55A82F
+$green: #2AC51B
 $dark_green: #2B5C12
 
 // --- Brand Colours --- //
 $noom: #4271d7
+$noom_light: #719AFC
+
 $knowroaming: #4286b5
-$smrtwatr: #756393
+$knowroaming_light: #6DAFDB
+
+$smrtwatr: #785FA3//#756393
+$smrtwatr_light: #A18BCC//#AB9FC1
+
 $chameleon: #2e8c5d
+$chameleon_light: #73D3A2
+
 $zynga: #DD3B30
+$zynga_light: #DD3B30
+
+$tap: #518CB8 //#AA95E8//#444444
+$tap_light: #83AECC// #8D76CC//#888888
+
+$yours: $light_grey
+$yours_light: $white_trans
 
 // -------- Measurements -------- //
 $global-margin: 72px
@@ -52,6 +69,15 @@ $max-width: 920px
 	background: -o-linear-gradient(top,  $top 0%, $bottom $end) /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  $top 0%, $bottom $end) /* IE10+ */
 	background: linear-gradient(to bottom,  $top 0%, $bottom $end) /* W3C */
+
+=radialGradient($from, $to)
+	background: -moz-radial-gradient(center, circle cover, $from 0%, $to 100%)
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $from), color-stop(100%, $to))
+	background: -webkit-radial-gradient(center, circle cover, $from 0%, $to 100%)
+	background: -o-radial-gradient(center, circle cover, $from 0%, $to 100%)
+	background: -ms-radial-gradient(center, circle cover, $from 0%, $to 100%)
+	background: radial-gradient(center, circle cover, $from 0%, $to 100%)
+	background-color: $to
 
 =border-radius($radius)
 	-webkit-border-radius: $radius
@@ -183,25 +209,31 @@ html
 	justify-content: center
 
 .button
-	display: inline-block
+	display: block
 	font-family: $sans-serif
 	font-size: 16px
 	font-weight: 400
 	color: $black
 	text-decoration: none
-	padding: 1em
-	margin: 1em
+	padding: 1em 0
+	margin: 1em auto
 	border: 2px solid $black
 	+animate-elements(color, 0.15s, ease-in-out)
 	+animate-elements(background-color, 0.15s, ease-in-out)
+	+animate-elements(border-color, 0.15s, ease-in-out)
 	+border-radius(1px)
 
+	
 	&:hover
 		color: $white
 		background-color: $black
+		// border-color: $black
+		// text-decoration: none
 
 	&.large
-		width: 50%
+		width: 100%
+		max-width: $max-width
+
 	&.green
 		color: $green
 		font-weight: 600

@@ -1,8 +1,8 @@
-<div class="folio-nav next noom">
-	<a href="?p=noom">Noom</a>
+<div class="folio-nav prev knowroaming">
+	<a href="?p=knowroaming">KnowRoaming</a>
 </div>
-<div class="folio-nav prev home">
-	<a href="../">Home</a>
+<div class="folio-nav next smrtwatr">
+	<a href="?p=smrtwatr">SMRTWATR</a>
 </div>
 
 # Chameleon

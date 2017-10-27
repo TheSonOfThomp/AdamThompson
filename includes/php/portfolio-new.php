@@ -4,9 +4,10 @@
 	$folio_obj = json_decode($json_string, true);
 	$featured = $folio_obj["portfolio-featured"];
 	$folio_rest = $folio_obj["portfolio"];
+	
 ?>
 
-<section class="portfolio default full-width" id="portfolio">
+<section class="portfolio" id="portfolio">
   <div class="gallery featured" id="gallery">
     <ul>
     <?php
@@ -19,15 +20,15 @@
 		data-published-date="<?php echo $item['date']?>">
 		
 		<a href="<?php echo $root_path ?>/Portfolio/?p=<?php echo $item['id']?>">
-			<div class="hover-state">
-				<div class="folio-hover">
-					<span class="folio-title"><?php echo $item["name"]?></span>
-					<br/>
-					<span class="folio-description"><?php echo $item["description"]?></span>
-					<span class="folio-type"><?php echo $item["type"]?></span>
+			<div class="folio-header">
+				<div class="folio-title">
+				<?php echo $item["name"]?>
 				</div>
+				<div class="folio-description">
+					<?php echo $item["description"]?>
+				</div>
+				<img src="<?php echo $root_path ?>/includes/portfolio_images/<?php echo $item['image_url']?>">
 			</div>
-			<img src="<?php echo $root_path ?>/includes/portfolio_images/<?php echo $item['image_url']?>">
 		</a>
 	</li>
 
