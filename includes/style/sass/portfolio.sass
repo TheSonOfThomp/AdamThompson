@@ -1,5 +1,5 @@
 /* ---------------------- PORTFOLIO ---------------------- */
-$portfolio-margin: 20px
+$portfolio-margin: 16px
 
 section.portfolio.default
 	position: relative
@@ -30,6 +30,7 @@ section.portfolio.default
 			padding: 0
 			margin: 0
 			width: 50%
+			margin-bottom: -4px // yeah... it works
 
 			&.folio-rest
 				width: 33%
@@ -54,8 +55,8 @@ section.portfolio.default
 				-webkit-backdrop-filter
 				position: absolute
 				top: 0 
-				// bottom: 4px // it works
-				bottom: 0
+				bottom: 4px // idk... it works
+				// bottom: 0
 				left: 0 
 				right: 0
 				margin: $portfolio-margin
@@ -74,7 +75,7 @@ section.portfolio.default
 					position: absolute
 					left: 0
 					bottom: 0
-					padding: 32px 32px 0px 8px
+					padding: 32px 32px 8px 8px
 					max-width: 80%
 					background-color: $white
 					color: $black
@@ -138,6 +139,13 @@ section.portfolio.default
 				a:hover
 					.folio-title
 						color: $chameleon
+			&#tap
+				img
+					background-color: $tap
+					+radialGradient($tap_light, $tap)
+				a:hover
+					.folio-title
+						color: $tap
 		
 
 		&.more-portfolio
@@ -145,7 +153,7 @@ section.portfolio.default
 			.folio-item
 				.hover-state
 					.folio-hover
-						padding: 16px 16px 0px 4px
+						padding: 16px 16px 4px 4px
 						.folio-title
 							font-size: 1.5rem
 							font-weight: 600
@@ -157,7 +165,8 @@ section.portfolio.default
 		width: 100%
 		max-width: $max-width
 		padding: 1em 0
-		margin-top: $portfolio-margin * 2
+		// margin-top: $portfolio-margin * 2
+		margin-top: $global-margin
 		.fa
 			padding: 0 2px
 			font-size: 16px

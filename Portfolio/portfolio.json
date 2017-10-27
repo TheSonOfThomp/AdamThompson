@@ -35,7 +35,17 @@
 			"date": "2015-08-26",
 			"type": "Product Design",
 			"tags": ["mech", "software", "ux", "ui", "hardware"]
+		},
+		{
+			"id": "tap",
+			"name": "Tap Metronome",
+			"description": "For easy band practice.",
+			"image_url": "tap/tap-metronome-purple.png",
+			"date": "2017-10-14",
+			"type": "iOS Development",
+			"tags": ["ios", "software", "ux", "ui"]
 		}
+
 	],
 	"portfolio": [
 		{
@@ -46,15 +56,6 @@
 			"date": "2016-08-20",
 			"type": "Product Management",
 			"tags": ["pm", "ux", "data"]
-		},
-		{
-			"id": "tap-metronome",
-			"name": "Tap Metronome",
-			"description": "",
-			"image_url": "tap-metronome.png",
-			"date": "2016-09-10",
-			"type": "iOS Development",
-			"tags": ["ios", "software", "ux", "ui"]
 		},
 		{
 			"id": "colourtherm",

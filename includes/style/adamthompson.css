@@ -345,7 +345,7 @@ section.portfolio.default {
   section.portfolio.default .gallery {
     position: relative;
     width: auto;
-    margin: 20px;
+    margin: 16px;
     display: inline-block;
     max-width: 1440px; }
     section.portfolio.default .gallery ul {
@@ -361,12 +361,13 @@ section.portfolio.default {
       float: left;
       padding: 0;
       margin: 0;
-      width: 50%; }
+      width: 50%;
+      margin-bottom: -4px; }
       section.portfolio.default .gallery .folio-item.folio-rest {
         width: 33%; }
       section.portfolio.default .gallery .folio-item a {
         display: inline-block;
-        margin: 20px; }
+        margin: 16px; }
         section.portfolio.default .gallery .folio-item a:hover .hover-state, section.portfolio.default .gallery .folio-item a:focus .hover-state {
           background-color: rgba(250, 250, 250, 0.8); }
         section.portfolio.default .gallery .folio-item a img {
@@ -382,10 +383,10 @@ section.portfolio.default {
         transition: background-color 0.15s ease-in-out;
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: 4px;
         left: 0;
         right: 0;
-        margin: 20px;
+        margin: 16px;
         text-align: left;
         cursor: pointer;
         display: flex;
@@ -398,7 +399,7 @@ section.portfolio.default {
           position: absolute;
           left: 0;
           bottom: 0;
-          padding: 32px 32px 0px 8px;
+          padding: 32px 32px 8px 8px;
           max-width: 80%;
           background-color: #FEFEFE;
           color: #333333;
@@ -445,16 +446,16 @@ section.portfolio.default {
       section.portfolio.default .gallery .folio-item#noom a:hover .folio-title {
         color: #4271d7; }
       section.portfolio.default .gallery .folio-item#smrtwatr img {
-        background-color: #756393;
-        background: -moz-radial-gradient(center, circle cover, #AB9FC1 0%, #756393 100%);
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #AB9FC1), color-stop(100%, #756393));
-        background: -webkit-radial-gradient(center, circle cover, #AB9FC1 0%, #756393 100%);
-        background: -o-radial-gradient(center, circle cover, #AB9FC1 0%, #756393 100%);
-        background: -ms-radial-gradient(center, circle cover, #AB9FC1 0%, #756393 100%);
-        background: radial-gradient(center, circle cover, #AB9FC1 0%, #756393 100%);
-        background-color: #756393; }
+        background-color: #785FA3;
+        background: -moz-radial-gradient(center, circle cover, #A18BCC 0%, #785FA3 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #A18BCC), color-stop(100%, #785FA3));
+        background: -webkit-radial-gradient(center, circle cover, #A18BCC 0%, #785FA3 100%);
+        background: -o-radial-gradient(center, circle cover, #A18BCC 0%, #785FA3 100%);
+        background: -ms-radial-gradient(center, circle cover, #A18BCC 0%, #785FA3 100%);
+        background: radial-gradient(center, circle cover, #A18BCC 0%, #785FA3 100%);
+        background-color: #785FA3; }
       section.portfolio.default .gallery .folio-item#smrtwatr a:hover .folio-title {
-        color: #756393; }
+        color: #785FA3; }
       section.portfolio.default .gallery .folio-item#knowroaming img {
         background-color: #4286b5;
         background: -moz-radial-gradient(center, circle cover, #6DAFDB 0%, #4286b5 100%);
@@ -477,10 +478,21 @@ section.portfolio.default {
         background-color: #2e8c5d; }
       section.portfolio.default .gallery .folio-item#chameleon a:hover .folio-title {
         color: #2e8c5d; }
+      section.portfolio.default .gallery .folio-item#tap img {
+        background-color: #AA95E8;
+        background: -moz-radial-gradient(center, circle cover, #8D76CC 0%, #AA95E8 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #8D76CC), color-stop(100%, #AA95E8));
+        background: -webkit-radial-gradient(center, circle cover, #8D76CC 0%, #AA95E8 100%);
+        background: -o-radial-gradient(center, circle cover, #8D76CC 0%, #AA95E8 100%);
+        background: -ms-radial-gradient(center, circle cover, #8D76CC 0%, #AA95E8 100%);
+        background: radial-gradient(center, circle cover, #8D76CC 0%, #AA95E8 100%);
+        background-color: #AA95E8; }
+      section.portfolio.default .gallery .folio-item#tap a:hover .folio-title {
+        color: #AA95E8; }
     section.portfolio.default .gallery.more-portfolio {
-      margin-top: 40px; }
+      margin-top: 32px; }
       section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover {
-        padding: 16px 16px 0px 4px; }
+        padding: 16px 16px 4px 4px; }
         section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-title {
           font-size: 1.5rem;
           font-weight: 600; }
@@ -491,7 +503,7 @@ section.portfolio.default {
     width: 100%;
     max-width: 920px;
     padding: 1em 0;
-    margin-top: 40px; }
+    margin-top: 72px; }
     section.portfolio.default .button .fa {
       padding: 0 2px;
       font-size: 16px; }
@@ -501,7 +513,7 @@ section.portfolio.full-width .gallery {
   margin: 0;
   max-width: none; }
   section.portfolio.full-width .gallery ul {
-    margin: -20px; }
+    margin: -16px; }
 
 /* ---------------------- NEW BRUTALIST PORTFOLIO ---------------------- */
 section.portfolio.brutal {
@@ -599,9 +611,9 @@ section.portfolio.brutal {
         section.portfolio.brutal .gallery .folio-item#noom a:hover .folio-title {
           color: #4271d7; }
       section.portfolio.brutal .gallery .folio-item#smrtwatr a:hover {
-        border: 8px solid #756393; }
+        border: 8px solid #785FA3; }
         section.portfolio.brutal .gallery .folio-item#smrtwatr a:hover .folio-title {
-          color: #756393; }
+          color: #785FA3; }
       section.portfolio.brutal .gallery .folio-item#knowroaming a:hover {
         border: 8px solid #4286b5; }
         section.portfolio.brutal .gallery .folio-item#knowroaming a:hover .folio-title {
@@ -991,12 +1003,12 @@ footer {
   background: #CFDCE6;
   border-color: #4286b5; }
 .portfolio-page .smrtwatr.small-header {
-  background-color: #756393; }
+  background-color: #785FA3; }
 .portfolio-page .smrtwatr h2, .portfolio-page .smrtwatr p a, .portfolio-page .smrtwatr figure a, .portfolio-page .smrtwatr .tldr-title, .portfolio-page .smrtwatr.folio-nav a:hover {
-  color: #756393; }
+  color: #785FA3; }
 .portfolio-page .smrtwatr.folio-nav:hover, .portfolio-page .smrtwatr.folio-nav:active {
   background: #D7CFE6;
-  border-color: #756393; }
+  border-color: #785FA3; }
 .portfolio-page .chameleon.small-header {
   background-color: #2e8c5d; }
 .portfolio-page .chameleon h2, .portfolio-page .chameleon p a, .portfolio-page .chameleon figure a, .portfolio-page .chameleon .tldr-title, .portfolio-page .chameleon.folio-nav a:hover {
@@ -1011,6 +1023,13 @@ footer {
 .portfolio-page .zynga.folio-nav:hover, .portfolio-page .zynga.folio-nav:active {
   background: #E6D0CF;
   border-color: #DD3B30; }
+.portfolio-page .tap.small-header {
+  background-color: #AA95E8; }
+.portfolio-page .tap h2, .portfolio-page .tap p a, .portfolio-page .tap figure a, .portfolio-page .tap .tldr-title, .portfolio-page .tap.folio-nav a:hover {
+  color: #AA95E8; }
+.portfolio-page .tap.folio-nav:hover, .portfolio-page .tap.folio-nav:active {
+  background: #E6D0CF;
+  border-color: #AA95E8; }
 .portfolio-page header {
   position: relative;
   display: flex;
@@ -1341,7 +1360,7 @@ body.portfolio section.portfolio.sticky {
         color: #4271d7; }
       section.portfolio .gallery ul#smrtwatr .folio-title,
       section.portfolio.default .gallery ul#smrtwatr .folio-title {
-        color: #756393; }
+        color: #785FA3; }
       section.portfolio .gallery ul#knowroaming .folio-title,
       section.portfolio.default .gallery ul#knowroaming .folio-title {
         color: #4286b5; }
