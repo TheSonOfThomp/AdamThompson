@@ -12,13 +12,11 @@
 
 #### Users were having trouble navigating the core meal-logging flow because the buttons weren’t obvious and changed behaviour depending on use case. We needed to fix this.
 
-#### We consolidated the user flow and UI, making it consistent in all use cases. Through meticulous user-testing we designed an interface that eliminated hesitation and uncertainty.
+#### I consolidated the user flow and UI, making it consistent in all use cases. Through meticulous user-testing we designed an interface that eliminated hesitation and uncertainty.
 </div>
 
 <figure class='folio_image' id='hero'>
-	<a target='_blank'>
 		<img src='../includes/portfolio_images/noom/noom_logging.jpg'>
-	</a>
 <figcaption></figcaption>
 </figure>
 
@@ -35,9 +33,13 @@ Noom—based in midtown Manhattan—combats obesity, diabetes, and hypertension 
 
 We observed users' and saw that they were often unsure of what to do when navigating between different views while logging food. People weren't noticing the _back_ or _check_ buttons, and the buttons didn't always work the way people expected them to. On top of that, the UI and flow would subtly change depending on the entry case.
 
+### Mental Models
+
+After observing some tests and asking questions to testers in person, we were able to nail down what we saw to be the most common mental model for the people tested. By establishing a grocery shopping metaphor and how users expected each to behave, we developed a concept model for the food-logging feature that we would use to base future design decisions off.
+
 <figure class='folio_image' id='img2'>
-		<img src='../includes/portfolio_images/noom/noom_existing.jpg'>
-<figcaption>My attempt to make sense of the existing workflow.</figcaption>
+		<img src='../includes/portfolio_images/noom/noom-concept-model.png'>
+<figcaption>The Grocery shopping metaphor used to communicate the concept model during the design process.</figcaption>
 </figure>
 
 ##Requirements
@@ -82,14 +84,14 @@ These weren’t two _separate_ screens, but two parts of one experience. By desi
 
 I made this Origami prototype next, and while the interactions are a little over-designed, they effectively convey the single-context of food logging. 
 
-<figure class='folio_image' id='img2'>
+<figure class='folio_image' id='origami-prototype'>
 	<iframe src="https://player.vimeo.com/video/157767592/?title=0&amp;byline=0&amp;loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <figcaption>I would need to tone down the animation if I wanted to get developers to build this.</figcaption>
 </figure>
 
 Finally, we had a single close button for both views, and an intuitive way to flip between them. I toned down the interaction to make it simpler to build, and by keeping a static close button and making the header a uniform size, it was possible to achieve the feeling of a single context for meal logging.
 
-<figure class='folio_image' id='img2'>
+<figure class='folio_image' id='final-prototype'>
 	<iframe src="https://player.vimeo.com/video/157767466/?title=0&amp;byline=0&amp;loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <figcaption>The final prototype I sent to the development team</figcaption>
 </figure>
