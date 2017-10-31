@@ -1198,6 +1198,7 @@ footer {
     display: inherit;
     position: relative;
     width: 100%;
+    max-width: 720px;
     height: auto;
     margin: 72px auto;
     padding: 12px 0;
@@ -1221,14 +1222,16 @@ footer {
       line-height: 1.5em;
       max-width: 50%;
       margin: 0 auto; }
-    .portfolio-page .gallery-content .folio_image#hero img {
-      max-height: none; }
-    .portfolio-page .gallery-content .folio_image#hero figcaption, .portfolio-page .gallery-content .folio_image#hero figcaption a {
-      color: #FEFEFE; }
     .portfolio-page .gallery-content .folio_image.images-2 img, .portfolio-page .gallery-content .folio_image.images-2 iframe {
       max-width: 40%;
       padding: 1%;
       margin: auto; }
+    .portfolio-page .gallery-content .folio_image#hero {
+      max-width: none; }
+      .portfolio-page .gallery-content .folio_image#hero img {
+        max-height: none; }
+      .portfolio-page .gallery-content .folio_image#hero figcaption, .portfolio-page .gallery-content .folio_image#hero figcaption a {
+        color: #FEFEFE; }
   .portfolio-page .gallery-content blockquote {
     border-left: 1px solid #2AC51B;
     padding-left: 1em;
