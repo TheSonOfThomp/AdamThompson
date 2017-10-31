@@ -16,11 +16,12 @@
 #### Practicing to a metronome as a group can be difficult since everyone needs to be able to hear the click. Tap Metronome uses the screen as an indicator so everyone can stay in sync when making music. Just put your phone on a music stand, and jam away.
 </div>
 
+
 <figure class='folio_image' id='img1'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/tap/tap-metronome-blue.png'>
 	</a>
-<figcaption><a href="">Available on the App Store!</a></figcaption>
+<figcaption><a href="https://itunes.apple.com/us/app/tap-metronome/id1300298573?">Available on the App Store!</a></figcaption>
 </figure>
 
 Tap Metronome was inspired while I was practicing with the Water Boys a cappella group. We were struggling to stay together, and couldn't all hear the metronome clicks while singing. We needed a way to stay in time, but not rely on being able to hear the clicks.
