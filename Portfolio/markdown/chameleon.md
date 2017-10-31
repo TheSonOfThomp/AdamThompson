@@ -18,7 +18,7 @@
 
 <figure class='folio_image' id='hero'>
 	<a target='_blank'>
-		<img src='../includes/portfolio_images/chameleon/chameleon-hero.jpg'>
+		<img src='../includes/portfolio_images/chameleon/chameleon-side-render-isolated.png'>
 	</a>
 <figcaption></figcaption>
 </figure>
