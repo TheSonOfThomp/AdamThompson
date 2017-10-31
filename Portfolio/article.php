@@ -14,7 +14,7 @@
 <main class="portfolio-page <?php echo $p ?>">
 	<header class="small-header <?php echo $p ?>">
 			<a class="back hide" onclick="window.history.back()"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Portfolio</a>
-			<a href="<?php echo $root_path; ?>/">Adam Thompson</a>
+			<a class="header-title" href="<?php echo $root_path; ?>/">Adam Thompson</a>
 			<script type="text/javascript">
 			if (document.referrer == "<?php echo $root_path ?>/Portfolio/")
 				$('a.back').removeClass('hide');

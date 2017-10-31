@@ -16,7 +16,7 @@
 </div>
 
 <figure class='folio_image' id='hero'>
-		<img src='../includes/portfolio_images/noom/noom_logging.jpg'>
+	<img src='../includes/portfolio_images/noom/noom_logging-isolated.png'>
 <figcaption></figcaption>
 </figure>
 

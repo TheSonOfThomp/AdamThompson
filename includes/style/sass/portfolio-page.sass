@@ -7,65 +7,84 @@
 
 .portfolio-page
 
+	$folio-max-width: 720px
+
 	// Custom Colours //
 	.home
 		h2,p a, &.folio-nav a:hover
 			color: $green
 	.noom 
-		&.small-header
-			background-color: $noom
+		&.small-header .header-title
+			border-bottom: 2px solid $noom
 		h2, p a, figure a, .tldr-title, 
 		&.folio-nav a:hover
 			color: $noom
 		&.folio-nav:hover, &.folio-nav:active
 			background: #CFD5E6
 			border-color: $noom
+		figure#hero
+			+radialGradient($noom_light, $noom)
+
+
 	.knowroaming, [class^="kr_"], [class*=" kr_"] 
-		&.small-header
-			background-color: $knowroaming
+		&.small-header .header-title
+			border-bottom: 2px solid $knowroaming
 		h2, p a, figure a, .tldr-title, 
 		&.folio-nav a:hover
 			color: $knowroaming
 		&.folio-nav:hover, &.folio-nav:active
 			background: #CFDCE6
 			border-color: $knowroaming
+		figure#hero
+			+radialGradient($knowroaming_light, $knowroaming)
+
 	.smrtwatr 
-		&.small-header
-			background-color: $smrtwatr
+		&.small-header .header-title
+			border-bottom: 2px solid $smrtwatr
 		h2, p a, figure a, .tldr-title, 
 		&.folio-nav a:hover
 			color: $smrtwatr
 		&.folio-nav:hover, &.folio-nav:active
 			background: #D7CFE6
 			border-color: $smrtwatr
+		figure#hero
+			+radialGradient($smrtwatr_light, $smrtwatr)
+
 	.chameleon 
-		&.small-header
-			background-color: $chameleon
+		&.small-header .header-title
+			border-bottom: 2px solid $chameleon
 		h2, p a, figure a, .tldr-title, 
 		&.folio-nav a:hover
 			color: $chameleon
 		&.folio-nav:hover, &.folio-nav:active
 			background: #CFE6DA
 			border-color: $chameleon
+		figure#hero
+			+radialGradient($chameleon_light, $chameleon)
+
 	.zynga
-		&.small-header
-			background-color: $zynga
+		&.small-header .header-title
+			border-bottom: 2px solid $zynga
 		h2, p a, figure a, .tldr-title, 
 		&.folio-nav a:hover
 			color: $zynga
 		&.folio-nav:hover, &.folio-nav:active
 			background: #E6D0CF
 			border-color: $zynga
+		figure#hero
+			+radialGradient($zynga_light, $zynga)
 
 	.tap
-		&.small-header
-			background-color: $tap
+		&.small-header .header-title
+			border-bottom: 2px solid $tap
 		h2, p a, figure a, .tldr-title, 
 		&.folio-nav a:hover
 			color: $tap
 		&.folio-nav:hover, &.folio-nav:active
 			background: #CEE4F5
 			border-color: $tap
+		figure#hero
+			+radialGradient($tap_light, $tap)
 
 	header
 		position: relative
@@ -75,20 +94,24 @@
 		top: 0
 		z-index: 10
 		width: 100%
-		height: $global-margin
+		margin-top: $global-margin/2
 		text-align: center
-		background-color: $dark_grey
 
 		&.small-header
-			color: $white
+
 			a
 				position: relative
 				display: inline-block
 				margin: auto
 				font-family: $sans-serif
-				font-size: 24px
-				color: $white
+				color: $black
+				&.header-title
+					font-size: 36px
+					text-align: left
+					width: 100%
+					max-width: $folio-max-width
 				&.back
+					font-size: 24px
 					position: absolute
 					top: 50%
 					left: 0
@@ -163,12 +186,10 @@
 			font-size: 16px
 
 		.single-column
-			// width: 100%
-			// max-width: 720px
 			margin: 0 auto
 			h1, h2, h3, h4, h5, h6, p, ol, table, hr
 				width: 100%
-				max-width: 720px
+				max-width: $folio-max-width
 				margin-left: auto
 				margin-right: auto
 
@@ -180,23 +201,18 @@
 			display: inherit
 			position: relative
 			width: 100%
-			max-width: 920px
 			height: auto
-			margin: 0 auto
+			margin: $global-margin auto
 			padding: 12px 0
 			text-align: center
 
 			img
 				position: relative
 				display: inline-block
-				max-width: 100%
+				max-width: 768px
 				max-height: 440px
 				height: auto
 				margin: 8px
-
-			&#hero
-				img
-					max-height: none
 
 			iframe
 				width: 80%
@@ -211,6 +227,12 @@
 				line-height: 1.5em
 				max-width: 50%
 				margin: 0 auto
+
+			&#hero
+				img
+					max-height: none
+				figcaption, figcaption a
+					color: $white
 
 			&.images-2
 				img, iframe
@@ -241,7 +263,7 @@
 			ol
 				text-align: left
 				width: 100%
-				max-width: 720px
+				max-width: $folio-max-width
 
 		sup a::before
 			// content: '['
@@ -263,7 +285,7 @@
 	a 
 		display: inline-block
 		min-width: 64px
-		padding: 4px
+		padding: 8px
 		text-decoration: none
 		color: $dark_grey
 		&:hover

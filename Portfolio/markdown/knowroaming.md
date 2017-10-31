@@ -16,7 +16,7 @@
 </div>
 
 <figure class='folio_image' id='hero'>
-		<img src='../includes/portfolio_images/knowroaming/knowroaming.jpg'>
+		<img src='../includes/portfolio_images/knowroaming/knowroaming-app-isolated.png'>
 <figcaption></figcaption>
 </figure>
 

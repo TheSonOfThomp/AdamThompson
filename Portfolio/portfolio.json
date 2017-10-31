@@ -35,7 +35,10 @@
 			"date": "2015-08-26",
 			"type": "Product Design",
 			"tags": ["mech", "software", "ux", "ui", "hardware"]
-		},
+		}
+
+	],
+	"portfolio": [
 		{
 			"id": "tap",
 			"name": "Tap Metronome",
@@ -44,10 +47,7 @@
 			"date": "2017-10-14",
 			"type": "iOS Development",
 			"tags": ["ios", "software", "ux", "ui"]
-		}
-
-	],
-	"portfolio": [
+		},
 		{
 			"id": "zynga",
 			"name": "Zynga",

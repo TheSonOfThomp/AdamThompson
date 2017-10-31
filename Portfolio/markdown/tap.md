@@ -17,7 +17,7 @@
 </div>
 
 
-<figure class='folio_image' id='img1'>
+<figure class='folio_image' id='hero'>
 	<a target='_blank'>
 		<img src='../includes/portfolio_images/tap/tap-metronome-blue.png'>
 	</a>
