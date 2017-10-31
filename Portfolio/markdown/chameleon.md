@@ -69,7 +69,7 @@ I spent the next 4 months working on all aspects of the design: electronics, emb
 
 After a few dozen smaller scale prototypes to test each part of the system independently, we finally had a working full-system prototype.
 
-<figure class='folio_image' id='hero'>
+<figure class='folio_image' id='prototype3d'>
 		<img src='../includes/portfolio_images/chameleon/finished-prototype.jpg'>
 <figcaption>The final 3D printed prototype, with Teensy controller enclosure.</figcaption>
 </figure>
@@ -84,7 +84,7 @@ We showcased our prototype at the Systems Design Engineering Symposium where we 
 </figure>
 
 
-<figure class='folio_image' id='hero'>
+<figure class='folio_image' id='norman-esch-demo'>
 		<img src='../includes/portfolio_images/chameleon/prototype-demo.jpg'>
 <figcaption>Demonstrating the prototype at Norman Esch finals, where we<a href="https://uwaterloo.ca/engineering/news/six-teams-win-10000-each-annual-esch-awards" target="_blank"> won a $10,000 prize</a> for our pitch and demo!</figcaption>
 </figure>

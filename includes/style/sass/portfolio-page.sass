@@ -201,6 +201,7 @@
 			display: inherit
 			position: relative
 			width: 100%
+			max-width: $folio-max-width
 			height: auto
 			margin: $global-margin auto
 			padding: 12px 0
@@ -228,17 +229,18 @@
 				max-width: 50%
 				margin: 0 auto
 
-			&#hero
-				img
-					max-height: none
-				figcaption, figcaption a
-					color: $white
-
 			&.images-2
 				img, iframe
 					max-width: 40%
 					padding: 1%
 					margin: auto
+
+			&#hero
+				max-width: none
+				img
+					max-height: none
+				figcaption, figcaption a
+					color: $white
 
 		blockquote
 			border-left: 1px solid $green
