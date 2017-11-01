@@ -37,8 +37,8 @@
   <!-- Are we looking at the portfolio on the home page, or in the portfolio page? -->
  	<?php 
  	if (!$see_more) { ?>
- 		<a class="button large" href="<?php echo $root_path ?>/Portfolio" >See more work <i class="fa fa-arrow-right" aria-hidden="true"></i>
- 		</a>
+ 		<!-- <a class="button large" href="<?php echo $root_path ?>/Portfolio" >See more work <i class="fa fa-arrow-right" aria-hidden="true"></i>
+ 		</a> -->
  	</div>
  	<?php }
  	else { ?>

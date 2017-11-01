@@ -11,9 +11,9 @@
 <div class="tldr" markdown=1>
 ## The simple metronome for easy band practice.
 
-#### Most metronome apps have many irrelevant controls that can cause distractions when practicing. Tap Metronome has a simple interface to set or tap the tempo and start practicing.
+#### Practicing with a metronome as a group can be difficult since everyone needs to be able to hear the click. Tap Metronome uses the screen as an indicator so everyone can stay in sync when making music. Just put your phone on a music stand, and jam away.
 
-#### Practicing to a metronome as a group can be difficult since everyone needs to be able to hear the click. Tap Metronome uses the screen as an indicator so everyone can stay in sync when making music. Just put your phone on a music stand, and jam away.
+#### Many common metronome apps have interface controls that can cause distractions when practicing. Tap Metronome has a simple interface to set or tap the tempo and start practicing.
 </div>
 
 
@@ -31,7 +31,7 @@ Now with Tap Metronome, you can put your phone on a music stand where everyone c
 I started Tap metronome as a Hack the North 2016 projects, and continued working on it in Fall 2017. 
 
 
-<figure class='folio_image' id='img1'>
+<figure class='folio_image multi-image' id='img1'>
 	<img src='../includes/portfolio_images/tap/tap-metronome-red.png'>
 	<img src='../includes/portfolio_images/tap/tap-metronome-orange.png'>
 	<img src='../includes/portfolio_images/tap/tap-metronome-yellow.png'>
