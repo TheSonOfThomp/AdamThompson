@@ -1149,7 +1149,7 @@ footer {
     font-weight: bold;
     margin: 0 auto 24px auto; }
   .portfolio-page .gallery-content h3 {
-    font-size: 20px;
+    font-size: 32px;
     font-family: "europa", "gill sans", sans-serif;
     font-weight: 400;
     line-height: 1.6em;
@@ -1200,7 +1200,7 @@ footer {
     width: 100%;
     max-width: 720px;
     height: auto;
-    margin: 72px auto;
+    margin: 12px auto;
     padding: 12px 0;
     text-align: center; }
     .portfolio-page .gallery-content .folio_image img {
@@ -1209,9 +1209,9 @@ footer {
       max-width: 768px;
       max-height: 440px;
       height: auto;
-      margin: 8px; }
+      margin: 8px auto; }
     .portfolio-page .gallery-content .folio_image iframe {
-      width: 80%;
+      width: 100%;
       height: 560px; }
     .portfolio-page .gallery-content .folio_image figcaption {
       text-align: center;
@@ -1222,12 +1222,15 @@ footer {
       line-height: 1.5em;
       max-width: 50%;
       margin: 0 auto; }
-    .portfolio-page .gallery-content .folio_image.images-2 img, .portfolio-page .gallery-content .folio_image.images-2 iframe {
-      max-width: 40%;
-      padding: 1%;
-      margin: auto; }
+    .portfolio-page .gallery-content .folio_image.multi-image {
+      max-width: 1080px; }
+      .portfolio-page .gallery-content .folio_image.multi-image img, .portfolio-page .gallery-content .folio_image.multi-image iframe {
+        max-width: 40%;
+        padding: 12px 24px;
+        margin: auto; }
     .portfolio-page .gallery-content .folio_image#hero {
-      max-width: none; }
+      max-width: none;
+      margin: 72px auto; }
       .portfolio-page .gallery-content .folio_image#hero img {
         max-height: none; }
       .portfolio-page .gallery-content .folio_image#hero figcaption, .portfolio-page .gallery-content .folio_image#hero figcaption a {
@@ -1265,6 +1268,8 @@ footer {
   font-size: 1rem;
   cursor: pointer;
   background-color: rgba(250, 250, 250, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   z-index: 10; }
   .folio-nav a {
     display: inline-block;

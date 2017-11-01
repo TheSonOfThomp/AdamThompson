@@ -38,13 +38,13 @@ Not trusting the product was a big issue, and needed to be addressed. It was my 
 There are a lot of functions in KnowRoaming that needed to make it into the app, from rate calculator, to phone number management. We needed a way to efficiently layout these functions for users in as flat an architecture as possible.
 
 <figure class='folio_image' id='super-flat'>
-<a target='_blank'>
 	<img src='../includes/portfolio_images/knowroaming/super-flat-architecture.png'>
-</a>
-<figcaption></figcaption>
+<figcaption>The ideal—albeit unrealistic—information architecture for the KnowRoaming app</figcaption>
 </figure>
 
-Since we couldn't easily fit all the options on the home screen, a prototype we tried used drawer-style navigation. This let nearly all navigation elements to be viewed at a glance, with a dashboard-style home screen.
+This super-flat architecture assumes equal importance to all of these functions—but all features aren't created equal. I and the team looked at these elements, and determined which were core to the use of our service, and which were secondary. 
+
+Since we couldn't easily fit all the options on the home screen, we tested a drawer-style navigation that let the important functions be visible in a dashboard-style home screen, with secondary functions in the drawer.
 
 
 <figure class='folio_image' id='home-drawer'>
@@ -55,7 +55,7 @@ Since we couldn't easily fit all the options on the home screen, a prototype we 
 
 This prototype tested well in-house, but the "hamburger menu" wasn't always found right away. Given that one primary persona was non digital-natives, an [undiscoverable drawer](https://uxdesign.cc/death-by-hamburger-2d1db115352a#.865mhybml) would not be the best navigation option. 
 
-I went back to a tab bar design but took inspiration and Yelp, adding a unique central tab, and a _more_ drawer tab. 
+I went back to a tab bar as in the original app but took inspiration and Yelp and others, adding a unique, more salient, central tab, and a _more_ drawer tab. 
 
 <!-- <figure class='folio_image' id='tab-bars'>
 	<img src='../includes/portfolio_images/knowroaming/tab-bar1.png'>
@@ -68,7 +68,7 @@ In addition to the rest of what I mention in this article, I also re-designed ea
 ## Ready to Roam
 We also noticed the "Ready to Roam" functionality was too hidden, and would need to be a more prominent feature on the home screen. 
 
-<figure class='folio_image' id='ready-to-roam'>
+<figure class='folio_image multi-image' id='ready-to-roam'>
 	<img src='../includes/portfolio_images/knowroaming/sketch-ReadyToRoam1.jpg'>
 	<img src='../includes/portfolio_images/knowroaming/sketch-home-expand.jpg'>
 	<img src='../includes/portfolio_images/knowroaming/sketch-home-bubbles.jpg'>
@@ -88,9 +88,9 @@ We shipped this version of the homescreen and saw good feedback on the new UI st
 
 ## Three Phases
 
-I took inspiration from how use of the product was being marketed, and decided to try and split the app into the three use conditions: 1) At Home, 2) Abroad, 3) Arriving Home.
+I took inspiration from how the product was being marketed, and decided to try and split the app into the three use conditions: 1) At Home, 2) Abroad, 3) Arriving Home.
 
-<figure class='folio_image' id='phases-home'>
+<figure class='folio_image multi-image' id='phases-home'>
 <a target='_blank'>
 	<img src='../includes/portfolio_images/knowroaming/silver_portrait-at_home.png'>
 	<img src='../includes/portfolio_images/knowroaming/silver_portrait-abroad.png'>
@@ -107,7 +107,7 @@ KnowRoaming is a complex system. Involving multiple cell networks, a SIM Sticker
 
 After registration, users are presented with a short tutorial, explaining the three phases, and how to know they are "Ready to Roam". We also designed coach marks that play whenever a user changes phases.
 
-<figure class='folio_image' id='tutorial'>
+<figure class='folio_image multi-image' id='tutorial'>
 	<img src='../includes/portfolio_images/knowroaming/tutorial/tutorial-2.png'>
 	<img src='../includes/portfolio_images/knowroaming/tutorial/tutorial-3.png'>
 	<img src='../includes/portfolio_images/knowroaming/tutorial/tutorial-4.png'>
