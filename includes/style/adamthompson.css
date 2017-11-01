@@ -1609,13 +1609,6 @@ body.portfolio section.portfolio.sticky {
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
 @media screen and (min-width: 1441px) {
-  header.main-header .header-contents {
-    margin: 144px 0; }
-    header.main-header .header-contents .title {
-      font-size: 112px; }
-    header.main-header .header-contents .tagline {
-      font-size: 48px; }
-
   section.portfolio .gallery {
     margin: 0; }
     section.portfolio .gallery .folio-item {
