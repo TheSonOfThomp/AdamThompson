@@ -33,10 +33,10 @@ Noom—based in midtown Manhattan—combats obesity, diabetes, and hypertension 
 
 We observed users' and saw that they were often unsure of what to do when navigating between different views while logging food. People weren't noticing the _back_ or _check_ buttons, and the buttons didn't always work the way people expected them to. On top of that, the UI and flow would subtly change depending on the entry case.
 
-<figure class='folio_image' id='existing-flowchart'>
+<!-- <figure class='folio_image' id='existing-flowchart'>
 		<img src='../includes/portfolio_images/noom/noom_existing-flowchart.jpg'>
 <figcaption>The Grocery shopping metaphor used to communicate the concept model during the design process.</figcaption>
-</figure>
+</figure> -->
 
 ### Mental Models
 
