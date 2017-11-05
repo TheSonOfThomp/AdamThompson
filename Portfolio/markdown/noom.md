@@ -42,7 +42,7 @@ We observed users' and saw that they were often unsure of what to do when naviga
 
 We noticed that part of the issue may be that the concept model of the feature may not be in sync with common mental models that users had.
 
-After observing some tests and asking questions to our testers, we were able to nail down what we saw to be the most common mental model for the people tested. By establishing a grocery shopping metaphor and how users expected each to behave, we developed a concept model for the food-logging feature that we would use to base future design decisions off.
+After observing some remote tests and asking direct questions to local testers, we were able to nail down what we saw to be the most common mental model for the people tested. By establishing a grocery shopping metaphor and how users expected each to behave, we developed a concept model for the food-logging feature that we would use to base future design decisions off.
 
 <figure class='folio_image' id='concept-model'>
 		<img src='../includes/portfolio_images/noom/noom-concept-model.png'>

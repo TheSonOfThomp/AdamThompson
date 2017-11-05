@@ -293,29 +293,26 @@ header.main-header {
         margin: 0 auto;
         color: #333333;
         padding: 1em 0;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        -ms-border-radius: 2px;
-        border-radius: 2px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
         -webkit-transition: background-color 0.1s ease-in-out;
         -moz-transition: background-color 0.1s ease-in-out;
         transition: background-color 0.1s ease-in-out; }
         .social-container .social-list li.social-media a .social-name {
-          padding-top: 0.1em;
-          text-align: center;
-          display: inline-block;
-          width: 100%;
           display: none; }
+        .social-container .social-list li.social-media a i.fa {
+          font-size: 48px;
+          padding: 0;
+          margin: auto;
+          -webkit-transition: color 0.1s ease-in-out;
+          -moz-transition: color 0.1s ease-in-out;
+          transition: color 0.1s ease-in-out; }
         .social-container .social-list li.social-media a:hover {
-          background-color: #E9FFE0; }
-          .social-container .social-list li.social-media a:hover .social-name {
-            font-weight: 600; }
-        .social-container .social-list li.social-media a .social-logo {
-          width: 40%;
-          margin: 0 auto;
-          background-size: contain;
-          background-position: 50%;
-          background-repeat: no-repeat; }
+          background-color: #e6e6e6; }
+          .social-container .social-list li.social-media a:hover i.fa {
+            color: #111; }
   .social-container.light .social-media {
     padding: 0 0; }
 
@@ -984,7 +981,7 @@ footer {
   margin-top: 72px;
   font-size: 12px;
   line-height: 1.6rem;
-  background-color: #333333;
+  background-color: #2AC51B;
   color: #FEFEFE;
   padding-bottom: 24px;
   text-align: center; }
@@ -998,7 +995,8 @@ footer {
       text-align: center;
       color: #FEFEFE;
       font-family: "europa", "gill sans", sans-serif;
-      font-size: 14px; }
+      font-weight: 400;
+      font-size: 16px; }
 
 /* ---------------------- PORTFOLIO PAGE ---------------------- */
 .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading a, .wf-loading .tldr, .wf-loading .folio-nav {

@@ -2,25 +2,29 @@
 	<ul class="social-list dark" id="social">
 		<li class="social-media tooltip">
 			<a href="https://www.instagram.com/TheSonOfThomp" target="_blank">
-				<img class="social-logo" id="instagram" src="<?php echo $root_path.'/includes/image_assets/social/instagram_dark.png' ?>" />
+				<!-- <img class="social-logo" id="instagram" src="<?php echo $root_path.'/includes/image_assets/social/instagram_dark.png' ?>" /> -->
+				<i class="fa fa-instagram" aria-hidden="true"></i>
 				<span class="social-name">Instagram</span>
 			</a>
 		</li>
 		<li class="social-media tooltip">
 			<a href="https://www.twitter.com/TheSonOfThomp" target="_blank">
-				<img class="social-logo" id="twitter" src="<?php echo $root_path.'/includes/image_assets/social/twitter_dark.png' ?>" />
+				<!-- <img class="social-logo" id="twitter" src="<?php echo $root_path.'/includes/image_assets/social/twitter_dark.png' ?>" /> -->
+				<i class="fa fa-twitter" aria-hidden="true"></i>
 				<span class="social-name">Twitter</span>
 			</a>
 		</li>
 		<li class="social-media tooltip">
 			<a href="https://ca.linkedin.com/in/adammthompson" target="_blank">
-				<img class="social-logo" id="linkedin" src="<?php echo $root_path.'/includes/image_assets/social/linkedin_dark.png' ?>" />
+				<!-- <img class="social-logo" id="linkedin" src="<?php echo $root_path.'/includes/image_assets/social/linkedin_dark.png' ?>" /> -->
+				<i class="fa fa-linkedin-square" aria-hidden="true"></i>
 				<span class="social-name">LinkedIn</span>
 			</a>
 		</li>
 		<li class="social-media tooltip hide-mobile">
 			<a href="http://www.github.com/Adam93MT" target="_blank">
-				<img class="social-logo" id="git" src="<?php echo $root_path.'/includes/image_assets/social/git_dark.png' ?>" />
+				<!-- <img class="social-logo" id="git" src="<?php echo $root_path.'/includes/image_assets/social/git_dark.png' ?>" /> -->
+				<i class="fa fa-github" aria-hidden="true"></i>
 				<span class="social-name">GitHub</span>
 			</a>
 		</li>
