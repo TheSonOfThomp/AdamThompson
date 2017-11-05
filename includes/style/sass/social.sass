@@ -36,33 +36,37 @@
 				margin: 0 auto
 				color: $black
 				padding: 1em 0
-				+border-radius(2px)
+				+border-radius(4px)
 				+animate-elements(background-color, 0.1s, ease-in-out)
 
 				.social-name
-					padding-top: 0.1em
-					text-align: center
-					display: inline-block
-					width: 100%
+					// padding-top: 0.1em
+					// text-align: center
+					// display: inline-block
+					// width: 100%
 					display: none
+
+				i.fa
+					font-size: 48px
+					padding: 0
+					margin: auto
+					+animate-elements(color, 0.1s, ease-in-out)
 					
 				&:hover
-					background-color: $white_green
-					// +box-shadow(0px, 1px, 2px, $black)
-					.social-name
-						// opacity: 1
-						font-weight: 600
-						// color: $green
-						// text-decoration: underline
+					background-color: $light_grey
+					i.fa
+						color: #111
 
-				.social-logo
-					$logo-size: 40%
-					width: $logo-size
-					// padding-bottom: $logo-size
-					margin: 0 auto
-					background-size: contain
-					background-position: 50%
-					background-repeat: no-repeat
+
+
+				// .social-logo
+				// 	$logo-size: 40%
+				// 	width: $logo-size
+				// 	// padding-bottom: $logo-size
+				// 	margin: 0 auto
+				// 	background-size: contain
+				// 	background-position: 50%
+				// 	background-repeat: no-repeat
 
 	&.light
 		.social-media
