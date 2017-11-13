@@ -6,10 +6,10 @@
 
 
 .portfolio-page
-
+	position: relative
 	$folio-max-width: 720px
 
-	// Custom Colours //
+	// ---------- Custom Colours---------- //
 	.home
 		h2,p a, &.folio-nav a:hover
 			color: $green
@@ -85,6 +85,7 @@
 			border-color: $tap
 		figure#hero
 			+radialGradient($tap_light, $tap)
+	// ---------- /Custom Colours---------- //
 
 	header
 		position: relative
@@ -105,6 +106,8 @@
 				margin: auto
 				font-family: $sans-serif
 				color: $black
+				&:hover
+					text-decoration: none
 				&.header-title
 					font-size: 36px
 					text-align: left
@@ -121,7 +124,6 @@
 		position: relative
 		display: inline-block
 		width: 100%
-		margin: auto auto $global-margin auto
 
 		.portfolio-title
 			width: 100%
@@ -274,54 +276,6 @@
 		sup a::after
 			// content: ']'
 
-/* ------ Navigation ------ */
-.folio-nav 
-	position: fixed
-	display: block
-	bottom: 50%
-	font-family: $sans-serif
-	font-weight: 400
-	font-size: 1rem
-	cursor: pointer
-	background-color: $white_trans
-	+backdrop-filter(blur(4px))
-	z-index: 10
-	
-	a 
-		display: inline-block
-		min-width: 64px
-		padding: 8px
-		text-decoration: none
-		color: $dark_grey
-		&:hover
-			text-decoration: none
-			color: $green
-	a:before
-		position: relative
-		display: block
-		color: $black
-		text-decoration: none
-	&.prev
-		a:before
-			content: 'Prev:'
-		left: 0
-		text-align: left
-		border-left: 8px solid $med_grey
-		a
-			padding-left: 12px
-	&.next
-		a:before
-			content: 'Next:'
-		right: 0
-		text-align: right
-		border-right: 8px solid $med_grey
-		a
-			padding-right: 12px
-
-	&:hover, &:active
-		background: $light_green
-		border-color: $green
-
 // --------- Full Portfolio Page -------- //
 body.portfolio
 	header.portfolio
@@ -364,3 +318,54 @@ body.portfolio
 			margin-top: 270px
 
 
+/* ------ Navigation ------ */
+nav
+	.folio-nav 
+		position: fixed
+		display: block
+		bottom: 0
+		font-family: $sans-serif
+		font-size: 16px
+		cursor: pointer
+		background-color: $white_trans
+		+backdrop-filter(blur(4px))
+		z-index: 10
+		
+		a 
+			display: inline-block
+			min-width: 96px
+			padding: 12px
+			text-decoration: none
+			font-weight: 600
+			color: $dark_grey
+			&:hover
+				text-decoration: none
+				color: $green
+		a:before
+			position: relative
+			display: block
+			color: $dark_grey
+			font-weight: 400
+			text-decoration: none
+		&.prev
+			a:before
+				content: 'Prev:'
+			left: 0
+			text-align: left
+			border-left: 8px solid $med_grey
+			+border-radius(0 4px 0 0)
+			a
+				padding-left: 12px
+		&.next
+			a:before
+				content: 'Next:'
+			right: 0
+			text-align: right
+			border-right: 8px solid $med_grey
+			+border-radius(4px 0 0 0)
+			a
+				padding-right: 12px
+
+		&:hover, &:active
+			background: $light_green
+			border-color: $green

@@ -1,11 +1,11 @@
 # KnowRoaming
 
-<div class="folio-nav prev noom">
+<!-- <div class="folio-nav prev noom">
 	<a href="?p=noom">Noom</a>
 </div>
 <div class="folio-nav next chameleon">
 	<a href="?p=chameleon">Chameleon</a>
-</div>
+</div> -->
 
 <div class="tldr" markdown=1>
 ## An interface that shows the important information, no matter where you are.

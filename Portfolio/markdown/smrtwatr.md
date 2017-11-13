@@ -1,12 +1,12 @@
 # SMRT WATR
 
-<div class="folio-nav prev chameleon">
+<!-- <div class="folio-nav prev chameleon">
 	<a href="?p=chameleon">Chameleon</a>
 </div>
 
 <div class="folio-nav next tap">
 	<a href="?p=tap">TAP</a>
-</div>
+</div> -->
 
 <div class="tldr" markdown=1>
 ## The water fountain that's as interesting as your smartphone.
