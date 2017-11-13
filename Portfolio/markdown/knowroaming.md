@@ -8,7 +8,7 @@
 </div>
 
 <div class="tldr" markdown=1>
-## An interface showing the important information, no matter where you are.
+## An interface that shows the important information, no matter where you are.
 
 #### People were never quite sure if things were set up properly before traveling abroad. This made them uneasy and unsure whether to trust the product. 
 
