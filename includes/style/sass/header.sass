@@ -70,6 +70,12 @@ header.main-header
 			line-height: 2em
 			font-weight: 300
 			z-index: 10
+			@media screen and (max-width: 1330px)
+				&
+					width: 70%
+			@media screen and (max-width: 1108px)
+				&
+					display: none
 
 		.bg-letter
 			position: absolute
@@ -84,7 +90,7 @@ header.main-header
 			color: $green
 			font-weight: 600
 			font-size: 512px
-			opacity: 0.15
+			opacity: 0.25
 			z-index: 0
 			$letter-shift: 20%
 			&.split-ux
@@ -100,6 +106,7 @@ header.main-header
 
 	&.green-bg
 		background-color: $green
+		+box-shadow(8px, 0, 4px, $black)
 		.title
 			a.name
 				color: $white
