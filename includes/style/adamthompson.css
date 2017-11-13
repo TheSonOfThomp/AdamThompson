@@ -1378,17 +1378,27 @@ nav .folio-nav {
   .mobile-only {
     display: inline; }
 
+  h1.section-header {
+    font-size: 48px;
+    text-align: left;
+    margin-bottom: 18px; }
+
   /* ------------ HEADER - MOBILE ------------ */
   header.main-header {
     height: auto;
     padding-top: 0; }
     header.main-header .header-contents {
+      display: flex;
+      flex-direction: row;
       margin: 36px auto; }
       header.main-header .header-contents .title {
+        flex: 0;
         width: 100%;
         margin: auto;
         display: block;
         text-align: center; }
+        header.main-header .header-contents .title a {
+          white-space: nowrap; }
         header.main-header .header-contents .title .nav-list {
           padding-top: 16px;
           font-size: 16px;
@@ -1396,7 +1406,7 @@ nav .folio-nav {
           header.main-header .header-contents .title .nav-list li {
             display: block;
             padding: 16px;
-            text-align: center; }
+            text-align: right; }
             header.main-header .header-contents .title .nav-list li .fa {
               padding-right: 0; }
     header.main-header .hero {
@@ -1408,8 +1418,20 @@ nav .folio-nav {
       header.main-header .hero .bg-letter,
       header.main-header .hero .bg-letter.split-ux {
         opacity: 0.2;
-        font-size: 384px; }
+        font-size: 384px; } }
+      @media screen and (max-width: 768px) and (max-width: 496px) {
+        header.main-header .hero .bg-letter #u,
+        header.main-header .hero .bg-letter.split-ux #u {
+          position: absolute;
+          left: 0;
+          transform: translate(-25%, -50%); }
+        header.main-header .hero .bg-letter #x,
+        header.main-header .hero .bg-letter.split-ux #x {
+          position: absolute;
+          right: 0;
+          transform: translate(25%, -50%); } }
 
+@media screen and (max-width: 768px) {
   .section-header {
     max-width: 100%;
     text-align: center; }
@@ -1474,13 +1496,9 @@ nav .folio-nav {
       text-align: center; }
       section.about .container #bio {
         display: inline-block;
-        margin: 36px auto;
+        margin: 18px auto;
         text-align: center; }
-        section.about .container #bio .bio-pic {
-          margin: auto;
-          float: none; }
         section.about .container #bio .about-text {
-          margin: 24px 0;
           text-align: left; }
 
   /* ------------ SOCIAL - MOBILE ------------ */

@@ -17,17 +17,27 @@
 	.mobile-only 
 		display: inline
 
+	h1.section-header
+		font-size: 48px
+		text-align: left
+		margin-bottom: $global-margin/2
+
 	/* ------------ HEADER - MOBILE ------------ */
 	header.main-header
 		height: auto
 		padding-top: 0
 		.header-contents
+			display: flex
+			flex-direction: row
 			margin: $global-margin auto
 			.title
+				flex: 0
 				width: 100%
 				margin: auto
 				display: block
 				text-align: center
+				a
+					white-space: nowrap
 				
 				.nav-list
 					padding-top: 16px
@@ -36,7 +46,7 @@
 					li
 						display: block
 						padding: 16px
-						text-align: center
+						text-align: right
 						.fa
 							padding-right: 0
 		.hero
@@ -49,6 +59,17 @@
 			.bg-letter.split-ux
 				opacity: 0.2
 				font-size: 384px
+				$letter-shift: 25%
+				@media screen and (max-width: 496px)
+					#u
+						position: absolute
+						left: 0
+						transform: translate(-$letter-shift, -50%)
+					#x
+						position: absolute
+						right: 0
+						transform: translate($letter-shift, -50%)
+
 	.section-header
 		max-width: 100%
 		text-align: center
@@ -108,13 +129,13 @@
 			text-align: center
 			#bio
 				display: inline-block
-				margin: $global-margin auto
+				margin: $global-margin/2 auto
 				text-align: center
-				.bio-pic
-					margin: auto
-					float: none
+				// .bio-pic
+				// 	margin: auto
+				// 	float: none
 				.about-text
-					margin: 24px 0
+					// margin: 24px 0
 					text-align: left
 
 	/* ------------ SOCIAL - MOBILE ------------ */
