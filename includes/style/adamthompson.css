@@ -453,11 +453,11 @@ section.portfolio.default {
           display: none;
           font-size: 1rem;
           font-style: italic; }
-      @media screen and (max-width: 960px) {
-        section.portfolio.default .gallery .folio-item .folio-hover {
-          padding: 20px 20px 0px 8px; }
-          section.portfolio.default .gallery .folio-item .folio-hover .folio-title {
-            font-size: 2rem; } }
+        @media screen and (max-width: 960px) {
+          section.portfolio.default .gallery .folio-item .folio-info {
+            padding: 20px 20px 4px 8px; }
+            section.portfolio.default .gallery .folio-item .folio-info .folio-title {
+              font-size: 2rem; } }
       section.portfolio.default .gallery .folio-item#noom img {
         background-color: #4271d7;
         background: -moz-radial-gradient(center, circle cover, #719AFC 0%, #4271d7 100%);
@@ -513,24 +513,10 @@ section.portfolio.default {
         background-color: #518CB8; }
       section.portfolio.default .gallery .folio-item#tap a:hover .folio-title {
         color: #518CB8; }
-      section.portfolio.default .gallery .folio-item#your-project {
-        margin-bottom: -2px; }
-        section.portfolio.default .gallery .folio-item#your-project img {
-          background-color: #e6e6e6;
-          background: -moz-radial-gradient(center, circle cover, rgba(250, 250, 250, 0.5) 0%, #e6e6e6 100%);
-          background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(250, 250, 250, 0.5)), color-stop(100%, #e6e6e6));
-          background: -webkit-radial-gradient(center, circle cover, rgba(250, 250, 250, 0.5) 0%, #e6e6e6 100%);
-          background: -o-radial-gradient(center, circle cover, rgba(250, 250, 250, 0.5) 0%, #e6e6e6 100%);
-          background: -ms-radial-gradient(center, circle cover, rgba(250, 250, 250, 0.5) 0%, #e6e6e6 100%);
-          background: radial-gradient(center, circle cover, rgba(250, 250, 250, 0.5) 0%, #e6e6e6 100%);
-          background-color: #e6e6e6; }
-        section.portfolio.default .gallery .folio-item#your-project .folio-hover {
-          left: 2px;
-          bottom: 2px; }
-        section.portfolio.default .gallery .folio-item#your-project a {
-          border: 2px dotted #808080; }
-          section.portfolio.default .gallery .folio-item#your-project a:hover .hover-state, section.portfolio.default .gallery .folio-item#your-project a:focus .hover-state {
-            background-color: rgba(250, 250, 250, 0); }
+      section.portfolio.default .gallery .folio-item#tap a {
+        border: 2px dotted #808080; }
+        section.portfolio.default .gallery .folio-item#tap a:hover .hover-state, section.portfolio.default .gallery .folio-item#tap a:focus .hover-state {
+          background-color: rgba(250, 250, 250, 0); }
     section.portfolio.default .gallery.more-portfolio {
       margin-top: 16px; }
       section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover {

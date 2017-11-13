@@ -1,7 +1,7 @@
 <?php $page_title = ucfirst($page_id);
 	include_once('mySchoolTime.php');
-	
-	if ($_SERVER['SERVER_NAME'] == "localhost") {
+
+	if ($_SERVER['SERVER_NAME'] === "localhost") {
 		$DEBUG = true;
 		$root_path = 'http://localhost:9999/AdamThompson';
 	}

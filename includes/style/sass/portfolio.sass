@@ -56,7 +56,6 @@ section.portfolio.default
 				position: absolute
 				top: 0 
 				bottom: 4px // idk... it works
-				// bottom: 0
 				left: 0 
 				right: 0
 				margin: $portfolio-margin
@@ -73,7 +72,7 @@ section.portfolio.default
 				z-index: 10
 				position: absolute
 				left: 0
-				bottom: 4px
+				bottom: 4px // idfk
 				padding: 32px 32px 8px 16px
 				max-width: 80%
 				background-color: $white
@@ -96,7 +95,6 @@ section.portfolio.default
 					font-size: 1.2rem
 					font-family: $sans-serif
 					padding: 8px 0
-					// font-weight: 600
 				.folio-platform
 					display: none
 					font-size: 1rem
@@ -105,11 +103,11 @@ section.portfolio.default
 					display: none
 					font-size: 1rem
 					font-style: italic
-			@media screen and (max-width: 960px)
-				.folio-hover
-					padding: 20px 20px 0px 8px
-					.folio-title
-						font-size: 2rem
+				@media screen and (max-width: 960px)
+					&
+						padding: 20px 20px 4px 8px
+						.folio-title
+							font-size: 2rem
 			&#noom
 				img
 					background-color: $noom
@@ -145,17 +143,8 @@ section.portfolio.default
 				a:hover
 					.folio-title
 						color: $tap
-			&#your-project
-				margin-bottom: -2px
-				img
-					background-color: $yours
-					+radialGradient($yours_light, $yours)
-				.folio-hover
-					left: 2px
-					bottom: 2px
 
 				a
-					// margin-right: 2*$portfolio-margin
 					border: 2px dotted $med_grey
 					&:hover, &:focus
 						.hover-state
