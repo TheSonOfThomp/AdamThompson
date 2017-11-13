@@ -1,9 +1,9 @@
-<div class="folio-nav prev home">
+<!-- <div class="folio-nav prev home">
 	<a href="../">Home</a>
 </div>
 <div class="folio-nav next knowroaming">
 	<a href="?p=knowroaming">KnowRoaming</a>
-</div>
+</div> -->
 
 # Noom
 
