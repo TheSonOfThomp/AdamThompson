@@ -267,46 +267,58 @@
 	/* ------------ Portfolio Page - MOBILE ------------ */
 
 	.portfolio-page
-		.tldr
-			display: inline-block
-			.one-third
-				width: 50%
-				display: inline-block
-				margin: 16px auto
-				.inline
-					margin: 16px auto
-					.tldr-content
-						display: inline-block
+		header.small-header
+			a.header-title
+				text-align: center
+
 		.gallery-content
-			.folio_image
-				iframe
-					height: auto
+			margin-bottom: $global-margin*2
 			&.knowroaming h1
 				font-size: 48px
 			h1
-				font-size: 64px
-			h2
 				font-size: 56px
+			h2
+				font-size: 48px
 
 			.portfolio-title
 				width: 90%
-			.col
-				width: 90%
-			figure
+			.single-column
+				margin: 0 auto
+				h1, h2, h3, h4, h5, h6, p, ol, table, hr
+					width: 100%
+					max-width: 90%
+					margin-left: auto
+					margin-right: auto
+			.folio_image
+
+				img
+					max-width: 90%
+				&#hero
+					text-align: center
+					img
+						max-width: 60%
+						&#hero-iso
+							display: none
+						&#hero-iso-crop
+							display: block
 				.table
 					display: none
-		.folio-nav
-			// position: absolute
-			bottom: 0
-			width: 50%
-			max-width: 50%
-			background-color: $white_trans
-			+backdrop-filter(blur(4px))
-			border-left: 0
-			border-right: 0
-			border-bottom: 8px solid $med_grey
-			&:hover, &:active
-				background-color: $white_green
+				iframe
+					height: 256px
+		nav
+			.folio-nav
+				position: absolute
+				bottom: 0
+				width: 50%
+				max-width: 50%
+				background-color: $white_trans
+				+backdrop-filter(blur(4px))
+				+border-radius(0)
+				border-left: 0
+				border-right: 0
+				border-bottom: 8px solid $med_grey
+				&:hover, &:active
+					background-color: $white_green
 		.footnotes
 			display: none
 

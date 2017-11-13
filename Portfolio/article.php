@@ -48,14 +48,6 @@
 				$('a.back').removeClass('hide');
 			</script>
 	</header>
-	<nav>
-		<div class="folio-nav prev <?php echo $prev ?>">
-			<a href="<?php echo $prevURL ?>"><?php echo $prevName ?></a>
-		</div>
-		<div class="folio-nav next <?php echo $next ?>">
-			<a href="<?php echo $nextURL ?>"><?php echo $nextName ?></a>
-		</div>
-	</nav>
 
 	<article class="gallery-content <?php echo $p ?>">
 		<div class="col single-column">
@@ -64,4 +56,12 @@
 		?>
 		</div>
 	</article>
+	<nav>
+		<div class="folio-nav prev <?php echo $prev ?>">
+			<a href="<?php echo $prevURL ?>"><?php echo $prevName ?></a>
+		</div>
+		<div class="folio-nav next <?php echo $next ?>">
+			<a href="<?php echo $nextURL ?>"><?php echo $nextName ?></a>
+		</div>
+	</nav>
 </main>
