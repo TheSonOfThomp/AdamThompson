@@ -17,7 +17,7 @@
 <html lang="en">
 <head>
 	<script type="text/javascript">
-		var SERVER = <?php echo $_SERVER['SERVER_NAME']; ?>
+		var SERVER = "<?php echo $_SERVER['SERVER_NAME']; ?>"
 	</script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
