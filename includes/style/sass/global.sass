@@ -208,6 +208,14 @@ html
 	display: flex
 	justify-content: center
 
+.card
+	+animate-elements(box-shadow, 0.2s, ease-in-out)
+	+box-shadow(0, 4px, 8px, $med_grey)
+	&:hover, &:focus
+		+box-shadow(0, 8px, 8px, $med_grey)
+	&:active
+		+box-shadow(0, 2px, 8px, $med_grey)
+
 .button
 	display: block
 	font-family: $sans-serif
