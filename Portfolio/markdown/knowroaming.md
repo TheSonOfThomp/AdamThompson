@@ -1,12 +1,5 @@
 # KnowRoaming
 
-<!-- <div class="folio-nav prev noom">
-	<a href="?p=noom">Noom</a>
-</div>
-<div class="folio-nav next chameleon">
-	<a href="?p=chameleon">Chameleon</a>
-</div> -->
-
 <div class="tldr" markdown=1>
 ## An interface that shows the important information, no matter where you are.
 
@@ -43,7 +36,7 @@ There are a lot of functions in KnowRoaming that needed to make it into the app,
 <figcaption>The ideal—albeit unrealistic—information architecture for the KnowRoaming app</figcaption>
 </figure>
 
-This super-flat architecture assumes equal importance to all of these functions—but all features aren't created equal. I and the team looked at these elements, and determined which were core to the use of our service, and which were secondary. 
+This super-flat architecture assumes equal importance to all of these functions—but all features aren't created equal. The team and I looked at these elements, and determined which were core to the use of our service, and which were secondary. 
 
 Since we couldn't easily fit all the options on the home screen, we tested a drawer-style navigation that let the important functions be visible in a dashboard-style home screen, with secondary functions in the drawer.
 
@@ -56,7 +49,7 @@ Since we couldn't easily fit all the options on the home screen, we tested a dra
 
 This prototype tested well in-house, but the "hamburger menu" wasn't always found right away. Given that one primary persona was non digital-natives, an [undiscoverable drawer](https://uxdesign.cc/death-by-hamburger-2d1db115352a#.865mhybml) would not be the best navigation option. 
 
-I went back to a tab bar as in the original app but took inspiration and Yelp and others, adding a unique, more salient, central tab, and a _more_ drawer tab. 
+I went back to a tab bar as in the original app, but took inspiration from Yelp and others, adding a unique, more salient central tab, and a _more_ drawer tab. 
 
 <!-- <figure class='folio_image' id='tab-bars'>
 	<img src='../includes/portfolio_images/knowroaming/tab-bar1.png'>
