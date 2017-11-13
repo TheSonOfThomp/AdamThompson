@@ -13,20 +13,20 @@
     	foreach ($featured as $item) {
     ?>
 
-	<li class="folio-item featured 
+	<li class="folio-item featured
 		<?php foreach ($item['tags'] as $tag) { echo ' '.$tag;}?>" 
 		id="<?php echo $item['id']?>" 
 		data-published-date="<?php echo $item['date']?>">
 		
 		<a href="<?php echo $root_path ?>/Portfolio/?p=<?php echo $item['id']?>">
 			<div class="hover-state">
-				<div class="folio-hover">
+			</div>
+			<div class="folio-info">
 					<span class="folio-title"><?php echo $item["name"]?></span>
 					<br/>
 					<span class="folio-description"><?php echo $item["description"]?></span>
 					<span class="folio-type"><?php echo $item["type"]?></span>
 				</div>
-			</div>
 			<img src="<?php echo $root_path ?>/includes/portfolio_images/<?php echo $item['image_url']?>">
 		</a>
 	</li>
