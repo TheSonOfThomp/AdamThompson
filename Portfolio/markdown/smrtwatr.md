@@ -19,7 +19,7 @@
 <figure class='folio_image' id='hero'>
 		<img id="hero-iso" src='../includes/portfolio_images/smrtwatr/smrtwatr-isolated.png'>
 		<img id="hero-iso-crop" src='../includes/portfolio_images/smrtwatr/smrtwatr-isolated-crop.png'>
-<figcaption></figcaption>
+<figcaption>Logo and background design by Isaac Hunter. UI design by Adam Thompson.</figcaption>
 </figure>
 
 SMRT WATR (smart water) is an interactive fountain and mobile game IoT experience I developed along with [Josh Bradshaw](http://joshbradshaw.ca), [Isaac Hunter](https://isaachunter.ca), [Shubh Jagani](http://www.shubhjagani.com), [Matt Jones](https://www.linkedin.com/in/matt--jones/), and [Emma Cooper](https://www.linkedin.com/in/emmacooper2562/).
