@@ -4,14 +4,14 @@
 	$DEBUG = false;
 	$root_path = 'http://adamthompson.ca';
 
-	if ($_SERVER['SERVER_NAME'] === "localhost") {
-		$DEBUG = true;
-		$root_path = 'http://localhost:9999/AdamThompson';
-	}
-	else {
-		$DEBUG = false;
-		$root_path = 'http://adamthompson.ca';
-	}
+	// if ($_SERVER['SERVER_NAME'] === "localhost") {
+	// 	$DEBUG = true;
+	// 	$root_path = 'http://localhost:9999/AdamThompson';
+	// }
+	// else {
+	// 	$DEBUG = false;
+	// 	$root_path = 'http://adamthompson.ca';
+	// }
 
 	$show_resume = $_GET['resume'];	
 ?>
@@ -19,9 +19,6 @@
 	"http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
-	<script type="text/javascript">
-		var SERVER = "<?php echo $_SERVER['SERVER_NAME']; ?>"
-	</script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
