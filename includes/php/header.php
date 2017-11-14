@@ -1,7 +1,7 @@
 <header class="main-header">
 	<div class="header-contents">
 		<div class="title">
-			<a href="http://localhost:9999/AdamThompson/" class="name">Adam Thompson</a>
+			<a href="<?php echo $root_path ?>" class="name">Adam Thompson</a>
 			<ul class="nav-list">
 				<li><a id="nav-portfolio">Work</a></li>
 				<li><a id="nav-about">About</a></li>
