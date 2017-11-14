@@ -1,17 +1,14 @@
 <?php $page_title = ucfirst($page_id);
 	include_once('mySchoolTime.php');
 
-	$DEBUG = false;
-	$root_path = 'http://adamthompson.ca';
-
-	// if ($_SERVER['SERVER_NAME'] === "localhost") {
-	// 	$DEBUG = true;
-	// 	$root_path = 'http://localhost:9999/AdamThompson';
-	// }
-	// else {
-	// 	$DEBUG = false;
-	// 	$root_path = 'http://adamthompson.ca';
-	// }
+	if ($_SERVER['SERVER_NAME'] === "localhost") {
+		$DEBUG = true;
+		$root_path = 'http://localhost:9999/AdamThompson';
+	}
+	else {
+		$DEBUG = false;
+		$root_path = 'http://adamthompson.ca';
+	}
 
 	$show_resume = $_GET['resume'];	
 ?>
