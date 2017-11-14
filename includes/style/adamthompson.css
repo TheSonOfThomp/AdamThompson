@@ -1454,12 +1454,12 @@ nav .folio-nav {
         header.main-header .hero .bg-letter.split-ux #u {
           position: absolute;
           left: 0;
-          transform: translate(-25%, -50%); }
+          transform: translate(-21%, -50%); }
         header.main-header .hero .bg-letter #x,
         header.main-header .hero .bg-letter.split-ux #x {
           position: absolute;
           right: 0;
-          transform: translate(25%, -50%); } }
+          transform: translate(21%, -50%); } }
 
 @media screen and (max-width: 768px) {
   .section-header {
