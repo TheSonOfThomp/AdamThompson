@@ -3,7 +3,7 @@ var hideResumeText = true
 $(document).ready(function(){
 
 	$('.hamburger-icon').click(function(){
-		$('.hamburger-list').slideToggle()
+		$('.nav-list').slideToggle()
 		$('.fa-bars', this).toggle()
 		$('.fa-times', this).toggle()
 	});

@@ -164,7 +164,8 @@ header.main-header {
   text-align: center; }
   header.main-header .header-contents {
     margin: auto;
-    width: 100%; }
+    width: 100%;
+    z-index: 10; }
     header.main-header .header-contents em {
       font-style: normal; }
     header.main-header .header-contents .title {
@@ -173,20 +174,30 @@ header.main-header {
       width: 80%;
       max-width: 920px;
       margin: auto; }
-      header.main-header .header-contents .title a.name {
+      header.main-header .header-contents .title .name {
         white-space: nowrap;
         font-size: 36px;
         color: #333333;
         text-decoration: none;
         display: inline-block;
         cursor: pointer; }
-        header.main-header .header-contents .title a.name:hover {
+        header.main-header .header-contents .title .name:hover {
           text-decoration: none; }
+      header.main-header .header-contents .title .hamburger-icon {
+        padding: 2px;
+        text-align: right;
+        display: none;
+        cursor: pointer;
+        font-size: 24px; }
+      header.main-header .header-contents .title .hamburger-drawer {
+        display: flex;
+        flex-direction: row; }
       header.main-header .header-contents .title .nav-list {
         padding: 0;
         margin: 0;
         display: flex;
-        justify-content: center; }
+        justify-content: center;
+        width: 100%; }
         header.main-header .header-contents .title .nav-list li {
           list-style: none;
           display: inline-block;
@@ -199,10 +210,12 @@ header.main-header {
             border-bottom: 2px solid #2AC51B; }
   header.main-header .hero {
     position: relative;
+    display: inline-block;
     font-family: "europa", "gill sans", sans-serif;
     font-weight: 400;
     text-align: center;
-    margin: 144px auto; }
+    margin: 144px auto;
+    pointer-events: none; }
     header.main-header .hero > * {
       width: 80%;
       max-width: 920px;
@@ -246,11 +259,13 @@ header.main-header {
         header.main-header .hero .bg-letter.split-ux #u {
           position: absolute;
           left: 0;
-          transform: translate(-20%, -50%); }
+          transform: translate(-20%, -50%);
+          z-index: 0; }
         header.main-header .hero .bg-letter.split-ux #x {
           position: absolute;
           right: 0;
-          transform: translate(20%, -50%); }
+          transform: translate(20%, -50%);
+          z-index: 0; }
   header.main-header.green-bg {
     background-color: #2AC51B;
     -webkit-box-shadow: 8px 0 4px #333333;
@@ -1405,10 +1420,19 @@ nav .folio-nav {
         text-align: center; }
         header.main-header .header-contents .title a {
           white-space: nowrap; }
+        header.main-header .header-contents .title .hamburger-drawer {
+          margin: 4px 0;
+          display: flex;
+          flex-direction: column; }
+        header.main-header .header-contents .title .hamburger-icon {
+          display: inline-block; }
+          header.main-header .header-contents .title .hamburger-icon a {
+            text-decoration: none; }
+          header.main-header .header-contents .title .hamburger-icon .fa-times {
+            display: none; }
         header.main-header .header-contents .title .nav-list {
-          padding-top: 16px;
           font-size: 16px;
-          display: block; }
+          display: none; }
           header.main-header .header-contents .title .nav-list li {
             display: block;
             padding: 16px;

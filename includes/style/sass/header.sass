@@ -9,6 +9,7 @@ header.main-header
 	.header-contents
 		margin: auto
 		width: 100%
+		z-index: 10
 		em
 			font-style: normal
 
@@ -18,7 +19,7 @@ header.main-header
 			width: 80%
 			max-width: $max-width
 			margin: auto
-			a.name
+			.name
 				white-space: nowrap
 				font-size: 36px
 				color: $black
@@ -28,11 +29,23 @@ header.main-header
 				&:hover
 					text-decoration: none
 
+			.hamburger-icon
+				padding: 2px
+				text-align: right
+				display: none
+				cursor: pointer
+				font-size: 24px
+
+			.hamburger-drawer
+				display: flex
+				flex-direction: row
+
 			.nav-list
 				padding: 0
 				margin: 0
 				display: flex
 				justify-content: center
+				width: 100%
 				li
 					list-style: none
 					display: inline-block
@@ -46,10 +59,12 @@ header.main-header
 
 	.hero
 		position: relative
+		display: inline-block
 		font-family: $sans-serif
 		font-weight: 400
 		text-align: center
 		margin: $global-margin*2 auto
+		pointer-events: none
 
 		> * 
 			width: 80%
@@ -86,7 +101,6 @@ header.main-header
 			left: 0
 			right: 0
 			margin: auto
-			// color: $white
 			color: $green
 			font-weight: 600
 			font-size: 512px
@@ -99,10 +113,12 @@ header.main-header
 					position: absolute
 					left: 0
 					transform: translate(-$letter-shift, -50%)
+					z-index: 0
 				#x
 					position: absolute
 					right: 0
 					transform: translate($letter-shift, -50%)
+					z-index: 0
 
 	&.green-bg
 		background-color: $green

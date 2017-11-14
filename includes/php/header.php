@@ -1,12 +1,19 @@
 <header class="main-header">
 	<div class="header-contents">
 		<div class="title">
-			<a href="<?php echo $root_path ?>" class="name">Adam Thompson</a>
-			<ul class="nav-list">
-				<li><a id="nav-portfolio">Work</a></li>
-				<li><a id="nav-about">About</a></li>
-				<li><a href="mailto:adam.m.thompson@icloud.com">Contact</a><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+			<div>
+				<a href="<?php echo $root_path ?>" class="name">Adam Thompson
+				</a>
+			</div>
+			
+			<div class="hamburger-drawer">
+				<div class="hamburger-icon"><a><i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-times" aria-hidden="true"></i></a></div>
+				<ul class="nav-list">
+					<li id="nav-portfolio"><a>Work</a></li>
+					<li id="nav-about"><a>About</a></li>
+					<li id="nav-contact"><a href="mailto:adam.m.thompson@icloud.com">Contact</a><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
 			</ul>
+			</div>
 		</div>	
 	</div>
 	<div class="hero">
