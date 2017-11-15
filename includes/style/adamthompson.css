@@ -217,7 +217,7 @@ header.main-header {
     margin: 144px auto;
     pointer-events: none; }
     header.main-header .hero > * {
-      width: 80%;
+      width: 98%;
       max-width: 920px;
       margin: auto; }
     header.main-header .hero .headline {
@@ -226,7 +226,6 @@ header.main-header {
       font-weight: 600;
       z-index: 10; }
     header.main-header .hero .bio-text {
-      width: 50%;
       position: relative;
       text-align: center;
       font-family: "europa", "gill sans", sans-serif;
@@ -234,10 +233,7 @@ header.main-header {
       line-height: 2em;
       font-weight: 300;
       z-index: 10; }
-      @media screen and (max-width: 1330px) {
-        header.main-header .hero .bio-text {
-          width: 70%; } }
-      @media screen and (max-width: 1108px) {
+      @media screen and (max-width: 903px) {
         header.main-header .hero .bio-text {
           display: none; } }
     header.main-header .hero .bg-letter {
