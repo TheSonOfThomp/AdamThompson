@@ -26,7 +26,6 @@ html {
     background-color: #FEFEFE; }
   html section {
     display: inline-block;
-    margin: 72px 0;
     padding: 0;
     width: 100%;
     text-align: center; }
@@ -51,8 +50,8 @@ html {
   display: none; }
 
 .container {
-  width: 80%;
-  max-width: 920px;
+  width: 96%;
+  max-width: 960px;
   margin: 0 auto;
   height: 100%;
   position: relative;
@@ -60,7 +59,7 @@ html {
   text-align: center; }
   .container .content {
     width: 100%;
-    max-width: 920px;
+    max-width: 960px;
     margin: auto; }
 
 .shrinkwrap {
@@ -101,6 +100,30 @@ html {
 .flex {
   display: flex;
   justify-content: center; }
+
+.section-header {
+  width: 100%;
+  max-width: 960px;
+  margin: 32px auto;
+  color: #333333;
+  font-family: "europa", "gill sans", sans-serif;
+  text-align: center; }
+  .section-header .header-underline {
+    width: 67%;
+    margin: auto;
+    border-bottom: 1px solid #808080; }
+    .section-header .header-underline h1 {
+      display: inline-block;
+      margin: 48px auto;
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1em; }
+  .section-header.subsection .header-underline h1 {
+    color: #333333;
+    font-family: "europa", "gill sans", sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 32px auto; }
 
 .card {
   -webkit-transition: box-shadow 0.2s ease-in-out;
@@ -146,7 +169,7 @@ html {
     background-color: #333333; }
   .button.large {
     width: 100%;
-    max-width: 920px; }
+    max-width: 960px; }
   .button.green {
     color: #2AC51B;
     font-weight: 600;
@@ -158,7 +181,7 @@ html {
 /* -------------------- HEADER -------------------- */
 header.main-header {
   width: 100%;
-  padding: 32px 0 72px 0;
+  padding: 32px 0 32px 0;
   color: #333333;
   overflow: hidden;
   text-align: center; }
@@ -172,7 +195,7 @@ header.main-header {
       display: flex;
       justify-content: space-between;
       width: 80%;
-      max-width: 920px;
+      max-width: 960px;
       margin: auto; }
       header.main-header .header-contents .title .name {
         white-space: nowrap;
@@ -214,28 +237,18 @@ header.main-header {
     font-family: "europa", "gill sans", sans-serif;
     font-weight: 400;
     text-align: center;
-    margin: 144px auto;
+    margin: 224px auto;
     pointer-events: none; }
-    header.main-header .hero > * {
-      width: 98%;
-      max-width: 920px;
-      margin: auto; }
-    header.main-header .hero .headline {
+    header.main-header .hero * {
+      max-width: 960px;
+      margin: auto;
       position: relative;
-      font-size: 96px;
       font-weight: 600;
       z-index: 10; }
-    header.main-header .hero .bio-text {
-      position: relative;
-      text-align: center;
-      font-family: "europa", "gill sans", sans-serif;
-      font-size: 20px;
-      line-height: 2em;
-      font-weight: 300;
-      z-index: 10; }
-      @media screen and (max-width: 903px) {
-        header.main-header .hero .bio-text {
-          display: none; } }
+    header.main-header .hero .hero-name {
+      font-size: 112px; }
+    header.main-header .hero .tagline {
+      font-size: 56px; }
     header.main-header .hero .bg-letter {
       position: absolute;
       max-width: none;
@@ -263,44 +276,36 @@ header.main-header {
           transform: translate(20%, -50%);
           z-index: 0; }
   header.main-header.green-bg {
-    background-color: #2AC51B;
-    -webkit-box-shadow: 8px 0 4px #333333;
-    -moz-box-shadow: 8px 0 4px #333333;
-    box-shadow: 8px 0 4px #333333; }
+    background: #2AC51B;
+    background: -moz-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
+    background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #00EA49), color-stop(100%, #2AC51B));
+    background: -webkit-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
+    background: -o-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
+    background: -ms-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
+    background: linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
+    -webkit-box-shadow: 0 2px 2px #808080;
+    -moz-box-shadow: 0 2px 2px #808080;
+    box-shadow: 0 2px 2px #808080; }
     header.main-header.green-bg .title a.name {
       color: #FEFEFE; }
-    header.main-header.green-bg .title li a {
+    header.main-header.green-bg .title .nav-list li a, header.main-header.green-bg .title .fa {
       color: #FEFEFE; }
     header.main-header.green-bg .hero {
       color: #FEFEFE; }
+      header.main-header.green-bg .hero .bio-text {
+        font-weight: 400; }
       header.main-header.green-bg .hero .bg-letter {
-        opacity: 0.25;
-        color: #FEFEFE; }
+        opacity: 0.1;
+        color: #000; }
         header.main-header.green-bg .hero .bg-letter.split-ux {
           opacity: 0.55; }
-
-.section-header {
-  color: #333333;
-  font-family: "europa", "gill sans", sans-serif;
-  font-size: 5rem;
-  font-weight: 600;
-  text-align: left;
-  line-height: 1em;
-  margin: 36px 0; }
-
-.subsection-header {
-  color: #333333;
-  font-family: "europa", "gill sans", sans-serif;
-  font-weight: 300;
-  font-size: 2rem;
-  margin: 32px auto; }
 
 /* ---------------------- Social Bar ---------------------- */
 .social-container {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 920px; }
+  max-width: 960px; }
   .social-container .button {
     width: 33%;
     margin-right: 0; }
@@ -311,7 +316,7 @@ header.main-header {
     margin: 0;
     list-style: none;
     width: 100%;
-    max-width: 920px;
+    max-width: 960px;
     margin: auto auto; }
     .social-container .social-list .animate.social-media:hover {
       padding-top: 0.5rem;
@@ -373,7 +378,7 @@ section.portfolio.default {
   position: relative;
   display: block;
   width: 100%;
-  margin: 72px auto;
+  margin: 32px auto;
   text-align: center; }
   section.portfolio.default .gallery {
     position: relative;
@@ -540,7 +545,7 @@ section.portfolio.default {
   section.portfolio.default .button {
     font-size: 18px;
     width: 100%;
-    max-width: 920px;
+    max-width: 960px;
     padding: 1em 0;
     margin-top: 16px; }
     section.portfolio.default .button .fa {
@@ -559,14 +564,14 @@ section.portfolio.brutal {
   position: relative;
   display: block;
   width: 100%;
-  margin: 72px auto;
+  margin: 32px auto;
   text-align: center; }
   section.portfolio.brutal .gallery {
     position: relative;
     width: auto;
     margin: 16px;
     display: inline-block;
-    max-width: 920px; }
+    max-width: 960px; }
     section.portfolio.brutal .gallery ul {
       position: relative;
       display: inline-block;
@@ -609,42 +614,43 @@ section.portfolio.brutal {
         justify-content: center;
         -webkit-transform-style: preserve-3d;
         -webkit-backface-visibility: hidden; }
-        section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover {
-          position: relative;
-          max-width: 80%;
-          background-color: #FEFEFE;
+      section.portfolio.brutal .gallery .folio-item .folio-info {
+        position: relative;
+        margin: 0 auto;
+        max-width: 80%;
+        background-color: #FEFEFE;
+        color: #333333;
+        line-height: 1.8rem;
+        font-weight: 500; }
+        section.portfolio.brutal .gallery .folio-item .folio-info span {
+          display: inline-block;
+          margin: auto 12px; }
+        section.portfolio.brutal .gallery .folio-item .folio-info .folio-title {
+          font-size: 48px;
+          line-height: 1em;
+          font-family: "europa", "gill sans", sans-serif;
+          font-weight: 600;
           color: #333333;
-          line-height: 1.8rem;
-          font-weight: 500; }
-          section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover span {
-            display: inline-block;
-            margin: auto 12px; }
-          section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover .folio-title {
-            font-size: 48px;
-            line-height: 1em;
-            font-family: "europa", "gill sans", sans-serif;
-            font-weight: 600;
-            color: #333333;
-            -webkit-transition: color 0.1s ease-in-out;
-            -moz-transition: color 0.1s ease-in-out;
-            transition: color 0.1s ease-in-out; }
-          section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover .folio-description {
-            font-size: 20px;
-            font-family: "europa", "gill sans", sans-serif;
-            padding: 8px 0; }
-          section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover .folio-platform {
-            display: none;
-            font-size: 1rem;
-            font-family: "europa", "gill sans", sans-serif; }
-          section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover .folio-type {
-            display: none;
-            font-size: 1rem;
-            font-style: italic; }
-        @media screen and (max-width: 960px) {
-          section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover {
-            padding: 20px 20px 0px 8px; }
-            section.portfolio.brutal .gallery .folio-item .hover-state .folio-hover .folio-title {
-              font-size: 2rem; } }
+          -webkit-transition: color 0.1s ease-in-out;
+          -moz-transition: color 0.1s ease-in-out;
+          transition: color 0.1s ease-in-out; }
+        section.portfolio.brutal .gallery .folio-item .folio-info .folio-description {
+          font-size: 20px;
+          font-family: "europa", "gill sans", sans-serif;
+          padding: 8px 0; }
+        section.portfolio.brutal .gallery .folio-item .folio-info .folio-platform {
+          display: none;
+          font-size: 1rem;
+          font-family: "europa", "gill sans", sans-serif; }
+        section.portfolio.brutal .gallery .folio-item .folio-info .folio-type {
+          display: none;
+          font-size: 1rem;
+          font-style: italic; }
+      @media screen and (max-width: 960px) {
+        section.portfolio.brutal .gallery .folio-item .folio-hover {
+          padding: 20px 20px 0px 8px; }
+          section.portfolio.brutal .gallery .folio-item .folio-hover .folio-title {
+            font-size: 2rem; } }
       section.portfolio.brutal .gallery .folio-item#noom a:hover {
         border: 8px solid #4271d7; }
         section.portfolio.brutal .gallery .folio-item#noom a:hover .folio-title {
@@ -669,17 +675,17 @@ section.portfolio.brutal {
       section.portfolio.brutal .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-description {
         display: none; }
   section.portfolio.brutal .button {
-    margin-top: 72px;
+    margin-top: 32px;
     font-size: 18px;
     width: 100%;
-    max-width: 920px;
+    max-width: 960px;
     padding: 1em 0; }
     section.portfolio.brutal .button .fa {
       padding: 0 2px;
       font-size: 16px; }
 
 section.about {
-  margin-top: 108px; }
+  margin-top: 48px; }
   section.about #bio {
     display: inline-block; }
   section.about .bio-pic {
@@ -709,7 +715,7 @@ section.about {
   section.about #achievements {
     font-weight: 400; }
   section.about .social-container {
-    margin-top: 36px; }
+    margin-top: 16px; }
 
 /* ---------------------- BLOG ---------------------- */
 section.blog ul {
@@ -735,29 +741,23 @@ section.blog ul {
     float: right; }
 
 /* ---------------------- RESUME ---------------------- */
-section.resume .button {
-  margin: 0 auto; }
-section.resume .resume-header {
-  padding-left: 1rem;
-  width: 30%;
-  font-weight: 400;
-  border-bottom: 1px solid #505050; }
-  section.resume .resume-header .resume-title {
-    font-family: "europa", "gill sans", sans-serif;
-    font-size: 2rem;
-    line-height: 2em; }
-section.resume .container article {
+section.resume article {
   width: 100%;
   margin: auto;
   cursor: pointer; }
-  section.resume .container article .logo-container {
+  section.resume article.job, section.resume article.school {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 32px auto; }
+  section.resume article .logo-container {
     width: 96px;
     min-width: 96px;
     height: 100%;
     display: inline-block;
     line-height: 0;
-    margin: 0 36px 0 0; }
-    section.resume .container article .logo-container .logo {
+    margin-right: 16px; }
+    section.resume article .logo-container .logo {
       width: 100%;
       height: 0;
       padding-bottom: 100%;
@@ -765,40 +765,45 @@ section.resume .container article {
       background-size: 100%;
       background-position: 50%;
       background-repeat: no-repeat; }
-    section.resume .container article .logo-container a {
+    section.resume article .logo-container a {
       text-decoration: none;
       color: #505050; }
-  section.resume .container article .content-header {
+  section.resume article .content-header {
     display: flex;
     width: 100%;
     margin: auto; }
-    section.resume .container article .content-header .header-text {
+    section.resume article .content-header .header-text {
       margin: auto 0;
       text-align: left; }
-    section.resume .container article .content-header .item-institution {
+    section.resume article .content-header .item-institution {
       font-family: "europa", "gill sans", sans-serif;
       font-size: 2.5rem;
       font-weight: 600;
       display: inline-block;
       margin: 0;
       padding-right: 0.25em; }
-    section.resume .container article .content-header .item-title {
+    section.resume article .content-header .item-title {
       font-family: "europa", "gill sans", sans-serif;
       font-size: 2rem;
       font-weight: 400;
       display: inline-block;
       margin: auto;
       padding-right: 20px; }
-    section.resume .container article .content-header .item-duration, section.resume .container article .content-header .item-location, section.resume .container article .content-header .minor {
+    section.resume article .content-header .item-summary {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 400;
+      color: #505050; }
+    section.resume article .content-header .item-duration, section.resume article .content-header .item-location, section.resume article .content-header .minor {
       font-family: "europa", "gill sans", sans-serif;
       font-size: 18px;
       font-weight: 400;
       color: #505050;
       margin: auto; }
-    section.resume .container article .content-header .item-location:after, section.resume .container article .content-header .minor:after {
+    section.resume article .content-header .item-location:after, section.resume article .content-header .minor:after {
       content: " - "; }
-    section.resume .container article .content-header .show {
-      display: block;
+    section.resume article .content-header .show {
+      display: inline-block;
       color: #2AC51B;
       background: none;
       border: none;
@@ -807,59 +812,53 @@ section.resume .container article {
       text-decoration: none;
       cursor: pointer;
       padding: 0; }
-      section.resume .container article .content-header .show.more:after {
-        content: " more"; }
-      section.resume .container article .content-header .show.less:after {
-        content: " less"; }
-    section.resume .container article .content-header .block-note {
+      section.resume article .content-header .show.more:after {
+        content: " more."; }
+      section.resume article .content-header .show.less:after {
+        content: " less."; }
+    section.resume article .content-header .block-note {
       display: block; }
-    section.resume .container article .content-header .inline-note {
+    section.resume article .content-header .inline-note {
       display: inline;
       font-size: 1.25rem;
       font-style: italic; }
-    section.resume .container article .content-header:hover .show, section.resume .container article .content-header:focus .show {
+    section.resume article .content-header:hover .show, section.resume article .content-header:focus .show {
       text-decoration: underline; }
-  section.resume .container article .resume-content {
+  section.resume article .more-resume-content {
     margin: auto 0;
     display: block;
     text-align: left;
-    margin-left: 132px; }
+    margin-left: 112px; }
     @media screen and (max-width: 600px) {
-      section.resume .container article .resume-content {
+      section.resume article .more-resume-content {
         padding: 0; } }
-    section.resume .container article .resume-content h4 {
+    section.resume article .more-resume-content h4 {
       font-family: "europa", "gill sans", sans-serif;
       font-size: 1.75rem;
       line-height: 1em;
       font-weight: 300;
       color: #808080; }
-    section.resume .container article .resume-content .resume-list {
+    section.resume article .more-resume-content .resume-list {
       display: none;
       padding-left: 24px;
       line-height: 1.5em;
       list-style-type: disc;
       font-family: "europa", "gill sans", sans-serif;
       font-weight: 400; }
-      section.resume .container article .resume-content .resume-list .resume-item {
+      section.resume article .more-resume-content .resume-list .resume-item {
         margin-bottom: 1em; }
-        section.resume .container article .resume-content .resume-list .resume-item .item-code:before {
+        section.resume article .more-resume-content .resume-list .resume-item .item-code:before {
           content: "(";
           margin-right: -3px; }
-        section.resume .container article .resume-content .resume-list .resume-item .item-code:after {
+        section.resume article .more-resume-content .resume-list .resume-item .item-code:after {
           content: ")";
           margin-left: -3px; }
-        section.resume .container article .resume-content .resume-list .resume-item .list-description {
+        section.resume article .more-resume-content .resume-list .resume-item .list-description {
           font-family: "europa", "gill sans", sans-serif;
           font-size: 14px;
           margin-right: 16px; }
 section.resume .experience {
-  position: relative;
-  margin-bottom: 72px; }
-  section.resume .experience .job, section.resume .experience .school {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    margin: 36px auto; }
+  position: relative; }
   section.resume .experience #zynga .logo {
     background-image: url("../image_assets/zynga_logo.png"); }
   section.resume .experience #noom .logo {
@@ -876,7 +875,7 @@ section.resume .experience {
 section.resume .skills {
   position: relative;
   display: inline-block;
-  margin-top: 72px; }
+  margin-top: 32px; }
   section.resume .skills .skills-sub-header {
     padding-left: 1rem;
     padding-top: 1.5rem;
@@ -1002,7 +1001,7 @@ section.resume .skills {
 footer {
   width: 100%;
   height: 48px;
-  margin-top: 72px;
+  margin-top: 32px;
   font-size: 12px;
   line-height: 1.6rem;
   background-color: #333333;
@@ -1098,12 +1097,12 @@ footer {
     background: #E6D0CF;
     border-color: #DD3B30; }
   .portfolio-page .zynga figure#hero {
-    background: -moz-radial-gradient(center, circle cover, #DD3B30 0%, #DD3B30 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #DD3B30), color-stop(100%, #DD3B30));
-    background: -webkit-radial-gradient(center, circle cover, #DD3B30 0%, #DD3B30 100%);
-    background: -o-radial-gradient(center, circle cover, #DD3B30 0%, #DD3B30 100%);
-    background: -ms-radial-gradient(center, circle cover, #DD3B30 0%, #DD3B30 100%);
-    background: radial-gradient(center, circle cover, #DD3B30 0%, #DD3B30 100%);
+    background: -moz-radial-gradient(center, circle cover, #FF7870 0%, #DD3B30 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #FF7870), color-stop(100%, #DD3B30));
+    background: -webkit-radial-gradient(center, circle cover, #FF7870 0%, #DD3B30 100%);
+    background: -o-radial-gradient(center, circle cover, #FF7870 0%, #DD3B30 100%);
+    background: -ms-radial-gradient(center, circle cover, #FF7870 0%, #DD3B30 100%);
+    background: radial-gradient(center, circle cover, #FF7870 0%, #DD3B30 100%);
     background-color: #DD3B30; }
   .portfolio-page .tap.small-header .header-title {
     border-bottom: 2px solid #518CB8; }
@@ -1128,7 +1127,7 @@ footer {
     top: 0;
     z-index: 10;
     width: 100%;
-    margin-top: 36px;
+    margin-top: 16px;
     text-align: center; }
     .portfolio-page header.small-header a {
       position: relative;
@@ -1255,7 +1254,7 @@ footer {
           margin: auto; }
       .portfolio-page .gallery-content .folio_image#hero {
         max-width: none;
-        margin: 72px auto; }
+        margin: 32px auto; }
         .portfolio-page .gallery-content .folio_image#hero img {
           max-height: none; }
           .portfolio-page .gallery-content .folio_image#hero img#hero-iso-crop {
@@ -1276,7 +1275,7 @@ footer {
       .portfolio-page .gallery-content table * {
         margin: 0; }
     .portfolio-page .gallery-content hr {
-      margin: 72px auto; }
+      margin: 32px auto; }
     .portfolio-page .gallery-content .footnotes {
       font-size: 12px;
       text-align: center; }
@@ -1286,7 +1285,7 @@ footer {
         max-width: 720px; }
 
 body.portfolio header.portfolio {
-  margin: 72px 0;
+  margin: 32px 0;
   padding: 0;
   text-align: center; }
   body.portfolio header.portfolio .title {

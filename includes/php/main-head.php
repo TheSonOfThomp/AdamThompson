@@ -1,5 +1,6 @@
 <?php
 	include('includes/php/global-head.php');
+	include 'includes/php/helper-functions.php';
 ?>
 		<title><?php echo($page_title) ?></title>
 
