@@ -1,11 +1,9 @@
 <?php function sectionHeader($title) { ?>
-
 	<div class="section-header">
 		<div class="header-underline">
 			<h1><?php echo $title ?></h1>
 		</div>
 	</div>	
-
 <?php }; ?>
 
 
@@ -53,5 +51,31 @@
 				</ul>
 			</div>
 		</article>
+<?php } ?>
+
+<?php function portfolioCard($item) { ?>
+<?php 
+	$link_path = $root_path."Portfolio/?p=".$item['id'];
+	$img_path = $root_path."includes/portfolio_images/".$item['image_url'];
+?>
+
+	<li class="folio-item featured
+		<?php foreach ($item['tags'] as $tag) { echo ' '.$tag;}?>" 
+		id="<?php echo $item['id']?>" 
+		data-published-date="<?php echo $item['date']?>">
+
+		<div class="portfolio-card" href="<?php echo $link_path ?>">
+			<div class="hover-state"></div>
+			<div class="folio-info">
+				<span class="folio-title"><?php echo $item["name"]?></span>
+				<br/>
+				<span class="folio-description"><?php echo $item["description"]?></span>
+				<span class="folio-type"><?php echo $item["type"]?></span>
+			</div>
+			<figure class="folio-img">
+				<img src="<?php echo $img_path ?>">
+			</figure>
+		</div>
+	</li>
 
 <?php } ?>
