@@ -261,53 +261,47 @@ section.portfolio.brutal
 				-webkit-transform-style: preserve-3d
 				-webkit-backface-visibility: hidden
 
-				.folio-hover
-					// display: inline-block
-					// vertical-align: middle
-					// position: absolute
-					// left: $border-size
-					// top: $border-size
-					// padding: 32px 32px 8px 8px
-					position: relative
-					// padding: 16px 16px 8px 8px
-					max-width: 80%
-					background-color: $white
+			.folio-info
+				position: relative
+				margin: 0 auto
+				max-width: 80%
+				background-color: $white
+				color: $black
+				line-height: 1.8rem
+				font-weight: 500
+				span
+					display: inline-block
+					margin: auto 12px
+				
+				.folio-title
+					font-size: 48px
+					line-height: 1em
+					font-family: $sans-serif
+					font-weight: 600
 					color: $black
-					line-height: 1.8rem
-					font-weight: 500
-					span
-						display: inline-block
-						margin: auto 12px
-					
-					.folio-title
-						font-size: 48px
-						line-height: 1em
-						font-family: $sans-serif
-						font-weight: 600
-						color: $black
-						+animate-elements(color, 0.1s, ease-in-out)
-						// +animate-elements(font-size, 0.15s, ease-in-out)
+					+animate-elements(color, 0.1s, ease-in-out)
+					// +animate-elements(font-size, 0.15s, ease-in-out)
 
-					.folio-description
-						font-size: 20px
-						font-family: $sans-serif
-						padding: 8px 0
-						// font-style: italic
-						// font-weight: 600
-					.folio-platform
-						display: none
-						font-size: 1rem
-						font-family: $sans-serif
-					.folio-type
-						display: none
-						font-size: 1rem
-						font-style: italic
-				@media screen and (max-width: 960px)
-					.folio-hover
-						// background-color: $white_trans
-						padding: 20px 20px 0px 8px
-						.folio-title
-							font-size: 2rem
+				.folio-description
+					font-size: 20px
+					font-family: $sans-serif
+					padding: 8px 0
+					// font-style: italic
+					// font-weight: 600
+				.folio-platform
+					display: none
+					font-size: 1rem
+					font-family: $sans-serif
+				.folio-type
+					display: none
+					font-size: 1rem
+					font-style: italic
+			@media screen and (max-width: 960px)
+				.folio-hover
+					// background-color: $white_trans
+					padding: 20px 20px 0px 8px
+					.folio-title
+						font-size: 2rem
 			&#noom
 				a:hover
 					// background-color: $noom

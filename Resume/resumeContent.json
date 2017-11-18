@@ -41,10 +41,11 @@
 	"experience": [
 		{
 			"id": "zynga",
-			"company": "Zynga",
+			"place": "Zynga",
 			"url": "zynga.com/poker",
 			"term": "Spring 2016",
-			"position": "Product Manager",
+			"position": "UX Product Manager",
+			"summary": "Data analysis, UX , research and testing for new features in Poker Web.",
 			"location": "Toronto",
 			"responsibilities": [
 			{
@@ -71,10 +72,11 @@
 		},
 		{
 			"id": "noom",
-			"company": "Noom",
+			"place": "Noom",
 			"url": "noom.com",
 			"term": "Fall 2015",
 			"position": "Product Designer",
+			"summary": "Usability optimization and user testing for the core food-logging feature.",
 			"location": "New York",
 			"responsibilities": [
 			{	
@@ -96,10 +98,11 @@
 		},
 		{
 			"id": "knowroaming",
-			"company": "KnowRoaming",
+			"place": "KnowRoaming",
 			"url": "knowroaming.com",
 			"term": "Spring 2014 & Winter 2015",
-			"position": "UX Designer & Product Manager",
+			"position": "UX Designer",
+			"summary": "User research, information architecture and UI design for the mobile apps. ",
 			"location": "Toronto",
 			"responsibilities": [
 				{
@@ -171,10 +174,11 @@
 		},
 		{
 			"id": "sony",
-			"company": "Sony",
+			"place": "Sony",
 			"url": "mediago.sony.com",
 			"term": "Fall 2013",
-			"position": "UX Designer",
+			"position": "UI Designer",
+			"summary": "UI/UX design and front-end development for a discovery feature in MediaGo.",
 			"location": "Waterloo",
 			"responsibilities": [
 			{
@@ -316,10 +320,11 @@
 		{
 			"id": "uwaterloo",
 			"url": "uwaterloo.ca/systems-design-engineering/about-systems-design-engineering",
-			"school": "University of Waterloo",
-			"program": "Systems Design Engineering",
+			"place": "University of Waterloo",
+			"position": "Systems Design Engineering",
 			"degree": "BASc.",
 			"minor": "Cognitive Science",
+			"summary": "B.ASc. with Cognitive Science minor.",
 			"class": "Class of 2017",
 			"courses": [
 				{

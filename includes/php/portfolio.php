@@ -4,9 +4,18 @@
 	$folio_obj = json_decode($json_string, true);
 	$featured = $folio_obj["portfolio-featured"];
 	$folio_rest = $folio_obj["portfolio"];
+
+	if (isset($_GET['p'])) {
+		$p = $_GET['p'];
+	}
+	else {
+		$p = 'default full-width';
+	}
 ?>
 
-<section class="portfolio default full-width" id="portfolio">
+<?php sectionHeader("Portfolio") ?>
+
+<section class="portfolio <?php echo $p ?>" id="portfolio">
   <div class="gallery featured" id="gallery">
     <ul>
     <?php
