@@ -7,9 +7,10 @@
 	if (sizeof($x->channel->item) >= $min_posts) {
 ?>
 
+<?php sectionHeader("Medium") ?>
+
 <section class="blog" id="blog">
 	<div class="container">
-		<h1 class="section-header">Medium</h1>
 		<ul>
 		<?php
 			foreach($x->channel->item as $entry) {

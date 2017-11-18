@@ -1,6 +1,8 @@
+
+<?php sectionHeader("About me") ?>
+
 <section class="about" id="about">
 	<div class="container">
-		<h1 class="section-header">About me</h1>
 		<div class="content" id="bio">
 			<div class="bio-pic">
 				<img alt="Portrait taken by Natasha Choo" src="includes/image_assets/Adam_web.jpg">
@@ -16,14 +18,6 @@
 					When I'm not making products, I enjoy making music. In April 2017 I had the amazing opportunity to sing at the Beacon Theatre in New York with the <a target="_blank" href="http://www.570news.com/2017/04/05/uw-capella-group-shot-world-title/">Water Boys</a> for the ICCA finals.
 				</p>
 		</div>
-
-		<!-- <div class="subsection-header">Recent News</div>
-		<div class="content" id="achievements">
-			<ul>
-				<li><a href="">The Water Boys take 5th at ICCA finals in New York City</a></li>
-				<li><a href="">Chameleon wins University of Waterloo's Norman Esch Entrepreneurship award</a></li>
-			</ul>
-		</div> -->
 <?php include('social.php'); ?>
 	</div>
 </section>
