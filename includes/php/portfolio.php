@@ -20,27 +20,9 @@
     <ul>
     <?php
     	foreach ($featured as $item) {
-    ?>
-
-	<li class="folio-item featured
-		<?php foreach ($item['tags'] as $tag) { echo ' '.$tag;}?>" 
-		id="<?php echo $item['id']?>" 
-		data-published-date="<?php echo $item['date']?>">
-		
-		<a href="<?php echo $root_path ?>/Portfolio/?p=<?php echo $item['id']?>">
-			<div class="hover-state">
-			</div>
-			<div class="folio-info">
-					<span class="folio-title"><?php echo $item["name"]?></span>
-					<br/>
-					<span class="folio-description"><?php echo $item["description"]?></span>
-					<span class="folio-type"><?php echo $item["type"]?></span>
-				</div>
-			<img src="<?php echo $root_path ?>/includes/portfolio_images/<?php echo $item['image_url']?>">
-		</a>
-	</li>
-
-<?php } ?>
+			portfolioCard($item);
+		}
+	?>
 
     </ul>
   <!-- Are we looking at the portfolio on the home page, or in the portfolio page? -->
@@ -53,28 +35,12 @@
  	else { ?>
  	  <div class="gallery more-portfolio" id="gallery">
  	  <ul>
- 	<?php
-    	foreach ($folio_rest as $item) {
-    ?>
-
- 	<li class="folio-item folio-rest
-		<?php foreach ($item['tags'] as $tag) { echo ' '.$tag;}?>" 
-		id="<?php echo $item['id']?>" 
-		data-published-date="<?php echo $item['date']?>">
-		
-		<a href="<?php echo $root_path ?>/Portfolio/?p=<?php echo $item['id']?>">
-			<img src="<?php echo $root_path ?>/includes/portfolio_images/<?php echo $item['image_url']?>">
-			<div class="hover-state">
-			<div class="folio-hover">
-				<span class="folio-title"><?php echo $item["name"]?></span>
-				<br/>
-				<span class="folio-description"><?php echo $item["description"]?></span>
-				<span class="folio-type"><?php echo $item["type"]?></span>
-			</div>
-			</div>
-		</a>
-	</li>
- 	<?php } }?>
+	 	<?php
+	    	foreach ($folio_rest as $item) {
+	 			portfolioCard($item);	
+			}
+	}
+	?>
 
  	</ul>
  	</div>

@@ -157,6 +157,9 @@ html {
   text-decoration: none;
   padding: 1em 0;
   margin: 1em auto;
+  -webkit-transition: box-shadow 0.15s ease-in-out;
+  -moz-transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
   -webkit-transition: transform 0.15s ease-in-out;
   -moz-transition: transform 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out;
@@ -173,9 +176,9 @@ html {
     background: -o-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
     background: -ms-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
     background: linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
-    -webkit-box-shadow: 0 2px 16px #808080;
-    -moz-box-shadow: 0 2px 16px #808080;
-    box-shadow: 0 2px 16px #808080;
+    -webkit-box-shadow: 0 2px 8px #808080;
+    -moz-box-shadow: 0 2px 8px #808080;
+    box-shadow: 0 2px 8px #808080;
     transform: translateY(-2px); }
   .button.large {
     width: 100%;
@@ -390,11 +393,11 @@ section.portfolio.default {
   text-align: center; }
   section.portfolio.default .gallery {
     position: relative;
-    width: auto;
-    margin: 8px;
+    margin: 0 32px;
     display: inline-block;
     max-width: 1440px; }
     section.portfolio.default .gallery ul {
+      width: 100%;
       position: relative;
       display: inline-block;
       margin: 0;
@@ -407,61 +410,88 @@ section.portfolio.default {
       float: left;
       padding: 0;
       margin: 0;
-      width: 50%;
-      margin-bottom: -4px; }
+      width: 50%; }
       section.portfolio.default .gallery .folio-item.folio-rest {
         width: 33%; }
-      section.portfolio.default .gallery .folio-item a {
-        display: inline-block;
-        margin: 8px; }
-        section.portfolio.default .gallery .folio-item a:hover .hover-state, section.portfolio.default .gallery .folio-item a:focus .hover-state {
-          background-color: rgba(250, 250, 250, 0.5); }
-        section.portfolio.default .gallery .folio-item a img {
-          position: relative;
-          width: 100%;
-          height: auto;
-          cursor: pointer;
-          margin-left: 0; }
-      section.portfolio.default .gallery .folio-item .hover-state {
-        background-color: rgba(250, 250, 250, 0);
-        -webkit-transition: background-color 0.15s ease-in-out;
-        -moz-transition: background-color 0.15s ease-in-out;
-        transition: background-color 0.15s ease-in-out;
-        position: absolute;
-        top: 0;
-        bottom: 4px;
-        left: 0;
-        right: 0;
-        margin: 8px;
-        text-align: left;
-        cursor: pointer;
+      section.portfolio.default .gallery .folio-item .portfolio-card {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-        -webkit-transform-style: preserve-3d;
-        -webkit-backface-visibility: hidden;
-        z-index: 5; }
+        margin: 32px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        border-radius: 16px;
+        -webkit-transition: transform 0.2s ease-in-out;
+        -moz-transition: transform 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out;
+        -webkit-box-shadow: 0 16px 16px #BFBFBF;
+        -moz-box-shadow: 0 16px 16px #BFBFBF;
+        box-shadow: 0 16px 16px #BFBFBF; }
+        section.portfolio.default .gallery .folio-item .portfolio-card:after, section.portfolio.default .gallery .folio-item .portfolio-card:before {
+          content: "";
+          position: absolute;
+          background: transparent;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          -webkit-border-radius: 16px;
+          -moz-border-radius: 16px;
+          -ms-border-radius: 16px;
+          border-radius: 16px;
+          -webkit-transition: opacity 0.2s ease-in-out;
+          -moz-transition: opacity 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out; }
+        section.portfolio.default .gallery .folio-item .portfolio-card:after {
+          -webkit-box-shadow: 0 20px 16px #BFBFBF;
+          -moz-box-shadow: 0 20px 16px #BFBFBF;
+          box-shadow: 0 20px 16px #BFBFBF; }
+        section.portfolio.default .gallery .folio-item .portfolio-card:before {
+          -webkit-box-shadow: 0 8px 8px #808080;
+          -moz-box-shadow: 0 8px 8px #808080;
+          box-shadow: 0 8px 8px #808080; }
+        section.portfolio.default .gallery .folio-item .portfolio-card:hover, section.portfolio.default .gallery .folio-item .portfolio-card:focus {
+          transform: translateY(-4px); }
+          section.portfolio.default .gallery .folio-item .portfolio-card:hover:after, section.portfolio.default .gallery .folio-item .portfolio-card:focus:after {
+            opacity: 1; }
+          section.portfolio.default .gallery .folio-item .portfolio-card:hover .hover-state, section.portfolio.default .gallery .folio-item .portfolio-card:focus .hover-state {
+            opacity: 0.1;
+            background-color: rgba(250, 250, 250, 0.5); }
+        section.portfolio.default .gallery .folio-item .portfolio-card:active {
+          transform: translateY(0px); }
+          section.portfolio.default .gallery .folio-item .portfolio-card:active:after {
+            opacity: 0; }
+          section.portfolio.default .gallery .folio-item .portfolio-card:active:before {
+            opacity: 0; }
+        section.portfolio.default .gallery .folio-item .portfolio-card .folio-img {
+          max-width: 184px;
+          min-height: 375px;
+          display: flex;
+          align-items: center;
+          margin-right: 32px; }
+          section.portfolio.default .gallery .folio-item .portfolio-card .folio-img img {
+            position: relative;
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            margin-left: 0; }
       section.portfolio.default .gallery .folio-item .folio-info {
         z-index: 10;
-        position: absolute;
-        left: 0;
-        bottom: 4px;
-        padding: 32px 32px 8px 16px;
+        margin-left: 32px;
         max-width: 80%;
-        background-color: #FEFEFE;
-        color: #333333;
-        line-height: 1.8rem;
+        color: #FEFEFE;
         font-weight: 500;
         text-align: left; }
         section.portfolio.default .gallery .folio-item .folio-info span {
-          display: inline-block;
-          margin: auto 12px; }
+          display: inline-block; }
         section.portfolio.default .gallery .folio-item .folio-info .folio-title {
           font-size: 2.8rem;
           line-height: 1em;
           font-family: "europa", "gill sans", sans-serif;
           font-weight: 600;
-          color: #333333;
+          color: #FEFEFE;
           -webkit-transition: color 0.1s ease-in-out;
           -moz-transition: color 0.1s ease-in-out;
           transition: color 0.1s ease-in-out; }
@@ -482,67 +512,88 @@ section.portfolio.default {
             padding: 20px 20px 4px 8px; }
             section.portfolio.default .gallery .folio-item .folio-info .folio-title {
               font-size: 2rem; } }
-      section.portfolio.default .gallery .folio-item#noom img {
+      section.portfolio.default .gallery .folio-item#noom .portfolio-card {
         background-color: #4271d7;
-        background: -moz-radial-gradient(center, circle cover, #719AFC 0%, #4271d7 100%);
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #719AFC), color-stop(100%, #4271d7));
-        background: -webkit-radial-gradient(center, circle cover, #719AFC 0%, #4271d7 100%);
-        background: -o-radial-gradient(center, circle cover, #719AFC 0%, #4271d7 100%);
-        background: -ms-radial-gradient(center, circle cover, #719AFC 0%, #4271d7 100%);
-        background: radial-gradient(center, circle cover, #719AFC 0%, #4271d7 100%);
-        background-color: #4271d7; }
-      section.portfolio.default .gallery .folio-item#noom a:hover .folio-title {
-        color: #4271d7; }
-      section.portfolio.default .gallery .folio-item#smrtwatr img {
+        background: #4271d7;
+        background: -moz-linear-gradient(to bottom right, #719AFC 0%, #4271d7 100%);
+        background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #719AFC), color-stop(100%, #4271d7));
+        background: -webkit-linear-gradient(to bottom right, #719AFC 0%, #4271d7 100%);
+        background: -o-linear-gradient(to bottom right, #719AFC 0%, #4271d7 100%);
+        background: -ms-linear-gradient(to bottom right, #719AFC 0%, #4271d7 100%);
+        background: linear-gradient(to bottom right, #719AFC 0%, #4271d7 100%); }
+      section.portfolio.default .gallery .folio-item#smrtwatr .portfolio-card {
         background-color: #785FA3;
-        background: -moz-radial-gradient(center, circle cover, #A18BCC 0%, #785FA3 100%);
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #A18BCC), color-stop(100%, #785FA3));
-        background: -webkit-radial-gradient(center, circle cover, #A18BCC 0%, #785FA3 100%);
-        background: -o-radial-gradient(center, circle cover, #A18BCC 0%, #785FA3 100%);
-        background: -ms-radial-gradient(center, circle cover, #A18BCC 0%, #785FA3 100%);
-        background: radial-gradient(center, circle cover, #A18BCC 0%, #785FA3 100%);
-        background-color: #785FA3; }
-      section.portfolio.default .gallery .folio-item#smrtwatr a:hover .folio-title {
-        color: #785FA3; }
-      section.portfolio.default .gallery .folio-item#knowroaming img {
+        background: #785FA3;
+        background: -moz-linear-gradient(to bottom right, #A18BCC 0%, #785FA3 100%);
+        background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #A18BCC), color-stop(100%, #785FA3));
+        background: -webkit-linear-gradient(to bottom right, #A18BCC 0%, #785FA3 100%);
+        background: -o-linear-gradient(to bottom right, #A18BCC 0%, #785FA3 100%);
+        background: -ms-linear-gradient(to bottom right, #A18BCC 0%, #785FA3 100%);
+        background: linear-gradient(to bottom right, #A18BCC 0%, #785FA3 100%); }
+      section.portfolio.default .gallery .folio-item#knowroaming .portfolio-card {
         background-color: #4286b5;
-        background: -moz-radial-gradient(center, circle cover, #6DAFDB 0%, #4286b5 100%);
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #6DAFDB), color-stop(100%, #4286b5));
-        background: -webkit-radial-gradient(center, circle cover, #6DAFDB 0%, #4286b5 100%);
-        background: -o-radial-gradient(center, circle cover, #6DAFDB 0%, #4286b5 100%);
-        background: -ms-radial-gradient(center, circle cover, #6DAFDB 0%, #4286b5 100%);
-        background: radial-gradient(center, circle cover, #6DAFDB 0%, #4286b5 100%);
-        background-color: #4286b5; }
-      section.portfolio.default .gallery .folio-item#knowroaming a:hover .folio-title {
-        color: #4286b5; }
-      section.portfolio.default .gallery .folio-item#chameleon img {
+        background: #4286b5;
+        background: -moz-linear-gradient(to bottom right, #6DAFDB 0%, #4286b5 100%);
+        background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #6DAFDB), color-stop(100%, #4286b5));
+        background: -webkit-linear-gradient(to bottom right, #6DAFDB 0%, #4286b5 100%);
+        background: -o-linear-gradient(to bottom right, #6DAFDB 0%, #4286b5 100%);
+        background: -ms-linear-gradient(to bottom right, #6DAFDB 0%, #4286b5 100%);
+        background: linear-gradient(to bottom right, #6DAFDB 0%, #4286b5 100%); }
+      section.portfolio.default .gallery .folio-item#chameleon .portfolio-card {
         background-color: #2e8c5d;
-        background: -moz-radial-gradient(center, circle cover, #73D3A2 0%, #2e8c5d 100%);
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #73D3A2), color-stop(100%, #2e8c5d));
-        background: -webkit-radial-gradient(center, circle cover, #73D3A2 0%, #2e8c5d 100%);
-        background: -o-radial-gradient(center, circle cover, #73D3A2 0%, #2e8c5d 100%);
-        background: -ms-radial-gradient(center, circle cover, #73D3A2 0%, #2e8c5d 100%);
-        background: radial-gradient(center, circle cover, #73D3A2 0%, #2e8c5d 100%);
-        background-color: #2e8c5d; }
-      section.portfolio.default .gallery .folio-item#chameleon a:hover .folio-title {
-        color: #2e8c5d; }
-      section.portfolio.default .gallery .folio-item#tap img {
+        background: #2e8c5d;
+        background: -moz-linear-gradient(to bottom right, #73D3A2 0%, #2e8c5d 100%);
+        background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #73D3A2), color-stop(100%, #2e8c5d));
+        background: -webkit-linear-gradient(to bottom right, #73D3A2 0%, #2e8c5d 100%);
+        background: -o-linear-gradient(to bottom right, #73D3A2 0%, #2e8c5d 100%);
+        background: -ms-linear-gradient(to bottom right, #73D3A2 0%, #2e8c5d 100%);
+        background: linear-gradient(to bottom right, #73D3A2 0%, #2e8c5d 100%); }
+      section.portfolio.default .gallery .folio-item#tap .portfolio-card {
         background-color: #518CB8;
-        background: -moz-radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #83AECC), color-stop(100%, #518CB8));
-        background: -webkit-radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
-        background: -o-radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
-        background: -ms-radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
-        background: radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
-        background-color: #518CB8; }
+        background: #518CB8;
+        background: -moz-linear-gradient(to bottom right, #83AECC 0%, #518CB8 100%);
+        background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #83AECC), color-stop(100%, #518CB8));
+        background: -webkit-linear-gradient(to bottom right, #83AECC 0%, #518CB8 100%);
+        background: -o-linear-gradient(to bottom right, #83AECC 0%, #518CB8 100%);
+        background: -ms-linear-gradient(to bottom right, #83AECC 0%, #518CB8 100%);
+        background: linear-gradient(to bottom right, #83AECC 0%, #518CB8 100%); }
       section.portfolio.default .gallery .folio-item#tap a:hover .folio-title {
         color: #518CB8; }
       section.portfolio.default .gallery .folio-item#tap a {
         border: 2px dotted #808080; }
         section.portfolio.default .gallery .folio-item#tap a:hover .hover-state, section.portfolio.default .gallery .folio-item#tap a:focus .hover-state {
           background-color: rgba(250, 250, 250, 0); }
+      section.portfolio.default .gallery .folio-item .hover-state {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        background-color: rgba(250, 250, 250, 0);
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        border-radius: 16px;
+        background: #e6e6e6;
+        background: -moz-linear-gradient(to bottom right, #FEFEFE 0%, #e6e6e6 100%);
+        background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #FEFEFE), color-stop(100%, #e6e6e6));
+        background: -webkit-linear-gradient(to bottom right, #FEFEFE 0%, #e6e6e6 100%);
+        background: -o-linear-gradient(to bottom right, #FEFEFE 0%, #e6e6e6 100%);
+        background: -ms-linear-gradient(to bottom right, #FEFEFE 0%, #e6e6e6 100%);
+        background: linear-gradient(to bottom right, #FEFEFE 0%, #e6e6e6 100%);
+        -webkit-transition: background-color 0.2s ease-in-out;
+        -moz-transition: background-color 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out;
+        -webkit-transition: opacity 0.2s ease-in-out;
+        -moz-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        cursor: pointer;
+        -webkit-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        z-index: 5; }
     section.portfolio.default .gallery.more-portfolio {
-      margin-top: 16px; }
+      margin-top: 64px; }
       section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover {
         padding: 16px 16px 4px 4px; }
         section.portfolio.default .gallery.more-portfolio .folio-item .hover-state .folio-hover .folio-title {
@@ -555,17 +606,10 @@ section.portfolio.default {
     width: 100%;
     max-width: 960px;
     padding: 1em 0;
-    margin-top: 16px; }
+    margin-top: 64px; }
     section.portfolio.default .button .fa {
       padding: 0 2px;
       font-size: 16px; }
-
-/* ---------------------- Full Width PORTFOLIO ---------------------- */
-section.portfolio.full-width .gallery {
-  margin: 0;
-  max-width: none; }
-  section.portfolio.full-width .gallery ul {
-    margin: -8px; }
 
 /* ---------------------- NEW BRUTALIST PORTFOLIO ---------------------- */
 section.portfolio.brutal {
