@@ -222,51 +222,52 @@ header.main-header {
         color: #000; }
         header.main-header.green-bg .hero .bg-letter.split-ux {
           opacity: 0.55; }
-  header.main-header .header-contents {
+  header.main-header .navbar {
     margin: auto;
     width: 100%;
     z-index: 10; }
-    header.main-header .header-contents em {
+    header.main-header .navbar em {
       font-style: normal; }
-    header.main-header .header-contents .title {
+    header.main-header .navbar .title {
       display: flex;
       justify-content: space-between;
       width: 80%;
       max-width: 920px;
       margin: 32px auto; }
-      header.main-header .header-contents .title .name {
+      header.main-header .navbar .title .name {
         white-space: nowrap;
         font-size: 36px;
         color: #333333;
         text-decoration: none;
         display: inline-block;
         cursor: pointer; }
-        header.main-header .header-contents .title .name:hover {
+        header.main-header .navbar .title .name:hover {
           text-decoration: none; }
-      header.main-header .header-contents .title .hamburger-icon {
+      header.main-header .navbar .title .hamburger-icon {
         padding: 2px;
         text-align: right;
         display: none;
         cursor: pointer;
         font-size: 24px; }
-      header.main-header .header-contents .title .hamburger-drawer {
+      header.main-header .navbar .title .hamburger-drawer {
         display: flex;
         flex-direction: row; }
-      header.main-header .header-contents .title .nav-list {
+      header.main-header .navbar .title .nav-list {
         padding: 0;
         margin: 0;
         display: flex;
         justify-content: center;
         width: 100%;
-        font-weight: 600; }
-        header.main-header .header-contents .title .nav-list li {
+        font-weight: 600;
+        font-size: 18px; }
+        header.main-header .navbar .title .nav-list li {
           list-style: none;
           display: inline-block;
           line-height: 32px;
           padding: 0 16px;
           margin: auto;
           color: #2AC51B; }
-          header.main-header .header-contents .title .nav-list li a:hover {
+          header.main-header .navbar .title .nav-list li a:hover {
             text-decoration: none;
             border-bottom: 2px solid #2AC51B; }
   header.main-header .hero {
@@ -1183,7 +1184,7 @@ footer {
     top: 0;
     z-index: 10;
     width: 100%;
-    margin-top: 16px;
+    margin-top: 32px;
     text-align: center; }
     .portfolio-page header.small-header a {
       position: relative;
@@ -1194,10 +1195,17 @@ footer {
       .portfolio-page header.small-header a:hover {
         text-decoration: none; }
       .portfolio-page header.small-header a.header-title {
-        font-size: 36px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        font-size: 28px;
         text-align: left;
         width: 100%;
-        max-width: 720px; }
+        max-width: 720px;
+        padding: 12px 0; }
+        .portfolio-page header.small-header a.header-title span {
+          line-height: 32px;
+          margin-left: 12px; }
       .portfolio-page header.small-header a.back {
         font-size: 24px;
         position: absolute;

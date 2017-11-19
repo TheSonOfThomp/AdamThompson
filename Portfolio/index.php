@@ -26,6 +26,7 @@ include('../includes/plugins/ParsedownExtra.php');
 					<div class="tagline">Portfolio</div>
 				</div>
 			</header>
+
 	<?php
 		$see_more = true;
 		include('../includes/php/portfolio.php');

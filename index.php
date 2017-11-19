@@ -4,7 +4,7 @@ include('includes/php/main-head.php'); ?>
 <!-- BODY -->
 <main>
 <?php 
-	include('includes/php/header.php');
+	include('includes/php/hero.php');
 	include 'includes/php/resume.php';
 	include 'includes/php/portfolio.php';
 	include 'includes/php/about.php';
