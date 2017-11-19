@@ -1,12 +1,12 @@
 #Tap Metronome
 
-<div class="folio-nav prev smrtwatr">
+<!-- <div class="folio-nav prev smrtwatr">
 	<a href="?p=smrtwatr">SMRT WATR</a>
 </div>
 
 <div class="folio-nav next home">
 	<a href="../">Home</a>
-</div>
+</div> -->
 
 <div class="tldr" markdown=1>
 ## The simple metronome for easy band practice.

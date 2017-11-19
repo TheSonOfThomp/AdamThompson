@@ -1613,6 +1613,8 @@ nav .folio-nav {
         display: block; }
       section.resume article .content-header .header-text .item-summary {
         display: none; }
+      section.resume article .content-header .header-text .show {
+        display: none; }
 
   /* ------------ PORTFOLIO - MOBILE ------------ */
   section.portfolio {
@@ -1708,8 +1710,12 @@ nav .folio-nav {
     margin-top: 32px; }
 
   /* ------------ Portfolio Page - MOBILE ------------ */
-  .portfolio-page header.small-header a.header-title {
-    text-align: center; }
+  .portfolio-page header.small-header {
+    margin-top: 12px; }
+    .portfolio-page header.small-header a.header-title {
+      max-width: 90%;
+      margin: auto;
+      text-align: center; }
   .portfolio-page .gallery-content {
     margin-bottom: 64px; }
     .portfolio-page .gallery-content.knowroaming h1 {
