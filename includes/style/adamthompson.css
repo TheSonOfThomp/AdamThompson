@@ -969,6 +969,9 @@ section.resume .experience {
         border-radius: 0; }
       .skills .program-list li:hover .app-name {
         opacity: 1; }
+    @media screen and (max-width: 920px) {
+      .skills .program-list li {
+        width: 25%; } }
     .skills .program-list #sketch .app-logo {
       background-image: url("../image_assets/apps/sketch.png"); }
     .skills .program-list #ps .app-logo {
@@ -1515,6 +1518,8 @@ nav .folio-nav {
 @media screen and (max-width: 768px) {
   html main {
     width: 100%;
+    width: 100vw;
+    overflow: hidden;
     margin: 0; }
 
   .hide-mobile {
