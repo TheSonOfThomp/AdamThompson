@@ -1,10 +1,28 @@
 /* -------------------- HEADER -------------------- */
 header.main-header
 	width: 100%
-	padding: 32px 0 $global-margin 0
+	padding: 0
 	color: $black
 	overflow: hidden
 	text-align: center
+
+	&.green-bg
+		+CornerToCornerGradient($light_green, $green)
+		+box-shadow(0, 4px, 8px, $med_grey)
+		.title
+			a.name
+				color: $white
+			.nav-list li a, .fa
+				color: $white
+		.hero
+			color: $white
+			.bio-text
+				font-weight: 400
+			.bg-letter
+				opacity: 0.1
+				color: #000
+				&.split-ux
+					opacity: 0.55
 
 	.header-contents
 		margin: auto
@@ -18,7 +36,7 @@ header.main-header
 			justify-content: space-between 
 			width: 80%
 			max-width: $max-width
-			margin: auto
+			margin: $global-margin auto
 			.name
 				white-space: nowrap
 				font-size: 36px
@@ -46,6 +64,7 @@ header.main-header
 				display: flex
 				justify-content: center
 				width: 100%
+				font-weight: 600
 				li
 					list-style: none
 					display: inline-block
@@ -59,12 +78,14 @@ header.main-header
 
 	.hero
 		position: relative
-		display: inline-block
 		font-family: $sans-serif
 		font-weight: 400
 		text-align: center
-		margin: $global-margin*7 auto
+		margin: $global-margin*6 auto $global-margin*9 auto
 		pointer-events: none
+		display: flex
+		flex-direction: column
+		justify-content: center
 
 		* 
 			max-width: $max-width
@@ -76,6 +97,7 @@ header.main-header
 
 		.hero-name 
 			font-size: 112px
+			line-height: 1em
 		.tagline
 			font-size: 56px // was 96px
 
@@ -118,20 +140,3 @@ header.main-header
 					transform: translate($letter-shift, -50%)
 					z-index: 0
 
-	&.green-bg
-		+angledGradient(top left, bottom right, $light_green, $green, 100%)
-		+box-shadow(0, 2px, 2px, $med_grey)
-		.title
-			a.name
-				color: $white
-			.nav-list li a, .fa
-				color: $white
-		.hero
-			color: $white
-			.bio-text
-				font-weight: 400
-			.bg-letter
-				opacity: 0.1
-				color: #000
-				&.split-ux
-					opacity: 0.55

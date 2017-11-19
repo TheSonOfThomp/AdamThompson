@@ -92,7 +92,7 @@ section.portfolio.default
 					min-height: 375px
 					display: flex
 					align-items: center
-					margin-right: $card-margin
+					margin: $card-margin
 
 					img
 						position: relative
@@ -142,43 +142,26 @@ section.portfolio.default
 				.portfolio-card
 					background-color: $noom
 					+CornerToCornerGradient($noom_light, $noom)
-				// a:hover
-				// 	.folio-title
-				// 		color: $noom
 			&#smrtwatr
 				.portfolio-card
 					background-color: $smrtwatr
 					+CornerToCornerGradient($smrtwatr_light, $smrtwatr)
-				// a:hover
-				// 	.folio-title
-				// 		color: $smrtwatr
 			&#knowroaming
 				.portfolio-card
 					background-color: $knowroaming
 					+CornerToCornerGradient($knowroaming_light, $knowroaming)
-				// a:hover
-				// 	.folio-title
-				// 		color: $knowroaming
 			&#chameleon
 				.portfolio-card
 					background-color: $chameleon
 					+CornerToCornerGradient($chameleon_light, $chameleon)
-				// a:hover
-				// 	.folio-title
-				// 		color: $chameleon
+			&#zynga
+				.portfolio-card
+					background-color: $zynga
+					+CornerToCornerGradient($zynga_light, $zynga)
 			&#tap
 				.portfolio-card
 					background-color: $tap
 					+CornerToCornerGradient($tap_light, $tap)
-				a:hover
-					.folio-title
-						color: $tap
-
-				a
-					border: 2px dotted $med_grey
-					&:hover, &:focus
-						.hover-state
-							background-color: $transparent
 
 			.hover-state
 				position: absolute

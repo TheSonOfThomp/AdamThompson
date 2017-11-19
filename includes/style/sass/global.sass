@@ -26,7 +26,7 @@ $transparent: rgba(250,250,250,0)
 $white_green: #E9FFE0
 $white_green_trans: rgba(238,255,229,0.75)
 $green_highlight: #E1FAD4
-$light_green: #00EA49
+$light_green: #00F548//00EA49
 $green: #2AC51B
 $dark_green: #2B5C12
 
@@ -46,15 +46,15 @@ $chameleon_light: #73D3A2
 $zynga: #DD3B30
 $zynga_light: #FF7870
 
-$tap: #518CB8 //#AA95E8//#444444
-$tap_light: #83AECC// #8D76CC//#888888
+$tap: #666 //#518CB8 
+$tap_light: #B8B8B8 //#83AECC
 
 $yours: $light_grey
 $yours_light: $white_trans
 
 // -------- Measurements -------- //
 $global-margin: 32px
-$max-width: 960px
+$max-width: 920px
 
 *::selection
 	background: $green_highlight /* WebKit/Blink Browsers */
@@ -260,7 +260,7 @@ html
 
 .button
 	display: block
-	+angledGradient(top left, bottom right, $dark_grey, $black, 100%)
+	+CornerToCornerGradient($dark_grey, $black)
 	font-family: $sans-serif
 	font-size: 16px
 	font-weight: 400
@@ -278,7 +278,7 @@ html
 	&:hover
 		color: $white
 		// background-color: $green
-		+angledGradient(top left, bottom right, $light_green, $green, 100%)
+		+CornerToCornerGradient($light_green, $green)
 		+box-shadow( 0, 2px, 8px, $med_grey)
 		transform: translateY(-2px)
 

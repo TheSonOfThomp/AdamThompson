@@ -1,8 +1,21 @@
+<?php sectionHeader("My Toolbox") ?>
+
+<?php 
+	$json_path = $root_path."/Resume/resumeContent.json";
+	$json_string = file_get_contents($json_path);
+	$folio_obj = json_decode($json_string, true);
+	$skills = $folio_obj['skills'];
+?>
+
 <section class="skills container" id="toolbox">
-		<div class="section-header">My Toolbox
-		</div>
 		<ul class="program-list"> 
-			<li class="animate resume-item featured ux" id="sketch">
+			<?php 
+				for ($i=0; $i < 16; $i++) { 
+					toolboxItem($skills[$i]);
+				}
+			?>
+
+<!-- 			<li class="animate resume-item featured ux" id="sketch">
 				<div class="app-logo"></div><p class="app-name">Sketch</p>
 			</li>
 			<li class="animate resume-item soft ux" id="framer">
@@ -49,6 +62,6 @@
 			</li>
 			<li class="animate resume-item featured industrial" id="inventor">
 				<div class="app-logo"></div><p class="app-name">Inventor</p>
-			</li>
+			</li> -->
 		</ul>
 	</section>

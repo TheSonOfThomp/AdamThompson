@@ -54,17 +54,18 @@
 <?php } ?>
 
 <?php function portfolioCard($item) { ?>
-<?php 
-	$link_path = $root_path."Portfolio/?p=".$item['id'];
-	$img_path = $root_path."includes/portfolio_images/".$item['image_url'];
-?>
+	<?php 
+		$link_path = $root_path."Portfolio/?p=".$item['id'];
+		$img_path = $root_path."includes/portfolio_images/".$item['image_url']; 
+	?>
 
 	<li class="folio-item featured
 		<?php foreach ($item['tags'] as $tag) { echo ' '.$tag;}?>" 
 		id="<?php echo $item['id']?>" 
 		data-published-date="<?php echo $item['date']?>">
 
-		<div class="portfolio-card" href="<?php echo $link_path ?>">
+		<a class="portfolio-card" href="<?php echo $link_path ?>">
+
 			<div class="hover-state"></div>
 			<div class="folio-info">
 				<span class="folio-title"><?php echo $item["name"]?></span>
@@ -75,7 +76,15 @@
 			<figure class="folio-img">
 				<img src="<?php echo $img_path ?>">
 			</figure>
-		</div>
+		</a>
+	</li>
+<?php } ?>
+
+<?php function toolboxItem($item) { ?>
+
+	<li class="animate toolbox-ttem" id="<?php echo $item[1][0] ?>">
+		<div class="app-logo"></div>
+		<p class="app-name"><?php echo $item[0] ?></p>
 	</li>
 
 <?php } ?>
