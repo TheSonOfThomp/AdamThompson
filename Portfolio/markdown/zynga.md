@@ -95,10 +95,10 @@ After about a month of multivariant testing, we settled on the Easy+Low Reward v
 ##Results
 
 At the end of our testing, we saw that we had nearly achieved our goal, and had saw **10% user engagement**, and a **2% increase in feed-post sourced DAU** in the first month the feature was live.
-
+<!-- 
 <div class="folio-nav prev chameleon">
 	<a href="?p=chameleon">Chameleon</a>
 </div>
 <div class="folio-nav next home">
 	<a href="../">Home</a>
-</div>
+</div> -->
