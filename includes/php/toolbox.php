@@ -1,4 +1,4 @@
-<?php sectionHeader("My Toolbox") ?>
+<?php sectionHeader("My Toolbox", 'toolbox'); ?>
 
 <?php 
 	$json_path = $root_path."/Resume/resumeContent.json";
@@ -7,7 +7,7 @@
 	$skills = $folio_obj['skills'];
 ?>
 
-<section class="skills container" id="toolbox">
+<section class="skills container hide-mobile" id="toolbox">
 		<ul class="program-list"> 
 			<?php 
 				for ($i=0; $i < 16; $i++) { 

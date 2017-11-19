@@ -17,7 +17,8 @@
 				<p>
 					When I'm not making products, I enjoy making music. In April 2017 I had the amazing opportunity to sing at the Beacon Theatre in New York with the <a target="_blank" href="http://www.570news.com/2017/04/05/uw-capella-group-shot-world-title/">Water Boys</a> for the ICCA finals.
 				</p>
+			</div>
+		<?php include('social.php'); ?>
 		</div>
-<?php include('social.php'); ?>
 	</div>
 </section>

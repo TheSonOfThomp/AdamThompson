@@ -1,5 +1,11 @@
-<?php function sectionHeader($title) { ?>
-	<div class="section-header">
+<?php function sectionHeader($title, $id='') { ?>
+	<?php 
+		if ($id == '') {
+			$id = $title;
+		}
+	?>
+
+	<div class="section-header" id="<?php echo $id ?>">
 		<div class="header-underline">
 			<h1><?php echo $title ?></h1>
 		</div>
