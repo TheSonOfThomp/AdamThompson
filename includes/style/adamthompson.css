@@ -51,7 +51,7 @@ html {
 
 .container {
   width: 96%;
-  max-width: 960px;
+  max-width: 920px;
   margin: 0 auto;
   height: 100%;
   position: relative;
@@ -59,7 +59,7 @@ html {
   text-align: center; }
   .container .content {
     width: 100%;
-    max-width: 960px;
+    max-width: 920px;
     margin: auto; }
 
 .shrinkwrap {
@@ -103,7 +103,7 @@ html {
 
 .section-header {
   width: 100%;
-  max-width: 960px;
+  max-width: 920px;
   margin: 32px auto;
   color: #333333;
   font-family: "europa", "gill sans", sans-serif;
@@ -170,19 +170,19 @@ html {
   .button:hover {
     color: #FEFEFE;
     background: #2AC51B;
-    background: -moz-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
-    background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #00EA49), color-stop(100%, #2AC51B));
-    background: -webkit-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
-    background: -o-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
-    background: -ms-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
-    background: linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
+    background: -moz-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
+    background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #00F548), color-stop(100%, #2AC51B));
+    background: -webkit-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
+    background: -o-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
+    background: -ms-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
+    background: linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
     -webkit-box-shadow: 0 2px 8px #808080;
     -moz-box-shadow: 0 2px 8px #808080;
     box-shadow: 0 2px 8px #808080;
     transform: translateY(-2px); }
   .button.large {
     width: 100%;
-    max-width: 960px; }
+    max-width: 920px; }
   .button.green {
     color: #2AC51B;
     font-weight: 600;
@@ -194,10 +194,34 @@ html {
 /* -------------------- HEADER -------------------- */
 header.main-header {
   width: 100%;
-  padding: 32px 0 32px 0;
+  padding: 0;
   color: #333333;
   overflow: hidden;
   text-align: center; }
+  header.main-header.green-bg {
+    background: #2AC51B;
+    background: -moz-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
+    background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #00F548), color-stop(100%, #2AC51B));
+    background: -webkit-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
+    background: -o-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
+    background: -ms-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
+    background: linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
+    -webkit-box-shadow: 0 4px 8px #808080;
+    -moz-box-shadow: 0 4px 8px #808080;
+    box-shadow: 0 4px 8px #808080; }
+    header.main-header.green-bg .title a.name {
+      color: #FEFEFE; }
+    header.main-header.green-bg .title .nav-list li a, header.main-header.green-bg .title .fa {
+      color: #FEFEFE; }
+    header.main-header.green-bg .hero {
+      color: #FEFEFE; }
+      header.main-header.green-bg .hero .bio-text {
+        font-weight: 400; }
+      header.main-header.green-bg .hero .bg-letter {
+        opacity: 0.1;
+        color: #000; }
+        header.main-header.green-bg .hero .bg-letter.split-ux {
+          opacity: 0.55; }
   header.main-header .header-contents {
     margin: auto;
     width: 100%;
@@ -208,8 +232,8 @@ header.main-header {
       display: flex;
       justify-content: space-between;
       width: 80%;
-      max-width: 960px;
-      margin: auto; }
+      max-width: 920px;
+      margin: 32px auto; }
       header.main-header .header-contents .title .name {
         white-space: nowrap;
         font-size: 36px;
@@ -233,7 +257,8 @@ header.main-header {
         margin: 0;
         display: flex;
         justify-content: center;
-        width: 100%; }
+        width: 100%;
+        font-weight: 600; }
         header.main-header .header-contents .title .nav-list li {
           list-style: none;
           display: inline-block;
@@ -246,20 +271,23 @@ header.main-header {
             border-bottom: 2px solid #2AC51B; }
   header.main-header .hero {
     position: relative;
-    display: inline-block;
     font-family: "europa", "gill sans", sans-serif;
     font-weight: 400;
     text-align: center;
-    margin: 224px auto;
-    pointer-events: none; }
+    margin: 192px auto 288px auto;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
     header.main-header .hero * {
-      max-width: 960px;
+      max-width: 920px;
       margin: auto;
       position: relative;
       font-weight: 600;
       z-index: 10; }
     header.main-header .hero .hero-name {
-      font-size: 112px; }
+      font-size: 112px;
+      line-height: 1em; }
     header.main-header .hero .tagline {
       font-size: 56px; }
     header.main-header .hero .bg-letter {
@@ -288,37 +316,13 @@ header.main-header {
           right: 0;
           transform: translate(20%, -50%);
           z-index: 0; }
-  header.main-header.green-bg {
-    background: #2AC51B;
-    background: -moz-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
-    background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #00EA49), color-stop(100%, #2AC51B));
-    background: -webkit-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
-    background: -o-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
-    background: -ms-linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
-    background: linear-gradient(to bottom right, #00EA49 0%, #2AC51B 100%);
-    -webkit-box-shadow: 0 2px 2px #808080;
-    -moz-box-shadow: 0 2px 2px #808080;
-    box-shadow: 0 2px 2px #808080; }
-    header.main-header.green-bg .title a.name {
-      color: #FEFEFE; }
-    header.main-header.green-bg .title .nav-list li a, header.main-header.green-bg .title .fa {
-      color: #FEFEFE; }
-    header.main-header.green-bg .hero {
-      color: #FEFEFE; }
-      header.main-header.green-bg .hero .bio-text {
-        font-weight: 400; }
-      header.main-header.green-bg .hero .bg-letter {
-        opacity: 0.1;
-        color: #000; }
-        header.main-header.green-bg .hero .bg-letter.split-ux {
-          opacity: 0.55; }
 
 /* ---------------------- Social Bar ---------------------- */
 .social-container {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 960px; }
+  max-width: 920px; }
   .social-container .button {
     width: 33%;
     margin-right: 0; }
@@ -329,7 +333,7 @@ header.main-header {
     margin: 0;
     list-style: none;
     width: 100%;
-    max-width: 960px;
+    max-width: 920px;
     margin: auto auto; }
     .social-container .social-list .animate.social-media:hover {
       padding-top: 0.5rem;
@@ -470,7 +474,7 @@ section.portfolio.default {
           min-height: 375px;
           display: flex;
           align-items: center;
-          margin-right: 32px; }
+          margin: 32px; }
           section.portfolio.default .gallery .folio-item .portfolio-card .folio-img img {
             position: relative;
             width: 100%;
@@ -548,21 +552,24 @@ section.portfolio.default {
         background: -o-linear-gradient(to bottom right, #73D3A2 0%, #2e8c5d 100%);
         background: -ms-linear-gradient(to bottom right, #73D3A2 0%, #2e8c5d 100%);
         background: linear-gradient(to bottom right, #73D3A2 0%, #2e8c5d 100%); }
+      section.portfolio.default .gallery .folio-item#zynga .portfolio-card {
+        background-color: #DD3B30;
+        background: #DD3B30;
+        background: -moz-linear-gradient(to bottom right, #FF7870 0%, #DD3B30 100%);
+        background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #FF7870), color-stop(100%, #DD3B30));
+        background: -webkit-linear-gradient(to bottom right, #FF7870 0%, #DD3B30 100%);
+        background: -o-linear-gradient(to bottom right, #FF7870 0%, #DD3B30 100%);
+        background: -ms-linear-gradient(to bottom right, #FF7870 0%, #DD3B30 100%);
+        background: linear-gradient(to bottom right, #FF7870 0%, #DD3B30 100%); }
       section.portfolio.default .gallery .folio-item#tap .portfolio-card {
-        background-color: #518CB8;
-        background: #518CB8;
-        background: -moz-linear-gradient(to bottom right, #83AECC 0%, #518CB8 100%);
-        background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #83AECC), color-stop(100%, #518CB8));
-        background: -webkit-linear-gradient(to bottom right, #83AECC 0%, #518CB8 100%);
-        background: -o-linear-gradient(to bottom right, #83AECC 0%, #518CB8 100%);
-        background: -ms-linear-gradient(to bottom right, #83AECC 0%, #518CB8 100%);
-        background: linear-gradient(to bottom right, #83AECC 0%, #518CB8 100%); }
-      section.portfolio.default .gallery .folio-item#tap a:hover .folio-title {
-        color: #518CB8; }
-      section.portfolio.default .gallery .folio-item#tap a {
-        border: 2px dotted #808080; }
-        section.portfolio.default .gallery .folio-item#tap a:hover .hover-state, section.portfolio.default .gallery .folio-item#tap a:focus .hover-state {
-          background-color: rgba(250, 250, 250, 0); }
+        background-color: #666;
+        background: #666;
+        background: -moz-linear-gradient(to bottom right, #B8B8B8 0%, #666 100%);
+        background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #B8B8B8), color-stop(100%, #666));
+        background: -webkit-linear-gradient(to bottom right, #B8B8B8 0%, #666 100%);
+        background: -o-linear-gradient(to bottom right, #B8B8B8 0%, #666 100%);
+        background: -ms-linear-gradient(to bottom right, #B8B8B8 0%, #666 100%);
+        background: linear-gradient(to bottom right, #B8B8B8 0%, #666 100%); }
       section.portfolio.default .gallery .folio-item .hover-state {
         position: absolute;
         top: 0;
@@ -604,7 +611,7 @@ section.portfolio.default {
   section.portfolio.default .button {
     font-size: 18px;
     width: 100%;
-    max-width: 960px;
+    max-width: 920px;
     padding: 1em 0;
     margin-top: 64px; }
     section.portfolio.default .button .fa {
@@ -623,7 +630,7 @@ section.portfolio.brutal {
     width: auto;
     margin: 16px;
     display: inline-block;
-    max-width: 960px; }
+    max-width: 920px; }
     section.portfolio.brutal .gallery ul {
       position: relative;
       display: inline-block;
@@ -730,7 +737,7 @@ section.portfolio.brutal {
     margin-top: 32px;
     font-size: 18px;
     width: 100%;
-    max-width: 960px;
+    max-width: 920px;
     padding: 1em 0; }
     section.portfolio.brutal .button .fa {
       padding: 0 2px;
@@ -829,14 +836,14 @@ section.resume article {
       text-align: left; }
     section.resume article .content-header .item-institution {
       font-family: "europa", "gill sans", sans-serif;
-      font-size: 2.5rem;
+      font-size: 36px;
       font-weight: 600;
       display: inline-block;
       margin: 0;
       padding-right: 0.25em; }
     section.resume article .content-header .item-title {
       font-family: "europa", "gill sans", sans-serif;
-      font-size: 2rem;
+      font-size: 28px;
       font-weight: 400;
       display: inline-block;
       margin: auto;
@@ -924,29 +931,26 @@ section.resume .experience {
     background-image: url("../image_assets/genesys_logo.png"); }
   section.resume .experience #uwaterloo .logo {
     background-image: url("../image_assets/uwaterloo_logo.png"); }
-section.resume .skills {
+
+.skills {
   position: relative;
-  display: inline-block;
-  margin-top: 32px; }
-  section.resume .skills .skills-sub-header {
-    padding-left: 1rem;
-    padding-top: 1.5rem;
-    font-family: "europa", "gill sans", sans-serif;
-    font-size: 1.5rem;
-    line-height: 2em; }
-  section.resume .skills .program-list {
-    display: block;
+  display: block;
+  margin: 32px auto;
+  width: 100%;
+  text-align: center; }
+  .skills .program-list {
+    display: inline-block;
     position: relative;
     padding: 0;
-    margin: 0;
+    margin: auto;
     list-style: none;
     font-family: "europa", "gill sans", sans-serif; }
-    section.resume .skills .program-list li {
+    .skills .program-list li {
       position: relative;
       width: 12.5%;
       margin: 1rem 0;
       float: left; }
-      section.resume .skills .program-list li .app-name {
+      .skills .program-list li .app-name {
         position: relative;
         margin: 0;
         padding-top: 0.5em;
@@ -957,7 +961,7 @@ section.resume .skills {
         -webkit-transition: opacity 0.1s ease-in-out;
         -moz-transition: opacity 0.1s ease-in-out;
         transition: opacity 0.1s ease-in-out; }
-      section.resume .skills .program-list li .app-logo {
+      .skills .program-list li .app-logo {
         position: relative;
         padding-bottom: 56%;
         background-size: 56%;
@@ -967,86 +971,86 @@ section.resume .skills {
         -moz-border-radius: 0;
         -ms-border-radius: 0;
         border-radius: 0; }
-      section.resume .skills .program-list li:hover .app-name {
+      .skills .program-list li:hover .app-name {
         opacity: 1; }
     @media screen and (max-width: 920px) {
-      section.resume .skills .program-list li {
+      .skills .program-list li {
         width: 25%; }
-      section.resume .skills .program-list .app-name {
+      .skills .program-list .app-name {
         display: none; } }
-    section.resume .skills .program-list #sketch .app-logo {
+    .skills .program-list #sketch .app-logo {
       background-image: url("../image_assets/apps/sketch.png"); }
-    section.resume .skills .program-list #photoshop .app-logo {
+    .skills .program-list #ps .app-logo {
       background-image: url("../image_assets/apps/photoshop.png"); }
-    section.resume .skills .program-list #ai .app-logo {
+    .skills .program-list #ai .app-logo {
       background-image: url("../image_assets/apps/ai.png"); }
-    section.resume .skills .program-list #indesign .app-logo {
+    .skills .program-list #indesign .app-logo {
       background-image: url("../image_assets/apps/indd.png"); }
-    section.resume .skills .program-list #balsamiq .app-logo {
+    .skills .program-list #balsamiq .app-logo {
       background-image: url("../image_assets/apps/balsamiq.png"); }
-    section.resume .skills .program-list #framer .app-logo {
+    .skills .program-list #framer .app-logo {
       background-image: url("../image_assets/apps/framer.png"); }
-    section.resume .skills .program-list #origami .app-logo {
+    .skills .program-list #origami .app-logo {
       background-image: url("../image_assets/apps/origami.png"); }
-    section.resume .skills .program-list #html5 .app-logo {
+    .skills .program-list #html .app-logo {
       background-image: url("../image_assets/apps/html.png"); }
-    section.resume .skills .program-list #css3 .app-logo {
+    .skills .program-list #css3 .app-logo {
       background-image: url("../image_assets/apps/css3.png"); }
-    section.resume .skills .program-list #jquery .app-logo {
+    .skills .program-list #jquery .app-logo {
       background-image: url("../image_assets/apps/jquery.png"); }
-    section.resume .skills .program-list #javascript .app-logo {
+    .skills .program-list #js .app-logo {
       background-image: url("../image_assets/apps/js.png"); }
-    section.resume .skills .program-list #coffeescript .app-logo {
+    .skills .program-list #coffeescript .app-logo {
       background-image: url("../image_assets/apps/coffeescript.png"); }
-    section.resume .skills .program-list #react .app-logo {
+    .skills .program-list #react .app-logo {
       background-image: url("../image_assets/apps/react.png"); }
-    section.resume .skills .program-list #arduino .app-logo {
+    .skills .program-list #arduino .app-logo {
       background-image: url("../image_assets/apps/arduino.png"); }
-    section.resume .skills .program-list #xcode .app-logo {
+    .skills .program-list #xcode .app-logo {
       background-image: url("../image_assets/apps/xcode.png"); }
-    section.resume .skills .program-list #php .app-logo {
+    .skills .program-list #php .app-logo {
       background-image: url("../image_assets/apps/php.png"); }
-    section.resume .skills .program-list #cpp .app-logo {
+    .skills .program-list #cpp .app-logo {
       background-image: url("../image_assets/apps/cpp.png"); }
-    section.resume .skills .program-list #java .app-logo {
+    .skills .program-list #java .app-logo {
       background-image: url("../image_assets/apps/java.png"); }
-    section.resume .skills .program-list #swift .app-logo {
+    .skills .program-list #swift .app-logo {
       background-image: url("../image_assets/apps/swift.png"); }
-    section.resume .skills .program-list #python .app-logo {
+    .skills .program-list #python .app-logo {
       background-image: url("../image_assets/apps/python.png"); }
-    section.resume .skills .program-list #matlab .app-logo {
+    .skills .program-list #matlab .app-logo {
       background-image: url("../image_assets/apps/matlab.png"); }
-    section.resume .skills .program-list #git .app-logo {
+    .skills .program-list #git .app-logo {
       background-image: url("../image_assets/apps/git.png"); }
-    section.resume .skills .program-list #bootstrap .app-logo {
+    .skills .program-list #bootstrap .app-logo {
       background-image: url("../image_assets/apps/bootstrap.png"); }
-    section.resume .skills .program-list #sass .app-logo {
+    .skills .program-list #sass .app-logo {
       background-image: url("../image_assets/apps/sass.png"); }
-    section.resume .skills .program-list #excel .app-logo {
+    .skills .program-list #excel .app-logo {
       background-image: url("../image_assets/apps/excel.png"); }
-    section.resume .skills .program-list #sql .app-logo {
+    .skills .program-list #sql .app-logo {
       background-image: url("../image_assets/apps/sql.png"); }
-    section.resume .skills .program-list #autocad .app-logo {
+    .skills .program-list #autocad .app-logo {
       background-image: url("../image_assets/apps/autocad.png"); }
-    section.resume .skills .program-list #inventor .app-logo {
+    .skills .program-list #inventor .app-logo {
       background-image: url("../image_assets/apps/inventor.png"); }
-    section.resume .skills .program-list #rhino .app-logo {
+    .skills .program-list #rhino .app-logo {
       background-image: url("../image_assets/apps/rhino.png"); }
-    section.resume .skills .program-list #max .app-logo {
+    .skills .program-list #max .app-logo {
       background-image: url("../image_assets/apps/max.png"); }
-    section.resume .skills .program-list #c4d .app-logo {
+    .skills .program-list #c4d .app-logo {
       background-image: url("../image_assets/apps/c4d.png"); }
-    section.resume .skills .program-list #ae .app-logo {
+    .skills .program-list #ae .app-logo {
       background-image: url("../image_assets/apps/ae.png"); }
-    section.resume .skills .program-list #premiere .app-logo {
+    .skills .program-list #premiere .app-logo {
       background-image: url("../image_assets/apps/premiere.png"); }
-    section.resume .skills .program-list #final_cut .app-logo {
+    .skills .program-list #final_cut .app-logo {
       background-image: url("../image_assets/apps/final_cut.png"); }
-    section.resume .skills .program-list #espresso .app-logo {
+    .skills .program-list #espresso .app-logo {
       background-image: url("../image_assets/apps/espresso.png"); }
-    section.resume .skills .program-list #sublime .app-logo {
+    .skills .program-list #sublime .app-logo {
       background-image: url("../image_assets/apps/sublime.png"); }
-    section.resume .skills .program-list #coda .app-logo {
+    .skills .program-list #coda .app-logo {
       background-image: url("../image_assets/apps/coda.png"); }
 
 /* ---------------------- FOOTER ---------------------- */
@@ -1157,20 +1161,20 @@ footer {
     background: radial-gradient(center, circle cover, #FF7870 0%, #DD3B30 100%);
     background-color: #DD3B30; }
   .portfolio-page .tap.small-header .header-title {
-    border-bottom: 2px solid #518CB8; }
+    border-bottom: 2px solid #666; }
   .portfolio-page .tap h2, .portfolio-page .tap p a, .portfolio-page .tap figure a, .portfolio-page .tap .tldr-title, .portfolio-page .tap.folio-nav a:hover {
-    color: #518CB8; }
+    color: #666; }
   .portfolio-page .tap.folio-nav:hover, .portfolio-page .tap.folio-nav:active {
     background: #CEE4F5;
-    border-color: #518CB8; }
+    border-color: #666; }
   .portfolio-page .tap figure#hero {
-    background: -moz-radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #83AECC), color-stop(100%, #518CB8));
-    background: -webkit-radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
-    background: -o-radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
-    background: -ms-radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
-    background: radial-gradient(center, circle cover, #83AECC 0%, #518CB8 100%);
-    background-color: #518CB8; }
+    background: -moz-radial-gradient(center, circle cover, #B8B8B8 0%, #666 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #B8B8B8), color-stop(100%, #666));
+    background: -webkit-radial-gradient(center, circle cover, #B8B8B8 0%, #666 100%);
+    background: -o-radial-gradient(center, circle cover, #B8B8B8 0%, #666 100%);
+    background: -ms-radial-gradient(center, circle cover, #B8B8B8 0%, #666 100%);
+    background: radial-gradient(center, circle cover, #B8B8B8 0%, #666 100%);
+    background-color: #666; }
   .portfolio-page header {
     position: relative;
     display: flex;

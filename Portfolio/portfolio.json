@@ -35,28 +35,27 @@
 			"date": "2015-08-26",
 			"type": "Product Design",
 			"tags": ["mech", "software", "ux", "ui", "hardware"]
-		}
-
-	],
-	"portfolio": [
-		{
-			"id": "tap",
-			"name": "Tap Metronome",
-			"description": "For easy band practice.",
-			"image_url": "tap/tap-metronome-blue.png",
-			"date": "2017-10-14",
-			"type": "iOS Development",
-			"tags": ["ios", "software", "ux", "ui"]
 		},
 		{
 			"id": "zynga",
 			"name": "Zynga",
-			"description": "",
-			"image_url": "zynga/zynga-basket-cover.jpg",
+			"description": "Promoting social virality.",
+			"image_url": "zynga/zynga-basket-crop.jpg",
 			"date": "2016-08-20",
 			"type": "Product Management",
 			"tags": ["pm", "ux", "data"]
 		},
+		{
+			"id": "tap",
+			"name": "Tap Metronome",
+			"description": "For easy band practice.",
+			"image_url": "tap/tap-metronome-crop.png",
+			"date": "2017-10-14",
+			"type": "iOS Development",
+			"tags": ["ios", "software", "ux", "ui"]
+		}
+	],
+	"portfolio": [
 		{
 			"id": "colourtherm",
 			"name": "Colour Thermometer",

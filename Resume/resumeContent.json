@@ -404,29 +404,32 @@
 		["Sketch", ["sketch", "ui", "ux", "wireframe"]], 
 		["Framer", ["framer", "ux", "ui", "js", "coffeescript", "prototype"]],
 		["Origami", ["origami", "ux", "ui", "prototype"]],
-		["Photoshop", ["ps", "photoshop", "ui", "graphic"]], 
 		["Balsamiq", ["balsamiq", "ux", "wireframe", "pm"]],
+		["Photoshop", ["ps", "photoshop", "ui", "graphic"]], 
+		["Illustrator", ["ai", "illustrator", "graphic"]],
+		["JavaScript", ["js", "web", "front-end", "dev"]],
 		["HTML", ["html", "web", "front-end", "prototype"]],
-		["CSS", ["css", "web", "front-end" ]],
-		["jQuery", ["jQuery","js", "web", "front-end", "dev"]],
-		["CoffeeScript", [ "coffeescript","js", "web", "dev"]],	
-		["Swift", ["swift", "dev", "ios"]],
-		["PHP", ["php", "dev", "web"]],
-		["C++", ["cpp", "dev"]],
+		
 		["Python", ["python", "dev", "front-end", "web", "dsp"]],
 		["React", ["react", "dev", "prototype", "web", "ios", "Android"]],
-		["Git", ["git", "dev"]],
+		["Swift", ["swift", "dev", "ios"]],
+		["Arduino", ["arduino", "prototype", "hardware", "elec", "dsp"]],
+		["After Effects", ["ae", "video"]],
+		["InDesign", ["indesign","graphic"]],
 		["XCode", ["xcode", "ios", "swift"]],
-		["AutoCad", ["cad", "autocad", "3d", "autodesk"]],
+		["AutoCad", ["autocad", "cad", "autocad", "3d", "autodesk"]],
+
+		["CoffeeScript", [ "coffeescript","js", "web", "dev"]],	
+		["PHP", ["php", "dev", "web"]],
+		["C++", ["cpp", "dev"]],
+		["Git", ["git", "dev"]],
 		["Inventor", ["cad", "inventor", "3d", "autodesk"]],
 		["Cinema 4D", ["3D", "c4d"]],
-		["Arduino", ["arduino", "prototype", "hardware", "elec", "dsp"]],
-		["Illustrator", ["ai", "illustrator", "graphic"]],
-		["InDesign", ["indesign","graphic"]],
-		["After Effects", ["ae", "video"]],
+		
 		["Final Cut X", ["fcx", "video"]],
 		["3DS Max", ["3ds", "3D", "video"]],
-		["MATLAB", ["matlab", "dev", "research", "dsp"]]
+		["MATLAB", ["matlab", "dev", "research", "dsp"]],
+		["CSS", ["css", "web", "front-end" ]]
 	]
 
 }
