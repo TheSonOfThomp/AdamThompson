@@ -16,7 +16,7 @@
 	}
 ?>
 
-<?php sectionHeader("Resume") ?>
+<?php sectionHeader("Resume"); ?>
 
 <section class="resume" id="resume">
 	

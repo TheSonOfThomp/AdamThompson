@@ -9,7 +9,7 @@
 			<div class="hamburger-drawer">
 				<div class="hamburger-icon"><a><i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-times" aria-hidden="true"></i></a></div>
 				<ul class="nav-list">
-					<li id="nav-portfolio"><a>Work</a></li>
+					<li id="nav-portfolio"><a>Portfolio</a></li>
 					<li id="nav-about"><a>About</a></li>
 					<li id="nav-contact"><a href="mailto:adam.m.thompson@icloud.com">Contact</a><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
 			</ul>

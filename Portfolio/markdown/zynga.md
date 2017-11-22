@@ -6,7 +6,7 @@ At Zynga Toronto, I worked as a product manager on the web Poker app—the compa
 
 <figure class='folio_image' id='hero'>
 	<a target='_blank'>
-		<img src='../includes/portfolio_images/zynga/zynga-basket-cover.jpg'>
+		<img src='../includes/portfolio_images/zynga/zynga-basket-crop.jpg'>
 	</a>
 <figcaption></figcaption>
 </figure>

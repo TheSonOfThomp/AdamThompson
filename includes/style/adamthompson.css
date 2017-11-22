@@ -284,13 +284,21 @@ header.main-header {
       max-width: 920px;
       margin: auto;
       position: relative;
-      font-weight: 600;
       z-index: 10; }
     header.main-header .hero .hero-name {
       font-size: 112px;
-      line-height: 1em; }
+      line-height: 1em;
+      font-weight: 600; }
     header.main-header .hero .tagline {
-      font-size: 56px; }
+      font-weight: 600;
+      font-size: 96px; }
+    header.main-header .hero .bio-text {
+      position: relative;
+      text-align: center;
+      font-family: "europa", "gill sans", sans-serif;
+      font-size: 20px;
+      line-height: 2em;
+      font-weight: 300; }
     header.main-header .hero .bg-letter {
       position: absolute;
       max-width: none;
@@ -1468,6 +1476,11 @@ nav .folio-nav {
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
 @media screen and (max-width: 1024px) {
+  section.header .hero .headline {
+    font-size: 64px; }
+  section.header .hero .bio-text {
+    display: none; }
+
   section.portfolio * {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
