@@ -1,7 +1,7 @@
 <?php function sectionHeader($title, $id='') { ?>
 	<?php 
 		if ($id == '') {
-			$id = $title;
+			$id = strtolower($title);
 		}
 	?>
 
