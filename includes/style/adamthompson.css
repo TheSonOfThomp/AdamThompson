@@ -109,7 +109,7 @@ html {
   font-family: "europa", "gill sans", sans-serif;
   text-align: center; }
   .section-header .header-underline {
-    width: 67%;
+    width: 50%;
     margin: auto;
     border-bottom: 1px solid #808080; }
     .section-header .header-underline h1 {
@@ -866,7 +866,7 @@ section.resume article {
     section.resume article .content-header .item-location:after, section.resume article .content-header .minor:after {
       content: " - "; }
     section.resume article .content-header .show {
-      display: inline-block;
+      display: none;
       color: #2AC51B;
       background: none;
       border: none;
