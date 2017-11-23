@@ -28,6 +28,15 @@
 			"tags": ["mech", "software", "dsp", "audio", "signals", "ux", "industrial", "hardware"]
 		},
 		{
+			"id": "tap",
+			"name": "Tap Metronome",
+			"description": "For easy band practice.",
+			"image_url": "tap/tap-metronome-crop.png",
+			"date": "2017-10-14",
+			"type": "iOS Development",
+			"tags": ["ios", "software", "ux", "ui"]
+		},
+		{
 			"id": "smrtwatr",
 			"name": "SMRT WATR",
 			"description": "The interactive water fountain.",
@@ -40,19 +49,10 @@
 			"id": "zynga",
 			"name": "Zynga",
 			"description": "Promoting social virality.",
-			"image_url": "zynga/zynga-basket-crop.jpg",
+			"image_url": "zynga/zynga-basket-crop.png",
 			"date": "2016-08-20",
 			"type": "Product Management",
 			"tags": ["pm", "ux", "data"]
-		},
-		{
-			"id": "tap",
-			"name": "Tap Metronome",
-			"description": "For easy band practice.",
-			"image_url": "tap/tap-metronome-crop.png",
-			"date": "2017-10-14",
-			"type": "iOS Development",
-			"tags": ["ios", "software", "ux", "ui"]
 		}
 	],
 	"portfolio": [

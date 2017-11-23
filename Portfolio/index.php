@@ -17,23 +17,21 @@ include('../includes/plugins/ParsedownExtra.php');
 
 	else 
 		{ ?>
-		<title>Adam Thompson - Portfolio</title>
-		</head>
-		<body class="portfolio">
-			<header class="portfolio sticky">
-				<div class="title">
-					<a href="<?php echo $root_path; ?>/">Adam Thompson</a>
-					<div class="tagline">Portfolio</div>
-				</div>
-			</header>
+			<title>Adam Thompson - Portfolio</title>
+			</head>
+			<body class="portfolio">
+				<header class="portfolio sticky">
+					<div class="title">
+						<a href="<?php echo $root_path; ?>/">Adam Thompson</a>
+						<div class="tagline">Portfolio</div>
+					</div>
+				</header>
 
 	<?php
-		$see_more = true;
-		include('../includes/php/portfolio.php');
-		include('../includes/php/footer.php');
-
+			$see_more = true;
+			include('../includes/php/portfolio.php');
 		}
+		include('../includes/php/footer.php');
 	?>
-
 </body>
 </html>

@@ -1,17 +1,13 @@
-<!-- <div class="folio-nav prev home">
-	<a href="../">Home</a>
-</div>
-<div class="folio-nav next knowroaming">
-	<a href="?p=knowroaming">KnowRoaming</a>
-</div> -->
-
 # Noom
 
 <div class="tldr" markdown=1>
+<!-- WHAT -->
 ## I simplified a confusing interface without compromising functionality.
 
+<!-- WHY -->
 #### Users were having trouble navigating the core meal-logging flow because the buttons weren’t obvious and changed behaviour depending on use case. We needed to fix this.
 
+<!-- HOW -->
 #### I consolidated the user flow and UI, making it consistent in all use cases. Through meticulous user-testing we designed an interface that eliminated hesitation and uncertainty.
 </div>
 

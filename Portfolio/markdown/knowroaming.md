@@ -14,7 +14,7 @@
 <figcaption></figcaption>
 </figure>
 
-## Problem
+## Background
 
 KnowRoaming is a small company based in Toronto that makes a smart SIM sticker—a layer on your SIM card that connects you while abroad. To manage the prepaid account, among other things, KnowRoaming has an iOS and Android app.
 
