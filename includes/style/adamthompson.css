@@ -566,14 +566,14 @@ section.portfolio {
         background: -ms-linear-gradient(to bottom right, #FF7870 0%, #DD3B30 100%);
         background: linear-gradient(to bottom right, #FF7870 0%, #DD3B30 100%); }
       section.portfolio .gallery .folio-item#tap .portfolio-card {
-        background-color: #666;
-        background: #666;
-        background: -moz-linear-gradient(to bottom right, #B8B8B8 0%, #666 100%);
-        background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #B8B8B8), color-stop(100%, #666));
-        background: -webkit-linear-gradient(to bottom right, #B8B8B8 0%, #666 100%);
-        background: -o-linear-gradient(to bottom right, #B8B8B8 0%, #666 100%);
-        background: -ms-linear-gradient(to bottom right, #B8B8B8 0%, #666 100%);
-        background: linear-gradient(to bottom right, #B8B8B8 0%, #666 100%); }
+        background-color: #000000;
+        background: #000000;
+        background: -moz-linear-gradient(to bottom right, #393939 0%, #000000 100%);
+        background: -webkit-gradient(linear, top left, bottom right, color-stop(0%, #393939), color-stop(100%, #000000));
+        background: -webkit-linear-gradient(to bottom right, #393939 0%, #000000 100%);
+        background: -o-linear-gradient(to bottom right, #393939 0%, #000000 100%);
+        background: -ms-linear-gradient(to bottom right, #393939 0%, #000000 100%);
+        background: linear-gradient(to bottom right, #393939 0%, #000000 100%); }
       section.portfolio .gallery .folio-item .hover-state {
         position: absolute;
         top: 0;
@@ -1170,20 +1170,20 @@ footer {
     background: radial-gradient(center, circle cover, #FF7870 0%, #DD3B30 100%);
     background-color: #DD3B30; }
   .portfolio-page .tap.small-header .header-title {
-    border-bottom: 2px solid #666; }
+    border-bottom: 2px solid #000000; }
   .portfolio-page .tap h2, .portfolio-page .tap p a, .portfolio-page .tap figure a, .portfolio-page .tap .tldr-title, .portfolio-page .tap.folio-nav a:hover {
-    color: #666; }
+    color: #000000; }
   .portfolio-page .tap.folio-nav:hover, .portfolio-page .tap.folio-nav:active {
     background: #CEE4F5;
-    border-color: #666; }
+    border-color: #000000; }
   .portfolio-page .tap figure#hero {
-    background: -moz-radial-gradient(center, circle cover, #B8B8B8 0%, #666 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #B8B8B8), color-stop(100%, #666));
-    background: -webkit-radial-gradient(center, circle cover, #B8B8B8 0%, #666 100%);
-    background: -o-radial-gradient(center, circle cover, #B8B8B8 0%, #666 100%);
-    background: -ms-radial-gradient(center, circle cover, #B8B8B8 0%, #666 100%);
-    background: radial-gradient(center, circle cover, #B8B8B8 0%, #666 100%);
-    background-color: #666; }
+    background: -moz-radial-gradient(center, circle cover, #393939 0%, #000000 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #393939), color-stop(100%, #000000));
+    background: -webkit-radial-gradient(center, circle cover, #393939 0%, #000000 100%);
+    background: -o-radial-gradient(center, circle cover, #393939 0%, #000000 100%);
+    background: -ms-radial-gradient(center, circle cover, #393939 0%, #000000 100%);
+    background: radial-gradient(center, circle cover, #393939 0%, #000000 100%);
+    background-color: #000000; }
   .portfolio-page header {
     position: relative;
     display: flex;
