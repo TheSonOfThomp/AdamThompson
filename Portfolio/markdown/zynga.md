@@ -55,7 +55,7 @@ While most sharable moments involve sharing high scores with friends, we found a
 
 ## Feature
 
-After some brainstorming we settled on the idea of collecting playing cards to earn in-game currency—poker chips and gold. This idea worked great with our business goals since would allow users to stay engaged with the feature for a long time without repeating the same story. Here is a feature summary:
+After some brainstorming we settled on the idea of collecting playing cards to earn in-game currency—poker chips and gold. This idea worked great with our business goals since would allow users to stay engaged with the feature for a long time without repeating the exact same story.
 
 <!-- 1. There’s a Royal Flush you want to collect
 2. You can collect the cards required one at a time
