@@ -123,6 +123,21 @@ $max-width: 920px
 	-webkit-font-feature-settings:	"ss01"
 	font-feature-settings:			"ss01"
 
+// Global
+
+.wf-loading
+	h1, h2, h3, p, ul, .tagline, .fa
+		// transform: translateY(-100px)
+		opacity: 0
+
+.wf-active
+	h1, h2, h3, p, ul, .tagline, .fa
+		// transform: translateY(0)
+		opacity: 1
+
+h1, h2, h3, p, ul, .tagline, .fa
+	+animate-elements(opacity, 0.33s, ease-in-out)
+	// +animate-elements(transform, 0.25s, ease-in-out)
 html
 	font-size: 16px
 	+alternateChars()

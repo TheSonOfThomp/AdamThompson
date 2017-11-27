@@ -4,6 +4,17 @@
 *::-moz-selection {
   background: #E1FAD4; }
 
+.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading p, .wf-loading ul, .wf-loading .tagline, .wf-loading .fa {
+  opacity: 0; }
+
+.wf-active h1, .wf-active h2, .wf-active h3, .wf-active p, .wf-active ul, .wf-active .tagline, .wf-active .fa {
+  opacity: 1; }
+
+h1, h2, h3, p, ul, .tagline, .fa {
+  -webkit-transition: opacity 0.33s ease-in-out;
+  -moz-transition: opacity 0.33s ease-in-out;
+  transition: opacity 0.33s ease-in-out; }
+
 html {
   font-size: 16px;
   -moz-font-feature-settings: "ss01";
