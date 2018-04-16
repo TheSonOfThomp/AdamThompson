@@ -215,10 +215,7 @@ header.main-header {
     background: -webkit-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
     background: -o-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
     background: -ms-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
-    background: linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
-    -webkit-box-shadow: 0 4px 8px #808080;
-    -moz-box-shadow: 0 4px 8px #808080;
-    box-shadow: 0 4px 8px #808080; }
+    background: linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%); }
     header.main-header.green-bg .title a.name {
       color: #FEFEFE; }
     header.main-header.green-bg .title .nav-list li a, header.main-header.green-bg .title .fa {
@@ -449,9 +446,9 @@ section.portfolio {
         -webkit-transition: transform 0.2s ease-in-out;
         -moz-transition: transform 0.2s ease-in-out;
         transition: transform 0.2s ease-in-out;
-        -webkit-box-shadow: 0 4px 16px #BFBFBF;
-        -moz-box-shadow: 0 4px 16px #BFBFBF;
-        box-shadow: 0 4px 16px #BFBFBF; }
+        -webkit-box-shadow: 0 2px 8px #BFBFBF;
+        -moz-box-shadow: 0 2px 8px #BFBFBF;
+        box-shadow: 0 2px 8px #BFBFBF; }
         section.portfolio .gallery .folio-item .portfolio-card:after, section.portfolio .gallery .folio-item .portfolio-card:before {
           content: "";
           position: absolute;
@@ -468,13 +465,13 @@ section.portfolio {
           -moz-transition: opacity 0.2s ease-in-out;
           transition: opacity 0.2s ease-in-out; }
         section.portfolio .gallery .folio-item .portfolio-card:after {
-          -webkit-box-shadow: 0 8px 20px #BFBFBF;
-          -moz-box-shadow: 0 8px 20px #BFBFBF;
-          box-shadow: 0 8px 20px #BFBFBF; }
+          -webkit-box-shadow: 0 6px 16px #BFBFBF;
+          -moz-box-shadow: 0 6px 16px #BFBFBF;
+          box-shadow: 0 6px 16px #BFBFBF; }
         section.portfolio .gallery .folio-item .portfolio-card:before {
-          -webkit-box-shadow: 0 8px 8px #808080;
-          -moz-box-shadow: 0 8px 8px #808080;
-          box-shadow: 0 8px 8px #808080; }
+          -webkit-box-shadow: 0 6px 8px #808080;
+          -moz-box-shadow: 0 6px 8px #808080;
+          box-shadow: 0 6px 8px #808080; }
         section.portfolio .gallery .folio-item .portfolio-card:hover, section.portfolio .gallery .folio-item .portfolio-card:focus {
           transform: translateY(-4px); }
           section.portfolio .gallery .folio-item .portfolio-card:hover:after, section.portfolio .gallery .folio-item .portfolio-card:focus:after {
