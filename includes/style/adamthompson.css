@@ -1049,6 +1049,8 @@ section.resume .experience {
       background-image: url("../image_assets/apps/autocad.png"); }
     .skills .program-list #inventor .app-logo {
       background-image: url("../image_assets/apps/inventor.png"); }
+    .skills .program-list #fusion .app-logo {
+      background-image: url("../image_assets/apps/fusion.jpg"); }
     .skills .program-list #rhino .app-logo {
       background-image: url("../image_assets/apps/rhino.png"); }
     .skills .program-list #max .app-logo {

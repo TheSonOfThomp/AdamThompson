@@ -406,6 +406,7 @@
 		["After Effects", ["ae", "video"]],
 		["InDesign", ["indesign","graphic"]],
 		["XCode", ["xcode", "ios", "swift"]],
+		["Fusion", ["fusion", "fusion360", "cad", "3d"]],
 		["AutoCad", ["autocad", "cad", "autocad", "3d", "autodesk"]],
 
 		["CoffeeScript", [ "coffeescript","js", "web", "dev"]],	
