@@ -285,6 +285,7 @@ html
 	margin: 1em auto
 	// border: 2px solid $black
 	// +animate-elements(color, 0.15s, ease-in-out)
+	+animate-elements(background, 0.15s, ease-in-out)
 	+animate-elements(box-shadow, 0.15s, ease-in-out)
 	+animate-elements(transform, 0.15s, ease-in-out)
 	+border-radius(4px)
@@ -294,8 +295,8 @@ html
 		color: $white
 		// background-color: $green
 		+CornerToCornerGradient($light_green, $green)
-		+box-shadow( 0, 2px, 8px, $med_grey)
-		transform: translateY(-2px)
+		// +box-shadow( 0, 0px, 8px, $med_grey)
+		// transform: translateY(-2px)
 
 
 	&.large
