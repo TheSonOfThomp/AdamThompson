@@ -18,14 +18,15 @@
 	<article class="job" id="<?php echo $item['id']?>">
     		<div class="content-header">
     			<div class="logo-container">
-    				<a href="http://<?php echo $item['url'] ?>" target="_blank">
+    				<a target="_blank">
+    					<!-- href="http://<?php echo $item['url'] ?>" -->
     					<div class="logo vertical-center"></div>
     				</a>
     			</div>
     			<div class="header-text">
     				<div>
     					<h1 class="item-institution">
-	    					<?php echo $item['place']; ?>
+	    					<?php echo $item['company']; ?>
 	    				</h1>
 						<h2 class="item-title">
 							<?php echo $item['position']; ?>
