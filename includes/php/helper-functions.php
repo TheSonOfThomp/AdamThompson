@@ -89,7 +89,7 @@
 
 <?php function toolboxItem($item) { ?>
 
-	<li class="animate toolbox-ttem" id="<?php echo $item[1][0] ?>">
+	<li class="animate toolbox-item" id="<?php echo $item[1][0] ?>">
 		<div class="app-logo"></div>
 		<p class="app-name"><?php echo $item[0] ?></p>
 	</li>

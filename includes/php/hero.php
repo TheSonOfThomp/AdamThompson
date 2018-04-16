@@ -5,10 +5,11 @@
 	<div class="hero">
 			<!-- <div class="hero-name">Adam Thompson</div> -->
 			<div class="tagline">
-				Designer. Developer. Researcher.
+				 Design. Research. Develop.
 			</div>
 			 <div class="bio-text">
-				<p>I make products for people—from researching the problem and requirements, to building the final experience and interface, and all that's in between.
+				<p>
+					I use research insights to identify the problem and requirements, generate user-centered design artifacts, and build a great experience.
 				</p>
 			</div>			
 			<div class="bg-letter">
@@ -16,3 +17,5 @@
 			</div>
 		</div>
 </header>
+
+<!-- I make products for people—from researching the problem and requirements, to building the final experience and interface, and all that's in between. -->
