@@ -35,6 +35,7 @@
 			
 			<!-- Font Awesome -->
 		<script src="https://use.fontawesome.com/47706e48a4.js"></script>
+		<!-- <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script> -->
 
 		<!-- Custom Style and JS -->
 		<link rel="stylesheet" href= "<?php echo $root_path; ?>/includes/style/adamthompson.css" type="text/css">

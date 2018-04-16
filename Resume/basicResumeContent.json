@@ -1,51 +1,74 @@
 {
-	"tagline": [
-		"B.ASc. Systems Design Engineering - University of Waterloo",
-		"Systems Design Engineering",
-		"Systems Design Engineering, BASc",
-		"University of Waterloo",
-		"BASc, University of Waterloo",
-		"UX Designer <br> University of Waterloo"
-	],
-
-	"objective": "I’m a \"big-picture\" problem solver; always looking for the best solution to the right problem. I’m someone who will rise to a challenge and will get the job done. My engineering education, and skills in user-centred design, human-factors, and front-end development allow me to approach complex problems from a unique perspective, specifically when designing and researching at Noom, KnowRoaming, and Sony.",
-
-	"summary": [
-		{
-			"blurb": "Experience in mobile and web UX/Product design since 2013.", 
-			"tags": ["ux", "ui", "sketch", "ps"]
-		},
-		{
-			"blurb": "Research, development and prioritization of user & technological requirements.", 
-			"tags": ["pm", "research", "dev", "lead", "ux"]
-		},
-		{
-			"blurb": "Development and presentation of well-researched design deliverables, and detailed prototypes", 
-			"tags": ["lead", "pm", "research", "ux", "dev"]
-		},
-		{
-			"blurb": "Collaboratively creating solutions with designers, developers, and other stakeholders in a fast-paced environment.",
-			"tags": ["lead", "team", "ui", "design", "dev"]
-		},
-		{
-			"blurb": "Diverse education in UX, software, electrical, and mechanical engineering.",
-			"tags": ["ux", "dev", "research", "elec", "mech", "design", "hardware"]
-		},
-		{
-			"blurb": "Fluent in English and French.",
-			"tags": ["language", "french"]
-		}
-	],
-
-
 	"experience": [
 		{
+			"id": "music-group",
+			"company": "MUSIC Group",
+			"url": "musicri.be",
+			"term": "Jan. - Apr. 2018",
+			"position": "Assistant Customer Solutions Manager",
+			"location": "Kitchener/Victoria",
+			"summary": "Design process, high level product vision & business case development.",
+			"responsibilities": [
+				{
+					"text": "Developed a process and tool in Excel/VBA, now used across the organization in 13 countries, to allow solutions managers to quickly evaluate Go/No-Go decisions for products based on ROI and time-to market, and allow portfolio managers to create product portfolios based on this information. ",
+					"tags" : []
+				},
+				{
+					"text": "Identified business opportunities, customer needs, built business cases and defined product specifications for a line of accessories and mobile music making products based on insights discovered through market and customer research.",
+					"tags" : []
+				},
+				{
+					"text": "Worked closely with director of product design on process, and higher level product vision business case development and customer centric strategies",
+					"tags" : []
+				},
+				{
+					"text": "Collaborated with customers, senior management, engineering, industrial design, sales and marketing to define product story, experience, design and functionality",
+					"tags" : []
+				}
+			]
+		},
+
+		{	
+			"id": "fydp",
+			"company": "Chameleon Hearing Protection",
+			"term": "Sept. 2016 - Nov. 2017",
+			"position": "Co-founder",
+			"summary": "Smart hearing protection for industrial workers, that automatically adjusts its attenuation based on its environment", 
+			"url": "http://adamthompson.ca/Portfolio/?p=chameleon",
+			"responsibilities": [
+				{
+					"task": "Managed team priorities and coordinated development efforts.", 
+					"tags": ["pm", "lead", "manage"]
+				},
+				{
+					"task": "Researched user needs and requirements to inform design.",
+					"tags": ["research", "design", "ucd", "ux"]
+				},
+				{
+					"task": "Developed analog circuit to determine the perceived loudness at the ear.",
+					"tags": ["analog", "signals", "elec"]
+				},
+				{
+					"task": "Developed device testing validation procedures and software.",
+					"tags": ["dev", "mech", "research", "signals", "dsp", "python"]
+				},
+				{
+					"task": "Designed ear-cup and variable attenuation mechanism.",
+					"tags": ["design", "mechanical", "hardware", "modelling", "cad", "prototype"]
+				},
+				{
+					"task": "Developed exposure prediction and actuator control logic on Teensy.",
+					"tags": ["dev", "arduino", "python", "matlab"]
+				}
+			]
+		},
+		{
 			"id": "zynga",
-			"place": "Zynga",
+			"company": "Zynga",
 			"url": "zynga.com/poker",
-			"term": "Spring 2016",
+			"term": "May - Aug. 2016",
 			"position": "UX Product Manager",
-			"summary": "Data analysis, UX , research and testing for new features in Poker Web.",
+			"summary": "Data analysis, UX research and testing for new features in Poker Web.",
 			"location": "Toronto",
 			"responsibilities": [
 			{
@@ -72,9 +95,9 @@
 		},
 		{
 			"id": "noom",
-			"place": "Noom",
+			"company": "Noom",
 			"url": "noom.com",
-			"term": "Fall 2015",
+			"term": "Sept. - Dec. 2015",
 			"position": "Product Designer",
 			"summary": "Usability optimization and user testing for the core food-logging feature.",
 			"location": "New York",
@@ -98,9 +121,9 @@
 		},
 		{
 			"id": "knowroaming",
-			"place": "KnowRoaming",
+			"company": "KnowRoaming",
 			"url": "knowroaming.com",
-			"term": "Spring 2014 & Winter 2015",
+			"term": "May 2014 - Apr. 2015",
 			"position": "UX Designer",
 			"summary": "User research, information architecture and UI design for the mobile apps. ",
 			"location": "Toronto",
@@ -174,9 +197,9 @@
 		},
 		{
 			"id": "sony",
-			"place": "Sony",
+			"company": "Sony",
 			"url": "mediago.sony.com",
-			"term": "Fall 2013",
+			"term": "Sept. - Dec. 2013",
 			"position": "UI Designer",
 			"summary": "UI/UX design and front-end development for a discovery feature in MediaGo.",
 			"location": "Waterloo",
@@ -202,40 +225,6 @@
 	],
 
 	"projects": [
-		{	
-			"id": "fydp",
-			"name": "Chameleon",
-			"term": "Sept. 2016 - present",
-			"description": "A variable hearing protection device for periodically loud environments which continuously adjusts its attenuation based on the loudness of the environment.", 
-			"url": "http://adamthompson.ca/Portfolio/?p=chameleon",
-			"responsibilities": [
-				{
-					"task": "Managed team priorities and coordinated development efforts.", 
-					"tags": ["pm", "lead", "manage"]
-				},
-				{
-					"task": "Researched user needs and requirements to inform design.",
-					"tags": ["research", "design", "ucd", "ux"]
-				},
-				{
-					"task": "Developed analog circuit to determine the perceived loudness at the ear.",
-					"tags": ["analog", "signals", "elec"]
-				},
-				{
-					"task": "Developed device testing validation procedures and software.",
-					"tags": ["dev", "mech", "research", "signals", "dsp", "python"]
-				},
-				{
-					"task": "Designed ear-cup and variable attenuation mechanism.",
-					"tags": ["design", "mechanical", "hardware", "modelling", "cad", "prototype"]
-				},
-				{
-					"task": "Developed exposure prediction and actuator control logic on Teensy.",
-					"tags": ["dev", "arduino", "python", "matlab"]
-				}
-			]
-		},
-
 		{
 			"id": "smrt-watr",
 			"name": "SMRT WATR",
@@ -320,7 +309,7 @@
 		{
 			"id": "uwaterloo",
 			"url": "uwaterloo.ca/systems-design-engineering/about-systems-design-engineering",
-			"place": "University of Waterloo",
+			"company": "University of Waterloo",
 			"position": "Systems Design Engineering",
 			"degree": "BASc.",
 			"minor": "Cognitive Science",

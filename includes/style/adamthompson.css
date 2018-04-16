@@ -49,7 +49,7 @@ html {
     font-weight: 400; }
     html a:hover {
       text-decoration: underline; }
-  html .fa {
+  html .fa, html .far, html .svg-inline--fa {
     font-size: 0.8em;
     padding: 0 0.5em; }
 
@@ -811,6 +811,8 @@ section.blog ul {
     float: right; }
 
 /* ---------------------- RESUME ---------------------- */
+section.resume span.download .fa {
+  color: #2AC51B; }
 section.resume article {
   width: 100%;
   margin: auto;
@@ -929,6 +931,10 @@ section.resume article {
           margin-right: 16px; }
 section.resume .experience {
   position: relative; }
+  section.resume .experience #music-group .logo {
+    background-image: url("../image_assets/music_logo.png"); }
+  section.resume .experience #fydp .logo {
+    background-image: url("../image_assets/chameleon_logo.png"); }
   section.resume .experience #zynga .logo {
     background-image: url("../image_assets/zynga_logo.png"); }
   section.resume .experience #noom .logo {
