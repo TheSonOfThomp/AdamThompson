@@ -168,6 +168,9 @@ html {
   text-decoration: none;
   padding: 1em 0;
   margin: 1em auto;
+  -webkit-transition: background 0.15s ease-in-out;
+  -moz-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
   -webkit-transition: box-shadow 0.15s ease-in-out;
   -moz-transition: box-shadow 0.15s ease-in-out;
   transition: box-shadow 0.15s ease-in-out;
@@ -186,11 +189,7 @@ html {
     background: -webkit-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
     background: -o-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
     background: -ms-linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
-    background: linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%);
-    -webkit-box-shadow: 0 2px 8px #808080;
-    -moz-box-shadow: 0 2px 8px #808080;
-    box-shadow: 0 2px 8px #808080;
-    transform: translateY(-2px); }
+    background: linear-gradient(to bottom right, #00F548 0%, #2AC51B 100%); }
   .button.large {
     width: 100%;
     max-width: 920px; }
