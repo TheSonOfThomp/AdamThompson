@@ -5,7 +5,7 @@
 	<div class="hero">
 			<!-- <div class="hero-name">Adam Thompson</div> -->
 			<div class="tagline">
-				 Research. Design. Develop.
+				 Designer. Developer. Researcher.
 			</div>
 			 <div class="bio-text">
 				<p>

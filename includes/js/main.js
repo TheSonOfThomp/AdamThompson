@@ -19,6 +19,15 @@ $(document).ready(function(){
 	        scrollTop: $("#about").offset().top
 	    }, 1000);
 	})
+
+	// Slideout social menu
+	$('.navbar-social-menu').hide()
+	$('#nav-contact').click(function(){
+		$('.navbar-social-menu').toggle("slide")
+		// $("#nav-contact .fa.fa-caret").toggleClass('fa-caret-right')
+		// $("#nav-contact .fa.fa-caret").toggleClass('fa-caret-left')
+	})
+
 	// Toggle the Show More/Less buttons in Resume
 	// function toggleContent(ths){
 	// 	$('.resume-list',ths).slideToggle();

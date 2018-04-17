@@ -7,7 +7,7 @@
 				<span class="social-name">Instagram</span>
 			</a>
 		</li>
-		<li class="social-media tooltip">
+		<li class="social-media tooltip hide-mobile">
 			<a href="https://www.twitter.com/TheSonOfThomp" target="_blank">
 				<!-- <img class="social-logo" id="twitter" src="<?php echo $root_path.'/includes/image_assets/social/twitter_dark.png' ?>" /> -->
 				<i class="fa fa-twitter" aria-hidden="true"></i>
@@ -21,7 +21,7 @@
 				<span class="social-name">LinkedIn</span>
 			</a>
 		</li>
-		<li class="social-media tooltip hide-mobile">
+		<li class="social-media tooltip">
 			<a href="http://www.github.com/Adam93MT" target="_blank">
 				<!-- <img class="social-logo" id="git" src="<?php echo $root_path.'/includes/image_assets/social/git_dark.png' ?>" /> -->
 				<i class="fa fa-github" aria-hidden="true"></i>

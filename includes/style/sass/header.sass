@@ -73,10 +73,36 @@ header.main-header
 					padding: 0 16px
 					margin: auto
 					color: $green
+					&:first-child
+						padding-left: 0
+					&:last-child
+						padding-right: 0
+
 					a:hover
 						text-decoration: none
 						border-bottom: 2px solid $green
 
+				.navbar-social-menu
+					display: inline-block
+					padding-left: 16px
+					vertical-align: text-bottom
+					min-height: 22px
+					.nav-social
+						font-size: 1.5em
+						display: table-cell
+						padding-top: 0
+						padding-bottom: 0
+						a
+							display: flex
+							vertical-align: middle
+							padding-bottom: 2px
+							margin-bottom: -2px
+							&:hover
+								margin-bottom: -4px
+								.fa
+									color: $green_highlight
+							.fa
+								padding: 0
 	.hero
 		position: relative
 		font-family: $sans-serif
