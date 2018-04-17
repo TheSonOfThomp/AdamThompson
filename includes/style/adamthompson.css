@@ -341,7 +341,9 @@ header.main-header {
   max-width: 920px; }
   .social-container .button {
     width: 33%;
-    margin-right: 0; }
+    margin-right: 0;
+    padding: 0;
+    line-height: 48px; }
   .social-container .social-list {
     display: flex;
     position: relative;
@@ -762,11 +764,12 @@ section.about {
     width: 176px;
     display: inline-block;
     float: left;
-    margin: 20px;
+    margin: 12px;
+    margin-right: 20px;
     line-height: 0;
-    -webkit-box-shadow: -20px -20px 0 #333333;
-    -moz-box-shadow: -20px -20px 0 #333333;
-    box-shadow: -20px -20px 0 #333333; }
+    -webkit-box-shadow: -12px -12px 0 #333333;
+    -moz-box-shadow: -12px -12px 0 #333333;
+    box-shadow: -12px -12px 0 #333333; }
     section.about .bio-pic img {
       width: 100%;
       height: auto; }
