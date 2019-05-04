@@ -5,8 +5,10 @@ module.exports = {
     author: `@thesonofthomp`,
   },
   plugins: [
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`, // loads SASS/SCSS files
+    `gatsby-plugin-resolve-src`, // sets 'path/to' == 'src/path/to'
+    `gatsby-transformer-remark`, // for parsing markdown
+    `gatsby-plugin-react-helmet`, // for <head> tag?
     {
       resolve: `gatsby-source-filesystem`,
       options: {

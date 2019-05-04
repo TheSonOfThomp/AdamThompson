@@ -1,0 +1,42 @@
+@import 'style/mixins.sass';
+@import 'style/colours.sass';
+@import 'style/variables.sass';
+
+nav {
+	margin: auto;
+	width: 100%;
+	z-index: 10;
+	color: $white;
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+
+	em {
+		font-style: normal
+	}
+
+	.nav-link {
+		list-style: none;
+		display: inline-block;
+		line-height: 32px;
+		padding: 0 16px;
+		margin: auto;
+		color: $white;
+
+		a {
+			color: $white;
+		}
+		
+		&:first-child {
+			padding-left: 0
+		}
+		&:last-child {
+			padding-right: 0
+		}
+
+		a:hover {
+			text-decoration: none;
+			border-bottom: 2px solid $green;
+		}
+	}
+}
