@@ -9,6 +9,14 @@ module.exports = {
     `gatsby-plugin-resolve-src`, // sets 'path/to' == 'src/path/to'
     `gatsby-transformer-remark`, // for parsing markdown
     `gatsby-plugin-react-helmet`, // for <head> tag?
+    'gatsby-transformer-json', // for parsing json
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: `${__dirname}/src/data`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
