@@ -1,0 +1,29 @@
+@import 'style/global.sass';
+
+.section-header {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 33%;
+    max-width: 50%;
+    color: $black;
+    height: 128px;
+    border-bottom: 1px solid $med_grey;
+    padding: 0 32px;
+
+    h1 {
+        display: inline-block;
+        font-size: 36px;
+        font-weight: 600;
+    }
+}
+
+// 	&.subsection
+// 		.header-underline
+// 			h1
+// 				color: $black
+// 				font-family: $sans-serif
+// 				font-weight: 300
+// 				font-size: 2rem
+// 				margin: 32px auto

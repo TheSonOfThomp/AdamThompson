@@ -3,16 +3,21 @@
 @import 'style/variables.sass';
 
 nav {
-	margin: auto;
-	width: 100%;
 	z-index: 10;
 	color: $white;
 	display: grid;
 	grid-auto-flow: column;
 	align-items: center;
+	justify-items: center;
+	grid-template-columns: 8fr 1fr 1fr 2fr;
 
-	em {
-		font-style: normal
+
+	a {
+		color: $white;
+	}
+
+	#nav-logo {
+		justify-self: left;
 	}
 
 	.nav-link {
@@ -22,21 +27,21 @@ nav {
 		padding: 0 16px;
 		margin: auto;
 		color: $white;
+	}
 
-		a {
-			color: $white;
-		}
-		
-		&:first-child {
-			padding-left: 0
-		}
-		&:last-child {
-			padding-right: 0
-		}
+	#nav-social-menu {
+		justify-self: right;
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+		align-items: center;
+		align-content: center;
 
-		a:hover {
-			text-decoration: none;
-			border-bottom: 2px solid $green;
+		.social-link {
+			line-height: 1em;
+			display: inline-block;
+			padding: 0 16px;
 		}
 	}
+
 }

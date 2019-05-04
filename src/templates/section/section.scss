@@ -1,0 +1,11 @@
+@import 'style/global.sass';
+
+.content-section {
+    max-width: $content-width;
+    align-self: center;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 128px auto;
+    grid-row-gap: 48px;
+    padding-bottom: 64px;
+}
