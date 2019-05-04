@@ -1,0 +1,196 @@
+@import './colours.sass';
+@import './variables.sass';
+@import './mixins.sass';
+
+*::selection
+	background: $green_highlight /* WebKit/Blink Browsers */
+*::-moz-selection 
+	background: $green_highlight /* Gecko Browsers */
+
+// Global
+
+.wf-loading
+	h1, h2, h3, p, ul, .tagline, .fa
+		// transform: translateY(-100px)
+		opacity: 0
+
+.wf-active
+	h1, h2, h3, p, ul, .tagline, .fa
+		// transform: translateY(0)
+		opacity: 1
+
+h1, h2, h3, p, ul, .tagline, .fa
+	+animate-elements(opacity, 0.33s, ease-in-out)
+	// +animate-elements(transform, 0.25s, ease-in-out)
+html
+	font-size: 16px
+	+alternateChars()
+
+	body 
+		background: $white
+		padding: 0
+		margin: 0
+		font-family: $sans-serif
+		color: $black
+		font-weight: 300
+		overflow-x: hidden
+
+	main
+		display: block
+		width: 100%
+		margin: 0
+		padding: 0
+		background-color: $white
+		// +linearGradient($white, $bg_green, 100%)
+
+	section
+		display: inline-block
+		// margin: 32px 0
+		padding: 0
+		width: 100%
+		text-align: center
+
+	a
+		color: $green
+		font-weight: inherit
+		-webkit-tap-highlight-color: rgba(0,0,0,0)
+		text-decoration: none
+		cursor: pointer
+		font-weight: 400
+		&:hover
+			text-decoration: underline
+	.fa, .far, .svg-inline--fa
+		font-size: 0.8em
+		padding: 0 0.5em
+
+/* ------ HELPER CLASSES ------ */
+.hidden, .hide
+	display: none !important
+.mobile-only
+	display: none
+.container
+	width: 96%
+	max-width: $max-width
+	margin: 0 auto
+	height: 100%
+	position: relative
+	display: block
+	text-align: center
+	
+	.content
+		width: 100%
+		max-width: $max-width
+		margin: auto
+.shrinkwrap
+	will-change: width
+	width: intrinsic /* For Safari, see https://developer.mozilla.org/en-US/docs/CSS/width */
+	width: -moz-fit-content
+	width: -webkit-fit-content
+	width: fit-content
+	height: 100%
+	margin: auto
+	@media screen and (min-width: 1160px)
+		min-width: 62rem
+
+.vertical-center
+	// text-align: center
+	&:before
+		content: ''
+		display: inline-block
+		height: 100%
+		vertical-align: middle
+		margin-right: -0.25em /* Adjusts for spacing */
+
+.horizontal-center
+	// text-align: center
+	&:before
+		content: ''
+		display: inline-block
+		width: 100%
+		horizontal-align: middle
+		margin-right: -0.25em /* Adjusts for spacing */
+
+.animate
+	+animate-elements(all, 0.15s, ease-in-out)
+	-webkit-backface-visibility: hidden
+
+.fixed
+	position: fixed
+
+.flex
+	display: flex
+	justify-content: center
+
+.section-header
+	width: 100%
+	max-width: $max-width
+	margin: $global-margin auto
+	color: $black
+	font-family: $sans-serif
+	text-align: center	
+	.header-underline
+		width: 50%
+		margin: auto
+		border-bottom: 1px solid $med_grey
+		h1
+			display: inline-block
+			margin: 48px auto
+			font-size: 36px
+			font-weight: 600
+			line-height: 1em 
+
+	&.subsection
+		.header-underline
+			h1
+				color: $black
+				font-family: $sans-serif
+				font-weight: 300
+				font-size: 2rem
+				margin: 32px auto
+
+
+.card
+	+animate-elements(box-shadow, 0.2s, ease-in-out)
+	+box-shadow(0, 4px, 8px, $med_grey)
+	&:hover, &:focus
+		+box-shadow(0, 8px, 8px, $med_grey)
+	&:active
+		+box-shadow(0, 2px, 8px, $med_grey)
+
+.button
+	display: block
+	+CornerToCornerGradient($dark_grey, $black)
+	font-family: $sans-serif
+	font-size: 16px
+	font-weight: 400
+	color: $white
+	text-decoration: none
+	padding: 1em 0
+	margin: 1em auto
+	// border: 2px solid $black
+	// +animate-elements(color, 0.15s, ease-in-out)
+	+animate-elements(background, 0.15s, ease-in-out)
+	+animate-elements(box-shadow, 0.15s, ease-in-out)
+	+animate-elements(transform, 0.15s, ease-in-out)
+	+border-radius(4px)
+
+	
+	&:hover
+		color: $white
+		// background-color: $green
+		+CornerToCornerGradient($light_green, $green)
+		// +box-shadow( 0, 0px, 8px, $med_grey)
+		// transform: translateY(-2px)
+
+
+	&.large
+		width: 100%
+		max-width: $max-width
+
+	&.green
+		color: $green
+		font-weight: 600
+		border: 2px solid $green
+		&:hover
+			color: $white
+			background-color: $green
