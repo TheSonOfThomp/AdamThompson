@@ -1,6 +1,7 @@
 ---
-title: "SMRT WATR"
-tagline: "The interactive water fountain"
+title: SMRT WATR
+tagline: The interactive water fountain
+color: '#785FA3'
 section: portfolio
 ---
 

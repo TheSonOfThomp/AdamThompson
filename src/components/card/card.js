@@ -2,8 +2,11 @@
 import React from "react"
 import './card.scss';
 
-const Card = ({children}) => (
-  <div className="card">
+const Card = ({id, style, children}) => (
+  <div 
+    id={id}
+    style={style}
+    className="card">
     {children}
   </div>
 

@@ -1,6 +1,7 @@
 ---
-title: "Zynga Poker"
-tagline: "Promoting social virality"
+title: Zynga Poker
+tagline: Promoting social virality
+color: '#DD3B30'
 section: portfolio
 ---
 

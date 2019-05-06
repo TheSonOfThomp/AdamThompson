@@ -1,6 +1,7 @@
 ---
-title: "Noom"
-tagline: "Simplifying the core experience"
+title: Noom
+tagline: Simplifying the core experience
+color: '#4271d7'
 section: portfolio
 ---
 

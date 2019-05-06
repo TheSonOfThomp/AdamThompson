@@ -14,9 +14,13 @@ const PortfolioSection = ({ data }) => {
       {
         nodes{
           id
+          fields{
+            slug
+          }
           frontmatter {
             title
             tagline
+            color
           }      
         }
       }
@@ -32,6 +36,9 @@ const PortfolioSection = ({ data }) => {
             key={node.id}
             title={node.frontmatter.title}
             tagline={node.frontmatter.tagline}
+            color={node.frontmatter.color}
+            // cover={node.frontmatter.cover}
+            link={node.fields.slug}
           >
           </PortfolioCard>
         ))

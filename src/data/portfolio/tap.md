@@ -1,6 +1,7 @@
 ---
-title: "TAP Metronome"
-tagline: "For easy band practice"
+title: TAP Metronome
+tagline: For easy band practice
+color: '#000000'
 section: portfolio
 ---
 

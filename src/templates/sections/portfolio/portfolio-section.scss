@@ -1,0 +1,43 @@
+@import 'style/colours.sass';
+@import 'style/mixins.sass';
+
+.content-section#portfolio content {
+  display: grid;
+  // grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+
+    .card#noom{
+      background-color: $noom;
+      @include CornerToCornerGradient($noom_light, $noom)
+    }
+    .card#smrtwatr{
+      background-color: $smrtwatr;
+      @include CornerToCornerGradient($smrtwatr_light, $smrtwatr)
+    }
+    .card#knowroaming{
+      background-color: $knowroaming;
+      @include CornerToCornerGradient($knowroaming_light, $knowroaming)
+    }
+    .card#chameleon{
+      background-color: $chameleon;
+      @include CornerToCornerGradient($chameleon_light, $chameleon)
+    }
+    .card#zynga{
+      background-color: $zynga;
+      @include CornerToCornerGradient($zynga_light, $zynga)
+    }
+    .card#tap{
+      background-color: $tap;
+      @include CornerToCornerGradient($tap_light, $tap)
+    }
+
+  a {
+    text-decoration: none;
+    border: none;
+    &:hover {
+      border: none;
+      text-decoration: none;
+    }
+  }
+}

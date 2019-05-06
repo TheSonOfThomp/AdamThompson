@@ -1,6 +1,7 @@
 ---
-title: "KnowRoaming"
-tagline: "Bringing clarity to a complex system"
+title: KnowRoaming
+tagline: Bringing clarity to a complex system
+color: '#4286b5'
 section: portfolio
 ---
 

@@ -1,6 +1,7 @@
 ---
-title: "Chameleon"
-tagline: "What if your ears could blink?"
+title: Chameleon
+tagline: What if your ears could blink?
+color: '#2e8c5d'
 section: portfolio
 ---
 
