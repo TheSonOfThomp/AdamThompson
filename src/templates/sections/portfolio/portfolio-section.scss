@@ -1,7 +1,7 @@
 @import 'style/colours.sass';
 @import 'style/mixins.sass';
 
-.content-section#portfolio content {
+.section#portfolio content {
   display: grid;
   // grid-auto-flow: column;
   grid-template-columns: 1fr 1fr;

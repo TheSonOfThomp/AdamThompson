@@ -6,13 +6,13 @@ $transition: cubic-bezier(.02, .01, .47, 1);
     border-radius: 8px;
     padding: 16px;
 	@include animate-elements(all, 0.2s, $transition);
-	@include box-shadow(0, 20px, 20px, rgba(0,0,0, 0.1) );
+	@include box-shadow(0, 16px, 32px, rgba(0,0,0, 0.16) );
 	&:hover, &:focus {
-        @include box-shadow(0, 40px, 40px, rgba(0,0,0, 0.2) );
-        transform: translate(0, -10px);
+        @include box-shadow(0, 24px, 48px, rgba(0,0,0, 0.16) );
+        transform: translate(0, -8px);
     }
 	&:active {
         transform: translate(0, 0);
-        @include box-shadow(0, 8px, 8px, rgba(0,0,0, 0.1) );
+        @include box-shadow(0, 8px, 16px, rgba(0,0,0, 0.16) );
     }
 }

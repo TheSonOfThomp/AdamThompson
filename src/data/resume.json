@@ -2,20 +2,25 @@
   "experience": [
     {
       "id": "new-visions",
-      "company": "New Visions",
+      "company": "New Visions for Public Schools",
       "url": "newvisions.org",
       "term": "July 2018 - present",
       "position": "Product Designer",
-      "location": "New York"
+      "location": "New York, NY",
+      "summary": "Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus.",
+      "logotype": "images/companies/newvisions_logotype.png",
+      "logo": "images/companies/newvisions_logo.png"
     },
     {
       "id": "music-group",
       "company": "MUSIC Group",
-      "url": "musicri.be",
+      "url": "http://musicri.be",
       "term": "Jan. - Apr. 2018",
-      "position": "Assistant Customer Solutions Manager",
-      "location": "Kitchener/Victoria Canada",
+      "position": "Customer Solutions Manager",
+      "location": "Kitchener & Victoria, Canada",
       "summary": "Design process, high level product vision & business case development.",
+      "logotype": "images/companies/music_group_logotype.png",
+      "logo": "images/companies/music_group_logo.png",
       "responsibilities": [
         {
           "text": "Developed a process and tool in Excel/VBA, now used across the organization in 13 countries, to allow solutions managers to quickly evaluate Go/No-Go decisions for products based on ROI and time-to market, and allow portfolio managers to create product portfolios based on this information. ",
@@ -40,9 +45,12 @@
       "id": "fydp",
       "company": "Chameleon Hearing Protection",
       "term": "Sept. 2016 - Nov. 2017",
+      "location": "Waterloo, Canada",
       "position": "Co-founder",
       "summary": "Smart hearing protection for industrial workers, that automatically adjusts its attenuation based on its environment", 
       "url": "http://adamthompson.ca/Portfolio/?p=chameleon",
+      "logotype": "images/companies/chameleon_logo.png",
+      "logo": "images/companies/chameleon_logo.png",
       "responsibilities": [
         {
           "task": "Managed team priorities and coordinated development efforts.", 
@@ -77,7 +85,9 @@
       "term": "May - Aug. 2016",
       "position": "UX Product Manager",
       "summary": "Data analysis, UX research and testing for new features in Poker Web.",
-      "location": "Toronto",
+      "location": "Toronto, Canada",
+      "logotype": "images/companies/zynga_logotype.png",
+      "logo": "zynga_logo.png",
       "responsibilities": [
       {
         "task":  "Performed background research, user analysis, and A/B testing as part of the design process for a new subscription model.", 
@@ -108,7 +118,9 @@
       "term": "Sept. - Dec. 2015",
       "position": "Product Designer",
       "summary": "Usability optimization and user testing for the core food-logging feature.",
-      "location": "New York",
+      "location": "New York, NY",
+      "logotype": "images/companies/noom_logotype_small.png",
+      "logo": "images/companies/noom_logo.png",
       "responsibilities": [
       {	
         "task": "Redesigned the meal-logging experience by leveraging user testing data, in order to better reflect the observed mental model of logging food, which improved clarity and speed of navigation.", 
@@ -134,72 +146,59 @@
       "term": "May 2014 - Apr. 2015",
       "position": "UX Designer",
       "summary": "User research, information architecture and UI design for the mobile apps. ",
-      "location": "Toronto",
+      "location": "Toronto, Canada",
+      "logotype": "images/companies/knowroaming_logotype.png",
+      "logo": "images/companies/knowroaming_logo.png",
       "responsibilities": [
         {
-          "header": "User Experience",
-          "responsibilities": [
-            {
-              "task": "Redesigned both iOS and Android apps from the ground up. Everything from the registration flow, to the in-app experience for all use cases.", 
-              "tags": ["ux", "pm", "product", "design", "ucd"],
-              "group": "User Experience"
-            },
-            {
-              "task": "Leveraged customer feedback to improve the flow of the app to better correspond with the 3 use-cases of the product.",
-              "tags": ["ux", "research", "ucd"],
-              "group": "User Experience"
-            },
-            {
-              "task": "Initiated and oversaw the preliminary design of the new company homepage, and corporate portal.",
-              "tags": ["ux", "pm", "web"],
-              "group": "User Experience"
-            },
-            {
-              "task": "Designed and developed the KnowRoaming Athletes sign-up page using HTML5, CSS3, CoffeeScript and PHP.",
-              "tags": ["ux", "web", "development", "ui", "html", "css", "js", "php"],
-              "group": "User Experience"
-            }
-          ]
+          "task": "Redesigned both iOS and Android apps from the ground up. Everything from the registration flow, to the in-app experience for all use cases.", 
+          "tags": ["ux", "pm", "product", "design", "ucd"],
+          "group": "User Experience"
         },
         {
-          "header": "Product Management",
-          "responsibilities": [	
-            {
-              "task": "Lead weekly design meetings with all stakeholders to discuss design of the mobile apps and websites.", 
-              "tags": ["pm", "leader", "manager"],
-              "group": "Product Management"
-            },
-            {
-              "task": "Created, branded and optimized a core company service, now called ReachMe.",
-              "tags": ["pm", "marketing", "branding"],
-              "group": "Product Management"
-            }
-          ]
+          "task": "Leveraged customer feedback to improve the flow of the app to better correspond with the 3 use-cases of the product.",
+          "tags": ["ux", "research", "ucd"],
+          "group": "User Experience"
         },
         {
-          "header": "Other Design",
-          "responsibilities": [
-            {
-              "task": "Designed and prototyped a retail stand for dispensing product boxes and displaying product information in retail stores.",
-              "tags": ["id", "product", "design", "prototype", "retail"],
-              "group": "Other Design"
-            },
-            {
-              "task": "Designed a new product package concept, reducing the box side by 50% by leveraging unique features of the KnowRoaming product.",
-              "tags": ["id", "packaging", "retail", "optimization"],
-              "group": "Other Design"
-            },
-            {
-              "task": "Storyboarded, and animated an app intro video for the updated KnowRoaming app.",
-              "tags": ["ux", "ui", "animation", "video", "media"],
-              "group": "Other Design"
-            },
-            {
-              "task": "Created 3D concept models of an automated sticker application device using AutoCAD and Inventor.",
-              "tags": ["id", "modelling", "product", "design", "autocad", "inventor", "3d"],
-              "group": "Other Design"
-            }
-          ]
+          "task": "Initiated and oversaw the preliminary design of the new company homepage, and corporate portal.",
+          "tags": ["ux", "pm", "web"],
+          "group": "User Experience"
+        },
+        {
+          "task": "Designed and developed the KnowRoaming Athletes sign-up page using HTML5, CSS3, CoffeeScript and PHP.",
+          "tags": ["ux", "web", "development", "ui", "html", "css", "js", "php"],
+          "group": "User Experience"
+        },
+        {
+          "task": "Lead weekly design meetings with all stakeholders to discuss design of the mobile apps and websites.", 
+          "tags": ["pm", "leader", "manager"],
+          "group": "Product Management"
+        },
+        {
+          "task": "Created, branded and optimized a core company service, now called ReachMe.",
+          "tags": ["pm", "marketing", "branding"],
+          "group": "Product Management"
+        },
+        {
+          "task": "Designed and prototyped a retail stand for dispensing product boxes and displaying product information in retail stores.",
+          "tags": ["id", "product", "design", "prototype", "retail"],
+          "group": "Other Design"
+        },
+        {
+          "task": "Designed a new product package concept, reducing the box side by 50% by leveraging unique features of the KnowRoaming product.",
+          "tags": ["id", "packaging", "retail", "optimization"],
+          "group": "Other Design"
+        },
+        {
+          "task": "Storyboarded, and animated an app intro video for the updated KnowRoaming app.",
+          "tags": ["ux", "ui", "animation", "video", "media"],
+          "group": "Other Design"
+        },
+        {
+          "task": "Created 3D concept models of an automated sticker application device using AutoCAD and Inventor.",
+          "tags": ["id", "modelling", "product", "design", "autocad", "inventor", "3d"],
+          "group": "Other Design"
         }
       ]
     },
@@ -210,7 +209,9 @@
       "term": "Sept. - Dec. 2013",
       "position": "UI Designer",
       "summary": "UI/UX design and front-end development for a discovery feature in MediaGo.",
-      "location": "Waterloo",
+      "location": "Waterloo, Canada",
+      "logotype": "images/companies/sony_logotype.png",
+      "logo": "images/companies/playstation_logo.png",
       "responsibilities": [
       {
         "task": "Lead the design and development for a new music-discovery/radio feature in MediaGo.",

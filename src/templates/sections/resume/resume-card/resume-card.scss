@@ -1,0 +1,48 @@
+@import 'style/colours.sass';
+@import 'style/variables.sass';
+
+
+$image-height: 48px;
+.resume-card {
+  padding: 32px 40px;
+  display: grid;
+  grid-gap: 12px;
+  align-content: baseline;
+  justify-content: left;
+  text-align: left;
+
+  // .resume-header {
+  //   display: grid;
+  //   grid-template-areas: 'logo company' 'logo location'
+  // }
+
+  .logo {
+    grid-area: 'logo';
+  }
+
+  h1.company {
+    @include serifFont();
+    margin: 0;
+  }
+  span.time-and-place {
+    @include serifFont();
+    font-size: 16px;
+    color: $med_grey;
+  }
+  h2.position {
+    font-size: 20px;
+    line-height: 1.5em;
+    margin: 0;
+  }
+
+  p.summary {
+    text-align: justify;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  img {
+    justify-self: center;
+    height: $image-height;
+  }
+}

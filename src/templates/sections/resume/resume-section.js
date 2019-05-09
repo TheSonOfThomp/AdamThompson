@@ -15,7 +15,9 @@ const ResumeSection = ({data}) => {
           url
           position
           location
+          term
           summary
+          logo
           responsibilities {
             text
           }
@@ -24,7 +26,7 @@ const ResumeSection = ({data}) => {
     }
   `)
   return(
-    <Section title="Resume">
+    <Section title="Experience">
       {
         ResumeQuery.dataJson.experience.map( (node) => (
           <ResumeCard
