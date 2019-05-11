@@ -30,7 +30,7 @@ const PortfolioSection = ({ data }) => {
   const posts = PortfolioQuery.allMarkdownRemark.nodes
   console.log(posts.map(node => node.frontmatter))
   return (
-    <Section title="Portfolio">
+    <Section title="" id="portfolio">
       {
         posts.filter(node => node.frontmatter).map((node) => (
           <PortfolioCard

@@ -2,7 +2,8 @@ import React from "react"
 import Section from "templates/section/section";
 
 import { useStaticQuery, graphql } from 'gatsby';
-// import './about-section.scss';
+import './about-section.scss';
+import imageSource from 'images/Adam_web.jpg';
 
 const AboutSection = ({ data }) => {
   const aboutQuery = useStaticQuery(graphql`
@@ -10,7 +11,7 @@ const AboutSection = ({ data }) => {
       allMarkdownRemark(
         filter: { frontmatter: { title: { eq: "About" } } }
       ) {
-        nodes{
+        nodes {
           html
         }
       }
@@ -19,7 +20,8 @@ const AboutSection = ({ data }) => {
   const about = aboutQuery.allMarkdownRemark.nodes[0].html
   return (
     <Section title="About">
-      <div dangerouslySetInnerHTML={{ __html: about }}></div>
+      <img src={imageSource} />
+      <span id="about-text" dangerouslySetInnerHTML={{ __html: about }}></span>
     </Section>
   )
 }

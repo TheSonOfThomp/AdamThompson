@@ -1,10 +1,10 @@
 import React from "react"
 import Card from "components/card/card";
-import Img from "gatsby-image"
+import Img from "gatsby-image";
 import './resume-card.scss';
 import { useStaticQuery } from "gatsby";
 
-const ResumeCard = ({id, data}) => {
+const ResumeCard = ({id, logo, title, location, term, position, summary, bullets}) => {
 
   const imagePublicURLs = useStaticQuery(
     graphql`query {
@@ -17,26 +17,26 @@ const ResumeCard = ({id, data}) => {
     }`
   ).allFile.nodes
 
-  // const Logotype = imagePublicURLs
-  //   .find(img => `images/${img.relativePath}` === data.logotype)
   const Logo = imagePublicURLs
-    .find(img => `images/${img.relativePath}` === data.logo)
+    .find(img => `images/${img.relativePath}` === logo)
 
   const logoSrc = Logo ? Logo.publicURL : ''
+
   return (
     <Card 
       id={id}
       className={'resume-card'}
     >
         <div className="resume-header">
-          {/* <img src={logoSrc} alt={data.company}/> */}
-          <h1 className="company">{data.company}</h1>
-          <span className="time-and-place">{data.location} | {data.term}</span>
+          <img className="logo" src={logoSrc} alt={title}/>
+          {/* <h1 className="company">{title}</h1> */}
+          <span className="time-and-place">{location} | {term}</span>
         </div>
-        <h2 className="position">{data.position}</h2>
+        <h2 className="position">{position}</h2>
         <p className="summary">
-          {data.summary}
+          {summary}
         </p>
+        {/* {bullets} */}
     </Card>
   )
 }

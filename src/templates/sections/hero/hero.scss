@@ -6,7 +6,7 @@ section.hero {
   color: $white;
 	width: 100%;
 	text-align: center;
-	overflow: hidden;
+	// overflow: hidden;
 	min-height: 640px;
 	height: 100vh;
 	display: grid;
@@ -14,9 +14,17 @@ section.hero {
 	grid-template-rows: 80px 1fr;
 	align-items: center;
 	justify-content: center;
-
+	
 	&.green-bg {
-		@include CornerToCornerGradient($light_green, $green);
+		position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			width: 105%;
+			height: 117%;
+			transform: rotate(2deg) translate(-14px, -44px);
+			@include CornerToCornerGradient($light_green, $green);
+		}
 	}
 
 	header {
@@ -66,7 +74,7 @@ section.hero {
 			font-weight: 600;
 			font-size: 512px;
 			opacity: 0.15;
-			z-index: 0;
+			z-index: 1;
 			$letter-shift: 20%;
 			
 			// &.split-ux {

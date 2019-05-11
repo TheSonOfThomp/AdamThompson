@@ -1,0 +1,38 @@
+@import 'style/mixins.sass';
+@import 'style/colours.sass';
+
+section#about {
+  text-align: left;
+
+  content {
+    // display: flex;
+    // display: grid;
+    // grid-auto-flow: column;
+    // grid-template-columns: 144px;
+    // grid-template-rows: 144px;
+    
+    img {
+      position: relative;
+      $img-size: 144px;
+      width: $img-size;
+      height: $img-size;
+      float: left;
+      margin: 0 32px 32px 0;
+      @include box-shadow(16px, 16px, 0, $dark_grey);
+      // &::after{
+      //   content: '';
+      //   position: absolute;
+      //   width: 100%;
+      //   height: 100%;
+      //   background-color: $dark_grey;
+      //   transform: translate(16px, 16px) rotate(2deg)
+      // }
+    }
+
+    #about-text {
+      font-size: 18px;
+      top: -8px;
+      position: relative;
+    }
+  }
+}

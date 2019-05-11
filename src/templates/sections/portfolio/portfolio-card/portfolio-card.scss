@@ -1,5 +1,4 @@
-@import 'style/colours.sass';
-@import 'style/mixins.sass';
+@import 'style/global.sass';
 
 .portfolio-card {
   display: grid;
@@ -11,6 +10,13 @@
 
   h2, p {
     margin: 0;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
   }
 
   img { 

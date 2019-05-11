@@ -1,42 +1,52 @@
 @import 'style/colours.sass';
 @import 'style/variables.sass';
 
-
 $image-height: 48px;
 .resume-card {
-  padding: 32px 40px;
   display: grid;
   grid-gap: 12px;
-  align-content: baseline;
+  padding: 48px;
   justify-content: left;
+  align-content: baseline;
   text-align: left;
 
-  // .resume-header {
-  //   display: grid;
-  //   grid-template-areas: 'logo company' 'logo location'
-  // }
+  .resume-header {
+    // display: flex;
+    // flex-direction: column;
+    display: grid;
+    grid-template-areas: "logo company" "location location";
+    grid-template-columns: min-content auto;
+    grid-gap: 4px 8px;
+  }
 
-  .logo {
-    grid-area: 'logo';
+  img.logo {
+    // display: none;
+    grid-area: logo;
+    // border: 1px solid red
   }
 
   h1.company {
-    @include serifFont();
+    // @include serifFont();
+    grid-area: company;
     margin: 0;
+    align-self: center;
+    line-height: 1.2em;
   }
   span.time-and-place {
+    grid-area: location;
     @include serifFont();
     font-size: 16px;
-    color: $med_grey;
+    color: $dark_grey;
   }
   h2.position {
+    // @include serifFont();
     font-size: 20px;
     line-height: 1.5em;
     margin: 0;
   }
 
   p.summary {
-    text-align: justify;
+    text-align: left;
     font-weight: 500;
     margin: 0;
   }

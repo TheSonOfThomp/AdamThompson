@@ -16,11 +16,11 @@ const IndexPage = () => (
     
     <Hero></Hero>
 
-    <ResumeSection></ResumeSection>
-
     <PortfolioSection></PortfolioSection>
 
     <AboutSection></AboutSection>
+
+    <ResumeSection></ResumeSection>
     
     <Section title="Toolbox">
       <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>

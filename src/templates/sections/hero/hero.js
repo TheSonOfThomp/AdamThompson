@@ -2,6 +2,7 @@
 import React from "react"
 
 import Navbar from "./navbar/navbar";
+import monogram from 'images/monogram-white.svg';
 import './hero.scss';
 
 const Hero = () => (
