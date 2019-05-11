@@ -17,7 +17,6 @@ const ResumeCard = ({id, data}) => {
     }`
   ).allFile.nodes
 
-  console.log(imagePublicURLs, data.logo)
   // const Logotype = imagePublicURLs
   //   .find(img => `images/${img.relativePath}` === data.logotype)
   const Logo = imagePublicURLs
@@ -28,9 +27,6 @@ const ResumeCard = ({id, data}) => {
     <Card 
       id={id}
       className={'resume-card'}
-      // style={{
-      //   "backgroundImage": `url(${Image.publicURL})`
-      // }}
     >
         <div className="resume-header">
           {/* <img src={logoSrc} alt={data.company}/> */}

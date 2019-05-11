@@ -1,6 +1,7 @@
 ---
 title: SMRT WATR
 tagline: The interactive water fountain
+cover: 'portfolio/cover/smrtwatr-cover.png'
 color: '#785FA3'
 section: portfolio
 ---

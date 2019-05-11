@@ -21,6 +21,7 @@ const PortfolioSection = ({ data }) => {
             title
             tagline
             color
+            cover
           }      
         }
       }
@@ -37,7 +38,7 @@ const PortfolioSection = ({ data }) => {
             title={node.frontmatter.title}
             tagline={node.frontmatter.tagline}
             color={node.frontmatter.color}
-            // cover={node.frontmatter.cover}
+            cover={node.frontmatter.cover}
             link={node.fields.slug}
           >
           </PortfolioCard>

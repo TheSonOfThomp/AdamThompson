@@ -1,0 +1,22 @@
+@import 'style/colours.sass';
+@import 'style/mixins.sass';
+
+.portfolio-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  color: $white;
+  padding: 32px;
+  align-items: center;
+  text-align: left;
+
+  h2, p {
+    margin: 0;
+  }
+
+  img { 
+    position: relative;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+}

@@ -1,12 +1,12 @@
 import React from "react"
 import Card from "components/card/card";
 import './portfolio-card.scss';
-import { Link } from "gatsby";
+import { Link, useStaticQuery } from "gatsby";
 
 import { mix } from "chroma-js";
 
 function getGradientColorObject(color) {
-  const startColor = mix('white', color, 0.8)
+  const startColor = mix('white', color, 0.9)
   return {
     // + angledGradient(top left, bottom right, ${startColor}, ${color}, 100 %)
     background: color, /* Old browsers */
@@ -20,16 +20,38 @@ function getGradientColorObject(color) {
   
 }
 
-const PortfolioCard = ({ title, tagline, color, cover, link }) => (
+const PortfolioCard = ({ title, tagline, color, cover, link }) => {
+  const imagePublicURLs = useStaticQuery(
+    graphql`query {
+      allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+        nodes {
+          relativePath
+          publicURL
+        }
+      }
+    }`
+  ).allFile.nodes
+
+  const Image = imagePublicURLs
+  .find(img => `${img.relativePath}` === cover)
+  
+  const imgSrc = Image ? Image.publicURL : ''
+  console.log(Image, imgSrc)
+  return (
   <Link to={link}>
     <Card 
       style={getGradientColorObject(color)}
+      className="portfolio-card"
       id={title.toLowerCase()}
     >
-      <h2>{title}</h2>
-      <p>{tagline}</p>
+      <div>
+        <h2>{title}</h2>
+        <p>{tagline}</p>
+      </div>
+      <img src={imgSrc}/>
     </Card>
   </Link>
-)
+  )
+}
 
 export default PortfolioCard
