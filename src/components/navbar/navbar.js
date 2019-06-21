@@ -1,16 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
-import SocialLink from "components/social-link/social-link";
-import monogram from 'images/monogram-white.svg';
+import SocialLink from "../social-link/social-link";
+import monogram from '../../images/monogram-white.svg';
 import './navbar.scss';
 
 
 
 const Navbar = () => (
   <nav className="navbar">
-    <Link id="nav-logo" to="/"><img src={monogram}></img></Link>
-    <span className="nav-link" id="nav-portfolio"><Link to="#portfolio">Portfolio</Link></span>
-    <span className="nav-link" id="nav-about"><Link to="#about">About</Link></span>
+    <a id="nav-logo" href="/"><img src={monogram}></img></a>
+    <span className="nav-link" id="nav-portfolio"><a href="#portfolio">Portfolio</a></span>
+    <span className="nav-link" id="nav-about"><a href="#about">About</a></span>
     <div id="nav-social-menu">
       <SocialLink name="instagram" url="https://www.instagram.com/thesonofthomp/"></SocialLink>
       <SocialLink name="twitter" url="https://www.twitter.com/thesonofthomp/"></SocialLink>

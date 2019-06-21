@@ -1,27 +1,28 @@
 import React from "react"
-import Card from "components/card/card";
-import Img from "gatsby-image";
+import Card from "../card/card";
+import Img from "gatsby-image"
 import './resume-card.scss';
-import { useStaticQuery } from "gatsby";
+// import { useStaticQuery } from "gatsby";
 
 const ResumeCard = ({id, logo, title, location, term, position, summary, bullets}) => {
 
-  const imagePublicURLs = useStaticQuery(
-    graphql`query {
-      allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-        nodes {
-          relativePath
-          publicURL
-        }
-      }
-    }`
-  ).allFile.nodes
+  // const imagePublicURLs = useStaticQuery(
+  //   graphql`query {
+  //     allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+  //       nodes {
+  //         relativePath
+  //         publicURL
+  //       }
+  //     }
+  //   }`
+  // ).allFile.nodes
 
-  const Logo = imagePublicURLs
-    .find(img => `images/${img.relativePath}` === logo)
+  // const Logotype = imagePublicURLs
+  //   .find(img => `images/${img.relativePath}` === data.logotype)
+  // const Logo = imagePublicURLs
+  //   .find(img => `images/${img.relativePath}` === data.logo)
 
-  const logoSrc = Logo ? Logo.publicURL : ''
-
+  // const logoSrc = Logo ? Logo.publicURL : ''
   return (
     <Card 
       id={id}
