@@ -1,9 +1,11 @@
-@import 'style/colours.sass';
-@import 'style/variables.sass';
+@import '../../style/colours.sass';
+@import '../../style/variables.sass';
 
 
 $image-height: 48px;
+
 .resume-card {
+  max-width: 512px;
   padding: 32px 40px;
   display: grid;
   grid-gap: 12px;

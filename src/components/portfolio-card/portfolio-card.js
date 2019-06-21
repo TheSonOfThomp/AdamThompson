@@ -1,7 +1,7 @@
 import React from "react"
-import Card from "components/card/card";
+import Card from "../card/card";
 import './portfolio-card.scss';
-import { Link, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 
 import { mix } from "chroma-js";
 
@@ -21,22 +21,22 @@ function getGradientColorObject(color) {
 }
 
 const PortfolioCard = ({ title, tagline, color, cover, link }) => {
-  const imagePublicURLs = useStaticQuery(
-    graphql`query {
-      allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-        nodes {
-          relativePath
-          publicURL
-        }
-      }
-    }`
-  ).allFile.nodes
+  // const imagePublicURLs = useStaticQuery(
+  //   graphql`query {
+  //     allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+  //       nodes {
+  //         relativePath
+  //         publicURL
+  //       }
+  //     }
+  //   }`
+  // ).allFile.nodes
 
-  const Image = imagePublicURLs
-  .find(img => `${img.relativePath}` === cover)
+  // const Image = imagePublicURLs
+  // .find(img => `${img.relativePath}` === cover)
   
-  const imgSrc = Image ? Image.publicURL : ''
-  console.log(Image, imgSrc)
+  // const imgSrc = Image ? Image.publicURL : ''
+  // console.log(Image, imgSrc)
   return (
   <Link to={link}>
     <Card 
