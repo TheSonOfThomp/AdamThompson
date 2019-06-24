@@ -1,7 +1,7 @@
 ---
 title: KnowRoaming
 tagline: Bringing clarity to a complex system
-cover: 'portfolio/cover/knowroaming-cover.png'
+cover: 'knowroaming-cover.png'
 color: '#4286b5'
 section: portfolio
 ---

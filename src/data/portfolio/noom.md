@@ -1,7 +1,7 @@
 ---
 title: Noom
 tagline: Simplifying the core experience
-cover: 'portfolio/cover/noom-cover.png'
+cover: 'noom-cover.png'
 color: '#4271d7'
 section: portfolio
 ---

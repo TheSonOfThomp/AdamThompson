@@ -1,7 +1,7 @@
 ---
 title: Zynga Poker
 tagline: Promoting social virality
-cover: 'portfolio/cover/zynga-cover.png'
+cover: 'zynga-cover.png'
 color: '#DD3B30'
 section: portfolio
 ---
@@ -66,8 +66,8 @@ While most sharable moments involve sharing high scores with friends, we found a
 After some brainstorming we settled on the idea of collecting playing cards to earn in-game currency—poker chips and gold. This idea worked great with our business goals since would allow users to stay engaged with the feature for a long time without repeating the exact same story.
 
 <!-- 1. There’s a Royal Flush you want to collect
-2. You can collect the cards required one at a time
-3. To get a card, you need to share a Feed post asking for help &
+1. You can collect the cards required one at a time
+2. To get a card, you need to share a Feed post asking for help &
 get X friends to click on it
 4. Each friend that clicks your feed post also gets progress towards
 their card

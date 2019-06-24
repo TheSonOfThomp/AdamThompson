@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 
 import { mix } from "chroma-js";
 
-function getGradientColorObject(color) {
+function getGradientColorObject(color = 'black') {
   const startColor = mix('white', color, 0.9)
   const endColor = color;
   const lightColor = mix('white', color, 0.05);
@@ -23,23 +23,7 @@ function getGradientColorObject(color) {
   
 }
 
-const PortfolioCard = ({ title, tagline, color, cover, link }) => {
-  // const imagePublicURLs = useStaticQuery(
-  //   graphql`query {
-  //     allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-  //       nodes {
-  //         relativePath
-  //         publicURL
-  //       }
-  //     }
-  //   }`
-  // ).allFile.nodes
-
-  // const Image = imagePublicURLs
-  // .find(img => `${img.relativePath}` === cover)
-  
-  // const imgSrc = Image ? Image.publicURL : ''
-  // console.log(Image, imgSrc)
+const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
   return (
   <Link to={link}>
     <Card 
@@ -51,7 +35,8 @@ const PortfolioCard = ({ title, tagline, color, cover, link }) => {
         <h2>{title}</h2>
         <p>{tagline}</p>
       </div>
-      <img src={imgSrc}/>
+      {imgSrc}
+        <img src={imgSrc}/>
     </Card>
   </Link>
   )

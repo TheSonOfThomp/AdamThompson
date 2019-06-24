@@ -8,11 +8,11 @@ storiesOf('Cards|Resume Card', module)
   .add('with text', () => {
 
     const data = {
-      "id": "vehicula-nullam-pellentesque",
-      "company": "Vehicula Nullam Pellentesque",
-      "url": "vehicula.org",
+      "id": "new-visions",
+      "company": "New Visions",
+      "url": "newvisions.org",
       "term": "July 2018 - present",
-      "position": "Aenean Vulputate",
+      "position": "Product Designer",
       "location": "New York, NY",
       "summary": "Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus.",
       "logotype": "images/companies/newvisions_logotype.png",
@@ -23,7 +23,11 @@ storiesOf('Cards|Resume Card', module)
       <div style={{padding: '48px'}}>
         <ResumeCard
           id={'test'}
-          data={data}
+          title={data.company}
+          location={data.location}
+          term={data.term}
+          position={data.position}
+          summary={data.summary}
         ></ResumeCard>
       </div>
     )

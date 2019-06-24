@@ -1,7 +1,7 @@
 ---
 title: TAP Metronome
 tagline: For easy band practice
-cover: 'portfolio/cover/tap-cover.png'
+cover: 'tap-cover.png'
 color: '#000000'
 section: portfolio
 ---

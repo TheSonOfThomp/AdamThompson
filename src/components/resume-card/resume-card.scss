@@ -4,7 +4,7 @@
 $image-height: 48px;
 
 .resume-card {
-  max-width: 512px;
+  max-width: 480px;
   padding: 32px 40px;
   display: grid;
   grid-gap: 12px;
@@ -14,18 +14,14 @@ $image-height: 48px;
   text-align: left;
 
   .resume-header {
-    // display: flex;
-    // flex-direction: column;
     display: grid;
-    grid-template-areas: "logo company" "location location";
+    grid-template-areas: "company company" "location location";
     grid-template-columns: min-content auto;
     grid-gap: 4px 8px;
   }
 
   img.logo {
-    // display: none;
     grid-area: logo;
-    // border: 1px solid red
   }
 
   h1.company {

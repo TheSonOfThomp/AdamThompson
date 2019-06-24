@@ -2,6 +2,7 @@
 @import '../../style/mixins.sass';
 
 .portfolio-card {
+  max-width: 512px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   color: $white;

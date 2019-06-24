@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');``
 
 module.exports = ({ config }) => {
   // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
@@ -25,6 +26,21 @@ module.exports = ({ config }) => {
     test: /\.scss$/,
     use: ['style-loader', 'css-loader', 'sass-loader'],
   });
+  config.module.rules.push({
+    test: /\.sass$/,
+    use: ['style-loader', 'css-loader', 'sass-loader'],
+  });
+  config.module.rules.push({
+    test: /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images/',
+        },
+      },
+    ]
+  })
 
   return config
 }

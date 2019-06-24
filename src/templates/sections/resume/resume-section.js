@@ -1,6 +1,6 @@
 import React from "react"
 import Section from "templates/section/section";
-import ResumeCard from "./resume-card/resume-card";
+import ResumeCard from "components/resume-card/resume-card";
 
 import { useStaticQuery, graphql} from 'gatsby';
 import './resume-section.scss';
@@ -8,13 +8,13 @@ import './resume-section.scss';
 const getBullets = function(node) {
   if (node.responsibilities) {
     return node.responsibilities.map(resp => {
-      console.log(node)
+      // console.log(node)
       return resp.text
     })
   }
   else if (node.courses) {
     return node.courses.map(crs => {
-      console.log(crs.name)
+      // console.log(crs.name)
       return crs.name
     })
   }

@@ -1,7 +1,7 @@
 // import PropTypes from "prop-types"
 import React from "react"
 
-import Navbar from "./navbar/navbar";
+import Navbar from "components/navbar/navbar";
 import monogram from 'images/monogram-white.svg';
 import './hero.scss';
 

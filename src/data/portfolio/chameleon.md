@@ -1,7 +1,7 @@
 ---
 title: Chameleon
 tagline: What if your ears could blink?
-cover: 'portfolio/cover/chameleon-cover.png'
+cover: 'chameleon-cover.png'
 color: '#2e8c5d'
 section: portfolio
 ---

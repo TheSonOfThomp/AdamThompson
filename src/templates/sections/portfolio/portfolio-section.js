@@ -3,7 +3,7 @@ import Section from "templates/section/section";
 
 import { useStaticQuery, graphql } from 'gatsby';
 import './portfolio-section.scss';
-import PortfolioCard from "./portfolio-card/portfolio-card";
+import PortfolioCard from "components/portfolio-card/portfolio-card";
 
 const PortfolioSection = ({ data }) => {
   const PortfolioQuery = useStaticQuery(graphql`
@@ -12,7 +12,7 @@ const PortfolioSection = ({ data }) => {
         filter: { frontmatter: { section: { eq: "portfolio" } } }
       )
       {
-        nodes{
+        nodes {
           id
           fields{
             slug
@@ -25,21 +25,38 @@ const PortfolioSection = ({ data }) => {
           }      
         }
       }
+      allImageSharp {
+        nodes {
+          fixed {
+            originalName
+            src
+          }
+        }
+      }
     }
   `)
-  const posts = PortfolioQuery.allMarkdownRemark.nodes
-  console.log(posts.map(node => node.frontmatter))
+  
+  const imageSources = PortfolioQuery.allImageSharp.nodes.map(node => node.fixed)
+  const posts = PortfolioQuery.allMarkdownRemark.nodes.map(node => {
+    return {
+      ...node,
+      imageSource: imageSources.find(img => img.originalName === node.frontmatter.cover)
+    }
+  })
+
+  
+
   return (
     <Section title="" id="portfolio">
       {
-        posts.filter(node => node.frontmatter).map((node) => (
+        posts.map((post) => (
           <PortfolioCard
-            key={node.id}
-            title={node.frontmatter.title}
-            tagline={node.frontmatter.tagline}
-            color={node.frontmatter.color}
-            cover={node.frontmatter.cover}
-            link={node.fields.slug}
+            key={post.id}
+            title={post.frontmatter.title}
+            tagline={post.frontmatter.tagline}
+            color={post.frontmatter.color}
+            cover={post.imageSource.src}
+            link={post.fields.slug}
           >
           </PortfolioCard>
         ))
