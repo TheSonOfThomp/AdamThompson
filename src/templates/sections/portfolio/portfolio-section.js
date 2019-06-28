@@ -1,9 +1,9 @@
 import React from "react"
-import Section from "templates/section/section";
-
 import { useStaticQuery, graphql } from 'gatsby';
+
+import Section from "../../section/section";
+import PortfolioCard from "../../../components/portfolio-card/portfolio-card";
 import './portfolio-section.scss';
-import PortfolioCard from "components/portfolio-card/portfolio-card";
 
 const PortfolioSection = ({ data }) => {
   const PortfolioQuery = useStaticQuery(graphql`
@@ -44,10 +44,8 @@ const PortfolioSection = ({ data }) => {
     }
   })
 
-  
-
   return (
-    <Section title="" id="portfolio">
+    <Section title="Case Studies" id="portfolio">
       {
         posts.map((post) => (
           <PortfolioCard
@@ -57,6 +55,7 @@ const PortfolioSection = ({ data }) => {
             color={post.frontmatter.color}
             cover={post.imageSource.src}
             link={post.fields.slug}
+            imgSrc={post.imageSource.src}
           >
           </PortfolioCard>
         ))
@@ -66,4 +65,3 @@ const PortfolioSection = ({ data }) => {
 }
 
 export default PortfolioSection
-

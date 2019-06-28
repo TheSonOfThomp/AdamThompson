@@ -12,11 +12,11 @@ const Hero = () => (
   
     <header>
       <div className="tagline">
-        Designer. Developer.
+        Designer. Engineer.
       </div>
       <div className="bio-text">
-        <p className="fix-this">
-          I use research insights to identify the problem and requirements, generate user-centered design artifacts, and build a great experience.
+        <p>
+          Designing great experiences. Building great products.
         </p>
       </div>
       <div className="big-letters">

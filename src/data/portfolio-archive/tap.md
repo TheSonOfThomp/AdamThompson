@@ -3,7 +3,6 @@ title: TAP Metronome
 tagline: For easy band practice
 cover: 'tap-cover.png'
 color: '#000000'
-section: portfolio
 ---
 
 #Tap Metronome

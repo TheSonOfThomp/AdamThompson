@@ -1,11 +1,29 @@
-@import 'style/global.sass';
+@import '../../style/global.sass';
 
-.section {
+section {
     max-width: $content-width;
     align-self: center;
     display: grid;
     grid-auto-flow: row;
     grid-auto-rows: 128px auto;
     grid-row-gap: 48px;
-    padding-bottom: 64px;
+    margin-bottom: 64px;
+
+    $angle: 2;
+    $angle_text: $angle+deg;
+    $tan: tan($angle, true);
+
+    &:not(.hero) {
+        &.green-bg {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 110vw;
+                height: 100%;
+                transform: rotate($angle_text) translate(-20vw, 5%);
+                @include CornerToCornerGradient($light_green, $green);
+            }
+        }
+    }
 }

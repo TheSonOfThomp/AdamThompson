@@ -1,4 +1,6 @@
 import { configure } from '@storybook/react';
+import { viewports } from './viewports';
+import { addParameters } from '@storybook/react/dist/client/preview';
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /\.story\.js$/);

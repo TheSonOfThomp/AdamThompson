@@ -4,8 +4,6 @@ import './section.scss';
 
 const Section = ({title, id, className = "", children}) => {
     const fullClassName = ['section', className].join(' ')
-    // const Header = title ? <SectionHeader>{title}</SectionHeader> : null
-
     return (
         <section className={fullClassName} id={id || title.toLowerCase()}>
             <SectionHeader>{title}</SectionHeader>

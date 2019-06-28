@@ -7,8 +7,6 @@
 *::-moz-selection 
 	background: $green_highlight /* Gecko Browsers */
 
-// Global
-
 // For Typescript
 // .wf-loading
 // 	h1, h2, h3, p, ul, .tagline, .fa
@@ -44,32 +42,32 @@ html
 		background-color: $white
 		// +linearGradient($white, $bg_green, 100%)
 
-	section
-		display: inline-block
-		width: 100%
-		text-align: center
+	// section
+	// 	display: inline-block
+	// 	width: 100%
+	// 	text-align: center
 
-		&:not(.hero)
-			&.green-bg
-				position: relative
-				&::after 
-					$angle: 2 // deg
-					$angle_text: $angle+deg
-					$tan: tan($angle, true)
-					content: ''
-					position: absolute
-					width: 110vw
-					height: 100%
-					transform: rotate($angle_text) translate(-20vw, 5%)
-					@include CornerToCornerGradient($light_green, $green)
+	// 	&:not(.hero)
+	// 		&.green-bg
+	// 			position: relative
+	// 			&::after 
+	// 				$angle: 2 // deg
+	// 				$angle_text: $angle+deg
+	// 				$tan: tan($angle, true)
+	// 				content: ''
+	// 				position: absolute
+	// 				width: 110vw
+	// 				height: 100%
+	// 				transform: rotate($angle_text) translate(-20vw, 5%)
+	// 				@include CornerToCornerGradient($light_green, $green)
 
-			&:nth-child(2)
-				margin-top: 32px
-			// Everything has a margin
-		> *
-			max-width: $content-width
-			margin: 0 $global-margin
-			z-index: 1
+	// 		&:nth-child(2)
+	// 			margin-top: 32px
+	// 		// Everything has a margin
+	// 	> *
+	// 		max-width: $content-width
+	// 		margin: 0 $global-margin
+	// 		z-index: 1
 
 	a
 		color: inherit;

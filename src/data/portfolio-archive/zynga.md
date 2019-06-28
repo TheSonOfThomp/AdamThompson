@@ -3,7 +3,6 @@ title: Zynga Poker
 tagline: Promoting social virality
 cover: 'zynga-cover.png'
 color: '#DD3B30'
-section: portfolio
 ---
 
 #Zynga Poker

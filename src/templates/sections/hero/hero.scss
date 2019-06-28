@@ -1,12 +1,10 @@
-@import 'style/mixins.sass';
-@import 'style/colours.sass';
-@import 'style/variables.sass';
+@import '../../../style//global.sass';
 
 section.hero {
-  color: $white;
+	color: $white;
+	max-width: none;
 	width: 100%;
 	text-align: center;
-	// overflow: hidden;
 	min-height: 640px;
 	height: 100vh;
 	display: grid;
@@ -20,11 +18,16 @@ section.hero {
 		&::after{
 			content: '';
 			position: absolute;
-			width: 105%;
-			height: 117%;
-			transform: rotate(2deg) translate(-14px, -44px);
+			width: 110%;
+			height: 100%;
+			transform-origin: 100% 100%;
+			transform: rotate(2deg) translate(-9%, 0);
 			@include CornerToCornerGradient($light_green, $green);
 		}
+	}
+
+	> * {
+		max-width: $content-width;
 	}
 
 	header {
@@ -56,7 +59,7 @@ section.hero {
 			position: relative;
 			text-align: center;
 			font-family: $sans-serif;
-			font-size: 20px;
+			font-size: 24px;
 			line-height: 2em;
 			font-weight: 300;
 		}

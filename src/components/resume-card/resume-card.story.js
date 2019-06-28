@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
-
 import ResumeCard from './resume-card'
 
 storiesOf('Cards|Resume Card', module)
