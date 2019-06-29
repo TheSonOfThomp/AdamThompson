@@ -1,17 +1,19 @@
 @import '../../../style//global.sass';
 
 section.hero {
-	color: $white;
-	max-width: none;
-	width: 100%;
-	text-align: center;
-	min-height: 640px;
-	height: 100vh;
 	display: grid;
 	grid-auto-flow: row;
 	grid-template-rows: 80px 1fr;
+	grid-row-gap: 0;
 	align-items: center;
 	justify-content: center;
+	max-width: none;
+	width: 100%;
+	height: 100vh;
+	min-height: 640px;
+	margin-bottom: 32px;
+	text-align: center;
+	color: $white;
 	
 	&.green-bg {
 		position: relative;

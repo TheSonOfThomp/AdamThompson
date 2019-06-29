@@ -1,6 +1,5 @@
 import React from "react"
 import Card from "../card/card";
-import Img from "gatsby-image"
 import './resume-card.scss';
 
 const ResumeCard = ({id, logoSrc, title, location, term, position, summary, bullets}) => {

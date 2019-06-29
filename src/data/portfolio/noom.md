@@ -10,6 +10,7 @@ section: portfolio
 
 <div class="tldr" markdown=1>
 <!-- WHAT -->
+
 ## I simplified a confusing interface without compromising functionality.
 
 <!-- WHY -->
@@ -17,31 +18,20 @@ section: portfolio
 
 <!-- HOW -->
 #### I consolidated the user flow and UI, making it consistent in all use cases. Through meticulous user-testing we designed an interface that eliminated hesitation and uncertainty.
-</div>
 
-<figure class='folio_image' id='hero'>
-	<img id="hero-iso" src='../includes/portfolio_images/noom/noom_logging-isolated.png'>
-	<img id="hero-iso-crop" src='../includes/portfolio_images/noom/noom_logging-isolated-crop.png'>
-<figcaption></figcaption>
-</figure>
+![](../../images/portfolio/cover/noom-cover.png)
+</div>
 
 ## Problem
 
 Noom—based in midtown Manhattan—combats obesity, diabetes, and hypertension with lifestyle and behaviour change. Meal logging is a must-have feature in the app that gives constructive feedback on users' eating habits. Logging the food you’ve eaten must be quick and intuitive, and give insightful feedback.
 
-<figure class='folio_image' id='existing'>
-	<a target='_blank'>
-		<img src='../includes/portfolio_images/noom/noom_logging-existing.png'>
-	</a>
-<figcaption>People didn't realize the <em>check</em> was a button, and were never quite sure what the back button would do.</figcaption>
-</figure>
+<div class="vertical">
+
+![People didn't realize the check was a button, and were never quite sure what the back button would do.](../../images/portfolio/noom/noom_logging-existing.png)
+</div>
 
 We observed users and saw that they were often unsure of what to do when navigating between different views while logging food. People weren't noticing the _back_ or _check_ buttons, and the buttons didn't always work the way people expected them to. On top of that, the UI and flow would subtly change depending on the entry case.
-
-<!-- <figure class='folio_image' id='existing-flowchart'>
-		<img src='../includes/portfolio_images/noom/noom_existing-flowchart.jpg'>
-<figcaption>The Grocery shopping metaphor used to communicate the concept model during the design process.</figcaption>
-</figure> -->
 
 ### Mental Models
 
@@ -49,10 +39,7 @@ We noticed that part of the issue may be that the concept model of the feature m
 
 After observing some remote tests and asking direct questions to local testers, we were able to nail down what we saw to be the most common mental model for the people tested. By establishing a grocery shopping metaphor and how users expected each to behave, we developed a concept model for the food-logging feature that we would use to base future design decisions off.
 
-<figure class='folio_image' id='concept-model'>
-		<img src='../includes/portfolio_images/noom/noom-concept-model.png'>
-<figcaption>The Grocery shopping metaphor used to communicate the concept model during the design process.</figcaption>
-</figure>
+![The Grocery shopping metaphor used to communicate the concept model during the design process.](../../images/portfolio/noom/noom-concept-model.png)
 
 ##Requirements
 
@@ -74,12 +61,7 @@ Another problem was that users struggled to go back to the home screen, or worse
 
 Traditionally, this has been done with the back arrow, but we noticed this was too ambiguous. "Am I going back home, or to the previous screen?" users would think, and the correct answer depended on whether they were logging a new meal or editing. After some research and experimentation, we found that the clearest way to convey this behaviour was to use a _cross_ (or ╳ ) icon.
 
-<figure class='folio_image' id='img2'>
-	<a target='_blank'>
-		<img src='../includes/portfolio_images/noom/noom_logging-vc.png'>
-	</a>
-<figcaption>Testing the individual screens and button styles was promising, and showed a lot of improvement from the original workflow.</figcaption>
-</figure>
+![Testing the individual screens and button styles was promising, and showed a lot of improvement from the original workflow.](../../images/portfolio/noom/noom_logging-vc.png)
 
 When prototyping screen transitions we noticed a problem. 
 When the screens animated from one to the other, the behaviour of the _close_ button was still ambiguous on the second screen. We found that there was a near 50/50 split between users who expected the button to close the entire flow vs. the current screen. This was because a second _close_ button animated over top of the first
@@ -109,12 +91,7 @@ With the help of our User Research team we tested our designs and rated their pe
 
 We also tested different _cart_, and _add more_ button designs. The buttons in the final prototype were the winning variants. 
 
-<figure class='folio_image' id='img2'>
-	<a target='_blank'>
-		<img src='../includes/portfolio_images/noom/noom_logging-matrix.png'>
-	</a>
-<figcaption>The decision matrix we used to rank and justify the design decisions</figcaption>
-</figure>
+![The decision matrix we used to rank and justify the design decisions](../../images/portfolio/noom/noom_logging-matrix.png)
 
 ## A Legacy
 The Noom app features this version of the meal-logging workflow to date, and while my internship finished before the feature launched, I was told by the VP Engineering that the modifications I made to the workflow made a significant impact to user-reported ease in meal logging (a tracked KPI). 

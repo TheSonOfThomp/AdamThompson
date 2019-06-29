@@ -7,7 +7,23 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`, // loads SASS/SCSS files
     `gatsby-plugin-resolve-src`, // sets 'path/to' == 'src/path/to'
-    `gatsby-transformer-remark`, // for parsing markdown
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`, // for parsing markdown
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 720,
+              linkImagesToOriginal: true,
+              showCaptions: true,
+            },
+          },
+        ]
+      }
+    },
     `gatsby-plugin-react-helmet`, // for <head> tag?
     'gatsby-transformer-json', // for parsing json
     {
@@ -31,8 +47,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

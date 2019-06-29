@@ -4,8 +4,7 @@ import './social-link.scss';
 
 const SocialLink = ({name, url, color}) => (
   <a 
-    className={color || 'white'}
-    className="social-link"
+    className={[color || 'white', 'social-link']}
     href={url} 
     target="_blank" 
     rel="noopener noreferrer" 

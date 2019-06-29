@@ -7,12 +7,13 @@ import { mix } from "chroma-js";
 
 function getGradientColorObject(color = 'black') {
   const startColor = mix('white', color, 0.9)
-  const endColor = color;
-  const lightColor = mix('white', color, 0.05);
+  // const endColor = color;
+  // const lightColor = mix('white', color, 0.05);
   return {
     // color: color, /* Old browsers */
 
     // background: lightColor, /* Old browsers */
+    /* eslint-disable */
     background: `-moz-linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)`, /* FF3.6+ */
     background: `-webkit-gradient(linear, top left, bottom right, color-stop(0%, ${startColor}), color-stop(100%, ${color}))`, /* Chrome,Safari4+ */
     background: `-webkit-linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)`, /* Chrome10+,Safari5.1+ */
