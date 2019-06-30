@@ -1,5 +1,7 @@
 ---
 title: SMRT WATR
+date: 2015-08-31
+id: smrtwatr
 tagline: The interactive water fountain
 cover: 'smrtwatr-cover.png'
 color: '#785FA3'
@@ -8,27 +10,20 @@ section: portfolio
 
 # SMRT WATR
 
-<!-- <div class="folio-nav prev chameleon">
-	<a href="?p=chameleon">Chameleon</a>
-</div>
-
-<div class="folio-nav next tap">
-	<a href="?p=tap">TAP</a>
-</div> -->
-
 <div class="tldr" markdown=1>
+
 ## The water fountain that's as interesting as your smartphone.
 
 #### We noticed people were involved in their smartphones more than their surroundings or even other people. We wanted to change that.
 
 #### We created a multiplayer quiz game and a fountain that reacts to users' answers, where the winner was given control of a specially designed fountain for a time. It was a huge hit!
+
+<div class="cover-image vertical">
+
+![Cover photo](../../images/portfolio/cover/smrtwatr-cover.png)
 </div>
 
-<figure class='folio_image' id='hero'>
-		<img id="hero-iso" src='../includes/portfolio_images/smrtwatr/smrtwatr-isolated.png'>
-		<img id="hero-iso-crop" src='../includes/portfolio_images/smrtwatr/smrtwatr-isolated-crop.png'>
-<figcaption></figcaption>
-</figure>
+</div>
 
 SMRT WATR (smart water) is an interactive fountain and mobile game IoT experience I developed along with [Josh Bradshaw](http://joshbradshaw.ca), [Isaac Hunter](https://isaachunter.ca), [Shubh Jagani](http://www.shubhjagani.com), [Matt Jones](https://www.linkedin.com/in/matt--jones/), and [Emma Cooper](https://www.linkedin.com/in/emmacooper2562/).
 
@@ -42,10 +37,10 @@ I was the lead UX designer and front-end developer for this project, and focused
 
 We entertained a number of different ways users might interact with the fountain, including *make-it-rain*, inspired by throwing real coins into a fountain. In this proposal, users could donate to "throw" virtual currency into the fountain and see real time reactions from the fountain. A second concept was a crowed-sourced performance, where users could select an action which would be placed in a performance queue.
 
-<figure class='folio_image' id='other-options'>
-		<img src='../includes/portfolio_images/smrtwatr/make-a-wish.jpg'>
-<figcaption>Mockup of the Make-A-Wish concept</figcaption>
-</figure>
+<div class="vertical">
+
+![Mockup of the Make-A-Wish concept](../../images/portfolio/smrtwatr/make-a-wish.jpg)
+</div>
 
 ## The Concept
 
@@ -57,23 +52,15 @@ If a user answered correctly, the fountain would light up in their player colour
 
 I worked on streamlining the user flow for all users, considering what would happen if there were not enough users or too many users. We were able to flesh out a task flow for the entire user engagement loop.
 
-<figure class='folio_image' id='flowhart'>
-		<img src='../includes/portfolio_images/smrtwatr/SMRTWATR-flow.jpg'>
-<figcaption><a href="../includes/portfolio_images/smrtwatr/SMRTWATR-flow.pdf">See the full chart</a></figcaption>
-</figure>
+![The beginning of the user journey flowchart](../../images/portfolio/smrtwatr/SMRTWATR-flow.jpg)
 
 ## User Interface
 
 I mocked up screens for the quiz game, and tested them on my group mates and other classmates. Using their feedback, I improved and refined my designs.
 
-<figure class='folio_image' id='smrtwatr-lobby&ingame'>
-		<img src='../includes/portfolio_images/smrtwatr/smrtwatr-lobby&ingame.png'>
-</figure>
+![Screenshots of the lobby and in-game UI](../../images/portfolio/smrtwatr/smrtwatr-lobby&ingame.png)
 
-<figure class='folio_image' id='smrtwatr-endgame'>
-		<img src='../includes/portfolio_images/smrtwatr/smrtwatr-endgame.png'>
-<figcaption>Screenshots of the Lobby, In-game and Endgame UI</figcaption>
-</figure> 
+![Screenshots of the endgame UI](../../images/portfolio/smrtwatr/smrtwatr-endgame.png)
 
 ## Implementation
 

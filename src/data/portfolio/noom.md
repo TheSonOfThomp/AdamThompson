@@ -1,5 +1,6 @@
 ---
 title: Noom
+date: 2015-12-20
 tagline: Simplifying the core experience
 cover: 'noom-cover.png'
 color: '#4271d7'
@@ -19,7 +20,11 @@ section: portfolio
 <!-- HOW -->
 #### I consolidated the user flow and UI, making it consistent in all use cases. Through meticulous user-testing we designed an interface that eliminated hesitation and uncertainty.
 
-![](../../images/portfolio/cover/noom-cover.png)
+<div class="cover-image vertical">
+
+![Cover photo](../../images/portfolio/cover/noom-cover.png)
+</div>
+
 </div>
 
 ## Problem

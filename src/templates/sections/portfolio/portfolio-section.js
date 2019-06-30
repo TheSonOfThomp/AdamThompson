@@ -10,6 +10,10 @@ const PortfolioSection = ({ data }) => {
     query{
       allMarkdownRemark(
         filter: { frontmatter: { section: { eq: "portfolio" } } }
+        sort: {
+          fields: [frontmatter___date]
+          order: DESC
+        }
       )
       {
         nodes {
@@ -19,6 +23,7 @@ const PortfolioSection = ({ data }) => {
           }
           frontmatter {
             title
+            date
             tagline
             color
             cover

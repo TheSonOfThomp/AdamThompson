@@ -1,5 +1,6 @@
 ---
 title: Chameleon
+date: 2017-12-20
 tagline: What if your ears could blink?
 cover: 'chameleon-cover.png'
 color: '#2e8c5d'
@@ -9,20 +10,20 @@ section: portfolio
 # Chameleon
 
 <div class="tldr" markdown=1>
+
 ## Adaptive hearing protection that reacts to your environment.
 
 #### We found that people don't like to wear hearing protection when the volume can change often—like in construction sites or factories—because they need to communicate, and constantly removing hearing protection is inefficient.
 
 #### Chameleon is hearing protection that responds to the volume of the environment: When it's quiet, you can hear as if you're not wearing hearing protection. When it gets loud, it reacts in an instant to protect your hearing until it's safe again.
 
+
+<div class="cover-image vertical">
+
+![Cover photo](../../images/portfolio/cover/chameleon-cover.png)
 </div>
 
-<figure class='folio_image' id='hero'>
-	<a target='_blank'>
-		<img src='../includes/portfolio_images/chameleon/chameleon-side-render-isolated.png'>
-	</a>
-<figcaption></figcaption>
-</figure>
+</div>
 
 ## Problem
 
@@ -70,10 +71,12 @@ I spent the next 4 months working on all aspects of the design: electronics, emb
 
 After a few dozen smaller scale prototypes to test each part of the system independently, we finally had a working full-system prototype.
 
-<figure class='folio_image' id='prototype3d'>
+![The final 3D printed prototype, with Teensy controller enclosure.](../../images/portfolio/chameleon/finished-prototype.jpg)
+
+<!-- <figure class='folio_image' id='prototype3d'>
 		<img src='../includes/portfolio_images/chameleon/finished-prototype.jpg'>
-<figcaption>The final 3D printed prototype, with Teensy controller enclosure.</figcaption>
-</figure>
+<figcaption></figcaption>
+</figure> -->
 
 ## Pitch and Demo
 
@@ -86,7 +89,7 @@ We showcased our prototype at the Systems Design Engineering Symposium where we 
 
 
 <figure class='folio_image' id='norman-esch-demo'>
-		<img src='../includes/portfolio_images/chameleon/prototype-demo.jpg'>
+		<img src='../../images/portfolio/chameleon/prototype-demo.jpg'>
 <figcaption>Demonstrating the prototype at Norman Esch finals, where we<a href="https://uwaterloo.ca/engineering/news/six-teams-win-10000-each-annual-esch-awards" target="_blank"> won a $10,000 prize</a> for our pitch and demo!</figcaption>
 </figure>
 

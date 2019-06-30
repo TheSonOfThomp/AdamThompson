@@ -2,17 +2,16 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "components/seo";
 import './portfolio-template.scss';
+import { PortfolioPageHeader } from "../../components/portfolio-page-header/porfolio-page-header";
 
 export default ({data}) => {
   const post = data.markdownRemark
   return (
-    <main className="portfolio">
+    <main className="portfolio" id={post.frontmatter.title.toLowerCase().replace(' ', '')}>
       <SEO title="Portfolio" keywords={[`adam`, `thompson`, `react`]} />
-      <header>LOGO GOES HERE</header>
+      <PortfolioPageHeader/>
       <div 
         className="portfolio-content"  
-        id={post.frontmatter.title.toLowerCase()}
-        style={{color: post.frontmatter.color}}
         dangerouslySetInnerHTML={{ __html: post.html }} />
     </main>
   )

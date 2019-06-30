@@ -1,0 +1,26 @@
+@import '../../style/global.sass';
+
+header.porfolio-page-header {
+  position: relative;
+  z-index: 10;
+  border-bottom: 2px solid $black;
+  padding: 12px 0;
+  width: 100%;
+
+  h3 {
+    margin: 0;
+    margin-left: 12px;
+    color: $black;
+    font-size: 28px;
+    font-family: $sans-serif;
+    font-weight: 400;
+  }
+  a {
+    display: inline-flex;
+    align-content: center;
+    justify-content: flex-start;
+  }
+  a:hover {
+    border: none;
+  }
+}
