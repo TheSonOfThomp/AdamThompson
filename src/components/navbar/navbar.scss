@@ -18,6 +18,7 @@ nav {
 	}
 
 	.nav-link {
+		font-size: 16px;
 		list-style: none;
 		display: inline-block;
 		line-height: 32px;
@@ -33,12 +34,6 @@ nav {
 		grid-auto-columns: 1fr;
 		align-items: center;
 		align-content: center;
-
-		.social-link {
-			line-height: 1em;
-			display: inline-block;
-			padding: 0 16px;
-		}
 	}
 
 }
