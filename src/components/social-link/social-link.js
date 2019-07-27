@@ -1,12 +1,13 @@
 import React from "react"
 import './social-link.scss';
 
-const SocialLink = ({url, color, children}) => (
+const SocialLink = ({name, url, color, children}) => (
   <span className="social-link">
     <a 
       className={[color || 'white']}
-      href={url} 
-      target="_blank" 
+      href={url}
+      title={name}
+      target="_blank"
       rel="noopener noreferrer" 
     >
       {children}

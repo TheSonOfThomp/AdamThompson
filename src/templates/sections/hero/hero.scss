@@ -54,7 +54,9 @@ section.hero {
 		}
 		.tagline {
 			font-weight: 600;
-			font-size: 96px // if title;
+			font-size: 96px; // if title;
+			margin: 0 16px;
+			max-width: calc(100vw - 32px);
 		}
 	
 		.bio-text {
@@ -64,6 +66,8 @@ section.hero {
 			font-size: 24px;
 			line-height: 2em;
 			font-weight: 300;
+			margin: 0 16px;
+			max-width: calc(100vw - 32px);
 		}
 	
 		.big-letters {
@@ -80,7 +84,20 @@ section.hero {
 			font-size: 512px;
 			opacity: 0.15;
 			z-index: 1;
-			$letter-shift: 20%;
+			
+			@media (max-width: 700px){
+				$letter-shift: 20%;
+				#u {
+					position: absolute;
+					left: 0;
+					transform: translate(-$letter-shift, -50%);
+				}
+				#x {
+					position: absolute;
+					right: 0;
+					transform: translate($letter-shift, -50%);
+				}
+			}
 			
 			// &.split-ux {
 			// 	// opacity: 1;

@@ -7,16 +7,31 @@ nav {
 	grid-auto-flow: column;
 	align-items: center;
 	justify-items: center;
-	grid-template-columns: 8fr 1fr 1fr 2fr;
+	grid-template-columns: 4fr 1fr 1fr;
+	grid-template-areas: 'logo links social';
 
 	a {
 		color: $white;
 	}
 
 	#nav-logo {
+		grid-area: logo;
 		justify-self: left;
+		margin-left: 16px;
 	}
 
+	#nav-hamburger {
+		display: none;
+		justify-self: right;
+		margin: 0 16px;
+	}
+
+	#nav-links{
+		grid-area: links;
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+	}
 	.nav-link {
 		font-size: 16px;
 		list-style: none;
@@ -28,6 +43,7 @@ nav {
 	}
 
 	#nav-social-menu {
+		grid-area: social;
 		justify-self: right;
 		display: grid;
 		grid-auto-flow: column;
@@ -35,5 +51,18 @@ nav {
 		align-items: center;
 		align-content: center;
 	}
+}
 
+// Mobile
+@media screen and (max-width: 768px) {
+	nav {
+		grid-template-columns: 1fr 1fr;
+
+		#nav-links {
+			justify-self: right;
+		}
+		#nav-social-menu{
+			display: none;
+		}
+	}
 }
