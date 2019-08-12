@@ -1,13 +1,13 @@
 @import '../../style/global.sass';
 
 .portfolio-card {
-  max-width: 512px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   color: $white;
   padding: 32px;
   align-items: center;
   text-align: left;
+  border-radius: 8px;
 
   h2, p {
     margin: 0;
