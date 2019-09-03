@@ -3,27 +3,35 @@
 .portfolio-card {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-column-gap: 16px;
   color: $white;
   padding: 32px;
   align-items: center;
   text-align: left;
-  border-radius: 8px;
+  border-radius: 2px;
+  height: auto;
+  max-height: 50vh;
 
-  h2, p {
-    margin: 0;
+  h2, span {
+    margin: 0.125em auto;
   }
 
   h2 {
-    font-size: 28px;
+    font-size: 32px;
   }
 
-  p {
+  span {
+    font-size: 20px;
   }
 
   img { 
     position: relative;
+    // height: 100%;
+    // width: auto;
     width: 100%;
     height: auto;
+
     cursor: pointer;
+    justify-self: center;
   }
 }

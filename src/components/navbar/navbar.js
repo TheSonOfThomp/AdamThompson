@@ -25,7 +25,10 @@ menuClass(){
   render() {
     return (
       <nav className="navbar">
-        <img id="nav-logo" src={monogram} alt="monogram"></img>
+        <div id="nav-logo">
+          <img src={monogram} alt="monogram"></img>
+          <h3>Adam Thompson</h3>
+        </div>
         <div id="nav-links">
           <span className="nav-link" id="nav-portfolio"><a href="#portfolio">Portfolio</a></span>
           <span className="nav-link" id="nav-about"><a href="#about">About</a></span>

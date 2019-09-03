@@ -11,13 +11,11 @@ const ResumeCard = ({id, logoSrc, title, location, term, position, summary, bull
     >
         <div className="resume-header">
           {/* <img className="logo" src={logoSrc} alt={title}/> */}
-          <h1 className="company">{title}</h1>
-          <span className="time-and-place">{location} | {term}</span>
+          <h1 className="title">{position}</h1>
+          {/* <span className="small-text">{location} | {term}</span> */}
         </div>
-        <h2 className="position">{position}</h2>
-        <p className="summary">
-          {summary}
-        </p>
+        <h2 className="subtitle">{title}</h2>
+        <p className="summary">{summary}</p>
         {/* {bullets} */}
     </Card>
   )

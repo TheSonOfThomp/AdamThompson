@@ -17,7 +17,19 @@ nav {
 	#nav-logo {
 		grid-area: logo;
 		justify-self: left;
-		margin-left: 16px;
+		display: grid;
+		grid-auto-flow: column;
+		grid-gap: 16px;
+		align-content: center;
+		img {
+			margin-left: 16px;
+		}
+		h3 {
+			margin: 0;
+			color: var(--color-white);
+			font-size: 32px;
+			font-weight: 400;
+		}
 	}
 
 	#nav-hamburger {

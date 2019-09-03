@@ -14,7 +14,8 @@ $image-height: 48px;
 
   .resume-header {
     display: grid;
-    grid-template-areas: "company company" "location location";
+    grid-template-areas: "title title";
+    // grid-template-areas: "title title" "subtitle subtitle";
     grid-template-columns: min-content auto;
     grid-gap: 4px 8px;
   }
@@ -23,22 +24,23 @@ $image-height: 48px;
     grid-area: logo;
   }
 
-  h1.company {
+  h1.title {
     // @include serifFont();
-    grid-area: company;
+    grid-area: title;
     margin: 0;
     align-self: center;
     line-height: 1.2em;
   }
-  span.time-and-place {
-    grid-area: location;
+  span.small-text {
+    grid-area: subtitle;
     @include serifFont();
     font-size: 16px;
     color: $dark_grey;
   }
-  h2.position {
+  h2.subtitle {
     // @include serifFont();
     font-size: 20px;
+    font-weight: 500;
     line-height: 1.5em;
     margin: 0;
   }
