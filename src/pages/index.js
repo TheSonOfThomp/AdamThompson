@@ -9,6 +9,7 @@ import Section from "templates/section/section";
 import 'style/global.sass';
 import PortfolioSection from "../templates/sections/portfolio/portfolio-section";
 import AboutSection from "../templates/sections/about/about-section";
+import BlogSection from "../templates/sections/blog/blog-section";
 
 class IndexPage extends React.Component {
   
@@ -25,7 +26,7 @@ class IndexPage extends React.Component {
     
         <PortfolioSection></PortfolioSection>
     
-        {/* <AboutSection></AboutSection> */}
+        <AboutSection></AboutSection>
     
         {/* <ResumeSection></ResumeSection> */}
         
@@ -33,9 +34,7 @@ class IndexPage extends React.Component {
           <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
         </Section> */}
     
-        {/* <Section title="Medium">
-          <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-        </Section> */}
+        {/* <BlogSection></BlogSection> */}
     
       </main>
   )}

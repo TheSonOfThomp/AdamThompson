@@ -1,12 +1,13 @@
 @import '../../style/global.sass';
 
 section {
+    width: 100%;
     max-width: $content-width;
     align-self: center;
     display: grid;
     grid-auto-flow: row;
-    grid-auto-rows: 128px auto;
-    grid-row-gap: 48px;
+    grid-auto-rows: auto auto;
+    grid-row-gap: 32px;
     margin-bottom: 64px;
 
     $angle: 2;

@@ -25,8 +25,13 @@ section#about {
 
     #about-text {
       font-size: 18px;
-      top: -8px;
       position: relative;
+      p:first-child {
+        margin-top: 0;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

@@ -16,12 +16,13 @@ function getGradientColorObject(color = 'black') {
     
     /* Dark */
     /* eslint-disable */
-    background: `-moz-linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)`, /* FF3.6+ */
-    background: `-webkit-gradient(linear, top left, bottom right, color-stop(0%, ${startColor}), color-stop(100%, ${color}))`, /* Chrome,Safari4+ */
-    background: `-webkit-linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)`, /* Chrome10+,Safari5.1+ */
-    background: `-o-linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)`, /* Opera 11.10+ */
-    background: `-ms-linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)`, /* IE10+ */
-    background: `linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)` /* W3C */
+    background: `${color}`,
+    // background: `-moz-linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)`, /* FF3.6+ */
+    // background: `-webkit-gradient(linear, top left, bottom right, color-stop(0%, ${startColor}), color-stop(100%, ${color}))`, /* Chrome,Safari4+ */
+    // background: `-webkit-linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)`, /* Chrome10+,Safari5.1+ */
+    // background: `-o-linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)`, /* Opera 11.10+ */
+    // background: `-ms-linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)`, /* IE10+ */
+    // background: `linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)` /* W3C */
   }
   
 }
@@ -29,7 +30,7 @@ function getGradientColorObject(color = 'black') {
 const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
   return (
   <Link to={link}>
-    <Card 
+    <div 
       style={getGradientColorObject(color)}
       className="portfolio-card clickable"
       id={title.toLowerCase()}
@@ -38,8 +39,10 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
         <h2>{title}</h2>
         <span>{tagline}</span>
       </div>
-        <img src={imgSrc} alt={title}/>
-    </Card>
+        <div id="portfolio-card-image" style={{backgroundImage: `url(${imgSrc})`}} >
+        {/* <img src={imgSrc} alt={title}/> */}
+      </div>
+    </div>
   </Link>
   )
 }
