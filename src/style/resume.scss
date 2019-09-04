@@ -1,0 +1,96 @@
+@import './colours.scss';
+@import './mixins.sass';
+
+.resume-container {
+  background-color: #eff0ff;
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1in;
+  justify-items: center;
+  
+  .resume-page {
+    $padding: 0.5in;
+    @media screen {
+      @include box-shadow(0, 1px, 2px, rgba(0,0,0,0.2));
+    }
+    display: grid;
+    grid-gap: 8pt;
+    background-color: #fff;
+    
+    padding: $padding;
+    width: 8.5in - 2 * $padding;
+    max-height: 11in - 2 * $padding;
+
+    font-size: 12pt;
+
+    
+
+    h1, h2, h3, h4, ul {
+      margin: 0
+    }
+    h1 { 
+      font-size: 40pt; 
+      font-weight: 600;
+      // color: $eigengrau;
+      line-height: 1.2em;
+    }
+    h2 { font-size: 18pt; }
+    h3 { font-size: 16pt; color: $green;}
+    h4 { font-size: 14pt;}
+
+    ul {
+      padding-left: 2pt;
+      list-style-type: none;
+
+      li {
+        border-left: 1pt solid $green;
+        padding-left: 8pt;
+        margin: 8pt auto;
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .resume-header {
+      display: grid;
+      grid-auto-flow: column;
+
+      #contacts {
+        text-align: right;
+        display: grid;
+        grid-auto-flow: row;
+        a {
+          color: $green;
+          border-bottom: none;
+        }
+
+      }
+    }
+
+    #experience {
+      display: grid;
+      grid-auto-flow: row;
+      grid-gap: 12pt;
+      .job {
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: 8pt;
+        .job-header {
+          display: grid;
+          grid-auto-flow: column;
+          grid-template-columns: auto auto 1fr;
+          grid-gap: 8pt;
+          align-items: baseline;
+          span.location{
+            justify-self: right;
+            font-size: 10pt;
+          }
+        }
+      }
+    }
+  }
+}
