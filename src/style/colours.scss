@@ -24,14 +24,17 @@ $noom_light: #719AFC;
 $knowroaming: #4286b5;
 $knowroaming_light: #6DAFDB;
 
-$smrtwatr: #785FA3;//#756393
-$smrtwatr_light: #A18BCC;//#AB9FC1
+$smrtwatr: #19838E; //purple #785FA3;
+$smrtwatr_light: #68A0A8; //purple #A18BCC;
 
 $chameleon: #2e8c5d;
 $chameleon_light: #73D3A2;
 
 $zynga: #DD3B30;
 $zynga_light: #FF7870;
+
+$newvisions: #662D91;
+$newvisions_light: #B396C8;
 
 $tap: #000000; //#518CB8 
 $tap_light: #393939; //#83AECC
@@ -54,6 +57,8 @@ $tap_light: #393939; //#83AECC
   --color-transparent : #{$transparent};
   
   // ---- Brand Colours ---- //
+  --color-newvisions : #{$newvisions};
+  --color-newvisions-light : #{$newvisions_light};
   --color-noom : #{$noom};
   --color-noom-light : #{$noom_light};
   --color-knowroaming : #{$knowroaming};

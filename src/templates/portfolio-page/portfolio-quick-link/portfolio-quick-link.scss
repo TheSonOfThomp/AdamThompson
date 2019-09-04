@@ -1,3 +1,5 @@
+@import '../../../style/global.sass';
+
 @mixin brandedQuicklink($brand) {
   border-color: var(--color-#{$brand});
   span {

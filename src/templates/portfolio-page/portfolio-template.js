@@ -18,7 +18,8 @@ export default ({data}) => {
       <PortfolioPageHeader/>
       <div 
         className="portfolio-content"  
-        dangerouslySetInnerHTML={{ __html: post.html }} />
+        dangerouslySetInnerHTML={{ __html: post.html }} 
+      ></div>
 
       <PortfolioQuickLink post={prevPost} direction="prev"></PortfolioQuickLink>
       <PortfolioQuickLink post={nextPost} direction="next"></PortfolioQuickLink>
@@ -32,10 +33,10 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
-      excerpt
       frontmatter {
         title
         color
+        date
       }
     }
     allMarkdownRemark(

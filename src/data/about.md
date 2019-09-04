@@ -4,9 +4,9 @@ section: about
 stub: true
 ---
 
-I'm a product designer and UX engineer at [New Visions for Public Schools](https://newvisions.org), where I'm designing new features for our expanding network of schools in New York City, as well as building our and documenting our component library and design system for our school facing data portal.
+I'm a product designer & UX engineer at [New Visions for Public Schools](https://newvisions.org), where I design new features for our expanding network of schools in New York City, as well as building our and documenting our component library and design system for our school facing data portal.
 
-I exist squarely at the intersection of Design & Engineering. My education in [Systems Design Engineering](https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering) allows me to approach problems from a holistic perspective, and execute the solution effectively.
+I live at the intersection of Design & Engineering—my education in [Systems Design Engineering](https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering) allows me to approach problems from a holistic perspective, design a complete solutions, and execute that solution effectively.
 
 <!-- I've worked at MUSIC Group, Noom, KnowRoaming, Sony and Zynga, conducting market and customer research, developing user flows and wireframes, refining UIs, and testing prototypes. My company Chameleon Hearing Protection won the [Norman Esch Entrepreneurship award](https://uwaterloo.ca/engineering/news/six-teams-win-10000-each-annual-esch-awards) in March 2017, and was a semi-finalist for AC JumpStart. -->
 

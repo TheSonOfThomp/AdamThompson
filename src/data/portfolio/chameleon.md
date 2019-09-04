@@ -27,7 +27,7 @@ section: portfolio
 
 ## Problem
 
-We surveyed and interviewed people who work in construction, manufacturing, and live music production[^live-music] about their hearing protection use. A vast majority answered that while they know they should wear, protection they often don't. When asked why, they said they often needed to talk at work, and it's tedious to constantly remove hearing protection and put it back on.
+We surveyed and interviewed people who work in construction, manufacturing, and live music production[^1] about their hearing protection use. A vast majority answered that while they know they should wear, protection they often don't. When asked why, they said they often needed to talk at work, and it's tedious to constantly remove hearing protection and put it back on.
 
 <!-- talk about NIHL -->
 
@@ -87,7 +87,6 @@ We showcased our prototype at the Systems Design Engineering Symposium where we 
 	<figcaption>Showing off the prototype at the Systems Design Engineering Symposium</figcaption>
 </figure>
 
-
 <figure class='folio_image' id='norman-esch-demo'>
 		<img src='../../images/portfolio/chameleon/prototype-demo.jpg'>
 <figcaption>Demonstrating the prototype at Norman Esch finals, where we<a href="https://uwaterloo.ca/engineering/news/six-teams-win-10000-each-annual-esch-awards" target="_blank"> won a $10,000 prize</a> for our pitch and demo!</figcaption>
@@ -95,5 +94,4 @@ We showcased our prototype at the Systems Design Engineering Symposium where we 
 
 
 
-[^live-music]: 
-Live music workers means, for example: stagehands, producers, and directors, not performers themselves
+[^1]: Live music workers means, for example: stagehands, producers, and directors, not performers themselves

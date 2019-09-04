@@ -12,7 +12,7 @@ section: portfolio
 <div class="tldr" markdown=1>
 <!-- WHAT -->
 
-## I simplified a confusing interface without compromising functionality.
+## A more intuitive interface without compromising functionality.
 
 <!-- WHY -->
 #### Users were having trouble navigating the core meal-logging flow because the buttons weren’t obvious and changed behaviour depending on use case. We needed to fix this.

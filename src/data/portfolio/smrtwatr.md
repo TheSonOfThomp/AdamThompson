@@ -4,7 +4,7 @@ date: 2015-08-31
 id: smrtwatr
 tagline: The interactive water fountain
 cover: 'smrtwatr-cover.png'
-color: '#785FA3'
+color: '#19838E'
 section: portfolio
 ---
 
