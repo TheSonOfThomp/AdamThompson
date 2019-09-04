@@ -3,6 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import SEO from "components/seo";
 import './portfolio-template.scss';
 import { PortfolioPageHeader } from "../../components/portfolio-page-header/porfolio-page-header";
+import PortfolioQuickLink from "./portfolio-quick-link/portfolio-quick-link";
 
 export default ({data}) => {
   const post = data.markdownRemark
@@ -10,12 +11,6 @@ export default ({data}) => {
   const postIndex = allPosts.findIndex(p => p.id == post.id)
   const nextPost = allPosts[postIndex + 1]
   const prevPost = allPosts[postIndex - 1]
-
-  const prevLink = prevPost ? prevPost.fields.slug : '/'
-  const prevLabel = prevPost ? prevPost.frontmatter.title : 'Home'
-
-  const nextLink = nextPost ? nextPost.fields.slug : '/'
-  const nextLabel = nextPost ? nextPost.frontmatter.title : 'Home'
   
   return (
     <main className="portfolio" id={post.frontmatter.title.toLowerCase().replace(' ', '')}>
@@ -25,14 +20,9 @@ export default ({data}) => {
         className="portfolio-content"  
         dangerouslySetInnerHTML={{ __html: post.html }} />
 
-      <Link to={prevLink} className={`${prevLabel.replace(' ', '').toLowerCase()} quick-link`} id="prev-link">
-        <div>Previous</div>
-        <span>{prevLabel}</span>
-      </Link>
-      <Link to={nextLink} className={`${nextLabel.replace(' ', '').toLowerCase()} quick-link`} id="next-link">
-        <div>Next</div>
-        <span>{nextLabel}</span>
-      </Link>
+      <PortfolioQuickLink post={prevPost} direction="prev"></PortfolioQuickLink>
+      <PortfolioQuickLink post={nextPost} direction="next"></PortfolioQuickLink>
+      
     </main>
   )
 }

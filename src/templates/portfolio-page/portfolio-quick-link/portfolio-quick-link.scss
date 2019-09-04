@@ -1,0 +1,50 @@
+@mixin brandedQuicklink($brand) {
+  border-color: var(--color-#{$brand});
+  span {
+    color: var(--color-#{$brand})
+  }
+}
+
+  a.quick-link{
+    position: fixed;
+    bottom: 16px;
+    padding: 4px 8px;
+    min-width: 96px;
+    background: var(--color-white-trans);
+    border-color: var(--color-green);
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 300ms;
+
+    &.newvisions { @include brandedQuicklink('newvisions');}
+    &.noom { @include brandedQuicklink('noom');}
+    &.knowroaming { @include brandedQuicklink('knowroaming');}
+    &.chameleon { @include brandedQuicklink('chameleon');}
+    &.smrtwatr { @include brandedQuicklink('smrtwatr');}
+
+    &:hover{
+      border-bottom: none;
+    }
+    div {
+      color: $eigengrau;
+      font-weight: 600
+    }
+    span {
+      color: var(--color-green);
+    }
+    
+    &#prev-link {
+      left: 0;
+      padding-left: 8px;
+      border-left-style: solid;
+      border-left-width: 4px; 
+      text-align: left;
+      border-radius: 0px 2px 2px 0px;
+    }
+    &#next-link {
+      right: 0;
+      padding-right: 8px;
+      border-right-style: solid;
+      border-right-width: 4px; 
+      text-align: right;
+      border-radius: 2px 0px 0px 2px;
+    }
+  }
