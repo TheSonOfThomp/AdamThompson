@@ -9,7 +9,6 @@ const Card = ({id, className, style, children}) => (
     className={className + ' card'}>
     {children}
   </div>
-
 );
 
 export default Card

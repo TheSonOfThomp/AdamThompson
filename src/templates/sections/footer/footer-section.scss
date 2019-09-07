@@ -1,0 +1,18 @@
+@import '../../../style/global.sass';
+
+footer {
+  display: grid;
+  width: 100%;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-weight: 500;
+  div {
+    justify-self: center;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    max-width: $content-width;
+    margin: 12px;
+
+  }
+}

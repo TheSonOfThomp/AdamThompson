@@ -1,0 +1,15 @@
+.tool {
+  display: inline-flex;
+  position: relative;
+  align-items: baseline;
+  font: inherit;
+  height: 1em;
+  padding-left: 1.2em;
+  img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    left: 0; 
+    bottom: -0.125em;
+  }
+}

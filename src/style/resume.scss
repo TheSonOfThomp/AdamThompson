@@ -1,42 +1,41 @@
 @import './colours.scss';
 @import './mixins.sass';
+$padding: 0.375in;
 
 .resume-container {
-  background-color: #eff0ff;
+  background-color: $white_green;
   display: grid;
   grid-auto-flow: row;
-  grid-gap: 1in;
+  grid-gap: 0.25in;
   justify-items: center;
   
   .resume-page {
-    $padding: 0.5in;
+    padding: 0;
     @media screen {
+      padding: $padding;
+      width: 8.5in - 2 * $padding;
+      max-height: 14in - 2 * $padding;
       @include box-shadow(0, 1px, 2px, rgba(0,0,0,0.2));
     }
     display: grid;
     grid-gap: 8pt;
     background-color: #fff;
-    
-    padding: $padding;
-    width: 8.5in - 2 * $padding;
-    max-height: 11in - 2 * $padding;
 
-    font-size: 12pt;
-
-    
+    font-size: 11pt;
+    font-weight: 300;
 
     h1, h2, h3, h4, ul {
       margin: 0
     }
     h1 { 
-      font-size: 40pt; 
+      font-size: 36pt; 
       font-weight: 600;
       // color: $eigengrau;
       line-height: 1.2em;
     }
     h2 { font-size: 18pt; }
-    h3 { font-size: 16pt; color: $green;}
-    h4 { font-size: 14pt;}
+    h3 { font-size: 12pt; color: $green;}
+    h4 { font-size: 12pt;}
 
     ul {
       padding-left: 2pt;
@@ -66,28 +65,33 @@
         a {
           color: $green;
           border-bottom: none;
+          font-size: 11pt;
         }
 
       }
     }
-
-    #experience {
+    #resume-body {
       display: grid;
-      grid-auto-flow: row;
-      grid-gap: 12pt;
-      .job {
+      // grid-template-columns: 2fr 1fr;
+      grid-gap: 8pt;
+      #experience {
         display: grid;
         grid-auto-flow: row;
-        grid-gap: 8pt;
-        .job-header {
+        grid-gap: 12pt;
+        .job {
           display: grid;
-          grid-auto-flow: column;
-          grid-template-columns: auto auto 1fr;
+          grid-auto-flow: row;
           grid-gap: 8pt;
-          align-items: baseline;
-          span.location{
-            justify-self: right;
-            font-size: 10pt;
+          .job-header {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: auto auto 1fr;
+            grid-gap: 8pt;
+            align-items: baseline;
+            span.location{
+              justify-self: right;
+              font-size: 10pt;
+            }
           }
         }
       }
