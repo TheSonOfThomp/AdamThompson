@@ -8,7 +8,7 @@ const FooterSection = () => {
   return (
     <footer>
       <div>
-        © {year} Adam Thompson — Built with Gatsby
+        © {year} Adam Thompson. Built with Gatsby
       </div>
     </footer>
   )

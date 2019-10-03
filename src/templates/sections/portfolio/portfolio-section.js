@@ -51,20 +51,22 @@ const PortfolioSection = ({ data }) => {
 
   return (
     <Section title="Case Studies" id="portfolio">
+      <div className="portfolio-cards-container">
       {
         posts.map((post) => (
           <PortfolioCard
-            key={post.id}
-            title={post.frontmatter.title}
-            tagline={post.frontmatter.tagline}
-            color={post.frontmatter.color}
-            cover={post.imageSource.src}
-            link={post.fields.slug}
-            imgSrc={post.imageSource.src}
+          key={post.id}
+          title={post.frontmatter.title}
+          tagline={post.frontmatter.tagline}
+          color={post.frontmatter.color}
+          cover={post.imageSource.src}
+          link={post.fields.slug}
+          imgSrc={post.imageSource.src}
           >
           </PortfolioCard>
         ))
       }
+      </div>
     </Section>
   )
 }

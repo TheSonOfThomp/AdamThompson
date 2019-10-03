@@ -3,7 +3,7 @@
 .portfolio-card {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-column-gap: 16px;
+  grid-gap: 16px;
   color: $white;
   padding: 32px;
   align-items: center;
@@ -12,7 +12,6 @@
   height: 33%; height: 33vh;
   transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 500ms;
   @include box-shadow(0, 2px, 4px, rgba(0,0,0, 0.16) );
-
 
   &:hover {
     transform: scale(1.03);
@@ -40,8 +39,16 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
     cursor: pointer;
     justify-self: center;
+    @media screen and (max-width: $breakpoint-xsmall) {
+      // background-position: 0% 50%;
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-xsmall) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 }

@@ -2,10 +2,12 @@
 
 footer {
   display: grid;
+  grid-auto-rows: 128px;
+  align-items: center;
   width: 100%;
   background-color: var(--color-green);
   color: var(--color-white);
-  font-weight: 500;
+  font-weight: 400;
   div {
     justify-self: center;
     display: grid;

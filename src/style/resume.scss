@@ -14,7 +14,7 @@ $padding: 0.375in;
     @media screen {
       padding: $padding;
       width: 8.5in - 2 * $padding;
-      max-height: 14in - 2 * $padding;
+      max-height: 11in - 2 * $padding;
       @include box-shadow(0, 1px, 2px, rgba(0,0,0,0.2));
     }
     display: grid;
@@ -33,7 +33,7 @@ $padding: 0.375in;
       // color: $eigengrau;
       line-height: 1.2em;
     }
-    h2 { font-size: 18pt; }
+    h2 { font-size: 11pt;}
     h3 { font-size: 12pt; color: $green;}
     h4 { font-size: 12pt;}
 
@@ -72,17 +72,18 @@ $padding: 0.375in;
     }
     #resume-body {
       display: grid;
-      // grid-template-columns: 2fr 1fr;
-      grid-gap: 8pt;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 16pt;
       #experience {
         display: grid;
         grid-auto-flow: row;
+        grid-auto-rows: min-content;
         grid-gap: 12pt;
-        .job {
+        .entry {
           display: grid;
           grid-auto-flow: row;
           grid-gap: 8pt;
-          .job-header {
+          .entry-header {
             display: grid;
             grid-auto-flow: column;
             grid-template-columns: auto auto 1fr;
@@ -93,6 +94,15 @@ $padding: 0.375in;
               font-size: 10pt;
             }
           }
+        }
+      }
+      #right-column {
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: min-content;
+        grid-gap: 8pt;
+        .entry-header {
+          margin: auto auto 4pt auto;
         }
       }
     }

@@ -15,7 +15,7 @@ const Hero = () => (
       </div>
       <div className="bio-text">
         <p>
-          Designing great experiences. Building great products.
+          Design great experiences. Build great products.
         </p>
       </div>
       <div className="big-letters">
