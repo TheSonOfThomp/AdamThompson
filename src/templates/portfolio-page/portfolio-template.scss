@@ -7,7 +7,7 @@
   }
   
   header.porfolio-page-header {
-    border-color: var(--color-#{$brand})
+    border-color: var(--color-#{$brand});
   }
   
   .portfolio-content .tldr {
@@ -20,10 +20,6 @@
   }
 }
 
-
-
-
-$folio-max-width: 720px;
 $full-width-margin: calc((#{$folio-max-width} - 100vw)/2);
 
 
@@ -37,119 +33,137 @@ main.portfolio {
 
   display: grid;
   grid-template-rows: 96px auto;
-  width: 100%;
+  grid-auto-columns: 100vw;
+  // width: 100%;
   align-items: flex-end;
-  justify-items: center;
-  justify-content: center;
+  justify-items: left;
+  justify-content: left;
   font-family: $sans-serif;
 
 
-
-  .portfolio-content {
-    position: relative;
-    display: inline-block;
+  .portfolio-content-container {
     width: 100%;
-    max-width: $folio-max-width;
-    
-    // Top TL;DR section
-    .tldr {
-      h2 {
-        font-size: 36px
+    // display: grid;
+    // justify-content: center;
+    .portfolio-content {
+      // margin: auto 16px;
+      position: relative;
+      display: block;
+      margin: 0 16px;
+      
+      
+      * {
+        max-width: $folio-max-width;
       }
-      h4 {
-        font-weight: 300
-      }
-
-      .cover-image {
+      
+      // Top TL;DR section
+      .tldr {
         max-width: none;
-        width: 100vw;
-        padding: 16px 0;
-        margin: 48px 0;
-        margin-left: $full-width-margin;
-        background-color: var(--color-black);
+        h2 {
+          font-size: 36px
+        }
+        h4 {
+          font-weight: 300
+        }
 
-        figcaption {
-          display: none;
+        .cover-image {
+          max-width: none;
+          width: 100vw;
+          padding: 16px 0;
+          margin: 48px 0;
+          margin-left: -16px; //$full-width-margin;
+          background-color: var(--color-black);
+
+          figcaption {
+            display: none;
+          }
         }
       }
-    }
 
 
-    h1 {
-      font-size: 72px;
-      font-weight: 600;
-      text-align: left;
-      margin: 24px auto 0 auto;
-      color: $eigengrau;
-    }
-    h2 {
-      font-size: 56px;
-      font-style: normal;
-      font-weight: bold;
-      margin: 0 auto 24px auto;
-      color: $eigengrau;
-    }
-    h3 {
-      font-size: 32px;
-      font-weight: 400;
-      line-height: 1.6em;
-      color: $dark_grey;
-      margin: 16px auto;
-    }
-    h4 {
-      font-size: 20px;
-      font-weight: 300;
-      line-height: 1.6em;
-      color: $dark_grey;
-      margin: 16px auto;
-    }
-    p {
-      font-size: 20px;
-      font-weight: 300;
-      color: $black;
-      line-height: 1.6em;
-      a {
+      h1 {
+        font-size: 72px;
+        font-weight: 600;
+        text-align: left;
+        margin: 24px auto 0 auto;
+        color: $eigengrau;
+        @media screen and (max-width: $breakpoint-small) {
+          font-size: 12vw;
+        }
+      }
+      h2 {
+        font-size: 56px;
+        font-style: normal;
+        font-weight: bold;
+        margin: 0 auto 24px auto;
+        color: $eigengrau;
+        @media screen and (max-width: $breakpoint-small) {
+          font-size: 8vw;
+        }
+      }
+      h3 {
+        font-size: 32px;
         font-weight: 400;
+        line-height: 1.6em;
+        color: $dark_grey;
+        margin: 16px auto;
       }
-      sup {
+      h4 {
+        font-size: 20px;
         font-weight: 300;
-        font-size: 0.67em;
+        line-height: 1.6em;
+        color: $dark_grey;
+        margin: 16px auto;
       }
-    }
-
-    // Images & Video
-    figure {
-      display: inherit;
-      position: relative;
-      width: 100%;
-      max-width: $folio-max-width;
-      height: auto;
-      margin: 12px auto;
-      padding: 12px 0;
-      text-align: center;
-
-      img {
-        position: relative;
-        display: inline-block;
-        margin: 8px auto;
-      }
-
-      iframe {
-        width: 100%;
-        height: 560px;
-      }
-
-      figcaption {
-        text-align: center;
-        font-size: 1rem;
-        font-family: $sans-serif;
-        color: $med_grey;
-        font-weight: 500;
-        line-height: 1.5em;
-        max-width: 50%;
+      p {
+        font-size: 20px;
+        font-weight: 300;
+        color: $black;
+        line-height: 1.6em;
         margin: 0 auto;
+        a {
+          font-weight: 400;
+        }
+        sup {
+          font-weight: 300;
+          font-size: 0.67em;
+        }
       }
 
+      // Images & Video
+      figure {
+        display: inherit;
+        position: relative;
+        width: 100%;
+        max-width: $folio-max-width;
+        height: auto;
+        margin: 12px auto;
+        padding: 12px 0;
+        text-align: center;
+
+        img {
+          position: relative;
+          display: inline-block;
+          margin: 8px auto;
+        }
+
+        iframe {
+          width: 100%;
+          height: 560px;
+        }
+
+        figcaption {
+          text-align: center;
+          font-size: 1rem;
+          font-family: $sans-serif;
+          color: $med_grey;
+          font-weight: 500;
+          line-height: 1.5em;
+          max-width: 50%;
+          margin: 0 auto;
+        }
+
+      }
     }
   }
 }
@@ -172,7 +186,9 @@ div.vertical {
     img.gatsby-resp-image-image {
       position: relative !important;
       width: auto !important;
+      max-width: 80vw;
       max-height: 512px !important;
+      height: auto !important;
     }
   }
 }

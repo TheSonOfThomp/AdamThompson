@@ -6,6 +6,8 @@ header.porfolio-page-header {
   border-bottom: 2px solid $black;
   padding: 12px 0;
   width: 100%;
+  max-width: $folio-max-width;
+  justify-self: center;
 
   h3 {
     margin: 0;
@@ -19,6 +21,7 @@ header.porfolio-page-header {
     display: inline-flex;
     align-content: center;
     justify-content: flex-start;
+    padding-left: 16px;
   }
   a:hover {
     border: none;

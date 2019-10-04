@@ -16,10 +16,12 @@ export default ({data}) => {
     <main className="portfolio" id={post.frontmatter.title.toLowerCase().replace(' ', '')}>
       <SEO title="Portfolio" keywords={[`adam`, `thompson`, `react`]} />
       <PortfolioPageHeader/>
-      <div 
-        className="portfolio-content"  
-        dangerouslySetInnerHTML={{ __html: post.html }} 
-      ></div>
+      <div className="portfolio-content-container">
+        <div 
+          className="portfolio-content"  
+          dangerouslySetInnerHTML={{ __html: post.html }} 
+        ></div>
+      </div>
 
       <PortfolioQuickLink post={prevPost} direction="prev"></PortfolioQuickLink>
       <PortfolioQuickLink post={nextPost} direction="next"></PortfolioQuickLink>

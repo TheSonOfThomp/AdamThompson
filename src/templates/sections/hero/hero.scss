@@ -15,7 +15,11 @@ section.hero {
 	text-align: center;
 	color: $white;
 	overflow: hidden;
-	
+	@media screen and (max-width: $breakpoint-small){
+		height: 88vh;
+	}
+
+	$angle: 2deg;
 	&.green-bg {
 		position: relative;
 		&::after{
@@ -24,7 +28,7 @@ section.hero {
 			width: 110%;
 			height: 100%;
 			transform-origin: 100% 100%;
-			transform: rotate(2deg) translate(-9%, 0);
+			transform: rotate($angle) translate(-9%, 0);
 			@include CornerToCornerGradient($light_green, $green);
 		}
 	}
