@@ -1,9 +1,9 @@
 ---
-title: New Visions
+title: New Visions Dashboard
 date: 2019-09-03
-tagline: Building a design system
-cover: 'design-library-cover.png'
-color: '#662D91'
+tagline: Data for success
+cover: 'nv-dashboard.png'
+color: '#0a4ace'
 section: portfolio
 ---
 
@@ -20,7 +20,7 @@ section: portfolio
 
 <div class="cover-image vertical">
 
-![Cover photo](../../images/portfolio/cover/design-library-cover.png)
+![Cover photo](../../images/portfolio/cover/nv-dashboard.png)
 </div>
 
 </div>
