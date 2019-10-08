@@ -21,7 +21,7 @@ $padding: 0.375in;
     grid-gap: 8pt;
     background-color: #fff;
 
-    font-size: 11pt;
+    font-size: 12pt;
     font-weight: 300;
 
     h1, h2, h3, h4, ul {
@@ -30,12 +30,11 @@ $padding: 0.375in;
     h1 { 
       font-size: 36pt; 
       font-weight: 600;
-      // color: $eigengrau;
       line-height: 1.2em;
     }
-    h2 { font-size: 11pt;}
-    h3 { font-size: 12pt; color: $green;}
-    h4 { font-size: 12pt;}
+    h2 { font-size: 1em;}
+    h3 { font-size: 1.1em; color: $green;}
+    h4 { font-size: 1.1em;}
 
     ul {
       padding-left: 2pt;
@@ -57,7 +56,14 @@ $padding: 0.375in;
     .resume-header {
       display: grid;
       grid-auto-flow: column;
-
+      align-items: center;
+      grid-template-columns: auto auto 1fr;
+      grid-gap: 16px;
+      
+      #monogram {
+        height: 32px;
+        width: auto;
+      }
       #contacts {
         text-align: right;
         display: grid;
@@ -103,6 +109,21 @@ $padding: 0.375in;
         grid-gap: 8pt;
         .entry-header {
           margin: auto auto 4pt auto;
+        }
+
+        h1 {
+          font-size: 1.3em;
+          // width: 67%;
+          // background-color: $white_green;
+          // padding-bottom: 2px;
+          // border-bottom: 2px solid $green;
+        }
+
+        ul{
+          li{
+            border: none;
+            padding-left: 0;
+          }
         }
       }
     }

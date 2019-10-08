@@ -1,15 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, StaticQuery, useStaticQuery } from "gatsby"
 import SEO from "../components/seo"
-
+import monogram from '../images/monogram-green.svg';
 import '../style/resume.scss'
 import T from "../components/tool/tool"
 
-const ResumePage = () => (
+const ResumePage = () => {
+  
+  return (
   <div className="resume-container">
     <SEO title="Resume" />
     <div className="resume-page">
       <div className="resume-header">
+        <img id="monogram" src={monogram}></img>
         <h1>Adam Thompson</h1>
         <div id="contacts">
           <a href="http://thesonofthomp.com" id="website">thesonofthomp.com</a>
@@ -18,7 +21,8 @@ const ResumePage = () => (
         </div>
       </div>
       <div><i>
-        Designer and developer seeking a role where I thrive—at the intersection of both design and engineering. My holistic design experience combined with technical aptitude allow me to excel in both diciplines. With experience in UX design since 2013, and a technical engineering background, I am the right choice for a technical designer.
+        I'm a UX designer/developer seeking a role where I thrive—at the intersection of both design and engineering. With experience in UX design since 2013, and an engineering background, I am the right choice for a technical designer or UX engineer.
+        {/* My holistic design experience, and technical education allow me to excel in both diciplines. */}
       </i></div>
       <div id="resume-body">
         <div id="experience">
@@ -26,7 +30,7 @@ const ResumePage = () => (
             <div className="entry-header">
               <h3>UX Engineer</h3>
               <strong>New Visions for Public Schools</strong>
-              <span className="location">July 2018 - Present | NYC</span>
+              <span className="location">July 2018 - now | NYC</span>
             </div>
             <div className="bullets">
               <ul>
@@ -39,7 +43,7 @@ const ResumePage = () => (
 
           <div className="entry" id="music-group">
             <div className="entry-header">
-              <h3>Assistant Customer Solutions Manager</h3>
+              <h3>Asst. Customer Solutions Manager</h3>
               <h4>TC Helicon</h4>
               <span className="location">2018 | Kitchener</span>
             </div>
@@ -54,7 +58,7 @@ const ResumePage = () => (
           <div className="entry" id="chameleon">
             <div className="entry-header">
               <h3>Co-founder</h3>
-              <h4>Chameleon Hearing Protection</h4>
+              <h4>Chameleon</h4>
               <span className="location">2016 - 2018 | Waterloo</span>
             </div>
             <div className="bullets">
@@ -121,6 +125,7 @@ const ResumePage = () => (
         </div>
       
         <div id="right-column">
+          <h1>Education</h1>
           <div className="entry" id="uw">
             <div className="entry-header">
               <a href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"><h3>Systems Design Engineering</h3></a>
@@ -130,7 +135,17 @@ const ResumePage = () => (
               <i>BASc. with Cognitive Science minor</i>
             </div>
           </div>
-          {/* <h2>Projects</h2> */}
+          <h1>Projects</h1>
+          <div className="entry" id="zeplin-confluence">
+            <div className="entry-header">
+              <h3>Zeplin x Confluence</h3>
+            </div>
+            <div>
+              <ul>
+                <li>A Confluence plugin written in <T>Node</T>.js to place Zeplin images in a Confluence page</li>
+              </ul>
+            </div>
+          </div>
           <div className="entry" id="react-synth">
             <div className="entry-header">
               <h3>React Synth</h3>
@@ -147,7 +162,7 @@ const ResumePage = () => (
             </div>
             <div>
               <ul>
-                <li>Metronome app with a minimal interface. Built in <T>Swift</T>.</li>
+                <li>A metronome app with a minimal interface. Built in <T>Swift</T>.</li>
               </ul>
             </div>
           </div>
@@ -161,13 +176,23 @@ const ResumePage = () => (
               </ul>
             </div>
           </div>
+          <div className="entry" id="fourier">
+            <div className="entry-header">
+              <h3>Fourier Synth</h3>
+            </div>
+            <div>
+              <ul>
+                <li>A synthesizer built in <T>Python</T> based on the original Fourier synthesizer</li>
+              </ul>
+            </div>
+          </div>
           <div className="entry" id="smrtwatr">
             <div className="entry-header">
               <h3>SMRT WATR</h3>
             </div>
             <div>
               <ul>
-                <li>An interactive water fountain, and web-based quiz game. Web app built using <T>Javascript</T> and a <T>Python</T> backend. Fountain controlled using a <T>Raspberry Pi</T> and <T>Arduino</T>.</li>
+                <li>An interactive water fountain, and web-based game built using <T>Javascript</T> and a <T>Python</T> backend,  controlled using a <T>Raspberry Pi</T> and <T>Arduino</T>.</li>
               </ul>
             </div>
           </div>
@@ -176,6 +201,6 @@ const ResumePage = () => (
     </div>
     <div className="resume-page"></div>
   </div>
-)
+)}
 
 export default ResumePage
