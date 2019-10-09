@@ -4,33 +4,70 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 16px;
-  color: $white;
+  color: $black;
+  background-color: $white;
   padding: 32px;
   align-items: center;
   text-align: left;
-  border-radius: 2px;
+  border-radius: 0px;
   height: 33%; height: 33vh;
   transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 500ms;
-  @include box-shadow(0, 2px, 4px, rgba(0,0,0, 0.16) );
+  @include box-shadow(0, 2px, 4px, rgba(0,0,0, 0.25) );
 
   &:hover {
     transform: scale(1.03);
-    @include box-shadow(0, 4px, 8px, rgba(0,0,0, 0.16) );
+    @include box-shadow(0, 4px, 8px, rgba(0,0,0, 0.25) );
+
+    h2 {
+      // color: $white;
+      // background-color: $black;
+      border-bottom: 2px solid $black;
+    }
+
+    &#new-visions h2 {
+      // background-color: brandColor('newvisions')
+      border-color: brandColor('newvisions')
+    }
+    &#chameleon h2 {
+      // background-color: brandColor('chameleon')
+      border-color: brandColor('chameleon')
+    }
+    &#noom h2 {
+      // background-color: brandColor('noom')
+      border-color: brandColor('noom')
+    }
+    &#smrtwatr h2 {
+      // background-color: brandColor('smrtwatr')
+      border-color: brandColor('smrtwatr')
+    }
+    &#knowroaming h2 {
+      // background-color: brandColor('knowroaming')
+      border-color: brandColor('knowroaming')
+    }
+    
+
   }
 
-  h2, span {
-    margin: 0.125em auto;
+  .portfolio-card-text {
+    // display: flex;
+    // flex-direction: column;
+
+    h2, span {
+      display: inline;
+      // margin: 0.125em 0;
+      // padding: 0 0.125em;
+    }
+  
+    h2 {
+      font-size: 32px;
+    }
+  
+    span {
+      font-size: 20px;
+    }
   }
 
-  h2 {
-    font-size: 32px;
-  }
-
-  span {
-    font-size: 20px;
-  }
-
-  #portfolio-card-image { 
+  .portfolio-card-image { 
     position: relative;
     height: 100%;
     width: 100%;

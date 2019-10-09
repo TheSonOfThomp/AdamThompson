@@ -25,11 +25,9 @@ section: portfolio
 
 </div>
 
-## Problem
+<!-- ## Problem
 
 We surveyed and interviewed people who work in construction, manufacturing, and live music production[^1] about their hearing protection use. A vast majority answered that while they know they should wear, protection they often don't. When asked why, they said they often needed to talk at work, and it's tedious to constantly remove hearing protection and put it back on.
-
-<!-- talk about NIHL -->
 
 ## Requirements 
 
@@ -73,11 +71,6 @@ After a few dozen smaller scale prototypes to test each part of the system indep
 
 ![The final 3D printed prototype, with Teensy controller enclosure.](../../images/portfolio/chameleon/finished-prototype.jpg)
 
-<!-- <figure class='folio_image' id='prototype3d'>
-		<img src='../includes/portfolio_images/chameleon/finished-prototype.jpg'>
-<figcaption></figcaption>
-</figure> -->
-
 ## Pitch and Demo
 
 We showcased our prototype at the Systems Design Engineering Symposium where we won People's Choice award. We also won the Norman Esch Entrepreneurship Award for our pitch and product demo!
@@ -94,4 +87,4 @@ We showcased our prototype at the Systems Design Engineering Symposium where we 
 
 
 
-[^1]: Live music workers means, for example: stagehands, producers, and directors, not performers themselves
+[^1]: Live music workers means, for example: stagehands, producers, and directors, not performers themselves -->

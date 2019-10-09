@@ -27,7 +27,7 @@ menuClass(){
       <nav className="navbar">
         <div id="nav-logo">
           <img src={monogram} alt="monogram"></img>
-          <h3>Adam Thompson</h3>
+          <h1>Adam Thompson</h1>
         </div>
         <div id="nav-links">
           <span className="nav-link" id="nav-portfolio"><a href="#portfolio">Portfolio</a></span>

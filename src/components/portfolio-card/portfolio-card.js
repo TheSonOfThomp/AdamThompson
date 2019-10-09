@@ -12,11 +12,11 @@ function getGradientColorObject(color = 'black') {
   return {
     /* Light */
     // color: color,
-    // background: lightColor, /* Old browsers */
+    // background: lightColor, 
     
     /* Dark */
     /* eslint-disable */
-    background: `${color}`,
+    // background: `${color}`,
     // background: `-moz-linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)`, /* FF3.6+ */
     // background: `-webkit-gradient(linear, top left, bottom right, color-stop(0%, ${startColor}), color-stop(100%, ${color}))`, /* Chrome,Safari4+ */
     // background: `-webkit-linear-gradient(to bottom right,  ${startColor} 0%, ${color} 100%)`, /* Chrome10+,Safari5.1+ */
@@ -28,18 +28,22 @@ function getGradientColorObject(color = 'black') {
 }
 
 const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
+  const id = title.toLowerCase().replace(/(\ )+/g, '-')
+  const highlighted_card = 'new-visions'
+  const isHighlightedCard = id === highlighted_card;
   return (
-  <Link to={link}>
+  <Link to={link} className={`${isHighlightedCard ? 'double-wide' : ''}`}>
     <div 
       style={getGradientColorObject(color)}
-      className="portfolio-card clickable"
-      id={title.toLowerCase()}
+      className={`portfolio-card clickable`}
+      id={id}
     >
-      <div>
+      <div className="portfolio-card-text">
         <h2>{title}</h2>
+        <br/>
         <span>{tagline}</span>
       </div>
-        <div id="portfolio-card-image" style={{backgroundImage: `url(${imgSrc})`}} >
+        <div class="portfolio-card-image" style={{backgroundImage: `url(${imgSrc})`}} >
         {/* <img src={imgSrc} alt={title}/> */}
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby';
 import './footer-section.scss';
 
 const FooterSection = () => {
@@ -7,8 +6,8 @@ const FooterSection = () => {
   const year = now.getFullYear();
   return (
     <footer>
-      <div>
-        © {year} Adam Thompson. Built with Gatsby
+      <div className="footer-content">
+        <span>© {year} Adam Thompson. Built with Gatsby</span>
       </div>
     </footer>
   )

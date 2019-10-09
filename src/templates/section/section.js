@@ -7,9 +7,9 @@ const Section = ({title, id, className = "", children}) => {
     return (
         <section className={fullClassName} id={id || title.toLowerCase()}>
             <SectionHeader>{title}</SectionHeader>
-            <content>
+            <div className="content">
                 {children}
-            </content>
+            </div>
         </section>
     )
 }

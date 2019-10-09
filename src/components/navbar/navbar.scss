@@ -28,11 +28,11 @@ nav {
 		img {
 			margin-left: 16px;
 		}
-		h3 {
+		h1 {
 			display: inline-block;
 			margin: 0;
 			color: var(--color-white);
-			font-size: 32px;
+			font-size: 24px;
 			font-weight: 400;
 			// align-self: center;
 			@media screen and (max-width: $breakpoint-medium) {

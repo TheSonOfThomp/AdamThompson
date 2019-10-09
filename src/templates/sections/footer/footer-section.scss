@@ -2,19 +2,21 @@
 
 footer {
   display: grid;
-  grid-auto-rows: 128px;
+  grid-auto-rows: 64px;
   align-items: center;
   width: 100%;
+  margin-top: 48px;
   background-color: var(--color-green);
   color: var(--color-white);
-  font-weight: 400;
-  div {
+  font-weight: 300;
+  .footer-content {
     justify-self: center;
-    display: grid;
-    justify-content: center;
-    width: 100%;
+    display: flex;
+    justify-content: left;
+    width: 100vw;
     max-width: $content-width;
-    margin: 12px;
-
+    span {
+      padding: 16px;
+    }
   }
 }

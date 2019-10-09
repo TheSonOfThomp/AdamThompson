@@ -8,12 +8,11 @@
 }
 
   a.quick-link{
-    display: none;
-    position: fixed;
-    bottom: 16px;
+    position: absolute;
+    top: 16px;
     padding: 4px 8px;
     min-width: 96px;
-    background: var(--color-white-trans);
+    // background: var(--color-white-trans);
     border-color: var(--color-green);
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 300ms;
 

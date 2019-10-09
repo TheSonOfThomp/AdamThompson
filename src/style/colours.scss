@@ -24,8 +24,10 @@ $noom_light: #719AFC;
 $knowroaming: #4286b5;
 $knowroaming_light: #6DAFDB;
 
-$smrtwatr: #19838E; //purple #785FA3;
-$smrtwatr_light: #68A0A8; //purple #A18BCC;
+// $smrtwatr: #19838E; // teal
+$smrtwatr: #785FA3; // purple
+// $smrtwatr_light: #68A0A8; // teal
+$smrtwatr_light: #A18BCC; // purple
 
 $chameleon: #2e8c5d;
 $chameleon_light: #73D3A2;
@@ -33,8 +35,8 @@ $chameleon_light: #73D3A2;
 $zynga: #DD3B30;
 $zynga_light: #FF7870;
 
-$newvisions: #662D91;
-$newvisions_light: #B396C8;
+$newvisions: #0a4ace;//#662D91;
+$newvisions_light: mix(white, $newvisions, 30);
 
 $tap: #000000; //#518CB8 
 $tap_light: #393939; //#83AECC

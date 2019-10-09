@@ -15,7 +15,8 @@
       color: var(--color-#{$brand});
     }
     .cover-image {
-      @include radialGradient(var(--color-#{$brand}-light), var(--color-#{$brand}));
+      background-color: var(--color-#{$brand}-light);
+      // @include radialGradient(var(--color-#{$brand}-light), var(--color-#{$brand}));
     }
   }
 }
@@ -70,8 +71,8 @@ main.portfolio {
           max-width: none;
           width: 100vw;
           padding: 16px 0;
-          margin: 48px 0;
-          margin-left: -16px; //$full-width-margin;
+          margin: 48px 0 0 -16px;
+          // margin-left: -16px; //$full-width-margin;
           background-color: var(--color-black);
 
           figcaption {

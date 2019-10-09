@@ -55,13 +55,13 @@ const PortfolioSection = ({ data }) => {
       {
         posts.map((post) => (
           <PortfolioCard
-          key={post.id}
-          title={post.frontmatter.title}
-          tagline={post.frontmatter.tagline}
-          color={post.frontmatter.color}
-          cover={post.imageSource.src}
-          link={post.fields.slug}
-          imgSrc={post.imageSource.src}
+            key={post.id}
+            title={post.frontmatter.title}
+            tagline={post.frontmatter.tagline}
+            color={post.frontmatter.color}
+            cover={post.imageSource.src}
+            link={post.fields.slug}
+            imgSrc={post.imageSource.src}
           >
           </PortfolioCard>
         ))
