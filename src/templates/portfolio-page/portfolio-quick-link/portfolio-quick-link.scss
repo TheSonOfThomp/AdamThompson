@@ -12,9 +12,16 @@
     top: 16px;
     padding: 4px 8px;
     min-width: 96px;
-    // background: var(--color-white-trans);
     border-color: var(--color-green);
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 300ms;
+    
+    @media screen and (max-width: $breakpoint-small) {
+      position: fixed;
+      top: unset;
+      bottom: 16px;
+      backdrop-filter: blur(4px);
+      background: var(--color-white-trans);
+    }
 
     &.newvisions { @include brandedQuicklink('newvisions');}
     &.noom { @include brandedQuicklink('noom');}
