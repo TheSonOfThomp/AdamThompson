@@ -99,10 +99,22 @@ const ResumePage = () => {
                 </div>
                 <div>
                   <ul>
-                    <li>A Confluence plugin written in <T>Node</T>.js to place Zeplin images in a Confluence page</li>
+                    <li>A Confluence plugin based in <T>Node</T>.js to place Zeplin images in a Confluence page</li>
                   </ul>
                 </div>
               </div>
+              
+              <div className="entry project-entry" id="sketch-batch">
+                <div className="entry-header">
+                  <h3>Batch Export & Remame</h3>
+                </div>
+                <div>
+                  <ul>
+                    <li>A Sketch pluging based in <T>Node</T>.js to export multiple Sketch artboards to a single directory with a consistent naming patter.</li>
+                  </ul>
+                </div>
+              </div>
+
               <div className="entry project-entry" id="react-synth">
                 <div className="entry-header">
                   <h3>React Synth</h3>
