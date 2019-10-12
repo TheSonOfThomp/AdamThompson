@@ -20,7 +20,6 @@ const AboutSection = ({ data }) => {
   const about = aboutQuery.allMarkdownRemark.nodes[0].html
   return (
     <Section title="About" className="green-divider">
-      {/* <img src={portraitImage} alt="Portrait" /> */}
       <span id="about-text" dangerouslySetInnerHTML={{ __html: about }}></span>
     </Section>
   )

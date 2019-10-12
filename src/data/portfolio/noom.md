@@ -22,7 +22,7 @@ section: portfolio
 
 <div class="cover-image vertical">
 
-![Cover photo](../../images/portfolio/cover/noom-cover.png)
+![A screenshot of the food-logging experience in the Noom iOS app](../../images/portfolio/cover/noom-cover.png)
 </div>
 
 </div>

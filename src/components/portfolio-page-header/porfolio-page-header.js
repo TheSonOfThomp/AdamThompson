@@ -5,7 +5,7 @@ import './porfolio-page-header.scss'
 export const PortfolioPageHeader = () => (
   <header className="porfolio-page-header">
     <a href="/">
-      <img src={monogram} alt="monogram"/>
+      <img src={monogram} alt="A.T. monogram"/>
       <h1>Adam Thompson</h1>
     </a>
   </header>

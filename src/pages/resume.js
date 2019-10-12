@@ -12,7 +12,7 @@ const ResumePage = () => {
     <SEO title="Resume" />
     <div className="resume-page" id="page-1">
       <div className="resume-header">
-        <img alt="Adam Thompson's logo" id="monogram" src={monogram}></img>
+          <img alt="A.T. monogram" id="monogram" src={monogram}></img>
         <h1>Adam Thompson</h1>
         <div id="contacts">
           <a href="http://thesonofthomp.com" id="website">thesonofthomp.com</a>

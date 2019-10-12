@@ -20,7 +20,7 @@ section: portfolio
 
 <div class="cover-image vertical">
 
-![Cover photo](../../images/portfolio/cover/chameleon-cover.png)
+![A 3D rendering of the Chameleon hearing protection device](../../images/portfolio/cover/chameleon-cover.png)
 </div>
 
 </div>

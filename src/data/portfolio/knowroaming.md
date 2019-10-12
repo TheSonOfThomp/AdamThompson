@@ -19,7 +19,7 @@ section: portfolio
 
 <div class="cover-image vertical">
 
-![Cover photo](../../images/portfolio/cover/knowroaming-cover.png)
+![A screenshot of the KnowRoaming mobile app in "Abroad" mode on iOS](../../images/portfolio/cover/knowroaming-cover.png)
 </div>
 </div>
 

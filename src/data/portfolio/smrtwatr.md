@@ -20,7 +20,7 @@ section: portfolio
 
 <div class="cover-image vertical">
 
-![Cover photo](../../images/portfolio/cover/smrtwatr-cover.png)
+![A screenshot of the SMRTWATR (Smart Water) web-app home screen](../../images/portfolio/cover/smrtwatr-cover.png)
 </div>
 
 </div>

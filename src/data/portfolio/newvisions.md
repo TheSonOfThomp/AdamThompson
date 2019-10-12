@@ -26,7 +26,7 @@ section: portfolio
 
 <div class="cover-image vertical">
 
-  ![Cover photo](../../images/portfolio/cover/dashboard-mock-on-mackbookAir.png)
+  ![Mockup of the New Visions dashboard UI](../../images/portfolio/cover/dashboard-mock-on-mackbookAir.png)
 </div>
 
 </div>
