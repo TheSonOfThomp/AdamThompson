@@ -2,9 +2,8 @@ import React from "react"
 import './social-link.scss';
 
 const SocialLink = ({name, url, color, children}) => (
-  <span className="social-link">
     <a 
-      className={[color || 'white']}
+      className={`social-link ${[color || 'white']}`}
       href={url}
       title={name}
       target="_blank"
@@ -12,7 +11,6 @@ const SocialLink = ({name, url, color, children}) => (
     >
       {children}
     </a>
-  </span>
 )
 
 export default SocialLink

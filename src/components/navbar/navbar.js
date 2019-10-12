@@ -24,38 +24,34 @@ menuClass(){
 
   render() {
     return (
-      <nav className="navbar">
-        <div id="nav-logo">
+      <banner className="banner">
+        <div id="banner-logo" role="heading">
           <img src={monogram} alt="A.T. monogram"></img>
           <h1>Adam Thompson</h1>
         </div>
-        <div id="nav-links">
-          <span className="nav-link" id="nav-portfolio"><a href="#portfolio">Portfolio</a></span>
-          <span className="nav-link" id="nav-about"><a href="#about">About</a></span>
-        </div>
+
+        <nav id="banner-nav">
+          <a className="nav-link hide-mobile" id="nav-portfolio" href="#portfolio">Portfolio</a>
+          <a className="nav-link hide-mobile" id="nav-about" href="#about">About</a>
+          <SocialLink name="Twitter" url="https://www.twitter.com/thesonofthomp/">
+            <FontAwesomeIcon icon={faTwitter} size="xl" />
+          </SocialLink>
+          <SocialLink name="GitHub" url="https://www.github.com/thesonofthomp">
+            <FontAwesomeIcon icon={faGithub} size="xl" />
+          </SocialLink>
+          <SocialLink name="Linkedin" url="https://www.linkedin.com/in/adammthompson/">
+            <FontAwesomeIcon icon={faLinkedinIn} size="xl" />
+          </SocialLink>
+          <SocialLink name="Codepen" url="https://codepen.io/TheSonOfThomp/">
+            <FontAwesomeIcon icon={faCodepen} size="xl" />
+          </SocialLink>
+        </nav>
         
         {/* <a id="nav-hamburger" href="#" onClick={() => { this.showMenu = !this.showMenu}} >
           <FontAwesomeIcon icon={faBars} size="2xl" />  
         </a> */}
     
-        <div id="nav-social-menu" className={this.menuClass()}>
-          <SocialLink name="Instagram" url="https://www.instagram.com/thesonofthomp/">
-            <FontAwesomeIcon icon={faInstagram} size="2xl"/>
-          </SocialLink>
-          <SocialLink name="Twitter" url="https://www.twitter.com/thesonofthomp/">
-            <FontAwesomeIcon icon={faTwitter} size="2xl"/>
-          </SocialLink>
-          <SocialLink name="GitHub" url="https://www.github.com/thesonofthomp">
-            <FontAwesomeIcon icon={faGithub} size="2xl"/>
-          </SocialLink>
-          <SocialLink name="Linkedin" url="https://www.linkedin.com/in/adammthompson/">
-            <FontAwesomeIcon icon={faLinkedinIn} size="2xl"/>
-          </SocialLink>
-          <SocialLink name="Codepen" url="https://codepen.io/TheSonOfThomp/">
-            <FontAwesomeIcon icon={faCodepen} size="2xl"/>
-          </SocialLink>
-        </div>
-      </nav>
+      </banner>
     )
   }
 }

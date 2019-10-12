@@ -10,17 +10,15 @@ const Hero = () => (
     <Navbar></Navbar>
   
     <header>
-      <div className="tagline">
+      <h2 className="big-letters">
+        <b id="u">U</b><b id="x">X</b>
+      </h2>
+      <h2 className="tagline">
         Designer. Engineer.
-      </div>
-      <div className="bio-text">
-        <p>
-          Design great experiences. Build great products.
-        </p>
-      </div>
-      <div className="big-letters">
-        <span id="u">U</span><span id="x">X</span>
-      </div>
+      </h2>
+      <h3 className="bio-text">
+        Design great experiences. Build great products.
+      </h3>
     </header>
   </section>
 

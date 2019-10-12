@@ -26,6 +26,9 @@
 
   &:focus {
     outline: 2px solid $black;
+    &:not(&:focus-visible) {
+      outline: none;
+    }
   }
 
   display: grid;
@@ -94,7 +97,7 @@
     transform: scale(1.04);
     @include elevation(2);
     z-index: 2;
-    &:focus {
+    &, &:focus {
       h2 {
         &::before {
           width: 100%;

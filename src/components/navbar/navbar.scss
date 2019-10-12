@@ -1,14 +1,15 @@
 @import '../../style/global.sass';
 
-nav {
+.banner {
 	z-index: 10;
 	color: $white;
 	display: grid;
 	grid-auto-flow: column;
 	align-items: center;
 	justify-items: center;
-	grid-template-columns: 4fr 1fr 1fr;
-	grid-template-areas: 'logo links social';
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 'logo nav';
+	margin: 16px;
 	@media screen and (max-width: $breakpoint-small) {
 		grid-template-columns: 1fr 1fr;
 	}
@@ -17,17 +18,13 @@ nav {
 		color: $white;
 	}
 
-	#nav-logo {
+	#banner-logo {
 		grid-area: logo;
 		justify-self: left;
 		display: grid;
 		grid-auto-flow: column;
 		grid-gap: 16px;
-		align-content: center;
 		align-items: center;
-		img {
-			margin-left: 16px;
-		}
 		h1 {
 			display: inline-block;
 			margin: 0;
@@ -44,41 +41,49 @@ nav {
 		}
 	}
 
-	#nav-hamburger {
-		display: none;
-		justify-self: right;
-		margin: 0 16px;
-	}
-
-	#nav-links{
-		grid-area: links;
-		display: grid;
-		grid-auto-flow: column;
-		grid-auto-columns: 1fr;
-		@media screen and (max-width: $breakpoint-small) {
-			justify-self: right;
-		}
-	}
-	.nav-link {
-		font-size: 16px;
-		list-style: none;
-		display: inline-block;
-		line-height: 32px;
-		padding: 0 16px;
-		margin: auto;
-		color: $white;
-	}
-
-	#nav-social-menu {
-		grid-area: social;
+	#banner-nav {
 		justify-self: right;
 		display: grid;
 		grid-auto-flow: column;
-		grid-auto-columns: 1fr;
-		align-items: center;
-		align-content: center;
-		@media screen and (max-width: $breakpoint-small) {
-			display: none;
-		}
+		grid-gap: 16px;
 	}
+
+	// #nav-hamburger {
+	// 	display: none;
+	// 	justify-self: right;
+	// 	margin: 0 16px;
+	// }
+
+	// #nav-links{
+	// 	grid-area: links;
+	// 	display: grid;
+	// 	grid-auto-flow: column;
+	// 	grid-auto-columns: 1fr;
+	// 	@media screen and (max-width: $breakpoint-small) {
+	// 		justify-self: right;
+	// 	}
+	// }
+	// .nav-link {
+	// 	font-size: 16px;
+	// 	list-style: none;
+	// 	display: inline-block;
+	// 	line-height: 32px;
+	// 	padding: 0 16px;
+	// 	margin: auto;
+	// 	color: $white;
+	// }
+
+	// #nav-social-menu {
+	// 	grid-area: social;
+	// 	justify-self: right;
+	// 	display: grid;
+	// 	grid-auto-flow: column;
+	// 	grid-auto-columns: 1fr;
+	// 	grid-gap: 16px;
+	// 	align-items: center;
+	// 	align-content: center;
+	// 	@media screen and (max-width: $breakpoint-small) {
+	// 		display: none;
+	// 	}
+	// }
 }
