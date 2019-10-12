@@ -1,73 +1,101 @@
 @import '../../style/global.sass';
 
+@mixin branded-portfolio-card($brandcolor) {
+  // background-color: brandColor($brand);
+  h2 {
+    &::before {
+      background-color: $brandcolor;
+    }
+  }
+
+  background-color: mix($white, $brandcolor, 95%);
+}
+
 .portfolio-card {
+  text-decoration: none;
+  border: none;
+  &:hover {
+    border: none;
+    text-decoration: none;
+  }
+
   display: grid;
+  position: relative;
   grid-template-columns: 2fr 1fr;
+  grid-template-rows: 100%;
   grid-gap: 16px;
   color: $black;
+  // color: $white;
   background-color: $white;
   padding: 32px;
   align-items: center;
   text-align: left;
   border-radius: 0px;
-  height: 33%; height: 33vh;
-  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 500ms;
-  @include box-shadow(0, 2px, 4px, rgba(0,0,0, 0.25) );
+  height: 25%; height: 25vh;
 
-  &:hover {
-    transform: scale(1.03);
-    @include box-shadow(0, 4px, 8px, rgba(0,0,0, 0.25) );
+  transition: all $animation-ease 500ms;
+  @include elevation(1);
 
-    h2 {
-      // color: $white;
-      // background-color: $black;
-      border-bottom: 2px solid $black;
-    }
-
-    &#new-visions h2 {
-      // background-color: brandColor('newvisions')
-      border-color: brandColor('newvisions')
-    }
-    &#chameleon h2 {
-      // background-color: brandColor('chameleon')
-      border-color: brandColor('chameleon')
-    }
-    &#noom h2 {
-      // background-color: brandColor('noom')
-      border-color: brandColor('noom')
-    }
-    &#smrtwatr h2 {
-      // background-color: brandColor('smrtwatr')
-      border-color: brandColor('smrtwatr')
-    }
-    &#knowroaming h2 {
-      // background-color: brandColor('knowroaming')
-      border-color: brandColor('knowroaming')
-    }
-    
-
+  
+  &#newvisions, &#new-visions {
+    @include branded-portfolio-card($newvisions);
+  }
+  &#chameleon {
+    @include branded-portfolio-card($chameleon);
+  }
+  &#noom {
+    @include branded-portfolio-card($noom)
+  }
+  &#smrtwatr, &#smrt-watr {
+    @include branded-portfolio-card($smrtwatr)
+  }
+  &#knowroaming {
+    @include branded-portfolio-card($knowroaming)
   }
 
   .portfolio-card-text {
-    // display: flex;
-    // flex-direction: column;
-
-    h2, span {
-      display: inline;
-      // margin: 0.125em 0;
-      // padding: 0 0.125em;
-    }
-  
+    z-index: 1;
     h2 {
+      display: inline;
+      position: relative;
+      overflow: visible;
       font-size: 32px;
+      &::before { // for the animated underline
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 4px;
+        // height: 100%;
+        bottom: 0;
+        background-color: $white;//transparent;
+        z-index: -1;
+        transition: all $animation-ease 500ms;
+      }
     }
-  
     span {
+      display: inline;
       font-size: 20px;
+    }
+
+  }
+
+  &:hover, &:focus {
+    transform-origin: 50% 50%;
+    transform: scale(1.05);
+    @include elevation(2);
+    z-index: 2;
+
+    h2 {
+      // color: $white;
+      &::before {
+        width: 100%;
+      }
     }
   }
 
-  .portfolio-card-image { 
+  
+
+  .portfolio-card-image.using-background { 
     position: relative;
     height: 100%;
     width: 100%;
@@ -79,8 +107,29 @@
     cursor: pointer;
     justify-self: center;
     @media screen and (max-width: $breakpoint-xsmall) {
-      // background-position: 0% 50%;
-      display: none;
+      position: absolute;
+      max-width: 100%; //calc(100% - 16px);
+      max-height: 100%; //calc(100% - 16px);
+      z-index: 0;
+      opacity: 0.1;
+    }
+  }
+
+  .portfolio-card-image.using-img-tag {
+    padding: 16px;
+    img {
+      object-fit: contain;
+      max-width: 100%;
+    }
+    @media screen and (max-width: $breakpoint-xsmall) {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      opacity: 0.2;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: auto;
     }
   }
 

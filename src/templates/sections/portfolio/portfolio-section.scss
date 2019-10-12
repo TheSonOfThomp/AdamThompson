@@ -4,7 +4,7 @@
   .portfolio-cards-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 12px;
+    grid-gap: 8px;
 
     
     @media screen and (max-width: $breakpoint-xsmall) {
@@ -15,16 +15,6 @@
       grid-column: 1 / 3;
       @media screen and (max-width: $breakpoint-xsmall) {
         grid-column: 1 / 2;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      border: none;
-      display: grid;
-      &:hover {
-        border: none;
-        text-decoration: none;
       }
     }
   }
