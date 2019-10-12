@@ -14,8 +14,8 @@ const PortfolioQuickLink = ({post, direction}) => {
   
   return (
     <Link to={link} className={`${label.replace(' ', '').toLowerCase()} quick-link`} id={id}>
-      <div>{direction === 'next' ? 'Next' : 'Prev'}</div>
-      <span>{label}</span>
+      <span className="quick-link-direction">{direction === 'next' ? 'Next' : 'Prev'}</span>
+      <span className="quick-link-label">{label}</span>
     </Link>
   )
 }

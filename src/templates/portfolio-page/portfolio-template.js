@@ -22,10 +22,10 @@ export default ({data}) => {
           dangerouslySetInnerHTML={{ __html: post.html }} 
         ></div>
       </div>
-
-      <PortfolioQuickLink post={prevPost} direction="prev"></PortfolioQuickLink>
-      <PortfolioQuickLink post={nextPost} direction="next"></PortfolioQuickLink>
-      
+      <div className="quick-links-container">
+        <PortfolioQuickLink post={prevPost} direction="prev"></PortfolioQuickLink>
+        <PortfolioQuickLink post={nextPost} direction="next"></PortfolioQuickLink>
+      </div>
     </main>
   )
 }

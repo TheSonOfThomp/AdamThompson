@@ -2,18 +2,22 @@
 
 @mixin brandedQuicklink($brand) {
   border-color: var(--color-#{$brand});
-  span {
+  &:focus {
+    outline-color: brandColor($brand);
+  }
+
+  .quick-link-label {
     color: var(--color-#{$brand})
   }
 }
 
   a.quick-link{
-    position: absolute;
-    top: 16px;
+    position: relative;
+    bottom: 0;
     padding: 4px 8px;
     min-width: 96px;
     border-color: var(--color-green);
-    transition: all $animation-ease 300ms;
+    transition: padding $animation-ease 500ms;
     
     @media screen and (max-width: $breakpoint-small) {
       position: fixed;
@@ -30,30 +34,40 @@
     &.smrtwatr { @include brandedQuicklink('smrtwatr');}
 
     &:hover{
-      border-bottom: none;
+      border-bottom: none; // overrides global
     }
-    div {
+    &:focus {
+      outline-color: $green;
+    }
+    .quick-link-direction {
+      display: block;
       color: $eigengrau;
       font-weight: 600
     }
-    span {
+    .quick-link-label {
       color: var(--color-green);
     }
     
     &#prev-link {
-      left: 0;
       padding-left: 8px;
       border-left-style: solid;
       border-left-width: 4px; 
       text-align: left;
       border-radius: 0px 2px 2px 0px;
+      justify-self: start;
+      &:hover {
+        padding-left : 12px
+      }
     }
     &#next-link {
-      right: 0;
       padding-right: 8px;
       border-right-style: solid;
       border-right-width: 4px; 
       text-align: right;
       border-radius: 2px 0px 0px 2px;
+      justify-self: end;
+      &:hover {
+        padding-right : 12px
+      }
     }
   }

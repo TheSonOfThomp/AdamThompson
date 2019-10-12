@@ -1,6 +1,10 @@
 @import '../../style/global.sass';
 
 @mixin branded-portfolio-card($brandcolor) {
+
+  &:focus {
+    outline-color: $brandcolor;
+  }
   // background-color: brandColor($brand);
   h2 {
     &::before {
@@ -14,9 +18,14 @@
 .portfolio-card {
   text-decoration: none;
   border: none;
+
   &:hover {
     border: none;
     text-decoration: none;
+  }
+
+  &:focus {
+    outline: 2px solid $black;
   }
 
   display: grid;
@@ -33,7 +42,9 @@
   border-radius: 0px;
   height: 25%; height: 25vh;
 
-  transition: all $animation-ease 500ms;
+  transition: (box-shadow, transform) $animation-ease 500ms;
+  // transition-property: box-shadow, transform;
+  transform-origin: 50% 50%;
   @include elevation(1);
 
   
@@ -69,7 +80,7 @@
         bottom: 0;
         background-color: $white;//transparent;
         z-index: -1;
-        transition: all $animation-ease 500ms;
+        transition: width $animation-ease 500ms;
       }
     }
     span {
@@ -79,16 +90,15 @@
 
   }
 
-  &:hover, &:focus {
-    transform-origin: 50% 50%;
-    transform: scale(1.05);
+  &:hover {
+    transform: scale(1.04);
     @include elevation(2);
     z-index: 2;
-
-    h2 {
-      // color: $white;
-      &::before {
-        width: 100%;
+    &:focus {
+      h2 {
+        &::before {
+          width: 100%;
+        }
       }
     }
   }

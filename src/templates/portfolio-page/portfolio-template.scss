@@ -33,25 +33,28 @@ main.portfolio {
   &#smrtwatr { @include brandedPortfolio('smrtwatr');}
 
   display: grid;
-  grid-template-rows: 96px auto;
+  grid-template-rows: 96px;
   grid-auto-columns: 100vw;
-  // width: 100%;
   align-items: flex-end;
   justify-items: left;
   justify-content: left;
   font-family: $sans-serif;
 
+  // Quick links buttons
+  .quick-links-container {
+    display: grid;
+    grid-auto-flow: column;
+    width: 100%;
+    margin: 8px 0;
+  }
+
 
   .portfolio-content-container {
     width: 100%;
-    // display: grid;
-    // justify-content: center;
     .portfolio-content {
-      // margin: auto 16px;
       position: relative;
       display: block;
       margin: 0 16px;
-      
       
       * {
         max-width: $folio-max-width;
@@ -80,7 +83,6 @@ main.portfolio {
           }
         }
       }
-
 
       h1 {
         font-size: 72px;

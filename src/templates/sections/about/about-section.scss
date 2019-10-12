@@ -7,6 +7,12 @@ section#about {
     #about-text {
       font-size: 20px;
       position: relative;
+
+      a {
+        outline-color: $green;
+        outline-offset: 0;
+      }
+
       p:first-child {
         margin-top: 0;
       }

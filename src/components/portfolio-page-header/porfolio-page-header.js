@@ -6,7 +6,7 @@ export const PortfolioPageHeader = () => (
   <header className="porfolio-page-header">
     <a href="/">
       <img src={monogram} alt="monogram"/>
-      <h3>Adam Thompson</h3>
+      <h1>Adam Thompson</h1>
     </a>
   </header>
 );
