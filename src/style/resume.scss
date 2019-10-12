@@ -1,9 +1,15 @@
 @import './colours.scss';
 @import './mixins.sass';
-$padding: 0.375in;
+$page-margin: 0.375in;
 
+@page {
+  margin: $page-margin;
+  .resume-container {
+    display: none;
+  }
+}
 .resume-container {
-  background-color: $white_green;
+  background-color: #eee;
   display: grid;
   grid-auto-flow: row;
   grid-gap: 0.25in;
@@ -11,16 +17,16 @@ $padding: 0.375in;
   
   .resume-page {
     padding: 0;
+    margin: 0;
     @media screen {
-      padding: $padding;
-      width: 8.5in - 2 * $padding;
-      max-height: 11in - 2 * $padding;
-      @include box-shadow(0, 1px, 2px, rgba(0,0,0,0.2));
+      padding: $page-margin;
+      width: 8.5in - 2 * $page-margin;
+      max-height: 11in - 2 * $page-margin;
+      @include box-shadow(0, 2px, 3px, rgba(0,0,0,0.2));
     }
     display: grid;
     grid-gap: 8pt;
     background-color: #fff;
-
     font-size: 12pt;
     font-weight: 300;
 
@@ -28,29 +34,21 @@ $padding: 0.375in;
       margin: 0
     }
     h1 { 
-      font-size: 36pt; 
-      font-weight: 600;
+      font-size: 32pt; 
+      font-weight: 700;
       line-height: 1.2em;
     }
-    h2 { font-size: 1em;}
-    h3 { font-size: 1.1em; color: $green;}
-    h4 { font-size: 1.1em;}
-
-    ul {
-      padding-left: 2pt;
-      list-style-type: none;
-
-      li {
-        border-left: 1pt solid $green;
-        padding-left: 8pt;
-        margin: 8pt auto;
-        &:first-child {
-          margin-top: 0;
-        }
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
+    h2 { 
+      font-size: 10pt;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2pt;
+    }
+    h3 { 
+      font-size: 1.1rem; 
+      color: $green;}
+    h4 { 
+      font-size: 1.1em;
     }
 
     .resume-header {
@@ -58,10 +56,10 @@ $padding: 0.375in;
       grid-auto-flow: column;
       align-items: center;
       grid-template-columns: auto auto 1fr;
-      grid-gap: 16px;
+      grid-gap: 16pt;
       
       #monogram {
-        height: 32px;
+        height: 24pt;
         width: auto;
       }
       #contacts {
@@ -76,24 +74,69 @@ $padding: 0.375in;
 
       }
     }
-    #resume-body {
+
+    .blurb {
+      font-style: italic;
+      // text-align: center;
+      // padding: 8pt;
+      // background-color: $white_green;
+      // border-radius: 4pt;
+    }
+
+    .resume-body {
       display: grid;
       grid-template-columns: 2fr 1fr;
       grid-gap: 16pt;
-      #experience {
+
+      &.full-width {
+        grid-template-columns: 1fr;
+      }
+
+      .column {
         display: grid;
         grid-auto-flow: row;
         grid-auto-rows: min-content;
-        grid-gap: 12pt;
-        .entry {
+        grid-gap: 12pt; // gap between sections
+
+        .column-section {
           display: grid;
-          grid-auto-flow: row;
-          grid-gap: 8pt;
+          grid-gap: 4pt; // gap between header & first entry
+          
+          .column-section-contents {
+            display: grid;
+            grid-gap: 8pt; // gap between entries
+          }
+        }
+      }
+
+      .entry {
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: 4pt; // gap btwn job title & first bullet
+
+        ul {
+          padding-left: 2pt;
+          list-style-type: none;
+    
+          li {
+            border-left: 1pt solid $green;
+            padding-left: 8pt;
+            margin: 8pt auto;
+            &:first-child {
+              margin-top: 0;
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        &.job-entry {
           .entry-header {
             display: grid;
             grid-auto-flow: column;
             grid-template-columns: auto auto 1fr;
-            grid-gap: 8pt;
+            grid-gap: 8pt; // spacing btwn title & company
             align-items: baseline;
             span.location{
               justify-self: right;
@@ -101,26 +144,10 @@ $padding: 0.375in;
             }
           }
         }
-      }
-      #right-column {
-        display: grid;
-        grid-auto-flow: row;
-        grid-auto-rows: min-content;
-        grid-gap: 8pt;
-        .entry-header {
-          margin: auto auto 4pt auto;
-        }
-
-        h1 {
-          font-size: 1.3em;
-          // width: 67%;
-          // background-color: $white_green;
-          // padding-bottom: 2px;
-          // border-bottom: 2px solid $green;
-        }
-
-        ul{
-          li{
+        &.school-entry, 
+        &.project-entry {
+          // grid-gap: 4pt; // gap btwn title & bullet
+          ul li{
             border: none;
             padding-left: 0;
           }
