@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, StaticQuery, useStaticQuery } from "gatsby"
+// import { Link, StaticQuery, useStaticQuery } from "gatsby"
 import SEO from "../components/seo"
 import monogram from '../images/monogram-green.svg';
 import '../style/resume.scss'
@@ -12,7 +12,7 @@ const ResumePage = () => {
     <SEO title="Resume" />
     <div className="resume-page">
       <div className="resume-header">
-        <img id="monogram" src={monogram}></img>
+        <img alt="Adam Thompson's logo" id="monogram" src={monogram}></img>
         <h1>Adam Thompson</h1>
         <div id="contacts">
           <a href="http://thesonofthomp.com" id="website">thesonofthomp.com</a>
