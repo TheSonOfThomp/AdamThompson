@@ -4,17 +4,6 @@ section#about {
   text-align: left;
 
   .content {
-  
-    img {
-      position: relative;
-      $img-size: 144px;
-      width: $img-size;
-      height: $img-size;
-      float: left;
-      margin: 0 32px 32px 0;
-      @include box-shadow(16px, 16px, 0, $dark_grey);
-    }
-
     #about-text {
       font-size: 20px;
       position: relative;

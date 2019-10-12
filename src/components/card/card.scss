@@ -1,22 +1,22 @@
 @import '../../style/global.sass';
 
-$transition: cubic-bezier(.02, .01, .47, 1);
+$transition: $animation-ease;
 
 .card {
     border-radius: 4px;
     padding: 16px;
 	@include animate-elements(all, 0.2s, $transition);
-    @include box-shadow(0, 8px, 16px, rgba(0,0,0, 0.16) );
+    @include elevation(8);
     
     &.clickable {
-        @include box-shadow(0, 16px, 32px, rgba(0,0,0, 0.16) );
+        @include elevation(16);
         &:hover, &:focus {
-            @include box-shadow(0, 24px, 48px, rgba(0,0,0, 0.16) );
+            @include elevation(24);
             transform: translate(0, -8px);
         }
         &:active {
             transform: translate(0, 0);
-            @include box-shadow(0, 8px, 16px, rgba(0,0,0, 0.16) );
+            @include elevation(8);
         }
     }
 }

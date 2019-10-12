@@ -22,7 +22,7 @@ $page-margin: 0.375in;
       padding: $page-margin;
       width: 8.5in - 2 * $page-margin;
       max-height: 11in - 2 * $page-margin;
-      @include box-shadow(0, 2px, 3px, rgba(0,0,0,0.2));
+      @include elevation(2);
     }
     display: grid;
     grid-gap: 8pt;

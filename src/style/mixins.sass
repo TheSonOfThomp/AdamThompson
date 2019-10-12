@@ -64,3 +64,8 @@
 
 @function brandColor($brand)
 	@return var(--color-#{$brand})
+
+@mixin elevation($level)
+	$y: #{$level}px
+	$blur: #{$level * 2}px
+	@include box-shadow(0px, $y, $blur, rgba(0,0,0, 0.25) )
