@@ -8,7 +8,7 @@ import PortfolioQuickLink from "./portfolio-quick-link/portfolio-quick-link";
 export default ({data}) => {
   const post = data.markdownRemark
   const allPosts = data.allMarkdownRemark.nodes
-  const postIndex = allPosts.findIndex(p => p.id == post.id)
+  const postIndex = allPosts.findIndex(p => p.id === post.id)
   const nextPost = allPosts[postIndex + 1]
   const prevPost = allPosts[postIndex - 1]
   

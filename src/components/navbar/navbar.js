@@ -3,7 +3,7 @@ import SocialLink from "../social-link/social-link";
 import monogram from '../../images/monogram-white.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faLinkedinIn, faGithub, faTwitter, faCodepen } from '@fortawesome/free-brands-svg-icons'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+// import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import './navbar.scss';
 
@@ -34,9 +34,9 @@ menuClass(){
           <span className="nav-link" id="nav-about"><a href="#about">About</a></span>
         </div>
         
-        <a id="nav-hamburger" href="#" onClick={() => { this.showMenu = !this.showMenu}} >
+        {/* <a id="nav-hamburger" href="#" onClick={() => { this.showMenu = !this.showMenu}} >
           <FontAwesomeIcon icon={faBars} size="2xl" />  
-        </a>
+        </a> */}
     
         <div id="nav-social-menu" className={this.menuClass()}>
           <SocialLink name="Instagram" url="https://www.instagram.com/thesonofthomp/">

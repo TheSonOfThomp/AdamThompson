@@ -3,7 +3,7 @@ import Section from "templates/section/section";
 
 import { useStaticQuery, graphql } from 'gatsby';
 import './about-section.scss';
-import portraitImage from 'images/Adam_web.jpg';
+// import portraitImage from 'images/Adam_web.jpg';
 
 const AboutSection = ({ data }) => {
   const aboutQuery = useStaticQuery(graphql`

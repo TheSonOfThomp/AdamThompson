@@ -32,7 +32,7 @@ const PortfolioSection = ({ data }) => {
       }
       allImageSharp {
         nodes {
-          fixed {
+          fluid {
             originalName
             src
           }
@@ -41,7 +41,7 @@ const PortfolioSection = ({ data }) => {
     }
   `)
   
-  const imageSources = PortfolioQuery.allImageSharp.nodes.map(node => node.fixed)
+  const imageSources = PortfolioQuery.allImageSharp.nodes.map(node => node.fluid)
   const posts = PortfolioQuery.allMarkdownRemark.nodes.map(node => {
     return {
       ...node,

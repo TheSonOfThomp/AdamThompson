@@ -13,7 +13,7 @@
     padding: 4px 8px;
     min-width: 96px;
     border-color: var(--color-green);
-    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 300ms;
+    transition: all $animation-ease 300ms;
     
     @media screen and (max-width: $breakpoint-small) {
       position: fixed;

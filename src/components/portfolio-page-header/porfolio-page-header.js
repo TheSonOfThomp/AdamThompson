@@ -1,9 +1,8 @@
 import React from "react"
 import monogram from '../../images/monogram-black.svg';
 import './porfolio-page-header.scss'
-import { Link } from "gatsby";
 
-export const PortfolioPageHeader = ({}) => (
+export const PortfolioPageHeader = () => (
   <header className="porfolio-page-header">
     <a href="/">
       <img src={monogram} alt="monogram"/>
