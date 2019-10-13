@@ -1,5 +1,4 @@
 import React from "react"
-// import { Link, StaticQuery, useStaticQuery } from "gatsby"
 import SEO from "../components/seo"
 import monogram from '../images/monogram-green.svg';
 import '../style/resume.scss'
@@ -16,7 +15,7 @@ const ResumePage = () => {
         <h1>Adam Thompson</h1>
         <div id="contacts">
           <a href="http://thesonofthomp.com" id="website">thesonofthomp.com</a>
-          <a href="mailto:adam.m.thompson@icloud.com" id="email">adam.m.thompson@icloud.com</a>
+            <a href="mailto:adam@thesonofthomp.com" id="email">adam@thesonofthomp.com</a>
           <a href="tel:13323335780" id="phone">+1-332-333-5780</a>
         </div>
       </div>
@@ -126,7 +125,7 @@ const ResumePage = () => {
                 <div className="bullets">
                   <ul>
                     <li>
-                      Overhauled the information architecture and UI to conform to common user behaviours, making them simpler and more informative.
+                      Overhauled the information architecture and UI to conform to common user behaviors, making them simpler and more informative.
                     </li>
                   </ul>
                 </div>
@@ -193,11 +192,11 @@ const ResumePage = () => {
               
               <div className="entry project-entry" id="sketch-batch">
                 <div className="entry-header">
-                  <h3>Batch Export & Remame</h3>
+                  <h3>Batch Export & Rename</h3>
                 </div>
                 <div>
                   <ul>
-                    <li>A Sketch pluging to export multiple Sketch artboards to a single directory.</li>
+                    <li>A Sketch plugin to export multiple Sketch artboards to a single directory.</li>
                   </ul>
                 </div>
               </div>
@@ -274,21 +273,18 @@ const ResumePage = () => {
               <T>InVision</T>
 
               <T>Photoshop</T>
+              <T>Illustrator</T>
               <T>Balsamiq</T>
 
               <T>Excel</T>
-              <T>SQL</T>
               <T>Airtable</T>
 
+              {/* <T>SQL</T> */}
               {/* <T>Marvel</T> */}
               {/* <T>jQuery</T> */}
               {/* <T>Arduino</T> */}
               {/* <T>Raspberry Pi</T> */}
-              {/* <T>Illustrator</T> */}
               {/* <T>Origami</T> */}
-
-
-
             </div>
           </div>
         </div> 
