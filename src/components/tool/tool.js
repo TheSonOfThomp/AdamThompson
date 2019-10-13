@@ -8,7 +8,7 @@ const T = ({children}) => {
     query{
       allImageSharp{
         nodes{
-          fluid {
+          resize {
             src
             originalName
           }
@@ -17,18 +17,18 @@ const T = ({children}) => {
     }`)
 
   const img = data.allImageSharp.nodes.find(img => {
-    return img.fluid.originalName === `${id}.png`
+    return img.resize.originalName === `${id}.png`
   })
 
-  const imgSrc = img ? img.fluid.src : 'undefined'
+  const imgSrc = img ? img.resize.src : 'undefined'
 
   console.log(data, children)
 
 
   return (
     <div className="tool" id={id}>
-      <img alt={`${id}`} rc={imgSrc}/>
-      {children}
+      <img alt={`${id}`} src={imgSrc}/>
+      <span>{children}</span>
     </div>
 )};
 

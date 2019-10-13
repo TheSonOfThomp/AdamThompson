@@ -2,7 +2,7 @@ import React from "react"
 import SocialLink from "../social-link/social-link";
 import monogram from '../../images/monogram-white.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faLinkedinIn, faGithub, faTwitter, faCodepen } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn, faGithub, faTwitter, faCodepen } from '@fortawesome/free-brands-svg-icons'
 // import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import './navbar.scss';
