@@ -34,11 +34,11 @@ $page-margin: 0.375in;
       margin: 0
     }
     h1 { 
-      font-size: 2.3em; 
+      font-size: 2.4em; 
       font-weight: 700;
     }
     h2 { 
-      font-size: 0.8em;
+      font-size: 1em;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 2pt;
@@ -101,6 +101,10 @@ $page-margin: 0.375in;
             display: grid;
             grid-gap: 8pt; // gap between entries
           }
+          
+          &#projects .column-section-contents {
+            grid-gap: 4pt; // gap between entries
+          }
 
           &#tools .column-section-contents {
             display: block;
@@ -121,7 +125,7 @@ $page-margin: 0.375in;
       .entry {
         display: grid;
         grid-auto-flow: row;
-        grid-gap: 4pt; // gap btwn job title & first bullet
+        grid-gap: 2pt; // gap btwn job title & first bullet
         
         .entry-header {
           display: grid;
@@ -169,6 +173,7 @@ $page-margin: 0.375in;
 
         &.school-entry, 
         &.project-entry{
+          // grid-gap: 2px;
           ul li {
             border: none;
             padding-left: 0;

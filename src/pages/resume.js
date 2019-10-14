@@ -42,7 +42,7 @@ const ResumePage = () => {
                       Architected, and built prototype infrastructure used to quickly design and test new features and interactions.
                     </li>
                     <li>
-                      Designed and tested numerous features, and developed a data model to define dashboard UI logic.
+                      Designed, prototyped, and tested numerous features, and developed a data model to define dashboard UI logic.
                     </li>
 
                   </ul>
@@ -87,7 +87,7 @@ const ResumePage = () => {
 
               <div className="entry job-entry" id="zynga">
                 <div className="entry-header">
-                  <h3>UX Product Manager - Intern</h3>
+                  <h3>UX Product Manager</h3>
                   <h4>Zynga Poker</h4>
                   <span className="location">2016 | Toronto</span>
                 </div>
@@ -105,7 +105,7 @@ const ResumePage = () => {
 
               <div className="entry job-entry" id="noom">
                 <div className="entry-header">
-                  <h3>Product Designer - Intern</h3>
+                  <h3>Product Designer</h3>
                   <h4>Noom</h4>
                   <span className="location">2015 | NYC</span>
                 </div>
@@ -118,14 +118,17 @@ const ResumePage = () => {
 
               <div className="entry job-entry" id="knowroaming">
                 <div className="entry-header">
-                  <h3>UX Designer - Intern</h3>
+                  <h3>UX Designer</h3>
                   <h4>KnowRoaming</h4>
                   <span className="location">2014 - 2015 | Toronto</span>
                 </div>
                 <div className="bullets">
                   <ul>
                     <li>
-                      Overhauled the information architecture and UI to conform to common user behaviors, making them simpler and more informative.
+                      Overhauled the information architecture and UI to better align with common use cases, making the app more informative and intuitive.
+                    </li>
+                    <li>
+                      Developed mini-sites, designed print and video marketing material, and improved product packaging design.
                     </li>
                   </ul>
                 </div>
@@ -133,7 +136,7 @@ const ResumePage = () => {
 
               <div className="entry job-entry" id="sony">
                 <div className="entry-header">
-                  <h3>UI Designer - Intern</h3>
+                  <h3>UI Designer</h3>
                   <h4>Sony</h4>
                   <span className="location">2013 | Waterloo</span>
                 </div>
@@ -146,23 +149,25 @@ const ResumePage = () => {
 
             </div>
           </div>
+          
         </div>
       
         <div className="column" id="column-right">
-          <div className="column-section "id="education">
+          <div className="column-section " id="education">
             <h2>Education</h2>
             <div className="column-section-contents">
               <div className="entry school-entry" id="uw">
-            <div className="entry-header">
-              <a href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"><h3>Systems Design Engineering</h3></a>
-              <h4>University of Waterloo</h4>
-            </div>
-            <div>
-              <i>BASc. with cognitive science minor</i>
+                <div className="entry-header">
+                  <a href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"><h3>Systems Design Engineering</h3></a>
+                  <h4>University of Waterloo</h4>
+                </div>
+                <div>
+                  <i>BASc. with cognitive science minor</i>
+                </div>
+              </div>
             </div>
           </div>
-            </div>
-          </div>
+          
           <div className="column-section "id="projects">
             <h2>Projects</h2>
             <div className="column-section-contents">
@@ -179,24 +184,35 @@ const ResumePage = () => {
                 </div>
               </div>
 
-              <div className="entry project-entry" id="zeplin-confluence">
+              <div className="entry project-entry" id="zed">
                 <div className="entry-header">
-                  <h3>xZeplin</h3>
+                  <h3>Zed</h3>
                 </div>
                 <div>
                   <ul>
-                    <li>A Confluence plugin to place Zeplin images in a Confluence page</li>
+                    <li>A JS library for rendering more realistic overlapping shadows.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="entry project-entry" id="zeplin-confluence">
+                <div className="entry-header">
+                  <h3>ZeplinX</h3>
+                </div>
+                <div>
+                  <ul>
+                    <li>A Confluence plugin to embed Zeplin images on a page.</li>
                   </ul>
                 </div>
               </div>
               
               <div className="entry project-entry" id="sketch-batch">
                 <div className="entry-header">
-                  <h3>Batch Export & Rename</h3>
+                  <h3>Sketch Flat Export</h3>
                 </div>
                 <div>
                   <ul>
-                    <li>A Sketch plugin to export multiple Sketch artboards to a single directory.</li>
+                    <li>A Sketch plugin to export multiple artboards to a single directory.</li>
                   </ul>
                 </div>
               </div>
@@ -207,7 +223,7 @@ const ResumePage = () => {
                 </div>
                 <div>
                   <ul>
-                    <li>A web based synthesizer.</li>
+                    <li>A web based synthesizer with musical typing.</li>
                   </ul>
                 </div>
               </div>
@@ -254,6 +270,7 @@ const ResumePage = () => {
               <T>CSS</T>
               <T>HTML</T>
               <T>Javascript</T>
+              <T>Typescript</T>
               
               <T>Angular</T>
               <T>Vue</T>
@@ -263,10 +280,10 @@ const ResumePage = () => {
               <T>React</T>
               <T>Node</T>
               <T>D3</T>
+              <T>Git</T>
 
               <T>Swift</T>
               <T>Python</T>
-              <T>Git</T>
               
               <T>Sketch</T>
               <T>Zeplin</T>
