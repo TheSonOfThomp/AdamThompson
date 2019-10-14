@@ -33,7 +33,7 @@ main.portfolio {
   &#smrtwatr { @include brandedPortfolio('smrtwatr');}
 
   display: grid;
-  grid-template-rows: 96px;
+  grid-template-rows: 64px;
   grid-auto-columns: 100vw;
   align-items: flex-end;
   justify-items: left;

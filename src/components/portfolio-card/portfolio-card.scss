@@ -1,23 +1,40 @@
 @import '../../style/global.sass';
 
-@mixin branded-portfolio-card($brandcolor) {
+@mixin branded-portfolio-card($brandColor) {
 
   &:focus {
-    outline-color: $brandcolor;
+    outline-color: $brandColor;
   }
   // background-color: brandColor($brand);
   h2 {
     &::before {
-      background-color: $brandcolor;
+      background-color: $brandColor;
     }
   }
 
-  background-color: mix($white, $brandcolor, 95%);
+  background-color: mix($white, $brandColor, 95%);
 }
 
 .portfolio-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 100%;
+  grid-gap: 16px;
+  align-items: center;
+  padding: 32px;
+  min-height: 25%; min-height: 25vh;
+  color: $black;
+  text-align: left;
   text-decoration: none;
   border: none;
+  // color: $white;
+  background-color: $white;
+  border-radius: 0px;
+  // transition-property: box-shadow, transform;
+  transition: (box-shadow, transform) $animation-ease 500ms;
+  transform-origin: 50% 50%;
+  @include elevation(1);
 
   &:hover {
     border: none;
@@ -30,25 +47,6 @@
       outline: none;
     }
   }
-
-  display: grid;
-  position: relative;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 100%;
-  grid-gap: 16px;
-  color: $black;
-  // color: $white;
-  background-color: $white;
-  padding: 32px;
-  align-items: center;
-  text-align: left;
-  border-radius: 0px;
-  height: 25%; height: 25vh;
-
-  transition: (box-shadow, transform) $animation-ease 500ms;
-  // transition-property: box-shadow, transform;
-  transform-origin: 50% 50%;
-  @include elevation(1);
 
   
   &#newvisions, &#new-visions {

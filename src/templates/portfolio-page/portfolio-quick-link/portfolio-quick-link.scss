@@ -18,14 +18,12 @@
     min-width: 96px;
     border-color: var(--color-green);
     transition: padding $animation-ease 500ms;
+    border-bottom: none;
     
-    @media screen and (max-width: $breakpoint-small) {
-      position: fixed;
-      top: unset;
-      bottom: 16px;
-      backdrop-filter: blur(4px);
-      background: var(--color-white-trans);
-    }
+    // @media screen and (max-width: $breakpoint-small) {
+    //   backdrop-filter: blur(4px);
+    //   background: var(--color-white-trans);
+    // }
 
     &.newvisions { @include brandedQuicklink('newvisions');}
     &.noom { @include brandedQuicklink('noom');}
