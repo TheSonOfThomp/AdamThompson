@@ -38,7 +38,7 @@ $page-margin: 0.375in;
       font-weight: 700;
     }
     h2 { 
-      font-size: 1em;
+      font-size: 0.9em;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 2pt;
@@ -69,6 +69,7 @@ $page-margin: 0.375in;
         text-align: right;
         display: grid;
         grid-auto-flow: row;
+        font-weight: 400;
         a {
           color: $green;
           font-size: 0.9em;
@@ -172,7 +173,7 @@ $page-margin: 0.375in;
             grid-auto-flow: row;
             grid-template-columns: unset;
             grid-template-areas: 'title''company';
-            grid-gap: 2pt;
+            grid-gap: 1pt;
           }
           // grid-gap: 4pt; // gap btwn title & bullet
         }
