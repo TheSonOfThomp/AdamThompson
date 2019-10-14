@@ -158,7 +158,11 @@ const ResumePage = () => {
             <div className="column-section-contents">
               <div className="entry school-entry" id="uw">
                 <div className="entry-header">
-                  <a href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"><h3>Systems Design Engineering</h3></a>
+                  <h3>
+                    <a href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering">
+                      Systems Design Engineering
+                    </a>
+                  </h3>
                   <h4>University of Waterloo</h4>
                 </div>
                 <div>

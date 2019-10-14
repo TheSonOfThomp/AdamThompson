@@ -46,6 +46,10 @@ $page-margin: 0.375in;
     h3 { 
       font-size: 1.1rem; 
       color: $green;}
+      a {
+        font-weight: inherit;
+        border-bottom: none;
+      }
     h4 { 
       font-size: 1.1em;
     }
@@ -67,7 +71,6 @@ $page-margin: 0.375in;
         grid-auto-flow: row;
         a {
           color: $green;
-          border-bottom: none;
           font-size: 0.9em;
         }
 
@@ -166,7 +169,10 @@ $page-margin: 0.375in;
 
         &.school-entry {
           .entry-header {
-            display: block;
+            grid-auto-flow: row;
+            grid-template-columns: unset;
+            grid-template-areas: 'title''company';
+            grid-gap: 2pt;
           }
           // grid-gap: 4pt; // gap btwn title & bullet
         }
