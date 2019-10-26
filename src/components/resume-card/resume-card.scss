@@ -3,46 +3,43 @@
 $image-height: 48px;
 
 .resume-card {
-  max-width: 480px;
-  padding: 32px 40px;
   display: grid;
-  grid-gap: 12px;
-  padding: 48px;
+  grid-gap: 8px;
+  grid-template-columns: 1fr;
+  padding: 16px;
   justify-content: left;
   align-content: baseline;
   text-align: left;
+  border-radius: 2px;
+  @include elevation(1);
 
-  .resume-header {
+  .resume-card-header {
     display: grid;
-    grid-template-areas: "title title";
-    // grid-template-areas: "title title" "subtitle subtitle";
-    grid-template-columns: min-content auto;
-    grid-gap: 4px 8px;
+    grid-template-areas: 'position location' 'company company';
+    align-items: baseline;
+    grid-gap: 2px;
+    h2 {
+      margin: 0;
+    }
+    .position {
+      font-size: 20px;
+      grid-area: position;
+      color: $green_small;
+    }
+    .company {
+      font-size: 20px;
+      grid-area: company;
+    }
+    .location {
+      grid-area: location;
+      justify-self: right;
+      font-size: 14px;
+      color: $dark_grey;
+    }
   }
 
   img.logo {
     grid-area: logo;
-  }
-
-  h1.title {
-    // @include serifFont();
-    grid-area: title;
-    margin: 0;
-    align-self: center;
-    line-height: 1.2em;
-  }
-  span.small-text {
-    grid-area: subtitle;
-    @include serifFont();
-    font-size: 16px;
-    color: $dark_grey;
-  }
-  h2.subtitle {
-    // @include serifFont();
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.5em;
-    margin: 0;
   }
 
   p.summary {

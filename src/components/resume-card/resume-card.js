@@ -5,19 +5,19 @@ import './resume-card.scss';
 const ResumeCard = ({id, logoSrc, title, location, term, position, summary, bullets}) => {
 
   return (
-    <Card 
+    <div 
       id={id}
       className={'resume-card'}
     >
-        <div className="resume-header">
+        <div className="resume-card-header">
           {/* <img className="logo" src={logoSrc} alt={title}/> */}
-          <h1 className="title">{position}</h1>
-          {/* <span className="small-text">{location} | {term}</span> */}
+          <h2 className="position">{position}</h2>
+          <span className="location">{term}</span>
+          <h2 className="company">{title}</h2>
         </div>
-        <h2 className="subtitle">{title}</h2>
         <p className="summary">{summary}</p>
         {/* {bullets} */}
-    </Card>
+    </div>
   )
 }
 

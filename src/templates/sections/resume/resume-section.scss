@@ -1,8 +1,23 @@
+@import '../../../style/colours.scss';
 
 .section#resume {  
+  grid-gap: 0px;
   .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
+    text-align: right;
+    a.print-resume {
+      display: inline-flex;
+      align-items: baseline;
+      color: $green_small;
+      margin: 8px 0 8px 0;
+      line-height: 1em;
+      svg {
+        margin-left: 4px;
+      }
+    }
+    .resume-card-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+      grid-gap: 8px;
+    }
   }
 }

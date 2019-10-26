@@ -3,7 +3,7 @@ import React from "react"
 
 import SEO from "components/seo";
 import Hero from "templates/sections/hero/hero";
-// import ResumeSection from "templates/sections/resume/resume-section";
+import ResumeSection from "templates/sections/resume/resume-section";
 
 // import Section from "templates/section/section";
 import 'style/global.sass';
@@ -25,7 +25,6 @@ class IndexPage extends React.Component {
     
         <AboutSection></AboutSection>
     
-        {/* <ResumeSection></ResumeSection> */}
         
         {/* <Section title="Toolbox">
           <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
@@ -34,6 +33,8 @@ class IndexPage extends React.Component {
         {/* <BlogSection></BlogSection> */}
         
         <ProjectsSection></ProjectsSection>
+
+        <ResumeSection></ResumeSection>
 
         <FooterSection></FooterSection>
         

@@ -1,4 +1,6 @@
 import React from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import Section from "templates/section/section";
 import ResumeCard from "components/resume-card/resume-card";
 
@@ -60,20 +62,23 @@ const ResumeSection = ({data}) => {
   const resumeData = [...resumeQuery.dataJson.experience.filter(e => e.display === true), ...resumeQuery.dataJson.education.filter(e => e.display === true)]
   return(
     <Section title="Experience" id="resume">
+      <a className="print-resume" href="./resume" target="_blank">Printable resume <FontAwesomeIcon icon={faExternalLinkAlt} size="xs"/></a>
+      <div className="resume-card-section">
       {
         resumeData.map( (node) => (
           <ResumeCard
-            key={node.id}
-            logo={node.logo || node.logotype}
-            title={node.company}
-            location={node.location || node.degree}
-            term={node.term || node.class}
-            position={node.position}
-            summary={node.summary}
-            bullets={getBullets(node)}
+          key={node.id}
+          logo={node.logo || node.logotype}
+          title={node.company}
+          position={node.position}
+          location={node.location || node.degree}
+          term={node.term || node.class}
+          summary={node.summary}
+          bullets={getBullets(node)}
           ></ResumeCard>
-        ))
-      }
+          ))
+        }
+      </div>
     </Section>
   )
 }
