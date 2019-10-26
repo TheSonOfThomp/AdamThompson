@@ -13,15 +13,15 @@ section: portfolio
 <div class="tldr" markdown=1>
 
 <!-- WHAT -->
-## Easily accessing important data about my school’s performance.
+## Easily access important data about a school’s performance.
 
 <!-- WHY -->
-#### It's difficult to manage one of New York's large public schools. Principals and VPs of these schools need up to date information about their school's demographic, academic, attendance and other data.
+#### It's difficult to manage one of New York City's large public schools. Principals and VPs of these schools need up to date information about their school's demographic, academic, attendance and other data.
 
 <!-- HOW -->
 #### I designed and tested a multi-leveled dashboard to allow school managers to assess major data points at-a-glance and drill down to further explore and slice the data. 
 
-#### The process included designing and usability testing all three levels of the dashboard experience and the information architecture, defining the IA data model which defines the UI options and data to query in each state, and prototyping the data-visualization graphs in d3.
+#### The process included designing and usability testing all three levels of the dashboard experience and the information architecture, prototyping the data-visualization graphs in d3, and defining the IA data model which dictates the UI options in every state.
 
 
 <div class="cover-image vertical">
