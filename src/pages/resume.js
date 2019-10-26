@@ -20,7 +20,7 @@ const ResumePage = () => {
         </div>
       </div>
       <div className="blurb">
-        I'm a UX designer & developer seeking a role at the intersection of design and engineering. With my engineering background and experience in UX since 2013, I'm a perfect fit for a technical designer or UX engineer.
+        I'm a UX designer / engineer seeking a role at the intersection of the two. With my engineering background and experience in UX since 2013, I'm a perfect fit for a technical designer or UX engineer.
       </div>
       <div className="resume-body">
         <div className="column" id="column-left">
