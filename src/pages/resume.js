@@ -1,8 +1,8 @@
 import React from "react"
 import SEO from "../components/seo"
-import monogram from '../images/monogram-green.svg';
 import '../style/resume.scss'
 import T from "../components/tool/tool"
+import ResumeHeader from "../components/Resume/resume-header";
 
 const ResumePage = () => {
   
@@ -10,17 +10,18 @@ const ResumePage = () => {
   <div className="resume-container">
     <SEO title="Resume" />
     <div className="resume-page" id="page-1">
-      <div className="resume-header">
-          <img alt="A.T. monogram" id="monogram" src={monogram}></img>
+      <ResumeHeader/>
+      {/* <div className="resume-header">
+          <img alt="A.T. mo`nogram" id="monogram" src={monogram}></img>
         <h1>Adam Thompson</h1>
         <div id="contacts">
           <a href="http://thesonofthomp.com" id="website">thesonofthomp.com</a>
             <a href="mailto:adam@thesonofthomp.com" id="email">adam@thesonofthomp.com</a>
           <a href="tel:13323335780" id="phone">+1-332-333-5780</a>
         </div>
-      </div>
+      </div> */}
       <div className="blurb">
-        I'm a UX designer / engineer seeking a role at the intersection of the two. With my engineering background and experience in UX since 2013, I'm a perfect fit for a technical designer or UX engineer.
+        I'm a UX designer and engineer looking for a role at the intersection of the two. With an engineering background, and experience in UX since 2013, I'm a perfect fit for a technical designer or UX engineer.
       </div>
       <div className="resume-body">
         <div className="column" id="column-left">
@@ -36,10 +37,10 @@ const ResumePage = () => {
                 <div className="bullets">
                   <ul>
                     <li>
-                      Managed & led contributions to design-system component development, documentation, and cross-team collaboration.
+                      Managed and led contributions to design system component library, documentation, and cross-team collaboration.
                     </li>
                     <li>
-                      Architected, and built prototype infrastructure used to quickly design and test new features and interactions.
+                      Architected and built infrastructure for quickly prototyping designs and testing new features and interactions.
                     </li>
                     <li>
                       Designed, prototyped, and tested numerous features, and developed a data model to define dashboard UI logic.
@@ -97,7 +98,7 @@ const ResumePage = () => {
                       Perfected user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature.
                     </li>
                     <li>
-                      Performed secondary user research and A/B testing define pricing for a new subscription-based revenue model.
+                      Performed secondary user research and A/B testing to define pricing for a new subscription-based revenue model.
                     </li>
                   </ul>
                 </div>

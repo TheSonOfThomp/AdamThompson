@@ -54,29 +54,6 @@ $page-margin: 0.375in;
       font-size: 1.1em;
     }
 
-    .resume-header {
-      display: grid;
-      grid-auto-flow: column;
-      align-items: center;
-      grid-template-columns: auto auto 1fr;
-      grid-gap: 16pt;
-      
-      #monogram {
-        height: 24pt;
-        width: auto;
-      }
-      #contacts {
-        text-align: right;
-        display: grid;
-        grid-auto-flow: row;
-        font-weight: 400;
-        a {
-          color: $green;
-          font-size: 0.9em;
-        }
-
-      }
-    }
 
     .blurb {
       font-style: italic;
@@ -177,9 +154,10 @@ $page-margin: 0.375in;
           }
           // grid-gap: 4pt; // gap btwn title & bullet
         }
-
+        
         &.school-entry, 
         &.project-entry{
+          grid-gap: 2pt; // gap btwn job title & first bullet
           // grid-gap: 2px;
           ul li {
             border: none;
