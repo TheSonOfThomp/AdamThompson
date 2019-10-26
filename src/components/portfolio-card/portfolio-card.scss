@@ -28,17 +28,25 @@
   text-align: left;
   text-decoration: none;
   border: none;
-  // color: $white;
   background-color: $white;
   border-radius: 0px;
-  // transition-property: box-shadow, transform;
   transition: (box-shadow, transform) $animation-ease 500ms;
   transform-origin: 50% 50%;
   @include elevation(1);
-
+  
   &:hover {
     border: none;
     text-decoration: none;
+    transform: scale(1.04);
+    @include elevation(2);
+    z-index: 2;
+    &, &:focus {
+      h2 {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
   }
 
   &:focus {
@@ -91,18 +99,7 @@
 
   }
 
-  &:hover {
-    transform: scale(1.04);
-    @include elevation(2);
-    z-index: 2;
-    &, &:focus {
-      h2 {
-        &::before {
-          width: 100%;
-        }
-      }
-    }
-  }
+
 
   
 

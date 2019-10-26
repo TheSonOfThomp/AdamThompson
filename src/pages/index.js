@@ -11,6 +11,7 @@ import PortfolioSection from "../templates/sections/portfolio/portfolio-section"
 import AboutSection from "../templates/sections/about/about-section";
 // import BlogSection from "../templates/sections/blog/blog-section";
 import FooterSection from "../templates/sections/footer/footer-section";
+import ProjectsSection from "../templates/sections/projects/projects-section";
 class IndexPage extends React.Component {
 
   render() {
@@ -32,6 +33,8 @@ class IndexPage extends React.Component {
     
         {/* <BlogSection></BlogSection> */}
         
+        <ProjectsSection></ProjectsSection>
+
         <FooterSection></FooterSection>
         
       </main>
