@@ -6,7 +6,7 @@ import ResumeHeader from "../components/Resume/resume-header";
 import ResumeEntry from "../components/Resume/resume-entry/resume-entry";
 
 const ResumePage = () => {
-  if (!!document.referrer || window.location.hostname === 'localhost' ) {
+  if ((!!document && !!document.referrer) || window.location.hostname === 'localhost' ) {
   return (
     <div className="resume-container">
       <SEO title="Resume" />
