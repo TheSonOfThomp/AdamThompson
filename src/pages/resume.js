@@ -10,7 +10,7 @@ class ResumePage extends React.Component {
 
   constructor(){
     super()
-    this.shouldRenderResume = false;
+    this.shouldRenderResume = true;
   }
 
   captchaCallback = (e) => {
