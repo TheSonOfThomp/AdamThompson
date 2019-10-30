@@ -24,7 +24,6 @@ const T = ({children}) => {
 
   console.log(data, children)
 
-
   return (
     <div className="tool" id={id}>
       <img alt={`${id}`} src={imgSrc}/>

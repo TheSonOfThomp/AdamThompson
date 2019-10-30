@@ -1,9 +1,11 @@
 @import './colours.scss';
 @import './mixins.sass';
-$page-margin: 0.375in;
+$page-margin-side: 0.5in;
+$page-margin-top: 0.375in;
+$page-height: 11in;
 
 @page {
-  margin: $page-margin;
+  margin: $page-margin-top $page-margin-side;
   .resume-container {
     display: none;
   }
@@ -19,12 +21,15 @@ $page-margin: 0.375in;
     padding: 0;
     margin: 0;
     @media screen {
-      padding: $page-margin;
-      width: 8.5in - 2 * $page-margin;
-      max-height: 11in - 2 * $page-margin;
+      padding: $page-margin-top $page-margin-side;
+      width: 8.5in - 2 * $page-margin-side;
+      max-height: $page-height - 2 * $page-margin-top;
       @include elevation(2);
     }
+
+    $centre-col-fr: 7fr;
     display: grid;
+    grid-template-columns: 1fr $centre-col-fr 1fr;
     grid-gap: 8pt;
     background-color: #fff;
     font-size: 12pt;
@@ -45,7 +50,7 @@ $page-margin: 0.375in;
     }
     h3 { 
       font-size: 1.1rem; 
-      color: $green;}
+      color: $green_small;}
       a {
         font-weight: inherit;
         border-bottom: none;
@@ -54,15 +59,27 @@ $page-margin: 0.375in;
       font-size: 1.1em;
     }
 
-
-    .blurb {
-      font-style: italic;
+    .blurb, .resume-body {
     }
 
+    .resume-header {
+      grid-template-columns: 1fr $centre-col-fr 1fr;
+      grid-column: span 3;
+    }
+    
+    
     .resume-body {
+      .blurb {
+        font-style: italic;
+        grid-column: span 1;
+      }
+      // max-width: 76%;
+      max-width: 100%;
+      grid-column: 2/3;
+      margin: auto;
       display: grid;
-      grid-template-columns: 2fr 1fr;
-      grid-gap: 16pt; // gap between columns
+      grid-template-columns: 1fr;
+      grid-gap: 12pt; // gap between columns
 
       &.full-width {
         grid-template-columns: 1fr;
@@ -72,7 +89,7 @@ $page-margin: 0.375in;
         display: grid;
         grid-auto-flow: row;
         grid-auto-rows: min-content;
-        grid-gap: 12pt; // gap between sections
+        grid-gap: 20pt; // gap between sections
 
         .column-section {
           display: grid;
@@ -80,22 +97,24 @@ $page-margin: 0.375in;
           
           .column-section-contents {
             display: grid;
-            grid-gap: 12pt; // gap between entries
+            grid-gap: 16pt; // gap between entries
           }
           
-          &#projects .column-section-contents {
-            grid-gap: 4pt; // gap between entries
+          &#projects .column-section-contents,
+          &#volunteer .column-section-contents {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 8pt 16pt; // gap between entries
           }
 
           &#tools .column-section-contents {
             display: block;
-            font-size: 1em;
+            font-size: 12pt;
             line-height: 1.5em;
             .tool {
-              margin-right: 0.5em;
               &:not(:last-child) {
+                margin-right: 0.67em;
                 &::after {
-                  content: ',';
+                  content: '';
                 }
               }
             }
@@ -103,66 +122,24 @@ $page-margin: 0.375in;
         }
       }
 
-      .entry {
-        display: grid;
+    }
+    &#page-2 {
+      position: relative;
+
+      .tool {
+        img {
+        }
+      }
+      .resume-footer {
+        display: none;
+        grid-column: 2/3;
         grid-auto-flow: row;
-        grid-gap: 4pt; // gap btwn job title & first bullet
-        
-        .entry-header {
-          display: grid;
-          grid-auto-flow: column;
-          grid-template-columns: auto auto 1fr;
-          grid-template-areas: 'title company location';
-          grid-gap: 0.5em; // spacing btwn title & company
-          align-items: baseline;
-          h3 {
-            grid-area: title;
-          }
-          h4 {
-            grid-area: company;
-          }
-          span.location{
-            grid-area: location;
-            justify-self: right;
-            font-size: 0.8em;
-          }
-        }
-
-        ul {
-          padding-left: 2pt;
-          list-style-type: none;
-    
-          li {
-            border-left: 1pt solid $green;
-            padding-left: 8pt;
-            margin: 8pt auto;
-            &:first-child {
-              margin-top: 0;
-            }
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-        }
-
-        &.school-entry {
-          .entry-header {
-            grid-auto-flow: row;
-            grid-template-columns: unset;
-            grid-template-areas: 'title''company';
-            grid-gap: 1pt;
-          }
-          // grid-gap: 4pt; // gap btwn title & bullet
-        }
-        
-        &.school-entry, 
-        &.project-entry{
-          grid-gap: 2pt; // gap btwn job title & first bullet
-          // grid-gap: 2px;
-          ul li {
-            border: none;
-            padding-left: 0;
-          }
+        justify-content: right;
+        a {
+          text-align: right;
+          font-weight: 400;
+          color: $green_small;
+          font-size: 0.9em;
         }
       }
     }
