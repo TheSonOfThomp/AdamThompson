@@ -4,6 +4,12 @@ $page-margin-side: 0.5in;
 $page-margin-top: 0.375in;
 $page-height: 11in;
 
+.captcha-container{
+  padding: 16px;
+  background-color: #eee;
+  height: 100vh;
+}
+
 @page {
   margin: $page-margin-top $page-margin-side;
   .resume-container {

@@ -5,6 +5,7 @@ module.exports = {
     author: `@thesonofthomp`,
   },
   plugins: [
+    `gatsby-plugin-recaptcha`, // loads reCaptcha
     `gatsby-plugin-sass`, // loads SASS/SCSS files
     `gatsby-plugin-resolve-src`, // sets 'path/to' == 'src/path/to'
     `gatsby-plugin-sharp`,

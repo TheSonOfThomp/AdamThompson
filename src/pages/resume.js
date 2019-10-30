@@ -1,13 +1,37 @@
 import React from "react"
+import Recaptcha from 'react-recaptcha';
 import SEO from "../components/seo"
 import '../style/resume.scss'
 import T from "../components/Resume/tool/tool"
 import ResumeHeader from "../components/Resume/resume-header";
 import ResumeEntry from "../components/Resume/resume-entry/resume-entry";
 
-const ResumePage = () => {
-  if (true /* TODO capcha check */) {
-  return (
+class ResumePage extends React.Component {
+
+  constructor(){
+    super()
+    this.shouldRenderResume = false;
+  }
+
+  captchaCallback = (e) => {
+    console.log('callback')
+    this.shouldRenderResume = true
+    this.forceUpdate()
+  }
+
+   _ReCaptchaJSX = (
+     <div className="captcha-container">
+       <SEO title="Resume" />
+      <Recaptcha
+        sitekey="6Lf6KMAUAAAAAD75Sy3-rxa32S9v8tl6kYMZNZQ5"
+        render="explicit"
+        verifyCallback={this.captchaCallback}
+      />
+     </div>
+    // <button onClick={this.captchaCallback}>I am not a robot</button>
+  )
+
+  _ResumeJSX = (
     <div className="resume-container">
       <SEO title="Resume" />
       <div className="resume-page" id="page-1">
@@ -218,10 +242,12 @@ const ResumePage = () => {
         </div>
       </div>
     </div>
-
-  )} else {
-    console.log('Redirecting')
-    window.location.href=window.location.origin
+  )
+  
+  
+  render(){
+    let _toRenderJSX = this.shouldRenderResume ? this._ResumeJSX : this._ReCaptchaJSX
+    return (_toRenderJSX)
   }
 }
 
