@@ -38,7 +38,7 @@ class ResumePage extends React.Component {
         <ResumeHeader/>
         <div className="resume-body">
         <div className="blurb">
-          I'm a UX designer and engineer looking for a role at the intersection of the two. With an engineering background, and experience in UX since 2013, I'm a perfect fit for a technical designer or UX engineer.
+          I'm a UX engineer and designer looking for a role at the intersection of the two. With an engineering education, and experience in UX since 2013, I'm a perfect fit for a UX engineer or technical designer.
         </div>
           <div className="column" id="column-left">
             <div className="column-section " id="experience">
@@ -226,7 +226,7 @@ class ResumePage extends React.Component {
                 />
                 <ResumeEntry
                   entryClass="volunteer-entry"
-                  title="UX/UX"
+                  title="UW/UX"
                   location="2015-2016"
                   bullets={[
                     "Vice President of the UW campus UX Club, mentoring younger students and planning club events.",
