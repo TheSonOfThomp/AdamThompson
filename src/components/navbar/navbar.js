@@ -2,7 +2,7 @@ import React from "react"
 import SocialLink from "../social-link/social-link";
 import monogram from '../../images/monogram-white.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedinIn, faGithub, faTwitter, faCodepen } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn, faGithub, faTwitter, faCodepen, faMedium } from '@fortawesome/free-brands-svg-icons'
 // import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import './navbar.scss';
@@ -44,6 +44,9 @@ menuClass(){
           </SocialLink>
           <SocialLink name="Codepen" url="https://codepen.io/TheSonOfThomp/">
             <FontAwesomeIcon icon={faCodepen} size="xl" />
+          </SocialLink>
+          <SocialLink name="Medium" url="https://medium.com/@TheSonOfThomp">
+            <FontAwesomeIcon icon={faMedium} size="xl" />
           </SocialLink>
         </nav>
         
