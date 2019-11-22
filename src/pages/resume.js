@@ -38,7 +38,7 @@ class ResumePage extends React.Component {
         <ResumeHeader/>
         <div className="resume-body">
         <div className="blurb">
-          I'm a UX engineer and designer looking for a role at the intersection of the two. With an engineering education, and experience in UX since 2013, I'm a perfect fit for a UX engineer or technical designer.
+          I'm an engineer and designer looking for a role at the intersection of the two diciplines. With an engineering education, and experience in UX design since 2013, I'm a perfect fit as a UX engineer or technical designer.
         </div>
           <div className="column" id="column-left">
             <div className="column-section " id="experience">
@@ -104,9 +104,7 @@ class ResumePage extends React.Component {
 
               </div>
             </div>
-            
           </div>
-        
         </div>
       </div>
 
