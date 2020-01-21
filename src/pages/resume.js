@@ -5,11 +5,15 @@ import T from "../components/Resume/tool/tool"
 import ResumeHeader from "../components/Resume/resume-header";
 import ResumeEntry from "../components/Resume/resume-entry/resume-entry";
 
+import * as resumeJson from '../data/resume.json';
+const resumeData = resumeJson.default
+
 class ResumePage extends React.Component {
 
   constructor(){
     super()
     this.shouldRenderResume = true;
+    
   }
 
   _ResumeJSX = (
@@ -19,69 +23,20 @@ class ResumePage extends React.Component {
         <ResumeHeader/>
         <div className="resume-body">
           <div className="blurb">
-            I'm an engineer and designer looking for a role at the intersection of the two disciplines. With an engineering education, and experience in UX design since 2013, I'm a perfect fit as a UX engineer or technical designer.
+            {resumeData.blurb} 
           </div>
           <div className="column" id="column-left">
             <div className="column-section " id="experience">
               <h2>Experience</h2>
               <div className="column-section-contents">
-                <ResumeEntry
-                  title="UX Engineer"
-                  company="New Visions for Public Schools"
-                  location="July 2018 - now | NYC"
-                  bullets={[
-                      "Managed and led contributions to the design system component library and documentation, and led cross-team collaboration.",
-                      "Architected and built infrastructure for quickly prototyping designs and testing new features and interactions.",
-                      "Designed, prototyped, and tested numerous features, and developed a data model to define dashboard UI logic."
-                    ]}
-                />
-                <ResumeEntry
-                  title="Product Manager"
-                  company="TC Helicon"
-                  location="2018 | Kitchener"
-                  bullets={[
-                      "Identified customer needs, and defined business strategy and product specifications based on market and customer research.",
-                      "Developed an ROI calculation tool, now used globally to allow managers to quickly evaluate new projects based on key data."
-                    ]}
-                />
-
-                <ResumeEntry
-                  title="UX Product Manager"
-                  company="Zynga Poker"
-                  location="2016 | Toronto"
-                  bullets={[
-                      "Perfected user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature.",
-                      "Performed secondary user research and A/B testing to define pricing for a new subscription-based revenue model."
-                    ]}
-                />
-
-                <ResumeEntry
-                  title="Product Designer"
-                  company="Noom"
-                  location="2015 | NYC"
-                  bullets={[
-                      "Simplified the core food logging experience by modifying the information architecture to better fit the mental model observed during user interviews."
-                    ]}
-                />
-
-                <ResumeEntry
-                  title="UX Designer/Developer"
-                  company="KnowRoaming"
-                  location="2014, 2015 | Toronto"
-                  bullets={[
-                    "Overhauled the app UI and IA to better align with common use cases.",
-                    "Developed mini-sites, designed print and video material, and improved product packaging."
-                  ]}
-                />
-
-                <ResumeEntry
-                  title="UI Designer/Developer"
-                  company="Sony"
-                  location="2013 | Waterloo"
-                  bullets={[
-                    "Led UI design and front-end development for a music discovery feature.",
-                  ]}
-                />
+                {Object.values(resumeData.experience).map(job => {
+                  return <ResumeEntry
+                    title={job.position}
+                    company={job.company}
+                    location={`${job.term} | ${job.location}`}
+                    bullets={job.bullets}
+                  />
+                })}
               </div>
             </div>
           </div>
@@ -100,7 +55,6 @@ class ResumePage extends React.Component {
                   entryClass="school-entry"
                   title="Systems Design Engineering"
                   company="University of Waterloo"
-                  // location="2017"
                   bullets={[
                     "BASc. with cognitive science minor",
                   ]}
@@ -111,105 +65,36 @@ class ResumePage extends React.Component {
             <div className="column-section" id="tools">
               <h2>Toolbox</h2>
               <div className="column-section-contents">
-                <T>CSS</T> <T>HTML</T> <T>Javascript</T> <T>Typescript</T>
-                <T>Angular</T> <T>Vue</T> <T>React</T> <T>Storybook</T>
-                <T>Sass</T>  <T>Node</T> <T>D3</T> <T>Git</T>
-                <T>Swift</T> <T>Sketch</T> <T>Python</T> 
-                 <T>Zeplin</T> <T>InVision</T>
-                <T>Photoshop</T> <T>Illustrator</T> <T>Balsamiq</T>
-                <T>Excel</T><T>Airtable</T>
+                {resumeData.toolbox.map(tool => {
+                  return <T>{tool}</T>
+                }) }
               </div>
             </div>
             
             <div className="column-section "id="projects">
               <h2>Projects</h2>
               <div className="column-section-contents">
-                <ResumeEntry
-                  entryClass="project-entry"
-                  title="Chameleon"
-                  // location="2016-2017"
-                  bullets={[
-                    "Hearing protection that adapts to the volume of the wearer's environment.",
-                  ]}
-                />
-
-                <ResumeEntry
-                  entryClass="project-entry"
-                  title="Zed"
-                  bullets={[
-                    "A JS library for rendering more realistic overlapping shadows.",
-                  ]}
-                />
-
-                <ResumeEntry
-                  entryClass="project-entry"
-                  title="ZeplinX"
-                  bullets={[
-                    "A Confluence plugin to embed Zeplin images on a page.",
-                  ]}
-                />
-
-                <ResumeEntry
-                  entryClass="project-entry"
-                  title="Sketch Flat Export"
-                  bullets={[
-                    "A Sketch plugin to export multiple artboards to a single directory.",
-                  ]}
-                />
-
-                <ResumeEntry
-                  entryClass="project-entry"
-                  title="React Synth"
-                  bullets={[
-                    "A web based synthesizer with musical typing.",
-                  ]}
-                />
-
-                <ResumeEntry
-                  entryClass="project-entry"
-                  title="SMRT WATR"
-                  bullets={[
-                    "An interactive water fountain, controlled by a web-app game.",
-                  ]}
-                />
+                {Object.values(resumeData.projects).map(project => {
+                  return <ResumeEntry
+                    entryClass="project-entry"
+                    title={project.title}
+                    bullets={[project.description]}
+                  />
+                })}
               </div>
             </div>
                 
             <div className="column-section " id="volunteer">
               <h2>Volunteer</h2>
               <div className="column-section-contents">
-                <ResumeEntry
-                  entryClass="volunteer-entry"
-                  title="The SymphoNYChorus"
-                  location="2018 - now"
-                  bullets={[
-                    "Soloist, and tenor section leader of the combined orchestra and choir.",
-                  ]}
-                />
-                <ResumeEntry
-                  entryClass="volunteer-entry"
-                  title="Camp Kwasind"
-                  location="2017"
-                  bullets={[
-                    "Maintenance, cabin leader and staff mentor.",
-                  ]}
-                />
-                <ResumeEntry
-                  entryClass="volunteer-entry"
-                  title="The Water Boys"
-                  location="2013-2017"
-                  bullets={[
-                    "Soloist and baritone section leader of the world-ranked all-male a cappella group.",
-                  ]}
-                />
-                <ResumeEntry
-                  entryClass="volunteer-entry"
-                  title="UW/UX"
-                  location="2015-2016"
-                  bullets={[
-                    "Vice President of the UW campus UX Club, mentoring younger students and planning club events.",
-                  ]}
-                />
+                {Object.values(resumeData.volunteer).map(volunteer => {
+                  return <ResumeEntry
+                    entryClass="volunteer-entry"
+                    title={volunteer.title}
+                    location={volunteer.location}
+                    bullets={[volunteer.description]}
+                  />
+                })}
               </div>
             </div>
           </div> 
