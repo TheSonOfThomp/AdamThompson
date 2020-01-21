@@ -1,5 +1,4 @@
 import React from "react"
-import Recaptcha from 'react-recaptcha';
 import SEO from "../components/seo"
 import '../style/resume.scss'
 import T from "../components/Resume/tool/tool"
@@ -12,24 +11,6 @@ class ResumePage extends React.Component {
     super()
     this.shouldRenderResume = true;
   }
-
-  captchaCallback = (e) => {
-    console.log('callback')
-    this.shouldRenderResume = true
-    this.forceUpdate()
-  }
-
-   _ReCaptchaJSX = (
-     <div className="captcha-container">
-       <SEO title="Resume" />
-      <Recaptcha
-        sitekey="6Lf6KMAUAAAAAD75Sy3-rxa32S9v8tl6kYMZNZQ5"
-        render="explicit"
-        verifyCallback={this.captchaCallback}
-      />
-     </div>
-    // <button onClick={this.captchaCallback}>I am not a robot</button>
-  )
 
   _ResumeJSX = (
     <div className="resume-container">
@@ -243,7 +224,7 @@ class ResumePage extends React.Component {
   
   
   render(){
-    let _toRenderJSX = this.shouldRenderResume ? this._ResumeJSX : this._ReCaptchaJSX
+    let _toRenderJSX = this._ResumeJSX
     return (_toRenderJSX)
   }
 }
