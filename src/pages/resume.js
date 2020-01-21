@@ -84,24 +84,23 @@ class ResumePage extends React.Component {
                 />
 
                 <ResumeEntry
-                  title="UX Designer"
+                  title="UX Designer/Developer"
                   company="KnowRoaming"
                   location="2014, 2015 | Toronto"
                   bullets={[
-                    "Overhauled the IA and UI to better align with common use cases.",
+                    "Overhauled the app UI and IA to better align with common use cases.",
                     "Developed mini-sites, designed print and video material, and improved product packaging."
                   ]}
                 />
 
                 <ResumeEntry
-                  title="UI Designer"
+                  title="UI Designer/Developer"
                   company="Sony"
                   location="2013 | Waterloo"
                   bullets={[
                     "Led UI design and front-end development for a music discovery feature.",
                   ]}
                 />
-
               </div>
             </div>
           </div>
@@ -132,10 +131,10 @@ class ResumePage extends React.Component {
               <h2>Toolbox</h2>
               <div className="column-section-contents">
                 <T>CSS</T> <T>HTML</T> <T>Javascript</T> <T>Typescript</T>
-                <T>Angular</T> <T>Vue</T> <T>Storybook</T>
-                <T>Sass</T> <T>React</T> <T>Node</T> <T>D3</T> <T>Git</T>
-                <T>Swift</T><T>Python</T>
-                <T>Sketch</T> <T>Zeplin</T> <T>InVision</T>
+                <T>Angular</T> <T>Vue</T> <T>React</T> <T>Storybook</T>
+                <T>Sass</T>  <T>Node</T> <T>D3</T> <T>Git</T>
+                <T>Swift</T> <T>Sketch</T> <T>Python</T> 
+                 <T>Zeplin</T> <T>InVision</T>
                 <T>Photoshop</T> <T>Illustrator</T> <T>Balsamiq</T>
                 <T>Excel</T><T>Airtable</T>
               </div>
@@ -203,7 +202,7 @@ class ResumePage extends React.Component {
                   title="The SymphoNYChorus"
                   location="2018 - now"
                   bullets={[
-                    "Tenor section leader of the combined orchestra and choir.",
+                    "Soloist, and tenor section leader of the combined orchestra and choir.",
                   ]}
                 />
                 <ResumeEntry
