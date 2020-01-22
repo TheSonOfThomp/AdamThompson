@@ -5,7 +5,7 @@ import T from "../components/Resume/tool/tool"
 import ResumeHeader from "../components/Resume/resume-header";
 import ResumeEntry from "../components/Resume/resume-entry/resume-entry";
 
-import * as resumeJson from '../data/resume.json';
+import * as resumeJson from '../data/resume-design.json';
 const resumeData = resumeJson.default
 
 class ResumePage extends React.Component {
@@ -13,7 +13,6 @@ class ResumePage extends React.Component {
   constructor(){
     super()
     this.shouldRenderResume = true;
-    
   }
 
   _ResumeJSX = (

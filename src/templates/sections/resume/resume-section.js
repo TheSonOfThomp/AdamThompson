@@ -3,79 +3,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import Section from "templates/section/section";
 import ResumeCard from "components/resume-card/resume-card";
-
-import { useStaticQuery, graphql} from 'gatsby';
 import './resume-section.scss';
-
-const getBullets = function(node) {
-  if (node.responsibilities) {
-    return node.responsibilities.map(resp => {
-      // console.log(node)
-      return resp.text
-    })
-  }
-  else if (node.courses) {
-    return node.courses.map(crs => {
-      // console.log(crs.name)
-      return crs.name
-    })
-  }
-  else return null
-}
-
-const ResumeSection = ({data}) => {
-  const resumeQuery = useStaticQuery(graphql`
-    query ResumeQuery{
-      dataJson {
-        experience{
-          id
-          display
-          company
-          url
-          position
-          location
-          term
-          summary
-          logotype
-          responsibilities {
-            text
-          }
-        }
-        education {
-          id
-          display
-          company
-          position
-          degree
-          minor
-          class
-          summary
-          logotype
-          courses {
-            name
-          }
-        }
-      }
-    }
-  `)
-
-  const resumeData = [...resumeQuery.dataJson.experience.filter(e => e.display === true), ...resumeQuery.dataJson.education.filter(e => e.display === true)]
+import * as resumeJson from '../../../data/resume.json'
+const ResumeSection = () => {
+  const resumeData = Object.entries(resumeJson.default.experience)
   return(
     <Section title="Experience" id="resume">
       <a className="print-resume" href="./resume" target="_blank">Printable resume <FontAwesomeIcon icon={faExternalLinkAlt} size="xs"/></a>
       <div className="resume-card-section">
       {
-        resumeData.map( (node) => (
+        resumeData.map( node => (
           <ResumeCard
-          key={node.id}
-          logo={node.logo || node.logotype}
-          title={node.company}
-          position={node.position}
-          location={node.location || node.degree}
-          term={node.term || node.class}
-          summary={node.summary}
-          bullets={getBullets(node)}
-          ></ResumeCard>
+            key={node[0]}
+            title={node[1].company}
+            position={node[1].position}
+            location={node[1].location}
+            term={node[1].term}
+            summary={node[1].summary}
+            bullets={node[1].bullets}
+            ></ResumeCard>
           ))
         }
       </div>
