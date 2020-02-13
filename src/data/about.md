@@ -4,7 +4,7 @@ section: about
 stub: true
 ---
 
-I'm a product designer & UX engineer at [New Visions for Public Schools](https://newvisions.org), where I design new features for our expanding network of schools in New York. I also and build and document the component library and design system for the school facing data portal.
+I'm a product designer & UX engineer, currently at [New Visions for Public Schools](https://newvisions.org) where I design, test and prototype new features for our expanding network of schools in New York, and manage, build and maintain the design system and component library for the school facing data portal.
 
 I'm at the intersection of Design & Engineering—my education in [Systems Design Engineering](https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering) allows me to approach problems from a holistic perspective, design a complete solution, and execute that solution effectively.
 
