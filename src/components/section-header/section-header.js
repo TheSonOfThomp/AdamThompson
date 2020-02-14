@@ -2,11 +2,9 @@ import React from "react"
 import './section-header.scss';
 
 const SectionHeader = ({children}) => (
-    <header className="section-header">
-        <h1>
-            {children}
-        </h1>
-    </header>
+    <h1 className="section-header">
+        {children}
+    </h1>
 )
 
 export default SectionHeader

@@ -41,9 +41,9 @@ const ProjectsSection = () => {
 
   const projectsJSX = Projects.map(p => {
     return (
-      <a className="project" href={p.url} alt={p.name}>
+      <a className="project-card" href={p.url} alt={p.name}>
         <h2>{p.name}</h2>
-        <FontAwesomeIcon icon={faGithub} size="xl" />
+        <FontAwesomeIcon icon={faGithub} size="m" />
         <span>{p.description}</span>
       </a>
     )
