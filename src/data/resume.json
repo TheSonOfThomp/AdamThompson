@@ -9,9 +9,9 @@
       "location": "NYC",
       "summary": "Design systems development, prototyping and feature design.",
       "bullets": [
-        "Managed contributions to the design system, component library and documentation, and led a cross-team collaboration effort.",
-        "Built and architected infrastructure for quickly prototyping designs and testing new features and interactions.",
-        "Designed, prototyped, and tested numerous features, and developed a data model to define dashboard UI logic."
+        "Managed the design system, Angular component library and documentation, and fostered closer cross-team collaboration between design & engineering.",
+        "Developed infrastructure for quickly prototyping and testing new features and interactions with simulated data.",
+        "Designed, prototyped, and tested numerous features for the data portal, and consulted on front-end implementation."
       ]
     },
     "music-group": {
@@ -22,8 +22,8 @@
       "location": "Kitchener",
       "summary": "Design process, high level product vision & business case development.",
       "bullets": [
-        "Identified customer needs, and defined business strategy and product specifications based on market and customer research.",
-        "Developed an ROI calculation tool, now used globally to allow managers to quickly evaluate new projects based on key data."
+        "Identified customer needs, and defined business strategy and product specifications based on market and user research.",
+        "Developed a globally used tool to allow managers to quickly evaluate new projects based on ROI and other key data."
       ]
     },
     "zynga": {
@@ -32,9 +32,9 @@
       "term": "2016",
       "position": "UX Product Manager",
       "summary": "Data analysis, UX research and testing for new features in Poker Web.",
-      "location": "Toronto,",
+      "location": "Toronto",
       "bullets": [
-        "Perfected user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature.",
+        "Optimized user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature.",
         "Performed secondary user research and A/B testing to define pricing for a new subscription-based revenue model."
       ]
     },
@@ -48,7 +48,8 @@
       "logotype": "images/companies/noom_logotype_small.png",
       "logo": "images/companies/noom_logo.png",
       "bullets": [
-        "Simplified the core food logging experience by modifying the information architecture to better fit the mental model observed during user interviews."
+        "Simplified the core food logging experience by modifying the information architecture to better fit the mental model observed during user interviews.",
+        "Prototyped interactions and user flows in Framer and Origami, and rigorously tested prototypes at varying levels of fidelity."
       ]
     },
     "knowroaming": {
@@ -59,8 +60,7 @@
       "summary": "User research, information architecture and UI design for mobile apps.",
       "location": "Toronto",
       "bullets": [
-        "Overhauled the app UI and IA to better align with common use cases.",
-        "Developed mini-sites, designed print and video material, and improved product packaging."
+        "Overhauled the app interface and information architecture to better align with common use cases."
       ]
     },
     "sony": {
@@ -89,11 +89,14 @@
   "projects": {
     "chameleon": {
       "title": "Chameleon",
-      "description": "Hearing protection that adapts to the volume of the wearer's environment."
+      "description": "Hearing protection that adapts to the volume of the wearer's surroundings.",
+      "url": "http://www.thesonofthomp.com/portfolio/chameleon",
+      "role": "Electrical, mechanical & software design"
     },
     "zed": {
       "title": "Zed",
-      "description": "A JS library for rendering more realistic overlapping shadows."
+      "description": "A JS library for rendering more realistic overlapping shadows.",
+      "url": "https://github.com/TheSonOfThomp/Zed"
     },
     "zeplin-x": {
       "title": "ZeplinX",
@@ -101,7 +104,8 @@
     },
     "sketch-export": {
       "title": "Sketch Flat Export",
-      "description": "A Sketch plugin to export multiple artboards to a single directory."
+      "description": "A Sketch plugin to export multiple artboards to a single directory.",
+      "url": "https://github.com/TheSonOfThomp/sketch-flat-export"
     },
     "react-synth": {
       "title": "React Synth",
@@ -109,14 +113,15 @@
     },
     "smrt-watr": {
       "title": "SMRT WATR",
-      "description": "An interactive water fountain, controlled by a web-app game."
+      "description": "An interactive water fountain, controlled by a web-app game.",
+      "role": "Control systems & UX design"
     }
   },
   "volunteer": {
     "thesymphonychorus": {
       "title": "The SymphoNYChorus",
       "location": "2018 - now",
-      "description": "Soloist, and tenor section leader of the combined orchestra and choir."
+      "description": "Tenor section leader for the combined choir and orchestra."
     },
     "kwasind": {
       "title": "Camp Kwasind",
@@ -126,7 +131,7 @@
     "water-boys": {
       "title": "The Water Boys",
       "location": "2013-2017",
-      "description": "Soloist and baritone section leader of the world-ranked all-male a cappella group."
+      "description": "Baritone section leader for the world-ranked all-male a cappella group."
     },
     "uwux": {
       "title": "UW/UX",
@@ -136,8 +141,8 @@
   },
   "toolbox": [
     "CSS", "HTML", "Javascript", "Typescript", "Angular", "Vue",
-    "React", "Storybook", "Sass", "Node", "D3", "Git", "Swift",
-    "Sketch", "Python", "Zeplin", "InVision", "Photoshop", "Illustrator",
-    "Balsamiq", "Excel", "Airtable"
+    "React", "Storybook", "Sass", "Node", "D3", "Git", "Swift", "Origami", "Framer",
+    "Sketch", "Zeplin", "InVision", "Photoshop", "Illustrator",
+    "Balsamiq", "Excel", "Airtable", "Python", "Arduino"
   ]
 }
