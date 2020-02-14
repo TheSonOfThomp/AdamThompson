@@ -3,7 +3,6 @@ import SocialLink from "../social-link/social-link";
 import monogram from '../../images/monogram-white.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn, faGithub, faTwitter, faCodepen, faMedium } from '@fortawesome/free-brands-svg-icons'
-// import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import './navbar.scss';
 
@@ -34,19 +33,19 @@ menuClass(){
           <a className="nav-link hide-mobile" id="nav-portfolio" href="#portfolio">Portfolio</a>
           <a className="nav-link hide-mobile" id="nav-about" href="#about">About</a>
           <SocialLink name="Twitter" url="https://www.twitter.com/thesonofthomp/">
-            <FontAwesomeIcon icon={faTwitter} size="xl" />
+            <FontAwesomeIcon icon={faTwitter} size="s" />
           </SocialLink>
           <SocialLink name="GitHub" url="https://www.github.com/thesonofthomp">
-            <FontAwesomeIcon icon={faGithub} size="xl" />
+            <FontAwesomeIcon icon={faGithub} size="s" />
           </SocialLink>
           <SocialLink name="Linkedin" url="https://www.linkedin.com/in/adammthompson/">
-            <FontAwesomeIcon icon={faLinkedinIn} size="xl" />
+            <FontAwesomeIcon icon={faLinkedinIn} size="s" />
           </SocialLink>
           <SocialLink name="Codepen" url="https://codepen.io/TheSonOfThomp/">
-            <FontAwesomeIcon icon={faCodepen} size="xl" />
+            <FontAwesomeIcon icon={faCodepen} size="s" />
           </SocialLink>
           <SocialLink name="Medium" url="https://medium.com/@TheSonOfThomp">
-            <FontAwesomeIcon icon={faMedium} size="xl" />
+            <FontAwesomeIcon icon={faMedium} size="s" />
           </SocialLink>
         </nav>
         
