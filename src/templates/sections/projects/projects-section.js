@@ -6,6 +6,11 @@ import './projects-section.scss';
 
 const Projects = [
   {
+    name: 'Word Chain',
+    url: 'https://github.com/TheSonOfThomp/Word-Chain',
+    description: 'A thesaurus linker to find the closest synonym to two words.'
+  },
+  {
     name: 'Zed',
     url: 'https://github.com/TheSonOfThomp/Zed',
     description: 'A JS library for rendering more realistic overlapping shadows.'
