@@ -9,9 +9,9 @@
       "location": "NYC",
       "summary": "Design systems development, prototyping and feature design.",
       "bullets": [
-        "Designed, prototyped, and user tested numerous new features, and developed a data model to define UI logic and information architecture.",
-        "Managed contributions to the design system, documented usage guidelines for UX patterns, and UI components, and fostered closer cross-team collaboration between design & engineering.",
-        "Developed and built infrastructure for quickly prototyping and testing new features and interactions."
+        "Designed, prototyped, and tested numerous features for the data portal, and consulted on front-end implementation.",
+        "Managed contributions to the design system, documented usage guidelines for UX patterns and UI components, and fostered closer cross-team collaboration between design & engineering.",
+        "Developed infrastructure for quickly prototyping and testing new features and interactions with simulated data."
       ]
     },
     "music-group": {
@@ -23,7 +23,7 @@
       "summary": "Design process, high level product vision & business case development.",
       "bullets": [
         "Identified customer needs, and defined business strategy and product specifications based on market and customer research.",
-        "Developed a tool, now used globally to allow managers to quickly evaluate new projects based on key data."
+        "Developed a globally used tool to allow managers to quickly evaluate new projects based on ROI and other key data."
       ]
     },
     "zynga": {
@@ -132,9 +132,9 @@
     }
   },
   "toolbox": [
-    "CSS", "HTML", "Javascript", "Typescript", "Angular", "Vue",
-    "React", "Storybook", "Sass", "Node", "D3", "Git", "Swift",
-    "Sketch", "Python", "Zeplin", "InVision", "Photoshop", "Illustrator",
-    "Balsamiq", "Excel", "Airtable"
+    "CSS", "HTML", "Javascript", "Typescript", "Angular", "Vue", "React", 
+    "Sketch", "Storybook", "Sass", "Node", "D3", "Git", "Swift", 
+    "Zeplin", "Framer", "Origami", "InVision", "Photoshop", "Illustrator",
+    "Balsamiq", "Python", "Arduino", "Excel", "Airtable"
   ]
 }
