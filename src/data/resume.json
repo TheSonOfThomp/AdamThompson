@@ -140,9 +140,9 @@
     }
   },
   "toolbox": [
-    "CSS", "HTML", "Javascript", "Typescript", "Angular", "Vue",
-    "React", "Storybook", "Sass", "Node", "D3", "Git", "Swift", "Origami", "Framer",
-    "Sketch", "Zeplin", "InVision", "Photoshop", "Illustrator",
+    "CSS", "HTML", "Javascript", "Typescript", "Angular", "Vue", "React",
+    "Storybook", "Sass", "Node", "D3", "Git", "Ci", "Swift", "Origami",
+    "Framer", "Sketch", "Zeplin", "InVision", "Photoshop", "Illustrator",
     "Balsamiq", "Excel", "Airtable", "Python", "Arduino"
   ]
 }
