@@ -10,7 +10,7 @@
     border-color: var(--color-#{$brand});
   }
   
-  .portfolio-content .tldr {
+  .portfolio-content {
     h2 {
       color: var(--color-#{$brand});
     }
@@ -51,6 +51,7 @@ main.portfolio {
 
   .portfolio-content-container {
     width: 100%;
+    font-size: 20px;
     .portfolio-content {
       position: relative;
       display: block;
@@ -58,13 +59,16 @@ main.portfolio {
       
       * {
         max-width: $folio-max-width;
+        margin-left: auto;
+        margin-right: auto;
+        margin-inline: auto;
       }
       
       // Top TL;DR section
       .tldr {
         max-width: none;
         h2 {
-          font-size: 36px
+          font-size: 1.8em;
         }
         h4 {
           font-weight: 300
@@ -85,45 +89,50 @@ main.portfolio {
       }
 
       h1 {
-        font-size: 72px;
+        font-size: 3.6em;
         font-weight: 600;
         text-align: left;
-        margin: 24px auto 0 auto;
+        margin-top: 24px;
+        margin-bottom: 0px;
         color: $eigengrau;
         @media screen and (max-width: $breakpoint-small) {
           font-size: 12vw;
         }
       }
       h2 {
-        font-size: 56px;
+        font-size: 2.8em;
         font-style: normal;
         font-weight: bold;
-        margin: 0 auto 24px auto;
+        margin-top: 0px;
+        margin-bottom: 24px;
         color: $eigengrau;
         @media screen and (max-width: $breakpoint-small) {
           font-size: 8vw;
         }
       }
       h3 {
-        font-size: 32px;
+        font-size: 1.6em;
         font-weight: 400;
         line-height: 1.6em;
         color: $dark_grey;
-        margin: 16px auto;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-block: 16px;
       }
       h4 {
-        font-size: 20px;
+        font-size: 1em;
         font-weight: 300;
         line-height: 1.6em;
         color: $dark_grey;
-        margin: 16px auto;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-block: 16px;
       }
       p {
         font-size: 20px;
         font-weight: 300;
         color: $black;
         line-height: 1.6em;
-        margin: 0 auto;
         a {
           font-weight: 400;
         }
@@ -165,7 +174,6 @@ main.portfolio {
           max-width: 50%;
           margin: 0 auto;
         }
-
       }
     }
   }
@@ -181,7 +189,7 @@ main.portfolio {
 // GATSBY IMAGE HACKS
 div.gatsby-image { p { display: none; } }
 
-div.vertical {
+div.cover-image.vertical {
   figure.gatsby-resp-image-figure {
     span.gatsby-resp-image-background-image {
       padding: 0 !important;
