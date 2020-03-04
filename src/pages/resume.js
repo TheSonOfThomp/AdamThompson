@@ -5,7 +5,7 @@ import T from "../components/Resume/tool/tool"
 import ResumeHeader from "../components/Resume/resume-header";
 import ResumeEntry from "../components/Resume/resume-entry/resume-entry";
 
-import * as resumeJson from '../data/resume-design.json';
+import * as resumeJson from '../data/resume.json';
 const resumeData = resumeJson.default
 
 class ResumePage extends React.Component {
@@ -61,14 +61,6 @@ class ResumePage extends React.Component {
               </div>
             </div>
 
-            <div className="column-section" id="tools">
-              <h2>Toolbox</h2>
-              <div className="column-section-contents">
-                {resumeData.toolbox.map(tool => {
-                  return <T>{tool}</T>
-                }) }
-              </div>
-            </div>
             
             <div className="column-section "id="projects">
               <h2>Projects</h2>
@@ -77,7 +69,7 @@ class ResumePage extends React.Component {
                   return <ResumeEntry
                     entryClass="project-entry"
                     title={project.title}
-                    bullets={[project.description]}
+                    bullets={[project.description]}               
                   />
                 })}
               </div>
@@ -94,6 +86,15 @@ class ResumePage extends React.Component {
                     bullets={[volunteer.description]}
                   />
                 })}
+              </div>
+            </div>
+
+            <div className="column-section" id="tools">
+              <h2>Toolbox</h2>
+              <div className="column-section-contents">
+                {resumeData.toolbox.map(tool => {
+                  return <T>{tool}</T>
+                }) }
               </div>
             </div>
           </div> 

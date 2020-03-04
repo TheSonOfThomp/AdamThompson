@@ -6,6 +6,11 @@ import './projects-section.scss';
 
 const Projects = [
   {
+    name: 'Word Chain',
+    url: 'https://github.com/TheSonOfThomp/Word-Chain',
+    description: 'A thesaurus linker to find the closest synonym to two words.'
+  },
+  {
     name: 'Zed',
     url: 'https://github.com/TheSonOfThomp/Zed',
     description: 'A JS library for rendering more realistic overlapping shadows.'
@@ -41,9 +46,9 @@ const ProjectsSection = () => {
 
   const projectsJSX = Projects.map(p => {
     return (
-      <a className="project" href={p.url} alt={p.name}>
+      <a className="project-card" href={p.url} alt={p.name}>
         <h2>{p.name}</h2>
-        <FontAwesomeIcon icon={faGithub} size="xl" />
+        <FontAwesomeIcon icon={faGithub} size="m" />
         <span>{p.description}</span>
       </a>
     )

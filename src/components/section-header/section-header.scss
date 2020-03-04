@@ -1,29 +1,26 @@
-@import '../../style/global.sass';
+@import '../../style/colours.scss';
 
 .section-header {
     position: relative;
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: left;
     justify-self: left;
     color: $black;
-    height: 96px;
+    font-size: 1.5rem;
+    line-height: 2em;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
 
-    &::after{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        // transform: rotate(2deg);
-        // translate(-14px, -44px);
-        border-bottom: 1px solid $med_grey;
-    }
-
-    h1 {
-        display: inline-block;
-        font-size: 36px;
-        font-weight: 600;
-    }
+    // &::after{
+    //     content: '';
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 2em;
+    //     // border-bottom: 2px solid $green_small;
+    //     left: 0
+    // }
 }
 
 // 	&.subsection

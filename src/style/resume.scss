@@ -103,13 +103,13 @@ $page-height: 11in;
           
           .column-section-contents {
             display: grid;
-            grid-gap: 16pt; // gap between entries
+            grid-gap: 12pt; // gap between entries
           }
           
           &#projects .column-section-contents,
           &#volunteer .column-section-contents {
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 8pt 16pt; // gap between entries
+            grid-gap: 8pt 12pt; // gap between entries
           }
 
           &#tools .column-section-contents {

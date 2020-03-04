@@ -1,26 +1,33 @@
-@import 'style/global.sass';
+@import '../../../style/colours.scss';
+@import '../../../style/variables.sass';
+@import '../../../style/mixins.sass';
 
 section#projects {
   // padding: 0;
   .content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-    grid-gap: 8px;
-    .project {
+    grid-gap: 12px;
+
+    .project-card {
       display: grid;
       grid-gap: 4px;
       grid-template-areas: 'header .' 'description description';
       border-radius: 2px;
       padding: 16px;
       border-bottom: none;
-      @include elevation(1);
+      border: none;
+      @include elevation(1.5);
       transition: (box-shadow, transform) $animation-ease 500ms;
       transform: scale(1);
       transform-origin: 50% 50%;
+
       &:hover {
         @include elevation(3);
-        transform: scale(1.04)
+        transform: scale(1.04);
+        // border: 1px solid $green;
       }
+
       > h2 {
         grid-area: header;
         align-self: center;
