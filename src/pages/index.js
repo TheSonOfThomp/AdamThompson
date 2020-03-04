@@ -33,7 +33,7 @@ class IndexPage extends React.Component {
 
         <ResumeSection></ResumeSection>
         
-        <BlogSection></BlogSection>
+        {/* <BlogSection></BlogSection> */}
 
         <FooterSection></FooterSection>
         
