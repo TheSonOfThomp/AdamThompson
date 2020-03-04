@@ -25,7 +25,7 @@ section: portfolio
 
 </div>
 
-<!-- SMRT WATR (smart water) is an interactive fountain and mobile game IoT experience I developed along with [Josh Bradshaw](http://joshbradshaw.ca), [Isaac Hunter](https://isaachunter.ca), [Shubh Jagani](http://www.shubhjagani.com), [Matt Jones](https://www.linkedin.com/in/matt--jones/), and [Emma Cooper](https://www.linkedin.com/in/emmacooper2562/).
+SMRT WATR (smart water) is an interactive fountain and mobile game IoT experience I developed along with [Josh Bradshaw](http://joshbradshaw.ca), [Isaac Hunter](https://isaachunter.ca), [Shubh Jagani](http://www.shubhjagani.com), [Matt Jones](https://www.linkedin.com/in/matt--jones/), and [Emma Cooper](https://www.linkedin.com/in/emmacooper2562/).
 
 ##Challenge
 
@@ -77,4 +77,4 @@ We showed off our fountain and game at the end of the term. It was a huge hit, a
 <figure class='folio_image' id='smrtwatr-demo'>
 	<iframe src="https://www.youtube.com/embed/x0ej92Pg6EA" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <figcaption></figcaption>
-</figure> -->
+</figure>

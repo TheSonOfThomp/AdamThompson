@@ -27,7 +27,7 @@ section: portfolio
 
 </div>
 
-<!-- ## Problem
+## Problem
 
 Noom—based in midtown Manhattan—combats obesity, diabetes, and hypertension with lifestyle and behaviour change. Meal logging is a must-have feature in the app that gives constructive feedback on users' eating habits. Logging the food you’ve eaten must be quick and intuitive, and give insightful feedback.
 
@@ -97,6 +97,8 @@ With the help of our User Research team we tested our designs and rated their pe
 We also tested different _cart_, and _add more_ button designs. The buttons in the final prototype were the winning variants. 
 
 ![The decision matrix we used to rank and justify the design decisions](../../images/portfolio/noom/noom_logging-matrix.png)
+
+<!--
 
 ## A Legacy
 The Noom app features this version of the meal-logging workflow to date, and while my internship finished before the feature launched, I was told by the VP Engineering that the modifications I made to the workflow made a significant impact to user-reported ease in meal logging (a tracked KPI). 

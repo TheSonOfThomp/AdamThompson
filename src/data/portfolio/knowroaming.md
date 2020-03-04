@@ -23,7 +23,7 @@ section: portfolio
 </div>
 </div>
 
-<!-- ## Background
+## Background
 
 KnowRoaming is a small company based in Toronto that makes a smart SIM sticker—a layer on your SIM card that connects you while abroad. To manage the prepaid account, among other things, KnowRoaming has an iOS and Android app.
 
@@ -98,6 +98,7 @@ KnowRoaming is a complex system. Involving multiple cell networks, a SIM Sticker
 
 After registration, users are presented with a short tutorial, explaining the three phases, and how to know they are "Ready to Roam". We also designed coach marks that play whenever a user changes phases.
 
+<!-- 
 <div class="gatsby-image vertical multiple">
 
 ![Setup](../../images/portfolio/knowroaming/tutorial-2.png)

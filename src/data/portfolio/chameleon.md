@@ -25,7 +25,7 @@ section: portfolio
 
 </div>
 
-<!-- ## Problem
+## Problem
 
 We surveyed and interviewed people who work in construction, manufacturing, and live music production[^1] about their hearing protection use. A vast majority answered that while they know they should wear, protection they often don't. When asked why, they said they often needed to talk at work, and it's tedious to constantly remove hearing protection and put it back on.
 
@@ -87,4 +87,4 @@ We showcased our prototype at the Systems Design Engineering Symposium where we 
 
 
 
-[^1]: Live music workers means, for example: stagehands, producers, and directors, not performers themselves -->
+[^1]: Live music workers means, for example: stagehands, producers, and directors, not performers themselves
