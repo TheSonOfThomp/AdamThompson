@@ -33,25 +33,25 @@ section: portfolio
 
 <!-- The challenge -->
 <!-- Problem statement -->
-  # Ensuring nobody falls through the cracks
+  # No student left behind
   <!-- - We have a data tool that allows users to see curated lists of students, highlighting problems so kids don't fall thru cracks -->
 
-  New Visions for Public Schools is a New York based non-profit developing management tools for NYC public schools. These tools enable schools to provide equitable education across the city, and ensure no student gets left behind.
+  New Visions for Public Schools is a New York based non-profit developing systems and tools for managing NYC public schools. These tools enable schools to provide equitable education across the city, and ensure no student gets left behind.
 
-  My work is focused on the Data Portal—a tool used by school staff that provides the data they need to stay on top of managing their school. 
+  My work was focused on the Data Portal—a tool used by school staff that provides the data they need to stay on top of managing their school. 
   
   One way the Portal does this is with Student Lists used by councilors and mentors. These curated lists of students surface certain potential problems and provide a specific set of data with the goal of solving a specific problem—like highlighting students who are chronically absent, or who need to be scheduled for an exam. The goal is that staff can more easily identify the students they need to reach out to.
 
   [TODO - Image of a List]
 
   <!-- ## Users and audience -->
-  ## Data at a glance 
-  While lists are solve a lot of the problems seen by staff that interact with students directly, there was a need to enhance the Portal to better serve school managers—people like principals, Vice-principals, and other school-based New Visions staff. 
+  ## Aggregate data
+  While lists are intended to solve a lot of the problems seen by staff who interact with students directly, there was a need to enhance the Portal to better serve school managers—people like principals, Vice-principals, and other school-based New Visions staff. 
 
   These people want to see at-a-glance data about the entire school population. Before this project, the Portal had a dashboard with only a limited set of data points and didn't always provide enough context. Our goal was to identify important data points, and provide a better way to explore them.
 
 <!-- ## Roles and responsibilities -->
-  ## How I helped
+  ## My role
   I was the lead designer on this project, and was involved in user research—defining the problem, designing a solution—information architecture, layout design, visual design, and prototyping,validating the design with usability testing, and developing the underlying data model for the dashboard.
   
   I had help with problem definition, and interacting with stakeholders from Danielle Scaramellino. Christine Han helped with scheduling and running usability testing sessions. Alisa Zhukova did a lot of the initial visual design concepts and accessibility testing. Finally I had design process guidance from Chris Avgerinos.
@@ -65,17 +65,23 @@ section: portfolio
 
 <!-- # Process and what you did -->
 # Defining what's important
-  - Ask stakeholders about what are key indicators
-  - For each data point, identified what kind of data 
+We approached major stakeholders within and outside the organization, particularly our coaches who work with schools to establish best practices. These people were able to name data points that are important for identifying areas a school might want to focus on, and monitoring the performance of a school.
+
+After gathering feedback on which metrics can help track a school's performance, we asked coaches to arrange the data labels in an understandable way. To identify this natural information architecture, I decided to run a card-sorting exercise. To do this I entered each metric name into an Airtable, and printed off each one as a card. I then asked each coach to sort these cards in whatever way made sense to them. To little surprize, our coaches consistently organized the cards roughly in line with our targeted meetings between schools and coaches to discuss major areas for improvement, called [Strategic Data Checkins](https://sdc.newvisions.org). To confirm this organization scheme, we performed the same exercise with other stakeholders who were less familiar with the SDC process. 
+
+While we were able to identify a logical way of ordering key metrics, we were unfortunately not able to determine which data points were more important to drive conversations in schools. The product team was hesitant to make a call on a hierarchy of these metrics, in fear of hiding potentially important information from schools. We decided to present all the data in an initial version of the dashboard, and monitor which data points proved to be most valuable to schools.
+
+
+  <!-- - For each data point, identified what kind of data 
       - point-in-time => change over time doesn't matter
       - independent time-based => change over time matters
       - cumulative time-based => change over time, cumulative total matters
   - card sorting with users to find how to group data points
       - results lined up with SDCs
       - not able to speak to priority 
-      - other than that # students is important
+      - other than that # students is important -->
 
-## Designed the main level of the dashboard
+# Data at-a-glance
   - Principle for this level was 'data at-a-glance'
   - Brainstorm ways to organize data & show meaningful status
       - Constraints:
@@ -117,4 +123,4 @@ section: portfolio
 # Outcomes and lessons
   - Test with multiple users, at various levels of expertise
   - Test interactive prototypes for complex interactions
-  - 
+  - Learning what dashboard tiles are most useful, and improve the interface based on that (because we've expanded and out SDFs aren't meeting with every school anymore. Renewed initiative to behavior change
