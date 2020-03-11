@@ -13,7 +13,7 @@ section: portfolio
 <div class="tldr" markdown=1>
 
   <!-- WHAT -->
-  ## Easily access important data about a school’s performance.
+  ## Accessible metrics about a school’s performance.
 
   <!-- WHY -->
   It can be difficult to manage one of New York City's large public schools. Principals and VPs need up-to-date information about their school's demographics, academics, attendance and other data.
@@ -46,13 +46,13 @@ section: portfolio
 
   <!-- ## Users and audience -->
   ## Aggregate data
-  While lists are intended to solve a lot of the problems seen by staff who interact with students directly, there was a need to enhance the Portal to better serve school managers—people like principals, Vice-principals, and other school-based New Visions staff. 
+  While lists are intended to solve a lot of the problems seen by staff who interact with students directly—like councilors—there was a need to enhance the Portal to better serve school managers—people like principals, vice-principals, and other school-based New Visions staff. 
 
   These people want to see at-a-glance data about the entire school population. Before this project, the Portal had a dashboard with only a limited set of data points and didn't always provide enough context. Our goal was to identify important data points, and provide a better way to explore them.
 
 <!-- ## Roles and responsibilities -->
-  ## My role
-  I was the lead designer on this project, and was involved in user research—defining the problem, designing a solution—information architecture, layout design, visual design, and prototyping,validating the design with usability testing, and developing the underlying data model for the dashboard.
+  ## The team
+  I was the lead designer on this project, and was involved in user research—defining the problem, designing a solution—information architecture, layout design, visual design, and prototyping, validating the design with usability testing, and developing the underlying data model for the dashboard.
   
   I had help with problem definition, and interacting with stakeholders from Danielle Scaramellino. Christine Han helped with scheduling and running usability testing sessions. Alisa Zhukova did a lot of the initial visual design concepts and accessibility testing. Finally I had design process guidance from Chris Avgerinos.
 
@@ -67,42 +67,70 @@ section: portfolio
 # Defining what's important
 We approached major stakeholders within and outside the organization, particularly our coaches who work with schools to establish best practices. These people were able to name data points that are important for identifying areas a school might want to focus on, and monitoring the performance of a school.
 
-After gathering feedback on which metrics can help track a school's performance, we asked coaches to arrange the data labels in an understandable way. To identify this natural information architecture, I decided to run a card-sorting exercise. To do this I entered each metric name into an Airtable, and printed off each one as a card. I then asked each coach to sort these cards in whatever way made sense to them. To little surprize, our coaches consistently organized the cards roughly in line with our targeted meetings between schools and coaches to discuss major areas for improvement, called [Strategic Data Checkins](https://sdc.newvisions.org). To confirm this organization scheme, we performed the same exercise with other stakeholders who were less familiar with the SDC process. 
+After gathering feedback on which metrics can help track a school's performance, we asked coaches to arrange the data labels in an understandable way. To identify this natural information architecture, I decided to run a card-sorting exercise. To do this I put each metric into an Airtable, and printed off each one as a card. I then asked each coach to sort these cards in whatever way made sense to them. 
+
+[TODO - Image of dashboard Airtable foci as cards]
+
+To little surprize, our coaches consistently organized the cards roughly in line with our targeted meetings between schools and coaches to discuss major areas for improvement, called [Strategic Data Checkins](https://sdc.newvisions.org). To confirm this organization scheme, we performed the same exercise with other stakeholders who were less familiar with the SDC process. 
 
 While we were able to identify a logical way of ordering key metrics, we were unfortunately not able to determine which data points were more important to drive conversations in schools. The product team was hesitant to make a call on a hierarchy of these metrics, in fear of hiding potentially important information from schools. We decided to present all the data in an initial version of the dashboard, and monitor which data points proved to be most valuable to schools.
 
-
-  <!-- - For each data point, identified what kind of data 
-      - point-in-time => change over time doesn't matter
-      - independent time-based => change over time matters
-      - cumulative time-based => change over time, cumulative total matters
-  - card sorting with users to find how to group data points
+  <!-- - card sorting with users to find how to group data points
       - results lined up with SDCs
       - not able to speak to priority 
       - other than that # students is important -->
 
 # Data at-a-glance
-  - Principle for this level was 'data at-a-glance'
-  - Brainstorm ways to organize data & show meaningful status
+  - Users & stakeholders wanted to see 'data at-a-glance' for the high level data points 
+  - Tried to identify ways to better organize the dashboards, but...
+  - We didn't want to eliminate any data points from the view (see above)
+  - Settled on an array of grouped tiles with a search box
+      - it can be hard to see that there are more tiles below the fold, so we added the search box
+
+[TODO - initial top-level mocks]
+
+  <!-- - Brainstorm ways to organize data & show meaningful status
       - Constraints:
         - B/c we couldn't prioritize data points, needed to show all of them...
         - Org didn't want to take a stance on thresholds of good/bad values
-  - Outcome was a bunch of grouped tiles.
+  - Outcome was a bunch of grouped tiles. -->
 
-## Designed break-down level
-  - Driven by users desire to see how different sub-groups performed relative to each other
+# Breaking down the data
+  - A single number isn't always that informative, so we needed to provide a way to analyze the aggregate data 
+  - We wanted people to be able to see this data at a glance and be able to drill down to see the students that made up the aggregate data point in order to take action. 
+  - Driven by users desire to compare across sub-groups — how they performed relative to each other
   - Enables them to see where problem areas are more easily
+
 
  ## Data visualization
   - We brainstormed what kinds of visualizations made the most sense
+    - For each data point, identified what kind of data 
+      - point-in-time => change over time doesn't matter
+      - independent time-based => change over time matters
+      - cumulative time-based => change over time, cumulative total matters
   - Decided on:
     - point-in-time => Bar graph
     - independent time-based => Line graph
     - cumulative time-based => Stacked line
+
+    [TODO - mock of bar graph]
+    [TODO - mock of Line graph]
+    [TODO - mock of stacked-line graph]
+
+    * Maybe mention that stacked bar was out of scope b/c hard to define 2 slicing dimensions
+    * We wanted to validate that Now data was useful so we de-prioritized YOY historical data.
+    * We also wanted to learn more about what our users needs were before we built a more complex feature and a data model around it
+
+  ### Visual accessibility 
   - Alisa worked on the initial visual designs and color palette
   - We tested whether a stakeholder could understand what each graph represented
 
+  ### Designing with "real" data
   - I created a mock-data creator in Node
+  - Wanted to test interactions in the breakdown — how do users want to go to other 
+  - Testing with fake data was confusing to our test users — they kept trying to find trends 
+
+  ### Testing interactions
   - I prototyped the graphs in d3 & Vue
   - Used prototypes to test graph designs
     - Tested with more users
@@ -124,3 +152,4 @@ While we were able to identify a logical way of ordering key metrics, we were un
   - Test with multiple users, at various levels of expertise
   - Test interactive prototypes for complex interactions
   - Learning what dashboard tiles are most useful, and improve the interface based on that (because we've expanded and out SDFs aren't meeting with every school anymore. Renewed initiative to behavior change
+  - Some usability improvements were not made because they would take time to design and implement a solution. We'd come back to it later
