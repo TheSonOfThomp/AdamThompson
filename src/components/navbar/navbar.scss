@@ -1,15 +1,17 @@
-@import '../../style/global.sass';
+@import '../../style/colours.scss';
+@import '../../style/variables.sass';
 
 .banner {
 	z-index: 10;
 	color: $white;
 	display: grid;
 	grid-auto-flow: column;
-	align-items: center;
+	align-items: baseline;
 	justify-items: center;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: 'logo nav';
 	margin: 16px;
+
 	@media screen and (max-width: $breakpoint-small) {
 		grid-template-columns: 1fr 1fr;
 	}

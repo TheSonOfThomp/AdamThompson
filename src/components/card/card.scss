@@ -1,11 +1,10 @@
-@import '../../style/global.sass';
-
-$transition: $animation-ease;
+@import '../../style/variables.sass';
+@import '../../style/mixins.sass';
 
 .card {
     border-radius: 4px;
     padding: 16px;
-	@include animate-elements(all, 0.2s, $transition);
+	@include animate-elements(all, 0.2s, $animation-ease);
     @include elevation(8);
     
     &.clickable {

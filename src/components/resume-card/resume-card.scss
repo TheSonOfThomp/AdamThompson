@@ -1,4 +1,5 @@
-@import '../../style/global.sass';
+@import '../../style/colours.scss';
+@import '../../style/variables.sass';
 
 $image-height: 48px;
 
@@ -6,12 +7,10 @@ $image-height: 48px;
   display: grid;
   grid-gap: 8px;
   grid-template-columns: 1fr;
-  // padding: 16px;
   justify-content: left;
   align-content: baseline;
   text-align: left;
   border-radius: 2px;
-  // @include elevation(1);
 
   .resume-card-header {
     display: grid;

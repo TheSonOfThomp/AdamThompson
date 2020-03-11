@@ -1,11 +1,12 @@
-@import '../../style/global.sass';
+@import '../../style/colours.scss';
+@import '../../style/variables.sass';
+@import '../../style/mixins.sass';
 
 @mixin branded-portfolio-card($brandColor) {
 
   &:focus {
     outline-color: $brandColor;
   }
-  // background-color: brandColor($brand);
   h2 {
     &::before {
       background-color: $brandColor;

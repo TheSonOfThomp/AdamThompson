@@ -1,4 +1,6 @@
-@import '../../style/global.sass';
+@import '../../style/colours.scss';
+@import '../../style/variables.sass';
+@import '../../style/mixins.sass';
 
 @mixin brandedPortfolio($brand){
 
