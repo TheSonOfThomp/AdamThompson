@@ -1,13 +1,13 @@
 // import PropTypes from "prop-types"
 import React from "react"
 
-import Navbar from "components/navbar/navbar";
 import './hero.scss';
+import { Navbar } from "../../../components/navbar/navbar";
 
 const Hero = () => (
   <section className="hero green-bg">
 
-    <Navbar></Navbar>
+    <Navbar/>
   
     <header>
       <h2 className="big-letters">

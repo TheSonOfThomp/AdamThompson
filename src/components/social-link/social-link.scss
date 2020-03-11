@@ -1,5 +1,5 @@
 .social-link {
-  // font-size: 24px;
+  font-size: 1.16em;
   // line-height: 1em;
   // display: inline-flex;
   // justify-content: center;
@@ -8,10 +8,11 @@
 //   padding: 2px 0;
 //   display: inline-flex;
 //   justify-content: center;
-  
-//   &:hover {
-//     transform: translateY(1px);
-//   }
+  // transition: transform 200ms ease-in-out;
+  &:hover {
+    // transform: scale(1.1)
+    // transform: translateY(1px);
+  }
 //   &.white {
 //     color: white;  
 //   }
