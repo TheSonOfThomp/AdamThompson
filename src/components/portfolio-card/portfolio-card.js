@@ -13,7 +13,7 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
         <br/>
         <span>{tagline}</span>
       </div>
-        <div class="portfolio-card-image using-img-tag"  >
+        <div className="portfolio-card-image using-img-tag"  >
           <img src={imgSrc} alt={`${title}`}/>
       </div>
   </Link>

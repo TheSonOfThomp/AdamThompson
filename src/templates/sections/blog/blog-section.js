@@ -2,7 +2,6 @@ import React from "react"
 import Section from "templates/section/section";
 import './blog-section.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMedium } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 const posts = [
