@@ -11,7 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, keywords, title }) {
-  const { site } = useStaticQuery(
+  const { site, image } = useStaticQuery(
     graphql`
       query {
         site {
@@ -19,6 +19,15 @@ function SEO({ description, lang, meta, keywords, title }) {
             title
             description
             author
+            keywords
+            siteUrl
+          }
+        }
+        image: file(relativePath: { eq: "monogram.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }
@@ -26,6 +35,9 @@ function SEO({ description, lang, meta, keywords, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const imageWidth = image.childImageSharp.fluid.width
+  const imageHeight = image.childImageSharp.fluid.height
+  const imageUrl =`${site.siteMetadata.siteUrl}${image.childImageSharp.fluid.src}`
 
   return (
     <Helmet
@@ -61,7 +73,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           name: `twitter:description`,
@@ -69,14 +81,35 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
       ]
         .concat(
-          keywords.length > 0
+          site.siteMetadata.keywords.length > 0
             ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
+              name: `keywords`,
+              content: site.siteMetadata.keywords.join(`, `),
               }
             : []
         )
-        .concat(meta)}
+        .concat(
+          [
+              {
+                property: "og:image",
+                content: imageUrl,
+              },
+              {
+                property: "og:image:width",
+                content: imageWidth,
+              },
+              {
+                property: "og:image:height",
+                content: imageHeight,
+              }
+              // {
+              //   name: "twitter:card",
+              //   content: "summary_large_image",
+              // },
+            ]
+        )
+        .concat(meta)
+      }
     />
   )
 }

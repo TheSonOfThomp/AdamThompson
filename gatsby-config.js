@@ -3,6 +3,8 @@ module.exports = {
     title: `Adam Thompson`,
     description: `Designer. Developer. Maker.`,
     author: `@thesonofthomp`,
+    siteUrl: 'http://www.thesonofthomp.com',
+    keywords: [`adam`, `thompson`, `ux`, `designer`, `developer`, `engineer`, `waterloo`]
   },
   plugins: [
     // `gatsby-plugin-recaptcha`, // loads reCaptcha

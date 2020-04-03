@@ -12,12 +12,12 @@ import AboutSection from "../templates/sections/about/about-section";
 // import BlogSection from "../templates/sections/blog/blog-section";
 import FooterSection from "../templates/sections/footer/footer-section";
 import ProjectsSection from "../templates/sections/projects/projects-section";
+import image from '../images/monogram.png' 
 class IndexPage extends React.Component {
-
   render() {
     return (
       <main id="app">
-        <SEO title="Main" keywords={[`adam`, `thompson`, `react`]} />
+        <SEO title="Main" image={image}/>
         
         <Hero></Hero>
     
