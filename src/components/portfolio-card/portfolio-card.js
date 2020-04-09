@@ -9,9 +9,9 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
   return (
     <Link to={link} id={id} className={`portfolio-card clickable ${isHighlightedCard ? 'double-wide' : ''}`}>
       <div className="portfolio-card-text">
-        <h2>{title}</h2>
+        <h2 className="portfolio-card-title">{title}</h2>
         <br/>
-        <span>{tagline}</span>
+        <span className="portfolio-card-tagline">{tagline}</span>
       </div>
         <div className="portfolio-card-image using-img-tag"  >
           <img src={imgSrc} alt={`${title}`}/>

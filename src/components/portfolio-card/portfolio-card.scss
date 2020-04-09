@@ -1,5 +1,5 @@
 @import '../../style/colours.scss';
-@import '../../style/variables.sass';
+@import '../../style/variables.scss';
 @import '../../style/mixins.sass';
 
 @mixin branded-portfolio-card($brandColor) {
@@ -17,32 +17,55 @@
 }
 
 .portfolio-card {
+  @include elevation(1);
   position: relative;
   display: grid;
+  min-height: 25%; 
+  min-height: 25vh;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 100%;
   grid-gap: 16px;
   align-items: center;
   padding: 32px;
-  min-height: 25%; min-height: 25vh;
-  color: $black;
+  border: none;
+  border-radius: 0px;
+  color: var(--color-black);
   text-align: left;
   text-decoration: none;
-  border: none;
-  background-color: $white;
-  border-radius: 0px;
+  background-color: var(--color-white);
   transition: (box-shadow, transform) $animation-ease 500ms;
   transform-origin: 50% 50%;
-  @include elevation(1);
+
+  .portfolio-card-title {
+      display: inline;
+      position: relative;
+      overflow: visible;
+      font-size: 32px;
+      &::before { // for the animated underline
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 4px;
+        bottom: 0;
+        background-color: var(--color-white);//transparent;
+        z-index: -1;
+        transition: width $animation-ease 500ms;
+      }
+  }
+
+  .portfolio-card-tagline {
+    display: inline;
+    font-size: 20px;
+  }
   
   &:hover {
+    @include elevation(2);
     border: none;
     text-decoration: none;
     transform: scale(1.04);
-    @include elevation(2);
     z-index: 2;
     &, &:focus {
-      h2 {
+      .portfolio-card-title {
         &::before {
           width: 100%;
         }
@@ -50,13 +73,13 @@
     }
   }
 
+  /* stylelint-disable-next-line */
   &:focus {
-    outline: 2px solid $black;
+    outline: 2px solid var(--color-black);
     &:not(&:focus-visible) {
       outline: none;
     }
   }
-
   
   &#newvisions, &#new-visions {
     @include branded-portfolio-card($newvisions);
@@ -73,36 +96,6 @@
   &#knowroaming {
     @include branded-portfolio-card($knowroaming)
   }
-
-  .portfolio-card-text {
-    z-index: 1;
-    h2 {
-      display: inline;
-      position: relative;
-      overflow: visible;
-      font-size: 32px;
-      &::before { // for the animated underline
-        content: '';
-        position: absolute;
-        width: 0%;
-        height: 4px;
-        // height: 100%;
-        bottom: 0;
-        background-color: $white;//transparent;
-        z-index: -1;
-        transition: width $animation-ease 500ms;
-      }
-    }
-    span {
-      display: inline;
-      font-size: 20px;
-    }
-
-  }
-
-
-
-  
 
   .portfolio-card-image.using-background { 
     position: relative;

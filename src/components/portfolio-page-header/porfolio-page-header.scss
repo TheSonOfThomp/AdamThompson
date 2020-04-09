@@ -1,5 +1,5 @@
 @import '../../style/colours.scss';
-@import '../../style/variables.sass';
+@import '../../style/variables.scss';
 
 header.porfolio-page-header {
   position: relative;
@@ -15,7 +15,7 @@ header.porfolio-page-header {
     margin-left: 12px;
     color: $black;
     font-size: 28px;
-    font-family: $sans-serif;
+    font-family: var(--font-serif);
     font-weight: 400;
   }
   a {

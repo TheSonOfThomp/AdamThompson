@@ -65,9 +65,6 @@ $page-height: 11in;
       font-size: 1.1em;
     }
 
-    .blurb, .resume-body {
-    }
-
     .resume-header {
       grid-template-columns: 1fr $centre-col-fr 1fr;
       grid-column: span 3;
@@ -131,11 +128,6 @@ $page-height: 11in;
     }
     &#page-2 {
       position: relative;
-
-      .tool {
-        img {
-        }
-      }
       .resume-footer {
         display: none;
         grid-column: 2/3;

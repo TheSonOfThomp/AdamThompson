@@ -1,10 +1,10 @@
-@import '../../style/variables.sass';
-@import '../../style/mixins.sass';
+@use '../../style/variables.scss';
+@use '../../style/mixins.sass' as *;
 
 .card {
     border-radius: 4px;
     padding: 16px;
-	@include animate-elements(all, 0.2s, $animation-ease);
+	@include animate-elements(all, 0.2s, variables.$animation-ease);
     @include elevation(8);
     
     &.clickable {
@@ -14,8 +14,8 @@
             transform: translate(0, -8px);
         }
         &:active {
-            transform: translate(0, 0);
             @include elevation(8);
+            transform: translate(0, 0);
         }
     }
 }

@@ -1,5 +1,5 @@
 @import '../../style/colours.scss';
-@import '../../style/variables.sass';
+@import '../../style/variables.scss';
 @import '../../style/mixins.sass';
 
 @mixin brandedPortfolio($brand){
@@ -23,7 +23,7 @@
   }
 }
 
-$full-width-margin: calc((#{$folio-max-width} - 100vw)/2);
+$full-width-margin: calc((#{$folio-max-width} - 100vw) / 2);
 
 
 main.portfolio {
@@ -40,7 +40,7 @@ main.portfolio {
   align-items: flex-end;
   justify-items: left;
   justify-content: left;
-  font-family: $sans-serif;
+  font-family: var(--font-serif);
 
   // Quick links buttons
   .quick-links-container {
@@ -60,30 +60,6 @@ main.portfolio {
       
       * {
         max-width: $folio-max-width;
-      }
-      
-      // Top TL;DR section
-      .tldr {
-        max-width: none;
-        h2 {
-          font-size: 36px
-        }
-        h4 {
-          font-weight: 300
-        }
-
-        .cover-image {
-          max-width: none;
-          width: 100vw;
-          padding: 16px 0;
-          margin: 48px 0 0 -16px;
-          // margin-left: -16px; //$full-width-margin;
-          background-color: var(--color-black);
-
-          figcaption {
-            display: none;
-          }
-        }
       }
 
       h1 {
@@ -160,7 +136,7 @@ main.portfolio {
         figcaption {
           text-align: center;
           font-size: 1rem;
-          font-family: $sans-serif;
+          font-family: var(--font-serif);
           color: $med_grey;
           font-weight: 500;
           line-height: 1.5em;
@@ -168,6 +144,29 @@ main.portfolio {
           margin: 0 auto;
         }
 
+      }
+      // Top TL;DR section
+      .tldr {
+        max-width: none;
+        h2 {
+          font-size: 36px
+        }
+        h4 {
+          font-weight: 300
+        }
+
+        .cover-image {
+          max-width: none;
+          width: 100vw;
+          padding: 16px 0;
+          margin: 48px 0 0 -16px;
+          // margin-left: -16px; //$full-width-margin;
+          background-color: var(--color-black);
+
+          figcaption {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -181,7 +180,10 @@ main.portfolio {
 }
 
 // GATSBY IMAGE HACKS
-div.gatsby-image { p { display: none; } }
+div.gatsby-image { 
+  /* stylelint-disable-next-line */
+  p { display: none; } 
+}
 
 div.vertical {
   figure.gatsby-resp-image-figure {

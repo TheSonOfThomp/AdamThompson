@@ -1,17 +1,17 @@
-@import '../../style/colours.scss';
-@import '../../style/variables.sass';
+@import '../../style/variables.scss';
 
 .banner {
 	z-index: 1;
-	color: $white;
 	display: grid;
+	margin: 16px 0;
 	grid-auto-flow: column;
-	align-items: baseline;
-	justify-items: center;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: 'logo nav';
-	margin: 16px 0;
-
+	align-items: baseline;
+	justify-items: center;
+	color: var(--color-white);
+	font-family: var(--font-sans);
+	
 	@media screen and (max-width: $breakpoint-medium) {
 		margin: 16px
 	}
@@ -20,7 +20,7 @@
 	}
 
 	a {
-		color: $white;
+		color: var(--color-white);
 	}
 
 	#banner-logo {
