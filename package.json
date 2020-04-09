@@ -42,7 +42,10 @@
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
     "react-recaptcha": "^2.3.10",
-    "style-loader": "^0.23.1"
+    "style-loader": "^0.23.1",
+    "stylelint": "^13.3.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-sass-guidelines": "^7.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.3",
