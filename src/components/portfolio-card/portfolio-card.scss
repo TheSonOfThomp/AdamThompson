@@ -21,7 +21,7 @@
 .portfolio-card {
   @include clickable-card(2, 4);
   @include animate(background-color);
-  // restores all transition properties (2nd mixin resets them)
+  // restores all transition properties (2nd mixin resets them)\
   transition-property: box-shadow, transform, background-color;
   /* stylelint-disable-next-line order/properties-order */
   position: relative;
@@ -119,13 +119,16 @@
   .portfolio-card-image.using-img-tag {
     @media screen and (max-width: $breakpoint-xsmall) {
       position: absolute;
+      top: 16px;
+      right: 16px;
+      bottom: 16px;
+      left: 16px;
       display: flex;
       width: calc(100% - 32px);
       height: calc(100% - 32px);
       justify-content: center;
       padding: 0;
       margin: auto;
-      inset: 16px;
       opacity: 0.2;
     }
 

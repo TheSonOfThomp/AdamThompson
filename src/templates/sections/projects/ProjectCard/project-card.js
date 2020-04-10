@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faNpm } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
@@ -19,13 +18,5 @@ const ProjectCard = ({project}) => {
       <FontAwesomeIcon className="project-icon" icon={iconObj} size="sm" />
   </a>
 )};
-
-ProjectCard.propTypes = {
-  // bla: PropTypes.string,
-};
-
-ProjectCard.defaultProps = {
-  // bla: 'test',
-};
 
 export default ProjectCard;
