@@ -1,5 +1,5 @@
 @import '../../style/variables';
-@import '../../style/mixins.scss';
+@import '../../style/mixins';
 
 .card {
   @include animate(all, 0.2s, $animation-ease);
