@@ -6,7 +6,7 @@ import BlogPostLink from "./BlogPostLink/BlogPostLink";
 
 const BlogSection = () => {
   return (
-    <Section title="Blog">
+    <Section title="Writing" id="blog">
       {posts.map(post => {
         console.log(post)
         return (
