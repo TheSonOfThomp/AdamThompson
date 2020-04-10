@@ -1,48 +1,11 @@
-@import '../../../style/colours.scss';
-@import '../../../style/variables.sass';
-@import '../../../style/mixins.sass';
+@import '../../../style/colours';
+@import '../../../style/variables';
+@import '../../../style/mixins';
 
 section#projects {
-  // padding: 0;
   .content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
     grid-gap: 12px;
-
-    .project-card {
-      display: grid;
-      grid-gap: 4px;
-      grid-template-areas: 'header .' 'description description';
-      border-radius: 2px;
-      padding: 16px;
-      border-bottom: none;
-      border: none;
-      @include elevation(1.5);
-      transition: (box-shadow, transform) $animation-ease 500ms;
-      transform: scale(1);
-      transform-origin: 50% 50%;
-
-      &:hover {
-        @include elevation(3);
-        transform: scale(1.04);
-        // border: 1px solid $green;
-      }
-
-      > h2 {
-        grid-area: header;
-        align-self: center;
-        justify-self: left;
-        margin: 0;
-        white-space: nowrap;
-      }
-      > span {
-        grid-area: description;
-      }
-      > svg {
-        align-self: center;
-        justify-self: right;
-      }
-    }
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   }
-
 }

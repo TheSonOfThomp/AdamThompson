@@ -20,7 +20,7 @@ const AboutSection = ({ data }) => {
   const about = aboutQuery.allMarkdownRemark.nodes[0].html
   return (
     <Section title="About" className="green-divider">
-      <span id="about-text" dangerouslySetInnerHTML={{ __html: about }}></span>
+      <span className="about-text" dangerouslySetInnerHTML={{ __html: about }}></span>
     </Section>
   )
 }

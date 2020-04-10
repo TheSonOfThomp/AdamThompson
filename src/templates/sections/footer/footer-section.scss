@@ -1,22 +1,24 @@
-@import '../../../style/colours.scss';
-@import '../../../style/variables.sass';
-@import '../../../style/mixins.sass';
+@import '../../../style/colours';
+@import '../../../style/variables';
+@import '../../../style/mixins';
 
 footer {
   display: grid;
-  grid-auto-rows: 64px;
-  align-items: center;
   width: 100%;
+  align-items: center;
   margin-top: 48px;
   background-color: var(--color-green);
   color: var(--color-white);
   font-weight: 300;
+  grid-auto-rows: 64px;
+
   .footer-content {
-    justify-self: center;
     display: flex;
-    justify-content: left;
     width: 100vw;
     max-width: $content-width;
+    justify-content: left;
+    justify-self: center;
+
     span {
       padding: 16px;
     }

@@ -1,22 +1,28 @@
-@import './colours.scss';
-@import './variables.sass';
-@import './mixins.sass';
+@import url("https://use.typekit.net/onu2sfw.css");
+@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url(https://gist.githubusercontent.com/TheSonOfThomp/052a69f99d1a1852727aad80340a7ecb/raw/3da7ea4949f0d5de34c19adfb5f03e2e8af60f68/trig.sass);
+@import './colours';
+@import './typography';
+
+@import './variables';
+@import './mixins';
 
 *::selection
-	background: $green_highlight /* WebKit/Blink Browsers */
+	background: var(--color-green-highlight) /* WebKit/Blink Browsers */
 *::-moz-selection 
-	background: $green_highlight /* Gecko Browsers */
+	background: var(--color-green-highlight) /* Gecko Browsers */
 
 html
 	font-size: 16px
-	+alternateChars()
+	font-feature-settings: 'ss01';
 	scroll-behavior: smooth;
 	body 
-		background: $white
+		background: var(--color-white)
 		padding: 0
 		margin: 0
-		font-family: $sans-serif
-		color: $black
+		font-family: var(--font-sans)
+		color: var(--color-black)
 		font-weight: 300
 		overflow-x: hidden
 
@@ -45,12 +51,12 @@ html
 			outline-offset: 0.25em;
 
 /* ------ HELPER CLASSES ------ */
-.fix-this 
-	border: 1px solid red;
-	background-color: rgba(255, 0, 0, 0.2);
+// .fix-this 
+// 	border: 1px solid red;
+// 	background-color: rgba(255, 0, 0, 0.2);
 
-.mobile-only
-	display: none
+// .mobile-only
+// 	display: none
 
 .hide-mobile
 	@media screen and (max-width: $breakpoint-small)

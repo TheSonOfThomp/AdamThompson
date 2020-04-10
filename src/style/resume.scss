@@ -1,91 +1,97 @@
-@import './colours.scss';
-@import './mixins.sass';
+/* stylelint-disable selector-max-compound-selectors */
+/* stylelint-disablemax-nesting-depth */
+
+@import './colours';
+@import './mixins';
 $page-margin-side: 0.5in;
 $page-margin-top: 0.375in;
 $page-height: 11in;
 
-.captcha-container{
+.captcha-container {
+  height: 100vh;
   padding: 16px;
   background-color: #eee;
-  height: 100vh;
 }
 
 @page {
   margin: $page-margin-top $page-margin-side;
+
   .resume-container {
     display: none;
   }
 }
+
 .resume-container {
-  background-color: #eee;
   display: grid;
+  background-color: #eee;
   grid-auto-flow: row;
   grid-gap: 0.25in;
   justify-items: center;
   
   .resume-page {
-    padding: 0;
-    margin: 0;
-    @media screen {
-      padding: $page-margin-top $page-margin-side;
-      width: 8.5in - 2 * $page-margin-side;
-      max-height: $page-height - 2 * $page-margin-top;
-      @include elevation(2);
-    }
 
     $centre-col-fr: 7fr;
     display: grid;
-    grid-template-columns: 1fr $centre-col-fr 1fr;
-    grid-gap: 8pt;
+    padding: 0;
+    margin: 0;
     background-color: #fff;
     font-size: 12pt;
     font-weight: 300;
+    grid-gap: 8pt;
+    grid-template-columns: 1fr $centre-col-fr 1fr;
 
-    h1, h2, h3, h4, ul {
-      margin: 0
+    h1,
+    h2,
+    h3,
+    h4,
+    ul {
+      margin: 0;
     }
+
     h1 { 
-      font-size: 2.4em; 
+      font-size: 2.4em;
       font-weight: 700;
     }
+
     h2 { 
       font-size: 0.9em;
-      text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 2pt;
+      text-transform: uppercase;
     }
+
     h3 { 
-      font-size: 1.1rem; 
-      color: $green_small;}
-      a {
-        font-weight: inherit;
-        border-bottom: none;
-      }
+      color: $green_small;
+      font-size: 1.1rem;}
+
+    a {
+      border-bottom: unset;
+      font-weight: inherit;
+    }
+
     h4 { 
       font-size: 1.1em;
     }
 
-    .blurb, .resume-body {
-    }
-
     .resume-header {
-      grid-template-columns: 1fr $centre-col-fr 1fr;
       grid-column: span 3;
+      grid-template-columns: 1fr $centre-col-fr 1fr;
     }
     
     
     .resume-body {
+      display: grid;
+      // max-width: 76%;
+      max-width: 100%;
+      margin: auto;
+      grid-column: 2/3;
+      grid-gap: 12pt; // gap between columns
+      grid-template-columns: 1fr;
+
       .blurb {
         font-style: italic;
         grid-column: span 1;
       }
-      // max-width: 76%;
-      max-width: 100%;
-      grid-column: 2/3;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-gap: 12pt; // gap between columns
 
       &.full-width {
         grid-template-columns: 1fr;
@@ -108,17 +114,19 @@ $page-height: 11in;
           
           &#projects .column-section-contents,
           &#volunteer .column-section-contents {
-            grid-template-columns: repeat(2, 1fr);
             grid-gap: 8pt 12pt; // gap between entries
+            grid-template-columns: repeat(2, 1fr);
           }
 
           &#tools .column-section-contents {
             display: block;
             font-size: 12pt;
             line-height: 1.5em;
+
             .tool {
               &:not(:last-child) {
                 margin-right: 0.67em;
+
                 &::after {
                   content: '';
                 }
@@ -129,25 +137,29 @@ $page-height: 11in;
       }
 
     }
+
     &#page-2 {
       position: relative;
 
-      .tool {
-        img {
-        }
-      }
       .resume-footer {
         display: none;
-        grid-column: 2/3;
-        grid-auto-flow: row;
         justify-content: right;
+        grid-auto-flow: row;
+        grid-column: 2/3;
+
         a {
-          text-align: right;
-          font-weight: 400;
           color: $green_small;
           font-size: 0.9em;
+          font-weight: 400;
+          text-align: right;
         }
       }
+    }
+    @media screen {
+      @include elevation(2);
+      width: 8.5in - 2 * $page-margin-side;
+      max-height: $page-height - 2 * $page-margin-top;
+      padding: $page-margin-top $page-margin-side;
     }
   }
 }

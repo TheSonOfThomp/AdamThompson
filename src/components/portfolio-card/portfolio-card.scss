@@ -1,149 +1,160 @@
-@import '../../style/colours.scss';
-@import '../../style/variables.sass';
-@import '../../style/mixins.sass';
+@import '../../style/colours';
+@import '../../style/variables';
+@import '../../style/mixins';
 
 @mixin branded-portfolio-card($brandColor) {
-
+  &:hover {
+    background-color: mix($white, $brandColor, 95%);
+  }
+  
   &:focus {
     outline-color: $brandColor;
   }
-  h2 {
+
+  .portfolio-card-title {
     &::before {
       background-color: $brandColor;
     }
   }
-
-  background-color: mix($white, $brandColor, 95%);
 }
 
 .portfolio-card {
+  @include clickable-card(2, 4);
+  @include animate(background-color);
+  // restores all transition properties (2nd mixin resets them)\
+  transition-property: box-shadow, transform, background-color;
+  /* stylelint-disable-next-line order/properties-order */
   position: relative;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 100%;
-  grid-gap: 16px;
+  min-height: 25%;
+  min-height: 25vh;
   align-items: center;
   padding: 32px;
-  min-height: 25%; min-height: 25vh;
-  color: $black;
+  border: unset;
+  background-color: var(--color-white);
+  border-radius: 4px;
+  color: var(--color-black);
+  grid-gap: 16px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 100%;
   text-align: left;
   text-decoration: none;
-  border: none;
-  background-color: $white;
-  border-radius: 0px;
-  transition: (box-shadow, transform) $animation-ease 500ms;
-  transform-origin: 50% 50%;
-  @include elevation(1);
-  
-  &:hover {
-    border: none;
-    text-decoration: none;
-    transform: scale(1.04);
-    @include elevation(2);
-    z-index: 2;
-    &, &:focus {
-      h2 {
-        &::before {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  &:focus {
-    outline: 2px solid $black;
-    &:not(&:focus-visible) {
-      outline: none;
-    }
-  }
-
-  
-  &#newvisions, &#new-visions {
-    @include branded-portfolio-card($newvisions);
-  }
-  &#chameleon {
-    @include branded-portfolio-card($chameleon);
-  }
-  &#noom {
-    @include branded-portfolio-card($noom)
-  }
-  &#smrtwatr, &#smrt-watr {
-    @include branded-portfolio-card($smrtwatr)
-  }
-  &#knowroaming {
-    @include branded-portfolio-card($knowroaming)
-  }
-
-  .portfolio-card-text {
-    z-index: 1;
-    h2 {
-      display: inline;
-      position: relative;
-      overflow: visible;
-      font-size: 32px;
-      &::before { // for the animated underline
-        content: '';
-        position: absolute;
-        width: 0%;
-        height: 4px;
-        // height: 100%;
-        bottom: 0;
-        background-color: $white;//transparent;
-        z-index: -1;
-        transition: width $animation-ease 500ms;
-      }
-    }
-    span {
-      display: inline;
-      font-size: 20px;
-    }
-
-  }
-
-
-
-  
-
-  .portfolio-card-image.using-background { 
-    position: relative;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    justify-self: center;
-    @media screen and (max-width: $breakpoint-xsmall) {
-      position: absolute;
-      max-width: 100%; //calc(100% - 16px);
-      max-height: 100%; //calc(100% - 16px);
-      z-index: 0;
-      opacity: 0.1;
-    }
-  }
-
-  .portfolio-card-image.using-img-tag {
-    padding: 16px;
-    img {
-      object-fit: contain;
-      max-width: 100%;
-    }
-    @media screen and (max-width: $breakpoint-xsmall) {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      opacity: 0.2;
-      width: 100%;
-      height: 100%;
-      padding: 0;
-      margin: auto;
-    }
-  }
 
   @media screen and (max-width: $breakpoint-xsmall) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
+
+  .portfolio-card-text {
+    z-index: 1;
+  }
+
+  .portfolio-card-title {
+    position: relative;
+    display: inline;
+    overflow: visible;
+    font-size: 32px;
+    font-size: clamp(24px, 2vw, 32px);
+
+    &::before { // for the animated underline
+      @include animate(width);
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      width: 0%;
+      height: 4px;
+      background-color: var(--color-white);
+      content: '';
+
+      @media screen and (max-width: $breakpoint-xsmall) {
+        width: 100%; // show underline on mobile
+      }
+    }
+  }
+
+  .portfolio-card-tagline {
+    display: inline;
+    font-size: 20px;
+  }
+  
+  &:hover {
+    border: unset;
+    text-decoration: none;
+
+    .portfolio-card-title::before {
+      width: 100%;
+    }
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-black);
+
+    &:not(&:focus-visible) {
+      outline: none;
+    }
+  }
+  
+  &#newvisions,
+  &#new-visions {
+    @include branded-portfolio-card($newvisions);
+  }
+
+  &#chameleon {
+    @include branded-portfolio-card($chameleon);
+  }
+
+  &#noom {
+    @include branded-portfolio-card($noom);
+  }
+
+  &#smrtwatr,
+  &#smrt-watr {
+    @include branded-portfolio-card($smrtwatr);
+  }
+
+  &#knowroaming {
+    @include branded-portfolio-card($knowroaming);
+  }
+
+  .portfolio-card-image.using-img-tag {
+    @media screen and (max-width: $breakpoint-xsmall) {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      bottom: 16px;
+      left: 16px;
+      display: flex;
+      width: calc(100% - 32px);
+      height: calc(100% - 32px);
+      justify-content: center;
+      padding: 0;
+      margin: auto;
+      opacity: 0.2;
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // .portfolio-card-image.using-background { 
+  //   position: relative;
+  //   width: 100%;
+  //   max-width: 100%;
+  //   height: 100%;
+  //   max-height: 100%;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   cursor: pointer;
+  //   justify-self: center;
+  //   @media screen and (max-width: $breakpoint-xsmall) {
+  //     position: absolute;
+  //     z-index: 0;
+  //     max-width: 100%; //calc(100% - 16px);
+  //     max-height: 100%; //calc(100% - 16px);
+  //     opacity: 0.1;
+  //   }
+  // }
 }

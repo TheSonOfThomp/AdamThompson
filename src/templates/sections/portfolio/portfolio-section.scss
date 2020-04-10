@@ -1,15 +1,15 @@
-@import '../../../style/variables.sass';
+@import '../../../style/variables';
 
-.section#portfolio .content {  
+.section#portfolio {  
   .portfolio-cards-container {
     display: grid;
+    grid-gap: 24px;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 8px;
     
     
     @media screen and (max-width: $breakpoint-xsmall) {
-      grid-template-columns: repeat(1, 1fr);
       grid-gap: 16px;
+      grid-template-columns: repeat(1, 1fr);
     }
     
     .double-wide {
@@ -19,5 +19,4 @@
       }
     }
   }
-
 }

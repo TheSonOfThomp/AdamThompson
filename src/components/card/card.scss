@@ -1,21 +1,24 @@
-@import '../../style/variables.sass';
-@import '../../style/mixins.sass';
+@import '../../style/variables';
+@import '../../style/mixins';
 
 .card {
-    border-radius: 4px;
-    padding: 16px;
-	@include animate-elements(all, 0.2s, $animation-ease);
-    @include elevation(8);
+  @include animate(all, 0.2s, $animation-ease);
+  @include elevation(8);
+  padding: 16px;
+  border-radius: 4px;
     
-    &.clickable {
-        @include elevation(16);
-        &:hover, &:focus {
-            @include elevation(24);
-            transform: translate(0, -8px);
-        }
-        &:active {
-            transform: translate(0, 0);
-            @include elevation(8);
-        }
+  &.clickable {
+    @include elevation(16);
+
+    &:hover,
+    &:focus {
+      @include elevation(24);
+      transform: translate(0, -8px);
     }
+
+    &:active {
+      @include elevation(8);
+      transform: translate(0, 0);
+    }
+  }
 }

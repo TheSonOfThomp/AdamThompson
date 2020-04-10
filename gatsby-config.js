@@ -3,13 +3,21 @@ module.exports = {
     title: `Adam Thompson`,
     description: `Designer. Developer. Maker.`,
     author: `@thesonofthomp`,
+    siteUrl: 'http://www.thesonofthomp.com',
+    keywords: [`adam`, `thompson`, `ux`, `designer`, `developer`, `engineer`, `waterloo`]
   },
   plugins: [
-    `gatsby-plugin-recaptcha`, // loads reCaptcha
+    // `gatsby-plugin-recaptcha`, // loads reCaptcha
     `gatsby-plugin-sass`, // loads SASS/SCSS files
     `gatsby-plugin-resolve-src`, // sets 'path/to' == 'src/path/to'
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-41604709-1",
+      }
+    },
     {
       resolve: `gatsby-transformer-remark`, // for parsing markdown
       options: {

@@ -1,0 +1,33 @@
+@import '../../../../style/mixins';
+
+a.project-card {
+  @include clickable-card(1.5, 3);
+  display: grid;
+  padding: 16px;
+  border: unset;
+  border-bottom: unset;
+  border-radius: 2px;
+  grid-gap: 4px;
+  grid-template-areas: 'header .' 'description description';
+  
+  &:hover {
+    border-bottom: unset;
+  }
+
+  .project-title {
+    align-self: center;
+    margin: 0;
+    grid-area: header;
+    justify-self: left;
+    white-space: nowrap;
+  }
+  
+  .project-description {
+    grid-area: description;
+  }
+  
+  .project-icon {
+    align-self: center;
+    justify-self: right;
+  }
+}

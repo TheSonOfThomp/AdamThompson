@@ -1,4 +1,6 @@
-import React, { useState } from "react"
+import React, { 
+  // useState
+} from "react"
 import SocialLink from "../social-link/social-link";
 import monogram from '../../images/monogram-white.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,18 +10,18 @@ import './navbar.scss';
 
 export const Navbar = () => {
 
-  const [isMenuOpen, setIsMenuOpen] = useState()
+  // const [isMenuOpen, setIsMenuOpen] = useState()
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+  // const toggleMenu = () => {
+  //   setIsMenuOpen(!isMenuOpen)
+  // }
 
-  const menuClass = () =>  {
-    return isMenuOpen ? 'menu-open' : 'menu-closed';
-  }
+  // const menuClass = () =>  {
+  //   return isMenuOpen ? 'menu-open' : 'menu-closed';
+  // }
 
   return (
-    <banner className="banner">
+    <div className="banner" role="banner">
       <div id="banner-logo" role="heading">
         <img src={monogram} alt="A.T. monogram"></img>
         <h1>Adam Thompson</h1>
@@ -28,20 +30,22 @@ export const Navbar = () => {
       <nav id="banner-nav">
         <a className="nav-link hide-mobile" id="nav-portfolio" href="#portfolio">Portfolio</a>
         <a className="nav-link hide-mobile" id="nav-about" href="#about">About</a>
+        <a className="nav-link hide-mobile" id="nav-about" href="#projects">Projects</a>
+        <a className="nav-link hide-mobile" id="nav-about" href="#blog">Blog</a>
         <SocialLink name="Twitter" url="https://www.twitter.com/thesonofthomp/">
-          <FontAwesomeIcon icon={faTwitter} size="s" />
+          <FontAwesomeIcon icon={faTwitter} size="sm" />
         </SocialLink>
         <SocialLink name="GitHub" url="https://www.github.com/thesonofthomp">
-          <FontAwesomeIcon icon={faGithub} size="s" />
+          <FontAwesomeIcon icon={faGithub} size="sm" />
         </SocialLink>
         <SocialLink name="Linkedin" url="https://www.linkedin.com/in/adammthompson/">
-          <FontAwesomeIcon icon={faLinkedinIn} size="s" />
+          <FontAwesomeIcon icon={faLinkedinIn} size="sm" />
         </SocialLink>
         <SocialLink name="Codepen" url="https://codepen.io/TheSonOfThomp/">
-          <FontAwesomeIcon icon={faCodepen} size="s" />
+          <FontAwesomeIcon icon={faCodepen} size="sm" />
         </SocialLink>
         <SocialLink name="Medium" url="https://medium.com/@TheSonOfThomp">
-          <FontAwesomeIcon icon={faMedium} size="s" />
+          <FontAwesomeIcon icon={faMedium} size="sm" />
         </SocialLink>
       </nav>
       
@@ -49,6 +53,6 @@ export const Navbar = () => {
         <FontAwesomeIcon icon={ f } size="2xl" />  
       </a> */}
   
-    </banner>
+    </div>
   )
 }
