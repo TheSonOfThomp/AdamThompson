@@ -4,8 +4,8 @@
 .card {
   @include animate-elements(all, 0.2s, variables.$animation-ease);
   @include elevation(8);
-  border-radius: 4px;
   padding: 16px;
+  border-radius: 4px;
     
   &.clickable {
     @include elevation(16);

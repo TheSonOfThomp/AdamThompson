@@ -12,11 +12,11 @@
   }
 
   a.print-resume {
-    align-items: baseline;
-    color: $green_small;
     display: inline-flex;
-    line-height: 1em;
+    align-items: baseline;
     margin-top: 24px;
+    color: $green_small;
+    line-height: 1em;
 
     svg {
       margin-left: 4px;

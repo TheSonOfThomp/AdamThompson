@@ -1,18 +1,18 @@
 .tool {
-  align-items: center;
-  display: inline-flex;
-  font: inherit;
-  height: 1em;
   position: relative;
+  display: inline-flex;
+  height: 1em;
+  align-items: center;
+  font: inherit;
 
   img {
     bottom: -0.125em;
-    height: 1em;
     width: auto;
+    height: 1em;
   }
 
   span {
-    font-size: 1em;
     padding-left: 0.25em;
+    font-size: 1em;
   }
 }

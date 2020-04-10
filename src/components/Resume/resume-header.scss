@@ -1,15 +1,15 @@
 @import '../../style/colours';
 
 .resume-header {
-  align-items: center;
   display: grid;
+  align-items: center;
   grid-auto-flow: column;
   grid-gap: 16pt;
   grid-template-columns: auto auto 1fr;
   
   #monogram {
-    height: 24pt;
     width: auto;
+    height: 24pt;
   }
 
   #contacts {

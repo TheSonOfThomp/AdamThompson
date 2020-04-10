@@ -27,12 +27,12 @@ $full-width-margin: calc((#{$folio-max-width} - 100vw) / 2);
 
 
 main.portfolio {
-  align-items: flex-end;
   display: grid;
+  align-items: flex-end;
+  justify-content: left;
   font-family: var(--font-sans);
   grid-auto-columns: 100vw;
   grid-template-rows: 64px;
-  justify-content: left;
   justify-items: left;
 
   &#newvisions { @include brandedPortfolio('newvisions');}
@@ -45,9 +45,9 @@ main.portfolio {
   // Quick links buttons
   .quick-links-container {
     display: grid;
-    grid-auto-flow: column;
-    margin: 8px 0;
     width: 100%;
+    margin: 8px 0;
+    grid-auto-flow: column;
   }
 
   .portfolio-content-container {
@@ -55,9 +55,9 @@ main.portfolio {
   }
 
   .portfolio-content {
+    position: relative;
     display: block;
     margin: 0 16px;
-    position: relative;
     
     * {
       max-width: $folio-max-width;
@@ -65,10 +65,10 @@ main.portfolio {
   }
   
   h1 {
+    margin: 24px auto 0;
     color: $eigengrau;
     font-size: 72px;
     font-weight: 600;
-    margin: 24px auto 0;
     text-align: left;
 
     @media screen and (max-width: $breakpoint-small) {
@@ -77,39 +77,39 @@ main.portfolio {
   }
 
   h2 {
+    margin: 0 auto 24px;
     color: $eigengrau;
     font-size: 56px;
     font-style: normal;
     font-weight: bold;
-    margin: 0 auto 24px;
-
+    
     @media screen and (max-width: $breakpoint-small) {
       font-size: 8vw;
     }
   }
 
   h3 {
+    margin: 16px auto;
     color: $dark_grey;
     font-size: 32px;
     font-weight: 400;
     line-height: 1.6em;
-    margin: 16px auto;
   }
 
   h4 {
+    margin: 16px auto;
     color: $dark_grey;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6em;
-    margin: 16px auto;
   }
 
   p {
+    margin: 0 auto;
     color: $black;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6em;
-    margin: 0 auto;
 
     a {
       font-weight: 400;
@@ -123,34 +123,34 @@ main.portfolio {
 
   // Images & Video
   figure {
-    display: inherit;
-    height: auto;
-    margin: 12px auto;
-    max-width: $folio-max-width;
-    padding: 12px 0;
     position: relative;
-    text-align: center;
+    display: inherit;
     width: 100%;
+    max-width: $folio-max-width;
+    height: auto;
+    padding: 12px 0;
+    margin: 12px auto;
+    text-align: center;
 
     img {
+      position: relative;
       display: inline-block;
       margin: 8px auto;
-      position: relative;
     }
 
     iframe {
-      height: 560px;
       width: 100%;
+      height: 560px;
     }
 
     figcaption {
+      max-width: 50%;
+      margin: 0 auto;
       color: $med_grey;
       font-family: var(--font-serif);
       font-size: 1rem;
       font-weight: 500;
       line-height: 1.5em;
-      margin: 0 auto;
-      max-width: 50%;
       text-align: center;
     }
 
@@ -168,11 +168,11 @@ main.portfolio {
     }
 
     .cover-image {
-      background-color: var(--color-black);
-      margin: 48px 0 0 -16px;
+      width: 100vw;
       max-width: none;
       padding: 16px 0;
-      width: 100vw;
+      margin: 48px 0 0 -16px;
+      background-color: var(--color-black);
 
       /* stylelint-disable-next-line selector-max-compound-selectors */
       figcaption {
@@ -206,21 +206,21 @@ div.vertical {
     }
 
     img.gatsby-resp-image-image {
-      height: auto !important;
-      max-height: 512px !important;
-      max-width: 80vw;
       position: relative !important;
       width: auto !important;
+      max-width: 80vw;
+      height: auto !important;
+      max-height: 512px !important;
     }
   }
 }
 
 div.multiple {
   display: grid;
-  grid-auto-flow: column;
+  width: 100vw;
   justify-content: space-evenly;
   margin-left: $full-width-margin;
-  width: 100vw;
+  grid-auto-flow: column;
 
   figure.gatsby-resp-image-figure {
     display: flex;

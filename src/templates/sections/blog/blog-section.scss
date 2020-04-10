@@ -5,8 +5,8 @@ section#blog {
   text-align: left;
 
   a.blog-post {
-    align-items: baseline;
     display: inline-grid;
+    align-items: baseline;
     grid-auto-flow: column;
     grid-gap: 8px;
 

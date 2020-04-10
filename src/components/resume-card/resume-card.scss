@@ -4,17 +4,17 @@
 $image-height: 48px;
 
 .resume-card {
-  align-content: baseline;
-  border-radius: 2px;
   display: grid;
+  align-content: baseline;
+  justify-content: left;
+  border-radius: 2px;
   grid-gap: 8px;
   grid-template-columns: 1fr;
-  justify-content: left;
   text-align: left;
 
   .resume-card-header {
-    align-items: baseline;
     display: grid;
+    align-items: baseline;
     grid-gap: 2px;
     grid-template-areas: 'position location' 'company company';
 
@@ -46,8 +46,8 @@ $image-height: 48px;
   }
 
   p.summary {
-    font-weight: 500;
     margin: 0;
+    font-weight: 500;
     text-align: left;
   }
   

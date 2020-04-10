@@ -8,8 +8,8 @@
   grid-template-rows: 18pt auto;
   
   .entry-header {
-    align-items: baseline;
     display: grid;
+    align-items: baseline;
     grid-auto-flow: column;
     grid-gap: 0.5em; // spacing btwn title & company
     grid-template-areas: 'title company location';
@@ -32,13 +32,13 @@
 
   ul {
     display: grid;
+    padding-left: 0;
     grid-gap: 8pt; // gap btwn bullets
     list-style-type: none;
-    padding-left: 0;
     
     li {
-      padding-left: 1em;
       position: relative;
+      padding-left: 1em;
 
       &:first-child {
         margin-top: 0;
@@ -63,8 +63,8 @@
       padding: 0;
 
       li {
-        border: unset;
         padding-left: 0;
+        border: unset;
       }
     }
   }

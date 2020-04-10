@@ -1,16 +1,16 @@
 @import '../../style/variables';
 
 .banner {
-  align-items: baseline;
-  color: var(--color-white);
+  z-index: 1;
   display: grid;
+  align-items: baseline;
+  margin: 16px 0;
+  color: var(--color-white);
   font-family: var(--font-sans);
   grid-auto-flow: column;
   grid-template-areas: 'logo nav';
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  margin: 16px 0;
-  z-index: 1;
 	
   @media screen and (max-width: $breakpoint-medium) {
     margin: 16px;
@@ -24,19 +24,19 @@
   }
 
   #banner-logo {
-    align-items: center;
     display: grid;
+    align-items: center;
     grid-area: logo;
     grid-auto-flow: column;
     grid-gap: 16px;
     justify-self: left;
 
     h1 {
-      color: var(--color-white);
       display: inline-block;
+      margin: 0;
+      color: var(--color-white);
       font-size: 24px;
       font-weight: 400;
-      margin: 0;
       @media screen and (max-width: $breakpoint-medium) {
         font-size: 3vw;
       }

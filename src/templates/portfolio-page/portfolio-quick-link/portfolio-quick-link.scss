@@ -15,12 +15,12 @@
 }
 
 a.quick-link {
-  border-bottom: unset;
-  border-color: var(--color-green);
+  position: relative;
   bottom: 0;
   min-width: 96px;
   padding: 4px 8px;
-  position: relative;
+  border-color: var(--color-green);
+  border-bottom: unset;
   transition: padding $animation-ease 500ms;
     
   // @media screen and (max-width: $breakpoint-small) {
@@ -43,8 +43,8 @@ a.quick-link {
   }
 
   .quick-link-direction {
-    color: $eigengrau;
     display: block;
+    color: $eigengrau;
     font-weight: 600;
   }
 
@@ -53,11 +53,11 @@ a.quick-link {
   }
     
   &#prev-link {
-    border-left-style: solid;
+    padding-left: 8px;
     border-left-width: 4px;
+    border-left-style: solid;
     border-radius: 0 2px 2px 0;
     justify-self: start;
-    padding-left: 8px;
     text-align: left;
 
     &:hover {
@@ -66,11 +66,11 @@ a.quick-link {
   }
 
   &#next-link {
-    border-radius: 2px 0 0 2px;
-    border-right-style: solid;
-    border-right-width: 4px;
-    justify-self: end;
     padding-right: 8px;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-radius: 2px 0 0 2px;
+    justify-self: end;
     text-align: right;
 
     &:hover {

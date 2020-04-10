@@ -8,9 +8,9 @@ $page-margin-top: 0.375in;
 $page-height: 11in;
 
 .captcha-container {
-  background-color: #eee;
   height: 100vh;
   padding: 16px;
+  background-color: #eee;
 }
 
 @page {
@@ -22,8 +22,8 @@ $page-height: 11in;
 }
 
 .resume-container {
-  background-color: #eee;
   display: grid;
+  background-color: #eee;
   grid-auto-flow: row;
   grid-gap: 0.25in;
   justify-items: center;
@@ -31,14 +31,14 @@ $page-height: 11in;
   .resume-page {
 
     $centre-col-fr: 7fr;
-    background-color: #fff;
     display: grid;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
     font-size: 12pt;
     font-weight: 300;
     grid-gap: 8pt;
     grid-template-columns: 1fr $centre-col-fr 1fr;
-    margin: 0;
-    padding: 0;
 
     h1,
     h2,
@@ -81,12 +81,12 @@ $page-height: 11in;
     
     .resume-body {
       display: grid;
+      // max-width: 76%;
+      max-width: 100%;
+      margin: auto;
       grid-column: 2/3;
       grid-gap: 12pt; // gap between columns
       grid-template-columns: 1fr;
-      margin: auto;
-      // max-width: 76%;
-      max-width: 100%;
 
       .blurb {
         font-style: italic;
@@ -143,9 +143,9 @@ $page-height: 11in;
 
       .resume-footer {
         display: none;
+        justify-content: right;
         grid-auto-flow: row;
         grid-column: 2/3;
-        justify-content: right;
 
         a {
           color: $green_small;
@@ -157,9 +157,9 @@ $page-height: 11in;
     }
     @media screen {
       @include elevation(2);
+      width: 8.5in - 2 * $page-margin-side;
       max-height: $page-height - 2 * $page-margin-top;
       padding: $page-margin-top $page-margin-side;
-      width: 8.5in - 2 * $page-margin-side;
     }
   }
 }

@@ -4,32 +4,33 @@
 
 section.hero {
   $angle: 2deg;
-  align-items: center;
-  color: $white;
   display: grid;
+  overflow: hidden;
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  min-height: 640px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+
+  color: $white;
   grid-auto-flow: row;
   grid-row-gap: 0;
   grid-template-rows: 80px 1fr;
-  height: 100vh;
-  justify-content: center;
-  margin-bottom: 32px;
-  max-width: none;
-  min-height: 640px;
-  overflow: hidden;
   text-align: center;
-  width: 100vw;
 
   &.green-bg {
     position: relative;
 
     &::after {
       @include CornerToCornerGradient($light_green, $green);
-      content: '';
-      height: 100%;
       position: absolute;
+      width: 110%;
+      height: 100%;
+      content: '';
       transform: rotate($angle) translate(-9%, 0);
       transform-origin: 100% 100%;
-      width: 110%;
     }
   }
 
@@ -38,25 +39,25 @@ section.hero {
   }
 
   header {
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     font-family: var(--font-sans);
     font-weight: 400;
-    justify-content: center;
     pointer-events: none;
-    position: relative;
 
     * {
-      margin: auto;
       position: relative;
       z-index: 10;
+      margin: auto;
     }
 
     .tagline {
+      max-width: calc(100vw - 32px);
+      margin: 0 16px;
       font-size: 96px;
       font-weight: 600;
-      margin: 0 16px;
-      max-width: calc(100vw - 32px);
       
       @media screen and (max-width: $breakpoint-medium) {
         font-size: 12vw;
@@ -64,13 +65,13 @@ section.hero {
     }
     
     .bio-text {
+      position: relative;
+      max-width: calc(100vw - 32px);
+      margin: 0 16px;
       font-family: inherit;
       font-size: 24px;
       font-weight: 400;
       line-height: 2em;
-      margin: 0 16px;
-      max-width: calc(100vw - 32px);
-      position: relative;
       text-align: center;
       @media screen and (max-width: $breakpoint-small) {
         line-height: 1.5em;
@@ -78,26 +79,26 @@ section.hero {
     }
 
     .big-letters {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      right: 0;
+      left: 0;
+      width: 100%;
+      max-width: none;
+      margin: auto;
       color: $dark_green;
       font-size: 512px;
       font-weight: 600;
-      left: 0;
-      margin: auto;
-      max-width: none;
       opacity: 0.15;
-      position: absolute;
-      right: 0;
-      top: 50%;
       transform: translateY(-50%);
-      width: 100%;
-      z-index: 1;
       
       @media screen and (max-width: $breakpoint-small) {
         $letter-shift: 50%;
         /* stylelint-disable */
         #u {
-          left: 0;
           position: absolute;
+          left: 0;
           transform: translate(-$letter-shift, -50%);
         }
 
