@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "url": "https://medium.com/@TheSonOfThomp/atomic-styles-semantic-markup-eaa5b3b3e380",
+      "title": "Atomic Styles. Semantic Markup.",
+      "description": "When starting a new project or feature it’s a good idea to write semantic markup first, then style it the way you want. Building markup-first ensures that your product will make sense, and be…",
+      "imageUrl": null,
+      "datePublished": "2020-04-06T21:22:09.689Z",
+      "isCrawled": true
+    },
+    {
+      "url": "https://medium.com/@TheSonOfThomp/the-point-of-prototyping-4bff450dc659",
+      "title": "The Power of Prototyping",
+      "description": "The artifacts we create as digital designers rarely reflect the full and final product experience. We’re building complex, interactive products—the usefulness of our pictures and slideshows is…",
+      "imageUrl": "https://miro.medium.com/max/1200/1*KEcJM7oXDXzY1UlZaXIqXQ.jpeg",
+      "datePublished": "2020-01-03T15:17:22.175Z",
+      "isCrawled": true
+    },
+    {
+      "url": "https://medium.com/@TheSonOfThomp/leaving-artifact-behind-ea0673752976",
+      "title": "Leaving Artifact Behind",
+      "description": "I recently attended Artifact Conference in Austin, and listened to talks from some super talented people like Jen Simmons, Brad Frost and more. Over 3-days at Artifact I learned a lot, and was…",
+      "imageUrl": "https://miro.medium.com/max/1200/1*YL9NIXd8uHRHw7zD17Hz-Q.jpeg",
+      "datePublished": "2019-10-10T17:43:16.814Z",
+      "isCrawled": true
+    },
+    {
+      "url": "https://medium.com/@TheSonOfThomp/the-ux-trade-off-of-faceid-b5eb2d6beed0",
+      "title": "The UX trade-off of Face ID",
+      "description": "The great simplicity of Face ID comes when unlocking iPhone X every day, every time you use it. No more fumbling with the (now extinct) Home button to get in, just lift and look to unlock — that’s…",
+      "imageUrl": "https://miro.medium.com/max/1200/1*NnTloeooSnwP2sT7Utj3oA.jpeg",
+      "datePublished": "2017-09-13T18:48:22.997Z",
+      "isCrawled": true
+    }
+  ]
+}

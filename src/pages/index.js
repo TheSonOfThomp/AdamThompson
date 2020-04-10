@@ -9,7 +9,7 @@ import ResumeSection from "templates/sections/resume/resume-section";
 import 'style/global.sass';
 import PortfolioSection from "../templates/sections/portfolio/portfolio-section";
 import AboutSection from "../templates/sections/about/about-section";
-// import BlogSection from "../templates/sections/blog/blog-section";
+import BlogSection from "../templates/sections/blog/blog-section";
 import FooterSection from "../templates/sections/footer/footer-section";
 import ProjectsSection from "../templates/sections/projects/projects-section";
 import image from '../images/monogram.png'
@@ -32,7 +32,7 @@ class IndexPage extends React.Component {
 
         <ResumeSection></ResumeSection>
         
-        {/* <BlogSection></BlogSection> */}
+        <BlogSection></BlogSection>
 
         <FooterSection></FooterSection>
         

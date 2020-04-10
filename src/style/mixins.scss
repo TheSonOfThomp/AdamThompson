@@ -1,0 +1,63 @@
+@mixin verticalGradient($topColor, $bottomColor, $endPct) {
+  background: $topColor; /* Old browsers */
+  background: -webkit-gradient(linear, left top, left botton, color-stop(0%, $topColor), color-stop($endPct, $bottomColor)); /* Chrome,Safari4+ */
+  background: linear-gradient(to bottom, $topColor 0%, $bottomColor $endPct); /* W3C */
+}
+
+@mixin angledGradient($startCorner, $endCorner, $startColor, $endColor, $endPct) {
+  background: $endColor; /* Old browsers */
+  background: -webkit-gradient(linear, $startCorner, $endCorner, color-stop(0%, $startColor), color-stop($endPct, $endColor)); /* Chrome,Safari4+ */
+  background: linear-gradient(to $endCorner, $startColor 0%, $endColor $endPct); /* W3C */
+}
+
+@mixin radialGradient($from, $to) {
+  background: $to;
+  background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0%, $from), color-stop(100%, $to));
+  background: radial-gradient(circle, $from 0%, $to 100%);
+}
+
+@mixin CornerToCornerGradient($startColor, $endColor) {
+  @include angledGradient(top left, bottom right, $startColor, $endColor, 100%);
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin animate($what, $when, $how) {
+  transition: $what $when $how;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if ($inset) {
+    box-shadow: inset $top $left $blur $color;
+  }
+  @else {
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin elevation($level) {
+  $y: #{$level}px;
+  $blur: #{$level * 2}px;
+  @include box-shadow(0, $y, $blur, rgba(0,0,0, 0.25) );
+}
+
+@mixin clickable-card($start: 2, $end: 4, $scale: 1.05) {
+  @include elevation($start);
+  @include animate((box-shadow, transform), 500ms, $animation-ease);
+  z-index: 1;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  
+  &:hover {
+    @include elevation($end);
+    z-index: 2;
+    transform: scale($scale);
+  }
+}
+
+@function brandColor($brand) {
+  @return var(--color-#{$brand});
+}
+

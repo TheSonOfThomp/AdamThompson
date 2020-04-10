@@ -5,9 +5,13 @@
   "version": "0.1.0",
   "author": "Adam Thompson <adam.m.thompson@icloud.com>",
   "scripts": {
+    "pre": "node src/scripts/getMediumPosts.js",
+    "prebuild": "npm run pre",
     "build": "gatsby build",
+    "predevelop": "npm run pre",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
+    "prestart": "npm run pre",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
@@ -35,18 +39,14 @@
     "gatsby-transformer-json": "^2.2.12",
     "gatsby-transformer-remark": "^2.6.27",
     "gatsby-transformer-sharp": "^2.2.20",
-    "medium-sdk": "0.0.4",
+    "moment": "^2.24.0",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
     "react-recaptcha": "^2.3.10",
-    "style-loader": "^0.23.1",
-    "stylelint": "^13.3.1",
-    "stylelint-config-idiomatic-order": "^8.1.0",
-    "stylelint-config-recommended": "^3.0.0",
-    "stylelint-config-sass-guidelines": "^7.0.0"
+    "style-loader": "^0.23.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.3",
@@ -61,7 +61,12 @@
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "gatsby-plugin-resolve-src": "^2.0.0",
-    "prettier": "^1.18.2"
+    "jsdom": "^16.2.2",
+    "prettier": "^1.18.2",
+    "stylelint": "^13.3.1",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-sass-guidelines": "^7.0.0"
   },
   "keywords": [
     "gatsby"

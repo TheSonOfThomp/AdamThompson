@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 @import url(https://gist.githubusercontent.com/TheSonOfThomp/052a69f99d1a1852727aad80340a7ecb/raw/3da7ea4949f0d5de34c19adfb5f03e2e8af60f68/trig.sass);
-@import './colours.scss';
-@import './typography.scss';
+@import './colours';
+@import './typography';
 
-@import './variables.scss';
-@import './mixins.sass';
+@import './variables';
+@import './mixins';
 
 *::selection
 	background: var(--color-green-highlight) /* WebKit/Blink Browsers */
@@ -15,7 +15,7 @@
 
 html
 	font-size: 16px
-	+alternateChars()
+	font-feature-settings: 'ss01';
 	scroll-behavior: smooth;
 	body 
 		background: var(--color-white)
