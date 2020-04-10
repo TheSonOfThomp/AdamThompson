@@ -1,3 +1,5 @@
+@import './variables';
+
 @mixin verticalGradient($topColor, $bottomColor, $endPct) {
   background: $topColor; /* Old browsers */
   background: -webkit-gradient(linear, left top, left botton, color-stop(0%, $topColor), color-stop($endPct, $bottomColor)); /* Chrome,Safari4+ */

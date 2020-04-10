@@ -8,41 +8,4 @@ section#projects {
     grid-gap: 12px;
     grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   }
-
-  .project-card {
-    @include elevation(1.5);
-    display: grid;
-    padding: 16px;
-    border: unset;
-    border-bottom: unset;
-    border-radius: 2px;
-    grid-gap: 4px;
-    grid-template-areas: 'header .' 'description description';
-    transform: scale(1);
-    transform-origin: 50% 50%;
-    transition: (box-shadow, transform) $animation-ease 500ms;
-
-    &:hover {
-      @include elevation(3);
-      transform: scale(1.04);
-      // border: 1px solid $green;
-    }
-
-    > h2 {
-      align-self: center;
-      margin: 0;
-      grid-area: header;
-      justify-self: left;
-      white-space: nowrap;
-    }
-    
-    > span {
-      grid-area: description;
-    }
-    
-    > svg {
-      align-self: center;
-      justify-self: right;
-    }
-  }
 }
