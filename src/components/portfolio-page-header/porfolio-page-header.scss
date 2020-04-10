@@ -1,34 +1,36 @@
-@import '../../style/colours.scss';
-@import '../../style/variables.scss';
+@import '../../style/colours';
+@import '../../style/variables';
 
 header.porfolio-page-header {
-  position: relative;
-  z-index: 10;
   border-bottom: 2px solid $black;
+  justify-self: center;
+  max-width: $folio-max-width;
+  position: relative;
 
   width: 100%;
-  max-width: $folio-max-width;
-  justify-self: center;
+  z-index: 10;
 
   h1 {
+    color: $black;
+    font-family: var(--font-sans);
+    font-size: 28px;
+    font-weight: 400;
     margin: 0;
     margin-left: 12px;
-    color: $black;
-    font-size: 28px;
-    font-family: var(--font-serif);
-    font-weight: 400;
   }
+
   a {
-    display: inline-flex;
     align-content: center;
+    display: inline-flex;
     justify-content: flex-start;
     margin-left: 16px;
     
-    &:focus{
+    &:focus {
       outline-color: $black;
     }
   }
+
   a:hover {
-    border: none;
+    border: unset;
   }
 }

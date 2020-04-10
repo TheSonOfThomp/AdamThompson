@@ -1,72 +1,80 @@
-@import '../../../style/colours.scss';
-@import '../../../style/variables.scss';
+@import '../../../style/colours';
+@import '../../../style/variables';
 
+/* stylelint-disable-next-line */
 @mixin brandedQuicklink($brand) {
   border-color: var(--color-#{$brand});
+
   &:focus {
     outline-color: brandColor($brand);
   }
 
   .quick-link-label {
-    color: var(--color-#{$brand})
+    color: var(--color-#{$brand});
   }
 }
 
-  a.quick-link{
-    position: relative;
-    bottom: 0;
-    padding: 4px 8px;
-    min-width: 96px;
-    border-color: var(--color-green);
-    transition: padding $animation-ease 500ms;
-    border-bottom: none;
+a.quick-link {
+  border-bottom: unset;
+  border-color: var(--color-green);
+  bottom: 0;
+  min-width: 96px;
+  padding: 4px 8px;
+  position: relative;
+  transition: padding $animation-ease 500ms;
     
-    // @media screen and (max-width: $breakpoint-small) {
-    //   backdrop-filter: blur(4px);
-    //   background: var(--color-white-trans);
-    // }
+  // @media screen and (max-width: $breakpoint-small) {
+  //   backdrop-filter: blur(4px);
+  //   background: var(--color-white-trans);
+  // }
 
-    &.newvisions { @include brandedQuicklink('newvisions');}
-    &.noom { @include brandedQuicklink('noom');}
-    &.knowroaming { @include brandedQuicklink('knowroaming');}
-    &.chameleon { @include brandedQuicklink('chameleon');}
-    &.smrtwatr { @include brandedQuicklink('smrtwatr');}
+  &.newvisions { @include brandedQuicklink('newvisions');}
+  &.noom { @include brandedQuicklink('noom');}
+  &.knowroaming { @include brandedQuicklink('knowroaming');}
+  &.chameleon { @include brandedQuicklink('chameleon');}
+  &.smrtwatr { @include brandedQuicklink('smrtwatr');}
 
-    &:hover{
-      border-bottom: none; // overrides global
-    }
-    &:focus {
-      outline-color: $green;
-    }
-    .quick-link-direction {
-      display: block;
-      color: $eigengrau;
-      font-weight: 600
-    }
-    .quick-link-label {
-      color: var(--color-green);
-    }
+  &:hover {
+    border-bottom: unset; // overrides global
+  }
+
+  &:focus {
+    outline-color: $green;
+  }
+
+  .quick-link-direction {
+    color: $eigengrau;
+    display: block;
+    font-weight: 600;
+  }
+
+  .quick-link-label {
+    color: var(--color-green);
+  }
     
-    &#prev-link {
-      padding-left: 8px;
-      border-left-style: solid;
-      border-left-width: 4px; 
-      text-align: left;
-      border-radius: 0px 2px 2px 0px;
-      justify-self: start;
-      &:hover {
-        padding-left : 12px
-      }
-    }
-    &#next-link {
-      padding-right: 8px;
-      border-right-style: solid;
-      border-right-width: 4px; 
-      text-align: right;
-      border-radius: 2px 0px 0px 2px;
-      justify-self: end;
-      &:hover {
-        padding-right : 12px
-      }
+  &#prev-link {
+    border-left-style: solid;
+    border-left-width: 4px;
+    border-radius: 0 2px 2px 0;
+    justify-self: start;
+    padding-left: 8px;
+    text-align: left;
+
+    &:hover {
+      padding-left: 12px;
     }
   }
+
+  &#next-link {
+    border-radius: 2px 0 0 2px;
+    border-right-style: solid;
+    border-right-width: 4px;
+    justify-self: end;
+    padding-right: 8px;
+    text-align: right;
+
+    &:hover {
+      padding-right: 12px;
+    }
+  }
+}

@@ -1,19 +1,20 @@
-@import '../../style/variables.scss';
+@import '../../style/variables';
 
 section {
-	width: 100vw;
-	max-width: $content-width;
-	align-self: center;
-	justify-self: center;
-	display: grid;
+  align-self: center;
+  display: grid;
+  justify-self: center;
+  max-width: $content-width;
+  width: 100vw;
 	
-	&.section {
-		grid-auto-flow: row;
-		grid-auto-rows: auto auto;
-		grid-row-gap: 24px;
-		margin-bottom: 64px;
-		> * {
-			margin: auto 16px;
-		}
-	}
+  &.section {
+    grid-auto-flow: row;
+    grid-auto-rows: auto auto;
+    grid-row-gap: 24px;
+    margin-bottom: 64px;
+
+    > * {
+      margin: auto 16px;
+    }
+  }
 }

@@ -2,20 +2,23 @@
 @use '../../style/mixins.sass' as *;
 
 .card {
-    border-radius: 4px;
-    padding: 16px;
-	@include animate-elements(all, 0.2s, variables.$animation-ease);
-    @include elevation(8);
+  @include animate-elements(all, 0.2s, variables.$animation-ease);
+  @include elevation(8);
+  border-radius: 4px;
+  padding: 16px;
     
-    &.clickable {
-        @include elevation(16);
-        &:hover, &:focus {
-            @include elevation(24);
-            transform: translate(0, -8px);
-        }
-        &:active {
-            @include elevation(8);
-            transform: translate(0, 0);
-        }
+  &.clickable {
+    @include elevation(16);
+
+    &:hover,
+    &:focus {
+      @include elevation(24);
+      transform: translate(0, -8px);
     }
+
+    &:active {
+      @include elevation(8);
+      transform: translate(0, 0);
+    }
+  }
 }

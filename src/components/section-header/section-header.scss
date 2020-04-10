@@ -1,15 +1,15 @@
-@import '../../style/colours.scss';
+@import '../../style/colours';
 
 .section-header {
-    position: relative;
-    display: inline-block;
-    align-items: center;
-    justify-content: left;
-    justify-self: left;
-    color: $black;
-    font-size: 1.5rem;
-    line-height: 2em;
-    font-weight: 600;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
+  align-items: center;
+  color: $black;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  justify-content: left;
+  justify-self: left;
+  letter-spacing: 0.25em;
+  line-height: 2em;
+  position: relative;
+  text-transform: uppercase;
 }

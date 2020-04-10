@@ -1,18 +1,17 @@
-@import 'style/mixins.sass';
-@import 'style/variables.scss';
+@import 'style/mixins';
+@import 'style/variables';
 
 section#blog {
   text-align: left;
 
-  .content {
-    a.blog-post {
-      display: inline-grid;
-      grid-auto-flow: column;
-      grid-gap: 8px;
-      align-items: baseline;
-      h2 {
-        display: inline-block;
-      }
+  a.blog-post {
+    align-items: baseline;
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-gap: 8px;
+
+    h2 {
+      display: inline-block;
     }
   }
 }

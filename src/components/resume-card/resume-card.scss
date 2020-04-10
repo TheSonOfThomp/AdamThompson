@@ -1,39 +1,43 @@
-@import '../../style/colours.scss';
-@import '../../style/variables.scss';
+@import '../../style/colours';
+@import '../../style/variables';
 
 $image-height: 48px;
 
 .resume-card {
+  align-content: baseline;
+  border-radius: 2px;
   display: grid;
   grid-gap: 8px;
   grid-template-columns: 1fr;
   justify-content: left;
-  align-content: baseline;
   text-align: left;
-  border-radius: 2px;
 
   .resume-card-header {
-    display: grid;
-    grid-template-areas: 'position location' 'company company';
     align-items: baseline;
+    display: grid;
     grid-gap: 2px;
+    grid-template-areas: 'position location' 'company company';
+
     h2 {
       margin: 0;
     }
+
     .position {
+      color: $green_small;
       font-size: 20px;
       grid-area: position;
-      color: $green_small;
     }
+
     .company {
       font-size: 20px;
       grid-area: company;
     }
+
     .location {
+      color: $dark_grey;
+      font-size: 14px;
       grid-area: location;
       justify-self: right;
-      font-size: 14px;
-      color: $dark_grey;
     }
   }
 
@@ -42,13 +46,13 @@ $image-height: 48px;
   }
 
   p.summary {
-    text-align: left;
     font-weight: 500;
     margin: 0;
+    text-align: left;
   }
   
   img {
-    justify-self: center;
     height: $image-height;
+    justify-self: center;
   }
 }

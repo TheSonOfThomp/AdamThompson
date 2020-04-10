@@ -1,24 +1,23 @@
-@import '../../../style/colours.scss';
+@import '../../../style/colours';
 
 section#about {
   text-align: left;
 
-  .content {
-    #about-text {
-      font-size: 20px;
-      position: relative;
+  .about-text {
+    font-size: 20px;
+    position: relative;
 
-      a {
-        outline-color: $green;
-        outline-offset: 0;
-      }
+    a {
+      outline-color: $green;
+      outline-offset: 0;
+    }
 
-      p:first-child {
-        margin-top: 0;
-      }
-      p:last-child {
-        margin-bottom: 0;
-      }
+    p:first-child {
+      margin-top: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
     }
   }
 }

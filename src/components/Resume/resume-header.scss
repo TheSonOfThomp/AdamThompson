@@ -1,21 +1,23 @@
-@import '../../style/colours.scss';
+@import '../../style/colours';
 
 .resume-header {
+  align-items: center;
   display: grid;
   grid-auto-flow: column;
-  align-items: center;
-  grid-template-columns: auto auto 1fr;
   grid-gap: 16pt;
+  grid-template-columns: auto auto 1fr;
   
   #monogram {
     height: 24pt;
     width: auto;
   }
+
   #contacts {
-    text-align: right;
     display: grid;
-    grid-auto-flow: row;
     font-weight: 400;
+    grid-auto-flow: row;
+    text-align: right;
+
     a {
       color: $green_small;
       font-size: 0.9em;
