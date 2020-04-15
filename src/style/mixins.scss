@@ -59,7 +59,11 @@
   }
 }
 
-@function brandColor($brand) {
-  @return var(--color-#{$brand});
+@function brandColor($brand, $light: false) {
+  @if $light == true {
+    @return var(--color-#{$brand}-light);
+  } @else {
+    @return var(--color-#{$brand});
+  }
 }
 
