@@ -2,7 +2,8 @@
 @import '../../style/variables';
 @import '../../style/mixins';
 
-/* stylelint-disable-next-line */
+$full-width-margin: calc((#{$folio-max-width} - 100vw) / 2);
+
 @mixin brandedPortfolio($brand) {
   *::selection {
     background: var(--color-#{$brand}-light);
@@ -22,9 +23,6 @@
     }
   }
 }
-
-$full-width-margin: calc((#{$folio-max-width} - 100vw) / 2);
-
 
 main.portfolio {
   display: grid;
@@ -67,7 +65,7 @@ main.portfolio {
   h1 {
     margin: 24px auto 0;
     color: $eigengrau;
-    font-size: 72px;
+    font-size: 64px;
     font-weight: 600;
     text-align: left;
 
@@ -105,7 +103,7 @@ main.portfolio {
   }
 
   p {
-    margin: 0 auto;
+    margin: 1em auto;
     color: $black;
     font-size: 20px;
     font-weight: 300;
@@ -163,10 +161,6 @@ main.portfolio {
       font-size: 36px;
     }
 
-    h4 {
-      font-weight: 300;
-    }
-
     .cover-image {
       width: 100vw;
       max-width: none;
@@ -193,7 +187,6 @@ main.portfolio {
 
 // GATSBY IMAGE HACKS
 div.gatsby-image { 
-  /* stylelint-disable-next-line */
   p { 
     display: none; 
   } 

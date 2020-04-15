@@ -15,18 +15,19 @@
 }
 
 a.quick-link {
-  position: relative;
+  position: fixed;
   bottom: 0;
   min-width: 96px;
   padding: 4px 8px;
   border-color: var(--color-green);
   border-bottom: unset;
+  backdrop-filter: blur(4px);
+  background: var(--color-white-trans);
   transition: padding $animation-ease 500ms;
     
-  // @media screen and (max-width: $breakpoint-small) {
-  //   backdrop-filter: blur(4px);
-  //   background: var(--color-white-trans);
-  // }
+  @media screen and (max-width: $breakpoint-small) {
+    position: relative;
+  }
 
   &.newvisions { @include brandedQuicklink('newvisions');}
   &.noom { @include brandedQuicklink('noom');}
@@ -53,6 +54,7 @@ a.quick-link {
   }
     
   &#prev-link {
+    left: 0;
     padding-left: 8px;
     border-left-width: 4px;
     border-left-style: solid;
@@ -66,6 +68,7 @@ a.quick-link {
   }
 
   &#next-link {
+    right: 0;
     padding-right: 8px;
     border-right-width: 4px;
     border-right-style: solid;
