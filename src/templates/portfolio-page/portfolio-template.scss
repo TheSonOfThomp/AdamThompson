@@ -7,10 +7,10 @@ $full-width-margin: calc((#{$folio-max-width} - 100vw) / 2);
 @mixin brandedPortfolio($brand) {
   $brandColor: var(--color-#{$brand});
   $brandColorLight: var(--color-#{$brand}-light);
+  $brandColorLightest: var(--color-#{$brand}-lightest);
 
   *::selection {
-    background: $brandColorLight;
-    // background: mix($brandColor, white, 20);
+    background: $brandColorLightest;
   }
   
   header.porfolio-page-header {
