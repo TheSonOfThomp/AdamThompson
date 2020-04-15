@@ -10,26 +10,39 @@ section: portfolio
 
 # New Visions
 
-<div class="tldr" markdown=1>
+<section class="tldr" markdown=1>
 
   <!-- WHAT -->
   ## Accessible metrics about a school’s performance.
 
   <!-- WHY -->
-  It can be difficult to manage one of New York City's large public schools. Principals and VPs need up-to-date information about their school's demographics, academics, attendance and other data.
+  It can be difficult to manage one of New York City's large public  schools. Principals and VPs need up-to-date information about their school's demographics, academics, attendance and other data.
+  
+  <!-- This is doubly true when everything changes so suddenly like it did in early 2020. -->
 
   <!-- HOW -->
-  I designed and tested a multi-leveled dashboard to allow school managers to assess major data points at-a-glance and drill down to further explore and slice the data. 
+  I designed and tested architecture for a multi-leveled dashboard experience that highlights important data points for school managers, and enables them to further explore the data. 
 
   The process included designing and usability testing all three levels of the dashboard experience and the information architecture, prototyping the data-visualization graphs in d3, and defining the IA data model which dictates the UI options in every state.
-
 
 <div class="cover-image vertical">
 
   ![Mockup of the New Visions dashboard UI](../../images/portfolio/cover/dashboard-mock-on-mackbookAir.png)
 </div>
 
-</div>
+</section>
+
+<!-- <section class="team">
+  
+  # My Role
+  Lead designer, including user research, problem definition, information architecture, layout design, visual design,  prototyping, usability testing, and data modelling.
+
+  # The team
+  - Danielle Scaramellino | Director of Product
+  - Chris Avgerinos | Director of UX Design
+  - Christine Han | UX Researcher
+  - Alisa Zhukova | UI Designer
+</section> -->
 
 <!-- The challenge -->
 <!-- Problem statement -->
@@ -40,22 +53,18 @@ section: portfolio
 
   My work was focused on the Data Portal—a tool used by school staff that provides the data they need to stay on top of managing their school. 
   
-  One way the Portal does this is with Student Lists used by councilors and mentors. These curated lists of students surface certain potential problems and provide a specific set of data with the goal of solving a specific problem—like highlighting students who are chronically absent, or who need to be scheduled for an exam. The goal is that staff can more easily identify the students they need to reach out to.
+  One way the Portal does this is with curated lists of students for councilors and teachers. These lists surface potential problems and provide specific data with the goal of solving the problem—like  students who need attendance support, or who need to be scheduled for an exam. The goal is that staff can more easily identify specific students they need to reach.
 
-  [TODO - Image of a List]
+  ![Curated attendance list in the New Visions Data Portal](../../images/portfolio/newvisions/nv-list-attendance.png)
 
   <!-- ## Users and audience -->
-  ## Aggregate data
-  While lists are intended to solve a lot of the problems seen by staff who interact with students directly—like councilors—there was a need to enhance the Portal to better serve school managers—people like principals, vice-principals, and other school-based New Visions staff. 
+  ## Data for Managers
+  While lists are intended to aid staff who interact with students directly—like councilors—there was a need to enhance the Portal to better serve school managers—like principals, vice-principals, and other admin staff. 
 
-  These people want to see at-a-glance data about the entire school population. Before this project, the Portal had a dashboard with only a limited set of data points and didn't always provide enough context. Our goal was to identify important data points, and provide a better way to explore them.
-
-<!-- ## Roles and responsibilities -->
-  ## The team
-  I was the lead designer on this project, and was involved in user research—defining the problem, designing a solution—information architecture, layout design, visual design, and prototyping, validating the design with usability testing, and developing the underlying data model for the dashboard.
+  While principals are managers in title, many are promoted teachers, and have the individual-focused mentality of a mentor. This is not a bad thing at all, but it can be distracting. Managers need to see the overall status of their school to identify broader issues using at-a-glance data about the entire school population. 
   
-  I had help with problem definition, and interacting with stakeholders from Danielle Scaramellino. Christine Han helped with scheduling and running usability testing sessions. Alisa Zhukova did a lot of the initial visual design concepts and accessibility testing. Finally I had design process guidance from Chris Avgerinos.
-
+  Our goal was to design a new section of the app and provide this at-a-glance data, and a way to break it down to identify broader problems.
+  
 <!-- ## Scope and constraints -->
   <!-- ## What we did
   - The initial scope of this project was to identify important data points and design a way to see these all at-a-glance
@@ -64,45 +73,49 @@ section: portfolio
   - We also wanted to learn more about what our users needs were before we built a more complex feature and a data model around it -->
 
 <!-- # Process and what you did -->
-# Defining what's important
-We approached major stakeholders within and outside the organization, particularly our coaches who work with schools to establish best practices. These people were able to name data points that are important for identifying areas a school might want to focus on, and monitoring the performance of a school.
-
-After gathering feedback on which metrics can help track a school's performance, we asked coaches to arrange the data labels in an understandable way. To identify this natural information architecture, I decided to run a card-sorting exercise. To do this I put each metric into an Airtable, and printed off each one as a card. I then asked each coach to sort these cards in whatever way made sense to them. 
-
-[TODO - Image of dashboard Airtable foci as cards]
-
-To little surprize, our coaches consistently organized the cards roughly in line with our targeted meetings between schools and coaches to discuss major areas for improvement, called [Strategic Data Checkins](https://sdc.newvisions.org). To confirm this organization scheme, we performed the same exercise with other stakeholders who were less familiar with the SDC process. 
-
-While we were able to identify a logical way of ordering key metrics, we were unfortunately not able to determine which data points were more important to drive conversations in schools. The product team was hesitant to make a call on a hierarchy of these metrics, in fear of hiding potentially important information from schools. We decided to present all the data in an initial version of the dashboard, and monitor which data points proved to be most valuable to schools.
-
-  <!-- - card sorting with users to find how to group data points
-      - results lined up with SDCs
-      - not able to speak to priority 
-      - other than that # students is important -->
-
 # Data at-a-glance
-  - Users & stakeholders wanted to see 'data at-a-glance' for the high level data points 
-  - Tried to identify ways to better organize the dashboards, but...
-  - We didn't want to eliminate any data points from the view (see above)
-  - Settled on an array of grouped tiles with a search box
-      - it can be hard to see that there are more tiles below the fold, so we added the search box
 
-[TODO - initial top-level mocks]
+The primary user goal for this project was to:
 
-  <!-- - Brainstorm ways to organize data & show meaningful status
-      - Constraints:
-        - B/c we couldn't prioritize data points, needed to show all of them...
-        - Org didn't want to take a stance on thresholds of good/bad values
-  - Outcome was a bunch of grouped tiles. -->
+> View aggregate, high-level data 'at-a-glance' to enable school managers to make informed executive decisions. 
+
+We approached major stakeholders within and without the organization to identify data points that might be important for making this type of decision. The conclusion was that the types of decisions we needed to support, and therefore data points needed to inform them were many and varied. 
+
+Christine & I ran a card-sorting activity to identify potential groupings and hierarchy for these data points, however we weren't able to define a smaller set of data that would be useful to *all* managers at *all* times of the school year. 
+
+Since this work would need to support *all* 709 partner schools accross NYC, we made the decision that we would not develop functionality to customize the available data, or add logic to toggle data at specific times of the year. We would use analytics from the initial version of the data dashboard to monitor whether certain data points *were* more useful than others, and revisit the feature at a later date.
+
+Armed with this knowledge, and a useful categorization scheme gleaned from the card sorting activity, I set out designing potential layouts for this dashboard.
+
+## Dashboard design
+
+Since the guiding design principle for the dashboard was data at-a-glance, I wanted to make the data the central part of this interface. 
+
+Jumping off from existing designs that Chris had created, I designed a grid layout used both line graphs and big numbers to highlight data points. Initial designs didn't include explicit grouping of similar data, but we quickly realized that finding the data point you needed was difficult. After several rounds of usability testing to ensure users could find the data they were looking for, we landed on this design for the dashboard.
+
+<!-- What benefit do line graphs serve on this level? -->
+
+![TODO - top-level mocks]()
+
+<!-- https://mermaid-js.github.io/mermaid/#/flowchart -->
+
+# Modeling Metadata
+
+While analyzing the data points and brainstorming ways to visualize it with the team, I noticed many commonalities with how we talked about certain metrics. Characteristics like the data "rollup type", or  distinctions like "point-in-time" data versus "cumulative" data helped us understand the data points we were talking about. 
+
+I documented these characteristics, and developed a model in Airtable to organize this metadata. I later used this model to help develop an interactive prototype. The data engineering team finally took over the table and now use it to collaborate with the product team to update and define new dashboard data. 
+
+![TODO - UML/Flowchart of data model]()
+
+This data model was one of the key components in enstablishing a reusable architecture, making designing and implementating new metrics much easier.
 
 # Breaking down the data
-  - A single number isn't always that informative, so we needed to provide a way to analyze the aggregate data 
-  - We wanted people to be able to see this data at a glance and be able to drill down to see the students that made up the aggregate data point in order to take action. 
-  - Driven by users desire to compare across sub-groups — how they performed relative to each other
-  - Enables them to see where problem areas are more easily
+
+While a single data point is useful to identify potential problem areas, it doesn't provide much insight into the problem and its potential solutions. School managers wanted to zoom in and compare aggregate data across sub-groups, and even see which individual students made up those aggregate numbers. By providing a mid-level breakdown, and student level list we could provide the information managers needed to make informed decisions. 
 
 
- ## Data visualization
+
+## Data visualization
   - We brainstormed what kinds of visualizations made the most sense
     - For each data point, identified what kind of data 
       - point-in-time => change over time doesn't matter
@@ -153,3 +166,4 @@ While we were able to identify a logical way of ordering key metrics, we were un
   - Test interactive prototypes for complex interactions
   - Learning what dashboard tiles are most useful, and improve the interface based on that (because we've expanded and out SDFs aren't meeting with every school anymore. Renewed initiative to behavior change
   - Some usability improvements were not made because they would take time to design and implement a solution. We'd come back to it later
+  - More graph types - Historical & Sankey
