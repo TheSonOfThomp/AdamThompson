@@ -6,7 +6,6 @@
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const moment = require('moment')
 
 // Create custom fields on GraphQL nodes
 exports.onCreateNode = ({ node, getNode, actions }) => {
