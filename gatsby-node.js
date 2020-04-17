@@ -4,16 +4,14 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
-
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+// Create custom fields on GraphQL nodes
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
+  if ([`MarkdownRemark`, `Mdx`].includes(node.internal.type)) {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
-    console.log(slug, getNode)
     createNodeField({
       node,
       name: `slug`,
@@ -22,32 +20,50 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-  return graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `
-  ).then(result => {
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve(`./src/templates/portfolio-page/portfolio-template.js`),
-        context: {
-          // Data passed to context is available
-          // in page queries as GraphQL variables.
-          slug: node.fields.slug,
-        },
-      })
-    })
-  })
-}
+// Create pages based on GraphQL query
+// exports.createPages = ({ graphql, actions }) => {
+//   const { createPage } = actions
+//   return graphql(`
+//     {
+//       allMarkdownRemark(
+//         filter: {fields: {slug: {regex: "/portfolio/"}}},
+//         sort: {fields: frontmatter___date, order: DESC}
+//       ) {
+//         nodes {
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             date
+//             brand
+//             color
+//             cover
+//             id
+//             section
+//             tagline
+//             title
+//           }
+//           html
+//         }
+//       }
+//     }
+//   `
+//   ).then(result => {
+//     const allNodes = [...result.data.allMarkdownRemark.nodes]
+//     allNodes.forEach((node, i) => {
+//       const slug = node.fields.slug
+//       const prevNode = allNodes[i - 1] || null
+//       const nextNode = allNodes[i + 1] || null
+//       createPage({
+//         path: slug,
+//         component: path.resolve(`./src/templates/portfolio-page/portfolio-template.js`),
+//         context: {
+//           node,
+//           slug,
+//           prevNode,
+//           nextNode
+//         },
+//       })
+//     })
+//   })
+// }

@@ -8,7 +8,6 @@ const BlogSection = () => {
   return (
     <Section title="Writing" id="blog">
       {posts.map(post => {
-        console.log(post)
         return (
           <BlogPostLink post={post}/>
         )
