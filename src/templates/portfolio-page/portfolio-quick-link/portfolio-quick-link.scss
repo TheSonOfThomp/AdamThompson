@@ -6,7 +6,7 @@
   border-color: var(--color-#{$brand});
 
   &:focus {
-    outline-color: brandColor($brand);
+    outline-color: var(--color-#{$brand});
   }
 
   .quick-link-label {
