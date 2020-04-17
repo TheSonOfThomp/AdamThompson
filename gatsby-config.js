@@ -53,7 +53,16 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
-        gatsbyRemarkPlugins: [`gatsby-transformer-remark`],
+        remarkPlugins: [require('remark-unwrap-images')], // removes wrapping <p> tag
+        gatsbyRemarkPlugins: [`gatsby-transformer-remark`, 
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 720,
+              linkImagesToOriginal: false,
+              showCaptions: true,
+            },
+          }],
         defaultLayouts: {
           default: require.resolve("./src/templates/portfolio-page/portfolio-template.js"),
         },
