@@ -8,6 +8,8 @@ color: '#0a4ace'
 section: portfolio
 ---
 
+import Mermaid from '../../components/Mermaid';
+
 # New Visions
 
 <!-- This is doubly true when everything changes so suddenly like it did in early 2020. -->
@@ -19,7 +21,7 @@ section: portfolio
 
   I designed and tested architecture for a multi-leveled dashboard experience that highlights important data points for school managers, and enables them to further explore the data. 
 
-  The process included designing and usability testing all three levels of the dashboard experience and the information architecture, prototyping the data-visualization graphs in d3, and defining the IA data model which dictates the UI options in every state.
+  The process included designing and usability testing all three levels of the dashboard experience and the information architecture, prototyping the data-visualization graphs in `d3`, and defining the IA data model which dictates the UI options in every state.
 
 <div class="cover-image vertical">
 
@@ -101,7 +103,61 @@ While analyzing the data points and brainstorming ways to visualize it with the 
 
 I documented these characteristics, and developed a model in Airtable to organize this metadata. I later used this model to help develop an interactive prototype. The data engineering team finally took over the table and now use it to collaborate with the product team to update and define new dashboard data. 
 
-![TODO - UML/Flowchart of data model]()
+<Mermaid
+  caption="UML Diagram of the dashboard data model"
+  input={`classDiagram
+    class Tile {
+      Label: string
+      Tile type: Number | Graph
+      Focus(): Focus
+    }
+    class Focus {
+      Category: string
+      Graph type: Bar | Line | Layered
+      PrimaryMetric(): RollupMetric
+      DefaultFilter(): Filter
+      DefaultGrouping(): Grouping
+      Columns(): RollupMetric[]
+      FilterOptions(): Filter[]
+      GroupingOptions(): Grouping[]
+    }
+    class Filter {
+      Label: string
+      FilterOn(): StudentMetric
+    }
+    class FilterSet {
+      Filters(): Filter[]
+    }
+    class Grouping {
+      Label: string
+      GroupBy(): StudentMetric
+    }
+    class GroupingSet {
+      Groupings(): Grouping[]
+    }
+    class RollupMetric {
+      Label: string
+      Description: string
+      Rollup type: Percent | Count | Average
+      Calculation: Formula
+      Metric(): StudentMetric
+    }
+    class StudentMetric {
+      Database field: string
+    }
+    Tile <-- Focus
+    Focus <-- RollupMetric
+    Focus <-- Filter
+    Focus <-- FilterSet
+    FilterSet <-- Filter
+    Focus <-- Grouping
+    Focus <-- GroupingSet
+    GroupingSet <-- Grouping
+    Filter <-- StudentMetric
+    Grouping <-- StudentMetric
+    RollupMetric <-- StudentMetric
+  `}
+/>
 
 This data model was one of the key components in enstablishing a reusable architecture, making designing and implementating new metrics much easier.
 

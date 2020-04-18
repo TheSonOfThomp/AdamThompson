@@ -1,0 +1,38 @@
+// Define the base color map
+$BaseColors: (
+  'white': #fff,
+  'black': #000,
+  'red': rgba(194, 0, 24, 1),
+  'pink': rgba(255, 92, 143, 1),
+  'salmon': rgba(255, 137, 137, 1),
+  'yellow': rgba(255, 196, 0, 1),
+  'green': rgba(0, 155, 72, 1),
+  'teal': rgba(10, 196, 172, 1),
+  'blue': rgba(10, 74, 206, 1),
+  'navy': rgba(0, 1, 101, 1),
+  'purple': rgba(102, 45, 145, 1),
+);
+
+:root {
+  // create css color variables for each item in base color map
+  @each $name, $color in $BaseColors {
+    --color-#{$name}: #{$color};
+    --color-#{$name}-90: #{mix($color, #fff, 90%)};
+    --color-#{$name}-80: #{mix($color, #fff, 80%)};
+    --color-#{$name}-70: #{mix($color, #fff, 70%)};
+    --color-#{$name}-60: #{mix($color, #fff, 60%)};
+    --color-#{$name}-50: #{mix($color, #fff, 50%)};
+    --color-#{$name}-40: #{mix($color, #fff, 40%)};
+    --color-#{$name}-30: #{mix($color, #fff, 30%)};
+    --color-#{$name}-20: #{mix($color, #fff, 20%)};
+    --color-#{$name}-10: #{mix($color, #fff, 10%)};
+    --color-#{$name}-5: #{mix($color, #fff, 5%)};
+    --color-#{$name}-3: #{mix($color, #fff, 3%)};
+    --color-#{$name}-1: #{mix($color, #fff, 1%)};
+    --color-#{$name}-dark: #{mix($color, #000, 90%)};
+    --color-#{$name}-dark-80: #{mix($color, #000, 80%)};
+    --color-#{$name}-dark-70: #{mix($color, #000, 70%)};
+    --color-#{$name}-dark-60: #{mix($color, #000, 60%)};
+    --color-#{$name}-dark-50: #{mix($color, #000, 50%)};
+  }
+}

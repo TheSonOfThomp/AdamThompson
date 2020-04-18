@@ -46,6 +46,7 @@
     "gatsby-transformer-remark": "^2.6.27",
     "gatsby-transformer-sharp": "^2.2.20",
     "lodash": "^4.17.15",
+    "mermaid": "^8.5.0",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",

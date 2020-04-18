@@ -28,6 +28,17 @@ $full-width-margin: calc((#{$folio-max-width} - 100vw) / 2);
   }
 }
 
+%max-width-centered {
+  max-width: $folio-max-width;
+  margin-right: auto;
+  margin-left: auto;
+
+  // @media screen and (max-width: $folio-max-width + 20px) {
+  //   margin-right: 20px;
+  //   margin-left: 20px;
+  // }
+}
+
 main.portfolio {
   display: grid;
   align-items: flex-end;
@@ -60,22 +71,11 @@ main.portfolio {
     position: relative;
     display: block;
     margin: 0;
-    
-    // TODO - turn this into placeholder selector
-    // and @extend it in all approptiate rules
-    * {
-      max-width: $folio-max-width;
-      margin-right: auto;
-      margin-left: auto;
 
-      // @media screen and (max-width: $folio-max-width + 20px) {
-      //   margin-right: 20px;
-      //   margin-left: 20px;
-      // }
-    }
   }
   
   h1 {
+    @extend %max-width-centered;
     margin: 1em auto 0.1em;
     color: $eigengrau;
     font-size: 42px;
@@ -94,6 +94,7 @@ main.portfolio {
   }
 
   h2 {
+    @extend %max-width-centered;
     margin: 0.25em auto 0.1em;
     color: $eigengrau;
     font-size: 32px;
@@ -106,6 +107,7 @@ main.portfolio {
   }
 
   h3 {
+    @extend %max-width-centered;
     margin: 16px auto;
     color: $dark_grey;
     font-size: 24px;
@@ -114,6 +116,7 @@ main.portfolio {
   }
 
   h4 {
+    @extend %max-width-centered;
     margin: 16px auto;
     color: $dark_grey;
     font-size: 20px;
@@ -121,15 +124,20 @@ main.portfolio {
     line-height: 1.6em;
   }
 
-  blockquote p {
-    color: $dark_grey;
-    font-size: 24px;
-    font-style: italic;
-    padding-inline-end: 1em;
-    padding-inline-start: 1em;
+  blockquote {
+    @extend %max-width-centered;
+    
+    p {
+      color: $dark_grey;
+      font-size: 24px;
+      font-style: italic;
+      padding-inline-end: 1em;
+      padding-inline-start: 1em;
+    }
   }
 
   p {
+    @extend %max-width-centered;
     margin: 1em auto;
     color: $black;
     font-size: 20px;
@@ -146,8 +154,13 @@ main.portfolio {
     }
   }
 
+  // .mermaid {
+
+  // }
+
   // Images & Video
   figure {
+    @extend %max-width-centered;
     position: relative;
     display: inherit;
     width: 100%;
