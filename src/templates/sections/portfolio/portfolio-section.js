@@ -7,30 +7,22 @@ import './portfolio-section.scss';
 
 const PortfolioSection = ({ data }) => {
   const PortfolioQuery = useStaticQuery(graphql`
-    query{
-      allMarkdownRemark(
-        filter: { frontmatter: { section: { eq: "portfolio" } } }
-        sort: {
-          fields: [frontmatter___date]
-          order: DESC
-        }
-      )
-      {
+    {
+      allSitePage(filter: {path: {regex: "/portfolio/"}}, sort: {fields: context___frontmatter___date, order: DESC}) {
         nodes {
-          id
-          fields{
-            slug
+          path
+          context {
+            frontmatter {
+              date
+              title
+              color
+              cover
+              tagline
+            }
           }
-          frontmatter {
-            title
-            date
-            tagline
-            color
-            cover
-          }      
         }
       }
-      allImageSharp {
+      allImageSharp(filter: {fluid: {originalName: {regex: "/cover/"}}}) {
         nodes {
           fluid {
             originalName
@@ -42,12 +34,14 @@ const PortfolioSection = ({ data }) => {
   `)
   
   const imageSources = PortfolioQuery.allImageSharp.nodes.map(node => node.fluid)
-  const posts = PortfolioQuery.allMarkdownRemark.nodes.map(node => {
+  const posts = PortfolioQuery.allSitePage.nodes.map(node => {
     return {
       ...node,
-      imageSource: imageSources.find(img => img.originalName === node.frontmatter.cover)
+      imageSource: imageSources.find(img => img.originalName === node.context.frontmatter.cover)
     }
   })
+  
+  debugger;
 
   return (
     <Section title="Case Studies" id="portfolio">
@@ -56,11 +50,11 @@ const PortfolioSection = ({ data }) => {
         posts.map((post) => (
           <PortfolioCard
             key={post.id}
-            title={post.frontmatter.title}
-            tagline={post.frontmatter.tagline}
-            color={post.frontmatter.color}
+            title={post.context.frontmatter.title}
+            tagline={post.context.frontmatter.tagline}
+            color={post.context.frontmatter.color}
             cover={post.imageSource.src}
-            link={post.fields.slug}
+            link={post.path}
             imgSrc={post.imageSource.src}
           >
           </PortfolioCard>

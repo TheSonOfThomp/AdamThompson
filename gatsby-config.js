@@ -36,13 +36,13 @@ module.exports = {
         path: `${__dirname}/src/data`
       }
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'portfolio',
-        path: `${__dirname}/src/data/portfolio`
-      }
-    },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     name: 'portfolio',
+    //     path: `${__dirname}/src/data/portfolio`
+    //   }
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

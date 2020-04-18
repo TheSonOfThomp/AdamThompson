@@ -170,7 +170,7 @@ main.portfolio {
 
     figcaption {
       max-width: 50%;
-      margin: 0 auto;
+      margin: 0.5em auto;
       color: $med_grey;
       font-family: var(--font-sans);
       font-size: 1rem;
@@ -182,6 +182,7 @@ main.portfolio {
   }
   // Top TL;DR section
   .tldr {
+    display: block;
     width: 100%;
     max-width: none;
 
@@ -199,7 +200,7 @@ main.portfolio {
       width: 100%;
       max-width: none;
       padding: 16px 0;
-      margin: 48px auto 0;
+      margin: 48px auto 8px;
       background-color: var(--color-black);
 
       /* stylelint-disable-next-line selector-max-compound-selectors */
@@ -226,13 +227,14 @@ div.gatsby-image {
   } 
 }
 
-span.gatsby-resp-image-background-image {
-  padding: 0 !important;
-}
-
 div.cover-image,
 div.vertical {
   margin: auto;
+
+  span.gatsby-resp-image-background-image {
+    padding: 0 !important;
+  }
+
 
   figure.gatsby-resp-image-figure {
     img.gatsby-resp-image-image {
