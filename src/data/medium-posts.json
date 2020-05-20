@@ -2,7 +2,11 @@
   "posts": [
     {
       "url": "https://medium.com/@TheSonOfThomp/6-ways-to-dynamically-style-angular-components-b43e037852fa",
-      "isCrawled": false
+      "title": "6 ways to dynamically style Angular components",
+      "description": "Writing style that updates based on the state of a component is a really common pattern on the web. There are several ways to dynamically update your styling depending on what you want to do. Let’s…",
+      "imageUrl": "https://miro.medium.com/max/1200/1*l9kdgCf9TVe_gl6hrB2N4w.png",
+      "datePublished": "2020-05-20T22:03:01.302Z",
+      "isCrawled": true
     },
     {
       "url": "https://medium.com/@TheSonOfThomp/atomic-styles-semantic-markup-eaa5b3b3e380",
