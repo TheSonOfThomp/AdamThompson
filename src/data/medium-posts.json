@@ -1,6 +1,10 @@
 {
   "posts": [
     {
+      "url": "https://medium.com/@TheSonOfThomp/6-ways-to-dynamically-style-angular-components-b43e037852fa",
+      "isCrawled": false
+    },
+    {
       "url": "https://medium.com/@TheSonOfThomp/atomic-styles-semantic-markup-eaa5b3b3e380",
       "title": "Atomic Styles. Semantic Markup.",
       "description": "When starting a new project or feature it’s a good idea to write semantic markup first, then style it the way you want. Building markup-first ensures that your product will make sense, and be…",
