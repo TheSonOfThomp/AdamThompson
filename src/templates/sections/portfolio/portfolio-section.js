@@ -50,7 +50,7 @@ const PortfolioSection = ({ data }) => {
   })
 
   return (
-    <Section title="Case Studies" id="portfolio">
+    <Section title="UX Case Studies" id="portfolio">
       <div className="portfolio-cards-container">
       {
         posts.map((post) => (

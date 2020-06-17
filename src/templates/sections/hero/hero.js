@@ -2,7 +2,7 @@
 import React from "react"
 
 import './hero.scss';
-import monogram from '../../../images/monogram-white.svg';
+import monogram from '../../../images/monogram-black.svg';
 import { Navbar } from "../../../components/navbar/navbar";
 
 const Hero = () => (
@@ -10,16 +10,16 @@ const Hero = () => (
 
     <Navbar/>
   
-    <header>
+    <header className="hero-contents">
       <h2 className="big-letters">
         {/* <b id="u">U</b><b id="x">X</b> */}
         <img className="big-letters-monogram" src={monogram} alt="Adam Thompson"/>
       </h2>
       <h2 className="title">
-        Front-end Engineer
+        UX Engineer
       </h2>
       <h3 className="tagline">
-        Designing and building meaningful product experiences
+        Developing experiences that make an impact
       </h3>
     </header>
   </section>
