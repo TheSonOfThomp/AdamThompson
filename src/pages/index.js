@@ -18,21 +18,21 @@ class IndexPage extends React.Component {
       <main id="app">
         <SEO title="Main" image={image}/>
         
-        <Hero></Hero>
+        <Hero/>
     
-        <PortfolioSection></PortfolioSection>
+        <PortfolioSection/>
     
-        <AboutSection></AboutSection>
+        <AboutSection/>
     
-        {/* <Section title="Toolbox"></Section> */}
+        {/* <Section title="Toolbox"/> */}
         
-        <ProjectsSection></ProjectsSection>
+        <ProjectsSection/>
 
-        <ResumeSection></ResumeSection>
+        <ResumeSection/>
         
-        <BlogSection></BlogSection>
+        <BlogSection/>
 
-        <FooterSection></FooterSection>
+        <FooterSection/>
         
       </main>
   )}

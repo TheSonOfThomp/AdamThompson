@@ -17,7 +17,7 @@ section.hero {
   color: $white;
   grid-auto-flow: row;
   grid-row-gap: 0;
-  grid-template-rows: 80px 1fr;
+  grid-template-rows: 80px 1fr 80px;
   text-align: center;
 
   &.green-bg {
@@ -39,8 +39,13 @@ section.hero {
   }
 
   header {
+
+    display: grid;
+    grid-template-rows: 1fr auto auto 1fr;
+    grid-template-areas: '.' 'title' 'tagline' '.';
+
     position: relative;
-    display: flex;
+    // display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: var(--font-sans);
@@ -51,9 +56,11 @@ section.hero {
       position: relative;
       z-index: 10;
       margin: auto;
+      grid-column: 1;
     }
 
-    .tagline {
+    .title {
+      grid-area: title;
       max-width: calc(100vw - 32px);
       margin: 0 16px;
       font-size: 96px;
@@ -64,13 +71,14 @@ section.hero {
       }
     }
     
-    .bio-text {
+    .tagline {
       position: relative;
       max-width: calc(100vw - 32px);
       margin: 0 16px;
       font-family: inherit;
       font-size: 24px;
       font-weight: 400;
+      grid-area: tagline;
       line-height: 2em;
       text-align: center;
       @media screen and (max-width: $breakpoint-small) {
@@ -78,20 +86,23 @@ section.hero {
       }
     }
 
+    .big-letters-monogram {
+      width: 2ch;
+    }
+
     .big-letters {
-      position: absolute;
       z-index: 1;
-      top: 50%;
-      right: 0;
-      left: 0;
+      display: flex;
       width: 100%;
       max-width: none;
       margin: auto;
       color: $dark_green;
       font-size: 512px;
       font-weight: 600;
+      grid-row: 1/-1;
+      inset: 0;
       opacity: 0.15;
-      transform: translateY(-50%);
+      // transform: translateY(-50%);
       
       @media screen and (max-width: $breakpoint-small) {
         $letter-shift: 50%;
@@ -107,9 +118,10 @@ section.hero {
           right: 0;
           transform: translate($letter-shift, -50%);
         }
-
         /* stylelint-enable */
       }
+
+      
       
       // &.split-ux {
       // 	// opacity: 1;
