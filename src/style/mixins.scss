@@ -51,11 +51,18 @@
   z-index: 1;
   transform: scale(1);
   transform-origin: 50% 50%;
-  
-  &:hover {
+
+  &:hover,
+  &:focus {
     @include elevation($end);
     z-index: 2;
     transform: scale($scale);
+  }
+
+  &:active {
+    @include elevation($start);
+    outline: none;
+    transform: scale(1);
   }
 }
 

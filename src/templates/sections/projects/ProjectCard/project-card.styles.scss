@@ -1,14 +1,16 @@
 @import '../../../../style/mixins';
 
 a.project-card {
+  --logo-size: 192px;
   @include clickable-card(1.5, 3);
   display: grid;
-  padding: 16px;
+  padding: 12px 24px;
   border: unset;
   border-bottom: unset;
   border-radius: 2px;
-  grid-gap: 4px;
-  grid-template-areas: 'header .' 'description description';
+  grid-gap: 8px;
+  grid-template-areas: 'logo logo' 'title icon' 'description description';
+  grid-template-rows: var(--logo-size) 1fr 1fr auto;
   
   &:hover {
     border-bottom: unset;
@@ -17,9 +19,16 @@ a.project-card {
   .project-title {
     align-self: center;
     margin: 0;
-    grid-area: header;
+    grid-area: title;
     justify-self: left;
     white-space: nowrap;
+  }
+
+  .project-logo {
+    max-width: var(--logo-size);
+    max-height: var(--logo-size);
+    grid-area: logo;
+    place-self: center;
   }
   
   .project-description {
@@ -28,6 +37,7 @@ a.project-card {
   
   .project-icon {
     align-self: center;
+    grid-area: icon;
     justify-self: right;
   }
 }

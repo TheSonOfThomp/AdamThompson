@@ -19,15 +19,15 @@ class IndexPage extends React.Component {
         <SEO title="Main" image={image}/>
         
         <Hero/>
-    
-        <PortfolioSection/>
+        
+        <ProjectsSection/>
     
         <AboutSection/>
+
+        <PortfolioSection/>
     
         {/* <Section title="Toolbox"/> */}
         
-        <ProjectsSection/>
-
         <ResumeSection/>
         
         <BlogSection/>

@@ -3,23 +3,35 @@
     {
       "name": "Zed",
       "url": "https://github.com/TheSonOfThomp/Zed",
+      "logo": "zed-logo.png",
+      "logoIsName": true,
       "icon": "github",
-      "description": "A JS library for rendering more realistic overlapping shadows"
+      "description": "A JS library for rendering more realistic overlapping shadows by casting shadows on elements below."
     },
     {
       "name": "Sketch Flat Export",
       "url": "https://github.com/TheSonOfThomp/sketch-flat-export",
+      "logo": "flat-export-logo-transparent.png",
+      "logoIsName": false,
       "icon": "github",
-      "description": "A Sketch plugin to export multiple artboards to a single directory"
+      "description": "A Sketch plugin to export multiple artboards to a single directory."
     },
+    {
+      "name": "Chronological MCU",
+      "url": "https://chronological-mcu.netlify.app",
+      "logo": "chronMCU-logo.png",
+      "logoIsName": false,
+      "icon": "link",
+      "description": "A Chrome extension to watch every scene in the Marvel Cinematic universe, in chronological order."
+    }
+  ],
+  "otherProjects": [
     {
       "name": "Word Chain",
       "url": "https://word-chain.thesonofthomp.com",
       "icon": "link",
       "description": "A thesaurus linker to find the closest synonym to two words"
-    }
-  ],
-  "otherProjects": [
+    },
     {
       "name": "React Synth",
       "url": "https://github.com/TheSonOfThomp/React-Synth",

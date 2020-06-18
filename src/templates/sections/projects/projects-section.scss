@@ -5,7 +5,7 @@
 section#projects {
   .content {
     display: grid;
-    grid-gap: 12px;
+    grid-gap: 16px;
     grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   }
 }

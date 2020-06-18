@@ -15,7 +15,7 @@ const ProjectsSection = () => {
   })
 
   return (
-    <Section title="Projects">
+    <Section title="Recent Projects" id="projects">
       {projectsJSX}
     </Section>
   )
