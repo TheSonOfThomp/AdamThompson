@@ -67,3 +67,14 @@
   }
 }
 
+@function Min($a, $b) {
+  @return #{'min(#{$a}, #{$b})'};
+}
+
+@function Max($a, $b) {
+  @return #{'max(#{$a}, #{$b})'};
+}
+
+@function vh($vh) {
+  @return calc(#{$vh} * var(--vh));
+}

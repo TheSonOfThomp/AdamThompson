@@ -9,17 +9,6 @@ import { faLinkedinIn, faGithub, faTwitter, faCodepen, faMedium } from '@fortawe
 import './navbar.scss';
 
 export const Navbar = () => {
-
-  // const [isMenuOpen, setIsMenuOpen] = useState()
-
-  // const toggleMenu = () => {
-  //   setIsMenuOpen(!isMenuOpen)
-  // }
-
-  // const menuClass = () =>  {
-  //   return isMenuOpen ? 'menu-open' : 'menu-closed';
-  // }
-
   return (
     <div className="banner" role="banner">
       <div id="banner-logo" role="heading">
@@ -28,7 +17,7 @@ export const Navbar = () => {
       </div>
 
       <nav id="banner-nav">
-        <a className="nav-link hide-mobile" id="nav-portfolio" href="#portfolio">Portfolio</a>
+        <a className="nav-link hide-mobile" id="nav-portfolio" href="#portfolio">Case studies</a>
         <a className="nav-link hide-mobile" id="nav-about" href="#about">About</a>
         <a className="nav-link hide-mobile" id="nav-projects" href="#projects">Projects</a>
         <a className="nav-link hide-mobile" id="nav-blog" href="#blog">Blog</a>
