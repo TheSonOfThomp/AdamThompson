@@ -1,5 +1,6 @@
+/* stylelint-disable max-nesting-depth */
 /* stylelint-disable selector-max-compound-selectors */
-/* stylelint-disablemax-nesting-depth */
+/* stylelint-disable selector-max-compound-selectors */
 
 @import './colours';
 @import './mixins';
@@ -39,6 +40,7 @@ $page-height: 11in;
     font-weight: 300;
     grid-gap: 8pt;
     grid-template-columns: 1fr $centre-col-fr 1fr;
+    page-break-after: always;
 
     h1,
     h2,

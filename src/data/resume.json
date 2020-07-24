@@ -1,5 +1,5 @@
 {
-  "blurb": "I'm an engineer and designer looking for a role at the intersection of the two disciplines. With an engineering education, and experience in UX design since 2013, I'm a perfect fit as a UX engineer or technical designer.",
+  "blurb": "An engineer at the intersection of design and development. With an engineering education and experience in UX design since 2013, I can bridge the gap between the two disciplines.",
   "experience": {
     "new-visions": {
       "company": "New Visions for Public Schools",
@@ -9,9 +9,9 @@
       "location": "NYC",
       "summary": "Design systems development, prototyping and feature design.",
       "bullets": [
-        "Managed the design system, Angular component library and documentation, and fostered closer cross-team collaboration between design & engineering.",
-        "Developed infrastructure for quickly prototyping and testing new features and interactions with simulated data.",
-        "Designed, prototyped, and tested numerous features for the data portal, and consulted on front-end implementation."
+        "Streamlined designer-developer collaboration by compiling design system documentation, and building and maintaining an Angular component library.",
+        "Developed a CSS architecture for Angular, leveraging its opinionated component structure, improving the long-term maintainability and flexibility of the codebase.",
+        "Designed a conceptual framework to streamline development of new data visualizations—enabling the team to launch remote learning features just days after schools closed in March 2020."
       ]
     },
     "music-group": {
@@ -48,8 +48,7 @@
       "logotype": "images/companies/noom_logotype_small.png",
       "logo": "images/companies/noom_logo.png",
       "bullets": [
-        "Simplified the core food logging experience by modifying the information architecture to better fit the mental model observed during user interviews.",
-        "Prototyped interactions and user flows in Framer and Origami, and rigorously tested prototypes at varying levels of fidelity."
+        "Simplified the core food logging experience by modifying the information architecture to better fit the mental model observed during user interviews."
       ]
     },
     "knowroaming": {
@@ -60,7 +59,7 @@
       "summary": "User research, information architecture and UI design for mobile apps.",
       "location": "Toronto",
       "bullets": [
-        "Overhauled the app interface and information architecture to better align with common use cases."
+        "Overhauled the app UI and information architecture to better align with common use cases."
       ]
     },
     "sony": {
@@ -93,28 +92,27 @@
       "url": "http://www.thesonofthomp.com/portfolio/chameleon",
       "role": "Electrical, mechanical & software design"
     },
+    "farkle": {
+      "title": "Farkle",
+      "description": "Play the dice game \"Farkle\" online with friends"
+    },
     "zed": {
       "title": "Zed",
       "description": "A JS library for rendering more realistic overlapping shadows.",
       "url": "https://github.com/TheSonOfThomp/Zed"
     },
-    "zeplin-x": {
-      "title": "ZeplinX",
-      "description": "A Confluence plugin to embed Zeplin images on a page."
+    "xmcu": {
+      "title": "Chronological MCU",
+      "description": "Watch all scenes from MCU movies in chronological order."
     },
     "sketch-export": {
       "title": "Sketch Flat Export",
       "description": "A Sketch plugin to export multiple artboards to a single directory.",
       "url": "https://github.com/TheSonOfThomp/sketch-flat-export"
     },
-    "react-synth": {
-      "title": "React Synth",
-      "description": "A web based synthesizer with musical typing."
-    },
-    "smrt-watr": {
-      "title": "SMRT WATR",
-      "description": "An interactive water fountain, controlled by a web-app game.",
-      "role": "Control systems & UX design"
+    "zeplin-x": {
+      "title": "ZeplinX",
+      "description": "A Confluence plugin to embed Zeplin images on a page."
     }
   },
   "volunteer": {
@@ -140,9 +138,9 @@
     }
   },
   "toolbox": [
-    "CSS", "HTML", "Javascript", "Typescript", "Angular", "Vue", "React",
-    "Storybook", "Sass", "Node", "D3", "Git", "Ci", "Swift", "Origami",
-    "Framer", "Sketch", "Zeplin", "InVision", "Photoshop", "Illustrator",
+    "CSS", "HTML", "Javascript", "Typescript", "Angular", "React", "Vue",
+    "Storybook", "Sass", "Node", "D3", "XState", "Git", "Ci", "Swift", 
+    "Origami", "Framer", "Sketch", "Zeplin", "InVision", "Photoshop", "Illustrator",
     "Balsamiq", "Excel", "Airtable", "Python", "Arduino"
   ]
 }
