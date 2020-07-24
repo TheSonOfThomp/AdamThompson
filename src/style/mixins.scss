@@ -30,6 +30,33 @@
   transition: $what $when $how;
 }
 
+// Add this mixin to a parent element (e.g. Card), 
+// and pass in the text selector you want to animate (e.g. '.title') 
+@mixin animate-text-underline($selector, $color) {
+  &:hover {
+    #{$selector}::before {
+      width: 100%;
+    }
+  }
+
+  #{$selector} {
+    position: relative;
+
+    &::before { // for the animated underline
+      @include animate(width);
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      width: 0%;
+      height: 4px;
+      background-color: $color;
+      content: '';
+    }
+  }
+
+}
+
+
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if ($inset) {
     box-shadow: inset $top $left $blur $color;
