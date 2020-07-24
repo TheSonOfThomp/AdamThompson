@@ -1,0 +1,41 @@
+@import './colours.def';
+
+:root {
+  --color-green: #{$green};
+  --color-white-green: #{$white_green};
+  --color-white-green_trans: #{$white_green_trans};
+  --color-green-highlight: #{$green_highlight};
+  --color-light-green: #{$light_green};
+  --color-dark-green: #{$dark_green};
+
+  --color-white: #{$white};
+  --color-white-trans: #{$white_trans};
+  --color-light-grey: #{$light_grey};
+  --color-med-grey: #{$med_grey};
+  --color-dark-grey: #{$dark_grey};
+  --color-dark-grey-trans: #{$dark_grey_trans};
+  --color-black: #{$black};
+  --color-transparent: #{$transparent};
+  
+  // ---- Brand Colours ---- //
+  --color-newvisions: #{$newvisions};
+  --color-newvisions-light: #{$newvisions_light};
+  --color-newvisions-lightest: #{$newvisions_lightest};
+  --color-noom: #{$noom};
+  --color-noom-light: #{$noom_light};
+  --color-noom-lightest: #{$noom_lightest};
+  --color-knowroaming: #{$knowroaming};
+  --color-knowroaming-light: #{$knowroaming_light};
+  --color-knowroaming-lightest: #{$knowroaming_lightest};
+  --color-smrtwatr: #{$smrtwatr};
+  --color-smrtwatr-light: #{$smrtwatr_light};
+  --color-smrtwatr-lightest: #{$smrtwatr_lightest};
+  --color-chameleon: #{$chameleon};
+  --color-chameleon-light: #{$chameleon_light};
+  --color-chameleon-lightest: #{$chameleon_lightest};
+  --color-zynga: #{$zynga};
+  --color-zynga-light: #{$zynga_light};
+  --color-zynga-lightest: #{$zynga_lightest};
+  --color-tap: #{$tap};
+  --color-tap-light: #{$tap_light};
+}

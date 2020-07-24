@@ -1,0 +1,23 @@
+@import '../../../style/colours';
+
+section#about {
+  text-align: left;
+
+  .about-text {
+    position: relative;
+    font-size: 20px;
+
+    a {
+      outline-color: $green;
+      outline-offset: 0;
+    }
+
+    p:first-child {
+      margin-top: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

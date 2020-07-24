@@ -1,0 +1,27 @@
+@import '../../style/colours';
+
+.resume-header {
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-gap: 16pt;
+  grid-template-columns: auto auto 1fr;
+  
+  #monogram {
+    width: auto;
+    height: 24pt;
+  }
+
+  #contacts {
+    display: grid;
+    font-weight: 400;
+    grid-auto-flow: row;
+    text-align: right;
+
+    a {
+      color: $green_small;
+      font-size: 0.9em;
+    }
+
+  }
+}

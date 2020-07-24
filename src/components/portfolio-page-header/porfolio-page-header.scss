@@ -1,0 +1,36 @@
+@import '../../style/colours';
+@import '../../style/variables';
+
+header.porfolio-page-header {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  max-width: $folio-max-width;
+  border-bottom: 2px solid $black;
+  justify-self: center;
+
+  h1 {
+    margin: 0;
+    margin-left: 12px;
+    color: $black;
+    font-family: var(--font-sans);
+    font-size: 28px;
+    font-weight: 400;
+  }
+
+  a {
+    display: inline-flex;
+    align-content: center;
+    justify-content: flex-start;
+    margin-left: 16px;
+    
+    &:focus {
+      outline-color: $black;
+    }
+  }
+
+  a:hover {
+    border: unset;
+  }
+}

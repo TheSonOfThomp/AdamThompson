@@ -1,0 +1,71 @@
+@import '../../../style/colours';
+@import '../../../style/mixins';
+
+.resume-entry {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 4pt; // gap btwn job title & first bullet
+  grid-template-rows: 18pt auto;
+  
+  .entry-header {
+    display: grid;
+    align-items: baseline;
+    grid-auto-flow: column;
+    grid-gap: 0.5em; // spacing btwn title & company
+    grid-template-areas: 'title company location';
+    grid-template-columns: auto auto 1fr;
+
+    h3 {
+      grid-area: title;
+    }
+
+    h4 {
+      grid-area: company;
+    }
+
+    span.location {
+      font-size: 0.8em;
+      grid-area: location;
+      justify-self: right;
+    }
+  }
+
+  ul {
+    display: grid;
+    padding-left: 0;
+    grid-gap: 8pt; // gap btwn bullets
+    list-style-type: none;
+    
+    li {
+      position: relative;
+      padding-left: 1em;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // &.school-entry {
+  //   .entry-header {
+  //   }
+  // }
+  
+  &.project-entry,
+  &.school-entry,
+  &.volunteer-entry {
+    grid-gap: 2pt; // gap btwn job title & first bullet
+    ul {
+      padding: 0;
+
+      li {
+        padding-left: 0;
+        border: unset;
+      }
+    }
+  }
+}

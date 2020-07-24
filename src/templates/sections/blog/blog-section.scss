@@ -1,0 +1,10 @@
+@import 'style/mixins';
+@import 'style/variables';
+
+section#blog {
+  .content {
+    display: grid;
+    grid-gap: 24px;
+    text-align: left;
+  }
+}

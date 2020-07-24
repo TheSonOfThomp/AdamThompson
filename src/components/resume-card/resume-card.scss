@@ -1,0 +1,58 @@
+@import '../../style/colours';
+@import '../../style/variables';
+
+$image-height: 48px;
+
+.resume-card {
+  display: grid;
+  align-content: baseline;
+  justify-content: left;
+  border-radius: 2px;
+  grid-gap: 8px;
+  grid-template-columns: 1fr;
+  text-align: left;
+
+  .resume-card-header {
+    display: grid;
+    align-items: baseline;
+    grid-gap: 2px;
+    grid-template-areas: 'position location' 'company company';
+
+    h2 {
+      margin: 0;
+    }
+
+    .position {
+      color: $green_small;
+      font-size: 20px;
+      grid-area: position;
+    }
+
+    .company {
+      font-size: 20px;
+      grid-area: company;
+    }
+
+    .location {
+      color: $dark_grey;
+      font-size: 14px;
+      grid-area: location;
+      justify-self: right;
+    }
+  }
+
+  img.logo {
+    grid-area: logo;
+  }
+
+  p.summary {
+    margin: 0;
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  img {
+    height: $image-height;
+    justify-self: center;
+  }
+}
