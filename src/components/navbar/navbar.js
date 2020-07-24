@@ -11,7 +11,7 @@ import './navbar.scss';
 export const Navbar = () => {
   return (
     <div className="banner" role="banner">
-      <div id="banner-logo" role="heading">
+      <div id="banner-logo" role="heading" aria-level="1">
         <img src={monogram} alt="A.T. monogram"></img>
         <h1>Adam Thompson</h1>
       </div>
