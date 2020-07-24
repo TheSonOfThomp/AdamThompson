@@ -3,6 +3,8 @@
 @import '../../style/mixins';
 
 @mixin branded-portfolio-card($brandColor) {
+  @include animate-text-underline('.portfolio-card-title', $brandColor);
+
   &:hover {
     background-color: mix($white, $brandColor, 95%);
   }
@@ -10,17 +12,12 @@
   &:focus {
     outline-color: $brandColor;
   }
-
-  .portfolio-card-title {
-    &::before {
-      background-color: $brandColor;
-    }
-  }
 }
 
 .portfolio-card {
   @include clickable-card(2, 4);
   @include animate(background-color);
+  @include animate-text-underline('.portfolio-card-title', var(--color-green));
   // restores all transition properties (2nd mixin resets them)\
   transition-property: box-shadow, transform, background-color;
   /* stylelint-disable-next-line order/properties-order */
@@ -57,15 +54,6 @@
     font-size: clamp(24px, 2vw, 32px);
 
     &::before { // for the animated underline
-      @include animate(width);
-      position: absolute;
-      z-index: -1;
-      bottom: 0;
-      width: 0%;
-      height: 4px;
-      background-color: var(--color-white);
-      content: '';
-
       @media screen and (max-width: $breakpoint-xsmall) {
         width: 100%; // show underline on mobile
       }
@@ -80,10 +68,6 @@
   &:hover {
     border: unset;
     text-decoration: none;
-
-    .portfolio-card-title::before {
-      width: 100%;
-    }
   }
 
   &:focus {
