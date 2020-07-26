@@ -1,9 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import SEO from "components/seo";
-import './portfolio-template.scss';
-import { PortfolioPageHeader } from "../../components/portfolio-page-header/porfolio-page-header";
+import SEO from "../../components/seo";
+import { PortfolioPageHeader } from "../../components/portfolio-page-header/portfolio-page-header";
 import PortfolioQuickLink from "./portfolio-quick-link/portfolio-quick-link";
+import './portfolio-template.scss';
+
 
 export default ({ pageContext, children }) => {
   const pageId = pageContext.frontmatter.title.replace(' ', '').toLowerCase()
@@ -18,6 +19,7 @@ export default ({ pageContext, children }) => {
             frontmatter {
               date
               title
+              color
             }
           }
         }

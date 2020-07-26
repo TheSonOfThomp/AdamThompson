@@ -1,9 +1,9 @@
 import React from "react"
 // import { Link } from "gatsby"
 
-import SEO from "components/seo";
-import Hero from "templates/sections/hero/hero";
-import ResumeSection from "templates/sections/resume/resume-section";
+import SEO from "../components/seo";
+import Hero from "../templates/sections/hero/hero";
+import ResumeSection from "../templates/sections/resume/resume-section";
 
 import PortfolioSection from "../templates/sections/portfolio/portfolio-section";
 import AboutSection from "../templates/sections/about/about-section";
@@ -18,21 +18,21 @@ class IndexPage extends React.Component {
       <main id="app">
         <SEO title="Main" image={image}/>
         
-        <Hero></Hero>
-    
-        <PortfolioSection></PortfolioSection>
-    
-        <AboutSection></AboutSection>
-    
-        {/* <Section title="Toolbox"></Section> */}
+        <Hero/>
         
-        <ProjectsSection></ProjectsSection>
+        <ProjectsSection/>
+    
+        <AboutSection/>
 
-        <ResumeSection></ResumeSection>
+        <PortfolioSection/>
+    
+        {/* <Section title="Toolbox"/> */}
         
-        <BlogSection></BlogSection>
+        <ResumeSection/>
+        
+        <BlogSection/>
 
-        <FooterSection></FooterSection>
+        <FooterSection/>
         
       </main>
   )}

@@ -3,9 +3,11 @@
 @import '../../../style/mixins';
 
 section#projects {
+  --project-card-min-width: 214px;
+
   .content {
     display: grid;
-    grid-gap: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(var(--project-card-min-width), 1fr));
   }
 }

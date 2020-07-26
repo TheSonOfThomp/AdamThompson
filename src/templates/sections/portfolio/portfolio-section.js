@@ -6,8 +6,8 @@ import PortfolioCard from "../../../components/portfolio-card/portfolio-card";
 import './portfolio-section.scss';
 
 const PortfolioSection = ({ data }) => {
-  const PortfolioQuery = useStaticQuery(graphql`
-    {
+  const portfolioPages = useStaticQuery(graphql`
+    query{
       allSitePage(filter: {path: {regex: "/portfolio/"}}, sort: {fields: context___frontmatter___date, order: DESC}) {
         nodes {
           path
@@ -16,8 +16,8 @@ const PortfolioSection = ({ data }) => {
               date
               title
               color
-              cover
               tagline
+              cover
             }
           }
         }
@@ -33,18 +33,16 @@ const PortfolioSection = ({ data }) => {
     }
   `)
   
-  const imageSources = PortfolioQuery.allImageSharp.nodes.map(node => node.fluid)
-  const posts = PortfolioQuery.allSitePage.nodes.map(node => {
+  const imageSources = portfolioPages.allImageSharp.nodes.map(node => node.fluid)
+  const posts = portfolioPages.allSitePage.nodes.map(node => {
     return {
       ...node,
       imageSource: imageSources.find(img => img.originalName === node.context.frontmatter.cover)
     }
   })
-  
-  debugger;
 
   return (
-    <Section title="Case Studies" id="portfolio">
+    <Section title="UX Case Studies" id="portfolio">
       <div className="portfolio-cards-container">
       {
         posts.map((post) => (

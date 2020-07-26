@@ -9,7 +9,6 @@ module.exports = {
   plugins: [
     // `gatsby-plugin-recaptcha`, // loads reCaptcha
     `gatsby-plugin-sass`, // loads SASS/SCSS files
-    `gatsby-plugin-resolve-src`, // sets 'path/to' == 'src/path/to'
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
@@ -36,13 +35,6 @@ module.exports = {
         path: `${__dirname}/src/data`
       }
     },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'portfolio',
-    //     path: `${__dirname}/src/data/portfolio`
-    //   }
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

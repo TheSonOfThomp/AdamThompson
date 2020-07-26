@@ -5,11 +5,8 @@ $folio-max-width: 720px;
 
 // -------- Breakpoints -------- //
 $breakpoint-large: 1440px;
-$breakpoint-medium: 1024px;
+$breakpoint-medium: $content-width + 32px;
 $breakpoint-small: 768px;
 $breakpoint-xsmall: 640px;
 
 $animation-ease: cubic-bezier(0.075, 0.82, 0.165, 1);
-
-
-
