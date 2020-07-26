@@ -1,10 +1,9 @@
 @import '../../style/colours';
 @import '../../style/variables';
 
-header.porfolio-page-header {
+header.portfolio-page-header {
   position: relative;
   z-index: 10;
-
   width: 100%;
   max-width: $folio-max-width;
   border-bottom: 2px solid $black;
