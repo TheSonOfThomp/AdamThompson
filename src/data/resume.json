@@ -1,5 +1,6 @@
 {
-  "blurb": "An engineer at the intersection of design and development. With an engineering education and experience in UX design since 2013, I can bridge the gap between the two disciplines.",
+  "tagline": "An engineer at the intersection of design and development.",
+  "blurb": "With an engineering education and experience in UX design since 2013, I seamlessly bridge the gap between the two disciplines.",
   "experience": {
     "new-visions": {
       "company": "New Visions for Public Schools",
@@ -7,11 +8,11 @@
       "term": "July 2018 - now",
       "position": "UX Engineer",
       "location": "NYC",
-      "summary": "Design systems development, prototyping and feature design.",
+      "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
         "Streamlined designer-developer collaboration by compiling design system documentation, and building and maintaining an Angular component library.",
-        "Developed a CSS architecture for Angular, leveraging its opinionated component structure, improving the long-term maintainability and flexibility of the codebase.",
-        "Designed a conceptual framework to streamline development of new data visualizations—enabling the team to launch remote learning features just days after schools closed in March 2020."
+        "Developed a CSS architecture and best-practices leveraging the component structure of Angular, improving the long-term maintainability and flexibility of the codebase.",
+        "Designed a conceptual framework to streamline development of new data visualizations, enabling the team to launch remote learning features just days after schools closed in March 2020."
       ]
     },
     "music-group": {
@@ -22,8 +23,8 @@
       "location": "Kitchener",
       "summary": "Design process, high level product vision & business case development.",
       "bullets": [
-        "Identified customer needs, and defined business strategy and product specifications based on market and user research.",
-        "Developed a globally used tool to allow managers to quickly evaluate new projects based on ROI and other key data."
+        "Defined business strategy and product specifications for a line of music accessories based on market and user research.",
+        "Developed a globally used tool allowing managers to quickly evaluate new projects based on ROI and other key data."
       ]
     },
     "zynga": {
@@ -31,11 +32,10 @@
       "url": "http://www.zynga.com/poker",
       "term": "2016",
       "position": "UX Product Manager",
-      "summary": "Data analysis, UX research and testing for new features in Poker Web.",
+      "summary": "Data analysis, UX research and testing for Poker Web.",
       "location": "Toronto",
       "bullets": [
-        "Optimized user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature.",
-        "Performed secondary user research and A/B testing to define pricing for a new subscription-based revenue model."
+        "Optimized user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature and a new subscription-based revenue model."
       ]
     },
     "noom": {
@@ -56,10 +56,10 @@
       "url": "http://www.knowroaming.com",
       "term": "2014 - 2015",
       "position": "UX Designer",
-      "summary": "User research, information architecture and UI design for mobile apps.",
+      "summary": "User research, information architecture and UI design for all mobile apps.",
       "location": "Toronto",
       "bullets": [
-        "Overhauled the app UI and information architecture to better align with common use cases."
+        "Redesigned the app information architecture and UI to better align with common use cases."
       ]
     },
     "sony": {
@@ -67,7 +67,7 @@
       "url": "http://mediago.sony.com",
       "term": "2013",
       "position": "UI Designer",
-      "summary": "UI design and front-end development for a music discovery feature in MediaGo.",
+      "summary": "UI design and front-end development for MediaGo.",
       "location": "Waterloo",
       "bullets": [
         "Led UI design and front-end development for a music discovery feature."
@@ -94,7 +94,7 @@
     },
     "farkle": {
       "title": "Farkle",
-      "description": "Play the dice game \"Farkle\" online with friends"
+      "description": "Play the dice game \"Farkle\" online with friends."
     },
     "zed": {
       "title": "Zed",

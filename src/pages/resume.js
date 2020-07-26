@@ -21,8 +21,8 @@ class ResumePage extends React.Component {
       <div className="resume-page" id="page-1">
         <ResumeHeader/>
         <div className="resume-body">
-          <div className="blurb">
-            {resumeData.blurb} 
+          <div className="summary">
+            {resumeData.tagline} {resumeData.blurb}
           </div>
           <div className="column" id="column-left">
             <div className="column-section " id="experience">
@@ -44,7 +44,6 @@ class ResumePage extends React.Component {
 
 
       <div className="resume-page" id="page-2">
-        <ResumeHeader />
         <div className="resume-body full-width">
           <div className="column" id="column-right">
             <div className="column-section " id="education">
@@ -102,6 +101,7 @@ class ResumePage extends React.Component {
         <div className="resume-footer">
           <a href="http://thesonofthomp.com">thesonofthomp.com</a>
           <a href="mailto:adam@thesonofthomp.com">adam@thesonofthomp.com</a>
+          <a href="tel:13323335780" id="phone">+1-332-333-5780</a>
         </div>
       </div>
     </div>
