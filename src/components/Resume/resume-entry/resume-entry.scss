@@ -4,41 +4,44 @@
 .resume-entry {
   display: grid;
   grid-auto-flow: row;
-  grid-gap: 4pt; // gap btwn job title & first bullet
+  grid-gap: 4pt; // gap between job title & first bullet
   grid-template-rows: 18pt auto;
   
   .entry-header {
     display: grid;
     align-items: baseline;
     grid-auto-flow: column;
-    grid-gap: 0.5em; // spacing btwn title & company
-    grid-template-areas: 'title company location';
-    grid-template-columns: auto auto 1fr;
-
-    h3 {
-      grid-area: title;
-    }
-
-    h4 {
-      grid-area: company;
-    }
-
-    span.location {
-      font-size: 0.8em;
-      grid-area: location;
-      justify-self: right;
-    }
+    grid-gap: 0.5em; // spacing between title & company
+    grid-template-areas: 'company title location';
+    grid-template-columns: max-content max-content 1fr;
   }
 
-  ul {
+  .entry-title {
+    color: $green_small;
+    font-size: 1.1rem;
+    grid-area: title;
+  }
+  
+  .entry-company {
+    font-size: 1.1rem;
+    grid-area: company;
+  }
+
+  .entry-location {
+    font-size: 0.8em;
+    grid-area: location;
+    justify-self: right;
+  }
+
+  .entry-bullets {
     display: grid;
     padding-left: 0;
-    grid-gap: 8pt; // gap btwn bullets
+    grid-gap: 8pt; // gap between bullets
     list-style-type: none;
     
-    li {
+    .entry-bullet-point {
       position: relative;
-      padding-left: 1em;
+      padding-left: 1ch;
 
       &:first-child {
         margin-top: 0;
@@ -49,23 +52,27 @@
       }
     }
   }
-
-  // &.school-entry {
-  //   .entry-header {
-  //   }
-  // }
   
-  &.project-entry,
   &.school-entry,
+  &.project-entry,
   &.volunteer-entry {
-    grid-gap: 2pt; // gap btwn job title & first bullet
-    ul {
+    grid-gap: 2pt; // gap between job title & first bullet
+    
+    .entry-bullets {
       padding: 0;
 
-      li {
+      .entry-bullet-point {
         padding-left: 0;
         border: unset;
       }
     }
   }
+
+  &.project-entry,
+  &.volunteer-entry {
+    .entry-header {
+      grid-template-areas: 'title title location';
+    }
+  }
 }
+
