@@ -5,19 +5,17 @@ const ResumeEntry = ({entryClass = 'job-entry', title, company, location, bullet
   return (
     <div className={`resume-entry ${entryClass}`}>
       <div className="entry-header">
-        <h3>{title}</h3>
-        <h4>{company}</h4>
-        <span className="location">{location}</span>
+        <h3 className="entry-title">{title}</h3>
+        <h4 className="entry-company">{company}</h4>
+        <span className="entry-location">{location}</span>
       </div>
-      <div className="bullets">
-        <ul>
-          {bullets.map(b => {
-            return (
-              <li>{b}</li>
-            )
-          })}
-        </ul>
-      </div>
+      <ul className="entry-bullets">
+        {bullets.map(b => {
+          return (
+            <li className="entry-bullet-point">{b}</li>
+          )
+        })}
+      </ul>
     </div>
   )
 }

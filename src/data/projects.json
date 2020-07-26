@@ -1,25 +1,52 @@
 {
   "projects" : [
     {
+      "name": "Farkle",
+      "color": "rgb(5, 90, 4)",
+      "url": "https://farkle.thesonofthomp.com",
+      "logo": "farkle-logo.png",
+      "icon": "link",
+      "description": "Play the dice game \"Farkle\" online with friends.",
+      "tools": ["Three.js","XState","Typescript","React","Socket.io"]
+    },
+    {
       "name": "Zed",
+      "color": "rgb(51, 51, 51)",
       "url": "https://github.com/TheSonOfThomp/Zed",
+      "logo": "zed-logo.png",
+      "logoIsName": true,
       "icon": "github",
-      "description": "A JS library for rendering more realistic overlapping shadows"
+      "description": "A JS library for rendering more realistic overlapping shadows.",
+      "tools": ["Typescript", "CSS"]
     },
     {
       "name": "Sketch Flat Export",
+      "color": "rgb(249, 162, 2)",
       "url": "https://github.com/TheSonOfThomp/sketch-flat-export",
+      "logo": "flat-export-logo-transparent.png",
+      "logoIsName": false,
       "icon": "github",
-      "description": "A Sketch plugin to export multiple artboards to a single directory"
+      "description": "A Sketch plugin to export multiple artboards to a single directory.",
+      "tools": ["Javascript", "Sketch API"]
     },
+    {
+      "name": "Chronological MCU",
+      "color": "rgb(203, 63, 69)",
+      "url": "https://chronological-mcu.netlify.app",
+      "logo": "chronMCU-logo.png",
+      "logoIsName": false,
+      "icon": "link",
+      "description": "Watch every scene in the Marvel Cinematic universe in chronological order.",
+      "tools": ["Javascript", "Chrome API"]
+    }
+  ],
+  "otherProjects": [
     {
       "name": "Word Chain",
       "url": "https://word-chain.thesonofthomp.com",
       "icon": "link",
       "description": "A thesaurus linker to find the closest synonym to two words"
-    }
-  ],
-  "otherProjects": [
+    },
     {
       "name": "React Synth",
       "url": "https://github.com/TheSonOfThomp/React-Synth",

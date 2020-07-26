@@ -1,5 +1,6 @@
 {
-  "blurb": "I'm an engineer and designer looking for a role at the intersection of the two disciplines. With an engineering education, and experience in UX design since 2013, I'm a perfect fit as a UX engineer or technical designer.",
+  "tagline": "An engineer at the intersection of design and development.",
+  "blurb": "With an engineering education and experience in UX design since 2013, I seamlessly bridge the gap between the two disciplines.",
   "experience": {
     "new-visions": {
       "company": "New Visions for Public Schools",
@@ -7,11 +8,11 @@
       "term": "July 2018 - now",
       "position": "UX Engineer",
       "location": "NYC",
-      "summary": "Design systems development, prototyping and feature design.",
+      "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
-        "Managed the design system, Angular component library and documentation, and fostered closer cross-team collaboration between design & engineering.",
-        "Developed infrastructure for quickly prototyping and testing new features and interactions with simulated data.",
-        "Designed, prototyped, and tested numerous features for the data portal, and consulted on front-end implementation."
+        "Streamlined designer-developer collaboration by compiling design system documentation, and building and maintaining an Angular component library.",
+        "Developed a CSS architecture and best-practices leveraging the component structure of Angular, improving the long-term maintainability and flexibility of the codebase.",
+        "Designed a conceptual framework to streamline development of new data visualizations, enabling the team to launch remote learning features just days after schools closed in March 2020."
       ]
     },
     "music-group": {
@@ -22,8 +23,8 @@
       "location": "Kitchener",
       "summary": "Design process, high level product vision & business case development.",
       "bullets": [
-        "Identified customer needs, and defined business strategy and product specifications based on market and user research.",
-        "Developed a globally used tool to allow managers to quickly evaluate new projects based on ROI and other key data."
+        "Defined business strategy and product specifications for a line of music accessories based on market and user research.",
+        "Developed a globally used tool allowing managers to quickly evaluate new projects based on ROI and other key data."
       ]
     },
     "zynga": {
@@ -31,11 +32,10 @@
       "url": "http://www.zynga.com/poker",
       "term": "2016",
       "position": "UX Product Manager",
-      "summary": "Data analysis, UX research and testing for new features in Poker Web.",
+      "summary": "Data analysis, UX research and testing for Poker Web.",
       "location": "Toronto",
       "bullets": [
-        "Optimized user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature.",
-        "Performed secondary user research and A/B testing to define pricing for a new subscription-based revenue model."
+        "Optimized user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature and a new subscription-based revenue model."
       ]
     },
     "noom": {
@@ -48,8 +48,7 @@
       "logotype": "images/companies/noom_logotype_small.png",
       "logo": "images/companies/noom_logo.png",
       "bullets": [
-        "Simplified the core food logging experience by modifying the information architecture to better fit the mental model observed during user interviews.",
-        "Prototyped interactions and user flows in Framer and Origami, and rigorously tested prototypes at varying levels of fidelity."
+        "Simplified the core food logging experience by modifying the information architecture to better fit the mental model observed during user interviews."
       ]
     },
     "knowroaming": {
@@ -57,10 +56,10 @@
       "url": "http://www.knowroaming.com",
       "term": "2014 - 2015",
       "position": "UX Designer",
-      "summary": "User research, information architecture and UI design for mobile apps.",
+      "summary": "User research, information architecture and UI design for all mobile apps.",
       "location": "Toronto",
       "bullets": [
-        "Overhauled the app interface and information architecture to better align with common use cases."
+        "Redesigned the app information architecture and UI to better align with common use cases."
       ]
     },
     "sony": {
@@ -68,7 +67,7 @@
       "url": "http://mediago.sony.com",
       "term": "2013",
       "position": "UI Designer",
-      "summary": "UI design and front-end development for a music discovery feature in MediaGo.",
+      "summary": "UI design and front-end development for MediaGo.",
       "location": "Waterloo",
       "bullets": [
         "Led UI design and front-end development for a music discovery feature."
@@ -93,28 +92,27 @@
       "url": "http://www.thesonofthomp.com/portfolio/chameleon",
       "role": "Electrical, mechanical & software design"
     },
+    "farkle": {
+      "title": "Farkle",
+      "description": "Play the dice game \"Farkle\" online with friends."
+    },
     "zed": {
       "title": "Zed",
       "description": "A JS library for rendering more realistic overlapping shadows.",
       "url": "https://github.com/TheSonOfThomp/Zed"
     },
-    "zeplin-x": {
-      "title": "ZeplinX",
-      "description": "A Confluence plugin to embed Zeplin images on a page."
+    "xmcu": {
+      "title": "Chronological MCU",
+      "description": "Watch all scenes from MCU movies in chronological order."
     },
     "sketch-export": {
       "title": "Sketch Flat Export",
       "description": "A Sketch plugin to export multiple artboards to a single directory.",
       "url": "https://github.com/TheSonOfThomp/sketch-flat-export"
     },
-    "react-synth": {
-      "title": "React Synth",
-      "description": "A web based synthesizer with musical typing."
-    },
-    "smrt-watr": {
-      "title": "SMRT WATR",
-      "description": "An interactive water fountain, controlled by a web-app game.",
-      "role": "Control systems & UX design"
+    "zeplin-x": {
+      "title": "ZeplinX",
+      "description": "A Confluence plugin to embed Zeplin images on a page."
     }
   },
   "volunteer": {
@@ -140,9 +138,9 @@
     }
   },
   "toolbox": [
-    "CSS", "HTML", "Javascript", "Typescript", "Angular", "Vue", "React",
-    "Storybook", "Sass", "Node", "D3", "Git", "Ci", "Swift", "Origami",
-    "Framer", "Sketch", "Zeplin", "InVision", "Photoshop", "Illustrator",
+    "CSS", "HTML", "Javascript", "Typescript", "Angular", "React", "Vue",
+    "Storybook", "Sass", "Node", "D3", "XState", "Git", "Ci", "Swift", 
+    "Origami", "Framer", "Sketch", "Zeplin", "InVision", "Photoshop", "Illustrator",
     "Balsamiq", "Excel", "Airtable", "Python", "Arduino"
   ]
 }

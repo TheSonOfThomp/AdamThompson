@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import SEO from "components/seo";
+import SEO from "../../components/seo";
 import './portfolio-template.scss';
 import { PortfolioPageHeader } from "../../components/portfolio-page-header/porfolio-page-header";
 import PortfolioQuickLink from "./portfolio-quick-link/portfolio-quick-link";

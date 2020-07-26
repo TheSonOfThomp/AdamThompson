@@ -1,8 +1,8 @@
 import React from "react"
-import Section from "templates/section/section";
-import './blog-section.scss';
+import Section from "../../../templates/section/section";
 import { posts } from '../../../data/medium-posts.json';
 import BlogPostLink from "./BlogPostLink/BlogPostLink";
+import './blog-section.scss';
 
 const BlogSection = () => {
   return (

@@ -1,5 +1,6 @@
+/* stylelint-disable max-nesting-depth */
 /* stylelint-disable selector-max-compound-selectors */
-/* stylelint-disablemax-nesting-depth */
+/* stylelint-disable selector-max-compound-selectors */
 
 @import './colours';
 @import './mixins';
@@ -29,9 +30,10 @@ $page-height: 11in;
   justify-items: center;
   
   .resume-page {
-
     $centre-col-fr: 7fr;
+
     display: grid;
+    position: relative;
     padding: 0;
     margin: 0;
     background-color: #fff;
@@ -39,6 +41,8 @@ $page-height: 11in;
     font-weight: 300;
     grid-gap: 8pt;
     grid-template-columns: 1fr $centre-col-fr 1fr;
+    grid-auto-rows: min-content;
+    break-after: page;
 
     h1,
     h2,
@@ -60,17 +64,9 @@ $page-height: 11in;
       text-transform: uppercase;
     }
 
-    h3 { 
-      color: $green_small;
-      font-size: 1.1rem;}
-
     a {
       border-bottom: unset;
       font-weight: inherit;
-    }
-
-    h4 { 
-      font-size: 1.1em;
     }
 
     .resume-header {
@@ -81,16 +77,24 @@ $page-height: 11in;
     
     .resume-body {
       display: grid;
-      // max-width: 76%;
       max-width: 100%;
       margin: auto;
       grid-column: 2/3;
       grid-gap: 12pt; // gap between columns
       grid-template-columns: 1fr;
 
-      .blurb {
+      .summary {
         font-style: italic;
         grid-column: span 1;
+        line-height: 1.25em
+      }
+
+      .tagline {
+        // font-size: 1.2em;
+      }
+
+      .blurb {
+
       }
 
       &.full-width {
@@ -140,26 +144,31 @@ $page-height: 11in;
 
     &#page-2 {
       position: relative;
+      grid-template-rows: auto 1fr;
 
       .resume-footer {
-        display: none;
-        justify-content: right;
-        grid-auto-flow: row;
+        display: grid;
+        gap: 1ch;
+        grid-auto-flow: column;
+        align-self: flex-end;
         grid-column: 2/3;
 
         a {
           color: $green_small;
           font-size: 0.9em;
           font-weight: 400;
-          text-align: right;
+          text-align: center;
         }
       }
     }
     @media screen {
       @include elevation(2);
       width: 8.5in - 2 * $page-margin-side;
-      max-height: $page-height - 2 * $page-margin-top;
+      height: $page-height - 2 * $page-margin-top;
       padding: $page-margin-top $page-margin-side;
+    }
+    @media print {
+      height: calc(100vh - 2 * #{$page-margin-top});
     }
   }
 }
