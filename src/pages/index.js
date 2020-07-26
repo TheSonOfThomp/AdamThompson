@@ -21,13 +21,11 @@ class IndexPage extends React.Component {
         <Hero/>
         
         <ProjectsSection/>
+        
+        <PortfolioSection/>
     
         <AboutSection/>
 
-        <PortfolioSection/>
-    
-        {/* <Section title="Toolbox"/> */}
-        
         <ResumeSection/>
         
         <BlogSection/>
