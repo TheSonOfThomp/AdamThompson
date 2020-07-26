@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../components/seo"
-import 'style/global.sass';
+import '../style/global.sass';
 
 const NotFoundPage = () => (
   <div>

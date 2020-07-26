@@ -1,8 +1,8 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import Section from "templates/section/section";
-import ResumeCard from "components/resume-card/resume-card";
+import Section from "../../../templates/section/section";
+import ResumeCard from "../../../components/resume-card/resume-card";
 import './resume-section.scss';
 import * as resumeJson from '../../../data/resume.json'
 const ResumeSection = () => {
