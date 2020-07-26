@@ -1,9 +1,9 @@
 import React from "react"
 // import { Link } from "gatsby"
 
-import SEO from "components/seo";
-import Hero from "templates/sections/hero/hero";
-import ResumeSection from "templates/sections/resume/resume-section";
+import SEO from "../components/seo";
+import Hero from "../templates/sections/hero/hero";
+import ResumeSection from "../templates/sections/resume/resume-section";
 
 import PortfolioSection from "../templates/sections/portfolio/portfolio-section";
 import AboutSection from "../templates/sections/about/about-section";

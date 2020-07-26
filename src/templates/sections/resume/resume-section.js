@@ -6,6 +6,7 @@ import ResumeCard from "../../../components/resume-card/resume-card";
 import * as resumePdf from '../../../images/Adam Thompson - Resume.pdf'
 import * as resumeJson from '../../../data/resume.json'
 import './resume-section.scss';
+
 const ResumeSection = () => {
   const resumeData = Object.entries(resumeJson.default.experience)
   return(
