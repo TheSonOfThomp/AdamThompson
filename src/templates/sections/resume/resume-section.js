@@ -1,10 +1,11 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import Section from "templates/section/section";
-import ResumeCard from "components/resume-card/resume-card";
-import './resume-section.scss';
+import Section from "../../../templates/section/section";
+import ResumeCard from "../../../components/resume-card/resume-card";
+import * as resumePdf from '../../../images/Adam Thompson - Resume.pdf'
 import * as resumeJson from '../../../data/resume.json'
+import './resume-section.scss';
 const ResumeSection = () => {
   const resumeData = Object.entries(resumeJson.default.experience)
   return(
@@ -24,7 +25,7 @@ const ResumeSection = () => {
           ))
         }
       </div>
-      <a className="print-resume" href="./resume" target="_blank">Printable resume <FontAwesomeIcon icon={faExternalLinkAlt} size="xs"/></a>
+      <a className="print-resume" href={resumePdf} download>Printable resume <FontAwesomeIcon icon={faExternalLinkAlt} size="xs"/></a>
     </Section>
   )
 }
