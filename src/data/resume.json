@@ -10,8 +10,8 @@
       "location": "NYC",
       "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
-        "Streamlined designer-developer collaboration by compiling design system documentation, and building and maintaining an Angular component library.",
-        "Developed a CSS architecture and best-practices leveraging the component structure of Angular, improving the long-term maintainability and flexibility of the codebase.",
+        "Streamlined designer-developer collaboration by compiling design system documentation, and building and maintaining the Angular component library.",
+        "Developed CSS best-practices and architecture that leverages the opinionated structure of Angular, improving the long-term maintainability and visual consistency.",
         "Designed a conceptual framework to streamline development of new data visualizations, enabling the team to launch remote learning features just days after schools closed in March 2020."
       ]
     },

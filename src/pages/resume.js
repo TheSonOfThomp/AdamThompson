@@ -6,7 +6,10 @@ import ResumeHeader from "../components/Resume/resume-header";
 import ResumeEntry from "../components/Resume/resume-entry/resume-entry";
 
 import * as resumeJson from '../data/resume.json';
+import * as projectsJson from '../data/projects.json';
+
 const resumeData = resumeJson.default
+const projectsData = projectsJson.default
 
 class ResumePage extends React.Component {
 
@@ -64,13 +67,13 @@ class ResumePage extends React.Component {
             <div className="column-section "id="projects">
               <h2>Projects</h2>
               <div className="column-section-contents">
-                {Object.values(resumeData.projects).map(project => {
-                  return <ResumeEntry
+                {Object.values(projectsData.projects).map(project => (
+                  project.showOnResume && <ResumeEntry
                     entryClass="project-entry"
-                    title={project.title}
+                    title={project.name}
                     bullets={[project.description]}               
                   />
-                })}
+                ))}
               </div>
             </div>
                 
