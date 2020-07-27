@@ -1,66 +1,103 @@
 {
   "projects" : [
     {
+      "name": "Chameleon",
+      "url": "http://chameleon.thesonofthomp.com",
+      "description": "Hearing protection that adapts to the volume of the wearer's surroundings.",
+      "logo": "chameleon_logotype.png",
+      "color": "#2e8c5d",
+      "icon": "link",
+      "tools": ["Python", "MatLab", "Arduino", "Fusion 360"],
+      "date": "2017-04-22",
+      "showOnResume": true,
+      "showOnHomepage": true
+    },
+    {
       "name": "Farkle",
-      "color": "rgb(5, 90, 4)",
       "url": "https://farkle.thesonofthomp.com",
       "logo": "farkle-logo.png",
       "icon": "link",
       "description": "Play the dice game \"Farkle\" online with friends.",
-      "tools": ["Three.js","XState","Typescript","React","Socket.io"]
+      "color": "rgb(5, 90, 4)",
+      "tools": ["Three.js","XState","Typescript","React","Socket.io", "Heroku"],
+      "date": "2020-07-10",
+      "showOnResume": true,
+      "showOnHomepage": true
     },
     {
       "name": "Zed",
       "color": "rgb(51, 51, 51)",
       "url": "https://github.com/TheSonOfThomp/Zed",
       "logo": "zed-logo.png",
-      "logoIsName": true,
       "icon": "github",
       "description": "A JS library for rendering more realistic overlapping shadows.",
-      "tools": ["Typescript", "CSS"]
+      "tools": ["Typescript", "CSS"],
+      "date": "2020-05-27",
+      "showOnResume": true,
+      "showOnHomepage": true
     },
     {
       "name": "Sketch Flat Export",
       "color": "rgb(249, 162, 2)",
       "url": "https://github.com/TheSonOfThomp/sketch-flat-export",
       "logo": "flat-export-logo-transparent.png",
-      "logoIsName": false,
       "icon": "github",
       "description": "A Sketch plugin to export multiple artboards to a single directory.",
-      "tools": ["Javascript", "Sketch API"]
+      "tools": ["Javascript", "Sketch API"],
+      "date": "2020-06-25",
+      "showOnResume": true,
+      "showOnHomepage": true
     },
     {
       "name": "Chronological MCU",
       "color": "rgb(203, 63, 69)",
       "url": "https://chronological-mcu.netlify.app",
       "logo": "chronMCU-logo.png",
-      "logoIsName": false,
       "icon": "link",
-      "description": "Watch every scene in the Marvel Cinematic universe in chronological order.",
-      "tools": ["Javascript", "Chrome API"]
-    }
-  ],
-  "otherProjects": [
+      "description": "Watch every Marvel Cinematic Universe scene in chronological order.",
+      "tools": ["Javascript", "Chrome API"],
+      "date": "2020-06-01",
+      "showOnResume": true,
+      "showOnHomepage": true
+    },
+    {
+      "name": "ZeplinX",
+      "description": "An internal Confluence plugin to embed Zeplin images on a page.",
+      "logo": "zeplinX-icon.png",
+      "date": "2019-12-03",
+      "color": "rgb(243, 102, 36)",
+      "tools": ["Javascript", "Atlassian API", "AWS"],
+      "showOnResume": true,
+      "showOnHomepage": true
+    },
     {
       "name": "Word Chain",
       "url": "https://word-chain.thesonofthomp.com",
       "icon": "link",
-      "description": "A thesaurus linker to find the closest synonym to two words"
+      "description": "A thesaurus linker to find the closest synonym to two words",
+      "showOnResume": false,
+      "showOnHomepage": false
     },
     {
       "name": "React Synth",
       "url": "https://github.com/TheSonOfThomp/React-Synth",
-      "description": "A web based synthesizer with musical typing"
+      "description": "A web based synthesizer with musical typing",
+      "showOnResume": false,
+      "showOnHomepage": false
     },
     {
       "name": "Tap Metronome",
       "url": "https://github.com/TheSonOfThomp/TAP-Metronome",
-      "description": "A simple iOS metronome app with a minimal UI"
+      "description": "A simple iOS metronome app with a minimal UI",
+      "showOnResume": false,
+      "showOnHomepage": false
     },
     {
       "name": "SMRT WATR",
       "url": "https://github.com/TheSonOfThomp/SMRTWATR",
-      "description": "An interactive water fountain, controlled by a web-app game"
+      "description": "An interactive water fountain, controlled by a web-app game",
+      "showOnResume": false,
+      "showOnHomepage": false
     }
   ]
 }

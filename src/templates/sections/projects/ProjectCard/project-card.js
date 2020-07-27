@@ -32,7 +32,7 @@ const ProjectCard = ({project}) => {
   const cardRef = useCustomProp('--project-color', project.color)
 
   return (
-    <a ref={cardRef} className="project-card" href={project.url} alt={project.name}>
+    <a ref={cardRef} className="project-card" href={project.url} alt={project.name} target="_blank" rel="noreferrer">
       <h2 className="project-title">{project.name}</h2>
       <span className="project-description">{project.description}</span>
       <img className="project-logo" src={logoSrc} alt={`Logo for ${project.name}`}></img>

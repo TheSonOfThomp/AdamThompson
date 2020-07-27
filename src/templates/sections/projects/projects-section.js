@@ -4,12 +4,20 @@ import './projects-section.scss';
 import ProjectCard from "./ProjectCard/project-card";
 import {projects} from '../../../data/projects.json'
 
+const compareDates = (project1, project2) => {
+  const Date1 = new Date(project1.date)
+  const Date2 = new Date(project2.date)
+
+  console.log(Date1, Date2)
+  return (Date1 > Date2) ? -1 : 1
+}
+
 const ProjectsSection = () => {
-  const projectsJSX = projects.map(p => {
+  const projectsJSX = projects.sort(compareDates).map(project => {
     return (
-      <ProjectCard 
-        project={p}
-        key={p.name}
+      project.showOnHomepage && <ProjectCard 
+        project={project}
+        key={project.name}
       />
     )
   })
