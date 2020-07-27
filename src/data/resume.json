@@ -85,36 +85,7 @@
       "class": "2017"
     }
   },
-  "projects": {
-    "chameleon": {
-      "title": "Chameleon",
-      "description": "Hearing protection that adapts to the volume of the wearer's surroundings.",
-      "url": "http://www.thesonofthomp.com/portfolio/chameleon",
-      "role": "Electrical, mechanical & software design"
-    },
-    "farkle": {
-      "title": "Farkle",
-      "description": "Play the dice game \"Farkle\" online with friends."
-    },
-    "zed": {
-      "title": "Zed",
-      "description": "A JS library for rendering more realistic overlapping shadows.",
-      "url": "https://github.com/TheSonOfThomp/Zed"
-    },
-    "xmcu": {
-      "title": "Chronological MCU",
-      "description": "Watch all scenes from MCU movies in chronological order."
-    },
-    "sketch-export": {
-      "title": "Sketch Flat Export",
-      "description": "A Sketch plugin to export multiple artboards to a single directory.",
-      "url": "https://github.com/TheSonOfThomp/sketch-flat-export"
-    },
-    "zeplin-x": {
-      "title": "ZeplinX",
-      "description": "A Confluence plugin to embed Zeplin images on a page."
-    }
-  },
+  "projects": "See projects.json",
   "volunteer": {
     "thesymphonychorus": {
       "title": "The SymphoNYChorus",
@@ -139,7 +110,7 @@
   },
   "toolbox": [
     "CSS", "HTML", "Javascript", "Typescript", "Angular", "React", "Vue",
-    "Storybook", "Sass", "Node", "D3", "XState", "Git", "Ci", "Swift", 
+    "Storybook", "Sass", "Node", "D3", "XState", "Git", "CI", "Swift", 
     "Origami", "Framer", "Sketch", "Zeplin", "InVision", "Photoshop", "Illustrator",
     "Balsamiq", "Excel", "Airtable", "Python", "Arduino"
   ]
