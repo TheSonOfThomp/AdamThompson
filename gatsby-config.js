@@ -43,6 +43,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `portfolio`,
+        path: `${__dirname}/src/pages/portfolio`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `recipes`,
+        path: `${__dirname}/src/pages/recipes`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-mdx',
       options: {
         remarkPlugins: [require('remark-unwrap-images')], // removes wrapping <p> tag
@@ -56,7 +70,8 @@ module.exports = {
             },
           }],
         defaultLayouts: {
-          default: require.resolve("./src/templates/portfolio-page/portfolio-template.js"),
+          recipes: require.resolve("./src/templates/recipe-page/recipe-page-template.js"),
+          portfolio: require.resolve("./src/templates/portfolio-page/portfolio-template.js"),
         },
       },
     },
