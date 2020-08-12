@@ -25,6 +25,7 @@
     "@fortawesome/react-fontawesome": "^0.1.5",
     "@mdx-js/mdx": "^1.5.8",
     "@mdx-js/react": "^1.5.8",
+    "@thesonofthomp/recipe-parser": "^0.0.6",
     "axios": "^0.19.0",
     "chroma-js": "^2.0.6",
     "gatsby": "^2.24.11",

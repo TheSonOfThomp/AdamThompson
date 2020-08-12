@@ -1,14 +1,10 @@
 import React from 'react';
-// import { RecipeChart } from "@thesonofthomp/recipe-parser"
+import './recipe-page-template.styles.scss';
 
-
-const RecipePage = ({ pageContext, children }) => {
-  console.log(pageContext)
+const RecipePage = ({children}) => {
   return (
-    <div className="RecipePageWrapper">
-      Test content
-      {JSON.stringify(pageContext)}
-      {/* <RecipeChart /> */}
+    <div className="recipe-page-wrapper">
+      {children}
     </div>
   );
 }
