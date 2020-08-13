@@ -31,7 +31,10 @@ const RecipesPage = () => {
       <h1>Recipes</h1>
 
       <p>
-        This is my collection of recipes (food recipes, not code "recipes". For that see <a href="/snippets">snippets</a>).
+        This is my collection of recipes.
+        
+        {/* (food recipes, not code "recipes". For that see <a href="/snippets">snippets</a>). */}
+
         Most of these recipes I've modified from existing recipes enough that I needed to write it down somewhere.
       </p>
 
