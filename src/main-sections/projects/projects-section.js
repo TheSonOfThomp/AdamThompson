@@ -1,8 +1,8 @@
 import React from "react"
-import Section from "../../../templates/section/section";
+import Section from "../../templates/section/section";
 import './projects-section.scss';
 import ProjectCard from "./ProjectCard/project-card";
-import {projects} from '../../../data/projects.json'
+import {projects} from '../../data/projects.json'
 
 const compareDates = (project1, project2) => {
   const Date1 = new Date(project1.date)

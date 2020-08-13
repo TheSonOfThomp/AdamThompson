@@ -1,8 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Section from "../../section/section";
-import PortfolioCard from "../../../components/portfolio-card/portfolio-card";
+import Section from "../../templates/section/section";
+import PortfolioCard from "../../components/portfolio-card/portfolio-card";
 import './portfolio-section.scss';
 
 const PortfolioSection = ({ data }) => {

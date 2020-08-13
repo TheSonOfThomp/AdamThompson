@@ -1,5 +1,5 @@
 import React from "react"
-import Section from "../../../templates/section/section";
+import Section from "../../templates/section/section";
 
 import { useStaticQuery, graphql } from 'gatsby';
 import './about-section.scss';
