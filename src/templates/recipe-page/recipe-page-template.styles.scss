@@ -43,9 +43,8 @@
     }
 
     > .verb,
-    > .ingredient {
+    > .ingredient:last-child {
       border-bottom: unset;
     }
   }
-
 }
