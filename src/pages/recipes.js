@@ -1,9 +1,10 @@
 import React from "react";
 import { useStaticQuery, graphql } from 'gatsby';
 import { Link } from "gatsby";
-import { PortfolioPageHeader } from "../components/portfolio-page-header/portfolio-page-header";
 import './recipes.scss'
 import { startCase } from "lodash";
+import Header from "../components/Header";
+import DefaultPage from '../templates/default-page/default-template'
 
 const RecipesPage = () => {
 
@@ -25,22 +26,17 @@ const RecipesPage = () => {
   `).allMdx.nodes
 
   return (
-    <main id="recipes">
-      <PortfolioPageHeader />
-
+    <DefaultPage>
       <h1>Recipes</h1>
 
       <p>
-        This is my collection of recipes.
-        
+        This is my collection of recipes that I've modified enough that I needed to write it down somewhere.
         {/* (food recipes, not code "recipes". For that see <a href="/snippets">snippets</a>). */}
-
-        Most of these recipes I've modified from existing recipes enough that I needed to write it down somewhere.
       </p>
 
       <p>
-        The format of the recipes is in the style of Cooking for Engineers—a flowchart that describes when to use and combine each ingredient. 
-        I find this is the most intuitive way to read a recipe (personally).
+        These recipes formatted in the style of Cooking for Engineers—a flowchart that describes when to use and combine each ingredient. 
+        I personally find this is the most intuitive way to read a recipe. Check out the generator on <a href="https://github.com/TheSonOfThomp/recipe-parser">GitHub</a>.
       </p>
 
       <div className="recipe-cards">
@@ -58,7 +54,7 @@ const RecipesPage = () => {
           )})
         }
       </div>
-    </main>
+    </DefaultPage>
   )
 }
 

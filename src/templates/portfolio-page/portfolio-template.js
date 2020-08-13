@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import SEO from "../../components/seo";
-import { PortfolioPageHeader } from "../../components/portfolio-page-header/portfolio-page-header";
 import PortfolioQuickLink from "./portfolio-quick-link/portfolio-quick-link";
 import './portfolio-template.scss';
+import { PortfolioPageHeader } from "./portfolio-page-header/portfolio-page-header";
 
 
 export default ({ pageContext, children }) => {
@@ -35,7 +35,7 @@ export default ({ pageContext, children }) => {
   return (
     <main className="portfolio" id={frontmatter.title.toLowerCase().replace(' ', '')}>
       <SEO title="Portfolio" />
-      <PortfolioPageHeader/>
+      <PortfolioPageHeader />
       <div className="portfolio-content-container">
         {pageContext.node // If we want to use gatsby-node created pages
           ? <div 

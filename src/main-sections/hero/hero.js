@@ -1,16 +1,15 @@
-// import PropTypes from "prop-types"
 import React from "react"
-
 import './hero.scss';
 import monogram from '../../images/monogram-black.svg';
-import { Navbar } from "../../components/navbar/navbar";
+import Header from "../../components/Header";
+// import { Navbar } from "../../components/navbar/navbar";
 
 const Hero = () => (
   <section className="hero green-bg">
 
-    <Navbar/>
+    <Header showNav={true} />
   
-    <header className="hero-contents">
+    <div className="hero-contents">
       <h2 className="big-letters">
         {/* <b id="u">U</b><b id="x">X</b> */}
         <img className="big-letters-monogram" src={monogram} alt="Adam Thompson"/>
@@ -21,7 +20,7 @@ const Hero = () => (
       <h3 className="tagline">
         Developing experiences that make an impact
       </h3>
-    </header>
+    </div>
   </section>
 
 );
