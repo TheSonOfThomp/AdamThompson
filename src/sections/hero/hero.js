@@ -2,8 +2,8 @@
 import React from "react"
 
 import './hero.scss';
-import monogram from '../../../images/monogram-black.svg';
-import { Navbar } from "../../../components/navbar/navbar";
+import monogram from '../../images/monogram-black.svg';
+import { Navbar } from "../../components/navbar/navbar";
 
 const Hero = () => (
   <section className="hero green-bg">

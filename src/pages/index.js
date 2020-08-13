@@ -2,14 +2,14 @@ import React from "react"
 // import { Link } from "gatsby"
 
 import SEO from "../components/seo";
-import Hero from "../templates/sections/hero/hero";
-import ResumeSection from "../templates/sections/resume/resume-section";
+import Hero from "../sections/hero/hero";
+import ResumeSection from "../sections/resume/resume-section";
 
-import PortfolioSection from "../templates/sections/portfolio/portfolio-section";
-import AboutSection from "../templates/sections/about/about-section";
-import BlogSection from "../templates/sections/blog/blog-section";
-import FooterSection from "../templates/sections/footer/footer-section";
-import ProjectsSection from "../templates/sections/projects/projects-section";
+import PortfolioSection from "../sections/portfolio/portfolio-section";
+import AboutSection from "../sections/about/about-section";
+import BlogSection from "../sections/blog/blog-section";
+import FooterSection from "../sections/footer/footer-section";
+import ProjectsSection from "../sections/projects/projects-section";
 import image from '../images/monogram.png'
 import '../style/global.sass'
 class IndexPage extends React.Component {

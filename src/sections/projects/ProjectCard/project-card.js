@@ -5,7 +5,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { useStaticQuery, graphql } from 'gatsby';
 import './project-card.styles.scss';
 
-import { useCustomProp } from  '../../../../hooks/useCustomProperty'
+import { useCustomProp } from  '../../../hooks/useCustomProperty'
 
 const ProjectCard = ({project}) => {
   const iconObj = 
