@@ -30,13 +30,13 @@ const RecipesPage = () => {
       <h1>Recipes</h1>
 
       <p>
-        This is my collection of recipes. Most of these recipes I've modified from existing recipes enough that I needed to write it down somewhere.
+        This is my collection of recipes that I've modified enough that I needed to write it down somewhere.
         {/* (food recipes, not code "recipes". For that see <a href="/snippets">snippets</a>). */}
       </p>
 
       <p>
-        The format of the recipes is in the style of Cooking for Engineers—a flowchart that describes when to use and combine each ingredient. 
-        I find this is the most intuitive way to read a recipe (personally).
+        These recipes formatted in the style of Cooking for Engineers—a flowchart that describes when to use and combine each ingredient. 
+        I personally find this is the most intuitive way to read a recipe. Check out the generator on <a href="https://github.com/TheSonOfThomp/recipe-parser">GitHub</a>.
       </p>
 
       <div className="recipe-cards">

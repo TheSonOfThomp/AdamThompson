@@ -15,6 +15,10 @@
     }
   }
 
+  article {
+    position: relative;
+  }
+  
   h1 {
     font-size: 2em;
   }
@@ -27,6 +31,13 @@
   border: 1px solid var(--color-black);
   border-radius: 4px;
 
+  @media screen and (max-width: $breakpoint-small) {
+    width: 100vw;
+    max-width: unset;
+    margin-left: -16px;
+    font-size: 10px;
+  }
+
   .ingredient,
   .verb {
     border-color: #bbb;
@@ -35,16 +46,16 @@
   }
 
   .ingredient {
-    border-bottom-width: 1px;
+    border-top-width: 1px;
   }
 
   .verb {
-    border-bottom-width: 1px;
+    border-top-width: 1px;
     border-left-width: 1px;
   }
 
   > .verb,
-  > .ingredient:last-child {
-    border-bottom: unset;
+  > .ingredient:first-child {
+    border-top: unset;
   }
 }
