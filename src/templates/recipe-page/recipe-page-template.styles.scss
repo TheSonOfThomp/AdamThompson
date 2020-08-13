@@ -1,5 +1,50 @@
-/* your css code */
-.recipe-page-wrapper {
-  max-width: 1024px;
+@import '../../style/variables';
+
+.recipe-page {
+  width: 100%;
+  max-width: $folio-max-width;
+  align-items: flex-end;
+  padding: 0 24px;
   margin: auto;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  grid-template-rows: 64px;
+
+  .portfolio-page-header {
+    max-width: $folio-max-width;
+    border-color: var(--color-green);
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .recipe {
+    border: 1px solid var(--color-black);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+
+    .ingredient,
+    .verb {
+      border-width: 0;
+      border-style: solid;
+      border-color: #bbb;
+    }
+  
+    .ingredient {
+      border-bottom-width: 1px;
+    }
+  
+    .verb {
+      border-bottom-width: 1px;
+      border-left-width: 1px;
+    }
+
+    > .verb,
+    > .ingredient {
+      border-bottom: unset;
+    }
+  }
+
 }
