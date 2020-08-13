@@ -17,7 +17,7 @@ section.hero {
   color: $white;
   grid-auto-flow: row;
   grid-row-gap: 0;
-  grid-template-areas: '. banner .' '. hero .' '. . .';
+  grid-template-areas: '. header .' '. hero .' '. . .';
   grid-template-columns: 1fr Min($content-width, 100vw) 1fr;
   grid-template-rows: 80px 1fr 80px;
   text-align: center;
@@ -41,8 +41,13 @@ section.hero {
     }
   }
 
-  .banner {
-    grid-area: banner;
+  .page-header {
+    z-index: 1;
+    grid-area: header;
+    @media screen and (max-width: $breakpoint-medium) {
+      margin-right: 16px;
+      margin-left: 16px;
+    }
   }
 
   .hero-contents {

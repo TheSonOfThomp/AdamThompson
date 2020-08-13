@@ -75,6 +75,7 @@
     "prettier": "^1.18.2",
     "stylelint": "^13.3.1",
     "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-recess-order": "^2.1.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-sass-guidelines": "^7.0.0"
   },

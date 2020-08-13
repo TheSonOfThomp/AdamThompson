@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-sass-guidelines", "stylelint-config-idiomatic-order"],
+  "extends": ["stylelint-config-sass-guidelines", "stylelint-config-recess-order"],
   "rules": {
     "at-rule-no-unknown": null,
     "selector-max-id": 1,

@@ -1,22 +1,11 @@
 @import '../style/mixins';
 @import '../style/variables';
 
-#recipes {
-  margin-top: 16px;
-  font-size: 18px;
-
-  > * {
-    max-width: $folio-max-width;
-  }
-
-}
-
 .recipe-cards {
   display: grid;
-  max-width: $folio-max-width;
-  margin: 32px auto;
-  grid-gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  grid-gap: 16px;
+  margin: 32px auto;
 }
 
 .recipe-card {
@@ -35,10 +24,10 @@
 
   .recipe-tags {
     display: grid;
-    font-size: 14px;
     grid-auto-columns: max-content;
     grid-auto-flow: column;
     grid-gap: 0.5ch;
+    font-size: 14px;
   }
   
   .recipe-tag {

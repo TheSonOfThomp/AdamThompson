@@ -1,5 +1,5 @@
 import React from "react"
-import monogram from '../../images/monogram-black.svg';
+import monogram from '../../../images/monogram-black.svg';
 import './portfolio-page-header.scss'
 
 export const PortfolioPageHeader = () => (

@@ -1,9 +1,10 @@
 import React from "react";
 import { useStaticQuery, graphql } from 'gatsby';
 import { Link } from "gatsby";
-import { PortfolioPageHeader } from "../components/portfolio-page-header/portfolio-page-header";
 import './recipes.scss'
 import { startCase } from "lodash";
+import Header from "../components/Header";
+import DefaultPage from '../templates/default-page/default-template'
 
 const RecipesPage = () => {
 
@@ -25,17 +26,12 @@ const RecipesPage = () => {
   `).allMdx.nodes
 
   return (
-    <main id="recipes">
-      <PortfolioPageHeader />
-
+    <DefaultPage>
       <h1>Recipes</h1>
 
       <p>
-        This is my collection of recipes.
-        
+        This is my collection of recipes. Most of these recipes I've modified from existing recipes enough that I needed to write it down somewhere.
         {/* (food recipes, not code "recipes". For that see <a href="/snippets">snippets</a>). */}
-
-        Most of these recipes I've modified from existing recipes enough that I needed to write it down somewhere.
       </p>
 
       <p>
@@ -58,7 +54,7 @@ const RecipesPage = () => {
           )})
         }
       </div>
-    </main>
+    </DefaultPage>
   )
 }
 

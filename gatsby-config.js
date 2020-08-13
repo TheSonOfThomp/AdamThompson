@@ -70,8 +70,8 @@ module.exports = {
             },
           }],
         defaultLayouts: {
-          recipes: require.resolve("./src/templates/recipe-page/recipe-page-template.js"),
           portfolio: require.resolve("./src/templates/portfolio-page/portfolio-template.js"),
+          default: require.resolve("./src/templates/default-page/default-template.tsx"),
         },
       },
     },
