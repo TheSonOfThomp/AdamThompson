@@ -41,6 +41,8 @@ const PortfolioSection = ({ data }) => {
     }
   })
 
+  console.log(posts)
+
   return (
     <Section title="UX Case Studies" id="portfolio">
       <div className="portfolio-cards-container">
