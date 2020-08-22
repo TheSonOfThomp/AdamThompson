@@ -11,19 +11,26 @@
 .recipe-card {
   @include clickable-card();
   @include animate-text-underline('.recipe-title');
-  padding: 24px;
+  display: grid;
+  grid-template-areas: 'title' 'tags' 'image';
+  grid-template-rows: max-content max-content auto;
+  row-gap: 4px;
+  padding: 16px;
 
   &:hover {
     border: unset;
   }
 
   .recipe-title {
-    display: inline;
+    grid-area: title;
+    width: fit-content;
+    margin: 0;
     font-size: 1.5em;
   }
 
   .recipe-tags {
     display: grid;
+    grid-area: tags;
     grid-auto-columns: max-content;
     grid-auto-flow: column;
     grid-gap: 0.5ch;
@@ -42,5 +49,12 @@
     padding: 0.5em 0 0;
     font-size: 16px;
     font-weight: 200;
+  }
+
+  .recipe-image {
+    grid-area: image;
+    align-self: center;
+    justify-self: center;
+    max-width: 100%;
   }
 }

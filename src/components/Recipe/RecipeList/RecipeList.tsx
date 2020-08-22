@@ -30,7 +30,8 @@ const RecipeList = ({json}:RecipeListProps) => {
     <ol ref={listRef} className="recipe-steps-list">
       {
         json?.steps.map((step, i) => {
-          return (<li className="recipe-steps-list-step" id={`steps-list-${i}`}>
+          return (
+          <li className="recipe-steps-list-step" id={`steps-list-${i}`} key={`step-${i}`}>
             <b className="recipe-steps-list-verb">{step.verb} </b>
             {
               step.ingredients.map((ing: string) => {
@@ -40,9 +41,10 @@ const RecipeList = ({json}:RecipeListProps) => {
                   return <span
                     onMouseOver={() => { handleIngredientMouseOver(stepRef) }}
                     onMouseOut={handleIngredientMouseOut}
-                    className="recipe-steps-list-ingredient recipe-steps-list-ingredient-ref">{ing}</span>
+                    className="recipe-steps-list-ingredient recipe-steps-list-ingredient-ref"
+                    key={ing}>{ing}</span>
                 } else {
-                  return <span className="recipe-steps-list-ingredient">{ing}</span>
+                  return <span className="recipe-steps-list-ingredient" key={ing}>{ing}</span>
                 }
               })
             }

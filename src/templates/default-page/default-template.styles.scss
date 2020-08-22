@@ -22,5 +22,24 @@
   h1 {
     font-size: 2em;
   }
+
+  &.recipes {
+    .gatsby-resp-image-image {
+      position: initial !important;
+    }
+
+    .gatsby-resp-image-figcaption {
+      display: none !important;
+    }
+
+    .gatsby-resp-image-figure {
+      margin-inline-start: 0 !important;
+    }
+
+    .gatsby-resp-image-wrapper {
+      max-width: 640px !important;
+      margin: initial !important;
+    }
+  }
 }
 
