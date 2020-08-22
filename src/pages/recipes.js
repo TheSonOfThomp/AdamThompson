@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { Link } from "gatsby";
 import './recipes.scss'
 import { startCase } from "lodash";
-import Header from "../components/Header";
 import DefaultPage from '../templates/default-page/default-template'
 
 const RecipesPage = () => {
@@ -26,7 +25,8 @@ const RecipesPage = () => {
   `).allMdx.nodes
 
   return (
-    <DefaultPage>
+    <>
+    <DefaultPage title="Recipes">
       <h1>Recipes</h1>
 
       <p>
@@ -55,6 +55,7 @@ const RecipesPage = () => {
         }
       </div>
     </DefaultPage>
+    </>
   )
 }
 
