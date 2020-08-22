@@ -41,15 +41,13 @@ const PortfolioSection = ({ data }) => {
     }
   })
 
-  console.log(posts)
-
   return (
     <Section title="UX Case Studies" id="portfolio">
       <div className="portfolio-cards-container">
       {
         posts.map((post) => (
           <PortfolioCard
-            key={post.id}
+            key={post.context.frontmatter.title}
             title={post.context.frontmatter.title}
             tagline={post.context.frontmatter.tagline}
             color={post.context.frontmatter.color}
