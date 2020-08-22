@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn, faGithub, faTwitter, faCodepen, faMedium } from '@fortawesome/free-brands-svg-icons'
-import SocialLink from "../social-link/social-link";
+import SocialLink from "./social-link/social-link";
 // @ts-ignore
 import monogramBlack from '../../images/monogram-black.svg';
 // @ts-ignore
