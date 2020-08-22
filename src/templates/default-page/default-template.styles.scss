@@ -22,40 +22,24 @@
   h1 {
     font-size: 2em;
   }
-}
 
-// TODO - move this to recipe-parser
-.recipe {
-  font-size: 14px;
-  font-weight: 500;
-  border: 1px solid var(--color-black);
-  border-radius: 4px;
+  &.recipes {
+    .gatsby-resp-image-image {
+      position: initial !important;
+    }
 
-  @media screen and (max-width: $breakpoint-small) {
-    width: 100vw;
-    max-width: unset;
-    margin-left: -16px;
-    font-size: 10px;
-  }
+    .gatsby-resp-image-figcaption {
+      display: none !important;
+    }
 
-  .ingredient,
-  .verb {
-    border-color: #bbb;
-    border-style: solid;
-    border-width: 0;
-  }
+    .gatsby-resp-image-figure {
+      margin-inline-start: 0 !important;
+    }
 
-  .ingredient {
-    border-top-width: 1px;
-  }
-
-  .verb {
-    border-top-width: 1px;
-    border-left-width: 1px;
-  }
-
-  > .verb,
-  > .ingredient:first-child {
-    border-top: unset;
+    .gatsby-resp-image-wrapper {
+      max-width: 640px !important;
+      margin: initial !important;
+    }
   }
 }
+

@@ -64,6 +64,7 @@
     "@storybook/addons": "^5.2.3",
     "@storybook/react": "^5.2.3",
     "@thesonofthomp/recipe-parser": "^0.0.11",
+    "@types/react-helmet": "^6.1.0",
     "axios": "^0.19.0",
     "babel-loader": "^8.0.5",
     "copy-webpack-plugin": "^5.1.1",

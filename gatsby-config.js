@@ -11,6 +11,9 @@ module.exports = {
     `gatsby-plugin-sass`, // loads SASS/SCSS files
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`, // for <head> tag
+    'gatsby-transformer-json', // for parsing json
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-transformer-remark`, // for parsing markdown
       options: {
@@ -26,8 +29,6 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-react-helmet`, // for <head> tag?
-    'gatsby-transformer-json', // for parsing json
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -64,7 +65,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 720,
+              maxWidth: 1024,
               linkImagesToOriginal: false,
               showCaptions: true,
             },

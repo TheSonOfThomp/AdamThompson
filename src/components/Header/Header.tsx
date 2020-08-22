@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn, faGithub, faTwitter, faCodepen, faMedium } from '@fortawesome/free-brands-svg-icons'
-import SocialLink from "../social-link/social-link";
+import SocialLink from "./social-link/social-link";
 // @ts-ignore
 import monogramBlack from '../../images/monogram-black.svg';
 // @ts-ignore
@@ -34,7 +34,8 @@ const Header = (props : HeaderProps) => {
           <a className="nav-link" id="nav-portfolio" href="#portfolio">Case studies</a>
           <a className="nav-link" id="nav-about" href="#about">About</a>
           <a className="nav-link" id="nav-projects" href="#projects">Projects</a>
-          <a className="nav-link" id="nav-blog" href="#blog">Blog</a>
+          {/* <a className="nav-link" id="nav-blog" href="#blog">Blog</a> */}
+          <a className="nav-link" id="nav-projects" href="/recipes">Recipes</a>
           <SocialLink color="white" name="Twitter" url="https://www.twitter.com/thesonofthomp/">
             <FontAwesomeIcon icon={faTwitter} size="sm" />
           </SocialLink>
