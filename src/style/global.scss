@@ -1,6 +1,3 @@
-@import url("https://use.typekit.net/onu2sfw.css");
-@import url('https://fonts.googleapis.com/css?family=Muli');
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
 @import './colours';
 @import './typography';
 
@@ -22,6 +19,7 @@ html {
     margin: 0;
     overflow-x: hidden;
     font-family: var(--font-sans);
+    font-display: swap;
     font-weight: 300;
     color: var(--color-black);
     background: var(--color-white);
