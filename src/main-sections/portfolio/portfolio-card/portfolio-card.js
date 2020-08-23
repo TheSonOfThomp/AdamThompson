@@ -1,5 +1,5 @@
 import React from "react"
-import {useCustomProp} from '../../hooks/useCustomProperty';
+import {useCustomProp} from '../../../hooks/useCustomProperty';
 import './portfolio-card.scss';
 import { Link } from "gatsby";
 
@@ -17,9 +17,9 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
         <span className="portfolio-card-tagline">{tagline}</span>
       </div>
         <div className="portfolio-card-image using-img-tag"  >
-          <img src={imgSrc} alt={`${title}`}/>
+          <img srcSet={imgSrc} alt={`${title}`}/>
       </div>
-  </Link>
+    </Link>
   )
 }
 

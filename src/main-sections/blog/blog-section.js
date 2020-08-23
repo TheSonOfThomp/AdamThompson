@@ -9,7 +9,7 @@ const BlogSection = () => {
     <Section title="Writing" id="blog">
       {posts.map(post => {
         return (
-          <BlogPostLink post={post}/>
+          <BlogPostLink post={post} key={post.title}/>
         )
       })}
     </Section>

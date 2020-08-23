@@ -1,5 +1,4 @@
 import React from "react"
-// import { Link } from "gatsby"
 
 import SEO from "../components/seo";
 import Hero from "../main-sections/hero/hero";
@@ -10,7 +9,7 @@ import BlogSection from "../main-sections/blog/blog-section";
 import FooterSection from "../main-sections/footer/footer-section";
 import ProjectsSection from "../main-sections/projects/projects-section";
 import image from '../images/monogram.png'
-import '../style/global.sass'
+import '../style/global.scss'
 class IndexPage extends React.Component {
   render() {
     return (

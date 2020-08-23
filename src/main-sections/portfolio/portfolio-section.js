@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Section from "../../templates/section/section";
-import PortfolioCard from "../../components/portfolio-card/portfolio-card";
+import PortfolioCard from "./portfolio-card/portfolio-card";
 import './portfolio-section.scss';
 
 const PortfolioSection = ({ data }) => {
@@ -27,6 +27,8 @@ const PortfolioSection = ({ data }) => {
           fluid {
             originalName
             src
+            srcSet
+            srcSetWebp
           }
         }
       }
@@ -41,21 +43,19 @@ const PortfolioSection = ({ data }) => {
     }
   })
 
-  console.log(posts)
-
   return (
     <Section title="UX Case Studies" id="portfolio">
       <div className="portfolio-cards-container">
       {
         posts.map((post) => (
           <PortfolioCard
-            key={post.id}
+            key={post.context.frontmatter.title}
             title={post.context.frontmatter.title}
             tagline={post.context.frontmatter.tagline}
             color={post.context.frontmatter.color}
             cover={post.imageSource.src}
             link={post.path}
-            imgSrc={post.imageSource.src}
+            imgSrc={`${post.imageSource.srcSet}, ${post.imageSource.srcSetWebp}`}
           >
           </PortfolioCard>
         ))

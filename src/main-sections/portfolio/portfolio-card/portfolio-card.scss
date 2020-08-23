@@ -1,6 +1,6 @@
-@import '../../style/colours';
-@import '../../style/variables';
-@import '../../style/mixins';
+@import '../../../style/colours';
+@import '../../../style/variables';
+@import '../../../style/mixins';
 
 .portfolio-card {
   --portfolio-color: var(--color-green); // reset by 
