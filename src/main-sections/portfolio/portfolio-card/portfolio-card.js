@@ -10,7 +10,7 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
   const colorRef = useCustomProp('--portfolio-color', color)
 
   return (
-    <Link ref={colorRef} to={link} id={id} key={id} className={`portfolio-card clickable ${isHighlightedCard ? 'double-wide' : ''}`}>
+    <Link ref={colorRef} to={link} id={id} className={`portfolio-card clickable ${isHighlightedCard ? 'double-wide' : ''}`}>
       <div className="portfolio-card-text">
         <h2 className="portfolio-card-title">{title}</h2>
         <br/>

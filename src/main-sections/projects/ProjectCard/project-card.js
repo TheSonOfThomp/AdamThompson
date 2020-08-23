@@ -22,13 +22,14 @@ const ProjectCard = ({project}) => {
             originalName
             src
             srcSet
+            srcSetWebp
           }
         }
       }
     }
   `)
 
-  const logoSrcSet = imgQuery.allImageSharp.nodes.find(node => node.fluid.originalName === project.logo)?.fluid.srcSet
+  const logoImage = imgQuery.allImageSharp.nodes.find(node => node.fluid.originalName === project.logo)?.fluid
 
   const cardRef = useCustomProp('--project-color', project.color)
 
@@ -36,7 +37,7 @@ const ProjectCard = ({project}) => {
     <a ref={cardRef} className="project-card" href={project.url} alt={project.name} target="_blank" rel="noreferrer">
       <h2 className="project-title">{project.name}</h2>
       <span className="project-description">{project.description}</span>
-      <img className="project-logo" srcSet={logoSrcSet} alt={`Logo for ${project.name}`}></img>
+      <img className="project-logo" srcSet={`${logoImage.srcSet}, ${logoImage.srcSetWebp}`} alt={`Logo for ${project.name}`}></img>
       <FontAwesomeIcon className="project-icon" icon={iconObj} size="sm" />
       {
         project.tools && (

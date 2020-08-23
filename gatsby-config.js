@@ -9,11 +9,13 @@ module.exports = {
   plugins: [
     // `gatsby-plugin-recaptcha`, // loads reCaptcha
     `gatsby-plugin-sass`, // loads SASS/SCSS files
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`, // for <head> tag
     'gatsby-transformer-json', // for parsing json
     `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-sharp`
+    },
     {
       resolve: `gatsby-transformer-remark`, // for parsing markdown
       options: {
