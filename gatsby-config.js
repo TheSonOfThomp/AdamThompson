@@ -114,6 +114,11 @@ module.exports = {
       }
     },
     `gatsby-plugin-preload-link-crossorigin`,
-    `gatsby-plugin-webpack-bundle-analyser-v2`
+    {
+      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+      options: {
+        analyzerMode: "static",
+      },
+    }
   ],
 }
