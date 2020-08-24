@@ -13,9 +13,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`, // for <head> tag
     'gatsby-transformer-json', // for parsing json
     `gatsby-remark-images`,
-    {
-      resolve: `gatsby-plugin-sharp`
-    },
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`, // for parsing markdown
       options: {

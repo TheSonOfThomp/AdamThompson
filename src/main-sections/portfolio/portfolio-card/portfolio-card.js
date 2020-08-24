@@ -16,8 +16,12 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
         <br/>
         <span className="portfolio-card-tagline">{tagline}</span>
       </div>
-        <div className="portfolio-card-image using-img-tag"  >
-          <img srcSet={imgSrc} alt={`${title}`}/>
+        <div className="portfolio-card-image using-img-tag" >
+          <picture>
+            <source srcset={imgSrc.srcSetWebp} type="image/webp" />
+            <source srcset={imgSrc.srcSet} type="image/png" />
+            <img src={imgSrc.src} alt={`${title}`} />
+          </picture>
       </div>
     </Link>
   )
