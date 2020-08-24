@@ -86,6 +86,18 @@ function SEO({ description, lang, meta, keywords, title }: SEOPropType) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          property: "og:image",
+          content: imageUrl,
+        },
+        {
+          property: "og:image:width",
+          content: imageWidth,
+        },
+        {
+          property: "og:image:height",
+          content: imageHeight,
+        }
       ]
         .concat(
           site.siteMetadata.keywords.length > 0
@@ -95,29 +107,17 @@ function SEO({ description, lang, meta, keywords, title }: SEOPropType) {
               }
             : []
         )
-        .concat(
-          [
-              {
-                property: "og:image",
-                content: imageUrl,
-              },
-              {
-                property: "og:image:width",
-                content: imageWidth,
-              },
-              {
-                property: "og:image:height",
-                content: imageHeight,
-              }
-              // {
-              //   name: "twitter:card",
-              //   content: "summary_large_image",
-              // },
-            ]
-        )
         .concat(meta)
       }
-    />
+      link={[
+        {
+          as: "font",
+          type: "font/woff2",
+          crossOrigin: "anonymous",
+          href: "https://use.typekit.net/af/4eabcf/00000000000000003b9b12fd/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3"
+        }
+      ]}
+    ></Helmet>
   )
 }
 

@@ -113,7 +113,6 @@ module.exports = {
         globPatterns: ['src/images*']
       }
     },
-    `gatsby-plugin-preload-link-crossorigin`,
     {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
