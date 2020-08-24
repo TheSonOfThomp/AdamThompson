@@ -8,9 +8,9 @@
 exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents, getPostBodyComponents, replacePreBodyComponents }) => {
   const headComponents = getHeadComponents()
   replaceHeadComponents(headComponents.map(comp => {
-    if (comp.type === "link" && comp.props.rel === "preload") {
+    if (comp.type === "link" && comp.props.as === "script") {
       comp.props.crossorigin = "anonymous"
-      comp.props.defer = "true"
+      comp.props.rel = "prefetch"
       return comp
     } else return comp
   }))
