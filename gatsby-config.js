@@ -14,6 +14,7 @@ module.exports = {
     'gatsby-transformer-json', // for parsing json
     `gatsby-remark-images`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-svg`,
     {
       resolve: `gatsby-transformer-remark`, // for parsing markdown
       options: {

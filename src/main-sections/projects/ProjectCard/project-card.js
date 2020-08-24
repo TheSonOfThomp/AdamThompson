@@ -38,8 +38,8 @@ const ProjectCard = ({project}) => {
       <h2 className="project-title">{project.name}</h2>
       <span className="project-description">{project.description}</span>
       <picture className="project-logo">
-        <source srcset={logoImage.srcSetWebp} type="image/webp"/>
-        <source srcset={logoImage.srcSet} type="image/png"/>
+        <source srcSet={logoImage.srcSetWebp} type="image/webp"/>
+        <source srcSet={logoImage.srcSet} type="image/png"/>
         <img className="project-logo" src={logoImage.src} alt={`Logo for ${project.name}`}></img>
       </picture>
       <FontAwesomeIcon className="project-icon" icon={iconObj} size="sm" />
