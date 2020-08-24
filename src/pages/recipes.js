@@ -28,6 +28,7 @@ const RecipesPage = () => {
           originalName
           src
           srcSet
+          srcSetWebp
         }
       }
     }
@@ -70,7 +71,13 @@ const RecipesPage = () => {
                   recipe.frontmatter.tags.split(',').map(tag => <span className="recipe-tag">{startCase(tag)}</span>)
                 }
               </div>
-              {recipe.image && <img className="recipe-image" srcSet={recipe.image.srcSet} alt={recipe.frontmatter.title}/> }
+              {recipe.image &&
+              <picture className="recipe-image">
+                <source srcset={recipe.image.srcSetWebp} type="image/webp"/>
+                <source srcset={recipe.image.srcSet} type="image/jpg"/>
+                <img className="recipe-image" src={recipe.image.src} alt={recipe.frontmatter.title} />
+              </picture> 
+              }
             </Link>
           )})
         }
