@@ -1,17 +1,16 @@
 {
-  "tagline": "An engineer at the intersection of design and development.",
-  "blurb": "With an engineering education and experience in UX design since 2013, I seamlessly bridge the gap between the two disciplines.",
+  "blurb": "An engineer at the intersection of design and development, seamlessly bridging the gap between disciplines.",
   "experience": {
     "new-visions": {
       "company": "New Visions for Public Schools",
       "url": "http://www.newvisions.org",
       "term": "July 2018 - now",
-      "position": "UX Engineer",
+      "position": "UI Engineer",
       "location": "NYC",
       "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
-        "Streamlined designer-developer collaboration by compiling design system documentation, and building and maintaining the Angular component library.",
-        "Developed CSS best-practices and architecture that leverages the opinionated structure of Angular, improving the long-term maintainability and visual consistency.",
+        "Streamlined designer-developer collaboration by building and maintaining the Angular component library and compiling design system documentation, ",
+        "Developed CSS best-practices, and an architecture that leverages the opinionated nature of Angular, improving long-term maintainability and visual consistency.",
         "Designed a conceptual framework to streamline development of new data visualizations, enabling the team to launch remote learning features just days after schools closed in March 2020."
       ]
     },
@@ -27,50 +26,16 @@
         "Developed a globally used tool allowing managers to quickly evaluate new projects based on ROI and other key data."
       ]
     },
-    "zynga": {
-      "company": "Zynga",
-      "url": "http://www.zynga.com/poker",
-      "term": "2016",
-      "position": "UX Product Manager",
-      "summary": "Data analysis, UX research and testing for Poker Web.",
-      "location": "Toronto",
+    "Co-op education": {
+      "company": "Co-op Education",
+      "term": "2013-2017",
+      "position": "UI Designer & Developer",
+      "location": "Toronto & NYC",
       "bullets": [
-        "Optimized user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature and a new subscription-based revenue model."
-      ]
-    },
-    "noom": {
-      "company": "Noom",
-      "url": "http://www.noom.com",
-      "term": "2015",
-      "position": "Product Designer",
-      "summary": "Usability optimization, and user testing for the core food-logging feature.",
-      "location": "NYC",
-      "logotype": "images/companies/noom_logotype_small.png",
-      "logo": "images/companies/noom_logo.png",
-      "bullets": [
-        "Simplified the core food logging experience by modifying the information architecture to better fit the mental model observed during user interviews."
-      ]
-    },
-    "knowroaming": {
-      "company": "KnowRoaming",
-      "url": "http://www.knowroaming.com",
-      "term": "2014 - 2015",
-      "position": "UX Designer",
-      "summary": "User research, information architecture and UI design for all mobile apps.",
-      "location": "Toronto",
-      "bullets": [
-        "Redesigned the app information architecture and UI to better align with common use cases."
-      ]
-    },
-    "sony": {
-      "company": "Sony",
-      "url": "http://mediago.sony.com",
-      "term": "2013",
-      "position": "UI Designer",
-      "summary": "UI design and front-end development for MediaGo.",
-      "location": "Waterloo",
-      "bullets": [
-        "Led UI design and front-end development for a music discovery feature."
+        "Optimized user flows based on the results of multi-variate testing for a social engagement feature at Zynga",
+        "Aligned the core food logging experience with the mental model observed during user interviews at Noom",
+        "Redesigned the app information architecture and UI to better align with common use cases at KnowRoaming",
+        "Led design and UI development for a music discovery feature at Sony"
       ]
     }
   },
@@ -79,9 +44,9 @@
       "url": "http://www.uwaterloo.ca/systems-design-engineering/about-systems-design-engineering",
       "company": "University of Waterloo",
       "position": "Systems Design Engineering",
-      "degree": "BASc.",
+      "degree": "Honours BASc.",
       "minor": "Cognitive Science",
-      "summary": "B.ASc. with Cognitive Science minor.",
+      "summary": "Honours B.ASc. with Cognitive Science minor.",
       "class": "2017"
     }
   },
@@ -105,7 +70,7 @@
     "uwux": {
       "title": "UW/UX",
       "location": "2015-2016",
-      "description": "Vice President of the UW campus UX Club, mentoring younger students and planning club events."
+      "description": "Vice President of the UW campus UX club."
     }
   },
   "toolbox": [

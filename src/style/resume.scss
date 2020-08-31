@@ -6,7 +6,7 @@
 @import './mixins';
 $page-margin-side: 0.5in;
 $page-margin-top: 0.375in;
-$page-height: 11in;
+$page-height: 14in;
 
 .captcha-container {
   height: 100vh;
@@ -58,8 +58,8 @@ $page-height: 11in;
     }
 
     h2 { 
-      font-size: 0.9em;
-      font-weight: 700;
+      font-size: 0.8em;
+      font-weight: 400;
       letter-spacing: 2pt;
       text-transform: uppercase;
     }
@@ -80,7 +80,7 @@ $page-height: 11in;
       max-width: 100%;
       margin: auto;
       grid-column: 2/3;
-      grid-gap: 12pt; // gap between columns
+      grid-gap: 16pt; // gap between summary & first section
       grid-template-columns: 1fr;
 
       .summary {
@@ -105,7 +105,7 @@ $page-height: 11in;
         display: grid;
         grid-auto-flow: row;
         grid-auto-rows: min-content;
-        grid-gap: 20pt; // gap between sections
+        grid-gap: 16pt; // gap between sections
 
         .column-section {
           display: grid;
@@ -145,22 +145,10 @@ $page-height: 11in;
     &#page-2 {
       position: relative;
       grid-template-rows: auto 1fr;
-
-      .resume-footer {
-        display: grid;
-        gap: 1ch;
-        grid-auto-flow: column;
-        align-self: flex-end;
-        grid-column: 2/3;
-
-        a {
-          color: $green_small;
-          font-size: 0.9em;
-          font-weight: 400;
-          text-align: center;
-        }
-      }
     }
+
+
+
     @media screen {
       @include elevation(2);
       width: 8.5in - 2 * $page-margin-side;
@@ -170,5 +158,20 @@ $page-height: 11in;
     @media print {
       height: calc(100vh - 2 * #{$page-margin-top});
     }
+  }
+}
+
+.resume-footer {
+  display: grid;
+  gap: 1ch;
+  grid-auto-flow: column;
+  align-self: flex-end;
+  grid-column: 1/2;
+
+  a {
+    color: $green_small;
+    font-size: 0.9em;
+    font-weight: 400;
+    text-align: center;
   }
 }

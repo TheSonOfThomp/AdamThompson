@@ -33,7 +33,7 @@
       "description": "A JS library for rendering more realistic overlapping shadows.",
       "tools": ["Typescript", "CSS"],
       "date": "2020-05-27",
-      "showOnResume": true,
+      "showOnResume": false,
       "showOnHomepage": true
     },
     {
@@ -67,7 +67,7 @@
       "date": "2019-12-03",
       "color": "rgb(243, 102, 36)",
       "tools": ["Javascript", "Atlassian API", "AWS"],
-      "showOnResume": true,
+      "showOnResume": false,
       "showOnHomepage": true
     },
     {

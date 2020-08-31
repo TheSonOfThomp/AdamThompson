@@ -28,6 +28,25 @@ class ResumePage extends React.Component {
             {resumeData.tagline} {resumeData.blurb}
           </div>
           <div className="column" id="column-left">
+
+
+            {/* EDUCATION */}
+            <div className="column-section " id="education">
+              <h2>Education</h2>
+              <div className="column-section-contents">
+                <ResumeEntry
+                  entryClass="school-entry"
+                  title={resumeData.education.uwaterloo.position}
+                  company={resumeData.education.uwaterloo.company}
+                  bullets={[
+                    resumeData.education.uwaterloo.summary
+                  ]}
+                />
+              </div>
+            </div>
+
+
+            {/* EXPERIENCE */}
             <div className="column-section " id="experience">
               <h2>Experience</h2>
               <div className="column-section-contents">
@@ -41,43 +60,33 @@ class ResumePage extends React.Component {
                 })}
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div className="resume-page" id="page-2">
-        <div className="resume-body full-width">
-          <div className="column" id="column-right">
-            <div className="column-section " id="education">
-              <h2>Education</h2>
-              <div className="column-section-contents">
-                <ResumeEntry
-                  entryClass="school-entry"
-                  title="Systems Design Engineering"
-                  company="University of Waterloo"
-                  bullets={[
-                    "BASc. with cognitive science minor",
-                  ]}
-                />
-              </div>
-            </div>
-
-            
-            <div className="column-section "id="projects">
+          
+          {/* PROJECTS */}
+            <div className="column-section " id="projects">
               <h2>Projects</h2>
               <div className="column-section-contents">
                 {Object.values(projectsData.projects).map(project => (
                   project.showOnResume && <ResumeEntry
                     entryClass="project-entry"
                     title={project.name}
-                    bullets={[project.description]}               
+                    bullets={[project.description]}
                   />
                 ))}
               </div>
             </div>
-                
-            <div className="column-section " id="volunteer">
+
+            {/* TOOLBOX */}
+            <div className="column-section" id="tools">
+              <h2>Toolbox</h2>
+              <div className="column-section-contents">
+                {resumeData.toolbox.map(tool => {
+                  return <T>{tool}</T>
+                })}
+              </div>
+            </div>
+
+            {/* VOLUTEER */}
+            {/* <div className="column-section " id="volunteer">
               <h2>Volunteer</h2>
               <div className="column-section-contents">
                 {Object.values(resumeData.volunteer).map(volunteer => {
@@ -89,24 +98,56 @@ class ResumePage extends React.Component {
                   />
                 })}
               </div>
-            </div>
+            </div> */}
 
-            <div className="column-section" id="tools">
-              <h2>Toolbox</h2>
-              <div className="column-section-contents">
-                {resumeData.toolbox.map(tool => {
-                  return <T>{tool}</T>
-                }) }
-              </div>
-            </div>
-          </div> 
+
+            {/* <div className="resume-footer">
+              <a href="http://thesonofthomp.com">thesonofthomp.com</a>
+              <a href="mailto:adam@thesonofthomp.com">adam@thesonofthomp.com</a>
+              <a href="tel:13323335780" id="phone">+1-332-333-5780</a>
+            </div> */}
+
+          </div>
         </div>
+      </div>
+
+
+      {/* <div className="resume-page" id="page-2">
+        <div className="resume-body full-width">
+          <div className="column" id="column-right"> */}
+
+
+            
+
+            {/* VOLUTEER */}
+            {/* <div className="column-section " id="volunteer">
+              <h2>Volunteer</h2>
+              <div className="column-section-contents">
+                {Object.values(resumeData.volunteer).map(volunteer => {
+                  return <ResumeEntry
+                    entryClass="volunteer-entry"
+                    title={volunteer.title}
+                    location={volunteer.location}
+                    bullets={[volunteer.description]}
+                  />
+                })}
+              </div>
+            </div> */}
+
+            
+          {/* </div> 
+        </div>
+
+
         <div className="resume-footer">
           <a href="http://thesonofthomp.com">thesonofthomp.com</a>
           <a href="mailto:adam@thesonofthomp.com">adam@thesonofthomp.com</a>
           <a href="tel:13323335780" id="phone">+1-332-333-5780</a>
         </div>
-      </div>
+
+
+      </div> */}
+
     </div>
   )
   
