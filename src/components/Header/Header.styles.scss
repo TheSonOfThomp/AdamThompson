@@ -18,7 +18,7 @@
 
   .page-link {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: flex-start;
     margin-bottom: 4px;
 
@@ -44,7 +44,7 @@
     grid-area: logo;
     margin: 0 0 0 12px;
     font-family: var(--font-sans);
-    font-size: inherit;
+    font-size: 21pt;
     font-weight: 400;
     color: inherit;
   }
@@ -53,16 +53,28 @@
     display: grid;
     grid-area: nav;
     grid-auto-flow: column;
-    grid-gap: 16px;
+    grid-gap: 20px;
     align-items: center;
     justify-self: right;
-
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  
     @media screen and (max-width: $breakpoint-medium) {
-      grid-gap: 12px;
+      grid-gap: 20px;
     }
 
     @media screen and (max-width: $breakpoint-xsmall) {
       display: none;
     }
+  }
+
+  .header-link {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  .social-link {
+    font-size: 1.2em;
   }
 }

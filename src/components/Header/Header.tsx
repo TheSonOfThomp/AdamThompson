@@ -30,11 +30,8 @@ const Header = (props : HeaderProps) => {
       {
         showNav &&
         <nav className="page-nav">
-          <a className="nav-link" id="nav-portfolio" href="#portfolio">Case studies</a>
-          <a className="nav-link" id="nav-about" href="#about">About</a>
-          <a className="nav-link" id="nav-projects" href="#projects">Projects</a>
-          {/* <a className="nav-link" id="nav-blog" href="#blog">Blog</a> */}
-          <a className="nav-link" id="nav-projects" href="/recipes">Recipes</a>
+          <a className="header-link nav-link" href="#projects">Projects</a>
+          <a className="header-link nav-link" href="/recipes">Recipes</a>
           <SocialLink color="white" name="Twitter" url="https://www.twitter.com/thesonofthomp/">
             <FontAwesomeIcon icon={faTwitter} size="sm" />
           </SocialLink>
