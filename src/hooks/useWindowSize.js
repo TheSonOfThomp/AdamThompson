@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 export const useWindowSize = () => {
 
   function getSize() {
-    return {
-      width: window.innerWidth,
-      height: window.innerHeight
-    };
+    if (window) {
+      return {
+        width: window.innerWidth,
+        height: window.innerHeight
+      };
+    }
   }
 
   const [windowSize, setWindowSize] = useState(getSize);
@@ -14,11 +16,15 @@ export const useWindowSize = () => {
   useEffect(() => {
 
     function handleResize() {
-      setWindowSize(getSize());
+      const size = getSize()
+      if (size) setWindowSize(size);
     }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    if (window) window.addEventListener('resize', handleResize);
+    
+    return () => {
+      if (window) window.removeEventListener('resize', handleResize);
+    }
   }, []); // Empty array ensures that effect is only run on mount and unmount
 
   return windowSize;
