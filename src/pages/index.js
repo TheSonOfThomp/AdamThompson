@@ -18,16 +18,15 @@ const IndexPage = () => {
       <Hero/>
       
       <AboutSection/>
-      
+
       <ProjectsSection/>
   
+      <ResumeSection />
 
       <PortfolioSection/>
   
       {/* <Section title="Toolbox"/> */}
-      
-      <ResumeSection/>
-      
+            
       <BlogSection/>
 
       <FooterSection/>
