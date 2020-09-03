@@ -45,7 +45,7 @@
     margin: 0 0 0 12px;
     font-family: var(--font-sans);
     font-size: 21pt;
-    font-weight: 400;
+    font-weight: 700;
     color: inherit;
   }
 
@@ -53,16 +53,16 @@
     display: grid;
     grid-area: nav;
     grid-auto-flow: column;
-    grid-gap: 20px;
+    grid-gap: 16px;
     align-items: center;
     justify-self: right;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 0.05em;
   
-    @media screen and (max-width: $breakpoint-medium) {
-      grid-gap: 20px;
-    }
+    // @media screen and (max-width: $breakpoint-medium) {
+    //   grid-gap: 16px;
+    // }
 
     @media screen and (max-width: $breakpoint-xsmall) {
       display: none;
