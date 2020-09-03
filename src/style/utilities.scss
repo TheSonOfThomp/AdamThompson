@@ -56,6 +56,10 @@
 }
 
 @mixin responsiveText($min-size, $max-size, $unit: 'px') {
+  font-size: responsiveSize($min-size, $max-size)
+}
+
+@function responsiveSize($min-size, $max-size, $unit: 'px') {
   $mobile-width: 320;
-  font-size: clamp($min-size * 1#{$unit}, $min-size/$mobile-width*100vw, $max-size*1#{$unit});
+  @return clamp($min-size * 1#{$unit}, $min-size/$mobile-width*100vw, $max-size*1#{$unit});
 }
