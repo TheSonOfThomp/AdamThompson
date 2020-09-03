@@ -13,6 +13,6 @@ I'm Currently a UI engineer and product designer at [New Visions for Public Scho
 
 <!-- I've worked at MUSIC Group, Noom, KnowRoaming, Sony and Zynga, conducting market and customer research, developing user flows and wireframes, refining UIs, and testing prototypes. My company Chameleon Hearing Protection won the [Norman Esch Entrepreneurship award](https://uwaterloo.ca/engineering/news/six-teams-win-10000-each-annual-esch-awards) in March 2017, and was a semi-finalist for AC JumpStart. -->
 
-### I love singing and making music.
+<!-- ### I love singing and making music. -->
 
-I'm currently tenor section leader in [The SymphoNYChorus](https://www.thesymphonychorus.com/), and I was the baritone section leader for the ICCA finalist group [The Water Boys](http://www.570news.com/2017/04/05/uw-capella-group-shot-world-title/).
+<!-- I'm currently tenor section leader in [The SymphoNYChorus](https://www.thesymphonychorus.com/), and I was the baritone section leader for the ICCA finalist group [The Water Boys](http://www.570news.com/2017/04/05/uw-capella-group-shot-world-title/). -->

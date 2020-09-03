@@ -1,6 +1,7 @@
 @import '../../style/utilities';
 
 section#about {
+  margin-top: 24px;
   text-align: left;
 
   .about-text {
@@ -10,12 +11,14 @@ section#about {
   }
 
   h2 {
-    @include responsiveText(32, 44);
+    @include responsiveText(32, 48);
+    font-weight: 700;
     color: var(--color-black);
   }
 
   h3 {
     @include responsiveText(24, 36);
+    font-weight: 700;
     color: var(--color-black);
   }
 
