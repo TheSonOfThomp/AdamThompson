@@ -1,5 +1,4 @@
 import React from "react"
-import './social-link.scss';
 
 type SocialLinkPropTypes = {
   name: string,
@@ -11,7 +10,7 @@ const SocialLink = ({name, url, color, children}: SocialLinkPropTypes) => {
 
   return (
     <a 
-      className={`social-link ${[color || 'white']}`}
+      className="header-link social-link"
       href={url}
       title={name}
       target="_blank"

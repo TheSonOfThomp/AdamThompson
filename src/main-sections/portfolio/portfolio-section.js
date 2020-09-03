@@ -55,7 +55,7 @@ const PortfolioSection = ({ data }) => {
             color={post.context.frontmatter.color}
             cover={post.imageSource.src}
             link={post.path}
-            imgSrc={`${post.imageSource.srcSet}, ${post.imageSource.srcSetWebp}`}
+            imgSrc={post.imageSource}
           >
           </PortfolioCard>
         ))

@@ -1,8 +1,7 @@
 import React from "react"
 import './hero.scss';
-import monogram from '../../images/monogram-black.svg';
+import Monogram from '../../images/monogram-black.svg'; // using gatsby-plugin-react-svg
 import Header from "../../components/Header";
-// import { Navbar } from "../../components/navbar/navbar";
 
 const Hero = () => (
   <section className="hero green-bg">
@@ -12,7 +11,8 @@ const Hero = () => (
     <div className="hero-contents">
       <h2 className="big-letters">
         {/* <b id="u">U</b><b id="x">X</b> */}
-        <img className="big-letters-monogram" src={monogram} alt="Adam Thompson"/>
+        {/* <img className="big-letters-monogram" src={monogram} alt="Adam Thompson"/> */}
+        <Monogram className="big-letters-monogram" />
       </h2>
       <h2 className="title">
         UX Engineer

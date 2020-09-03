@@ -8,32 +8,30 @@ import AboutSection from "../main-sections/about/about-section";
 import BlogSection from "../main-sections/blog/blog-section";
 import FooterSection from "../main-sections/footer/footer-section";
 import ProjectsSection from "../main-sections/projects/projects-section";
-import image from '../images/monogram.png'
 import '../style/global.scss'
-class IndexPage extends React.Component {
-  render() {
-    return (
-      <main id="app">
-        <SEO title="Main" image={image}/>
-        
-        <Hero/>
-        
-        <ProjectsSection/>
-    
-        <AboutSection/>
 
-        <PortfolioSection/>
-    
-        {/* <Section title="Toolbox"/> */}
-        
-        <ResumeSection/>
-        
-        <BlogSection/>
+const IndexPage = () => {
+  return (
+    <main id="app">
+      <SEO title="Main"/>
+      
+      <Hero/>
+      
+      <ProjectsSection/>
+  
+      <AboutSection/>
 
-        <FooterSection/>
-        
-      </main>
-  )}
-}
+      <PortfolioSection/>
+  
+      {/* <Section title="Toolbox"/> */}
+      
+      <ResumeSection/>
+      
+      <BlogSection/>
+
+      <FooterSection/>
+      
+    </main>
+)}
 
 export default IndexPage

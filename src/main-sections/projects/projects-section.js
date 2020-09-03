@@ -11,18 +11,18 @@ const compareDates = (project1, project2) => {
 }
 
 const ProjectsSection = () => {
-  const projectsJSX = projects.sort(compareDates).map(project => {
-    return (
-      project.showOnHomepage && <ProjectCard 
-        project={project}
-        key={project.name}
-      />
-    )
-  })
-
   return (
     <Section title="Recent Projects" id="projects">
-      {projectsJSX}
+      {
+        projects.sort(compareDates).map(project => {
+          return (
+            project.showOnHomepage && <ProjectCard
+              project={project}
+              key={project.name}
+            />
+          )
+        })
+      }
     </Section>
   )
 }

@@ -37,7 +37,11 @@ const ProjectCard = ({project}) => {
     <a ref={cardRef} className="project-card" href={project.url} alt={project.name} target="_blank" rel="noreferrer">
       <h2 className="project-title">{project.name}</h2>
       <span className="project-description">{project.description}</span>
-      <img className="project-logo" srcSet={`${logoImage.srcSet}, ${logoImage.srcSetWebp}`} alt={`Logo for ${project.name}`}></img>
+      <picture className="project-logo">
+        <source srcSet={logoImage.srcSetWebp} type="image/webp"/>
+        <source srcSet={logoImage.srcSet} type="image/png"/>
+        <img className="project-logo" src={logoImage.src} alt={`Logo for ${project.name}`}></img>
+      </picture>
       <FontAwesomeIcon className="project-icon" icon={iconObj} size="sm" />
       {
         project.tools && (
