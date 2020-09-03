@@ -8,6 +8,13 @@
   background-color: var(--color-green-highlight) /* WebKit/Blink Browsers */
 }
 
+:root {
+  --app-angle: 2deg;
+  @media screen and (max-width: $breakpoint-small) {
+    --angle: 4deg;
+  }
+}
+
 html {
   --vh: 1vh;
   font-size: 16px;
@@ -50,6 +57,13 @@ html {
       outline: 2px solid $white_green;
       outline-offset: 0.25em;
     }
+  }
+
+  hr {
+    width: 150%;
+    margin: 64px 0 calc(64px + 24px) 0;
+    border-top: 4px solid var(--color-green);
+    transform: rotate(var(--app-angle));
   }
 }
 

@@ -4,7 +4,7 @@
 @import '../../style/mixins';
 
 .hero {
-  --angle: 2deg;
+
   position: relative;
 
   display: flex;
@@ -30,9 +30,6 @@
   color: $white;
   text-align: center;
 
-  @media screen and (max-width: $breakpoint-small) {
-    --angle: 4deg;
-  }
 
   &::after {
     @include CornerToCornerGradient($light_green, $green);
@@ -41,7 +38,7 @@
     width: 150vw;
     height: 100%;
     content: '';
-    transform: rotate(var(--angle));
+    transform: rotate(var(--app-angle));
     transform-origin: 100% 100%;
   }
 

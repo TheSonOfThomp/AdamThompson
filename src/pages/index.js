@@ -19,13 +19,20 @@ const IndexPage = () => {
       
       <AboutSection/>
 
+      {/* <hr/> */}
+
       <ProjectsSection/>
+
+      {/* <hr/> */}
   
       <ResumeSection />
+
+      {/* <hr/> */}
 
       <PortfolioSection/>
   
       {/* <Section title="Toolbox"/> */}
+      {/* <hr/> */}
             
       <BlogSection/>
 
