@@ -10,12 +10,12 @@ section#about {
   }
 
   h2 {
-    @include responsiveText(28, 40);
+    @include responsiveText(32, 44);
     color: var(--color-black);
   }
 
   h3 {
-    @include responsiveText(20, 32);
+    @include responsiveText(24, 36);
     color: var(--color-black);
   }
 

@@ -4,7 +4,7 @@ section: about
 stub: true
 ---
 
-## I'm Adam, a developer & designer based in New York building thoughtful and accessible web & mobile experiences.
+## I'm Adam, a developer & designer based in New York, building thoughtful and accessible web & mobile experiences.
 
 
 <!-- I'm an engineer at the intersection of design and development. With experience in UX since 2013, and an education in [Systems Design Engineering](https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering) I approach problems holistically, design a complete solution, and execute effectively. -->
