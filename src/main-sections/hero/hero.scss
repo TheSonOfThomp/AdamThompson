@@ -1,5 +1,6 @@
 @import '../../style/colours.def';
 @import '../../style/variables';
+@import '../../style/utilities';
 @import '../../style/mixins';
 
 .hero {
@@ -84,7 +85,7 @@
     @extend %hero-element;
     grid-area: title;
     margin: 0 16px;
-    font-size: clamp(50px, 16vw, 96px);
+    font-size: responsiveSize(54, 104);
     font-weight: 600;
     line-height: 1.5em;
   }
@@ -95,7 +96,7 @@
     max-width: calc(100vw - 32px);
     margin: 0 16px;
     font-family: inherit;
-    font-size: clamp(16px, 6vw, 24px);
+    font-size: responsiveSize(16, 24);
     font-weight: 400;
     line-height: 1.2em;
     text-align: center;
