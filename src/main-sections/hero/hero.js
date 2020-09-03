@@ -4,9 +4,11 @@ import Monogram from '../../images/monogram-black.svg'; // using gatsby-plugin-r
 import Header from "../../components/Header";
 
 const Hero = () => (
-  <section className="hero green-bg">
+  <div className="hero">
 
-    <Header showNav={true} />
+    <div className="header-wrapper">
+      <Header showNav={true} />
+    </div>
   
     <div className="hero-contents">
       <h2 className="big-letters">
@@ -21,7 +23,7 @@ const Hero = () => (
         Developing experiences that make an impact
       </h3>
     </div>
-  </section>
+  </div>
 
 );
 
