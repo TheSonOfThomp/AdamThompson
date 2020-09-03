@@ -2,26 +2,45 @@
 
 .resume-header {
   display: grid;
-  align-items: center;
-  grid-auto-flow: column;
-  grid-gap: 16pt;
-  grid-template-columns: auto auto 1fr;
+  grid-template-areas: 'monogram name contact' '. tagline .';
+  grid-gap: 0 16pt;
+  align-items: baseline;
+
+  .name {
+    grid-area: name;
+  }
+
+  #name { 
+    font-size: 32pt;
+    font-weight: 700;
+  }
   
   #monogram {
+    grid-area: monogram;
     width: auto;
     height: 24pt;
   }
-
+  
   #contacts {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    grid-area: contact;
+    align-self: center;
     font-weight: 400;
-    grid-auto-flow: row;
     text-align: right;
 
     a {
+      font-size: 12pt;
       color: $green_small;
-      font-size: 0.9em;
     }
+  }
 
+  #tagline {
+    grid-area: tagline;
+    font-size: 14pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2pt;
+    color: var(--color-green);
   }
 }
