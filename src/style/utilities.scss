@@ -54,3 +54,8 @@
 @mixin animate($what: all, $when: 500ms, $how: $animation-ease) {
   transition: $what $when $how;
 }
+
+@mixin responsiveText($min-size, $max-size, $unit: 'px') {
+  $mobile-width: 320;
+  font-size: clamp($min-size * 1#{$unit}, $min-size/$mobile-width*100vw, $max-size*1#{$unit});
+}

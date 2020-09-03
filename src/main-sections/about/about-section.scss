@@ -1,4 +1,4 @@
-@import '../../style/colours';
+@import '../../style/utilities';
 
 section#about {
   text-align: left;
@@ -6,18 +6,36 @@ section#about {
   .about-text {
     position: relative;
     font-size: 20px;
-
-    a {
-      outline-color: $green;
-      outline-offset: 0;
-    }
-
-    p:first-child {
-      margin-top: 0;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
+    font-weight: 400;
   }
+
+  h2 {
+    @include responsiveText(28, 40);
+    color: var(--color-black);
+  }
+
+  h3 {
+    @include responsiveText(20, 32);
+    color: var(--color-black);
+  }
+
+  a {
+    font-weight: 700;
+    outline-color: var(--color-green);
+    outline-offset: 0;
+  }
+
+  p {
+    color: var(--color-dark-grey);
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+
 }
