@@ -5,13 +5,17 @@ import BlogPostLink from "./BlogPostLink/BlogPostLink";
 import './blog-section.scss';
 
 const BlogSection = () => {
+
+  const [postsState, setPostsState] = React.useState(posts.slice(0,4))
+
   return (
     <Section title="Writing" id="blog">
-      {posts.map(post => {
+      {postsState.map(post => {
         return (
           <BlogPostLink post={post} key={post.title}/>
         )
       })}
+      {/* <button id="show-all-posts">Show all</button> */}
     </Section>
   )
 }
