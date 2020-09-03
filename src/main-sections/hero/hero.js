@@ -15,7 +15,7 @@ const Hero = () => (
         <Monogram className="big-letters-monogram" />
       </h2>
       <h2 className="title">
-        UX Engineer
+        UI Engineer
       </h2>
       <h3 className="tagline">
         Developing experiences that make an impact

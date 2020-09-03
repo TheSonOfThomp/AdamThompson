@@ -1,4 +1,3 @@
-@import '../../../style/colours';
 @import '../../../style/variables';
 
 .portfolio-page-header {
@@ -6,7 +5,7 @@
   z-index: 10;
   width: 100%;
   max-width: $folio-max-width;
-  border-bottom: 2px solid $black;
+  border-bottom: 2px solid var(--color-black);
   justify-self: center;
 
   .portfolio-page-link {
@@ -16,7 +15,7 @@
     margin: 4px auto 4px 16px;
     
     &:focus {
-      outline-color: $black;
+      outline-color: var(--color-black);
     }
 
     &:hover {
@@ -32,7 +31,7 @@
   .portfolio-page-title {
     margin: 0;
     margin-left: 12px;
-    color: $black;
+    color: var(--color-black);
     font-family: var(--font-sans);
     font-size: 28px;
     font-weight: 400;

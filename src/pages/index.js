@@ -17,9 +17,10 @@ const IndexPage = () => {
       
       <Hero/>
       
+      <AboutSection/>
+      
       <ProjectsSection/>
   
-      <AboutSection/>
 
       <PortfolioSection/>
   

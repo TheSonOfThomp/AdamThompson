@@ -3,7 +3,7 @@
 a.project-card {
   --logo-width: 192px;
   --logo-height: calc(var(--logo-width)/2);
-  @include clickable-card(1.5, 3);
+  @include clickable-card(2,4);
   @include animate-text-underline('.project-title', var(--project-color, var(--color-green)));
   display: grid;
   padding: 16px 20px;
