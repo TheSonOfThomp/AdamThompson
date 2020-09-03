@@ -6,7 +6,7 @@ section#projects {
 
   .content {
     display: grid;
-    grid-gap: 16px;
+    grid-gap: 16px 20px;
     grid-template-columns: repeat(auto-fit, minmax(var(--project-card-min-width), 1fr));
   }
 }
