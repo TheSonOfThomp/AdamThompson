@@ -18,19 +18,19 @@
 
   .entry-title {
     grid-area: title;
-    font-size: 1.1rem;
+    font-size: 14pt;
     color: $green_small;
   }
   
   .entry-company {
     grid-area: company;
-    font-size: 1.1rem;
+    font-size: 14pt;
   }
 
   .entry-location {
     grid-area: location;
     justify-self: right;
-    font-size: 0.8em;
+    font-size: 10pt;
   }
 
   .entry-bullets {
@@ -41,7 +41,7 @@
     
     .entry-bullet-point {
       position: relative;
-      padding-left: 1ch;
+      // padding-left: 1ch;
 
       &:first-child {
         margin-top: 0;
@@ -50,6 +50,15 @@
       &:last-child {
         margin-bottom: 0;
       }
+
+    }
+
+    strong {
+      color: var(--color-med-grey);
+    }
+
+    p {
+      margin: 0;
     }
   }
   

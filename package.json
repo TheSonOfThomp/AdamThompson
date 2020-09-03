@@ -74,6 +74,7 @@
     "jss": "^10.3.0",
     "jss-preset-default": "^10.3.0",
     "prettier": "^1.18.2",
+    "remarkable": "^2.0.1",
     "stylelint": "^13.3.1",
     "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-recess-order": "^2.1.0",
