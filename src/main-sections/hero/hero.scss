@@ -1,4 +1,4 @@
-@import '../../style/colours.def';
+@import '../../style/colours.def.scss';
 @import '../../style/variables';
 @import '../../style/utilities';
 @import '../../style/mixins';
@@ -42,12 +42,11 @@
     transform-origin: 100% 100%;
   }
 
-  .header-wrapper{
+  .header-wrapper {
+    @include verticalGradient(mix($dark_green, $transparent, 45%), $transparent, 100%); // for legibility of text
     z-index: 1;
-    // max-width: $content-width;
     padding: 24px $global-margin;
     margin: 0;
-    // background-color: var(--color-dark-grey-trans);
 
     > header {
       max-width: $content-width;
@@ -78,12 +77,23 @@
     z-index: 1;
   }
 
+  .big-letters {
+    @extend %hero-element;
+    display: grid;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    margin: 0;
+    font-size: responsiveSize(512, 768);
+    color: $dark_green;
+    opacity: 0.15;
+    place-items: center;
+  }
+
   .title {
     @extend %hero-element;
     grid-area: title;
     margin: 0 16px;
-    font-size: responsiveSize(54, 104);
-    font-weight: 600;
+    font-size: responsiveSize(54, 144);
     line-height: 1.5em;
   }
   
@@ -94,22 +104,9 @@
     margin: 0 16px;
     font-family: inherit;
     font-size: responsiveSize(16, 24);
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.2em;
     text-align: center;
-  }
-
-  .big-letters {
-    @extend %hero-element;
-    display: grid;
-    grid-row: 1/-1;
-    grid-column: 1/-1;
-    margin: 0;
-    font-size: 512px;
-    font-weight: 600;
-    color: $dark_green;
-    opacity: 0.15;
-    place-items: center;
   }
 
   .big-letters-monogram {

@@ -25,11 +25,11 @@ const IndexPage = () => {
 
       {/* <hr/> */}
 
-      <ProjectsSection/>
+      <ResumeSection />
 
       {/* <hr/> */}
   
-      <ResumeSection />
+      <ProjectsSection/>
 
       {/* <hr/> */}
 

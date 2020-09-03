@@ -6,7 +6,7 @@ import './blog-section.scss';
 
 const BlogSection = () => {
 
-  const [postsState, setPostsState] = React.useState(posts.slice(0,4))
+  const [postsState] = React.useState(posts.slice(0,4))
 
   return (
     <Section title="Writing" id="blog">
