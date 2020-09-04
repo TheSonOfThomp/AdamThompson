@@ -32,7 +32,7 @@
 
 
   &::after {
-    @include CornerToCornerGradient($light_green, $green);
+    @include CornerToCornerGradient($green-light, $green);
     position: absolute;
     right: 0;
     width: 150vw;
@@ -43,7 +43,7 @@
   }
 
   .header-wrapper {
-    @include verticalGradient(mix($dark_green, $transparent, 45%), $transparent, 100%); // for legibility of text
+    @include verticalGradient(mix($green-dark, $transparent, 45%), $transparent, 100%); // for legibility of text
     z-index: 1;
     padding: 24px $global-margin;
     margin: 0;
@@ -84,7 +84,7 @@
     grid-column: 1/-1;
     margin: 0;
     font-size: responsiveSize(512, 768);
-    color: $dark_green;
+    color: $green-dark;
     opacity: 0.15;
     place-items: center;
   }

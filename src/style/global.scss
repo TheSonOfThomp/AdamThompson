@@ -5,7 +5,7 @@
 @import './mixins';
 
 *::selection {
-  background-color: var(--color-green-highlight) /* WebKit/Blink Browsers */
+  background-color: var(--color-green-lighter) /* WebKit/Blink Browsers */
 }
 
 :root {
@@ -54,7 +54,7 @@ html {
     }
 
     &:focus {
-      outline: 2px solid $white_green;
+      outline: 2px solid $green-lightest;
       outline-offset: 0.25em;
     }
   }
