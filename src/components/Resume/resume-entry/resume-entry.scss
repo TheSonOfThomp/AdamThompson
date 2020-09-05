@@ -1,7 +1,7 @@
 @import '../../../style/colours.def';
 @import '../../../style/mixins';
 
-$gap-first-bullet: 6pt;
+$gap-first-bullet: 4pt;
 $gap-first-bullet-y: 4pt;
 $gap-bullet: 8pt;
 
@@ -22,13 +22,14 @@ $gap-bullet: 8pt;
 
   .entry-title {
     grid-area: title;
-    font-size: 16pt;
+    font-size: 14pt;
     color: var(--color-green-small);
   }
   
   .entry-company {
     grid-area: company;
-    font-size: 16pt;
+    font-size: 14pt;
+    color: var(--color-grey-darker);
   }
 
   .entry-location {
@@ -41,7 +42,9 @@ $gap-bullet: 8pt;
     display: grid;
     grid-gap: $gap-bullet; // gap between bullets
     padding-left: 0;
-    color: var(--color-grey-darker);
+    font-weight: 300;
+    color: var(--color-black);
+    // color: var(--color-grey-darker);
     list-style-type: none;
     
     .entry-bullet-point {
@@ -57,9 +60,9 @@ $gap-bullet: 8pt;
 
     }
 
-    // strong {
-    //   // color: var(--color-grey-dark);
-    // }
+    strong {
+      color: var(--color-grey-dark);
+    }
 
     p {
       margin: 0;
