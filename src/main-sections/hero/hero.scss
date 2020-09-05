@@ -45,7 +45,7 @@ $header-opacity: 16;
   }
 
   .header-wrapper {
-    // @include verticalGradient(mix($green-darker, $transparent, 45%), $transparent, 100%); // for legibility of text
+    @include verticalGradient(mix($green-darker, $transparent, 45%), $transparent, 100%); // for legibility of text
     // background-color: mix($grey-dark, transparent, $header-opacity);
     z-index: 1;
     padding: 24px $global-margin;
@@ -118,6 +118,35 @@ $header-opacity: 16;
   }
 }
 
+// Animations
+.hero-contents {
+  --rotation: 4deg;
+
+  .big-letters,
+  .title,
+  .tagline {
+    transform: 
+      rotateX(calc(var(--mouseY) * var(--rotation)))
+      rotateY(calc(var(--mouseX) * var(--rotation) * -1));
+    
+    @media (prefers-reduced-motion) {
+      transform: unset;
+    }
+  }
+
+
+  .big-letters {
+    transform-origin: 50% 50% 0;
+  }
+
+  .title {
+    transform-origin: 50% 50% 32px;
+  }
+  
+  .tagline {
+    transform-origin: 50% 50% 24px;
+  }
+}
 
 
   
