@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn, faGithub, faTwitter, faCodepen, faMedium } from '@fortawesome/free-brands-svg-icons'
 import SocialLink from "./social-link/social-link";
@@ -20,16 +20,36 @@ const Header = (props : HeaderProps) => {
   const { color, showNav } = {...defaultProps, ...props}
   const Monogram = color === 'white' ? MonogramWhite : MonogramBlack
 
+  const navRef = useRef<HTMLElement>(null)
+  const setListeners = useRef(false)
+  
+  // Add listeners to all the links
+  useEffect(() => {
+    const links = navRef.current?.querySelectorAll('.header-link')
+    links?.forEach(link => link.addEventListener('mouseenter', moveHighlight))
+    setListeners.current = true
+
+    return () => {
+      links?.forEach(link => link.removeEventListener('mouseenter', moveHighlight))
+    }
+  })
+
+  const moveHighlight = (e) => {
+    navRef.current?.style.setProperty('--link-width', e.target.offsetWidth)
+    navRef.current?.style.setProperty('--link-height', e.target.offsetHeight)
+    navRef.current?.style.setProperty('--link-top', e.target.offsetTop)
+    navRef.current?.style.setProperty('--link-left', e.target.offsetLeft)
+  }
+
   return (
     <header className={`page-header color-${color}`}>
       <a className="page-link" href="/">
-        {/* <img className="page-logo" src={monogram} alt="A.T. monogram" /> */}
         <Monogram className="page-logo" />
         <h1 className="page-title">Adam Thompson</h1>
       </a>
       {
         showNav &&
-        <nav className="page-nav">
+        <nav ref={navRef} className="page-nav">
           <a className="header-link nav-link" href="#projects">Projects</a>
           <a className="header-link nav-link" href="/recipes">Recipes</a>
           <SocialLink color="white" name="Twitter" url="https://www.twitter.com/thesonofthomp/">
@@ -47,6 +67,7 @@ const Header = (props : HeaderProps) => {
           <SocialLink color="white" name="Medium" url="https://medium.com/@TheSonOfThomp">
             <FontAwesomeIcon icon={faMedium} size="sm" />
           </SocialLink>
+          <div className="highlight"></div>
         </nav>
       }
     </header>
