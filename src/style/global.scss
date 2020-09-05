@@ -9,17 +9,19 @@
 }
 
 :root {
-  --app-angle: 2deg;
 }
 
 html {
   --vh: 1vh;
+  --app-angle: 2.5deg;
+  @media screen and (max-width: $breakpoint-small) {
+    --app-angle: 4deg;
+  }
+
   font-size: 16px;
   font-feature-settings: 'ss01';
   scroll-behavior: smooth;
-  @media screen and (max-width: $breakpoint-small) {
-    --angle: 4deg;
-  }
+  
 
   body {
     padding: 0;

@@ -24,13 +24,15 @@ $header-opacity: 16;
 
   width: 100vw;
   max-width: none;
-  height: vh(100);
+  height: vh(96);
   min-height: 568px;
   max-height: 1200px;
   margin-bottom: 32px;
   overflow: hidden;
   color: $white;
   text-align: center;
+
+  transition: height 200ms ease;
 
 
   &::after {
