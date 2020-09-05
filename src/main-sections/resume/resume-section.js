@@ -4,7 +4,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import Section from "../../templates/section/section";
 import ResumeCard from "../../components/resume-card/resume-card";
 import * as resumePdf from '../../images/Adam Thompson - Resume.pdf'
-import * as resumeJson from '../../data/resume.json'
+import * as resumeJson from '../../data/resume-full.json'
 import './resume-section.scss';
 
 const ResumeSection = () => {

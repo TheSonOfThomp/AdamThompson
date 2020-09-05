@@ -1,4 +1,4 @@
-@import '../../style/colours';
+@import '../../style/colours.def';
 
 .resume-header {
   display: grid;
@@ -13,12 +13,14 @@
   #name { 
     font-size: 32pt;
     font-weight: 700;
+    line-height: 1.2em;
   }
   
   #monogram {
     grid-area: monogram;
     width: auto;
     height: 24pt;
+    margin-top: 8pt;
   }
   
   #contacts {

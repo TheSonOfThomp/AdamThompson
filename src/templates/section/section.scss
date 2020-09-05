@@ -1,4 +1,5 @@
 @import '../../style/variables';
+@import '../../style/utilities';
 
 section {
   display: grid;
@@ -15,7 +16,7 @@ section {
     margin-bottom: 64px;
     
     > * {
-      margin: auto 16px;
+      margin: auto $global-margin;
     }
   }
 }

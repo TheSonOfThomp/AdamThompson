@@ -1,17 +1,27 @@
-@import '../../style/colours';
+@import '../../style/colours.def.scss';
 @import '../../style/variables';
+@import '../../style/utilities';
 @import '../../style/mixins';
 
-section.hero {
-  --angle: 2deg;
-  display: grid;
-  grid-template-areas: '. header .' '. hero .' '. . .';
-  grid-template-rows: 80px 1fr 80px;
-  grid-template-columns: 1fr Min($content-width, 100vw) 1fr;
-  grid-auto-flow: row;
-  grid-row-gap: 0;
-  align-items: center;
-  justify-content: center;
+$header-opacity: 16;
+
+.hero {
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  // display: grid;
+  // grid-template-areas: 'header' 'hero' '.';
+  // grid-template-rows: auto 1fr auto;
+  // grid-template-columns: Min($content-width, 100vw);
+  // grid-auto-flow: row;
+  // grid-row-gap: 0;
+  // align-items: center;
+  // justify-content: center;
+
+
   width: 100vw;
   max-width: none;
   height: vh(100);
@@ -22,90 +32,89 @@ section.hero {
   color: $white;
   text-align: center;
 
-  @media screen and (max-width: $breakpoint-small) {
-    --angle: 4deg;
+
+  &::after {
+    @include CornerToCornerGradient($green-light, $green);
+    position: absolute;
+    right: 0;
+    width: 150vw;
+    height: 100%;
+    content: '';
+    transform: rotate(var(--app-angle));
+    transform-origin: 100% 100%;
   }
 
-  &.green-bg {
-    position: relative;
-
-    &::after {
-      @include CornerToCornerGradient($light_green, $green);
-      position: absolute;
-      right: 0;
-      width: 150vw;
-      height: 100%;
-      content: '';
-      transform: rotate(var(--angle));
-      transform-origin: 100% 100%;
-    }
-  }
-
-  .page-header {
+  .header-wrapper {
+    // @include verticalGradient(mix($green-darker, $transparent, 45%), $transparent, 100%); // for legibility of text
+    // background-color: mix($grey-dark, transparent, $header-opacity);
     z-index: 1;
-    grid-area: header;
-    @media screen and (max-width: $breakpoint-medium) {
-      margin-right: 16px;
-      margin-left: 16px;
+    padding: 24px $global-margin;
+    margin: 0;
+
+    > header {
+      max-width: $content-width;
+      margin: auto;
     }
   }
 
-  .hero-contents {
+}
+
+
+.hero-contents {
+  position: relative;
+  display: grid;
+  flex-grow: 1;
+  grid-area: hero;
+  grid-template-areas: '.' 'title' 'tagline' '.';
+  grid-template-rows: auto repeat(2, min-content) auto;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  pointer-events: none;
+
+
+  %hero-element {
     position: relative;
+    z-index: 1;
+  }
+
+  .big-letters {
+    @extend %hero-element;
     display: grid;
-    grid-area: hero;
-    grid-template-areas: '.' 'title' 'tagline' '.';
-    grid-template-rows: repeat(4, auto);
-    grid-template-columns: 1fr;
-    justify-content: center;
-    font-family: var(--font-sans);
-    font-weight: 400;
-    pointer-events: none;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    margin: 0;
+    font-size: responsiveSize(512, 768);
+    opacity: $header-opacity * 0.01;
+    place-items: center;
+  }
 
-    %hero-element {
-      position: relative;
-      z-index: 1;
-    }
+  .title {
+    @extend %hero-element;
+    grid-area: title;
+    margin: 0 16px;
+    font-size: responsiveSize(54, 144);
+    line-height: 1.5em;
+  }
+  
+  .tagline {
+    @extend %hero-element;
+    grid-area: tagline;
+    max-width: calc(100vw - 32px);
+    margin: 0 16px;
+    font-family: inherit;
+    font-size: responsiveSize(16, 24);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+  }
 
-    .title {
-      @extend %hero-element;
-      grid-area: title;
-      margin: 0 16px;
-      font-size: clamp(50px, 16vw, 96px);
-      font-weight: 600;
-      line-height: 1.5em;
-    }
-    
-    .tagline {
-      @extend %hero-element;
-      grid-area: tagline;
-      max-width: calc(100vw - 32px);
-      margin: 0 16px;
-      font-family: inherit;
-      font-size: clamp(16px, 6vw, 24px);
-      font-weight: 400;
-      line-height: 1.2em;
-      text-align: center;
-    }
-
-    .big-letters {
-      @extend %hero-element;
-      display: grid;
-      grid-row: 1/-1;
-      grid-column: 1/-1;
-      margin: 0;
-      font-size: 512px;
-      font-weight: 600;
-      color: $dark_green;
-      opacity: 0.15;
-      place-items: center;
-    }
-
-    .big-letters-monogram {
-      width: 2ch;
-      max-width: 95%;
-      height: auto;
-    }
+  .big-letters-monogram {
+    width: 2ch;
+    max-width: 95%;
+    height: auto;
   }
 }
 

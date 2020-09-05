@@ -6,9 +6,9 @@
       "company": "New Visions for Public Schools",
       "url": "http://www.newvisions.org",
       "term": "July 2018 - now",
-      "position": "UX Engineer",
+      "position": "UI Engineer",
       "location": "NYC",
-      "summary": "Design systems development, UX architecture, and feature design.",
+      "summary": "Design systems, CSS architecture, UX frameworks, and feature design.",
       "bullets": [
         "Streamlined designer-developer collaboration by compiling design system documentation, and building and maintaining the Angular component library.",
         "Developed CSS best-practices and architecture that leverages the opinionated structure of Angular, improving the long-term maintainability and visual consistency.",
@@ -18,10 +18,10 @@
     "music-group": {
       "company": "TC Helicon",
       "url": "http://musicri.be",
-      "term": "2018",
+      "term": "Jan - Apr 2018",
       "position": "Product Manager",
       "location": "Kitchener",
-      "summary": "Design process, high level product vision & business case development.",
+      "summary": "Design process, high-level product vision & business case development.",
       "bullets": [
         "Defined business strategy and product specifications for a line of music accessories based on market and user research.",
         "Developed a globally used tool allowing managers to quickly evaluate new projects based on ROI and other key data."
@@ -30,7 +30,7 @@
     "zynga": {
       "company": "Zynga",
       "url": "http://www.zynga.com/poker",
-      "term": "2016",
+      "term": "Summer 2016",
       "position": "UX Product Manager",
       "summary": "Data analysis, UX research and testing for Poker Web.",
       "location": "Toronto",
@@ -41,7 +41,7 @@
     "noom": {
       "company": "Noom",
       "url": "http://www.noom.com",
-      "term": "2015",
+      "term": "Fall 2015",
       "position": "Product Designer",
       "summary": "Usability optimization, and user testing for the core food-logging feature.",
       "location": "NYC",
@@ -54,7 +54,7 @@
     "knowroaming": {
       "company": "KnowRoaming",
       "url": "http://www.knowroaming.com",
-      "term": "2014 - 2015",
+      "term": "Spring 2014 - Winter 2015",
       "position": "UX Designer",
       "summary": "User research, information architecture and UI design for all mobile apps.",
       "location": "Toronto",
@@ -65,7 +65,7 @@
     "sony": {
       "company": "Sony",
       "url": "http://mediago.sony.com",
-      "term": "2013",
+      "term": "Winter 2013",
       "position": "UI Designer",
       "summary": "UI design and front-end development for MediaGo.",
       "location": "Waterloo",

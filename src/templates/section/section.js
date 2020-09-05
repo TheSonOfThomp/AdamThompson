@@ -6,7 +6,7 @@ const Section = ({title, id, className = "", children}) => {
 const fullClassName = ['section', className].join(' ')
   return (
   <section className={fullClassName} id={id || title.toLowerCase()} >
-    <SectionHeader>{title}</SectionHeader>
+    {title && <SectionHeader>{title}</SectionHeader>}
     <div className="content">
       {children}
     </div>

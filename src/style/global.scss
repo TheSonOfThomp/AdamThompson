@@ -5,7 +5,11 @@
 @import './mixins';
 
 *::selection {
-  background-color: var(--color-green-highlight) /* WebKit/Blink Browsers */
+  background-color: var(--color-green-lighter) /* WebKit/Blink Browsers */
+}
+
+:root {
+  --app-angle: 2deg;
 }
 
 html {
@@ -13,6 +17,9 @@ html {
   font-size: 16px;
   font-feature-settings: 'ss01';
   scroll-behavior: smooth;
+  @media screen and (max-width: $breakpoint-small) {
+    --angle: 4deg;
+  }
 
   body {
     padding: 0;
@@ -47,9 +54,16 @@ html {
     }
 
     &:focus {
-      outline: 2px solid $white_green;
+      outline: 2px solid $green-light;
       outline-offset: 0.25em;
     }
+  }
+
+  hr {
+    width: 150%;
+    margin: 64px 0 calc(64px + 24px) 0;
+    border-top: 4px solid var(--color-green);
+    transform: rotate(var(--app-angle));
   }
 }
 

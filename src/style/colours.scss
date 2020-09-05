@@ -2,18 +2,20 @@
 
 :root {
   --color-green: #{$green};
-  --color-white-green: #{$white_green};
-  --color-white-green_trans: #{$white_green_trans};
-  --color-green-highlight: #{$green_highlight};
-  --color-light-green: #{$light_green};
-  --color-dark-green: #{$dark_green};
+  --color-green-lightest: #{$green-lightest};
+  --color-green-lightest-trans: #{$green-lightest_trans};
+  --color-green-lighter: #{$green-lighter};
+  --color-green-light: #{$green-light};
+  --color-green-dark: #{$green-dark};
+  --color-green-darker: #{$green-darker};
+  --color-green-darkest: #{$green-darkest};
 
   --color-white: #{$white};
-  --color-white-trans: #{$white_trans};
-  --color-light-grey: #{$light_grey};
-  --color-med-grey: #{$med_grey};
-  --color-dark-grey: #{$dark_grey};
-  --color-dark-grey-trans: #{$dark_grey_trans};
+  --color-white-trans: #{$white-trans};
+  --color-light-grey: #{$grey-light};
+  --color-med-grey: #{$grey-medium};
+  --color-dark-grey: #{$grey-dark};
+  --color-dark-grey-trans: #{$grey-dark_trans};
   --color-black: #{$black};
   --color-transparent: #{$transparent};
   

@@ -97,16 +97,16 @@ a {
       padding: $page-margin-top $page-margin-side;
     }
     @media print {
-      // height: calc(100vh - 2 * #{$page-margin-top});
-      height: 100vh;
+      // height: 100vh;
+      height: calc(100vh - 2 * #{$page-margin-top});
       
       // outline: 1px solid purple;
 
-      .resume-header,
-      .resume-body,
-      .resume-footer {
-        // outline: 1px solid red;
-      }
+      // .resume-header,
+      // .resume-body,
+      // .resume-footer {
+      //   // outline: 1px solid red;
+      // }
 
     }
   }
