@@ -9,11 +9,11 @@ import BlogSection from "../main-sections/blog/blog-section";
 import FooterSection from "../main-sections/footer/footer-section";
 import ProjectsSection from "../main-sections/projects/projects-section";
 import '../style/global.scss'
-import { useOrientationVH } from "../hooks/useVH";
+import { useVH } from "../hooks/useVH";
 
 const IndexPage = () => {
 
-  useOrientationVH()
+  useVH()
 
   return (
     <main id="app">

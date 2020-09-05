@@ -14,30 +14,3 @@ export const useVH = () => {
     resetVH()
   }, [height, resetVH])
 }
-
-// Sets the vh only on orientation change
-export const useOrientationVH = () => {
-
-  const [windowHeight, setWindowHeight] = useState(getSize);
-
-  
-  useEffect(() => {
-    // on orientation change, listen for window resize once
-    function handleOrientationChange() {
-      window.addEventListener('resize', () => {
-        const { height } = getSize()
-        console.log(height)
-        setWindowHeight(height)
-      } , {once: true});
-    }
-
-    window.addEventListener('orientationchange', handleOrientationChange)
-    return () => window.removeEventListener('orientationchange', handleOrientationChange)
-  }, []) // only run on mount
-
-  // update the css property when the height state changes
-  useEffect(() => {
-    const vh = windowHeight / 100
-    document.body.style.setProperty('--vh', `${vh}px`)
-  }, [windowHeight]) 
-}
