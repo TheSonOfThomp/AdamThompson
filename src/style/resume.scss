@@ -6,6 +6,15 @@ $page-margin-top: 0.375in;
 $page-height: 14in;
 // $page-height: 11in;
 
+// Spacing variables
+$gap-top: 20pt;
+$gap-section: 16pt;
+$gap-first-entry: 4pt;
+$gap-entry: 12pt;
+$gap-entry-x: 8pt;
+$gap-entry-y: 8pt;
+
+
 .captcha-container {
   height: 100vh;
   padding: 16px;
@@ -47,12 +56,12 @@ a {
     position: relative;
     display: grid;
     grid-template-areas: 'header' 'body' 'footer';
-    grid-template-rows: min-content max-content minmax(1in, 1fr);
+    grid-template-rows: min-content max-content minmax(0.25in, 1fr);
     grid-gap: 8pt;
     padding: 0;
     margin: 0;
     font-size: 12pt;
-    font-weight: 300;
+    font-weight: 400;
     background-color: #fff;
     break-after: page;
 
@@ -65,7 +74,7 @@ a {
       display: grid;
       grid-area: body;
       grid-template-columns: 1fr;
-      // grid-gap: 16pt; // gap between summary & first section
+      grid-gap: $gap-top; // gap between summary & first section
       max-width: 100%;
       margin: 4pt 0 auto 64pt;
     }
@@ -81,7 +90,7 @@ a {
       
       $highlight-size: 1ch;
       padding-left: $highlight-size;
-      margin-left: -2 * $highlight-size;
+      margin-left: -1 * $highlight-size;
       border-left: $highlight-size solid var(--color-green);
     }
 
@@ -105,7 +114,7 @@ a {
       // .resume-header,
       // .resume-body,
       // .resume-footer {
-      //   // outline: 1px solid red;
+      //   outline: 1px solid red;
       // }
 
     }
@@ -122,16 +131,16 @@ a {
   display: grid;
   grid-auto-rows: min-content;
   grid-auto-flow: row;
-  grid-gap: 16pt; // gap between sections
+  grid-gap: $gap-section; // gap between sections
 
   .column-section {
     display: grid;
-    grid-gap: 4pt; // gap between header & first entry
+    grid-gap: $gap-first-entry; // gap between header & first entry
 
     &#projects .column-section-contents,
     &#volunteer .column-section-contents {
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 8pt 12pt; // gap between entries
+      grid-gap: $gap-entry-y $gap-entry-x; // gap between entries
     }
 
     &#tools .column-section-contents {
@@ -143,7 +152,7 @@ a {
 
   .column-section-contents {
     display: grid;
-    grid-gap: 12pt; // gap between entries
+    grid-gap: $gap-entry; // gap between entries
   }
   
   .tool {

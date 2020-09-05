@@ -6,7 +6,7 @@ const md = new Remarkable()
 
 const ResumeEntry = ({entryClass = 'job-entry', title, company, location, bullets}) => {
   return (
-    <div className={`resume-entry ${entryClass}`}>
+    <div className={`resume-entry ${entryClass}`} id={company && company.replace(/( )/g, '-').toLowerCase()}>
       <div className="entry-header">
         <h4 className="entry-company">{company}</h4>
         <h3 className="entry-title">{title}</h3>

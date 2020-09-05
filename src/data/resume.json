@@ -10,10 +10,11 @@
       "location": "NYC",
       "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
-        "Streamlined designer/developer collaboration by building an Angular component library, and compiling design system documentation with Storybook.",
+        "Streamlined designer/developer collaboration by building an Angular component library and compiling design system documentation with Storybook.",
         "Developed a CSS architecture that leverages the opinionated nature of Angular, improving long-term frontend maintainability and visual consistency.",
         "Designed a framework to streamline development of data visualizations, enabling us to launch remote learning features days after schools closed in March 2020."
-      ]
+      ],
+      "show": true
     },
     "music-group": {
       "company": "TC Helicon",
@@ -25,19 +26,32 @@
       "bullets": [
         "Defined business strategy and product specifications for a line of music accessories based on market and user research.",
         "Developed a globally used tool allowing managers to quickly evaluate new projects based on ROI and other key data."
-      ]
+      ],
+      "show": true
+    },
+    "chameleon": {
+      "company": "Chameleon",
+      "url": "http://chameleon.thesonofthomp.com",
+      "term": "Sept 2016 - Dec 2017",
+      "position": "Co-founder",
+      "location": "Waterloo",
+      "bullets": [
+        "Defined business strategy and product specifications for a line of music accessories based on market and user research."
+      ],
+      "show": false
     },
     "co-op": {
-      "company": "Co-op contracts",
+      "company": "Internships",
       "position": "UI Designer / Developer",
       "term": "2013-2017",
       "location": "Toronto & NYC",
       "bullets": [
-        "**Zynga**: Optimized user flows based on the results of multi-variate testing.",
-        "**Noom**: Aligned the core food logging experience with the users' mental models.",
+        "**Sony**: Led design and UI development for a music discovery feature.",
         "**KnowRoaming**: Overhauled the app IA and UI to better align with common use cases.",
-        "**Sony**: Led design and UI development for a MediaGo music discovery feature."
-      ]
+        "**Noom**: Aligned the core food logging experience with the users' mental models.",
+        "**Zynga**: Optimized user flows based on the results of multi-variate testing."
+      ],
+      "show": true
     }
   },
   "education": {

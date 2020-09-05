@@ -33,7 +33,7 @@
 
     a {
       font-size: 12pt;
-      color: $green_small;
+      color: var(--color-green-small);
     }
   }
 
@@ -41,8 +41,8 @@
     grid-area: tagline;
     font-size: 14pt;
     font-weight: 700;
+    color: var(--color-green-small);
     text-transform: uppercase;
     letter-spacing: 2pt;
-    color: var(--color-green);
   }
 }

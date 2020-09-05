@@ -34,7 +34,7 @@ class ResumePage extends React.Component {
             <div className="column-section " id="experience">
               <h2 className="section-header">Experience</h2>
               <div className="column-section-contents">
-                {Object.values(resumeData.experience).map(job => {
+                {Object.values(resumeData.experience).filter(job => job.show).map(job => {
                   return <ResumeEntry
                     title={job.position}
                     company={job.company}
@@ -53,11 +53,25 @@ class ResumePage extends React.Component {
                   entryClass="school-entry"
                   title={resumeData.education.uwaterloo.position}
                   company={resumeData.education.uwaterloo.company}
-                  // location={resumeData.education.uwaterloo.class}
+                  location={resumeData.education.uwaterloo.class}
                   bullets={[
                     resumeData.education.uwaterloo.summary
                   ]}
                 />
+              </div>
+            </div>
+
+            {/* PROJECTS */}
+            <div className="column-section " id="projects">
+              <h2 className="section-header">Projects</h2>
+              <div className="column-section-contents">
+                {Object.values(projectsData.projects).map(project => (
+                  project.showOnResume && <ResumeEntry
+                    entryClass="project-entry"
+                    title={project.name}
+                    bullets={[project.description]}
+                  />
+                ))}
               </div>
             </div>
 
@@ -71,19 +85,7 @@ class ResumePage extends React.Component {
             </div>
           </div>
           
-          {/* PROJECTS */}
-            <div className="column-section " id="projects">
-              <h2 className="section-header">Projects</h2>
-              <div className="column-section-contents">
-                {Object.values(projectsData.projects).map(project => (
-                  project.showOnResume && <ResumeEntry
-                    entryClass="project-entry"
-                    title={project.name}
-                    bullets={[project.description]}
-                  />
-                ))}
-              </div>
-            </div>
+          
 
 
             {/* AWARDS */}
