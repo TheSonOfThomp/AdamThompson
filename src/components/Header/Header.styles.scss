@@ -28,7 +28,7 @@
     }
 
     &:focus {
-      outline-color: var(--color-green);
+      outline-color: var(--color-green-light);
     }
   
     &:hover {
@@ -60,10 +60,6 @@
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.05em;
-  
-    // @media screen and (max-width: $breakpoint-medium) {
-    //   grid-gap: 16px;
-    // }
 
     @media screen and (max-width: $breakpoint-xsmall) {
       display: none;
@@ -94,12 +90,13 @@
 }
 
 .highlight {
-  --padding: calc(var(--link-height, 0) * 1px / 4);
+  // --padding: calc(var(--link-height, 0) * 1px / 4);
   
   position: absolute;
   z-index: 0;
   width: calc(var(--link-width, 0) * 1px);
-  height: calc(var(--link-height, 0) * 1px);
+  // height: calc(var(--link-height, 0) * 1px);
+  height: 4px;
   padding: 0 var(--padding);
   background-color: var(--color-grey-dark);
   border-radius: calc(var(--link-height, 0) * 1px);
@@ -107,8 +104,9 @@
   transition-duration: 0.1s;
   transition-property: transform, width, height, opacity;
   transform: 
-    translateX(calc(var(--link-left, 0) * 1px - var(--padding)))
-    translateY(calc(var(--link-top, 0) * 1px));
+    translateX(calc(var(--link-left, 0) * 1px))
+    translateY(calc(100% + 16px));
+  // translateY(calc(var(--link-top, 0) * 1px));
 
   @media (prefers-reduced-motion) {
     transition-duration: 16ms;

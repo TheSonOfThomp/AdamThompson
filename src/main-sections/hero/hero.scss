@@ -45,8 +45,8 @@ $header-opacity: 16;
   }
 
   .header-wrapper {
-    @include verticalGradient(mix($green-darker, $transparent, 45%), $transparent, 100%); // for legibility of text
-    // background-color: mix($grey-dark, transparent, $header-opacity);
+    // @include verticalGradient(mix($green-darker, $transparent, 45%), $transparent, 100%); // for legibility of text
+    background-color: mix($grey-dark, transparent, $header-opacity);
     z-index: 1;
     padding: 24px $global-margin;
     margin: 0;
