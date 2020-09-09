@@ -32,6 +32,8 @@ $header-opacity: 16;
   color: $white;
   text-align: center;
 
+  transition: height 150ms ease;
+
 
   &::after {
     @include CornerToCornerGradient($green-light, $green);
@@ -46,10 +48,10 @@ $header-opacity: 16;
 
   .header-wrapper {
     // @include verticalGradient(mix($green-darker, $transparent, 45%), $transparent, 100%); // for legibility of text
-    // background-color: mix($grey-dark, transparent, $header-opacity);
     z-index: 1;
     padding: 24px $global-margin;
     margin: 0;
+    background-color: mix($grey-dark, transparent, $header-opacity);
 
     > header {
       max-width: $content-width;
@@ -85,10 +87,17 @@ $header-opacity: 16;
     display: grid;
     grid-row: 1/-1;
     grid-column: 1/-1;
-    margin: 0;
     font-size: responsiveSize(512, 768);
     opacity: $header-opacity * 0.01;
     place-items: center;
+    
+    .big-letters-monogram {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: $content-width;
+      height: auto;
+      padding: $global-margin;
+    }
   }
 
   .title {
@@ -110,14 +119,37 @@ $header-opacity: 16;
     line-height: 1.2em;
     text-align: center;
   }
-
-  .big-letters-monogram {
-    width: 2ch;
-    max-width: 95%;
-    height: auto;
-  }
 }
 
+// Animations
+.hero-contents {
+  --rotation: 4deg;
+
+  .big-letters,
+  .title,
+  .tagline {
+    transform: 
+      rotateX(calc(var(--mouseY) * var(--rotation)))
+      rotateY(calc(var(--mouseX) * var(--rotation) * -1));
+    
+    @media (prefers-reduced-motion) {
+      transform: unset;
+    }
+  }
+
+
+  .big-letters {
+    transform-origin: 50% 50% 0;
+  }
+
+  .title {
+    transform-origin: 50% 50% 48px;
+  }
+  
+  .tagline {
+    transform-origin: 50% 50% 24px;
+  }
+}
 
 
   

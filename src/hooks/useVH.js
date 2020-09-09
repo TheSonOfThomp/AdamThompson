@@ -1,6 +1,7 @@
-import { useEffect, useCallback } from "react"
-import { useWindowSize } from "./useWindowSize"
+import { useEffect, useCallback, useState } from "react"
+import { useWindowSize, getSize } from "./useWindowSize"
 
+// Listens to the window size, and updates the vh variable on resize
 export const useVH = () => {
   const { height } = useWindowSize()
 
@@ -11,7 +12,5 @@ export const useVH = () => {
 
   useEffect(() => {
     resetVH()
-    window.addEventListener('resize', resetVH)
-    return window.removeEventListener('resize', resetVH)
   }, [height, resetVH])
 }
