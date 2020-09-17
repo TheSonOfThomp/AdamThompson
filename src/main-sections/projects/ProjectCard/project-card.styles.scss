@@ -6,31 +6,31 @@ a.project-card {
   @include clickable-card(2,4);
   @include animate-text-underline('.project-title', var(--project-color, var(--color-green)));
   display: grid;
+  grid-template-areas: 'logo logo' 'title title' 'description description' 'tools icon';
+  grid-template-rows: var(--logo-height) 1fr 1fr;
+  grid-template-columns: 1fr 24px;
+  grid-auto-rows: max-content;
+  grid-gap: 8px;
   padding: 16px 20px;
   border: unset;
   border-bottom: unset;
   border-radius: 2px;
-  grid-auto-rows: max-content;
-  grid-gap: 8px;
-  grid-template-areas: 'logo logo' 'title title' 'description description' 'tools icon';
-  grid-template-columns: 1fr 24px;
-  grid-template-rows: var(--logo-height) 1fr 1fr;
   
   &:hover {
     border-bottom: unset;
   }
 
   .project-title {
-    align-self: center;
-    margin: 0;
     grid-area: title;
+    align-self: center;
     justify-self: left;
+    margin: 0;
   }
 
   .project-logo {
+    grid-area: logo;
     max-width: var(--logo-width);
     max-height: var(--logo-height);
-    grid-area: logo;
     place-self: center;
   }
   
@@ -39,8 +39,8 @@ a.project-card {
   }
   
   .project-icon {
-    align-self: flex-end;
     grid-area: icon;
+    align-self: flex-end;
     justify-self: right;
   }
   
