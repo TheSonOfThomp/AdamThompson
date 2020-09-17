@@ -1,7 +1,8 @@
-@import './colours.def';
+@import './colours.def.scss';
 
 :root {
   --color-green: #{$green};
+  --color-green-small: #{$green_small};
   --color-green-lightest: #{$green-lightest};
   --color-green-lightest-trans: #{$green-lightest_trans};
   --color-green-lighter: #{$green-lighter};
@@ -12,10 +13,11 @@
 
   --color-white: #{$white};
   --color-white-trans: #{$white-trans};
-  --color-light-grey: #{$grey-light};
-  --color-med-grey: #{$grey-medium};
+  --color-grey-light: #{$grey-light};
+  --color-grey-med: #{$grey-medium};
   --color-grey-dark: #{$grey-dark};
   --color-grey-dark-trans: #{$grey-dark_trans};
+  --color-grey-darker: #{$grey-darker};
   --color-black: #{$black};
   --color-transparent: #{$transparent};
   

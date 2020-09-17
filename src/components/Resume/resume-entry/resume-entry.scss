@@ -1,11 +1,15 @@
 @import '../../../style/colours.def';
 @import '../../../style/mixins';
 
+$gap-first-bullet: 4pt;
+$gap-first-bullet-y: 4pt;
+$gap-bullet: 8pt;
+
 .resume-entry {
   display: grid;
   grid-template-rows: 18pt auto;
   grid-auto-flow: row;
-  grid-gap: 4pt; // gap between job title & first bullet
+  grid-gap: $gap-first-bullet; // gap between job title & first bullet
   
   .entry-header {
     display: grid;
@@ -19,12 +23,13 @@
   .entry-title {
     grid-area: title;
     font-size: 14pt;
-    color: $green_small;
+    color: var(--color-green-small);
   }
   
   .entry-company {
     grid-area: company;
     font-size: 14pt;
+    color: var(--color-grey-darker);
   }
 
   .entry-location {
@@ -35,13 +40,15 @@
 
   .entry-bullets {
     display: grid;
-    grid-gap: 8pt; // gap between bullets
+    grid-gap: $gap-bullet; // gap between bullets
     padding-left: 0;
+    font-weight: 300;
+    color: var(--color-black);
+    // color: var(--color-grey-darker);
     list-style-type: none;
     
     .entry-bullet-point {
       position: relative;
-      // padding-left: 1ch;
 
       &:first-child {
         margin-top: 0;
@@ -54,7 +61,7 @@
     }
 
     strong {
-      color: var(--color-med-grey);
+      color: var(--color-grey-dark);
     }
 
     p {
@@ -64,7 +71,7 @@
   
   &.project-entry,
   &.volunteer-entry {
-    grid-gap: 2pt; // gap between job title & first bullet
+    grid-gap: $gap-first-bullet-y; // gap between job title & first bullet
     
     .entry-bullets {
       // padding: 0;
@@ -82,5 +89,9 @@
       grid-template-areas: 'title title location';
     }
   }
+}
+
+#internships .entry-bullets {
+  grid-gap: 4pt; // gap between bullets
 }
 

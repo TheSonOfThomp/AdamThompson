@@ -1,1 +1,9 @@
-<svg width="40" height="20" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg"><g fill="#2AC51B" fill-rule="nonzero"><path d="M10 0l10 20H0zM20 0h20v20H20V0zm0 0v6.25h6.25V0H20zm13.75 0v6.25H40V0h-6.25zm0 13.75V20H40v-6.25h-6.25zm-13.75 0V20h6.25v-6.25H20z"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="20px" viewBox="0 0 40 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>monogram-green</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="monogram-green" fill="#00A808" fill-rule="nonzero">
+            <path d="M10,0 L20,20 L0,20 L10,0 Z M20,0 L40,0 L40,20 L20,20 L20,0 Z M20,0 L20,6.25 L26.25,6.25 L26.25,0 L20,0 Z M33.75,0 L33.75,6.25 L40,6.25 L40,0 L33.75,0 Z M33.75,13.75 L33.75,20 L40,20 L40,13.75 L33.75,13.75 Z M20,13.75 L20,20 L26.25,20 L26.25,13.75 L20,13.75 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
