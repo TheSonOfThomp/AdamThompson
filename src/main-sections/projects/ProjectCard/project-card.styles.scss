@@ -1,0 +1,72 @@
+@import '../../../style/mixins';
+
+a.project-card {
+  --logo-width: 192px;
+  --logo-height: calc(var(--logo-width)/2);
+  @include clickable-card(2,4);
+  @include animate-text-underline('.project-title', var(--project-color, var(--color-green)));
+  display: grid;
+  padding: 16px 20px;
+  border: unset;
+  border-bottom: unset;
+  border-radius: 2px;
+  grid-auto-rows: max-content;
+  grid-gap: 8px;
+  grid-template-areas: 'logo logo' 'title title' 'description description' 'tools icon';
+  grid-template-columns: 1fr 24px;
+  grid-template-rows: var(--logo-height) 1fr 1fr;
+  
+  &:hover {
+    border-bottom: unset;
+  }
+
+  .project-title {
+    align-self: center;
+    margin: 0;
+    grid-area: title;
+    justify-self: left;
+  }
+
+  .project-logo {
+    max-width: var(--logo-width);
+    max-height: var(--logo-height);
+    grid-area: logo;
+    place-self: center;
+  }
+  
+  .project-description {
+    grid-area: description;
+  }
+  
+  .project-icon {
+    align-self: flex-end;
+    grid-area: icon;
+    justify-self: right;
+  }
+  
+  .project-tools-wrapper {
+    grid-area: tools;
+    opacity: 0.75;
+  }
+
+  .project-tools-label {
+    font-size: 0.67em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .project-tools-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .project-tool {
+    display: inline;
+    font-size: 0.84em;
+
+    &:not(:last-child)::after {
+      content: ', ';
+    }
+  }
+}

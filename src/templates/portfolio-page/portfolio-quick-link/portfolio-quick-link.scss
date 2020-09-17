@@ -1,4 +1,4 @@
-@import '../../../style/colours';
+@import '../../../style/colours.def';
 @import '../../../style/variables';
 
 /* stylelint-disable-next-line */
@@ -45,7 +45,7 @@ a.quick-link {
 
   .quick-link-direction {
     display: block;
-    color: $eigengrau;
+    color: $black;
     font-weight: 600;
   }
 

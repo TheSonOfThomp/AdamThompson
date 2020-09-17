@@ -1,0 +1,117 @@
+{
+  "tagline": "An engineer at the intersection of design and development.",
+  "blurb": "With an engineering education and experience in UX design since 2013, I seamlessly bridge the gap between the two disciplines.",
+  "experience": {
+    "new-visions": {
+      "company": "New Visions for Public Schools",
+      "url": "http://www.newvisions.org",
+      "term": "July 2018 - now",
+      "position": "UI Engineer",
+      "location": "NYC",
+      "summary": "Design systems, CSS architecture, UX frameworks, and feature design.",
+      "bullets": [
+        "Streamlined designer-developer collaboration by compiling design system documentation, and building and maintaining the Angular component library.",
+        "Developed CSS best-practices and architecture that leverages the opinionated structure of Angular, improving the long-term maintainability and visual consistency.",
+        "Designed a conceptual framework to streamline development of new data visualizations, enabling the team to launch remote learning features just days after schools closed in March 2020."
+      ]
+    },
+    "music-group": {
+      "company": "TC Helicon",
+      "url": "http://musicri.be",
+      "term": "Jan - Apr 2018",
+      "position": "Product Manager",
+      "location": "Kitchener",
+      "summary": "Design process, high-level product vision & business case development.",
+      "bullets": [
+        "Defined business strategy and product specifications for a line of music accessories based on market and user research.",
+        "Developed a globally used tool allowing managers to quickly evaluate new projects based on ROI and other key data."
+      ]
+    },
+    "zynga": {
+      "company": "Zynga",
+      "url": "http://www.zynga.com/poker",
+      "term": "Summer 2016",
+      "position": "UX Product Manager",
+      "summary": "Data analysis, UX research and testing for Poker Web.",
+      "location": "Toronto",
+      "bullets": [
+        "Optimized user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature and a new subscription-based revenue model."
+      ]
+    },
+    "noom": {
+      "company": "Noom",
+      "url": "http://www.noom.com",
+      "term": "Fall 2015",
+      "position": "Product Designer",
+      "summary": "Usability optimization, and user testing for the core food-logging feature.",
+      "location": "NYC",
+      "logotype": "images/companies/noom_logotype_small.png",
+      "logo": "images/companies/noom_logo.png",
+      "bullets": [
+        "Simplified the core food logging experience by modifying the information architecture to better fit the mental model observed during user interviews."
+      ]
+    },
+    "knowroaming": {
+      "company": "KnowRoaming",
+      "url": "http://www.knowroaming.com",
+      "term": "Spring 2014 - Winter 2015",
+      "position": "UX Designer",
+      "summary": "User research, information architecture and UI design for all mobile apps.",
+      "location": "Toronto",
+      "bullets": [
+        "Redesigned the app information architecture and UI to better align with common use cases."
+      ]
+    },
+    "sony": {
+      "company": "Sony",
+      "url": "http://mediago.sony.com",
+      "term": "Winter 2013",
+      "position": "UI Designer",
+      "summary": "UI design and front-end development for MediaGo.",
+      "location": "Waterloo",
+      "bullets": [
+        "Led UI design and front-end development for a music discovery feature."
+      ]
+    }
+  },
+  "education": {
+    "uwaterloo": {
+      "url": "http://www.uwaterloo.ca/systems-design-engineering/about-systems-design-engineering",
+      "company": "University of Waterloo",
+      "position": "Systems Design Engineering",
+      "degree": "BASc.",
+      "minor": "Cognitive Science",
+      "summary": "B.ASc. with Cognitive Science minor.",
+      "class": "2017"
+    }
+  },
+  "projects": "See projects.json",
+  "volunteer": {
+    "thesymphonychorus": {
+      "title": "The SymphoNYChorus",
+      "location": "2018 - now",
+      "description": "Tenor section leader for the combined choir and orchestra."
+    },
+    "kwasind": {
+      "title": "Camp Kwasind",
+      "location": "2017",
+      "description": "Maintenance, cabin leader and staff mentor."
+    },
+    "water-boys": {
+      "title": "The Water Boys",
+      "location": "2013-2017",
+      "description": "Baritone section leader for the world-ranked all-male a cappella group."
+    },
+    "uwux": {
+      "title": "UW/UX",
+      "location": "2015-2016",
+      "description": "Vice President of the UW campus UX Club, mentoring younger students and planning club events."
+    }
+  },
+  "toolbox": [
+    "CSS", "HTML", "Javascript", "Typescript", "Angular", "React", "Vue",
+    "Storybook", "Sass", "Node", "D3", "XState", "Git", "CI", "Swift", 
+    "Origami", "Framer", "Sketch", "Zeplin", "InVision", "Photoshop", "Illustrator",
+    "Balsamiq", "Excel", "Airtable", "Python", "Arduino"
+  ]
+}

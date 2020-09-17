@@ -1,0 +1,22 @@
+@import '../../style/mixins';
+@import '../../style/variables';
+
+section#blog {
+  .content {
+    display: grid;
+    grid-gap: 24px;
+    text-align: left;
+  }
+
+  #show-all-posts {
+    display: inline;
+    background-color: transparent;
+    border: unset;
+    font-family: var(--font-sans);
+    color: var(--color-green);
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    outline-color: var(--color-green);
+  }
+}

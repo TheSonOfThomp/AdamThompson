@@ -1,27 +1,48 @@
-@import '../../style/colours';
+@import '../../style/colours.def';
 
 .resume-header {
   display: grid;
-  align-items: center;
-  grid-auto-flow: column;
-  grid-gap: 16pt;
-  grid-template-columns: auto auto 1fr;
-  
-  #monogram {
-    width: auto;
-    height: 24pt;
+  grid-template-areas: 'monogram name contact' '. tagline .';
+  grid-gap: 0 16pt;
+  align-items: baseline;
+
+  .name {
+    grid-area: name;
   }
 
+  #name { 
+    font-size: 32pt;
+    font-weight: 700;
+    line-height: 1.2em;
+  }
+  
+  #monogram {
+    grid-area: monogram;
+    width: auto;
+    height: 24pt;
+    margin-top: 8pt;
+  }
+  
   #contacts {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    grid-area: contact;
+    align-self: center;
     font-weight: 400;
-    grid-auto-flow: row;
     text-align: right;
 
     a {
-      color: $green_small;
-      font-size: 0.9em;
+      font-size: 12pt;
+      color: var(--color-green-small);
     }
+  }
 
+  #tagline {
+    grid-area: tagline;
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--color-green-small);
+    text-transform: uppercase;
+    letter-spacing: 2pt;
   }
 }

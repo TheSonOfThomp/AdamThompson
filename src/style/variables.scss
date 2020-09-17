@@ -1,5 +1,6 @@
+@import './utilities';
 // -------- Measurements -------- //
-$global-margin: 24px;
+$global-margin: responsiveSize(24, 32);
 $content-width: 1024px;
 $folio-max-width: 720px;
 

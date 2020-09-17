@@ -1,15 +1,16 @@
-@import '../../style/colours';
+@import '../../style/utilities';
 
 .section-header {
+  @include responsiveText(16, 20);
+
   position: relative;
   display: inline-block;
   align-items: center;
   justify-content: left;
-  color: $black;
-  font-size: 1.5rem;
-  font-weight: 600;
   justify-self: left;
-  letter-spacing: 0.25em;
+  font-weight: 700;
   line-height: 2em;
+  color: var(--color-black);
   text-transform: uppercase;
+  letter-spacing: 0.25em;
 }

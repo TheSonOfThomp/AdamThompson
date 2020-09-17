@@ -1,41 +1,48 @@
 import React from "react"
-// import { Link } from "gatsby"
 
 import SEO from "../components/seo";
-import Hero from "../templates/sections/hero/hero";
-import ResumeSection from "../templates/sections/resume/resume-section";
+import Hero from "../main-sections/hero/hero";
+import ResumeSection from "../main-sections/resume/resume-section";
+import PortfolioSection from "../main-sections/portfolio/portfolio-section";
+import AboutSection from "../main-sections/about/about-section";
+import BlogSection from "../main-sections/blog/blog-section";
+import FooterSection from "../main-sections/footer/footer-section";
+import ProjectsSection from "../main-sections/projects/projects-section";
+import '../style/global.scss'
+import { useVH } from "../hooks/useVH";
 
-import PortfolioSection from "../templates/sections/portfolio/portfolio-section";
-import AboutSection from "../templates/sections/about/about-section";
-import BlogSection from "../templates/sections/blog/blog-section";
-import FooterSection from "../templates/sections/footer/footer-section";
-import ProjectsSection from "../templates/sections/projects/projects-section";
-import image from '../images/monogram.png'
-import '../style/global.sass'
-class IndexPage extends React.Component {
-  render() {
-    return (
-      <main id="app">
-        <SEO title="Main" image={image}/>
-        
-        <Hero/>
-        
-        <ProjectsSection/>
-    
-        <AboutSection/>
+const IndexPage = () => {
 
-        <PortfolioSection/>
-    
-        {/* <Section title="Toolbox"/> */}
-        
-        <ResumeSection/>
-        
-        <BlogSection/>
+  useVH()
 
-        <FooterSection/>
-        
-      </main>
-  )}
-}
+  return (
+    <main id="app">
+      <SEO title="Main"/>
+      
+      <Hero/>
+      
+      <AboutSection/>
+
+      {/* <hr/> */}
+
+      <ResumeSection />
+
+      {/* <hr/> */}
+  
+      <ProjectsSection/>
+
+      {/* <hr/> */}
+
+      <PortfolioSection/>
+  
+      {/* <Section title="Toolbox"/> */}
+      {/* <hr/> */}
+            
+      <BlogSection/>
+
+      <FooterSection/>
+      
+    </main>
+)}
 
 export default IndexPage

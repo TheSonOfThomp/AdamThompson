@@ -1,0 +1,38 @@
+@import '../../../style/variables';
+@import '../../../style/mixins';
+
+.blog-post {
+  @include clickable-card(1, 2);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 16px;
+  background-color: var(--color-white);
+  border-radius: 4px;
+}
+
+.blog-post-link {
+  border-bottom: unset;
+  
+  &:hover {
+    border-bottom: unset;
+  }
+}
+
+.blog-post-title {  
+  margin: 8px 0;
+  grid-area: title;
+}
+
+.blog-post-date {
+  order: -1;
+  margin: 2px 0;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.blog-post-description {
+  margin: 2px 0;
+  font-size: 1rem;
+  font-weight: 400;
+}

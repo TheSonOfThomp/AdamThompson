@@ -9,8 +9,12 @@ module.exports = {
   plugins: [
     // `gatsby-plugin-recaptcha`, // loads reCaptcha
     `gatsby-plugin-sass`, // loads SASS/SCSS files
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`, // for <head> tag
+    'gatsby-transformer-json', // for parsing json
+    `gatsby-remark-images`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-svg`,
     {
       resolve: `gatsby-transformer-remark`, // for parsing markdown
       options: {
@@ -26,8 +30,6 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-react-helmet`, // for <head> tag?
-    'gatsby-transformer-json', // for parsing json
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -43,6 +45,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `portfolio`,
+        path: `${__dirname}/src/pages/portfolio`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `recipes`,
+        path: `${__dirname}/src/pages/recipes`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-mdx',
       options: {
         remarkPlugins: [require('remark-unwrap-images')], // removes wrapping <p> tag
@@ -50,26 +66,34 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 720,
+              maxWidth: 1024,
               linkImagesToOriginal: false,
               showCaptions: true,
             },
           }],
         defaultLayouts: {
-          default: require.resolve("./src/templates/portfolio-page/portfolio-template.js"),
+          portfolio: require.resolve("./src/templates/portfolio-page/portfolio-template.js"),
+          default: require.resolve("./src/templates/default-page/default-template.tsx"),
         },
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Adam Thompson`,
+        short_name: `thesonofthomp`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#2ac51b`,
+        theme_color: `#2ac51b`,
         display: `minimal-ui`,
         icon: `src/images/monogram.png`, // This path is relative to the root of the site.
+        icon_options: {
+          // For all the options available, please see:
+          // https://developer.mozilla.org/en-US/docs/Web/Manifest
+          // https://w3c.github.io/manifest/#purpose-member
+          purpose: `maskable`,
+        },
+        cache_busting_mode: 'none'
       },
     },
     {
@@ -80,6 +104,20 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      precachePages: [
+        '/portfolio/*'
+      ],
+      workboxConfig: {
+        globPatterns: ['src/images*']
+      }
+    },
+    {
+      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+      options: {
+        analyzerMode: "static",
+      },
+    }
   ],
 }
