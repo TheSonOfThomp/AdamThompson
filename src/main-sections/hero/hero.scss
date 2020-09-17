@@ -32,6 +32,8 @@ $header-opacity: 16;
   color: $white;
   text-align: center;
 
+  transition: height 150ms ease;
+
 
   &::after {
     @include CornerToCornerGradient($green-light, $green);
