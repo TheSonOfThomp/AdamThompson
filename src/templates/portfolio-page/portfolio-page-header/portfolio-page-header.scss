@@ -3,10 +3,10 @@
 .portfolio-page-header {
   position: relative;
   z-index: 10;
+  justify-self: center;
   width: 100%;
   max-width: $folio-max-width;
   border-bottom: 2px solid var(--color-black);
-  justify-self: center;
 
   .portfolio-page-link {
     display: inline-flex;
@@ -31,9 +31,9 @@
   .portfolio-page-title {
     margin: 0;
     margin-left: 12px;
-    color: var(--color-black);
     font-family: var(--font-sans);
     font-size: 28px;
     font-weight: 400;
+    color: var(--color-black);
   }
 }

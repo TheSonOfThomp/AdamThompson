@@ -7,16 +7,16 @@
 
   .resume-card-section {
     display: grid;
-    grid-gap: 24px 32px;
     grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    grid-gap: 24px 32px;
   }
 
   a.print-resume {
     display: inline-flex;
     align-items: baseline;
     margin-top: 24px;
-    color: $green_small;
     line-height: 1em;
+    color: $green_small;
 
     svg {
       margin-left: 4px;

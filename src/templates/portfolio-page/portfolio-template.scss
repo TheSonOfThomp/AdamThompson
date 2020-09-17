@@ -1,4 +1,4 @@
-@import '../../style/colours.def';
+@import '../../style/colours.def.scss';
 @import '../../style/variables';
 @import '../../style/mixins';
 
@@ -137,7 +137,7 @@ main.portfolio {
     p {
       font-size: 24px;
       font-style: italic;
-      color: $dark_grey;
+      color: $grey-dark;
       padding-inline-end: 1em;
       padding-inline-start: 1em;
     }
@@ -195,7 +195,7 @@ main.portfolio {
       font-size: 1rem;
       font-weight: 500;
       line-height: 1.5em;
-      color: $med_grey;
+      color: $grey-medium;
       text-align: center;
     }
 

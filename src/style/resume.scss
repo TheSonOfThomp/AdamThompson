@@ -79,18 +79,18 @@ a {
       margin: 4pt 0 auto 64pt;
     }
     
-    .section-header { 
-      font-size: 10pt;
-      font-weight: 700;
-      line-height: 2em;
-      text-transform: uppercase;
-      letter-spacing: 2pt;
+    .section-header {
 
       // Header highlight
       
       $highlight-size: 1ch;
       padding-left: $highlight-size;
       margin-left: -1 * $highlight-size;
+      font-size: 10pt;
+      font-weight: 700;
+      line-height: 2em;
+      text-transform: uppercase;
+      letter-spacing: 2pt;
       border-left: $highlight-size solid var(--color-green);
     }
 
