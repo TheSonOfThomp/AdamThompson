@@ -15,13 +15,12 @@ import Mermaid from '../../components/Mermaid';
 <!-- This is doubly true when everything changes so suddenly like it did in early 2020. -->
 <section class="tldr" markdown="1">
 
-  ## Accessible metrics about a school’s performance.
+## A framework for accessible data
+It can be difficult to manage one of New York City’s large public schools—things are changing all the time, and school leadership needs up-to-date information about their school’s demographics, academics, attendance and other data. 
 
-  It can be difficult to manage one of New York City's large public  schools. Principals and VPs need up-to-date information about their school's demographics, academics, attendance and other data.
+I designed and tested a framework for developing multi-leveled dashboards which highlight important data points for school managers. This framework was invaluable in March 2020 when we needed to quickly develop new features for remote learning.
 
-  I designed and tested architecture for a multi-leveled dashboard experience that highlights important data points for school managers, and enables them to further explore the data. 
-
-  The process included designing and usability testing all three levels of the dashboard experience and the information architecture, prototyping the data-visualization graphs in `d3`, and defining the IA data model which dictates the UI options in every state.
+This involved understanding users’ needs, developing a conceptual framework and information architecture, designing and usability testing all three levels of the dashboard user interface, and finally prototyping the data-visualization graphs in `d3`. This project spanned two “phases” over the span of two years.
 
 <div class="cover-image vertical">
 
@@ -30,192 +29,66 @@ import Mermaid from '../../components/Mermaid';
 
 </section>
 
-<!-- <section class="team">
-  
-  # My Role
-  Lead designer, including user research, problem definition, information architecture, layout design, visual design,  prototyping, usability testing, and data modelling.
+# The company
+New Visions for Public Schools is a New York based non-profit that develops systems and tools to equitably manage NYC public schools. These tools enable all schools to provide equitable education across the city, and ensure no student gets left behind.
 
-  # The team
-  - Danielle Scaramellino | Director of Product
-  - Chris Avgerinos | Director of UX Design
-  - Christine Han | UX Researcher
-  - Alisa Zhukova | UI Designer
-</section> -->
+My work was focused on the Portal—a tool used by school staff that provides the data they need to stay on top of managing their students’ success.
 
-<!-- The challenge -->
-<!-- Problem statement -->
-# No student left behind
-<!-- - We have a data tool that allows users to see curated lists of students, highlighting problems so kids don't fall thru cracks -->
-
-New Visions for Public Schools is a New York based non-profit developing systems and tools for managing NYC public schools. These tools enable schools to provide equitable education across the city, and ensure no student gets left behind.
-
-My work was focused on the Data Portal—a tool used by school staff that provides the data they need to stay on top of managing their school. 
-
-One way the Portal does this is with curated lists of students for councilors and teachers. These lists surface potential problems and provide specific data with the goal of solving the problem—like  students who need attendance support, or who need to be scheduled for an exam. The goal is that staff can more easily identify specific students they need to reach.
-
-![Curated attendance list in the New Visions Data Portal](../../images/portfolio/newvisions/nv-list-attendance.png)
-
-<!-- ## Users and audience -->
 ## Data for Managers
-While lists are intended to aid staff who interact with students directly—like councilors—there was a need to enhance the Portal to better serve school managers—like principals, vice-principals, and other admin staff. 
+While many features in the Portal aid staff who interact with students directly—like councilors—there was a need to enhance features that serve school managers—like principals and other admin staff. 
 
-While principals are managers in title, many are promoted teachers, and have the individual-focused mentality of a mentor. This is not a bad thing at all, but it can be distracting. Managers need to see the overall status of their school to identify broader issues using at-a-glance data about the entire school population. 
+Our goal was to develop a framework for providing school managers with the data they need to make high-level decisions, and highlight areas they need to focus on.
 
-Our goal was to design a new section of the app and provide this at-a-glance data, and a way to break it down to identify broader problems.
-  
-<!-- ## Scope and constraints -->
-<!-- ## What we did
-- The initial scope of this project was to identify important data points and design a way to see these all at-a-glance
-- On further user research and discussion with stakeholders, we designed a multi-level interactive dashboard for data points 
-- We wanted to validate that Now data was useful so we de-prioritized YOY historical data. 
-- We also wanted to learn more about what our users needs were before we built a more complex feature and a data model around it -->
+# A dashboard’s purpose
+At a high level, the purpose of a dashboard is to display information at-a-glance. But when designing a dashboard you can’t just slap in any information—the designer needs to be aware of what a user might want to *do* with the information.
 
-<!-- # Process and what you did -->
-# Data at-a-glance
+After researching our users’ and stakeholder’s needs, I was able to distill two broad use cases for a dashboard in our app: **Observation** and **Action**.
 
-The primary user goal for this project was to:
+With Observation, a user simply wants to observe a metric, and perhaps compare it to a previous point in time. This is typically the use case of the power-user who has a great amount of experience with the data at hand. These users are able to read more into the data and take actions based on past experience. In effect, the Observation dashboard offloads judgement and decision making to the user.
 
-> View aggregate, high-level data 'at-a-glance' to enable school managers to make informed executive decisions. 
+Alternatively, there are many cases where a user does not want to, or lacks the experience to parse what the data means to them. In this case the users should be prompted to take a specific action. In our case, we have 30 years of educational systems experience in place, and are in great position to encourage a user to take specific actions in a dashboard.
 
-We approached major stakeholders within and without the organization to identify data points that might be important for making this type of decision. The conclusion was that the types of decisions we needed to support, and therefore data points needed to inform them were many and varied. 
+By highlighting the differences between these two dashboard types, a designer can leverage this framework to speed up design of new dashboard sections by designing for a specific use case. The framework encourages the dashboard designer to ask “what will the user do with this information” in order to streamline development. 
 
-Christine & I ran a card-sorting activity to identify potential groupings and hierarchy for these data points, however we weren't able to define a smaller set of data that would be useful to *all* managers at *all* times of the school year. 
+<!-- // image of chronic absenteeism tile & image of needs attendance support tile -->
 
-Since this work would need to support *all* 709 partner schools accross NYC, we made the decision that we would not develop functionality to customize the available data, or add logic to toggle data at specific times of the year. We would use analytics from the initial version of the data dashboard to monitor whether certain data points *were* more useful than others, and revisit the feature at a later date.
-
-Armed with this knowledge, and a useful categorization scheme gleaned from the card sorting activity, I set out designing potential layouts for this dashboard.
-
-## Dashboard design
-
-Since the guiding design principle for the dashboard was data at-a-glance, I wanted to make the data the central part of this interface. 
-
-Jumping off from existing designs that Chris had created, I designed a grid layout used both line graphs and big numbers to highlight data points. Initial designs didn't include explicit grouping of similar data, but we quickly realized that finding the data point you needed was difficult. After several rounds of usability testing to ensure users could find the data they were looking for, we landed on this design for the dashboard.
-
-<!-- What benefit do line graphs serve on this level? -->
-
-![TODO - top-level mocks]()
-
-<!-- https://mermaid-js.github.io/mermaid/#/flowchart -->
-
-# Modeling Metadata
-
-While analyzing the data points and brainstorming ways to visualize it with the team, I noticed many commonalities with how we talked about certain metrics. Characteristics like the data "rollup type", or  distinctions like "point-in-time" data versus "cumulative" data helped us understand the data points we were talking about. 
-
-I documented these characteristics, and developed a model in Airtable to organize this metadata. I later used this model to help develop an interactive prototype. The data engineering team finally took over the table and now use it to collaborate with the product team to update and define new dashboard data. 
-
-<Mermaid
-  caption="UML Diagram of the dashboard data model"
-  input={`classDiagram
-    class Tile {
-      Label: string
-      Tile type: Number | Graph
-      Focus(): Focus
-    }
-    class Focus {
-      Category: string
-      Graph type: Bar | Line | Layered
-      PrimaryMetric(): RollupMetric
-      DefaultFilter(): Filter
-      DefaultGrouping(): Grouping
-      Columns(): RollupMetric[]
-      FilterOptions(): Filter[]
-      GroupingOptions(): Grouping[]
-    }
-    class Filter {
-      Label: string
-      FilterOn(): StudentMetric
-    }
-    class FilterSet {
-      Filters(): Filter[]
-    }
-    class Grouping {
-      Label: string
-      GroupBy(): StudentMetric
-    }
-    class GroupingSet {
-      Groupings(): Grouping[]
-    }
-    class RollupMetric {
-      Label: string
-      Description: string
-      Rollup type: Percent | Count | Average
-      Calculation: Formula
-      Metric(): StudentMetric
-    }
-    class StudentMetric {
-      Database field: string
-    }
-    Tile <-- Focus
-    Focus <-- RollupMetric
-    Focus <-- Filter
-    Focus <-- FilterSet
-    FilterSet <-- Filter
-    Focus <-- Grouping
-    Focus <-- GroupingSet
-    GroupingSet <-- Grouping
-    Filter <-- StudentMetric
-    Grouping <-- StudentMetric
-    RollupMetric <-- StudentMetric
-  `}
-/>
-
-This data model was one of the key components in enstablishing a reusable architecture, making designing and implementating new metrics much easier.
+Chronic Absenteeism Rate informs the viewer of the percentage of students who have an overall attendance rate below a certain threshold. This is useful for an experienced staff member with knowledge of the thresholds, and who wants to make nuanced decisions.
+Needs attendance support calls out the specific students that a user should be taking action on and providing additional support. This is actionable even for a guidance councilor on their first day.
 
 # Breaking down the data
+While a single data point can useful to identify potential problem areas, it doesn’t provide much insight into the source of the problem and its potential solutions. School managers want to compare data across sub-groups, and even see which individual students make up those aggregate numbers in order to take action on specific groups of students.  By providing a breakdown, we could provide the information managers needed to make informed decisions and targeted actions. 
 
-While a single data point is useful to identify potential problem areas, it doesn't provide much insight into the problem and its potential solutions. School managers wanted to zoom in and compare aggregate data across sub-groups, and even see which individual students made up those aggregate numbers. By providing a mid-level breakdown, and student level list we could provide the information managers needed to make informed decisions. 
+<!-- // breakdown UI — users can navigate to this page by clicking on any “tile” on the main dashboard page -->
 
+The “breakdown” interface consists of two major elements: a data visualization, and a data table.
 
+## Graphs and their purpose
+A single data point is rarely insightful on its own. After talking to users about their needs and researching data visualization types, I identified a three parameters for **Comparison** that can help a designer determine how to visualize data. 
 
-## Data visualization
-  - We brainstormed what kinds of visualizations made the most sense
-    - For each data point, identified what kind of data 
-      - point-in-time => change over time doesn't matter
-      - independent time-based => change over time matters
-      - cumulative time-based => change over time, cumulative total matters
-  - Decided on:
-    - point-in-time => Bar graph
-    - independent time-based => Line graph
-    - cumulative time-based => Stacked line
+Data can be compared either *between groups* (e.g attendance rates between grades), *within groups* (e.g. attendance rates of female & male students within a grade), or *over time* (e.g. average attendance over the year). Identifying which comparison parameters might be useful for a given data point is an important step in designing a new dashboard breakdown screen.
 
-    [TODO - mock of bar graph]
-    [TODO - mock of Line graph]
-    [TODO - mock of stacked-line graph]
+To simplify the process I eliminated some less-useful combinations, and defined four data visualization styles that align to common comparison types.
 
-    * Maybe mention that stacked bar was out of scope b/c hard to define 2 slicing dimensions
-    * We wanted to validate that Now data was useful so we de-prioritized YOY historical data.
-    * We also wanted to learn more about what our users needs were before we built a more complex feature and a data model around it
+- **Bar graph**: Highlights differences *between groups*.
+- **Stacked Bar graph**: Highlights differences *between* and *within* groups.
+- **Line graph**: Highlights differences *between groups*, and change *over time*.
+- **Sankey graph**: Highlights differences *between* and *within* groups, as well as change *over time*.
 
-  ### Visual accessibility 
-  - Alisa worked on the initial visual designs and color palette
-  - We tested whether a stakeholder could understand what each graph represented
+<!-- // Mocks of each graph type -->
 
-  ### Designing with "real" data
-  - I created a mock-data creator in Node
-  - Wanted to test interactions in the breakdown — how do users want to go to other 
-  - Testing with fake data was confusing to our test users — they kept trying to find trends 
+## Table data
+While visualizations are great for many visually-minded users, we needed to present the data numerically as well. This allowed me to future-proof the framework, and present additional data to support the primary data being plotted. While I left decisions about exactly what additional data to include up to the implementing designer, I laid out some structural patterns in the framework. 
 
-  ### Testing interactions
-  - I prototyped the graphs in d3 & Vue
-  - Used prototypes to test graph designs
-    - Tested with more users
-    - New users failed tests previously passed
-    - Refined design in browser of the "cake-graph" after several iterations
-  - Prototypes were handed off to developers 
-    — made it easy to build final
+First, testing showed that the leftmost table column(s) should align with the data point(s) being plotted, and the right-most should be a total of all the students in the group. 
 
-## Table design  
-  - Worked with PMs and stakeholders to identify additional useful data
-    - After looking at multiple data points established a pattern:
-    - Primary rollup data point, Inverse rollup groups, total students
+Second, the rows in the table should align with the comparison group in each graph. That is, if we’re comparing between grades, each table row should be a grade. This pattern still holds when comparing both *between* and *within* groups, and coincides with the first pattern. For example, if we’re comparing sexes *within* grades, then each row is a grade, and the first columns are each of the sexes, since that’s the data plotted in a stacked bar graph. 
 
-## Student level
-  - Stakeholders were also asking to see the specific students in certain buckets so they could take action on them
-  - We created a student level table, similar to the curated lists
+// Mock of a data table that’s associated with one of the graphs above.
 
-# Outcomes and lessons
-  - Test with multiple users, at various levels of expertise
-  - Test interactive prototypes for complex interactions
-  - Learning what dashboard tiles are most useful, and improve the interface based on that (because we've expanded and out SDFs aren't meeting with every school anymore. Renewed initiative to behavior change
-  - Some usability improvements were not made because they would take time to design and implement a solution. We'd come back to it later
-  - More graph types - Historical & Sankey
+## The student level
+Users are generally loath to take action on a whole group without seeing the individual students first. In this framework, a user can navigate to a list of the students that make up that group by clicking on a row in the breakdown table. On this screen a user is shown additional context that might help when making a decision about what action to take. The framework makes no assertions about what this additional data should be, and leaves that up to the implementing designer as well.
+
+# Not a prescription
+Overall, this framework provides a three-level architecture with logic and interaction patterns that help future designers display and visualize new data. It’s not a prescriptive framework however, and can be broken if necessary—every user goal and every data point is different, and requires careful thought into how the data is should be presented. 
+
+<!-- section to talk about the UI design of the graphs -->
