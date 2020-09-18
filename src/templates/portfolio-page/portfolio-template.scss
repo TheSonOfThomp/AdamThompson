@@ -129,6 +129,11 @@ main.portfolio {
       padding-inline-start: 1em;
     }
   }
+  
+  ul {
+    @extend %max-width-centered;
+    line-height: 1.6em;
+  }
 
   // Images & Video
   figure {
@@ -184,6 +189,10 @@ main.portfolio {
       padding: 16px 0;
       margin: 48px auto 8px;
       background-color: var(--brand-color-light);
+    }
+
+    figure {
+      max-width: unset;
     }
 
     figcaption {

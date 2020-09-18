@@ -42,7 +42,7 @@ Our goal was to develop a framework for providing school managers with the data 
 # A dashboard’s purpose
 At a high level, the purpose of a dashboard is to display information at-a-glance. But when designing a dashboard you can’t just slap in any information—the designer needs to be aware of what a user might want to *do* with the information.
 
-After researching our users’ and stakeholder’s needs, I was able to distill two broad use cases for a dashboard in our app: **Observation** and **Action**.
+After researching our users’ and stakeholder’s needs, I was able to distill two broad use cases for a dashboard in our app: *Observation* and *Action*.
 
 With Observation, a user simply wants to observe a metric, and perhaps compare it to a previous point in time. This is typically the use case of the power-user who has a great amount of experience with the data at hand. These users are able to read more into the data and take actions based on past experience. In effect, the Observation dashboard offloads judgement and decision making to the user.
 
@@ -50,7 +50,7 @@ Alternatively, there are many cases where a user does not want to, or lacks the 
 
 By highlighting the differences between these two dashboard types, a designer can leverage this framework to speed up design of new dashboard sections by designing for a specific use case. The framework encourages the dashboard designer to ask “what will the user do with this information” in order to streamline development. 
 
-<!-- // image of chronic absenteeism tile & image of needs attendance support tile -->
+// image of chronic absenteeism tile & image of needs attendance support tile
 
 Chronic Absenteeism Rate informs the viewer of the percentage of students who have an overall attendance rate below a certain threshold. This is useful for an experienced staff member with knowledge of the thresholds, and who wants to make nuanced decisions.
 Needs attendance support calls out the specific students that a user should be taking action on and providing additional support. This is actionable even for a guidance councilor on their first day.
@@ -58,7 +58,7 @@ Needs attendance support calls out the specific students that a user should be t
 # Breaking down the data
 While a single data point can useful to identify potential problem areas, it doesn’t provide much insight into the source of the problem and its potential solutions. School managers want to compare data across sub-groups, and even see which individual students make up those aggregate numbers in order to take action on specific groups of students.  By providing a breakdown, we could provide the information managers needed to make informed decisions and targeted actions. 
 
-<!-- // breakdown UI — users can navigate to this page by clicking on any “tile” on the main dashboard page -->
+// breakdown UI — users can navigate to this page by clicking on any “tile” on the main dashboard page
 
 The “breakdown” interface consists of two major elements: a data visualization, and a data table.
 
@@ -74,7 +74,7 @@ To simplify the process I eliminated some less-useful combinations, and defined 
 - **Line graph**: Highlights differences *between groups*, and change *over time*.
 - **Sankey graph**: Highlights differences *between* and *within* groups, as well as change *over time*.
 
-<!-- // Mocks of each graph type -->
+// Mocks of each graph type
 
 ## Table data
 While visualizations are great for many visually-minded users, we needed to present the data numerically as well. This allowed me to future-proof the framework, and present additional data to support the primary data being plotted. While I left decisions about exactly what additional data to include up to the implementing designer, I laid out some structural patterns in the framework. 
