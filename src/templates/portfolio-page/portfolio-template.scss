@@ -1,4 +1,4 @@
-@import '../../style/colours.def';
+@import '../../style/colours.def.scss';
 @import '../../style/variables';
 @import '../../style/mixins';
 
@@ -203,7 +203,6 @@ main.portfolio {
       margin: 48px auto 0;
       background-color: var(--color-black);
 
-      /* stylelint-disable-next-line selector-max-compound-selectors */
       figcaption {
         display: none;
       }

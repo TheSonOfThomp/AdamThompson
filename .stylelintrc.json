@@ -8,6 +8,7 @@
     "order/properties-alphabetical-order": null,
     "scss/at-mixin-pattern": null,
     "scss/at-function-pattern": null,
+    "scss/at-import-partial-extension-blacklist": null,
     "scss/dollar-variable-pattern": null
   }
 }
