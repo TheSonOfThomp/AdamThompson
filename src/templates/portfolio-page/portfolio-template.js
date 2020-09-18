@@ -4,6 +4,7 @@ import SEO from "../../components/seo";
 import PortfolioQuickLink from "./portfolio-quick-link/portfolio-quick-link";
 import './portfolio-template.scss';
 import { PortfolioPageHeader } from "./portfolio-page-header/portfolio-page-header";
+import { useCustomProps } from "../../hooks/useCustomProperty";
 
 
 export default ({ pageContext, children }) => {
@@ -31,9 +32,17 @@ export default ({ pageContext, children }) => {
   const thisPageIndex = allSitePage.nodes.findIndex(node => node.path.includes(pageId))
   const prevPage = allSitePage.nodes[thisPageIndex - 1] || null
   const nextPage = allSitePage.nodes[thisPageIndex + 1] || null
+  
+  const brand = frontmatter.title.toLowerCase().replace(' ', '');
+
+  const mainRef = useCustomProps({
+    '--brand-color': `var(--color-${brand})`,
+    '--brand-color-light': `var(--color-${brand}-light)`,
+    '--brand-color-lightest': `var(--color-${brand}-lightest)`,
+  }) 
 
   return (
-    <main className="portfolio" id={frontmatter.title.toLowerCase().replace(' ', '')}>
+    <main ref={mainRef} className="portfolio" id={brand}>
       <SEO title="Portfolio" />
       <PortfolioPageHeader />
       <div className="portfolio-content-container">
