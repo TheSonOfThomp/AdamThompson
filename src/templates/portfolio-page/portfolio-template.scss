@@ -159,6 +159,7 @@ main.portfolio {
     }
 
     figcaption {
+      @extend %max-width-centered;
       max-width: 50%;
       margin-top: 0.5em;
       margin-bottom: 0.5em;

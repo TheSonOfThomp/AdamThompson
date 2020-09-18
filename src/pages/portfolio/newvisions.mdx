@@ -3,12 +3,10 @@ title: New Visions
 brand: newvisions
 date: 2019-09-03
 tagline: Monitoring data for student success
-cover: 'newvisions-cover.png'
+cover: 'nv-breakdown-cover.png'
 color: '#0a4ace'
 section: portfolio
 ---
-
-import Mermaid from '../../components/Mermaid';
 
 # New Visions
 
@@ -22,9 +20,9 @@ I designed and tested a framework for developing multi-leveled dashboards which 
 
 This involved understanding users’ needs, developing a conceptual framework and information architecture, designing and usability testing all three levels of the dashboard user interface, and finally prototyping the data-visualization graphs in `d3`. This project spanned two “phases” over the span of two years.
 
-<div class="cover-image vertical">
+<div class="cover-image">
 
-  ![Mockup of the New Visions dashboard UI](../../images/portfolio/cover/newvisions-cover.png)
+  ![All four layers of the New Visions dashboard](../../images/portfolio/newvisions/nv-dashboard-demo.png)
 </div>
 
 </section>
@@ -50,15 +48,16 @@ Alternatively, there are many cases where a user does not want to, or lacks the 
 
 By highlighting the differences between these two dashboard types, a designer can leverage this framework to speed up design of new dashboard sections by designing for a specific use case. The framework encourages the dashboard designer to ask “what will the user do with this information” in order to streamline development. 
 
-// image of chronic absenteeism tile & image of needs attendance support tile
+![A comparision between the Chronic absenteeism tile & of Needs Attendance support tile](../../images/portfolio/newvisions/new-tiles@2x.png)
 
 Chronic Absenteeism Rate informs the viewer of the percentage of students who have an overall attendance rate below a certain threshold. This is useful for an experienced staff member with knowledge of the thresholds, and who wants to make nuanced decisions.
-Needs attendance support calls out the specific students that a user should be taking action on and providing additional support. This is actionable even for a guidance councilor on their first day.
+
+Needs attendance support on the other hand calls out the specific students that a user should be taking action on and providing additional support. This is actionable even for a guidance councilor on their first day.
 
 # Breaking down the data
 While a single data point can useful to identify potential problem areas, it doesn’t provide much insight into the source of the problem and its potential solutions. School managers want to compare data across sub-groups, and even see which individual students make up those aggregate numbers in order to take action on specific groups of students.  By providing a breakdown, we could provide the information managers needed to make informed decisions and targeted actions. 
 
-// breakdown UI — users can navigate to this page by clicking on any “tile” on the main dashboard page
+![The breakdown interface — users can navigate to this page by clicking on any “tile” on the main dashboard page](../../images/portfolio/newvisions/template-breakdown@2x.png)
 
 The “breakdown” interface consists of two major elements: a data visualization, and a data table.
 
@@ -74,7 +73,7 @@ To simplify the process I eliminated some less-useful combinations, and defined 
 - **Line graph**: Highlights differences *between groups*, and change *over time*.
 - **Sankey graph**: Highlights differences *between* and *within* groups, as well as change *over time*.
 
-// Mocks of each graph type
+![Samples of each graph type](../../images/portfolio/newvisions/graphs.png)
 
 ## Table data
 While visualizations are great for many visually-minded users, we needed to present the data numerically as well. This allowed me to future-proof the framework, and present additional data to support the primary data being plotted. While I left decisions about exactly what additional data to include up to the implementing designer, I laid out some structural patterns in the framework. 
@@ -83,7 +82,7 @@ First, testing showed that the leftmost table column(s) should align with the da
 
 Second, the rows in the table should align with the comparison group in each graph. That is, if we’re comparing between grades, each table row should be a grade. This pattern still holds when comparing both *between* and *within* groups, and coincides with the first pattern. For example, if we’re comparing sexes *within* grades, then each row is a grade, and the first columns are each of the sexes, since that’s the data plotted in a stacked bar graph. 
 
-// Mock of a data table that’s associated with one of the graphs above.
+![A data table that’s associated with the bar graph above](../../images/portfolio/newvisions/table@2x.png)
 
 ## The student level
 Users are generally loath to take action on a whole group without seeing the individual students first. In this framework, a user can navigate to a list of the students that make up that group by clicking on a row in the breakdown table. On this screen a user is shown additional context that might help when making a decision about what action to take. The framework makes no assertions about what this additional data should be, and leaves that up to the implementing designer as well.
