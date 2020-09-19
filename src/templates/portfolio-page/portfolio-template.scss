@@ -4,27 +4,14 @@
 
 $full-width-margin: calc((#{$folio-max-width} - 100vw) / 2);
 
-@mixin brandedPortfolio($brand) {
-  $brandColor: var(--color-#{$brand});
-  $brandColorLight: var(--color-#{$brand}-light);
-  $brandColorLightest: var(--color-#{$brand}-lightest);
+%max-width-centered {
+  max-width: $folio-max-width;
+  margin-right: auto;
+  margin-left: auto;
 
-  *::selection {
-    background: $brandColorLightest;
-  }
-  
-  header.portfolio-page-header {
-    border-color: $brandColor;
-  }
-  
-  .portfolio-content .tldr {
-    h2 {
-      color: $brandColor;
-    }
-
-    .cover-image {
-      background-color: $brandColorLight;
-    }
+  @media (max-width:$breakpoint-small) {
+    margin-right: responsiveSize(16, 24);
+    margin-left: responsiveSize(16, 24);
   }
 }
 
@@ -36,13 +23,12 @@ main.portfolio {
   justify-content: left;
   justify-items: left;
   font-family: var(--font-sans);
+  font-size: 20px;
 
-  &#newvisions { @include brandedPortfolio('newvisions');}
-  &#noom { @include brandedPortfolio('noom');}
-  &#knowroaming { @include brandedPortfolio('knowroaming');}
-  &#chameleon { @include brandedPortfolio('chameleon');}
-  &#zynga { @include brandedPortfolio('zynga');}
-  &#smrtwatr { @include brandedPortfolio('smrtwatr');}
+
+  *::selection {
+    background: var(--brand-color-lightest);
+  }
 
   // Quick links buttons
   .quick-links-container {
@@ -60,53 +46,44 @@ main.portfolio {
     position: relative;
     display: block;
     margin: 0;
-    
-    // TODO - turn this into placeholder selector
-    // and @extend it in all appropriate rules
-    * {
-      max-width: $folio-max-width;
-      margin-right: auto;
-      margin-left: auto;
+  }
 
-      // @media screen and (max-width: $folio-max-width + 20px) {
-      //   margin-right: 20px;
-      //   margin-left: 20px;
-      // }
-    }
+  header {
+    @extend %max-width-centered;
+    border-color: var(--brand-color);
   }
   
   h1 {
-    margin: 1em auto 0.1em;
-    font-size: 42px;
+    @extend %max-width-centered;
+    margin-top: 1em;
+    margin-bottom: 0.1em;
+    font-size: responsiveSize(32, 40);
     font-weight: 600;
     color: $black;
     text-align: left;
 
-    // @media screen and (max-width: $breakpoint-small) {
-    //   font-size: 6vw;
-    // }
-
     // Page Title
     &:first-child {
-      margin: 0.25em auto 4px;
+      margin-top: 0.25em;
+      margin-bottom: 4px;
       font-size: 64px;
     }
   }
 
   h2 {
-    margin: 0.25em auto 0.1em;
-    font-size: 32px;
+    @extend %max-width-centered;
+    margin-top: 0.25em;
+    margin-bottom: 0.1em;
+    font-size: responsiveSize(28, 32);
     font-style: normal;
     font-weight: bold;
     color: $black;
-    
-    // @media screen and (max-width: $breakpoint-small) {
-    //   font-size: 6vw;
-    // }
   }
 
   h3 {
-    margin: 16px auto;
+    @extend %max-width-centered;
+    margin-top: 16px;
+    margin-bottom: 16px;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.6em;
@@ -114,24 +91,19 @@ main.portfolio {
   }
 
   h4 {
-    margin: 16px auto;
+    @extend %max-width-centered;
+    margin-top: 16px;
+    margin-bottom: 16px;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6em;
     color: $grey-dark;
   }
 
-  blockquote p {
-    font-size: 24px;
-    font-style: italic;
-    color: $grey-dark;
-    padding-inline-end: 1em;
-    padding-inline-start: 1em;
-  }
-
   p {
-    margin: 1em auto;
-    font-size: 20px;
+    @extend %max-width-centered;
+    margin-top: 1em;
+    margin-bottom: 1em;
     font-weight: 300;
     line-height: 1.6em;
     color: $black;
@@ -146,8 +118,26 @@ main.portfolio {
     }
   }
 
+  blockquote {
+    @extend %max-width-centered;
+    
+    p {
+      font-size: 24px;
+      font-style: italic;
+      color: $grey-dark;
+      padding-inline-end: 1em;
+      padding-inline-start: 1em;
+    }
+  }
+  
+  ul {
+    @extend %max-width-centered;
+    line-height: 1.6em;
+  }
+
   // Images & Video
   figure {
+    @extend %max-width-centered;
     position: relative;
     display: inherit;
     width: 100%;
@@ -169,8 +159,10 @@ main.portfolio {
     }
 
     figcaption {
+      @extend %max-width-centered;
       max-width: 50%;
-      margin: 0 auto;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
       font-family: var(--font-sans);
       font-size: 1rem;
       font-weight: 500;
@@ -178,34 +170,39 @@ main.portfolio {
       color: $grey-medium;
       text-align: center;
     }
+  }
+
+  .footnotes {
+    @extend %max-width-centered;
 
   }
+  
   // Top TL;DR section
   .tldr {
+    display: block;
     width: 100%;
     max-width: none;
-
-    * {
-      margin-right: auto;
-      margin-left: auto;
-      margin-block: auto;
-    }
+    margin: auto;
     
     h2 {
       font-size: 36px;
-      color: var(--portfolio-color);
+      color: var(--brand-color);
     }
 
     .cover-image {
       width: 100%;
       max-width: none;
       padding: 16px 0;
-      margin: 48px auto 0;
-      background-color: var(--color-black);
+      margin: 48px auto 8px;
+      background-color: var(--brand-color-light);
+    }
 
-      figcaption {
-        display: none;
-      }
+    figure {
+      max-width: unset;
+    }
+
+    figcaption {
+      display: none;
     }
   }
 }
@@ -226,13 +223,14 @@ div.gatsby-image {
   } 
 }
 
-span.gatsby-resp-image-background-image {
-  padding: 0 !important;
-}
-
 div.cover-image,
 div.vertical {
   margin: auto;
+
+  span.gatsby-resp-image-background-image {
+    padding: 0 !important;
+  }
+
 
   figure.gatsby-resp-image-figure {
     img.gatsby-resp-image-image {
@@ -247,7 +245,6 @@ div.vertical {
 
 div.multiple {
   display: grid;
-  // margin-left: $full-width-margin;
   grid-auto-flow: column;
   justify-content: space-evenly;
   width: 100vw;

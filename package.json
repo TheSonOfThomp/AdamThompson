@@ -67,6 +67,8 @@
     "jss": "^10.3.0",
     "jss-preset-default": "^10.3.0",
     "lodash": "^4.17.15",
+    "mermaid": "^8.5.0",
+    "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2",

@@ -2,23 +2,24 @@
 @import './utilities';
 
 @mixin clickable-card($start: 2, $end: 4, $scale: 1.05) {
+  --scale: 1;
   @include elevation($start);
   @include animate((box-shadow, transform));
   z-index: 1;
-  transform: scale(1);
+  transform: scale(var(--scale));
   transform-origin: 50% 50%;
 
   &:hover,
   &:focus {
+    --scale: #{$scale};
     @include elevation($end);
     z-index: 2;
-    transform: scale($scale);
   }
 
   &:active {
+    --scale: 1;
     @include elevation($start);
     outline: none;
-    transform: scale(1);
   }
 }
 
@@ -48,24 +49,28 @@
 
 }
 
-@mixin animate-background-color($color, $opacity: 0.1) {
+@mixin animate-background-color($fromColor, $fromOpacity, $toColor, $toOpacity) {
   position: relative;
 
   &::after {
-    @include animate(background-color);
+    @include animate((background-color, opacity));
+
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 0;
     content: '';
-    background-color: transparent;
-    opacity: $opacity;
+    background-color: $fromColor;
+    border-radius: inherit;
+    opacity: $fromOpacity;
   }
 
   &:hover {
     &::after {
-      background-color: var(--portfolio-color);
+      background-color: $toColor;
+      opacity: $toOpacity;
     }
   }
 }
@@ -77,3 +82,11 @@
     @return var(--color-#{$brand});
   }
 }
+
+// @mixin perspectiveCard($perspective: 1000) {
+//   perspective: #{$perspective}px;
+//   transform: 
+//     rotateX(var(--rotate-x, 0)) 
+//     rotateY(var(--rotate-y, 0));
+//   transform-style: preserve-3d;
+// }

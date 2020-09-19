@@ -2,12 +2,12 @@
 @import '../../../style/mixins';
 
 .portfolio-card {
-  --portfolio-color: var(--color-green); // reset by 
+  --color-portfolio: var(--color-green); // reset by 
 
-  @include clickable-card(2, 4);
-  @include animate(box-shadow, transform, background-color);
-  @include animate-text-underline('.portfolio-card-title', var(--portfolio-color));
-  @include animate-background-color(var(--portfolio-color), 0.1);
+  @include clickable-card(1, 5);
+  @include animate-text-underline('.portfolio-card-title', var(--color-white));
+  @include animate-background-color(var(--color-portfolio), 0.95, var(--color-portfolio), 0.9);
+  @include animate((box-shadow, transform));
 
   position: relative;
   display: grid;
@@ -18,7 +18,7 @@
   min-height: 25%;
   min-height: 25vh;
   padding: 32px;
-  color: var(--color-black);
+  color: var(--color-white);
   text-align: left;
   text-decoration: none;
   background-color: var(--color-white);
@@ -31,7 +31,7 @@
   }
 
   &:focus {
-    outline: 2px solid var(--portfolio-color);
+    outline: 2px solid var(--color-portfolio);
 
     &:not(&:focus-visible) {
       outline: none;
@@ -67,6 +67,7 @@
   }
 
   .portfolio-card-image-wrapper {
+    z-index: 1;
     @media screen and (max-width: $breakpoint-xsmall) {
       position: absolute;
       top: 16px;
