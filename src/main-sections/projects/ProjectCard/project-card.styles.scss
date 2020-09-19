@@ -5,6 +5,7 @@ a.project-card {
   --logo-height: calc(var(--logo-width)/2);
   @include clickable-card(2,4);
   @include animate-text-underline('.project-title', var(--project-color, var(--color-green)));
+  @include animate-background-color(transparent, 0, var(--project-color, var(--color-green)), 0.03);
   display: grid;
   grid-template-areas: 'logo logo' 'title title' 'description description' 'tools icon';
   grid-template-rows: var(--logo-height) 1fr 1fr;

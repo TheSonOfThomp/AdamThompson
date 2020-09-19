@@ -171,6 +171,11 @@ main.portfolio {
       text-align: center;
     }
   }
+
+  .footnotes {
+    @extend %max-width-centered;
+
+  }
   
   // Top TL;DR section
   .tldr {
