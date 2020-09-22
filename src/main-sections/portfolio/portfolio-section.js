@@ -22,7 +22,7 @@ const PortfolioSection = ({ data }) => {
           }
         }
       }
-      allImageSharp {
+      allImageSharp(filter: {fluid: {originalName: {regex: "/cover/"}}}) {
         nodes {
           fluid {
             originalName

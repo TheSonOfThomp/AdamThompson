@@ -12,8 +12,8 @@
 
 @mixin elevation($level) {
   $y: #{$level}px;
-  $blur: #{$level * 2}px;
-  @include box-shadow(0, $y, $blur, rgba(0,0,0, 0.25) );
+  $blur: #{$level * 3}px;
+  box-shadow: 0 $y $blur rgba(0, 0, 0, 0.25);
 }
 
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
@@ -27,7 +27,7 @@
 
 @mixin verticalGradient($topColor, $bottomColor, $endPct) {
   background: $topColor; /* Old browsers */
-  background: -webkit-gradient(linear, left top, left botton, color-stop(0%, $topColor), color-stop($endPct, $bottomColor)); /* Chrome,Safari4+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $topColor), color-stop($endPct, $bottomColor)); /* Chrome,Safari4+ */
   background: linear-gradient(to bottom, $topColor 0%, $bottomColor $endPct); /* W3C */
 }
 

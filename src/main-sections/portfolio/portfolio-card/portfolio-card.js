@@ -1,16 +1,24 @@
 import React from "react"
-import {useCustomProp} from '../../../hooks/useCustomProperty';
+import {useCustomProps} from '../../../hooks/useCustomProperty';
 import './portfolio-card.scss';
 import { Link } from "gatsby";
+const HIGHLIGHT = 'new-visions'
 
 const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
+
   const id = title.toLowerCase().replace(/( )+/g, '-')
-  const highlighted_card = 'new-visions'
-  const isHighlightedCard = id === highlighted_card;
-  const colorRef = useCustomProp('--portfolio-color', color)
+  const isHighlightedCard = id === HIGHLIGHT;
+  const cardRef = useCustomProps({
+    '--color-portfolio': color
+  })
 
   return (
-    <Link ref={colorRef} to={link} id={id} className={`portfolio-card clickable ${isHighlightedCard ? 'double-wide' : ''}`}>
+    <Link 
+      ref={cardRef} 
+      to={link} 
+      id={id} 
+      className={`portfolio-card clickable ${isHighlightedCard ? 'double-wide' : ''}`}
+    >
       <div className="portfolio-card-text">
         <h2 className="portfolio-card-title">{title}</h2>
         <br/>

@@ -9,9 +9,6 @@
   background-color: var(--color-green-lighter) /* WebKit/Blink Browsers */
 }
 
-:root {
-}
-
 html {
   --vh: 1vh;
   --app-angle: 2.5deg;
@@ -62,12 +59,12 @@ html {
     }
   }
 
-  hr {
-    width: 150%;
-    margin: 64px 0 calc(64px + 24px) 0;
-    border-top: 4px solid var(--color-green);
-    transform: rotate(var(--app-angle));
-  }
+  // hr {
+  //   width: 150%;
+  //   margin: 64px 0 calc(64px + 24px) 0;
+  //   border-top: 4px solid var(--color-green);
+  //   transform: rotate(var(--app-angle));
+  // }
 }
 
 .hide-mobile {

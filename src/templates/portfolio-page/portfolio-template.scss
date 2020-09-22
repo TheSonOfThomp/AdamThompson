@@ -129,9 +129,15 @@ main.portfolio {
       padding-inline-start: 1em;
     }
   }
+  
+  ul {
+    @extend %max-width-centered;
+    line-height: 1.6em;
+  }
 
   // Images & Video
   figure {
+    @extend %max-width-centered;
     position: relative;
     display: inherit;
     width: 100%;
@@ -153,6 +159,7 @@ main.portfolio {
     }
 
     figcaption {
+      @extend %max-width-centered;
       max-width: 50%;
       margin-top: 0.5em;
       margin-bottom: 0.5em;
@@ -164,9 +171,15 @@ main.portfolio {
       text-align: center;
     }
   }
+
+  .footnotes {
+    @extend %max-width-centered;
+
+  }
   
   // Top TL;DR section
   .tldr {
+    display: block;
     width: 100%;
     max-width: none;
     margin: auto;
@@ -182,6 +195,10 @@ main.portfolio {
       padding: 16px 0;
       margin: 48px auto 8px;
       background-color: var(--brand-color-light);
+    }
+
+    figure {
+      max-width: unset;
     }
 
     figcaption {
@@ -206,13 +223,14 @@ div.gatsby-image {
   } 
 }
 
-span.gatsby-resp-image-background-image {
-  padding: 0 !important;
-}
-
 div.cover-image,
 div.vertical {
   margin: auto;
+
+  span.gatsby-resp-image-background-image {
+    padding: 0 !important;
+  }
+
 
   figure.gatsby-resp-image-figure {
     img.gatsby-resp-image-image {
@@ -227,7 +245,6 @@ div.vertical {
 
 div.multiple {
   display: grid;
-  // margin-left: $full-width-margin;
   grid-auto-flow: column;
   justify-content: space-evenly;
   width: 100vw;
