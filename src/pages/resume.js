@@ -8,7 +8,7 @@ import ResumeHeader from "../components/Resume/resume-header";
 import ResumeEntry from "../components/Resume/resume-entry/resume-entry";
 
 
-import * as resumeJson from '../data/resume.json';
+import * as resumeJson from '../data/resume-design.json';
 import * as projectsJson from '../data/projects.json';
 
 const resumeData = resumeJson.default
@@ -25,7 +25,7 @@ class ResumePage extends React.Component {
     <div className="resume-container">
       <SEO title="Resume" />
       <div className="resume-page" id="page-1">
-        <ResumeHeader/>
+        <ResumeHeader tagline={resumeData.tagline}/>
         <div className="resume-body">
           {/* <div className="summary">{resumeData.blurb}</div> */}
           <div className="column" id="column-left">

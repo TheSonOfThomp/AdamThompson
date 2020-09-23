@@ -1,75 +1,58 @@
 {
-  "blurb": "I'm a UX designer with a holistic engineering education, and experience in UX since 2013. I'm passionate about information architecture, usability, accessability, and generating great solutions to the right problems.",
+  "tagline": "UI Engineer & Product Designer",
+  "blurb": "An engineer at the intersection of design and development, seamlessly bridging the gap between disciplines.",
   "experience": {
     "new-visions": {
       "company": "New Visions for Public Schools",
       "url": "http://www.newvisions.org",
       "term": "July 2018 - now",
-      "position": "Product Designer",
+      "position": "UI Engineer & Designer",
       "location": "NYC",
-      "summary": "Design systems development, prototyping and feature design.",
+      "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
-        "Designed, prototyped, and tested numerous features for the data portal, and consulted on front-end implementation.",
-        "Managed contributions to the design system, documented usage guidelines for UX patterns and UI components, and fostered closer cross-team collaboration between design & engineering.",
-        "Developed infrastructure for quickly prototyping and testing new features and interactions with simulated data."
-      ]
+        "Streamlined designer/developer collaboration by building an Angular component library and compiling design system documentation with Storybook.",
+        "Developed a CSS architecture that leverages the opinionated nature of Angular, improving long-term frontend maintainability and visual consistency.",
+        "Designed a framework to streamline development of data visualizations, enabling us to launch remote learning features days after schools closed in March 2020.",
+        "Developed infrastructure for quickly prototyping and testing new features and interactions with real-looking data."
+      ],
+      "show": true
     },
     "music-group": {
       "company": "TC Helicon",
       "url": "http://musicri.be",
-      "term": "2018",
+      "term": "Jan - April 2018",
       "position": "Product Manager",
       "location": "Kitchener",
       "summary": "Design process, high level product vision & business case development.",
       "bullets": [
-        "Identified customer needs, and defined business strategy and product specifications based on market and customer research.",
-        "Developed a globally used tool to allow managers to quickly evaluate new projects based on ROI and other key data."
-      ]
+        "Defined business strategy and product specifications for a line of music accessories based on market and user research.",
+        "Developed a globally used tool allowing managers to quickly evaluate new projects based on ROI and other key data."
+      ],
+      "show": true
     },
-    "zynga": {
-      "company": "Zynga",
-      "url": "http://www.zynga.com/poker",
-      "term": "2016",
-      "position": "UX Product Manager",
-      "summary": "Data analysis, UX research and testing for new features in Poker Web.",
-      "location": "Toronto,",
-      "bullets": [
-        "Optimized user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature.",
-        "Performed secondary user research and A/B testing to define pricing for a new subscription-based revenue model."
-      ]
-    },
-    "noom": {
-      "company": "Noom",
-      "url": "http://www.noom.com",
-      "term": "2015",
-      "position": "Product Designer",
-      "summary": "Usability optimization, and user testing for the core food-logging feature.",
-      "location": "NYC",
-      "bullets": [
-        "Simplified the core food logging experience by modifying the information architecture to better fit the mental model observed during user interviews."
-      ]
-    },
-    "knowroaming": {
-      "company": "KnowRoaming",
-      "url": "http://www.knowroaming.com",
-      "term": "2014 - 2015",
-      "position": "UX Designer",
-      "summary": "User research, information architecture and UI design for mobile apps.",
-      "location": "Toronto",
-      "bullets": [
-        "Overhauled the app interface and architecture to better align with common use cases and mental models."
-      ]
-    },
-    "sony": {
-      "company": "Sony",
-      "url": "http://mediago.sony.com",
-      "term": "2013",
-      "position": "UI Designer",
-      "summary": "UI design and front-end development for a music discovery feature in MediaGo.",
+    "chameleon": {
+      "company": "Chameleon",
+      "url": "http://chameleon.thesonofthomp.com",
+      "term": "Sept 2016 - Dec 2017",
+      "position": "Co-founder",
       "location": "Waterloo",
       "bullets": [
-        "Led UI design and front-end development for a music discovery feature."
-      ]
+        "Defined business strategy and product specifications for a line of music accessories based on market and user research."
+      ],
+      "show": false
+    },
+    "co-op": {
+      "company": "Internships",
+      "position": "UI Designer / Developer",
+      "term": "2013-2017",
+      "location": "Toronto & NYC",
+      "bullets": [
+        "**Zynga**: Optimized user flows for engagement based on the results of multi-variate testing.",
+        "**Noom**: Aligned the core experience with the users' mental models based on extensive tests.",
+        "**KnowRoaming**: Overhauled the app IA and UI to better align with common use cases.",
+        "**Sony**: Led design and UI development for a music discovery feature."
+      ],
+      "show": true
     }
   },
   "education": {
@@ -77,64 +60,82 @@
       "url": "http://www.uwaterloo.ca/systems-design-engineering/about-systems-design-engineering",
       "company": "University of Waterloo",
       "position": "Systems Design Engineering",
-      "degree": "BASc.",
+      "degree": "Honours BASc.",
       "minor": "Cognitive Science",
-      "summary": "B.ASc. with Cognitive Science minor.",
+      "summary": "Honours B.ASc. with Cognitive Science minor",
       "class": "2017"
     }
   },
-  "projects": {
-    "chameleon": {
-      "title": "Chameleon",
-      "description": "Hearing protection that adapts to the volume of the wearer's environment."
-    },
-    "zed": {
-      "title": "Zed",
-      "description": "A JS library for rendering more realistic overlapping shadows."
-    },
-    "zeplin-x": {
-      "title": "ZeplinX",
-      "description": "A Confluence plugin to embed Zeplin images on a page."
-    },
-    "sketch-export": {
-      "title": "Sketch Flat Export",
-      "description": "A Sketch plugin to export multiple artboards to a single directory."
-    },
-    "react-synth": {
-      "title": "React Synth",
-      "description": "A web based synthesizer with musical typing."
-    },
-    "smrt-watr": {
-      "title": "SMRT WATR",
-      "description": "An interactive water fountain, controlled by a web-app game."
-    }
-  },
+  "projects": "See projects.json",
   "volunteer": {
     "thesymphonychorus": {
       "title": "The SymphoNYChorus",
       "location": "2018 - now",
-      "description": "Tenor section leader of the combined orchestra and choir."
+      "description": "Tenor section leader for the combined choir and orchestra."
     },
     "kwasind": {
       "title": "Camp Kwasind",
       "location": "2017",
       "description": "Maintenance, cabin leader and staff mentor."
     },
-    "water-boys": {
-      "title": "The Water Boys",
-      "location": "2013-2017",
-      "description": "Baritone section leader of the world-ranked all-male a cappella group."
-    },
     "uwux": {
       "title": "UW/UX",
       "location": "2015-2016",
-      "description": "Vice President of the UW campus UX Club, mentoring younger students and planning club events."
+      "description": "Vice President of the UW campus UX club."
+    },
+    "water-boys": {
+      "title": "The Water Boys",
+      "location": "2013-2017",
+      "description": "Baritone section leader for the world-ranked all-male a cappella group."
     }
   },
   "toolbox": [
-    "CSS", "HTML", "Javascript", "Typescript", "Angular", "Vue", "React", 
-    "Sketch", "Storybook", "Sass", "Node", "D3", "Git", "Swift", 
-    "Zeplin", "Framer", "Origami", "InVision", "Photoshop", "Illustrator",
-    "Balsamiq", "Python", "Arduino", "Excel", "Airtable"
-  ]
+    "CSS",
+    "HTML",
+    "Javascript",
+    "React",
+    "Vue",
+    "Angular",
+    "Typescript",
+    "Sass",
+    "Sketch",
+    "Figma",
+    "Photoshop",
+    "Illustrator",
+    "Framer",
+    "Zeplin",
+    "InVision",
+    "Storybook",
+    "D3",
+    "Swift",
+    "Python",
+    "Node",
+    "XState",
+    "Git",
+    "CI",
+    "Balsamiq",
+    "Excel",
+    "Airtable",
+    "Arduino"
+  ],
+  "awards": {
+    "norman-esch": {
+      "title": "Norman Esch",
+      "date": "2017",
+      "url": "https://uwaterloo.ca/engineering/news/six-teams-win-10000-each-annual-esch-awards",
+      "description": "Entrepreneurship award for our pitch & demo of Chameleon."
+    },
+    "peoples-choice": {
+      "title": "SYDE Peoples' Choice",
+      "date": "2017",
+      "description": "Awarded by vote for our demo of Chameleon."
+    }
+  },
+  "certifications": {
+    "udacity-optimization": {
+      "title": "Website Performance Optimization",
+      "date": "2020",
+      "url": "https://www.udacity.com/course/website-performance-optimization--ud884"
+    }
+  }
 }
