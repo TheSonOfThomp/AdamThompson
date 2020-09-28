@@ -66,10 +66,12 @@ class ResumePage extends React.Component {
               <h2 className="section-header">Projects</h2>
               <div className="column-section-contents">
                 {Object.values(projectsData.projects).map(project => (
-                  project.showOnResume && <ResumeEntry
+                  project.showOnResume && 
+                  <ResumeEntry
                     entryClass="project-entry"
                     title={project.name}
                     bullets={[project.description]}
+                    tools={project.tools}
                   />
                 ))}
               </div>

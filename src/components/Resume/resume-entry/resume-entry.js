@@ -4,7 +4,7 @@ import './resume-entry.scss';
 
 const md = new Remarkable()
 
-const ResumeEntry = ({entryClass = 'job-entry', title, company, location, bullets}) => {
+const ResumeEntry = ({entryClass = 'job-entry', title, company, location, bullets, tools}) => {
   return (
     <div className={`resume-entry ${entryClass}`} id={company && company.replace(/( )/g, '-').toLowerCase()}>
       <div className="entry-header">
@@ -20,6 +20,11 @@ const ResumeEntry = ({entryClass = 'job-entry', title, company, location, bullet
           )
         })}
       </ul>
+      {tools && 
+        <div className="entry-tools">
+         {tools.map(t => <span className="entry-tool">{t}</span>)}
+        </div>
+      }
     </div>
   )
 }

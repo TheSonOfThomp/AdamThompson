@@ -90,9 +90,9 @@
     }      
   },
   "toolbox": [
-    "CSS", "HTML", "Javascript", "React", "Vue", "Angular", "Typescript", "Sass",
-    "Sketch", "Figma", "Photoshop", "Illustrator", "Framer", "Zeplin", "InVision",
-    "Storybook", "D3", "Swift", "Python", "Node",  "XState", "Git", "CI",  
+    "CSS", "HTML", "Javascript", "Angular", "React", "Vue", "Typescript", "Sass",
+    "Storybook", "Sketch", "Figma", "Photoshop", "Illustrator", "Zeplin", "InVision",
+    "Swift", "D3", "Python", "Node", "XState", "Git", "CI", "Framer",
     "Balsamiq", "Excel", "Airtable", "Arduino"
   ],
   "awards" : {
