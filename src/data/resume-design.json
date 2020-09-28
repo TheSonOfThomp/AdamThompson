@@ -11,9 +11,9 @@
       "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
         "Streamlined designer/developer collaboration by building an Angular component library and compiling design system documentation with Storybook.",
-        "Developed a CSS architecture that leverages the opinionated nature of Angular, improving long-term frontend maintainability and visual consistency.",
+        "Developed a CSS/SASS architecture that leverages the opinionated nature of Angular, improving long-term frontend maintainability and visual consistency.",
         "Designed a framework to streamline development of data visualizations, enabling us to launch remote learning features days after schools closed in March 2020.",
-        "Developed infrastructure for quickly prototyping and testing new features and interactions with real-looking data."
+        "Developed prototyping infrastructure with Vue to test new features and interactions with real-looking data."
       ],
       "show": true
     },

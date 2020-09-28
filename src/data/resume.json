@@ -11,8 +11,9 @@
       "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
         "Streamlined designer/developer collaboration by building an Angular component library and compiling design system documentation with Storybook.",
-        "Developed a CSS architecture that leverages the opinionated nature of Angular, improving long-term frontend maintainability and visual consistency.",
+        "Developed a CSS/SASS architecture that leverages the opinionated nature of Angular, improving long-term frontend maintainability and visual consistency.",
         "Designed a framework to streamline development of data visualizations, enabling us to launch remote learning features days after schools closed in March 2020.",
+        "Developed prototyping infrastructure with Vue and D3 in order to test new features and interactions with real-looking data."
       ],
       "show": true
     },
@@ -24,8 +25,8 @@
       "location": "Kitchener",
       "summary": "Design process, high level product vision & business case development.",
       "bullets": [
-        "Defined business strategy and product specifications for a line of music accessories based on market and user research.",
-        "Developed a globally used tool allowing managers to quickly evaluate new projects based on ROI and other key data."
+        "Developed a globally used tool that enables managers to quickly evaluate new projects based on ROI and other key data.",
+        "Defined business strategy and product specifications for a line of music accessories based on market and user research."
       ],
       "show": true
     },
@@ -47,7 +48,7 @@
       "location": "Toronto & NYC",
       "bullets": [
         "**Zynga**: Optimized user flows for engagement based on the results of multi-variate testing.",
-        "**Noom**: Aligned the core experience with the users' mental models based on extensive tests.",
+        "**Noom**: Aligned the core experience with the users' mental models, based on extensive tests.",
         "**KnowRoaming**: Overhauled the app IA and UI to better align with common use cases.",
         "**Sony**: Led design and UI development for a music discovery feature."
       ],

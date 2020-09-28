@@ -8,7 +8,7 @@ import ResumeHeader from "../components/Resume/resume-header";
 import ResumeEntry from "../components/Resume/resume-entry/resume-entry";
 
 
-import * as resumeJson from '../data/resume-design.json';
+import * as resumeJson from '../data/resume.json';
 import * as projectsJson from '../data/projects.json';
 
 const resumeData = resumeJson.default
