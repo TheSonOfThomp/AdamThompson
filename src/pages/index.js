@@ -13,7 +13,7 @@ import { useVH } from "../hooks/useVH";
 
 const IndexPage = () => {
 
-  useVH()
+  // useVH()
 
   return (
     <main id="app">
