@@ -1,0 +1,245 @@
+[
+  {
+    "Task": "Research market & competition",
+    "x": 1,
+    "Granularity": 3,
+    "Phase": "Discover",
+    "Skill": 2,
+    "Interest": 1,
+    "Experience": "TC Helicon\n• Researched competition online and observed cataloged users comments on their features\n\nZynga \n• Researched pricing models of competitors in order to refine our own model\n• Analyzed player demographics by monthly spend to better know the sources of revenue, and which players to target for new features."
+  },
+  {
+    "Task": "Research user needs",
+    "x": 2,
+    "Granularity": 3,
+    "Phase": "Discover",
+    "Skill": 4,
+    "Interest": 2,
+    "Experience": "New Visions\n• Sat in on school attendance meetings and met with Office of Community Schools to identify school users' behaviour and needs regarding attendance data\n* Met with NV Coaches to identify their needs within the Portal and relay their observations of school users\n\nTC Helicon\n• Met with musicians to discuss their mobile music making needs and preferences\n• Researched competition online and observed cataloged users comments on their features\n\nChameleon\n• Talked with construction workers to identify their needs and reasons beihind their reluctance to wear hearing protection"
+  },
+  {
+    "Task": "Define overall product vision",
+    "x": 4,
+    "Granularity": 5,
+    "Phase": "Discover",
+    "Skill": 3,
+    "Interest": 4,
+    "Experience": "Chameleon\n• After identifying the primary problems we would solve, I identified business opportunities and developed a product roadmap\n\nTC Helicon\n• Worked closely with director of product design to define  high level product vision, and customer centric strategies"
+  },
+  {
+    "Task": "Identify potential problems/opportunities",
+    "x": 5,
+    "Granularity": 3,
+    "Phase": "Discover",
+    "Skill": 4,
+    "Interest": 3,
+    "Experience": "New Visions\n• After meetings with schools and OCS, I identified several user goals and opportunities to improve the Portal"
+  },
+  {
+    "Task": "Prioritize problems/opportunities & define the scope of the problem",
+    "x": 9,
+    "Granularity": 2,
+    "Phase": "Define",
+    "Skill": 4,
+    "Interest": 3,
+    "Experience": "New Visions\n• Collaborated with PMs to identify the highest priority opportunities after interviewing school and OCS staff\n• Collaborated with PMs to expand or limit the scope of numerous product briefs\n\nTC Helicon\n• Collaborated with customers, senior management, engineering, industrial design, sales and marketing to define product story, experience, design and functionality\n\nChameleon\n• Identified several opportunities from user research, managed team priorities and coordinated development efforts. based on feasibility given the tight timeline\n\n\nKnowRoaming\n• Managed mobile app development priorities"
+  },
+  {
+    "Task": "Define user/buisness requirements",
+    "x": 10,
+    "Granularity": 2,
+    "Phase": "Define",
+    "Skill": 3,
+    "Interest": 3,
+    "Experience": "New Visions\n- Translated  findings from interviews with school staff and OCS in to user needs for attendance features in the Portal\n\nTC Helicon\n- Defined business cases and product specifications for a line of accessories and mobile music making products based on market and customer research\n- Collaborated with customers, senior management, engineering, industrial design, sales and marketing to define product story, experience, design and functionality\n\nChameleon\n- Translated research findings into user requirements & business opportunities"
+  },
+  {
+    "Task": "Architect cross-cutting UX patterns",
+    "x": 11,
+    "Granularity": 4,
+    "Phase": "Design",
+    "Skill": 5,
+    "Interest": 5,
+    "Experience": "New Visions\n- Developed cross-cutting patterns for numerous feature sets including global page navigation patterns, and the dashboard framework, ensuring a logical & consistent experience throughout the app\n\nNoom\n- Though through all motential use cases and user mental models to carefully architect the core food logging workflow\n\nKnowRoaming\n- Redesigned the mobile apps from the ground up based on typical usage patterns, and defined the global app navigation and IA"
+  },
+  {
+    "Task": "Brainstorm potential solutions",
+    "x": 12,
+    "Granularity": 2,
+    "Phase": "Design",
+    "Skill": 5,
+    "Interest": 5,
+    "Experience": "New Visions, Zynga, Noom, KnowRoaming, Sony\n- Collaborated with PMs and designers to develop initial ideas for potential solutions\n\nTC Helicon\n- Collaborated with customers, senior management, engineering, industrial design, sales and marketing to define product story, experience, design and functionality"
+  },
+  {
+    "Task": "Define business logic",
+    "x": 14,
+    "Granularity": 2,
+    "Phase": "Design",
+    "Skill": 4,
+    "Interest": 5,
+    "Experience": "New Visions\n- Developed business logic for numerous features including: batch actions, formative assesment data input, updates settings pages, dashboard system, user management features, and updated attendance dashboards\n\nZynga\n- Defined business logic for the \"hand-replay\" viral-engagement feature and \n\nNoom\n- Collaborated with PMs and other designers to define business logic of the food logging experience"
+  },
+  {
+    "Task": "Create wireframes",
+    "x": 15,
+    "Granularity": 1,
+    "Phase": "Design",
+    "Skill": 5,
+    "Interest": 4,
+    "Experience": "New Visions\n- Created wireframes & UI mocks for numerous features, including: batch actions, formative assesment data input, updates settings pages, dashboard system, user management features, and updated attendance dashboards\n\nZynga \n- Designed initial UX wireframes and design specifications for a new feature expected to increase Daily Active Users up to 10%\n\nNoom\n- Created wireframes & UI mocks for the core food logging workflow\n\nKnowRoaming\n- Created wireframes & UI mocks for the redesigned iOS and Android apps"
+  },
+  {
+    "Task": "Validate utility",
+    "x": 16,
+    "Granularity": 2,
+    "Phase": "Design",
+    "Skill": 4,
+    "Interest": 2,
+    "Experience": "New Visions\n- Developed a process document for running informative tests, including hypotheses and test scripts\n\nZynga\n- Set up and ran numerous multi-variate tests to validate solutions based on engagement (e.g. Subscriptions & hand replay)"
+  },
+  {
+    "Task": "Create UI mocks",
+    "x": 16,
+    "Granularity": 1,
+    "Phase": "Design",
+    "Skill": 4,
+    "Interest": 3,
+    "Experience": "New Visions\n- Created full UI mocks many new features in Sketch & Figma. \n- Created \"spot mocks\" for feature updates\n- Shared mocks in Zeplin, Miro & InVision\n\nNoom\n- Created wireframes & UI mocks for the core food logging workflow\n\nKnowRoaming\n- Created wireframes & UI mocks for the redesigned iOS and Android apps\n\nSony \n- Designed pixel perfect UI for numerous features in MediaGo\n- Led UI design for a new radio feature\n- Proposed a UI re-design of the entire MediaGo application, enhancing aesthetics, and ove user experience"
+  },
+  {
+    "Task": "Define visual design language",
+    "x": 16,
+    "Granularity": 4,
+    "Phase": "Design",
+    "Skill": 3,
+    "Interest": 3,
+    "Experience": "New Visions\n- Worked with design director to refine the app's design language\n\nKnowRoaming\n- Adapted marketing & branding style guide for mobile apps"
+  },
+  {
+    "Task": "Design re-usable UI components",
+    "x": 17,
+    "Granularity": 3,
+    "Phase": "Design",
+    "Skill": 4,
+    "Interest": 4,
+    "Experience": "New Visions\n- Designed new UI components when existing components did not solve the interaction problem at hand\n- Collaborated with other designers to refine new & existing UI components"
+  },
+  {
+    "Task": "Review designs",
+    "x": 18,
+    "Granularity": 2,
+    "Phase": "Design",
+    "Skill": 4,
+    "Interest": 3,
+    "Experience": "New Visions\n- Provided design feedback in bi-weekly design team meetings\n\nNoom \n- Provided design feedback in daily design team meetings\n\nKnowRoaming\n- Presented designs to the development team and COO during weekly meetings\n\nSony\n- Presented designs to director of design during weekly meetings"
+  },
+  {
+    "Task": "Validate usability",
+    "x": 19,
+    "Granularity": 2,
+    "Phase": "Design",
+    "Skill": 3,
+    "Interest": 2,
+    "Experience": "New Visions\n- Developed a document for creating informative tests, including hypotheses and test scripts\n- Planned & ran all usability tests for features I designed, and summarized research findings\n\nNoom\n- Planned in usability tests for features I designed in collaboration with head of UX research"
+  },
+  {
+    "Task": "Build re-usable UI components",
+    "x": 20,
+    "Granularity": 3,
+    "Phase": "Deliver",
+    "Skill": 5,
+    "Interest": 3,
+    "Experience": "New Visions\n- Developed the core library of reusable Angular UI components"
+  },
+  {
+    "Task": "Create a prototype/POC",
+    "x": 21,
+    "Granularity": 1,
+    "Phase": "Design",
+    "Skill": 4,
+    "Interest": 3,
+    "Experience": "New Visions\n- Created interactive prototypes for numerous features using tools like Sketch, InVivions, Framer and Vue\n\nNoom\n- Created interactive prototypes for the food logging experience using Marvel, InVision, Framer and Origami\n\nKnowRoaming\n- Created prototypes using InVision and Marvel"
+  },
+  {
+    "Task": "Validate feasibility",
+    "x": 21,
+    "Granularity": 2,
+    "Phase": "Deliver",
+    "Skill": 4,
+    "Interest": 3,
+    "Experience": "New Visions\n- Built live prototypes of features in order to validate their feasibility\n- Finalized designs in HTML & CSS to ensure feasibility\n- Collaborated with other frontend developers to improve the feasibility of designs"
+  },
+  {
+    "Task": "Implement UI/interaction",
+    "x": 23,
+    "Granularity": 1,
+    "Phase": "Deliver",
+    "Skill": 4,
+    "Interest": 4,
+    "Experience": "New Visions\n- Implemented new component architecture for some core pages in the app, including Lists and Grid\n- Fixed numerous visual & interaction bugs in the Portal\n- Implemented CSS for ag-grid implementation\n\nKnowRoaming\n- Designed and built a marketing website to encourage athletes to enroll in a sponsorship program\n- Implemented core mobile app frontend logic in the web app\n\nSony\n- Implemented core HTML & CSS for a new MediaGo radio feature"
+  },
+  {
+    "Task": "Promote frontend best practices",
+    "x": 23,
+    "Granularity": 4,
+    "Phase": "Deliver",
+    "Skill": 4,
+    "Interest": 4,
+    "Experience": "New Visions\n- Planned and ran a CSS \"coding circle\" to promote best practices & techniques\n- Introduced & promoted semantic HTML best practices in engineering norming meetings"
+  },
+  {
+    "Task": "Architect frontend codebase",
+    "x": 23,
+    "Granularity": 4,
+    "Phase": "Deliver",
+    "Skill": 4,
+    "Interest": 4,
+    "Experience": "New Visions\n- Developed ngCSS architecture for writing SASS for Angular \n- Contributed to development of more rigid component taxonomy including Atomic styles, reusable elements, feature-dependent pages and views, and reusable templates"
+  },
+  {
+    "Task": "Implement business logic",
+    "x": 25,
+    "Granularity": 1,
+    "Phase": "Deliver",
+    "Skill": 3,
+    "Interest": 4,
+    "Experience": "KnowRoaming\n- Designed and built a marketing website to encourage athletes to enroll in a sponsorship program\n- Implemented core mobile app frontend logic in the web app\n\nChameleon\n- Developed exposure prediction and actuator control logic  on a Teensy (Arduino)\n- Developed analog circuit to determine the perceived loudness at the ear\n- Designed ear-cup and variable attenuation mechanism.\n- Developed device testing validation procedures and software"
+  },
+  {
+    "Task": "Review code",
+    "x": 27,
+    "Granularity": 2,
+    "Phase": "Deliver",
+    "Skill": 3,
+    "Interest": 1,
+    "Experience": "New Visions\n- Reviewed all PRs pertaining to the UI library and core CSS"
+  },
+  {
+    "Task": "Validate/test code",
+    "x": 28,
+    "Granularity": 1,
+    "Phase": "Deliver",
+    "Skill": 3,
+    "Interest": 1,
+    "Experience": "New Visions\n- Wrote unit tests for all UI library components\n- Worked with QA team to implement Chromatic QA\n\nChameleon\n- Developed hearing-protection device testing validation procedures and software"
+  },
+  {
+    "Task": "Ensure accessibility",
+    "x": 28,
+    "Granularity": 3,
+    "Phase": "Deliver",
+    "Skill": 2,
+    "Interest": 3,
+    "Experience": "New Visions\n- Spearheaded an accessibility push for the app, and teamed with another frontend developer to tackle easy accessibility wins\n- Introduced & promoted semantic HTML best practices in engineering norming meetings"
+  },
+  {
+    "Task": "Ensure quality",
+    "x": 28,
+    "Granularity": 3,
+    "Phase": "Deliver",
+    "Skill": 4,
+    "Interest": 1,
+    "Experience": "New Visions\n- Implemented Storybook and Chromatic QA to ensure visual consistency throughout the app\n- Added Chromatic to the app's CI steps"
+  }
+]

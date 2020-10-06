@@ -9,11 +9,8 @@ import BlogSection from "../main-sections/blog/blog-section";
 import FooterSection from "../main-sections/footer/footer-section";
 import ProjectsSection from "../main-sections/projects/projects-section";
 import '../style/global.scss'
-import { useVH } from "../hooks/useVH";
 
 const IndexPage = () => {
-
-  // useVH()
 
   return (
     <main id="app">
