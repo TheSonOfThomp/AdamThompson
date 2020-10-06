@@ -40,7 +40,7 @@ const ProjectCard = ({project}) => {
       <picture className="project-logo">
         <source srcSet={logoImage.srcSetWebp} type="image/webp"/>
         <source srcSet={logoImage.srcSet} type="image/png"/>
-        <img className="project-logo" src={logoImage.src} alt={`Logo for ${project.name}`}></img>
+        <img className="project-logo" src={logoImage.src} alt={`Logo for ${project.name}`} loading="lazy" />
       </picture>
       <FontAwesomeIcon className="project-icon" icon={iconObj} size="sm" />
       {
