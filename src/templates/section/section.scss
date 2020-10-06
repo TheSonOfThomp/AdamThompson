@@ -7,7 +7,7 @@ section {
   justify-self: center;
   width: 100vw;
   max-width: $content-width;
-  content-visibility: auto;
+  // content-visibility: auto;
 
   &.section {
     grid-auto-rows: auto auto;
