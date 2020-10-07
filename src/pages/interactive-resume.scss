@@ -142,7 +142,7 @@ $dot-size: 24px;
 
 .y-axis {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-row: 1 / span 5;
   grid-column: 1;
   align-items: flex-end;
@@ -150,6 +150,6 @@ $dot-size: 24px;
   text-align: center;
   writing-mode: vertical-rl;
   padding-block-end: 16px;
-  transform: rotateZ(180deg) translateX(75%);
+  transform: rotateZ(180deg) translateX(100%);
   border-block-end: 1px solid var(--color-black);
 }

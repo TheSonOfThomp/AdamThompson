@@ -78,8 +78,10 @@ const InteractiveResume = (props) => {
                         <h1>{d.Task}</h1>
                         <div 
                           className="experience" 
-                          // dangerouslySetInnerHTML={{ __html: md.render(d.Experience) }}
                         >
+                          {
+                          d.Experience && <div dangerouslySetInnerHTML={{ __html: md.render(d.Experience) }}></div>
+                          }
                           { companies.map(company => {
                             return (d[company] && d[company].length > 1) ? (
                                 <>
@@ -120,7 +122,7 @@ const InteractiveResume = (props) => {
                 <h3>Details</h3>
                 <span>(feature specific)</span>
               </div>
-              <h2>Granularity</h2>
+              {/* <h2>Granularity</h2> */}
               <div className="y-axis-label">
                 <h3>Systems</h3>
                 <span>(big picture)</span>
