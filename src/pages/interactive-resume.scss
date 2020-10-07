@@ -9,15 +9,16 @@ section h1 {
   font-size: clamp(16px, 5vw, 20px);
 }
 
+$dot-size: 24px;
+
 .chart {
   position: relative;
   display: grid;
-  grid-template-rows: repeat(var(--maxY, 1), minmax(0, min-content));
-  grid-template-columns: repeat(var(--maxX, 1), minmax(0, min-content));
-  gap: 12px;
+  grid-template-rows: repeat(var(--maxY, 1), minmax(0, $dot-size * 2));
+  grid-template-columns: repeat(var(--maxX, 1), minmax(0, 1fr));
+  gap: 4px;
   place-items: center;
   width: 100%;
-  height: 512px;
   margin: 64px auto;
 }
 
@@ -26,9 +27,8 @@ section h1 {
   position: relative;
   z-index: var(--rating);
   grid-row: var(--row);
-  grid-column: var(--column) / span 2;
-  width: 10ch;
-  padding: 16px;
+  grid-column: var(--column);
+  padding: $dot-size/2;
   font-size: 14px;
   color: var(--color-white);
   text-align: center;
@@ -52,23 +52,27 @@ section h1 {
   // border-radius: #{$tl}% #{100% - $tl}% #{$tr}% #{100% - $tr}% / #{$br}% #{$bl}% #{100% - $bl}% #{100% - $br};
 
 
-  .experience {
+  .tooltip {
     @include elevation(2);
     position: absolute;
     top: 0;
     left: calc(100% + 8px);
     z-index: 1;
     display: none;
-    width: 250%;
+    width: 32ch;
     padding: 8px;
     color: var(--color-black);
     text-align: left;
     cursor: text;
     background-color: var(--color-white);
 
-    p {
-      margin: 0.5em 0;
-      font-weight: bold;
+    h1 {
+      font-size: 1.25em;
+    }
+
+    h2 {
+      margin: 0.25em 0;
+      font-size: 1em;
     }
 
     ul {
@@ -82,12 +86,15 @@ section h1 {
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     z-index: 11;
+    outline-color: var(--color-green-light);
+    outline-offset: 2px;
     opacity: 1;
     transform: scale(1.2);
     
-    .experience {
+    .tooltip {
       display: block;
     }
   }
@@ -109,7 +116,7 @@ section h1 {
   display: grid;
   // grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-columns: repeat(var(--maxX, 1), minmax(0, 1fr));
-
+  grid-row: calc(var(--maxY) + 1);
   grid-column: 1 / -1;
   gap: 16px;
   text-align: center;
@@ -117,19 +124,19 @@ section h1 {
   border-block-start: 1px solid var(--color-black);
 
   #discover {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
   }
   
   #define {
-    grid-column: 5 / 9;
+    grid-column: 6 / 10;
   }
 
   #design {
-    grid-column: 10 / 20;
+    grid-column: 11 / 17;
   }
 
   #deliver {
-    grid-column: 21 / -1;
+    grid-column: 18 / -1;
   }
 }
 
