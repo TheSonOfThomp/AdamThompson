@@ -9,7 +9,7 @@
     "prebuild": "npm run pre",
     "build": "gatsby build",
     "predevelop": "npm run pre",
-    "develop": "gatsby develop",
+    "develop": "netlify dev",
     "format": "prettier --write src/**/*.{js,jsx}",
     "prestart": "npm run pre",
     "start": "npm run develop",

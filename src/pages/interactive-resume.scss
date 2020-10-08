@@ -22,10 +22,13 @@ $dot-size: 24px;
   margin: 64px auto;
 }
 
+
+
+
 .task {
-  @include animate((background, color, transform));
+  @include animate((background, opacity, color, transform));
   position: relative;
-  z-index: var(--rating);
+  z-index: 1;
   grid-row: var(--row);
   grid-column: var(--column);
   padding: $dot-size/2;
@@ -35,29 +38,14 @@ $dot-size: 24px;
   cursor: pointer;
   background-color: var(--color-green);
   border-radius: 100%;
-  opacity: calc(var(--rating) * 0.1);
-
-  // --tl: calc((var(--rating) + var(--column) + var(--row)) * 1%);
-  // --tr: calc((var(--rating) + var(--column) + var(--row)) * 1%);
-  // --bl: calc((var(--rating) + var(--column) + var(--row)) * 1%);
-  // --br: calc((var(--rating) + var(--column) + var(--row)) * 1%);
-
-  // border-radius: var(--tl) var(--tr) var(--bl) var(--br);
-  // border-radius: 
-  //   var(--tl) calc(100% - var(--tl))
-  //   var(--tr) calc(100% - var(--tr)) /
-  //   var(--bl) var(--br)
-  //   calc(100% - var(--bl)) calc(100% - var(--br));
-
-  // border-radius: #{$tl}% #{100% - $tl}% #{$tr}% #{100% - $tr}% / #{$br}% #{$bl}% #{100% - $bl}% #{100% - $br};
-
+  opacity: 1;
 
   .tooltip {
     @include elevation(2);
     position: absolute;
     top: 0;
     left: calc(100% + 8px);
-    z-index: 1;
+    z-index: var(--overall);
     display: none;
     width: 32ch;
     padding: 8px;
@@ -88,7 +76,7 @@ $dot-size: 24px;
 
   &:hover,
   &:focus {
-    z-index: 11;
+    z-index: 20;
     outline-color: var(--color-green-light);
     outline-offset: 2px;
     opacity: 1;
@@ -99,6 +87,34 @@ $dot-size: 24px;
     }
   }
 }
+
+.chart.overall .task {
+  opacity: calc(var(--overall) * 0.1);
+  
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.chart.interest .task {
+  opacity: calc(var(--interest) * 0.1);
+  
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.chart.experience .task {
+  opacity: calc(var(--xp) * 0.1);
+  
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
 
 .axis {
   font-size: 16px;
