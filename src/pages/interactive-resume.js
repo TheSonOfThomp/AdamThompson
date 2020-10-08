@@ -97,10 +97,10 @@ const InteractiveResume = (props) => {
 
       <div className={'chart ' + rankBy} ref={chartRef}>
 
-        {/* <div className="region" id="region-pm">Product/Research</div>
+        <div className="region" id="region-pm">Product/Research</div>
         <div className="region" id="region-ux">UX</div>
         <div className="region" id="region-ui">UI</div>
-        <div className="region" id="region-dev">Frontend</div> */}
+        <div className="region" id="region-dev">Frontend</div>
 
         {resumeData && resumeData.map(d => {
           return (
