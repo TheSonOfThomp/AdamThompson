@@ -20,7 +20,7 @@ const companies = ['New Visions', 'TC Helicon', 'Chameleon', 'Zynga', 'Noom', 'K
 const InteractiveResume = (props) => {
   const [resumeData, setResumeData] = useState();
   const [range, setRange] = useState({x: 0, y: 0})
-  const [rankBy, setRankBy] = useState('overall') // 'overall' | 'interest' | 'experience'
+  const [rankBy, setRankBy] = useState('overall') // 'overall' | 'interest' | 'experience' | 'skill'
 
   const formRef = useRef()
 
@@ -53,7 +53,7 @@ const InteractiveResume = (props) => {
   const handleRankByChange = (e) => (setRankBy(e.target.value))
 
   const getOverall = (d) => (getXP(d) + d.Interest * 2) / 2
-  const getXP = (d) => (d.XP / range.XP * 10 + 1)
+  const getXP = (d) => Math.round(d.XP / range.XP * 10 + 1)
   
   return (
     <DefaultPage title="Interactive Resume">
@@ -64,7 +64,39 @@ const InteractiveResume = (props) => {
 
       <p>This range of experiences is hard to communicate in a single page, so I created this interactive chart. Below are tasks in the product lifecycle that I've had a hand in, emphasized based on depth of experience and interest. Hover over a task to read about the specifics of my experiences.</p>
 
+      <form ref={formRef}>
+        <h3>Rank tasks by:</h3>
+        <input
+          type="radio"
+          name="rank-by"
+          id="rank-by-overall"
+          onChange={handleRankByChange}
+          value="overall"
+          checked={rankBy === 'overall'}
+        />
+        <label for="rank-by-overall">Overall</label>
+        <input
+          type="radio"
+          name="rank-by"
+          id="rank-by-interest"
+          onChange={handleRankByChange}
+          value="interest"
+          checked={rankBy === 'interest'}
+        />
+        <label for="rank-by-interest">Interest</label>
+        <input
+          type="radio"
+          name="rank-by"
+          id="rank-by-experience"
+          onChange={handleRankByChange}
+          value="experience"
+          checked={rankBy === 'experience'}
+        />
+        <label for="rank-by-experience">Experience</label>
+      </form>
+
       <div className={'chart ' + rankBy} ref={chartRef}>
+
         {resumeData && resumeData.map(d => {
           return (
             <div
@@ -72,7 +104,7 @@ const InteractiveResume = (props) => {
               className="task"
               tabIndex="0"
               style={{
-                '--skill': d.Skill,
+                '--skill': d.Skill * 2,
                 '--interest': d.Interest * 2,
                 '--xp': getXP(d),
                 '--overall': getOverall(d),
@@ -138,37 +170,6 @@ const InteractiveResume = (props) => {
           </>
         )}
       </div>
-
-      <form ref={formRef}>
-        <h3>Rank tasks by:</h3>
-        <input 
-          type="radio" 
-          name="rank-by" 
-          id="rank-by-overall" 
-          onChange={handleRankByChange}
-          value="overall"
-          checked={rankBy === 'overall'}
-        />
-        <label for="rank-by-overall">Overall</label>
-        <input 
-          type="radio" 
-          name="rank-by" 
-          id="rank-by-interest" 
-          onChange={handleRankByChange}
-          value="interest" 
-          checked={rankBy === 'interest'}
-        />
-        <label for="rank-by-interest">Interest</label>
-        <input 
-          type="radio" 
-          name="rank-by" 
-          id="rank-by-experience" 
-          onChange={handleRankByChange}
-          value="experience" 
-          checked={rankBy === 'experience'}
-        />
-        <label for="rank-by-experience">Experience</label>
-      </form>
 
     <ResumeSection />
   </DefaultPage>

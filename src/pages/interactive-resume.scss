@@ -115,6 +115,15 @@ $dot-size: 24px;
   }
 }
 
+.chart.skill .task {
+  opacity: calc(var(--skill) * 0.1);
+  
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
 
 .axis {
   font-size: 16px;
