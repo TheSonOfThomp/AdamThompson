@@ -53,7 +53,7 @@ const InteractiveResume = (props) => {
   const handleRankByChange = (e) => (setRankBy(e.target.value))
 
   const getOverall = (d) => (getXP(d) + d.Interest * 2) / 2
-  const getXP = (d) => Math.round(d.XP / range.XP * 10 + 1)
+  const getXP = (d) => Math.round(d.XP / range.XP * 5 + d.Skill)
   
   return (
     <DefaultPage title="Interactive Resume">
@@ -97,6 +97,11 @@ const InteractiveResume = (props) => {
 
       <div className={'chart ' + rankBy} ref={chartRef}>
 
+        {/* <div className="region" id="region-pm">Product/Research</div>
+        <div className="region" id="region-ux">UX</div>
+        <div className="region" id="region-ui">UI</div>
+        <div className="region" id="region-dev">Frontend</div> */}
+
         {resumeData && resumeData.map(d => {
           return (
             <div
@@ -138,19 +143,19 @@ const InteractiveResume = (props) => {
         { resumeData && (
           <>
           <div className="axis x-axis">
-            <div className="x-axis-label" id="discover">
+            <div className="x-axis-label" id="label-discover">
               <h2>Discover</h2>
               <span>what problems need to be solved</span>
             </div>
-            <div className="x-axis-label" id="define">
+            <div className="x-axis-label" id="label-define">
               <h2>Define</h2>
               <span>the problem we've chosen to solve</span>
             </div>
-            <div className="x-axis-label" id="design">
+            <div className="x-axis-label" id="label-design">
               <h2>Design</h2>
               <span>solutions to the chosen problem</span>
             </div>
-            <div className="x-axis-label" id="deliver">
+            <div className="x-axis-label" id="label-deliver">
               <h2>Deliver</h2>
               <span>the best solution to the problem</span>
             </div>

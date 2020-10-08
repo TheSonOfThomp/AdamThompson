@@ -22,9 +22,6 @@ $dot-size: 24px;
   margin: 64px auto;
 }
 
-
-
-
 .task {
   @include animate((background, opacity, color, transform));
   position: relative;
@@ -124,6 +121,55 @@ $dot-size: 24px;
   }
 }
 
+.region {
+  display: flex;
+  display: none;
+  grid-row: 1 / -1;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  color: hsl(var(--h), var(--s), var(--l));
+  background-color: hsla(var(--h), var(--s), var(--l), 0.05);
+  border-color: hsla(var(--h), var(--s), var(--l), 0.5);
+  border-style: solid;
+  border-width: 2px;
+
+
+  &#region-pm {
+    --h: 60;
+    --s: 100%;
+    --l: 45%;
+    grid-column: 1 / 11;
+    border-radius: 25% 75%;
+  }
+  
+  &#region-ux {
+    --h: 180;
+    --s: 100%;
+    --l: 25%;
+    grid-column: 8 / 17;
+    border-radius: 25% 75%;
+  }
+  
+  &#region-ui {
+    --h: 270;
+    --s: 80%;
+    --l: 50%;
+    grid-column: 10 / 19;
+    border-radius: 25% 75%;
+  }
+  
+  &#region-dev {
+    --h: 270;
+    --s: 50%;
+    --l: 40%;
+    grid-column: 16 / -1;
+    border-radius: 40% 60%;
+  }
+}
+
 
 .axis {
   font-size: 16px;
@@ -148,19 +194,19 @@ $dot-size: 24px;
   margin-block-start: 16px;
   border-block-start: 1px solid var(--color-black);
 
-  #discover {
+  #label-discover {
     grid-column: 1 / 5;
   }
   
-  #define {
+  #label-define {
     grid-column: 6 / 10;
   }
 
-  #design {
+  #label-design {
     grid-column: 11 / 17;
   }
 
-  #deliver {
+  #label-deliver {
     grid-column: 18 / -1;
   }
 }
@@ -177,4 +223,8 @@ $dot-size: 24px;
   padding-block-end: 16px;
   transform: rotateZ(180deg) translateX(100%);
   border-block-end: 1px solid var(--color-black);
+}
+
+form {
+  display: none;
 }
