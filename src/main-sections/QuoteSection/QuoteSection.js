@@ -12,11 +12,7 @@ const QuoteSection = (props) => (
 );
 
 QuoteSection.propTypes = {
-  // bla: PropTypes.string,
-};
-
-QuoteSection.defaultProps = {
-  // bla: 'test',
+  attribution: PropTypes.string,
 };
 
 export default QuoteSection;

@@ -13,7 +13,7 @@ const Hero = () => {
   }
 
   return (
-    <div ref={heroRef} className="hero" onMouseMove={setMousePos}>
+    <div ref={heroRef} className="hero" onMouseMove={setMousePos} role="region">
   
       <div className="header-wrapper">
         <Header showNav={true} />
