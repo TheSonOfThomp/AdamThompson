@@ -125,29 +125,27 @@ $header-opacity: 16;
 .hero-contents {
   --rotation: 4deg;
 
-  .big-letters,
-  .title,
-  .tagline {
-    transform: 
-      rotateX(calc(var(--mouseY) * var(--rotation)))
-      rotateY(calc(var(--mouseX) * var(--rotation) * -1));
-    
-    @media (prefers-reduced-motion) {
-      transform: unset;
-    }
+  z-index: 1;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+  perspective-origin:
+    calc(var(--mouseX) * -100%)
+    calc(var(--mouseY) * 100%);
+
+  @media (prefers-reduced-motion) {
+    perspective-origin: center center;
   }
 
-
   .big-letters {
-    transform-origin: 50% 50% 0;
+    transform: translateZ(-2px);
   }
 
   .title {
-    transform-origin: 50% 50% 48px;
+    transform: translateZ(4px);
   }
   
   .tagline {
-    transform-origin: 50% 50% 24px;
+    transform: translateZ(2px);
   }
 }
 
