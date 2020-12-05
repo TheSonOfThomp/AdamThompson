@@ -1,7 +1,8 @@
 import React from "react"
-
+import loadable from '@loadable/component'
 import SEO from "../components/seo";
 import Hero from "../main-sections/hero/hero";
+
 import ResumeSection from "../main-sections/resume/resume-section";
 import PortfolioSection from "../main-sections/portfolio/portfolio-section";
 import AboutSection from "../main-sections/about/about-section";
@@ -9,11 +10,8 @@ import BlogSection from "../main-sections/blog/blog-section";
 import FooterSection from "../main-sections/footer/footer-section";
 import ProjectsSection from "../main-sections/projects/projects-section";
 import '../style/global.scss'
-import { useVH } from "../hooks/useVH";
 
 const IndexPage = () => {
-
-  // useVH()
 
   return (
     <main id="app">
@@ -22,24 +20,10 @@ const IndexPage = () => {
       <Hero/>
       
       <AboutSection/>
-
-      {/* <hr/> */}
-
       <ResumeSection />
-
-      {/* <hr/> */}
-  
       <ProjectsSection/>
-
-      {/* <hr/> */}
-
       <PortfolioSection/>
-  
-      {/* <Section title="Toolbox"/> */}
-      {/* <hr/> */}
-            
       <BlogSection/>
-
       <FooterSection/>
       
     </main>
