@@ -139,10 +139,6 @@ function SEO({ description, lang, meta, keywords, title }: SEOPropType) {
           as: "stylesheet",
           href: "https://p.typekit.net/p.css?s=1&k=onu2sfw&ht=tk&f=15528.15529.15530.17252&a=8773469&app=typekit&e=css"
         },
-        {
-          rel: "stylesheet",
-          href: "https://p.typekit.net/p.css?s=1&k=onu2sfw&ht=tk&f=15528.15529.15530.17252&a=8773469&app=typekit&e=css"
-        },
         ...fontPaths.map(href => {
           return {
             rel: "preload",
@@ -152,22 +148,6 @@ function SEO({ description, lang, meta, keywords, title }: SEOPropType) {
             href
           }
         }),
-        ...fontPaths.map(href => {
-          return {
-            as: "font",
-            type: "font/woff2",
-            crossOrigin: "anonymous",
-            href
-          }
-        }),
-        ...fontPaths.map(href => {
-          return {
-            as: "font",
-            type: "font/opentype",
-            crossOrigin: "anonymous",
-            href
-          }
-        })
       ]}
     ></Helmet>
   )
