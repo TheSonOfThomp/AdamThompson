@@ -1,0 +1,230 @@
+@import '../style/utilities.scss';
+@import '../style/mixins.scss';
+
+// @mixin blob($tl, $tr, $br, $bl) {
+//   border-radius: #{$tl}% #{100% - $tl}% #{$tr}% #{100% - $tr}% / #{$br}% #{$bl}% #{100% - $bl}% #{100% - $br};
+// }
+
+section h1 {
+  font-size: clamp(16px, 5vw, 20px);
+}
+
+$dot-size: 24px;
+
+.chart {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(var(--maxY, 1), minmax(0, $dot-size * 2));
+  grid-template-columns: repeat(var(--maxX, 1), minmax(0, 1fr));
+  gap: 4px;
+  place-items: center;
+  width: 100%;
+  margin: 64px auto;
+}
+
+.task {
+  @include animate((background, opacity, color, transform));
+  position: relative;
+  z-index: 1;
+  grid-row: var(--row);
+  grid-column: var(--column);
+  padding: $dot-size/2;
+  font-size: 14px;
+  color: var(--color-white);
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--color-green);
+  border-radius: 100%;
+  opacity: 1;
+
+  .tooltip {
+    @include elevation(2);
+    position: absolute;
+    top: 0;
+    left: calc(100% + 8px);
+    z-index: var(--overall);
+    display: none;
+    width: 32ch;
+    padding: 8px;
+    color: var(--color-black);
+    text-align: left;
+    cursor: text;
+    background-color: var(--color-white);
+
+    h1 {
+      font-size: 1.25em;
+    }
+
+    h2 {
+      margin: 0.25em 0;
+      font-size: 1em;
+    }
+
+    ul {
+      padding-left: 3ch;
+      margin: 0;
+    }
+
+    li {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    z-index: 20;
+    outline-color: var(--color-green-light);
+    outline-offset: 2px;
+    opacity: 1;
+    transform: scale(1.2);
+    
+    .tooltip {
+      display: block;
+    }
+  }
+}
+
+.chart.overall .task {
+  opacity: calc(var(--overall) * 0.1);
+  
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.chart.interest .task {
+  opacity: calc(var(--interest) * 0.1);
+  
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.chart.experience .task {
+  opacity: calc(var(--xp) * 0.1);
+  
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.chart.skill .task {
+  opacity: calc(var(--skill) * 0.1);
+  
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.region {
+  display: flex;
+  display: none;
+  grid-row: 1 / -1;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  color: hsl(var(--h), var(--s), var(--l));
+  background-color: hsla(var(--h), var(--s), var(--l), 0.05);
+  border-color: hsla(var(--h), var(--s), var(--l), 0.5);
+  border-style: solid;
+  border-width: 2px;
+
+
+  &#region-pm {
+    --h: 60;
+    --s: 100%;
+    --l: 45%;
+    grid-column: 1 / 11;
+    border-radius: 25% 75%;
+  }
+  
+  &#region-ux {
+    --h: 180;
+    --s: 100%;
+    --l: 25%;
+    grid-column: 8 / 17;
+    border-radius: 25% 75%;
+  }
+  
+  &#region-ui {
+    --h: 270;
+    --s: 80%;
+    --l: 50%;
+    grid-column: 10 / 19;
+    border-radius: 25% 75%;
+  }
+  
+  &#region-dev {
+    --h: 270;
+    --s: 50%;
+    --l: 40%;
+    grid-column: 16 / -1;
+    border-radius: 40% 60%;
+  }
+}
+
+
+.axis {
+  font-size: 16px;
+  
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}
+
+.x-axis {
+  display: grid;
+  // grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--maxX, 1), minmax(0, 1fr));
+  grid-row: calc(var(--maxY) + 1);
+  grid-column: 1 / -1;
+  gap: 16px;
+  text-align: center;
+  margin-block-start: 16px;
+  border-block-start: 1px solid var(--color-black);
+
+  #label-discover {
+    grid-column: 1 / 5;
+  }
+  
+  #label-define {
+    grid-column: 6 / 10;
+  }
+
+  #label-design {
+    grid-column: 11 / 17;
+  }
+
+  #label-deliver {
+    grid-column: 18 / -1;
+  }
+}
+
+.y-axis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1 / span 5;
+  grid-column: 1;
+  align-items: flex-end;
+  height: 100%;
+  text-align: center;
+  writing-mode: vertical-rl;
+  padding-block-end: 16px;
+  transform: rotateZ(180deg) translateX(100%);
+  border-block-end: 1px solid var(--color-black);
+}
+
+form {
+  // display: none;
+}
