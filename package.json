@@ -5,20 +5,18 @@
   "version": "0.1.0",
   "author": "Adam Thompson <adam.m.thompson@icloud.com>",
   "scripts": {
-    "pre": "node src/scripts/getMediumPosts.js",
-    "prebuild": "npm run pre",
-    "build": "gatsby build",
-    "predevelop": "npm run pre",
-    "develop": "gatsby develop",
+    "build": "next build",
+    "dev": "next dev -p 8000",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "prestart": "npm run pre",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "start": "next dev",
+    "serve": "next serve",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "crawl-medium": "node src/scripts/getMediumPosts.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "next": "^10.0.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.3",
     "@fortawesome/fontawesome-free": "^5.11.2",
@@ -72,8 +70,8 @@
     "node-sass": "^4.13.1",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-helmet": "^5.2.1",
     "react-recaptcha": "^2.3.10",
     "remark-unwrap-images": "^2.0.0",
@@ -83,7 +81,8 @@
     "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-recess-order": "^2.1.0",
     "stylelint-config-recommended": "^3.0.0",
-    "stylelint-config-sass-guidelines": "^7.0.0"
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "typescript": "^4.1.2"
   },
   "keywords": [
     "gatsby"
