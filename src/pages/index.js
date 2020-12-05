@@ -10,6 +10,7 @@ import FooterSection from "../main-sections/footer/footer-section";
 import ProjectsSection from "../main-sections/projects/projects-section";
 import '../style/global.scss'
 import { useVH } from "../hooks/useVH";
+import QuoteSection from "../main-sections/QuoteSection/QuoteSection";
 
 const IndexPage = () => {
 
@@ -22,24 +23,11 @@ const IndexPage = () => {
       <Hero/>
       
       <AboutSection/>
-
-      {/* <hr/> */}
-
+      {/* <QuoteSection attribution="Jen Simmons @ Artifact 2019">A design is finished when the CSS is written</QuoteSection> */}
       <ResumeSection />
-
-      {/* <hr/> */}
-  
       <ProjectsSection/>
-
-      {/* <hr/> */}
-
       <PortfolioSection/>
-  
-      {/* <Section title="Toolbox"/> */}
-      {/* <hr/> */}
-            
       <BlogSection/>
-
       <FooterSection/>
       
     </main>
