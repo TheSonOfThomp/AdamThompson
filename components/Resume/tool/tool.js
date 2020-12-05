@@ -1,6 +1,6 @@
 import React from "react";
 import {graphql, useStaticQuery} from "gatsby";
-import './tool.scss';
+import styles from './tool.module.scss';
 
 const T = ({children}) => {
   const id = children.toLowerCase();
@@ -25,7 +25,7 @@ const T = ({children}) => {
   console.log(data, children)
 
   return (
-    <div className="tool" id={id}>
+    <div className={styles.tool} id={id}>
       <img alt={`${id}`} src={imgSrc}/>
       <span>{children}</span>
     </div>

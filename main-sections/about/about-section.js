@@ -1,7 +1,8 @@
 import React from "react"
 import Section from "../../templates/section/section";
-import { useStaticQuery, graphql } from 'gatsby';
-import './about-section.scss';
+
+;
+import styles from './about-section.module.scss';
 // import portraitImage from 'images/Adam_web.jpg';
 
 
@@ -20,8 +21,8 @@ const AboutSection = ({ data }) => {
   const about = aboutQuery.allMarkdownRemark.nodes[0].html
   
   return (
-    <Section id="about" className="green-divider">
-      <span className="about-text" dangerouslySetInnerHTML={{ __html: about }}></span>
+    <Section id="about" className={styles.green_divider}>
+      <span className={styles.about_text} dangerouslySetInnerHTML={{ __html: about }}></span>
     </Section>
   )
 }

@@ -5,13 +5,13 @@ import Section from "../../templates/section/section";
 import ResumeCard from "../../components/resume-card/resume-card";
 import * as resumePdf from '../../images/Adam Thompson - Resume.pdf'
 import * as resumeJson from '../../data/resume-full.json'
-import './resume-section.scss';
+import styles from './resume-section.module.scss';
 
 const ResumeSection = () => {
   const resumeData = Object.entries(resumeJson.default.experience)
   return(
     <Section title="Experience" id="resume">
-      <div className="resume-card-section">
+      <div className={styles.resume_card_section}>
       {
         resumeData.map( node => (
           <ResumeCard
@@ -26,7 +26,7 @@ const ResumeSection = () => {
           ))
         }
       </div>
-      <a className="print-resume" href={resumePdf} download>Printable resume <FontAwesomeIcon icon={faExternalLinkAlt} size="xs"/></a>
+      <a className={styles.print_resume} href={resumePdf} download>Printable resume <FontAwesomeIcon icon={faExternalLinkAlt} size="xs"/></a>
     </Section>
   )
 }

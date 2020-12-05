@@ -1,6 +1,6 @@
 import React from "react"
 // import Card from "../card/card";
-import './resume-card.scss';
+import styles from './resume-card.module.scss';
 
 const ResumeCard = ({id, logoSrc, title, location, term, position, summary, bullets}) => {
 
@@ -9,13 +9,13 @@ const ResumeCard = ({id, logoSrc, title, location, term, position, summary, bull
       id={id}
       className={'resume-card'}
     >
-        <div className="resume-card-header">
-          {/* <img className="logo" src={logoSrc} alt={title}/> */}
-          <h2 className="position">{position}</h2>
-          <span className="location">{term}</span>
-          <h2 className="company">{title}</h2>
+        <div className={styles.resume_card_header}>
+          {/* <img className={styles.logo} src={logoSrc} alt={title}/> */}
+          <h2 className={styles.position}>{position}</h2>
+          <span className={styles.location}>{term}</span>
+          <h2 className={styles.company}>{title}</h2>
         </div>
-        <p className="summary">{summary}</p>
+        <p className={styles.summary}>{summary}</p>
         {/* {bullets} */}
     </div>
   )

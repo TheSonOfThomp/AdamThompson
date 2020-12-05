@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './QuoteSection.scss';
+import styles from './QuoteSection.module.scss';
 
 const QuoteSection = (props) => (
-  <section className="quote-section">
-    <blockquote className="quote">
+  <section className={styles.quote_section}>
+    <blockquote className={styles.quote}>
       {props.children}
     </blockquote>
-    <em className="quote-attribution">{props.attribution}</em>
+    <em className={styles.quote_attribution}>{props.attribution}</em>
   </section>
 );
 

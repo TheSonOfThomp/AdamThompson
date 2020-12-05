@@ -2,7 +2,7 @@ import React from 'react';
 import { parseRecipe } from '@thesonofthomp/recipe-parser/dist';
 import { Recipe as TRecipe } from '@thesonofthomp/recipe-parser/dist/types';
 import { RecipeChart } from './RecipeChart/RecipeChart';
-import './Recipe.scss';
+import styles from './Recipe.module.scss';
 import RecipeList from './RecipeList';
 
 type RecipeProps = {

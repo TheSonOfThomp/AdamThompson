@@ -1,10 +1,13 @@
 import React from "react"
-import SEO from "../components/seo"
-import '../style/global.scss';
+import Head from 'next/head'
+
+
 
 const NotFoundPage = () => (
   <div>
-    <SEO title="404: Not found" />
+    <Head>
+      <title>Page not found</title>
+    </Head>
     <h1>NOT FOUND</h1>
     <p>You just hit a route that doesn&#39;t exist...</p>
   </div>

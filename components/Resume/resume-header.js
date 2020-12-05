@@ -1,13 +1,13 @@
 import React from "react"
 import Monogram from '../../images/monogram-green.svg'; // imported as react component
-import './resume-header.scss';
+import styles from './resume-header.module.scss';
 
 const ResumeHeader = () => {
   return (
-    <div className="resume-header">
+    <div className={styles.resume_header}>
       {/* <img alt="A.T. monogram" id="monogram" src={monogram}/> */}
       <Monogram id="monogram" />
-      <div className="name" >
+      <div className={styles.name} >
         <h1 id="name">Adam Thompson</h1>
         <span id="tagline">Frontend UI Engineer</span>
       </div>

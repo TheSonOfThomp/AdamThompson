@@ -1,6 +1,6 @@
 import React from "react"
 import {useCustomProps} from '../../../hooks/useCustomProperty';
-import './portfolio-card.scss';
+import styles from './portfolio-card.module.scss';
 import { Link } from "gatsby";
 const HIGHLIGHT = 'new-visions'
 
@@ -19,16 +19,16 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
       id={id} 
       className={`portfolio-card clickable ${isHighlightedCard ? 'double-wide' : ''}`}
     >
-      <div className="portfolio-card-text">
-        <h2 className="portfolio-card-title">{title}</h2>
+      <div className={styles.portfolio_card_text}>
+        <h2 className={styles.portfolio_card_title}>{title}</h2>
         <br/>
-        <span className="portfolio-card-tagline">{tagline}</span>
+        <span className={styles.portfolio_card_tagline}>{tagline}</span>
       </div>
-      <div className="portfolio-card-image-wrapper" >
-        <picture className="portfolio-card-picture">
+      <div className={styles.portfolio_card_image_wrapper} >
+        <picture className={styles.portfolio_card_picture}>
           <source srcSet={imgSrc.srcSetWebp} type="image/webp" />
           <source srcSet={imgSrc.srcSet} type="image/png" />
-          <img className="portfolio-card-image" src={imgSrc.src} alt={`${title}`} />
+          <img className={styles.portfolio_card_image} src={imgSrc.src} alt={`${title}`} />
         </picture>
       </div>
     </Link>

@@ -2,8 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faNpm } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { useStaticQuery, graphql } from 'gatsby';
-import './project-card.styles.scss';
+
+;
+import styles from './project-card.styles.module.scss';
 
 import { useCustomProp } from  '../../../hooks/useCustomProperty'
 
@@ -34,23 +35,23 @@ const ProjectCard = ({project}) => {
   const cardRef = useCustomProp('--project-color', project.color)
 
   return (
-    <a ref={cardRef} className="project-card" href={project.url} alt={project.name} target="_blank" rel="noreferrer">
-      <h2 className="project-title">{project.name}</h2>
-      <span className="project-description">{project.description}</span>
-      <picture className="project-logo">
+    <a ref={cardRef} className={styles.project_card} href={project.url} alt={project.name} target="_blank" rel="noreferrer">
+      <h2 className={styles.project_title}>{project.name}</h2>
+      <span className={styles.project_description}>{project.description}</span>
+      <picture className={styles.project_logo}>
         <source srcSet={logoImage.srcSetWebp} type="image/webp"/>
         <source srcSet={logoImage.srcSet} type="image/png"/>
-        <img className="project-logo" src={logoImage.src} alt={`Logo for ${project.name}`}></img>
+        <img className={styles.project_logo} src={logoImage.src} alt={`Logo for ${project.name}`}></img>
       </picture>
-      <FontAwesomeIcon className="project-icon" icon={iconObj} size="sm" />
+      <FontAwesomeIcon className={styles.project_icon} icon={iconObj} size="sm" />
       {
         project.tools && (
-          <div className="project-tools-wrapper">
-            <div className="project-tools-label">Built with</div>
-            <div className="project-tools-list">
+          <div className={styles.project_tools_wrapper}>
+            <div className={styles.project_tools_label}>Built with</div>
+            <div className={styles.project_tools_list}>
               {
                 project.tools.map(tool => (
-                  <span className="project-tool" key={tool}>{tool}</span>
+                  <span className={styles.project_tool} key={tool}>{tool}</span>
                 ))
               }
             </div>

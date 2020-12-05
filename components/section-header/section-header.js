@@ -1,8 +1,8 @@
 import React from "react"
-import './section-header.scss';
+import styles from './section-header.module.scss';
 
 const SectionHeader = ({children}) => (
-    <h1 className="section-header">
+    <h1 className={styles.section_header}>
         {children}
     </h1>
 )

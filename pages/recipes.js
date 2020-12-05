@@ -1,7 +1,8 @@
 import React from "react";
-import { useStaticQuery, graphql } from 'gatsby';
+
+;
 import { Link } from "gatsby";
-import './recipes.scss'
+import styles from './recipes.module.scss'
 import { startCase } from "lodash";
 import DefaultPage from '../templates/default-page/default-template'
 
@@ -60,22 +61,22 @@ const RecipesPage = () => {
         I personally find this is the clearest way to read a recipe. Check out the generator on <a href="https://github.com/TheSonOfThomp/recipe-parser">GitHub</a>.
       </p>
 
-      <div className="recipe-cards">
+      <div className={styles.recipe_cards}>
         {
           recipes.sort((a,z) => a.frontmatter.title - z.frontmatter.title).map(recipe => {
           return (
             <Link to={'.'+recipe.fields.slug} className={`recipe-card`} key={recipe.frontmatter.title}>
-              <h1 className="recipe-title">{recipe.frontmatter.title}</h1>
-              <div className="recipe-tags">
+              <h1 className={styles.recipe_title}>{recipe.frontmatter.title}</h1>
+              <div className={styles.recipe_tags}>
                 {
-                  recipe.frontmatter.tags.split(',').map(tag => <span className="recipe-tag">{startCase(tag)}</span>)
+                  recipe.frontmatter.tags.split(',').map(tag => <span className={styles.recipe_tag}>{startCase(tag)}</span>)
                 }
               </div>
               {recipe.image &&
-              <picture className="recipe-image">
+              <picture className={styles.recipe_image}>
                 <source srcset={recipe.image.srcSetWebp} type="image/webp"/>
                 <source srcset={recipe.image.srcSet} type="image/jpg"/>
-                <img className="recipe-image" src={recipe.image.src} alt={recipe.frontmatter.title} />
+                <img className={styles.recipe_image} src={recipe.image.src} alt={recipe.frontmatter.title} />
               </picture> 
               }
             </Link>

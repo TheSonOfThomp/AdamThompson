@@ -2,7 +2,7 @@ import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn, faGithub, faTwitter, faCodepen } from '@fortawesome/free-brands-svg-icons'
 import SEO from "../components/seo"
-import '../style/resume.scss'
+import styles from '../style/resume.module.scss'
 import T from "../components/Resume/tool/tool"
 import ResumeHeader from "../components/Resume/resume-header";
 import ResumeEntry from "../components/Resume/resume-entry/resume-entry";
@@ -22,18 +22,18 @@ class ResumePage extends React.Component {
   }
 
   _ResumeJSX = (
-    <div className="resume-container">
+    <div className={styles.resume_container}>
       <SEO title="Resume" />
-      <div className="resume-page" id="page-1">
+      <div className={styles.resume_page" id="page_1}>
         <ResumeHeader/>
-        <div className="resume-body">
-          {/* <div className="summary">{resumeData.blurb}</div> */}
-          <div className="column" id="column-left">
+        <div className={styles.resume_body}>
+          {/* <div className={styles.summary}>{resumeData.blurb}</div> */}
+          <div className={styles.column" id="column_left}>
 
             {/* EXPERIENCE */}
-            <div className="column-section " id="experience">
-              <h2 className="section-header">Experience</h2>
-              <div className="column-section-contents">
+            <div className={styles.column_section } id="experience">
+              <h2 className={styles.section_header}>Experience</h2>
+              <div className={styles.column_section_contents}>
                 {Object.values(resumeData.experience).filter(job => job.show).map(job => {
                   return <ResumeEntry
                     title={job.position}
@@ -46,9 +46,9 @@ class ResumePage extends React.Component {
             </div>
 
             {/* EDUCATION */}
-            <div className="column-section " id="education">
-              <h2 className="section-header">Education</h2>
-              <div className="column-section-contents">
+            <div className={styles.column_section } id="education">
+              <h2 className={styles.section_header}>Education</h2>
+              <div className={styles.column_section_contents}>
                 <ResumeEntry
                   entryClass="school-entry"
                   title={resumeData.education.uwaterloo.position}
@@ -62,9 +62,9 @@ class ResumePage extends React.Component {
             </div>
 
             {/* PROJECTS */}
-            <div className="column-section " id="projects">
-              <h2 className="section-header">Projects</h2>
-              <div className="column-section-contents">
+            <div className={styles.column_section } id="projects">
+              <h2 className={styles.section_header}>Projects</h2>
+              <div className={styles.column_section_contents}>
                 {Object.values(projectsData.projects).map(project => (
                   project.showOnResume && <ResumeEntry
                     entryClass="project-entry"
@@ -76,9 +76,9 @@ class ResumePage extends React.Component {
             </div>
 
           {/* TOOLBOX */}
-          <div className="column-section" id="tools">
-            <h2 className="section-header">Skills</h2>
-            <div className="column-section-contents">
+          <div className={styles.column_section} id="tools">
+            <h2 className={styles.section_header}>Skills</h2>
+            <div className={styles.column_section_contents}>
               {resumeData.toolbox.map(tool => {
                 return <T>{tool}</T>
               })}
@@ -89,9 +89,9 @@ class ResumePage extends React.Component {
 
 
             {/* AWARDS */}
-            {/* <div className="column-section " id="projects">
-              <h2 className="section-header">Awards</h2>
-              <div className="column-section-contents">
+            {/* <div className={styles.column_section } id="projects">
+              <h2 className={styles.section_header}>Awards</h2>
+              <div className={styles.column_section_contents}>
                 {Object.values(resumeData.awards).map(award => (
                   award && <ResumeEntry
                     entryClass="project-entry"
@@ -106,9 +106,9 @@ class ResumePage extends React.Component {
         
 
             {/* VOLUTEER */}
-            {/* <div className="column-section " id="volunteer">
-              <h2 className="section-header">Volunteer</h2>
-              <div className="column-section-contents">
+            {/* <div className={styles.column_section } id="volunteer">
+              <h2 className={styles.section_header}>Volunteer</h2>
+              <div className={styles.column_section_contents}>
                 {Object.values(resumeData.volunteer).map(volunteer => {
                   return <ResumeEntry
                     entryClass="volunteer-entry"
@@ -120,7 +120,7 @@ class ResumePage extends React.Component {
             </div> */}
 
 
-            {/* <div className="resume-footer">
+            {/* <div className={styles.resume_footer}>
               <a href="http://thesonofthomp.com">thesonofthomp.com</a>
               <a href="mailto:adam@thesonofthomp.com">adam@thesonofthomp.com</a>
               <a href="tel:13323335780" id="phone">+1-332-333-5780</a>
@@ -129,7 +129,7 @@ class ResumePage extends React.Component {
           </div>
 
         </div>
-          <div className="resume-footer">
+          <div className={styles.resume_footer}>
             <a href="https://www.linkedin.com/in/adammthompson/">
               <FontAwesomeIcon icon={faLinkedinIn} size="sm" />
               /adammthompson
@@ -150,17 +150,17 @@ class ResumePage extends React.Component {
       </div>
 
 
-      {/* <div className="resume-page" id="page-2">
-        <div className="resume-body full-width">
-          <div className="column" id="column-right"> */}
+      {/* <div className={styles.resume_page" id="page_2}>
+        <div className={styles.resume_body full_width}>
+          <div className={styles.column" id="column_right}> */}
 
 
             
 
             {/* VOLUTEER */}
-            {/* <div className="column-section " id="volunteer">
-              <h2 className="section-header">Volunteer</h2>
-              <div className="column-section-contents">
+            {/* <div className={styles.column_section } id="volunteer">
+              <h2 className={styles.section_header}>Volunteer</h2>
+              <div className={styles.column_section_contents}>
                 {Object.values(resumeData.volunteer).map(volunteer => {
                   return <ResumeEntry
                     entryClass="volunteer-entry"
@@ -177,7 +177,7 @@ class ResumePage extends React.Component {
         </div>
 
 
-        <div className="resume-footer">
+        <div className={styles.resume_footer}>
           <a href="http://thesonofthomp.com">thesonofthomp.com</a>
           <a href="mailto:adam@thesonofthomp.com">adam@thesonofthomp.com</a>
           <a href="tel:13323335780" id="phone">+1-332-333-5780</a>

@@ -1,9 +1,9 @@
 import React, { useRef } from "react"
-import './hero.scss';
-import Monogram from '../../images/monogram-black.svg'; // using gatsby-plugin-react-svg
+import styles from './hero.module.scss';
+import Monogram from '../../images/monogram.svg'; // using gatsby-plugin-react-svg
 import Header from "../../components/Header";
 
-const Hero = () => {
+const Hero = ({className}) => {
 
   const heroRef = useRef()
 
@@ -13,19 +13,19 @@ const Hero = () => {
   }
 
   return (
-    <div ref={heroRef} className="hero" onMouseMove={setMousePos} role="region">
+    <div ref={heroRef} className={styles.hero} onMouseMove={setMousePos} role="region">
   
-      <div className="header-wrapper">
+      <div className={styles.header_wrapper}>
         <Header showNav={true} />
       </div>
     
-      <div className="hero-contents">
-        <h2 className="big-letters">
-          <Monogram className="big-letters-monogram" />
+      <div className={styles.hero_contents}>
+        <h2 className={styles.big_letters}>
+          <Monogram className={styles.big_letters_monogram} />
         </h2>
-        <h2 className="title">UX Engineer</h2>
-        <h3 className="tagline">.</h3>
-        {/* <h3 className="tagline">Developing experiences that make an impact</h3> */}
+        <h2 className={styles.title}>UX Engineer</h2>
+        {/* <h3 className={styles.tagline}>.</h3> */}
+        <h3 className={styles.tagline}>Developing experiences that make an impact</h3>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 // import PropTypes from "prop-types"
 import React from "react"
-import './card.scss';
+import styles from './card.module.scss';
 
 const Card = ({id, className, style, children}) => (
   <div 

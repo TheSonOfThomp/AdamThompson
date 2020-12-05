@@ -2,7 +2,7 @@ import React from 'react';
 import { Recipe } from "@thesonofthomp/recipe-parser/dist/types"
 import { parseRecipe } from "@thesonofthomp/recipe-parser/dist";
 import { RecipeChartNode } from './RecipeChartNode/RecipeChartNode';
-import './RecipeChart.scss';
+import styles from './RecipeChart.module.scss';
 
 type RecipeComponentProps = {
   string?: string,

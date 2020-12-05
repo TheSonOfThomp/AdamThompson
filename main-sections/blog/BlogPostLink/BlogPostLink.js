@@ -1,14 +1,14 @@
 import React from 'react';
 import { format } from 'date-fns'
-import './blog-post-link.scss';
+import styles from './blog-post-link.module.scss';
 
 const BlogPostLink = ({post}) => {
   const { title, url, datePublished, description } = post
   return (
-    <a href={url} className="blog-post blog-post-link" key={title}>
-      <h2 className="blog-post-title">{title}</h2>
-      <div className="blog-post-date">{format(new Date(datePublished), 'MMM do yyyy')}</div>
-      <p className="blog-post-description">
+    <a href={url} className={classnames(styles.blog_post, styles.blog_post-link)} key={title}>
+      <h2 className={styles.blog_post_title}>{title}</h2>
+      <div className={styles.blog_post_date}>{format(new Date(datePublished), 'MMM do yyyy')}</div>
+      <p className={styles.blog_post_description}>
         {description}
       </p>
     </a>

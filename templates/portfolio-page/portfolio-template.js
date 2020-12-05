@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import SEO from "../../components/seo";
 import PortfolioQuickLink from "./portfolio-quick-link/portfolio-quick-link";
-import './portfolio-template.scss';
+import styles from './portfolio-template.module.scss';
 import { PortfolioPageHeader } from "./portfolio-page-header/portfolio-page-header";
 import { useCustomProps } from "../../hooks/useCustomProperty";
 
@@ -42,19 +42,19 @@ export default ({ pageContext, children }) => {
   }) 
 
   return (
-    <main ref={mainRef} className="portfolio" id={brand}>
+    <main ref={mainRef} className={styles.portfolio} id={brand}>
       <SEO title="Portfolio" />
       <PortfolioPageHeader />
-      <div className="portfolio-content-container">
+      <div className={styles.portfolio_content_container}>
         {pageContext.node // If we want to use gatsby-node created pages
           ? <div 
-              className="portfolio-content"  
+              className={styles.portfolio_content}  
               dangerouslySetInnerHTML={{ __html: pageContext.node.html }} 
             ></div>
-          : <div className="portfolio-content">{children}</div>
+          : <div className={styles.portfolio_content}>{children}</div>
         }
       </div>
-      <div className="quick-links-container">
+      <div className={styles.quick_links_container}>
         <PortfolioQuickLink to={prevPage} direction="prev"></PortfolioQuickLink>
         <PortfolioQuickLink to={nextPage} direction="next"></PortfolioQuickLink>
       </div>

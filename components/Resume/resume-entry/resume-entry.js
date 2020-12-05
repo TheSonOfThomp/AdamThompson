@@ -1,22 +1,22 @@
 import React from "react"
 import { Remarkable } from 'remarkable';
-import './resume-entry.scss';
+import styles from './resume-entry.module.scss';
 
 const md = new Remarkable()
 
 const ResumeEntry = ({entryClass = 'job-entry', title, company, location, bullets}) => {
   return (
     <div className={`resume-entry ${entryClass}`} id={company && company.replace(/( )/g, '-').toLowerCase()}>
-      <div className="entry-header">
-        <h4 className="entry-company">{company}</h4>
-        <h3 className="entry-title">{title}</h3>
-        <span className="entry-location">{location}</span>
+      <div className={styles.entry_header}>
+        <h4 className={styles.entry_company}>{company}</h4>
+        <h3 className={styles.entry_title}>{title}</h3>
+        <span className={styles.entry_location}>{location}</span>
       </div>
-      <ul className="entry-bullets">
+      <ul className={styles.entry_bullets}>
         {bullets && bullets.map(b => {
           console.log(md.render(b))
           return (
-            <li className="entry-bullet-point" dangerouslySetInnerHTML={{ __html: md.render(b)}}></li>
+            <li className={styles.entry_bullet_point} dangerouslySetInnerHTML={{ __html: md.render(b)}}></li>
           )
         })}
       </ul>

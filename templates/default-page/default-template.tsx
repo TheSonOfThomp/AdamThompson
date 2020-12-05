@@ -1,5 +1,5 @@
 import React from 'react';
-import './default-template.styles.scss';
+import styles from './default-template.styles.module.scss';
 import Header from '../../components/Header';
 import SEO from "../../components/seo";
 

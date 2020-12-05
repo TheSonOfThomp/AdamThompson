@@ -1,9 +1,10 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby';
+
+;
 
 import Section from "../../templates/section/section";
 import PortfolioCard from "./portfolio-card/portfolio-card";
-import './portfolio-section.scss';
+import styles from './portfolio-section.module.scss';
 
 const PortfolioSection = ({ data }) => {
   const portfolioPages = useStaticQuery(graphql`
@@ -45,7 +46,7 @@ const PortfolioSection = ({ data }) => {
 
   return (
     <Section title="UX Case Studies" id="portfolio">
-      <div className="portfolio-cards-container">
+      <div className={styles.portfolio_cards_container}>
       {
         posts.map((post) => (
           <PortfolioCard
