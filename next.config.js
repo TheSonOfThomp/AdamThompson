@@ -6,6 +6,7 @@ const withPlugins = require('next-compose-plugins');
 const nextConfig = {
   webpack: (config, options) => {
     
+    // Load svgs as components 
     config.module.rules.push({
       test: /\.svg$/,
       issuer: {
@@ -18,6 +19,14 @@ const nextConfig = {
         }
       }],
     })
+
+    // Load Markdown as objects
+    config.module.rules.push(
+      {
+        test: /\.md$/,
+        use: 'frontmatter-markdown-loader'
+      }
+    )
 
     return config
   }

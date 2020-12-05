@@ -1,10 +1,10 @@
 @import '../../style/utilities';
 
-section#about {
+#about {
   margin: 24px 0;
   text-align: left;
 
-  .about-text {
+  .about_text {
     position: relative;
     font-size: 20px;
     font-weight: 400;
@@ -39,6 +39,4 @@ section#about {
   p:last-child {
     margin-bottom: 0;
   }
-
-
 }
