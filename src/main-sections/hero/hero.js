@@ -13,7 +13,7 @@ const Hero = () => {
   }
 
   return (
-    <div ref={heroRef} className="hero" onMouseMove={setMousePos}>
+    <div ref={heroRef} className="hero" onMouseMove={setMousePos} role="region">
   
       <div className="header-wrapper">
         <Header showNav={true} />
@@ -21,11 +21,11 @@ const Hero = () => {
     
       <div className="hero-contents">
         <h2 className="big-letters">
-          {/* <b id="u">U</b><b id="x">X</b> */}
           <Monogram className="big-letters-monogram" />
         </h2>
-        <h2 className="title">UI Engineer</h2>
-        <h3 className="tagline">Developing experiences that make an impact</h3>
+        <h2 className="title">UX Engineer</h2>
+        <h3 className="tagline">.</h3>
+        {/* <h3 className="tagline">Developing experiences that make an impact</h3> */}
       </div>
     </div>
   );
