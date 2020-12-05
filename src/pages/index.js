@@ -1,5 +1,4 @@
 import React from "react"
-import loadable from '@loadable/component'
 import SEO from "../components/seo";
 import Hero from "../main-sections/hero/hero";
 

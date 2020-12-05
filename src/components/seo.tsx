@@ -10,6 +10,13 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+const fontPaths = [
+  "https://use.typekit.net/af/f3ba4f/00000000000000003b9b12fa/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3",
+  "https://use.typekit.net/af/3e64fb/00000000000000003b9b12fe/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3",
+  "https://use.typekit.net/af/4eabcf/00000000000000003b9b12fd/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3",
+  "https://use.typekit.net/af/e32ad9/00000000000000003b9b12fb/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3"
+]
+
 type SEOPropType = {
   description?: string,
   lang?: string,
@@ -115,17 +122,52 @@ function SEO({ description, lang, meta, keywords, title }: SEOPropType) {
           href: "https://use.typekit.net"
         },
         {
-          rel: "preload",
-          as: "font",
-          type: "font/woff2",
-          href: "https://use.typekit.net/af/4eabcf/00000000000000003b9b12fd/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3"
+          rel: "preconnect",
+          href: "https://p.typekit.net"
         },
         {
-          as: "font",
-          type: "font/woff2",
-          crossOrigin: "anonymous",
-          href: "https://use.typekit.net/af/4eabcf/00000000000000003b9b12fd/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3"
-        }
+          rel: "preload",
+          as: "stylesheet",
+          href: "https://use.typekit.net/onu2sfw.css"
+        },
+        {
+          rel: "stylesheet",
+          href: "https://use.typekit.net/onu2sfw.css"
+        },
+        {
+          rel: "preload",
+          as: "stylesheet",
+          href: "https://p.typekit.net/p.css?s=1&k=onu2sfw&ht=tk&f=15528.15529.15530.17252&a=8773469&app=typekit&e=css"
+        },
+        {
+          rel: "stylesheet",
+          href: "https://p.typekit.net/p.css?s=1&k=onu2sfw&ht=tk&f=15528.15529.15530.17252&a=8773469&app=typekit&e=css"
+        },
+        ...fontPaths.map(href => {
+          return {
+            rel: "preload",
+            as: "font",
+            type: "font/woff2",
+            crossOrigin: "anonymous",
+            href
+          }
+        }),
+        ...fontPaths.map(href => {
+          return {
+            as: "font",
+            type: "font/woff2",
+            crossOrigin: "anonymous",
+            href
+          }
+        }),
+        ...fontPaths.map(href => {
+          return {
+            as: "font",
+            type: "font/opentype",
+            crossOrigin: "anonymous",
+            href
+          }
+        })
       ]}
     ></Helmet>
   )
