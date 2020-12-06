@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image'
+// import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faNpm } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';

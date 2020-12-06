@@ -1,5 +1,5 @@
 import React from "react"
-import Image from 'next/image'
+// import Image from 'next/image'
 import classnames from 'classnames'
 import {useCustomProps} from '../../../hooks/useCustomProperty';
 import styles from './portfolio-card.module.scss';
