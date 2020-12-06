@@ -1,9 +1,10 @@
 // next.config.js
-const withSvgr = require('next-svgr');
+const withMDX = require('@next/mdx')({ extension: /\.mdx?$/});
 const withImages = require('next-images');
 const withPlugins = require('next-compose-plugins');
 
 const nextConfig = {
+  pageExtensions: ['js', 'jsx', 'mdx'],
   webpack: (config, options) => {
     
     // Load svgs as components 
@@ -20,7 +21,7 @@ const nextConfig = {
       }],
     })
 
-    // Load Markdown as objects
+    // Load Markdown as objeects
     config.module.rules.push(
       {
         test: /\.md$/,
@@ -34,6 +35,7 @@ const nextConfig = {
 
 module.exports = withPlugins(
   [
+    withMDX,
     [withImages, { fileExtensions: ["jpg", "jpeg", "png", "gif"],}]
   ], 
   nextConfig

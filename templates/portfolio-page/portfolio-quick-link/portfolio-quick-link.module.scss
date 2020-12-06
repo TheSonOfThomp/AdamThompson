@@ -1,0 +1,83 @@
+@import '../../../style/colours.def.scss';
+@import '../../../style/variables';
+
+/* stylelint-disable-next-line */
+@mixin brandedQuicklink($brand) {
+  border-color: var(--color-#{$brand});
+
+  &:focus {
+    outline-color: var(--color-#{$brand});
+  }
+
+  .quick-link-label {
+    color: var(--color-#{$brand});
+  }
+}
+
+a.quick-link {
+  position: fixed;
+  bottom: 0;
+  min-width: 96px;
+  padding: 4px 8px;
+  border-color: var(--color-green);
+  border-bottom: unset;
+  backdrop-filter: blur(4px);
+  background: var(--color-white-trans);
+  transition: padding $animation-ease 500ms;
+    
+  @media screen and (max-width: $breakpoint-small) {
+    position: relative;
+  }
+
+  &.newvisions { @include brandedQuicklink('newvisions');}
+  &.noom { @include brandedQuicklink('noom');}
+  &.knowroaming { @include brandedQuicklink('knowroaming');}
+  &.chameleon { @include brandedQuicklink('chameleon');}
+  &.smrtwatr { @include brandedQuicklink('smrtwatr');}
+
+  &:hover {
+    border-bottom: unset; // overrides global
+  }
+
+  &:focus {
+    outline-color: $green;
+  }
+
+  .quick-link-direction {
+    display: block;
+    color: $black;
+    font-weight: 600;
+  }
+
+  .quick-link-label {
+    color: var(--color-green);
+  }
+    
+  &#prev-link {
+    left: 0;
+    padding-left: 8px;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-radius: 0 2px 2px 0;
+    justify-self: start;
+    text-align: left;
+
+    &:hover {
+      padding-left: 12px;
+    }
+  }
+
+  &#next-link {
+    right: 0;
+    padding-right: 8px;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-radius: 2px 0 0 2px;
+    justify-self: end;
+    text-align: right;
+
+    &:hover {
+      padding-right: 12px;
+    }
+  }
+}

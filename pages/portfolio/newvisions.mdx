@@ -1,17 +1,19 @@
----
-title: New Visions
-brand: newvisions
-date: 2019-09-03
-tagline: A framework for accessible data
-cover: 'nv-breakdown-cover.png'
-color: '#0a4ace'
-section: portfolio
----
+import { PortfolioTemplate } from '../../templates/portfolio-page/portfolio-template'
+
+export const meta = {
+  title: "New Visions",
+  brand: "newvisions",
+  date: "2019-09-03",
+  tagline: "A framework for accessible data",
+  cover: 'nv-breakdown-cover.png',
+  color: '#0a4ace',
+  section: "portfolio"
+}
 
 # New Visions
 
 <!-- This is doubly true when everything changes so suddenly like it did in early 2020. -->
-<section class="tldr" markdown="1">
+<section className="tldr" markdown="1">
 
 ## A framework for accessible data
 It can be difficult to manage one of New York City’s large public schools—things are changing all the time, and school leadership needs up-to-date information about their school’s demographics, academics, attendance and other data. 
@@ -20,9 +22,9 @@ I designed and tested a framework for developing multi-leveled dashboards which 
 
 This involved understanding users’ needs, developing a conceptual framework and information architecture, designing and usability testing all three levels of the dashboard user interface, and finally prototyping the data-visualization graphs in `d3`. This project spanned two “phases” over the span of two years.
 
-<div class="cover-image">
+<div className="cover_image">
 
-  ![All four layers of the New Visions dashboard](../../images/portfolio/newvisions/nv-dashboard-demo.png)
+  ![All four layers of the New Visions dashboard](/images/portfolio/newvisions/nv-dashboard-demo.png)
 </div>
 
 </section>
@@ -48,7 +50,7 @@ Alternatively, there are many cases where a user does not want to, or lacks the 
 
 By highlighting the differences between these two dashboard types, a designer can leverage this framework to speed up design of new dashboard sections by designing for a specific use case. The framework encourages the dashboard designer to ask “what will the user do with this information” in order to streamline development. 
 
-![A comparision between the Chronic absenteeism tile & of Needs Attendance support tile](../../images/portfolio/newvisions/new-tiles@2x.png)
+![A comparision between the Chronic absenteeism tile & of Needs Attendance support tile](/images/portfolio/newvisions/new-tiles@2x.png)
 
 Chronic Absenteeism Rate informs the viewer of the percentage of students who have an overall attendance rate below a certain threshold. This is useful for an experienced staff member with knowledge of the thresholds, and who wants to make nuanced decisions.
 
@@ -57,7 +59,7 @@ Needs attendance support on the other hand calls out the specific students that 
 # Breaking down the data
 While a single data point can useful to identify potential problem areas, it doesn’t provide much insight into the source of the problem and its potential solutions. School managers want to compare data across sub-groups, and even see which individual students make up those aggregate numbers in order to take action on specific groups of students.  By providing a breakdown, we could provide the information managers needed to make informed decisions and targeted actions. 
 
-![The breakdown interface — users can navigate to this page by clicking on any “tile” on the main dashboard page](../../images/portfolio/newvisions/template-breakdown@2x.png)
+![The breakdown interface — users can navigate to this page by clicking on any “tile” on the main dashboard page](/images/portfolio/newvisions/template-breakdown@2x.png)
 
 The “breakdown” interface consists of two major elements: a data visualization, and a data table.
 
@@ -73,7 +75,7 @@ To simplify the process I eliminated some less-useful combinations, and defined 
 - **Line graph**: Highlights differences *between groups*, and change *over time*.
 - **Sankey graph**: Highlights differences *between* and *within* groups, as well as change *over time*.
 
-![Samples of each graph type](../../images/portfolio/newvisions/graphs.png)
+![Samples of each graph type](/images/portfolio/newvisions/graphs.png)
 
 ## Table data
 While visualizations are great for many visually-minded users, we needed to present the data numerically as well. This allowed me to future-proof the framework, and present additional data to support the primary data being plotted. While I left decisions about exactly what additional data to include up to the implementing designer, I laid out some structural patterns in the framework. 
@@ -82,7 +84,7 @@ First, testing showed that the leftmost table column(s) should align with the da
 
 Second, the rows in the table should align with the comparison group in each graph. That is, if we’re comparing between grades, each table row should be a grade. This pattern still holds when comparing both *between* and *within* groups, and coincides with the first pattern. For example, if we’re comparing sexes *within* grades, then each row is a grade, and the first columns are each of the sexes, since that’s the data plotted in a stacked bar graph. 
 
-![A data table that’s associated with the bar graph above](../../images/portfolio/newvisions/table@2x.png)
+![A data table that’s associated with the bar graph above](/images/portfolio/newvisions/table@2x.png)
 
 ## The student level
 Users are generally loath to take action on a whole group without seeing the individual students first. In this framework, a user can navigate to a list of the students that make up that group by clicking on a row in the breakdown table. On this screen a user is shown additional context that might help when making a decision about what action to take. The framework makes no assertions about what this additional data should be, and leaves that up to the implementing designer as well.
@@ -91,3 +93,5 @@ Users are generally loath to take action on a whole group without seeing the ind
 Overall, this framework provides a three-level architecture with logic and interaction patterns that help future designers display and visualize new data. It’s not a prescriptive framework however, and can be broken if necessary—every user goal and every data point is different, and requires careful thought into how the data is should be presented. 
 
 <!-- section to talk about the UI design of the graphs -->
+
+export default ({children}) => <PortfolioTemplate meta={meta}>{children}</PortfolioTemplate>

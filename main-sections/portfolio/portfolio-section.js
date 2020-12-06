@@ -1,62 +1,25 @@
 import React from "react"
-
-;
-
 import Section from "../../templates/section/section";
 import PortfolioCard from "./portfolio-card/portfolio-card";
 import styles from './portfolio-section.module.scss';
 
+import {pages} from '../../pages/portfolio/'
+
 const PortfolioSection = ({ data }) => {
-  const portfolioPages = useStaticQuery(graphql`
-    query{
-      allSitePage(filter: {path: {regex: "/portfolio/"}}, sort: {fields: context___frontmatter___date, order: DESC}) {
-        nodes {
-          path
-          context {
-            frontmatter {
-              date
-              title
-              color
-              tagline
-              cover
-            }
-          }
-        }
-      }
-      allImageSharp(filter: {fluid: {originalName: {regex: "/cover/"}}}) {
-        nodes {
-          fluid {
-            originalName
-            src
-            srcSet
-            srcSetWebp
-          }
-        }
-      }
-    }
-  `)
-  
-  const imageSources = portfolioPages.allImageSharp.nodes.map(node => node.fluid)
-  const posts = portfolioPages.allSitePage.nodes.map(node => {
-    return {
-      ...node,
-      imageSource: imageSources.find(img => img.originalName === node.context.frontmatter.cover)
-    }
-  })
 
   return (
-    <Section title="UX Case Studies" id="portfolio">
+    <Section title="UX Case Studies" className={styles.section} id="portfolio">
       <div className={styles.portfolio_cards_container}>
       {
-        posts.map((post) => (
+        pages.map((page) => (
           <PortfolioCard
-            key={post.context.frontmatter.title}
-            title={post.context.frontmatter.title}
-            tagline={post.context.frontmatter.tagline}
-            color={post.context.frontmatter.color}
-            cover={post.imageSource.src}
-            link={post.path}
-            imgSrc={post.imageSource}
+            key={page.title}
+            title={page.title}
+            tagline={page.tagline}
+            color={page.color}
+            cover={`/images/portfolio/cover/${page.cover}`}
+            link={`portfolio/${page.brand}`}
+            imgSrc={`/images/portfolio/cover/${page.cover}`}
           >
           </PortfolioCard>
         ))

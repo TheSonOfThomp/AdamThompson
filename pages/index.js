@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Hero from "../main-sections/hero/hero";
 
 import AboutSection from "../main-sections/about/about-section";
-// import PortfolioSection from "../main-sections/portfolio/portfolio-section";
+import PortfolioSection from "../main-sections/portfolio/portfolio-section";
 import ResumeSection from "../main-sections/resume/resume-section";
 import BlogSection from "../main-sections/blog/blog-section";
 // import FooterSection from "../main-sections/footer/footer-section";
@@ -16,7 +16,7 @@ const IndexPage = () => {
   return (
     <main id="app">
       <Head>
-        <title>Main</title>
+        <title>Adam Thompson</title>
         <meta name='Description' content='NYC based UX Engineer' />
       </Head>
       
@@ -26,7 +26,7 @@ const IndexPage = () => {
       {/* <QuoteSection attribution="Jen Simmons @ Artifact 2019">A design is finished when the CSS is written</QuoteSection> */}
       <ResumeSection />
       {/* <ProjectsSection/> */}
-      {/* <PortfolioSection/> */}
+      <PortfolioSection/>
       <BlogSection/>
       {/* <FooterSection/> */}
       

@@ -1,7 +1,7 @@
 import React from "react"
+import classnames from 'classnames'
 import {useCustomProps} from '../../../hooks/useCustomProperty';
 import styles from './portfolio-card.module.scss';
-import { Link } from "gatsby";
 const HIGHLIGHT = 'new-visions'
 
 const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
@@ -13,11 +13,11 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
   })
 
   return (
-    <Link 
+    <a 
       ref={cardRef} 
-      to={link} 
+      href={link} 
       id={id} 
-      className={`portfolio-card clickable ${isHighlightedCard ? 'double-wide' : ''}`}
+      className={classnames(styles.portfolio_card, styles.clickable, isHighlightedCard ? 'double_wide' : '')}
     >
       <div className={styles.portfolio_card_text}>
         <h2 className={styles.portfolio_card_title}>{title}</h2>
@@ -28,10 +28,10 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
         <picture className={styles.portfolio_card_picture}>
           <source srcSet={imgSrc.srcSetWebp} type="image/webp" />
           <source srcSet={imgSrc.srcSet} type="image/png" />
-          <img className={styles.portfolio_card_image} src={imgSrc.src} alt={`${title}`} />
+          <img className={styles.portfolio_card_image} src={imgSrc} alt={`${title}`} />
         </picture>
       </div>
-    </Link>
+    </a>
   )
 }
 

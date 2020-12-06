@@ -1,11 +1,14 @@
----
-title: Noom
-date: 2015-12-20
-tagline: Simplifying the core experience
-cover: 'noom-cover.png'
-color: '#4271d7'
-section: portfolio
----
+import { PortfolioTemplate } from '../../templates/portfolio-page/portfolio-template'
+
+export const meta = {
+	title: "Noom",
+	brand: "noom",
+	date: "2015-12-20",
+	tagline: "Simplifying the core experience",
+	cover: 'noom-cover.png',
+	color: '#4271d7',
+	section: "portfolio"
+}
 
 # Noom
 
@@ -43,7 +46,7 @@ After observing some remote tests and asking direct questions to local testers, 
 
 ![The Grocery shopping metaphor used to communicate the concept model during the design process.](../../images/portfolio/noom/noom-concept-model.png)
 
-##Requirements
+## Requirements
 
 We knew we would have to simplify the workflow and make the interface much more clear. From several specific criteria, we ended up with two overarching user requirements:
 
@@ -68,7 +71,7 @@ Traditionally, this has been done with the back arrow, but we noticed this was t
 When prototyping screen transitions we noticed a problem. 
 When the screens animated from one to the other, the behaviour of the _close_ button was still ambiguous on the second screen. We found that there was a near 50/50 split between users who expected the button to close the entire flow vs. the current screen. This was because a second _close_ button animated over top of the first
 
-###*One X* to rule them all
+### *One X* to rule them all
 
 These weren’t two _separate_ screens, but two parts of one experience. By designing the interaction and animation thoughtfully, I could convey the feeling of a single context in these two views.
 
@@ -87,7 +90,7 @@ Finally, we had a single close button for both views, and an intuitive way to fl
 </figure>
 
 
-##Testing & Validation
+## Testing & Validation
 
 With the help of our User Research team we tested our designs and rated their performance against the usability criteria. We compiled these into a decision matrix, and included a developer estimate for each design. With this chart we were able to convince management that this design solved the problems, and got developer time to build the improvements.
 
@@ -100,3 +103,4 @@ The Noom app features this version of the meal-logging workflow to date, and whi
 
 I'm grateful to have been part of a great design team that recently won the [2017 Red Dot Award](https://www.newswire.com/news/noom-coach-is-awarded-the-2017-red-dot-award-for-outstanding-design-19935974) for outstanding design.
 
+export default ({children}) => <PortfolioTemplate meta={meta}>{children}</PortfolioTemplate>
