@@ -1,17 +1,17 @@
-@import '../../../style/colours.def.module.scss';
+@import '../../../style/colours.def.scss';
 @import '../../../style/mixins';
 
 $gap-first-bullet: 4pt;
 $gap-first-bullet-y: 4pt;
 $gap-bullet: 8pt;
 
-.resume-entry {
+.resume_entry {
   display: grid;
   grid-template-rows: 18pt auto;
   grid-auto-flow: row;
   grid-gap: $gap-first-bullet; // gap between job title & first bullet
   
-  .entry-header {
+  .entry_header {
     display: grid;
     grid-template-areas: 'company title location';
     grid-template-columns: max-content max-content 1fr;
@@ -20,25 +20,25 @@ $gap-bullet: 8pt;
     align-items: baseline;
   }
 
-  .entry-title {
+  .entry_title {
     grid-area: title;
     font-size: 14pt;
     color: var(--color-green-small);
   }
   
-  .entry-company {
+  .entry_company {
     grid-area: company;
     font-size: 14pt;
     color: var(--color-grey-darker);
   }
 
-  .entry-location {
+  .entry_location {
     grid-area: location;
     justify-self: right;
     font-size: 10pt;
   }
 
-  .entry-bullets {
+  .entry_bullets {
     display: grid;
     grid-gap: $gap-bullet; // gap between bullets
     padding-left: 0;
@@ -47,7 +47,7 @@ $gap-bullet: 8pt;
     // color: var(--color-grey-darker);
     list-style-type: none;
     
-    .entry-bullet-point {
+    .entry_bullet_point {
       position: relative;
 
       &:first-child {
@@ -69,8 +69,8 @@ $gap-bullet: 8pt;
     }
   }
   
-  &.project-entry,
-  &.volunteer-entry {
+  &.project_entry,
+  &.volunteer_entry {
     grid-gap: $gap-first-bullet-y; // gap between job title & first bullet
     
     .entry-bullets {
@@ -83,15 +83,16 @@ $gap-bullet: 8pt;
     }
   }
 
-  &.project-entry,
-  &.volunteer-entry {
-    .entry-header {
+  &.project_entry,
+  &.volunteer_entry {
+    .entry_header {
       grid-template-areas: 'title title location';
     }
   }
+
+  &:global(#internships) .entry_bullets {
+    grid-gap: 4pt; // gap between bullets
+  }
 }
 
-#internships .entry-bullets {
-  grid-gap: 4pt; // gap between bullets
-}
 

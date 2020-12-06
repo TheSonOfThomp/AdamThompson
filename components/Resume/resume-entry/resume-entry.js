@@ -1,12 +1,13 @@
 import React from "react"
+import classnames from "classnames"
 import { Remarkable } from 'remarkable';
 import styles from './resume-entry.module.scss';
 
 const md = new Remarkable()
 
-const ResumeEntry = ({entryClass = 'job-entry', title, company, location, bullets}) => {
+const ResumeEntry = ({entryClass = 'job_entry', title, company, location, bullets}) => {
   return (
-    <div className={`resume-entry ${entryClass}`} id={company && company.replace(/( )/g, '-').toLowerCase()}>
+    <div className={classnames(styles.resume_entry, styles[entryClass])} id={company && company.replace(/( )/g, '-').toLowerCase()}>
       <div className={styles.entry_header}>
         <h4 className={styles.entry_company}>{company}</h4>
         <h3 className={styles.entry_title}>{title}</h3>
@@ -14,7 +15,6 @@ const ResumeEntry = ({entryClass = 'job-entry', title, company, location, bullet
       </div>
       <ul className={styles.entry_bullets}>
         {bullets && bullets.map(b => {
-          console.log(md.render(b))
           return (
             <li className={styles.entry_bullet_point} dangerouslySetInnerHTML={{ __html: md.render(b)}}></li>
           )

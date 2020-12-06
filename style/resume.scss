@@ -65,11 +65,6 @@ a {
     background-color: #fff;
     break-after: page;
 
-    .resume-header {
-      grid-area: header;
-      grid-template-columns: $side-col 1fr max-content;
-    }
-
     .resume-body {
       display: grid;
       grid-area: body;
@@ -155,15 +150,6 @@ a {
     grid-gap: $gap-entry; // gap between entries
   }
   
-  .tool {
-    &:not(:last-child) {
-      margin-right: 0.67em;
-
-      &::after {
-        content: '';
-      }
-    }
-  }
 }
 
 

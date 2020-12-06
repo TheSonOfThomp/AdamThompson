@@ -1,32 +1,12 @@
 import React from "react";
-import {graphql, useStaticQuery} from "gatsby";
 import styles from './tool.module.scss';
 
 const T = ({children}) => {
   const id = children.toLowerCase();
-  const data = useStaticQuery(graphql`
-    query{
-      allImageSharp{
-        nodes{
-          resize {
-            src
-            originalName
-          }
-        }
-      }
-    }`)
-
-  const img = data.allImageSharp.nodes.find(img => {
-    return img.resize.originalName === `${id}.png`
-  })
-
-  const imgSrc = img ? img.resize.src : 'undefined'
-
-  console.log(data, children)
 
   return (
     <div className={styles.tool} id={id}>
-      <img alt={`${id}`} src={imgSrc}/>
+      <img alt={`${id}`} src={`images/tools/${id}.png`}/>
       <span>{children}</span>
     </div>
 )};

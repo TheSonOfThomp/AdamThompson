@@ -5,6 +5,14 @@
   height: 1em;
   font: inherit;
 
+  &:not(:last-child) {
+    margin-right: 0.67em;
+
+    &::after {
+      content: '';
+    }
+  }
+
   img {
     bottom: -0.125em;
     width: auto;
