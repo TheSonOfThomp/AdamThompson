@@ -48,7 +48,7 @@
     "jsdom": "^16.2.2",
     "jss": "^10.3.0",
     "jss-preset-default": "^10.3.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "markdown-to-jsx": "^7.1.0",
     "moment": "^2.24.0",
     "next-compose-plugins": "^2.2.1",
