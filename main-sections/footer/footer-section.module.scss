@@ -1,7 +1,7 @@
 @import '../../style/variables';
 @import '../../style/mixins';
 
-footer {
+.footer {
   display: grid;
   grid-auto-rows: 64px;
   align-items: center;
@@ -11,7 +11,7 @@ footer {
   color: var(--color-white);
   background-color: var(--color-green);
 
-  .footer-content {
+  .footer_content {
     display: flex;
     justify-content: left;
     justify-self: center;

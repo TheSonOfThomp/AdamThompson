@@ -3,7 +3,7 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/portfolio/newvisions": "pages/portfolio/newvisions.js",
-  "/": "pages/index.js",
   "/portfolio/noom": "pages/portfolio/noom.js",
+  "/": "pages/index.js",
   "/portfolio/chameleon": "pages/portfolio/chameleon.js"
 }

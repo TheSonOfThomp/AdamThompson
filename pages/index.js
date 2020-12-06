@@ -8,7 +8,7 @@ import PortfolioSection from "../main-sections/portfolio/portfolio-section";
 import ResumeSection from "../main-sections/resume/resume-section";
 import BlogSection from "../main-sections/blog/blog-section";
 import ProjectsSection from "../main-sections/projects/projects-section";
-// import FooterSection from "../main-sections/footer/footer-section";
+import FooterSection from "../main-sections/footer/footer-section";
 // import QuoteSection from "../main-sections/QuoteSection/QuoteSection";
 
 const IndexPage = () => {
@@ -28,7 +28,7 @@ const IndexPage = () => {
       <ProjectsSection/>
       <PortfolioSection/>
       <BlogSection/>
-      {/* <FooterSection/> */}
+      <FooterSection/>
       
     </main>
 )}
