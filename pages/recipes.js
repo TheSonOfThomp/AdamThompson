@@ -2,7 +2,7 @@ import React from "react";
 import styles from './recipes.module.scss'
 import { startCase } from "lodash";
 import DefaultPage from '../templates/default-page/default-template'
-import { recipes } from '../pages/recipes/meta'
+import { recipes } from '../meta/recipes-meta'
 
 const RecipesPage = () => {
   return (

@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Adam Thompson <adam.m.thompson@icloud.com>",
   "scripts": {
+    "prestart": "node ./meta/parsePageMeta.js",
     "build": "next build",
     "dev": "next dev -p 8000",
     "export": "next export",

@@ -20,7 +20,7 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
       ref={cardRef} 
       href={link} 
       id={id} 
-      className={classnames(styles.portfolio_card, styles.clickable, isHighlightedCard ? 'double_wide' : '')}
+      className={classnames(styles.portfolio_card, styles.clickable, isHighlightedCard ? styles.featured : '')}
     >
       <div className={styles.portfolio_card_text}>
         <h2 className={styles.portfolio_card_title}>{title}</h2>

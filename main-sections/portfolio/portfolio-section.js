@@ -3,15 +3,14 @@ import Section from "../../templates/section/section";
 import PortfolioCard from "./portfolio-card/portfolio-card";
 import styles from './portfolio-section.module.scss';
 
-import { pages } from '../../pages/portfolio/meta'
+import { portfolio } from '../../meta/portfolio-meta'
 
 const PortfolioSection = ({ data }) => {
-
   return (
     <Section title="UX Case Studies" className={styles.section} id="portfolio">
       <div className={styles.portfolio_cards_container}>
       {
-        pages.map((page) => (
+        portfolio.sort(sortDateDesc).map((page) => (
           <PortfolioCard
             key={page.title}
             title={page.title}
@@ -27,6 +26,12 @@ const PortfolioSection = ({ data }) => {
       </div>
     </Section>
   )
+}
+
+function sortDateDesc(a,z) {
+  a = new Date(a)
+  z = new Date(z)
+  return a.getTime() > z.getTime() ? 1 : -1
 }
 
 export default PortfolioSection

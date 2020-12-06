@@ -11,12 +11,5 @@
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 16px;
     }
-    
-    :global(.double_wide) {
-      grid-column: 1 / 3;
-      @media screen and (max-width: $breakpoint-xsmall) {
-        grid-column: 1 / 2;
-      }
-    }
   }
 }
