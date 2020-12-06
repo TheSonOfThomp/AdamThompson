@@ -142,7 +142,7 @@ const InteractiveResume = (props) => {
 
         { resumeData && (
           <>
-          <div className={classnames(styles.axis, x_axis)}>
+          <div className={classnames(styles.axis, styles.x_axis)}>
             <div className={styles.x_axis_label} id="label-discover">
               <h2>Discover</h2>
               <span>what problems need to be solved</span>
