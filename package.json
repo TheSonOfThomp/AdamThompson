@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.3",
+    "@babel/helper-create-class-features-plugin": "^7.12.1",
     "@fortawesome/fontawesome-free": "^5.11.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
