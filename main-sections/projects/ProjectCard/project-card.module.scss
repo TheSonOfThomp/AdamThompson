@@ -1,6 +1,6 @@
 @import '../../../style/mixins';
 
-a.project-card {
+.project_card {
   --logo-width: 192px;
   --logo-height: calc(var(--logo-width)/2);
   @include clickable-card(1,4);
@@ -25,48 +25,48 @@ a.project-card {
     outline-color: var(--project-color, var(--color-green));
   }
 
-  .project-title {
+  .project_title {
     grid-area: title;
     align-self: center;
     justify-self: left;
     margin: 0;
   }
 
-  .project-logo {
+  .project_logo {
     grid-area: logo;
     max-width: var(--logo-width);
     max-height: var(--logo-height);
     place-self: center;
   }
   
-  .project-description {
+  .project_description {
     grid-area: description;
   }
   
-  .project-icon {
+  .project_icon {
     grid-area: icon;
     align-self: flex-end;
     justify-self: right;
   }
   
-  .project-tools-wrapper {
+  .project_tools_wrapper {
     grid-area: tools;
     opacity: 0.75;
   }
 
-  .project-tools-label {
+  .project_tools_label {
     font-size: 0.67em;
     font-weight: bold;
     text-transform: uppercase;
   }
 
-  .project-tools-list {
+  .project_tools_list {
     padding: 0;
     margin: 0;
     list-style-type: none;
   }
 
-  .project-tool {
+  .project_tool {
     display: inline;
     font-size: 0.84em;
 

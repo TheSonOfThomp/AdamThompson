@@ -12,7 +12,7 @@ const compareDates = (project1, project2) => {
 
 const ProjectsSection = () => {
   return (
-    <Section title="Recent Projects" id="projects">
+    <Section title="Recent Projects" className={styles.section} id="projects">
       {
         projects.sort(compareDates).map(project => {
           return (

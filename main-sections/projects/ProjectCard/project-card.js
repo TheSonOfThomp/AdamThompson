@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faNpm } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
-;
-import styles from './project-card.styles.module.scss';
+import styles from './project-card.module.scss';
 
 import { useCustomProp } from  '../../../hooks/useCustomProperty'
 
@@ -15,22 +14,7 @@ const ProjectCard = ({project}) => {
     : (project.icon === "link") ? faExternalLinkAlt
     : null
 
-  const imgQuery = useStaticQuery(graphql`
-    {
-      allImageSharp {
-        nodes {
-          fluid {
-            originalName
-            src
-            srcSet
-            srcSetWebp
-          }
-        }
-      }
-    }
-  `)
-
-  const logoImage = imgQuery.allImageSharp.nodes.find(node => node.fluid.originalName === project.logo)?.fluid
+  const logoImage = `/images/projects/${project.logo}`
 
   const cardRef = useCustomProp('--project-color', project.color)
 
@@ -41,7 +25,7 @@ const ProjectCard = ({project}) => {
       <picture className={styles.project_logo}>
         <source srcSet={logoImage.srcSetWebp} type="image/webp"/>
         <source srcSet={logoImage.srcSet} type="image/png"/>
-        <img className={styles.project_logo} src={logoImage.src} alt={`Logo for ${project.name}`}></img>
+        <img className={styles.project_logo} src={logoImage} alt={`Logo for ${project.name}`}></img>
       </picture>
       <FontAwesomeIcon className={styles.project_icon} icon={iconObj} size="sm" />
       {
