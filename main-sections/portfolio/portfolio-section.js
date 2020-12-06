@@ -3,7 +3,7 @@ import Section from "../../templates/section/section";
 import PortfolioCard from "./portfolio-card/portfolio-card";
 import styles from './portfolio-section.module.scss';
 
-import {pages} from '../../pages/portfolio/'
+import { pages } from '../../pages/portfolio/meta'
 
 const PortfolioSection = ({ data }) => {
 

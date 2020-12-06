@@ -10,7 +10,7 @@
     "export": "next export",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "next dev",
-    "serve": "next serve",
+    "serve": "next start",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "crawl-medium": "node src/scripts/getMediumPosts.js"

@@ -5,3 +5,16 @@ const tabbouleh = require('./tabbouleh.mdx').meta
 const spicyPeanutTofu = require('./spicy-peanut-tofu.mdx').meta
 
 export const recipes = [bangbangShrimp, chickenTikka, falafel, tabbouleh, spicyPeanutTofu]
+const RecipesMeta = () => {
+  return (
+    <ul>
+      {
+        recipes.map(meta => (
+          <li><a href={meta.title.toLowerCase().replace(/ /g, '-')}>{meta.title}</a></li>
+        ))
+      }
+    </ul>
+  )
+}
+
+export default RecipesMeta
