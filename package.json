@@ -54,6 +54,7 @@
     "moment": "^2.24.0",
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.6.2",
+    "next-pwa": "^3.1.5",
     "next-svgr": "^0.0.2",
     "node-sass": "^4.13.1",
     "prettier": "^1.18.2",

@@ -3,6 +3,9 @@ const withMDX = require('@next/mdx')({ extension: /\.mdx?$/});
 const withImages = require('next-images');
 const withPlugins = require('next-compose-plugins');
 
+const withPWA = require('next-pwa')
+const runtimeCaching = require('next-pwa/cache')
+
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx'],
   webpack: (config, options) => {
@@ -39,7 +42,15 @@ const nextConfig = {
 module.exports = withPlugins(
   [
     withMDX,
-    [withImages, { fileExtensions: ["jpg", "jpeg", "png", "gif"],}]
+    [withPWA, {
+      pwa: {
+        dest: 'public',
+        runtimeCaching,
+      },
+    }],
+    [withImages, { 
+      fileExtensions: ["jpg", "jpeg", "png", "gif"]
+    }]
   ], 
   nextConfig
 )
