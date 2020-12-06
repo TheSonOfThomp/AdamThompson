@@ -1,10 +1,11 @@
-@import '../../style/variables.module.scss';
+@import '../../style/variables.scss';
 
-.quote-section {
+.quote_section {
   box-sizing: border-box;
   display: block;
+  max-width: $content-width;
   padding: 0 $global-margin;
-  margin: 24px 0;
+  margin: 24px auto;
 }
 
 .quote {
@@ -17,7 +18,7 @@
   border-left: var(--color-green) 0.25ch solid;
 }
 
-.quote-attribution {
+.quote_attribution {
   float: right;
   font-size: 24px;
   font-weight: 400;

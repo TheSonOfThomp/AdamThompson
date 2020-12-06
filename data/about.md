@@ -1,9 +1,3 @@
----
-title: About
-section: about
-stub: true
----
-
 ## I'm a New York based UX engineer, developing impactful software experiences.
 
 A *UX engineer* typically means someone who writes UI code—and that's an accurate description of me. I maintain a UI component library, re-wrote the core CSS architecture, and built a new landing page for the [New Visions Portal](https://portal.newvisions.org).
@@ -20,3 +14,5 @@ I'm at the intersection of design and engineering, with an education in [Systems
 <!-- ### I love singing and making music. -->
 
 <!-- I'm currently tenor section leader in [The SymphoNYChorus](https://www.thesymphonychorus.com/), and I was the baritone section leader for the ICCA finalist group [The Water Boys](http://www.570news.com/2017/04/05/uw-capella-group-shot-world-title/). -->
+
+export default ({children}) => <>{children}</>

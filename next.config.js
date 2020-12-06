@@ -21,10 +21,13 @@ const nextConfig = {
       }],
     })
 
-    // Load Markdown as objeects
+    // Load Markdown as objects
     config.module.rules.push(
       {
         test: /\.md$/,
+        issuer: {
+          test: /\.(js|ts)?$/,
+        },
         use: 'frontmatter-markdown-loader'
       }
     )
