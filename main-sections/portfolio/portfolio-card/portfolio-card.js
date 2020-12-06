@@ -7,6 +7,8 @@ const HIGHLIGHT = 'new-visions'
 
 const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
 
+  const imgWebp = imgSrc.replace('.png', '.webp')
+
   const id = title.toLowerCase().replace(/( )+/g, '-')
   const isHighlightedCard = id === HIGHLIGHT;
   const cardRef = useCustomProps({
@@ -28,6 +30,7 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
       <div className={styles.portfolio_card_image_wrapper} >
 
         <picture className={styles.portfolio_card_picture}>
+          <source srcSet={imgWebp} type="image/webp" />
           <img
             className={styles.portfolio_card_image}
             src={imgSrc}

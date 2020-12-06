@@ -15,7 +15,8 @@ const ProjectCard = ({project}) => {
     : (project.icon === "link") ? faExternalLinkAlt
     : null
 
-  const logoImage = `/images/projects/${project.logo}`
+  const logoPng = `/images/projects/${project.logo}`
+  const logoWebp = logoPng.replace('.png', '.webp')
 
   const cardRef = useCustomProp('--project-color', project.color)
 
@@ -27,7 +28,7 @@ const ProjectCard = ({project}) => {
       {/* <div className={styles.project_logo}>
         <Image
           className={styles.project_logo}
-          src={logoImage} 
+          src={logoPng} 
           alt={`Logo for ${project.name}`}
           layout="fill"
           objectFit="contain"
@@ -35,8 +36,9 @@ const ProjectCard = ({project}) => {
       </div> */}
       
       <picture className={styles.project_logo}>
+        <source srcSet={logoWebp} type="image/webp" />
         <img
-          src={logoImage}
+          src={logoPng}
           alt={`Logo for ${project.name}`}
           height={96}
           width={192}

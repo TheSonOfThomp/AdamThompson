@@ -13,7 +13,8 @@
     "serve": "next start",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "crawl-medium": "node src/scripts/getMediumPosts.js"
+    "crawl-medium": "node src/scripts/getMediumPosts.js",
+    "webp": "./webp.sh"
   },
   "dependencies": {
     "next": "^10.0.3"
