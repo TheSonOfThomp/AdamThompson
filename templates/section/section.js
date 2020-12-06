@@ -8,7 +8,7 @@ const fullClassName = ['section', className].join(' ')
   return (
   <section className={classnames(styles.section, className)} id={id || title.toLowerCase()} >
     {title && <SectionHeader>{title}</SectionHeader>}
-    <div className={styles.content}>
+    <div className="content">
       {children}
     </div>
   </section>

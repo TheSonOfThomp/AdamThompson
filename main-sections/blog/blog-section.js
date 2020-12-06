@@ -9,7 +9,7 @@ const BlogSection = () => {
   const [postsState] = React.useState(posts.slice(0,4))
 
   return (
-    <Section title="Writing" id="blog">
+    <Section className={styles.section} title="Writing" id="blog">
       {postsState.map(post => {
         return (
           <BlogPostLink post={post} key={post.title}/>

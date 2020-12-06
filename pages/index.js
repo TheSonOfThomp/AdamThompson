@@ -6,7 +6,7 @@ import Hero from "../main-sections/hero/hero";
 import AboutSection from "../main-sections/about/about-section";
 // import PortfolioSection from "../main-sections/portfolio/portfolio-section";
 import ResumeSection from "../main-sections/resume/resume-section";
-// import BlogSection from "../main-sections/blog/blog-section";
+import BlogSection from "../main-sections/blog/blog-section";
 // import FooterSection from "../main-sections/footer/footer-section";
 // import ProjectsSection from "../main-sections/projects/projects-section";
 // import QuoteSection from "../main-sections/QuoteSection/QuoteSection";
@@ -27,7 +27,7 @@ const IndexPage = () => {
       <ResumeSection />
       {/* <ProjectsSection/> */}
       {/* <PortfolioSection/> */}
-      {/* <BlogSection/> */}
+      <BlogSection/>
       {/* <FooterSection/> */}
       
     </main>
