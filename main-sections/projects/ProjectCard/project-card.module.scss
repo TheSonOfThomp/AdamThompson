@@ -33,9 +33,10 @@
   }
 
   .project_logo {
+    position: relative;
     grid-area: logo;
-    max-width: var(--logo-width);
-    max-height: var(--logo-height);
+    width: var(--logo-width);
+    height: var(--logo-height);
     place-self: center;
   }
   

@@ -1,4 +1,5 @@
 import React from "react"
+import Image from 'next/image'
 import classnames from 'classnames'
 import {useCustomProps} from '../../../hooks/useCustomProperty';
 import styles from './portfolio-card.module.scss';
@@ -25,11 +26,15 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
         <span className={styles.portfolio_card_tagline}>{tagline}</span>
       </div>
       <div className={styles.portfolio_card_image_wrapper} >
-        <picture className={styles.portfolio_card_picture}>
-          {/* <source srcSet={imgSrc.srcSetWebp} type="image/webp" /> */}
-          {/* <source srcSet={imgSrc.srcSet} type="image/png" /> */}
-          <img className={styles.portfolio_card_image} src={imgSrc} alt={`${title}`} />
-        </picture>
+
+        <Image 
+          src={imgSrc}
+          alt={`${title}`}
+          layout="fill"
+          objectFit="contain"
+          loading="lazy"
+        />
+
       </div>
     </a>
   )

@@ -67,7 +67,10 @@
   }
 
   .portfolio_card_image_wrapper {
+    position: relative;
     z-index: 1;
+    height: 100%;
+
     @media screen and (max-width: $breakpoint-xsmall) {
       position: absolute;
       top: 16px;
@@ -83,16 +86,16 @@
       opacity: 0.2;
     }
 
-    .portfolio_card_picture {
-      display: flex;
-      justify-content: center;
-    }
+    // .portfolio_card_picture {
+    //   display: flex;
+    //   justify-content: center;
+    // }
 
-    .portfolio_card_image {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
+    // .portfolio_card_image {
+    //   max-width: 100%;
+    //   max-height: 100%;
+    //   object-fit: contain;
+    // }
   }
 
   // .portfolio-card-image.using-background { 
