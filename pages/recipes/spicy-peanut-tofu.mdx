@@ -6,7 +6,7 @@ export const meta = {
   image: 'spicy-tofu.jpg'
 }
 
-import Recipe from "../../components/Recipe/"
+import { RecipeComponent } from "@thesonofThomp/recipe-parser/dist/react"
 
 [‹ Back to Recipes](/recipes)
 
@@ -16,7 +16,7 @@ A great, easy to make vegan dish.
 
 ![Spicy peanut tofu](../../images/food/spicy-tofu.jpg)
 
-<Recipe>
+<RecipeComponent>
 [1] Dry & dice (~1 inch cubes):
   1 lb tofu
 [2] Chop: 1/2 red onion
@@ -42,7 +42,7 @@ A great, easy to make vegan dish.
   #8, 2 vegetables (pepper or broccoli or zucchini)
 [10] Mix: #4, #9
 [11] Combine: #5, #10
-</Recipe>
+</RecipeComponent>
 
 import DefaultTemplate from '../../templates/default-page/default-template'
 export default ({children}) => <DefaultTemplate meta={meta}>{children}</DefaultTemplate>

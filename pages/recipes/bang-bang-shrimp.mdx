@@ -6,7 +6,7 @@ export const meta = {
 }
 
 import DefaultTemplate from '../../templates/default-page/default-template'
-import Recipe from "../../components/Recipe/"
+import { RecipeComponent } from "@thesonofThomp/recipe-parser/dist/react"
 
 [‹ Back to Recipes](/recipes)
 
@@ -14,7 +14,7 @@ import Recipe from "../../components/Recipe/"
 
 ![Bang Bang shrimp](../../images/food/bang-bang-shrimp.jpeg)
 
-<Recipe>
+<RecipeComponent>
 [1] Thaw: 1lb peeled & deveined shrimp
 [2] Whisk & set aside: 
   4 tbsp mayonnaise,
@@ -27,7 +27,7 @@ import Recipe from "../../components/Recipe/"
 [6] Dice: 1 cup cherry tomatoes
 [7] Chop: 2 green onions
 [6] Combine & serve: #2, #4, #5, #6, #7
-</Recipe>
+</RecipeComponent>
 
 # Modifications
 For a spicier version with more "bang", double the Sriracha.
