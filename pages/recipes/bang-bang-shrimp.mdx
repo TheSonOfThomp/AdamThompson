@@ -1,0 +1,35 @@
+export const meta = {
+  title: "Bang Bang Shrimp",
+  section: "recipes",
+  tags: "entrees, spicy",
+  image: 'bang-bang-shrimp.jpeg'
+}
+
+import DefaultTemplate from '../../templates/default-page/default-template'
+import Recipe from "../../components/Recipe/"
+
+[‹ Back to Recipes](/recipes)
+
+# Bang Bang shrimp
+
+![Bang Bang shrimp](../../images/food/bang-bang-shrimp.jpeg)
+
+<Recipe>
+[1] Thaw: 1lb peeled & deveined shrimp
+[2] Whisk & set aside: 
+  4 tbsp mayonnaise,
+  1/4 tbsp Sriracha,
+  1 tbsp rice vinegar,
+  2 tbsp brown sugar
+[3] Coat: #1, 3 tbsp cornstarch
+[4] Fry on medium-high heat: #3, 1/4" oil
+[5] Prepare: 2 cups rice (1/2 cup per serving)
+[6] Dice: 1 cup cherry tomatoes
+[7] Chop: 2 green onions
+[6] Combine & serve: #2, #4, #5, #6, #7
+</Recipe>
+
+# Modifications
+For a spicier version with more "bang", double the Sriracha.
+
+export default ({children}) => <DefaultTemplate meta={meta}>{children}</DefaultTemplate>

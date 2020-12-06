@@ -1,0 +1,23 @@
+@import '../../style/mixins';
+@import '../../style/variables';
+
+.section:global(#blog) {
+  :global(.content) {
+    display: grid;
+    grid-gap: 24px;
+    text-align: left;
+  }
+
+  #show-all-posts {
+    display: inline;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-green);
+    cursor: pointer;
+    background-color: transparent;
+    border: unset;
+    outline-color: var(--color-green);
+  }
+}
+

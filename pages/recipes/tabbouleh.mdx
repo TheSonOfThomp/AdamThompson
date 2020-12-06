@@ -1,0 +1,27 @@
+
+export const meta = {
+  title: "Tabbouleh",
+  section: "recipes",
+  tags: "side, cold, israeli, lebanese, levantine",
+  image: 'falafel.jpg'
+}
+
+import Recipe from "../../components/Recipe/"
+
+[‹ Back to Recipes](/recipes)
+
+# Tabbouleh
+
+![Falafel with Dill sauce and Tabbouleh](../../images/food/falafel.jpg)
+
+<Recipe>
+[1] Boil: 3/4 cups water
+[2] Remove from heat: #1
+[3] Cook: 1/2 cup couscous, #2
+[4] Chop finely: 4 firm roma tomatoes, 1 english cucumber, 2 bunches parsley, 4 green onions
+[5] Combine: #4, 2 tbsp dried mint (or 15 leaves fresh)
+[6] Mix together: #3, #5, 1/4 tsp salt, 4 tbsp lemon juice, 4 tbsp olive oil
+</Recipe>
+
+import DefaultTemplate from '../../templates/default-page/default-template'
+export default ({children}) => <DefaultTemplate meta={meta}>{children}</DefaultTemplate>

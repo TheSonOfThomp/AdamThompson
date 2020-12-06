@@ -1,0 +1,29 @@
+@import '../../style/variables.scss';
+
+.quote_section {
+  box-sizing: border-box;
+  display: block;
+  max-width: $content-width;
+  padding: 0 $global-margin;
+  margin: 24px auto;
+}
+
+.quote {
+  display: inline-block;
+  padding-left: 0.5ch;
+  margin: 0;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 400;
+  border-left: var(--color-green) 0.25ch solid;
+}
+
+.quote_attribution {
+  float: right;
+  font-size: 24px;
+  font-weight: 400;
+
+  &::before {
+    content: '— ';
+  }
+}

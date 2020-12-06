@@ -1,0 +1,84 @@
+@import '../../../style/mixins';
+
+.project_card {
+  --logo-width: 192px;
+  --logo-height: calc(var(--logo-width)/2);
+  @include clickable-card(1,4);
+  @include animate-text-underline('.project-title', var(--project-color, var(--color-green)));
+  @include animate-background-color(transparent, 0, var(--project-color, var(--color-green)), 0.03);
+  display: grid;
+  grid-template-areas: 'logo logo' 'title title' 'description description' 'tools icon';
+  grid-template-rows: var(--logo-height) 1fr 1fr;
+  grid-template-columns: 1fr 24px;
+  grid-auto-rows: max-content;
+  grid-gap: 8px;
+  padding: 16px 20px;
+  border: unset;
+  border-bottom: unset;
+  border-radius: 2px;
+  
+  &:hover {
+    border-bottom: unset;
+  }
+
+  &:focus {
+    outline-color: var(--project-color, var(--color-green));
+  }
+
+  .project_title {
+    grid-area: title;
+    align-self: center;
+    justify-self: left;
+    margin: 0;
+  }
+
+  .project_logo {
+    position: relative;
+    grid-area: logo;
+    width: var(--logo-width);
+    height: var(--logo-height);
+    place-self: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  .project_description {
+    grid-area: description;
+  }
+  
+  .project_icon {
+    grid-area: icon;
+    align-self: flex-end;
+    justify-self: right;
+  }
+  
+  .project_tools_wrapper {
+    grid-area: tools;
+    opacity: 0.75;
+  }
+
+  .project_tools_label {
+    font-size: 0.67em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .project_tools_list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .project_tool {
+    display: inline;
+    font-size: 0.84em;
+
+    &:not(:last-child)::after {
+      content: ', ';
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../style/variables';
+@import '../../style/utilities';
+
+.section {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  width: 100vw;
+  max-width: $content-width;
+  // content-visibility: auto;
+
+  &.section {
+    grid-auto-rows: auto auto;
+    grid-auto-flow: row;
+    grid-row-gap: 24px;
+    margin-bottom: 64px;
+    
+    > * {
+      margin: auto $global-margin;
+    }
+  }
+}

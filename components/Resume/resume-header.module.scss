@@ -1,0 +1,52 @@
+@import '../../style/colours.def.scss';
+$side-col: 48pt;
+
+.resume_header {
+  display: grid;
+  grid-area: header;
+  grid-template-areas: 'monogram name contact' '. tagline .';
+  grid-template-columns: $side-col 1fr max-content;
+  grid-gap: 0 16pt;
+  align-items: baseline;
+
+
+  .name {
+    grid-area: name;
+  }
+
+  :global(#name) { 
+    font-size: 32pt;
+    font-weight: 700;
+    line-height: 1.2em;
+  }
+  
+  :global(#monogram) {
+    grid-area: monogram;
+    width: auto;
+    height: 24pt;
+    margin-top: 8pt;
+  }
+  
+  :global(#contacts) {
+    display: flex;
+    flex-direction: column;
+    grid-area: contact;
+    align-self: center;
+    font-weight: 400;
+    text-align: right;
+
+    a {
+      font-size: 12pt;
+      color: var(--color-green-small);
+    }
+  }
+
+  :global(#tagline) {
+    grid-area: tagline;
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--color-green-small);
+    text-transform: uppercase;
+    letter-spacing: 2pt;
+  }
+}

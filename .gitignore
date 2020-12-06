@@ -57,8 +57,8 @@ typings/
 .env
 
 # gatsby files
-.cache/
-public
+# .cache/
+# public
 
 # Mac files
 .DS_Store
@@ -70,3 +70,9 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 src/pages/cover-letter.jsx
+
+# next cache
+.next/
+out
+# Local Netlify folder
+.netlify

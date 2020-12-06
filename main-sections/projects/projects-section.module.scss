@@ -1,0 +1,12 @@
+@import '../../style/variables';
+@import '../../style/mixins';
+
+.section:global(#projects) {
+  --project-card-min-width: 256px;
+
+  :global(.content) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--project-card-min-width), 1fr));
+    grid-gap: 16px 20px;
+  }
+}

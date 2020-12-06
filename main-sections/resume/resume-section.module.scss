@@ -1,0 +1,27 @@
+@import '../../style/colours.def.scss';
+
+.section:global(#resume) {  
+  .content {
+    text-align: right;
+  }
+
+  .resume_card_section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    grid-gap: 24px 32px;
+  }
+
+  .print_resume {
+    display: inline-flex;
+    align-items: baseline;
+    float: right;
+    margin-top: 24px;
+    font-weight: 600;
+    line-height: 1em;
+    color: $green_small;
+
+    svg {
+      margin-left: 4px;
+    }
+  }
+}
