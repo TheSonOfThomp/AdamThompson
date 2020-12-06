@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import monogram from '../images/monogram.png'
+import path from 'path'
+import { readFileSync } from 'fs'
 
 const fontPaths = [
   "https://use.typekit.net/af/f3ba4f/00000000000000003b9b12fa/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3",
@@ -16,6 +17,42 @@ const meta = {
   keywords: [`adam`, `thompson`, `ux`, `designer`, `developer`, `engineer`, `waterloo`]
 }
 
+// Custom head
+export class EmbeddedStylesHead extends Head {
+  // Overwrite the default method
+  getCssLinks(files) {
+    return this.__getEmbeddedStyles(files.allFiles)
+  }
+
+  __getEmbeddedStyles(files) {
+    if (!files || files.length === 0) return
+
+    // Filter for local CSS files and map them to style tags
+    return files.filter(file => /\.css$/.test(file)).map(mapFileToStyle)
+
+    // Return the contents onf a file
+    function getFileContents(file) {
+      const contents = readFileSync(path.resolve(process.cwd(), '.next', file), 'utf8')
+      return contents
+    }
+
+    // Maps a file to a <style> tag
+    function mapFileToStyle(file) {
+      return (
+        <style
+          key={file}
+          data-href={`/_next/${file}`}
+          dangerouslySetInnerHTML={{
+            __html: getFileContents(file)
+          }}
+        />
+      )
+    }
+  }
+}
+
+
+// Custom Document
 class MyDocument extends Document {
   static async getInitialProps (ctx) {
     const initialProps = await Document.getInitialProps(ctx)
@@ -25,14 +62,14 @@ class MyDocument extends Document {
   render () {
     return (
       <Html lang='en'>
-        <Head>
+        <EmbeddedStylesHead>
           <meta name='Description' content='NYC based UX engineer' />
 
           {/* Preload the fonts */}
-          <link rel="preconnect" href="https://use.typekit.net" />
+          {/* <link rel="preconnect" href="https://use.typekit.net" /> */}
           <link rel="preconnect" href="https://p.typekit.net" />
-          <link rel="preload" as="stylesheet" href="https://use.typekit.net/onu2sfw.css" />
-          <link rel="stylesheet" href="https://use.typekit.net/onu2sfw.css" />
+          {/* <link rel="preload" as="stylesheet" href="https://use.typekit.net/onu2sfw.css" /> */}
+          {/* <link rel="stylesheet" href="https://use.typekit.net/onu2sfw.css" /> */}
           <link rel="preload" as="stylesheet" href="https://p.typekit.net/p.css?s=1&k=onu2sfw&ht=tk&f=15528.15529.15530.17252&a=8773469&app=typekit&e=css" />
           {
             fontPaths.map(href => (
@@ -56,7 +93,7 @@ class MyDocument extends Document {
 
           {/* Add the favicon */}
           <link rel='icon' href='/favicon.png' />
-        </Head>
+        </EmbeddedStylesHead>
         <body>
           <Main />
           <NextScript />
