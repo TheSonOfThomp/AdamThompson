@@ -1,18 +1,10 @@
 import React, { useRef, useEffect } from 'react';
-import { TreeNode } from "@thesonofthomp/recipe-parser/dist/types"
+import PropTypes from 'prop-types'
+// import { TreeNode } from "@thesonofthomp/recipe-parser/dist/types"
 
-type RecipeNodeProps = {
-  id: number,
-  verb: string,
-  ingredients: Array<string>,
-  tree: Array<TreeNode>,
-  depth: number,
-  className?: string
-}
+export const RecipeChartNode = ({ className, id, verb, ingredients, tree, depth }) => {
 
-export const RecipeChartNode = ({ className, id, verb, ingredients, tree, depth }: RecipeNodeProps) => {
-
-  const stepRef = useRef<any>()
+  const stepRef = useRef()
 
   useEffect(() => {
     stepRef.current.style.setProperty('--step-depth', `${depth+1}fr`)
@@ -46,4 +38,13 @@ export const RecipeChartNode = ({ className, id, verb, ingredients, tree, depth 
       }
     </div>
   )
+}
+
+RecipeChartNode.propTypes = {
+  id: PropTypes.number,
+  verb: PropTypes.string,
+  ingredients: PropTypes.arrayOf(PropTypes.string),
+  tree: PropTypes.arrayOf(PropTypes.object),
+  depth: PropTypes.number,
+  className: PropTypes.string
 }

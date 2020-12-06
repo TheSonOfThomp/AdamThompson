@@ -1,9 +1,10 @@
----
-title: Tabbouleh
-section: recipes
-tags: side, cold, israeli, lebanese, levantine
-image: 'falafel.jpg'
----
+
+export const meta = {
+  title: "Tabbouleh",
+  section: "recipes",
+  tags: "side, cold, israeli, lebanese, levantine",
+  image: 'falafel.jpg'
+}
 
 import Recipe from "../../components/Recipe/"
 
@@ -21,3 +22,6 @@ import Recipe from "../../components/Recipe/"
 [5] Combine: #4, 2 tbsp dried mint (or 15 leaves fresh)
 [6] Mix together: #3, #5, 1/4 tsp salt, 4 tbsp lemon juice, 4 tbsp olive oil
 </Recipe>
+
+import DefaultTemplate from '../../templates/default-page/default-template'
+export default ({children}) => <DefaultTemplate meta={meta}>{children}</DefaultTemplate>

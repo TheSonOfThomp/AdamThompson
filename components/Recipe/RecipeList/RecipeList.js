@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Recipe as TRecipe} from '@thesonofthomp/recipe-parser'
-// @ts-ignore
+import PropTypes from 'prop-types'
+import classnames from "classnames"
 import { usePrevious } from '../../../hooks/usePrevious';
 import styles from './RecipeList.module.scss';
 
-type RecipeListProps = {
-  json?: TRecipe
-}
-const RecipeList = ({json}:RecipeListProps) => {
+
+const RecipeList = ({json}) => {
 
   // Recipe ingredients list 
-  const [highlightedElement, setHighlightedElement] = useState<Element | null>()
+  const [highlightedElement, setHighlightedElement] = useState()
   const prevElement = usePrevious(highlightedElement)
-  const listRef = React.useRef<any>()
+  const listRef = React.useRef()
 
-  const handleIngredientMouseOver = (stepRef: number) => {
+  const handleIngredientMouseOver = (stepRef) => {
     setHighlightedElement(document.querySelector(`#steps-list-${stepRef - 1}`))
   }
   const handleIngredientMouseOut = () => {
@@ -34,14 +32,14 @@ const RecipeList = ({json}:RecipeListProps) => {
           <li className={styles.recipe_steps_list_step} id={`steps-list-${i}`} key={`step-${i}`}>
             <b className={styles.recipe_steps_list_verb}>{step.verb} </b>
             {
-              step.ingredients.map((ing: string) => {
+              step.ingredients.map((ing) => {
                 const stepRef = ing.search('#') === 0 ? parseInt(ing.slice(1)) : null
                 if (stepRef) {
                   ing = ing.replace('#', 'Step ')
                   return <span
                     onMouseOver={() => { handleIngredientMouseOver(stepRef) }}
                     onMouseOut={handleIngredientMouseOut}
-                    className={classnames(styles.recipe_steps-list-ingredient, styles.recipe_steps-list-ingredient-ref)}
+                    className={classnames(styles.recipe_steps_list_ingredient, styles.recipe_steps_list_ingredient_ref)}
                     key={ing}>{ing}</span>
                 } else {
                   return <span className={styles.recipe_steps_list_ingredient} key={ing}>{ing}</span>
@@ -53,6 +51,10 @@ const RecipeList = ({json}:RecipeListProps) => {
       }
     </ol>
   )
+}
+
+RecipeList.propTypes = {
+  json: PropTypes.object
 }
 
 export default RecipeList;

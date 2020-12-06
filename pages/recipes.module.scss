@@ -1,14 +1,14 @@
 @import '../style/mixins';
 @import '../style/variables';
 
-.recipe-cards {
+.recipe_cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   grid-gap: 16px;
   margin: 32px auto;
 }
 
-.recipe-card {
+.recipe_card {
   @include clickable-card();
   @include animate-text-underline('.recipe-title');
   display: grid;
@@ -21,14 +21,14 @@
     border: unset;
   }
 
-  .recipe-title {
+  .recipe_title {
     grid-area: title;
     width: fit-content;
     margin: 0;
     font-size: 1.5em;
   }
 
-  .recipe-tags {
+  .recipe_tags {
     display: grid;
     grid-area: tags;
     grid-auto-columns: max-content;
@@ -37,7 +37,7 @@
     font-size: 14px;
   }
   
-  .recipe-tag {
+  .recipe_tag {
     opacity: 0.5;
 
     &:not(:last-child)::after {
@@ -45,13 +45,13 @@
     }
   }
 
-  .recipe-excerpt {
+  .recipe_excerpt {
     padding: 0.5em 0 0;
     font-size: 16px;
     font-weight: 200;
   }
 
-  .recipe-image {
+  .recipe_image {
     grid-area: image;
     align-self: center;
     justify-self: center;

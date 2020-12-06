@@ -1,10 +1,11 @@
----
-title: Bang Bang Shrimp
-section: recipes
-tags: entrees, spicy
-image: 'bang-bang-shrimp.jpeg'
----
+export const meta = {
+  title: "Bang Bang Shrimp",
+  section: "recipes",
+  tags: "entrees, spicy",
+  image: 'bang-bang-shrimp.jpeg'
+}
 
+import DefaultTemplate from '../../templates/default-page/default-template'
 import Recipe from "../../components/Recipe/"
 
 [‹ Back to Recipes](/recipes)
@@ -30,3 +31,5 @@ import Recipe from "../../components/Recipe/"
 
 # Modifications
 For a spicier version with more "bang", double the Sriracha.
+
+export default ({children}) => <DefaultTemplate meta={meta}>{children}</DefaultTemplate>

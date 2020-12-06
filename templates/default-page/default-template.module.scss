@@ -1,7 +1,7 @@
 /* your css code */
 @import '../../style/variables';
 
-.default-page {
+.default_page {
   display: block;
   align-items: center;
   max-width: $content-width;
@@ -21,6 +21,10 @@
   
   h1 {
     font-size: 2em;
+  }
+
+  img {
+    max-width: 100%;
   }
 
   &.recipes {

@@ -2,6 +2,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js",
-  "/portfolio/newvisions": "pages/portfolio/newvisions.js"
+  "/recipes/chicken-tikka-masala": "pages/recipes/chicken-tikka-masala.js",
+  "/recipes": "pages/recipes.js"
 }

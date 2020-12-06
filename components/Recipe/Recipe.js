@@ -1,19 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import { parseRecipe } from '@thesonofthomp/recipe-parser/dist';
-import { Recipe as TRecipe } from '@thesonofthomp/recipe-parser/dist/types';
 import { RecipeChart } from './RecipeChart/RecipeChart';
-import styles from './Recipe.module.scss';
 import RecipeList from './RecipeList';
 
-type RecipeProps = {
-  children: React.ReactNode
-}
-const Recipe = ({children}: RecipeProps) => {
+const Recipe = ({children}) => {
 
-  const [recipeJson, setRecipe] = React.useState<TRecipe>()
+  const [recipeJson, setRecipe] = React.useState()
 
   React.useEffect(() => {
-    const string = children as string
+    const string = children
     const json = parseRecipe(string)
     setRecipe(json)
     console.log(json)
@@ -25,6 +21,10 @@ const Recipe = ({children}: RecipeProps) => {
       <RecipeList json={recipeJson}></RecipeList>
     </>
   )
+}
+
+Recipe.propTypes = {
+  children: PropTypes.node
 }
 
 export default Recipe;

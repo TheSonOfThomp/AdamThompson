@@ -1,48 +1,10 @@
 import React from "react";
-
-;
-import { Link } from "gatsby";
 import styles from './recipes.module.scss'
 import { startCase } from "lodash";
 import DefaultPage from '../templates/default-page/default-template'
+import { recipes } from '../pages/recipes/meta'
 
 const RecipesPage = () => {
-
-  const query = useStaticQuery(graphql`
-  query {
-    allMdx(filter: {frontmatter: {section: {eq: "recipes"}}}) {
-      nodes {
-        frontmatter {
-          title
-          tags
-          image
-        }
-        fields {
-          slug
-        }
-        excerpt
-      }
-    }
-    allImageSharp {
-      nodes {
-        fluid {
-          originalName
-          src
-          srcSet
-          srcSetWebp
-        }
-      }
-    }
-  }
-  `)
-  const images = query.allImageSharp.nodes.map(node => node.fluid)
-  const recipes = query.allMdx.nodes.map(node => {
-    return {
-      ...node,
-      image: images.find(img => img.originalName === node.frontmatter.image)
-    }
-  })
-
   return (
     <>
     <DefaultPage title="Recipes">
@@ -63,23 +25,26 @@ const RecipesPage = () => {
 
       <div className={styles.recipe_cards}>
         {
-          recipes.sort((a,z) => a.frontmatter.title - z.frontmatter.title).map(recipe => {
+          recipes.sort((a,z) => a.title - z.title).map(recipe => {
+
+          const slug = `recipes/${recipe.title.toLowerCase().replace(/ /g, '-')}`
+          
           return (
-            <Link to={'.'+recipe.fields.slug} className={`recipe-card`} key={recipe.frontmatter.title}>
-              <h1 className={styles.recipe_title}>{recipe.frontmatter.title}</h1>
+            <a href={slug} className={styles.recipe_card} key={recipe.title}>
+              <h1 className={styles.recipe_title}>{recipe.title}</h1>
               <div className={styles.recipe_tags}>
                 {
-                  recipe.frontmatter.tags.split(',').map(tag => <span className={styles.recipe_tag}>{startCase(tag)}</span>)
+                  recipe.tags.split(',').map(tag => <span className={styles.recipe_tag}>{startCase(tag)}</span>)
                 }
               </div>
               {recipe.image &&
               <picture className={styles.recipe_image}>
-                <source srcset={recipe.image.srcSetWebp} type="image/webp"/>
-                <source srcset={recipe.image.srcSet} type="image/jpg"/>
-                <img className={styles.recipe_image} src={recipe.image.src} alt={recipe.frontmatter.title} />
+                {/* <source srcset={recipe.image.srcSetWebp} type="image/webp"/>
+                <source srcset={recipe.image.srcSet} type="image/jpg"/> */}
+                <img className={styles.recipe_image} src={`images/food/${recipe.image}`} alt={recipe.title} />
               </picture> 
               }
-            </Link>
+            </a>
           )})
         }
       </div>

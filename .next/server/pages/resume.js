@@ -88,60 +88,23 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 1:
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("1TCz");
+module.exports = __webpack_require__("TuXs");
 
 
 /***/ }),
 
-/***/ "1TCz":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_global_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("uBxz");
-/* harmony import */ var _style_global_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_global_scss__WEBPACK_IMPORTED_MODULE_1__);
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-function MyApp({
-  Component,
-  pageProps
-}) {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(Component, _objectSpread({}, pageProps));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (MyApp);
-
-/***/ }),
-
-/***/ "F5FC":
+/***/ "TuXs":
 /***/ (function(module, exports) {
 
-module.exports = require("react/jsx-runtime");
-
-/***/ }),
-
-/***/ "uBxz":
-/***/ (function(module, exports) {
-
-
+throw new Error("Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-babel-loader.js):\nSyntaxError: /Users/athompson/Documents/GitHub/Personal/AdamThompson/pages/resume.js: Unexpected token, expected \"}\" (27:40)\n\n\u001b[0m \u001b[90m 25 | \u001b[39m    \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m{styles\u001b[33m.\u001b[39mresume_container}\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 | \u001b[39m      \u001b[33m<\u001b[39m\u001b[33mSEO\u001b[39m title\u001b[33m=\u001b[39m\u001b[32m\"Resume\"\u001b[39m \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 | \u001b[39m      \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m{styles\u001b[33m.\u001b[39mresume_page\u001b[32m\" id=\"\u001b[39mpage_1}\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 | \u001b[39m        \u001b[33m<\u001b[39m\u001b[33mResumeHeader\u001b[39m\u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 29 | \u001b[39m        \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m{styles\u001b[33m.\u001b[39mresume_body}\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 30 | \u001b[39m          {\u001b[90m/* <div className={styles.summary}>{resumeData.blurb}</div> */\u001b[39m}\u001b[0m\n    at Object._raise (/Users/athompson/Documents/GitHub/Personal/AdamThompson/node_modules/next/dist/compiled/babel/bundle.js:2113:29279)\n    at Object.raiseWithData (/Users/athompson/Documents/GitHub/Personal/AdamThompson/node_modules/next/dist/compiled/babel/bundle.js:2113:29218)\n    at Object.raise (/Users/athompson/Documents/GitHub/Personal/AdamThompson/node_modules/next/dist/compiled/babel/bundle.js:2113:29039)\n    at Object.unexpected (/Users/athompson/Documents/GitHub/Personal/AdamThompson/node_modules/next/dist/compiled/babel/bundle.js:2113:183130)\n    at Object.expect (/Users/athompson/Documents/GitHub/Personal/AdamThompson/node_modules/next/dist/compiled/babel/bundle.js:2113:182883)\n    at Object.jsxParseExpressionContainer (/Users/athompson/Documents/GitHub/Personal/AdamThompson/node_modules/next/dist/compiled/babel/bundle.js:2113:103786)\n    at Object.jsxParseAttributeValue (/Users/athompson/Documents/GitHub/Personal/AdamThompson/node_modules/next/dist/compiled/babel/bundle.js:2113:103066)\n    at Object.jsxParseAttribute (/Users/athompson/Documents/GitHub/Personal/AdamThompson/node_modules/next/dist/compiled/babel/bundle.js:2113:104122)\n    at Object.jsxParseOpeningElementAfterName (/Users/athompson/Documents/GitHub/Personal/AdamThompson/node_modules/next/dist/compiled/babel/bundle.js:2113:104546)\n    at Object.jsxParseOpeningElementAt (/Users/athompson/Documents/GitHub/Personal/AdamThompson/node_modules/next/dist/compiled/babel/bundle.js:2113:104399)");
 
 /***/ })
 

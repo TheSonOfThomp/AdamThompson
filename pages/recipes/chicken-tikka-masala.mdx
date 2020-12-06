@@ -1,9 +1,9 @@
----
-title: Chicken Tikka Masala
-section: recipes
-tags: entrees, indian, chicken, spicy
-image: 'chicken-tm-spices.jpg'
----
+export const meta = {
+  title: "Chicken Tikka Masala",
+  section: "recipes",
+  tags: "entrees, indian, chicken, spicy",
+  image: 'chicken-tm-spices.jpg'
+}
 
 import Recipe from "../../components/Recipe/"
 
@@ -45,3 +45,6 @@ This allows you to focus on the sauce without worrying about over- or under-cook
 
 ## Modifications
 The recipe describes medium-spice. Remove 1/4 tsp of cayenne for mild, or add cayenne pepper to taste.
+
+import DefaultTemplate from '../../templates/default-page/default-template'
+export default ({children}) => <DefaultTemplate meta={meta}>{children}</DefaultTemplate>

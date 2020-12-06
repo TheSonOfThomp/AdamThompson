@@ -1,9 +1,9 @@
----
-title: Falafel
-section: recipes
-tags: entrees, israeli, lebanese, levantine
-image: 'falafel.jpg'
----
+export const meta = {
+  title: "Falafel",
+  section: "recipes",
+  tags: "entrees, israeli, lebanese, levantine",
+  image: 'falafel.jpg'
+}
 
 import Recipe from "../../components/Recipe/"
 
@@ -23,3 +23,7 @@ Best paired with Tzatziki and [Tabbouleh](/recipes/tabbouleh)
 [5] Roll into ~1 inch round pucks: #4
 [6] Fry in cast iron on medium heat, about 3 mins per side: #5, 1/4 - 1/2 inch cooking oil in pan
 </Recipe>
+
+import DefaultTemplate from '../../templates/default-page/default-template'
+export default ({children}) => <DefaultTemplate meta={meta}>{children}</DefaultTemplate>
+
