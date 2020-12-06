@@ -12,6 +12,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "next dev",
     "serve": "next start",
+    "netlify": "netlify dev",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "crawl-medium": "node src/scripts/getMediumPosts.js",
