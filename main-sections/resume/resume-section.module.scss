@@ -11,10 +11,12 @@
     grid-gap: 24px 32px;
   }
 
-  a.print_resume {
+  .print_resume {
     display: inline-flex;
     align-items: baseline;
+    float: right;
     margin-top: 24px;
+    font-weight: 600;
     line-height: 1em;
     color: $green_small;
 
