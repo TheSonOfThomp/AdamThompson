@@ -1,17 +1,17 @@
-@import '../../style/colours.def.module.scss';
+@import '../../style/colours.def.scss';
 
-.section#resume {  
+.section:global(#resume) {  
   .content {
     text-align: right;
   }
 
-  .resume-card-section {
+  .resume_card_section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
     grid-gap: 24px 32px;
   }
 
-  a.print-resume {
+  a.print_resume {
     display: inline-flex;
     align-items: baseline;
     margin-top: 24px;

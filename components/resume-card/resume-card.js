@@ -7,7 +7,7 @@ const ResumeCard = ({id, logoSrc, title, location, term, position, summary, bull
   return (
     <div 
       id={id}
-      className={'resume-card'}
+      className={styles.resume_card}
     >
         <div className={styles.resume_card_header}>
           {/* <img className={styles.logo} src={logoSrc} alt={title}/> */}

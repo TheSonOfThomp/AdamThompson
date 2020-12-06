@@ -6,7 +6,7 @@ import about from '../../data/about.md'
 
 const AboutSection = ({ data }) => {
   return (
-    <Section id={styles.about}>
+    <Section className={styles.section} id="about">
       <span className={styles.about_text} dangerouslySetInnerHTML={{ __html: about.html }}>
       </span>
     </Section>
