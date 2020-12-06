@@ -27,13 +27,22 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
       </div>
       <div className={styles.portfolio_card_image_wrapper} >
 
-        <Image 
+        <picture className={styles.portfolio_card_picture}>
+          <img
+            className={styles.portfolio_card_image}
+            src={imgSrc}
+            alt={`${title}`}
+            width={300}
+            height={200}
+          />
+        </picture>
+        {/* <Image 
           src={imgSrc}
           alt={`${title}`}
           layout="fill"
           objectFit="contain"
           loading="lazy"
-        />
+        /> */}
 
       </div>
     </a>

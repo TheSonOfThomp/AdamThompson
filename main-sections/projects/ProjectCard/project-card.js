@@ -24,7 +24,7 @@ const ProjectCard = ({project}) => {
       <h2 className={styles.project_title}>{project.name}</h2>
       <span className={styles.project_description}>{project.description}</span>
 
-      <div className={styles.project_logo}>
+      {/* <div className={styles.project_logo}>
         <Image
           className={styles.project_logo}
           src={logoImage} 
@@ -32,8 +32,17 @@ const ProjectCard = ({project}) => {
           layout="fill"
           objectFit="contain"
         />
-      </div>
+      </div> */}
       
+      <picture className={styles.project_logo}>
+        <img
+          src={logoImage}
+          alt={`Logo for ${project.name}`}
+          height={96}
+          width={192}
+        />
+      </picture>
+
       <FontAwesomeIcon className={styles.project_icon} icon={iconObj} size="sm" />
       {
         project.tools && (
