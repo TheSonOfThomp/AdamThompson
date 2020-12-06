@@ -72,7 +72,5 @@ yarn-error.log
 src/pages/cover-letter.jsx
 
 # next cache
-.next/cache
-.next/static
-.next/server
+.next/
 out
