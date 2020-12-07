@@ -7,6 +7,7 @@ const withPlugins = require('next-compose-plugins');
 // const runtimeCaching = require('next-pwa/cache')
 
 const nextConfig = {
+  target: 'serverless',
   pageExtensions: ['js', 'jsx', 'mdx'],
   webpack: (config, options) => {
     
