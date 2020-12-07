@@ -1,0 +1,28 @@
+export const meta = {
+  title: "McSorley's Impossible Chili",
+  section: "recipes",
+  tags: "entree, spicy, vegan",
+  image: 'mcsorleys.jpg'
+}
+
+import { RecipeComponent } from "@thesonofthomp/recipe-parser/dist/react"
+
+[‹ Back to Recipes](/recipes)
+
+# McSorley's Impossible Chili
+
+![McSorley's Impossible Chili](../../images/food/mcsorleys.jpg)
+
+I adapted this recipe from an old newspaper article hanging on the wall at McSorley's Old Ale House in the East Village.
+
+<RecipeComponent>
+[1] Heat: 3 tbsp peanut oil, 3 tbps butter
+[2] Fry until translucent: 1 large red onion, 4 cloves garlic, #1
+[3] Cook:  1 1/2 lbs Impossible meat, #2
+[4] Season: 3 tbps chili powder, #3
+[5] Simmer for 1hr: 1 can (~4cups) diced tomatoes, 2 tsp cumin, 1 tsp oregano, 1 tsp tabasco, 1/2 tsp salt, #4
+[6] Add & bring back to a simmer: 2 cups kidney beans, 1 cup chick peas, #5
+</RecipeComponent>
+
+import DefaultTemplate from '../../templates/default-page/default-template'
+export default ({children}) => <DefaultTemplate meta={meta}>{children}</DefaultTemplate>
