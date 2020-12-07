@@ -1,0 +1,31 @@
+export const meta = {
+  title: "Jambalaya",
+  section: "recipes",
+  tags: "entrees, spicy, cajun",
+  image: 'jambalaya.jpg'
+}
+
+import { RecipeComponent } from "@thesonofthomp/recipe-parser/dist/react"
+
+[‹ Back to Recipes](/recipes)
+
+# Jambalaya
+
+![Jambalaya. Not my photo. I still need to take one.](../../images/food/jambalaya.jpg)
+
+You'll need to pre-make some [Cajun Seasoning](/recipes/cajun-seasoning) for this recipe.
+
+<RecipeComponent>
+[1] Slice into 1/4" discs: 4 andouille sausages
+[2] Wash & peel: 1lb shrimp
+[3] Fry in large pot until coooked: #1, #2, 2 tbsp butter
+[4] Dice: 1 large onion
+[5] Add to pot & cook until translucent: #4, #3
+[6] Add and cook ~1 minute: #5, 1 tbsp Cajun Seasoning
+[7] Add to pot & fry ~2 minutes: 2 cups uncooked rice, 1 can kidney beans, 1 can black beans, #6
+[8] Simmer: 2 cups water, 2 tsp chicken or vegetable boullion, 1 cup crushed tomatoes, #7
+[9] Add: 1 tbsp Cajun Seasoning, #8
+</RecipeComponent>
+
+import DefaultTemplate from '../../templates/default-page/default-template'
+export default ({children}) => <DefaultTemplate meta={meta}>{children}</DefaultTemplate>

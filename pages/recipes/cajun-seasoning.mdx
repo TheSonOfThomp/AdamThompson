@@ -1,0 +1,30 @@
+export const meta = {
+  title: "Cajun Seasoning",
+  section: "recipes",
+  tags: "spice mix, seasoning, spicy, cajun",
+  image: 'jambalaya.jpg'
+}
+
+import { RecipeComponent } from "@thesonofthomp/recipe-parser/dist/react"
+
+[‹ Back to Recipes](/recipes)
+
+# Cajun Seasoning
+
+<!-- ![Cajun Seasoning](../../images/food/jambalaya.jpeg) -->
+
+<RecipeComponent>
+[1] Mix together:
+  2 tsp Salt,
+  2 tsp Garlic powder,
+  1tsp Onion powder,
+  2 1/2 tsp Paprika,
+  1tsp Black pepper,
+  1 tsp Cayenne (medium spice - 1/2 tsp for mild) ,
+  1 1/4 tsp Oregano,
+  1 1/4 tsp Thyme,
+  1/2 tsp Red pepper flakes,
+</RecipeComponent>
+
+import DefaultTemplate from '../../templates/default-page/default-template'
+export default ({children}) => <DefaultTemplate meta={meta}>{children}</DefaultTemplate>
