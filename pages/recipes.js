@@ -27,7 +27,7 @@ const RecipesPage = () => {
         {
           recipes.sort((a,z) => a.title - z.title).map(recipe => {
 
-          const slug = `recipes/${recipe.title.toLowerCase().replace(/ /g, '-')}`
+          const slug = `recipes/${recipe.slug}`
           
           return (
             <a href={slug} className={styles.recipe_card} key={recipe.title}>

@@ -1,0 +1,36 @@
+export const meta = {
+  title: "Pad Thai",
+  section: "recipes",
+  tags: "entree, spicy, thai",
+  image: 'pad-thai.jpg'
+}
+
+import { RecipeComponent } from "@thesonofthomp/recipe-parser/dist/react"
+
+[‹ Back to Recipes](/recipes)
+
+# Pad Thai
+
+<!-- ![Pad Thai](../../images/food/pad-thai.jpg) -->
+
+<RecipeComponent>
+[1] Mix together: 
+  3 tbsp brown sugar,
+  2 tbsp peanut butter,
+  1 tbsp Soy sauce, 
+  1 tbsp Fish sauce, 
+  1 tbsp Rice vinegar, 
+  1 tsp Sriracha, 
+  1 tsp Oyster sauce,
+  1 tsp Sesame oil,
+[2] Dice: 1lb chicken or tofu
+[3] Fry until cooked: #2, 2 tbsp canola oil
+[4] Remove from heat: #3
+[5] Fry until translucent: 1 small onion, 1 clove garlic,
+[6] Boil 3 minutes: 8oz rice noodles
+[7] Combine: #5, #4
+[8] Combine: #6, #7, #1
+</RecipeComponent>
+
+import DefaultTemplate from '../../templates/default-page/default-template'
+export default ({children}) => <DefaultTemplate meta={meta}>{children}</DefaultTemplate>
