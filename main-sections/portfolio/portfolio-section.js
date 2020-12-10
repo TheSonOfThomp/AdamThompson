@@ -10,7 +10,9 @@ const PortfolioSection = ({ data }) => {
     <Section title="UX Case Studies" className={styles.section} id="portfolio">
       <div className={styles.portfolio_cards_container}>
       {
-        portfolio.sort(sortDateDesc).map((page) => (
+        portfolio && portfolio.map((page) => {
+          console.log(page);
+          return (
           <PortfolioCard
             key={page.title}
             title={page.title}
@@ -21,7 +23,7 @@ const PortfolioSection = ({ data }) => {
             imgSrc={`/images/portfolio/cover/${page.cover}`}
           >
           </PortfolioCard>
-        ))
+        )})
       }
       </div>
     </Section>

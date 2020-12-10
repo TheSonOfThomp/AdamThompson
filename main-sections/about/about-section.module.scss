@@ -3,6 +3,7 @@
 .section:global(#about) {
   margin: 24px 0;
   text-align: left;
+  scroll-margin-top: 128px;
 
   .about_text {
     position: relative;
