@@ -12,7 +12,7 @@ const AboutSection = ({ data }) => {
         </Markdown>
 
         <Markdown options={{ forceBlock: true }}>
-          A *UX engineer* typically means someone who writes UI code—and that's an accurate description of me. I maintain a UI component library, re-wrote the core CSS architecture, and built a new landing page for the [New Visions Portal](https://portal.newvisions.org).
+          A *UX engineer* typically means someone who writes UI code—and that's an accurate description of me. I maintain a UI component library, re-wrote the core CSS architecture, and built a new landing page for the [New Visions Portal](https://portal-test.newvisions.org).
         </Markdown>
 
         <Markdown options={{ forceBlock: true }}>
