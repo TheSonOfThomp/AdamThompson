@@ -12,11 +12,11 @@ const AboutSection = ({ data }) => {
         </Markdown>
 
         <Markdown options={{ forceBlock: true }}>
-          A *UX engineer* typically means someone who writes UI code—and that's an accurate description of me. I maintain a UI component library, re-wrote the core CSS architecture, and built a new landing page for the [New Visions Portal](https://portal-test.newvisions.org).
+          *UX engineer* typically implies a designer who codes—and that's an accurate description. I built and maintain a UI component library, re-wrote the core CSS architecture, and built a new landing page for the [New Visions Portal](https://portal-test.newvisions.org).
         </Markdown>
 
         <Markdown options={{ forceBlock: true }}>
-          But more precisely, I'm a UX engineer in that I apply engineering problem-solving to holistically solve complex interaction problems. The [New Visions dashboard framework](./portfolio/newvisions), and the [Noom food logging workflow](./portfolio/noom) are just two examples of tackling tough problems through analysis and creative problem solving. 
+          But more precisely, a UX engineer is someone who applies engineering problem-solving to holistically solve complex interaction problems. The [New Visions dashboard framework](./portfolio/newvisions), and the [Noom food logging workflow](./portfolio/noom) are just two examples of tackling tough problems through analysis and creative problem solving. 
         </Markdown>
 
         <Markdown options={{ forceBlock: true }}>
