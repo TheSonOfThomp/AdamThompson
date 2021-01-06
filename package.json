@@ -37,7 +37,7 @@
     "@svgr/webpack": "^5.5.0",
     "@thesonofthomp/recipe-parser": "^0.1.0",
     "@types/react-helmet": "^6.1.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "babel-loader": "^8.0.5",
     "chroma-js": "^2.0.6",
     "copy-webpack-plugin": "^5.1.1",
