@@ -6,7 +6,7 @@
   "author": "Adam Thompson <adam.m.thompson@icloud.com>",
   "scripts": {
     "prestart": "node ./meta/parsePageMeta.js",
-    "build": "next build",
+    "build": "next build && next export",
     "dev": "next dev -p 8000",
     "export": "next export",
     "format": "prettier --write src/**/*.{js,jsx}",
