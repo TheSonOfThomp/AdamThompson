@@ -6,27 +6,14 @@
 $header-opacity: 16;
 
 .hero {
-
   position: relative;
-
   display: flex;
   flex-direction: column;
-
-  // display: grid;
-  // grid-template-areas: 'header' 'hero' '.';
-  // grid-template-rows: auto 1fr auto;
-  // grid-template-columns: Min($content-width, 100vw);
-  // grid-auto-flow: row;
-  // grid-row-gap: 0;
-  // align-items: center;
-  // justify-content: center;
-
-
   width: 100vw;
   max-width: none;
   height: vh(100);
   min-height: 568px;
-  max-height: 1200px;
+  max-height: 768px;
   margin-bottom: 32px;
   overflow: hidden;
   color: $white;
@@ -64,17 +51,26 @@ $header-opacity: 16;
 
 .hero_contents {
   position: relative;
-  display: grid;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
-  grid-area: hero;
-  grid-template-areas: '.' 'title' 'tagline' '.';
-  grid-template-rows: auto repeat(2, min-content) auto;
-  grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
   font-family: var(--font-sans);
   font-weight: 400;
   pointer-events: none;
+
+  // Animation
+  transform-style: preserve-3d;
+  perspective: 2000px;
+  perspective-origin:
+    calc(var(--mouseX) * -100%)
+    calc(var(--mouseY) * 100%);
+
+  @media (prefers-reduced-motion) {
+    perspective-origin: center center;
+  }
 
 
   %hero-element {
@@ -84,12 +80,14 @@ $header-opacity: 16;
 
   .big_letters {
     @extend %hero-element;
-    display: grid;
-    grid-row: 1/-1;
-    grid-column: 1/-1;
-    font-size: responsiveSize(512, 768);
+    position: absolute;
+    top: 50%;
+    width: responsiveSize(512, 768);
+    margin: unset;
+    color: var(--color-black);
     opacity: $header-opacity * 0.01;
     place-items: center;
+    transform: translateY(-50%) translateZ(-2px);
     
     .big_letters_monogram {
       box-sizing: border-box;
@@ -106,6 +104,7 @@ $header-opacity: 16;
     margin: 0 16px;
     font-size: responsiveSize(54, 144);
     line-height: 1.5em;
+    transform: translateZ(4px);
   }
   
   .tagline {
@@ -118,38 +117,6 @@ $header-opacity: 16;
     font-weight: 700;
     line-height: 1.2em;
     text-align: center;
-  }
-}
-
-// Animations
-.hero_contents {
-  z-index: 1;
-  transform-style: preserve-3d;
-  perspective: 2000px;
-  perspective-origin:
-    calc(var(--mouseX) * -100%)
-    calc(var(--mouseY) * 100%);
-
-  @media (prefers-reduced-motion) {
-    perspective-origin: center center;
-  }
-
-  .big_letters {
-    margin: unset;
-    color: var(--color-black);
-    transform: translateZ(-2px);
-  }
-
-  .title {
-    transform: translateZ(4px);
-  }
-  
-  .tagline {
     transform: translateZ(2px);
   }
 }
-
-
-  
-
-
