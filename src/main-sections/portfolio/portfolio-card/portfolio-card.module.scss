@@ -15,8 +15,6 @@
   grid-template-columns: 2fr 1fr;
   grid-gap: 16px;
   align-items: center;
-  min-height: 25%;
-  min-height: 25vh;
   padding: 32px;
   color: var(--color-white);
   text-align: left;
@@ -77,7 +75,6 @@
   .portfolio_card_image_wrapper {
     position: relative;
     z-index: 1;
-    // height: 100%;
 
     @media screen and (max-width: $breakpoint-xsmall) {
       position: absolute;

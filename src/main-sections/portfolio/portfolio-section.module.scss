@@ -4,6 +4,7 @@
   .portfolio_cards_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 320px;
     grid-gap: 24px;
     
     
