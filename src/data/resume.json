@@ -10,9 +10,9 @@
       "location": "NYC",
       "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
-        "Streamlined designer/developer collaboration by building an Angular component library and compiling design system documentation with Storybook.",
-        "Developed a CSS architecture that leverages the opinionated nature of Angular, improving long-term frontend maintainability and visual consistency.",
-        "Designed a framework to streamline development of data visualizations, enabling us to launch remote learning features days after schools closed in March 2020."
+        "Developed a CSS architecture and Angular component library, streamlining designer-developer collaboration and improving long-term maintainability and consistency.",
+        "Led development on a new product landing page built using React and Next, and consulted on a brand identity redesign to unify product messaging.",
+        "Created a design framework to streamline development of data visualizations, enabling us to launch remote learning features days after schools closed in March 2020."
       ],
       "show": true
     },
@@ -24,8 +24,8 @@
       "location": "Kitchener",
       "summary": "Design process, high level product vision & business case development.",
       "bullets": [
-        "Defined business strategy and product specifications for a line of music accessories based on market and user research.",
-        "Developed a globally used tool allowing managers to quickly evaluate new projects based on ROI and other key data."
+        "Defined user requirements, product specifications, and business strategy based on market and user research for a new line of music accessories.",
+        "Developed a globally-used tool allowing managers to quickly evaluate new projects based on ROI and other key data."
       ],
       "show": true
     },
@@ -41,15 +41,15 @@
       "show": false
     },
     "co-op": {
-      "company": "Internships",
-      "position": "UI Designer / Developer",
+      "company": "Co-op Education",
+      "position": "UI Designer & Developer",
       "term": "2013-2017",
       "location": "Toronto & NYC",
       "bullets": [
-        "**Sony**: Led design and UI development for a music discovery feature.",
+        "**Zynga**: Optimized user flows for engagement based on the results of multi-variate testing.",
+        "**Noom**: Redesigned the core food logging experience to align with observed mental models.",
         "**KnowRoaming**: Overhauled the app IA and UI to better align with common use cases.",
-        "**Noom**: Aligned the core food logging experience with the users' mental models.",
-        "**Zynga**: Optimized user flows based on the results of multi-variate testing."
+        "**Sony**: Led design and UI development for a music discovery feature."
       ],
       "show": true
     }
@@ -62,7 +62,7 @@
       "degree": "Honours BASc.",
       "minor": "Cognitive Science",
       "summary": "Honours B.ASc. with Cognitive Science minor",
-      "class": "2017"
+      "class": "Class of 2017"
     }
   },
   "projects": "See projects.json",
@@ -89,7 +89,7 @@
     }      
   },
   "toolbox": [
-    "CSS", "HTML", "Javascript", "Typescript", "Angular", "React", "Vue",
+    "CSS", "HTML", "Javascript", "React", "Angular", "Vue", "Typescript",
     "Storybook", "Sass", "Swift", "Node", "D3", "XState", "Git", "CI", "Python",
     "Sketch", "Figma", "Zeplin", "InVision", "Photoshop", "Illustrator", "Framer", "Balsamiq", 
     "Excel", "Airtable", "Arduino"
