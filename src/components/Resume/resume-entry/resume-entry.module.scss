@@ -13,7 +13,7 @@ $gap-bullet: 8pt;
   
   .entry_header {
     display: grid;
-    grid-template-areas: 'title company location';
+    grid-template-areas: 'company title location';
     grid-template-columns: max-content max-content 1fr;
     grid-auto-flow: column;
     grid-gap: 0.5em; // spacing between title & company
@@ -61,6 +61,7 @@ $gap-bullet: 8pt;
     }
 
     strong {
+      font-weight: bold;
       color: var(--color-black);
     }
 

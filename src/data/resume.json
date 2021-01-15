@@ -10,8 +10,8 @@
       "location": "NYC",
       "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
-        "Developed a CSS architecture and Angular component library, streamlining designer-developer collaboration and improving long-term maintainability and consistency.",
-        "Led development on a new product landing page built using React and Next, and consulted on a brand identity redesign to unify product messaging.",
+        "Developed a CSS architecture and an Angular component library, streamlining designer-developer collaboration and improving long-term app maintainability and consistency.",
+        "Led development for a new landing page built using React and Next, and consulted on a brand identity redesign to unify product messaging.",
         "Created a design framework to streamline development of data visualizations, enabling us to launch remote learning features days after schools closed in March 2020."
       ],
       "show": true
