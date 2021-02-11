@@ -8,6 +8,7 @@
       "color": "#2e8c5d",
       "icon": "link",
       "tools": ["Python", "MatLab", "Arduino", "Fusion 360"],
+      "tags": ["hardware", "software", "programming", "audio", "control systems", "3d printing", "3d modeling", "microcontroller", "circuits"],
       "date": "2017-04-22",
       "showOnResume": true,
       "showOnHomepage": true
@@ -19,7 +20,7 @@
       "icon": "link",
       "description": "Play the dice game \"Farkle\" online with friends.",
       "color": "rgb(5, 90, 4)",
-      "tools": ["Three.js","XState","Typescript","React","Socket.io", "Heroku"],
+      "tools": ["Three.js", "XState", "Typescript", "React", "Socket.io"],
       "date": "2020-07-10",
       "showOnResume": true,
       "showOnHomepage": true
@@ -88,9 +89,10 @@
     {
       "name": "Tap Metronome",
       "url": "https://github.com/TheSonOfThomp/TAP-Metronome",
-      "description": "A simple iOS metronome app with a minimal UI.",
-      "tools": ["Swift"],
-      "showOnResume": false,
+      "icon": "github",
+      "description": "A simple iOS metronome app with a minimalistic UI.",
+      "tools": ["iOS", "Swift"],
+      "showOnResume": true,
       "showOnHomepage": false
     },
     {

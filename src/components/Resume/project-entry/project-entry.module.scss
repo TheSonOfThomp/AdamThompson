@@ -1,0 +1,66 @@
+@import '../../../style/colours.def.scss';
+@import '../../../style/mixins';
+
+$gap-title: 2pt; // gap between job title & first bullet
+
+.project_entry {
+  display: grid;
+  grid-template-rows: 18pt auto;
+  grid-auto-flow: row;
+  grid-gap: $gap-title;
+
+  // If there are an odd number of entries, make the last one take all cols
+  &:nth-child(2n-1):last-child {
+    grid-column: 1/-1;
+  }
+  
+  .project_header {
+    display: grid;
+    grid-template-areas: 'title link';
+    grid-template-columns: max-content min-content;
+    grid-auto-flow: column;
+    grid-gap: 0.5em; // spacing between title & company
+    align-items: baseline;
+  }
+
+  .project_title {
+    grid-area: title;
+    font-size: 14pt;
+    color: var(--color-green-small);
+  }
+
+  .project_icon {
+    display: flex;
+    color: $grey-darker;
+    border: unset;
+    
+    &:hover {
+      border: unset;
+    }
+  }
+
+  .project_description {
+    font-weight: 300;
+    color: var(--color-black);
+  }
+
+  .project_tools {
+    height: 1em;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-size: 0.75em;
+    line-height: 1em;
+    list-style-type: none;
+
+    .project_tool {
+      display: inline;
+
+      &:not(:last-child)::after {
+        content: ', ';
+      }
+    }
+  }
+}
+
+

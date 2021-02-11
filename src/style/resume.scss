@@ -42,6 +42,13 @@ a {
   border-bottom: unset;
 }
 
+.ats-only {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  color: white;
+}
+
 .resume-container {
   display: grid;
   grid-auto-flow: row;
@@ -80,7 +87,7 @@ a {
       
       $highlight-size: 1ch;
       padding-left: $highlight-size;
-      margin-left: -1 * $highlight-size;
+      margin-left: -2 * $highlight-size;
       font-size: 10pt;
       font-weight: 700;
       line-height: 2em;

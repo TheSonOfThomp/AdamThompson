@@ -4,6 +4,7 @@ import { faLinkedinIn, faGithub, faTwitter, faCodepen } from '@fortawesome/free-
 import T from "../components/Resume/tool/tool"
 import ResumeHeader from "../components/Resume/resume-header";
 import ResumeEntry from "../components/Resume/resume-entry/resume-entry";
+import ProjectEntry from "../components/Resume/project-entry/project-entry";
 import * as resumeJson from '../data/resume.json';
 import * as projectsJson from '../data/projects.json';
 
@@ -22,12 +23,12 @@ class ResumePage extends React.Component {
       <div className="resume-page" id="page-1">
         <ResumeHeader />
         <div className="resume-body">
-          {/* <div className="summary">{resumeData.blurb}</div> */}
+          {/* <div className="summary ats-only">{resumeData.blurb}</div> */}
           <div className="column" id="column-left">
 
             {/* EXPERIENCE */}
             <div className="column-section " id="experience">
-              <h2 className="section-header">Experience</h2>
+              <h2 className="section-header">Professional Experience</h2>
               <div className="column-section-contents">
                 {Object.values(resumeData.experience).filter(job => job.show).map(job => {
                   return <ResumeEntry
@@ -61,10 +62,9 @@ class ResumePage extends React.Component {
               <h2 className="section-header">Projects</h2>
               <div className="column-section-contents">
                 {Object.values(projectsData.projects).map(project => (
-                  project.showOnResume && <ResumeEntry
-                    entryClass="project_entry"
-                    title={project.name}
-                    bullets={[project.description]}
+                  project.showOnResume && 
+                  <ProjectEntry
+                    project={project}
                   />
                 ))}
               </div>
