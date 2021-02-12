@@ -25,7 +25,7 @@ const ResumeSection = () => {
           ))
         }
       </div>
-      <a className={styles.print_resume} href="/Adam Thompson - Resume.pdf" download>Printable resume <FontAwesomeIcon icon={faExternalLinkAlt} size="xs"/></a>
+      <a className={styles.print_resume} href="/Adam Thompson Resume.pdf" download>Printable resume <FontAwesomeIcon icon={faExternalLinkAlt} size="xs"/></a>
     </Section>
   )
 }
