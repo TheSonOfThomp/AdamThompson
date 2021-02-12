@@ -11,7 +11,7 @@ const PortfolioSection = ({ data }) => {
       <div className={styles.portfolio_cards_container}>
       {
         portfolio && portfolio.map((page) => {
-          console.log(page);
+          // console.log(page);
           return (
           <PortfolioCard
             key={page.title}

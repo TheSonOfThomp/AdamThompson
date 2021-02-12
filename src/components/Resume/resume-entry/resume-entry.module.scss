@@ -29,7 +29,7 @@ $gap-bullet: 8pt;
   .entry_company {
     grid-area: company;
     font-size: 14pt;
-    color: var(--color-grey-darker);
+    color: var(--color-black);
   }
 
   .entry_location {
@@ -38,13 +38,12 @@ $gap-bullet: 8pt;
     font-size: 10pt;
   }
 
-  .entry_bullets {
+  .entry_bullets {  
     display: grid;
     grid-gap: $gap-bullet; // gap between bullets
     padding-left: 0;
     font-weight: 300;
     color: var(--color-black);
-    // color: var(--color-grey-darker);
     list-style-type: none;
     
     .entry_bullet_point {
@@ -61,37 +60,58 @@ $gap-bullet: 8pt;
     }
 
     strong {
-      color: var(--color-grey-dark);
+      font-weight: 600;
+      color: var(--color-black);
     }
 
     p {
       margin: 0;
     }
   }
+
+  .entry_tools {
+    height: 1em;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-size: 0.75em;
+    line-height: 1em;
+    list-style-type: none;
+
+    .entry_tool {
+      display: inline;
+
+      &:not(:last-child)::after {
+        content: ', ';
+      }
+    }
+  }
   
   &.project_entry,
   &.volunteer_entry {
     grid-gap: $gap-first-bullet-y; // gap between job title & first bullet
-    
-    .entry-bullets {
-      // padding: 0;
 
+    .entry_header {
+      grid-template-areas: 'title title location';
+    }
+
+    .entry-bullets {
       .entry-bullet-point {
         padding-left: 0;
         border: unset;
       }
     }
+
+
   }
 
-  &.project_entry,
-  &.volunteer_entry {
-    .entry_header {
-      grid-template-areas: 'title title location';
+  &:global(#internships),
+  &:global(#co-op),
+  &:global(#co-op-education)
+  {
+    .entry_bullets {
+      grid-gap: 4pt; // gap between bullets
     }
-  }
-
-  &:global(#internships) .entry_bullets {
-    grid-gap: 4pt; // gap between bullets
   }
 }
 
