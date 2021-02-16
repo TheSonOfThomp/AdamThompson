@@ -49,7 +49,7 @@
       "bullets": [
         "**Zynga**: Optimized user flows for engagement based on the results of multi-variate testing.",
         "**Noom**: Redesigned the core food logging workflow to align with observed mental models.",
-        "**KnowRoaming**: Re-architected the iOS app UI to improve the most common use cases.",
+        "**KnowRoaming**: Re-architected the mobile apps UI to improve the most common use cases.",
         "**Sony**: Led design and user interface development for a music discovery feature."
       ],
       "show": true
@@ -90,10 +90,10 @@
     }      
   },
   "toolbox": [
-    "CSS3", "HTML5", "Javascript", "React", "Angular", "Vue", "Typescript",
-    "Storybook", "Sass", "Swift", "Node.js", "npm", "Git", "CI", "Python", "XState",
+    "Javascript", "CSS3", "Sass", "HTML5", "Angular", "Typescript", "Vue", "React",
+    "Python", "Java", "C++", "Swift", "npm", "Git", "CI", "Storybook",
     "Sketch", "Figma", "Zeplin", "InVision", "Photoshop", "Illustrator", "Framer", "Balsamiq", 
-    "Excel", "Airtable", "Arduino", "D3"
+    "Excel", "Airtable", "Arduino", "D3", "XState"
   ],
   "awards" : {
     "norman-esch": {

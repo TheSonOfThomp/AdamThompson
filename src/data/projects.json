@@ -92,7 +92,7 @@
       "icon": "github",
       "description": "A simple iOS metronome app with a minimalistic UI.",
       "tools": ["iOS", "Swift"],
-      "showOnResume": true,
+      "showOnResume": false,
       "showOnHomepage": false
     },
     {

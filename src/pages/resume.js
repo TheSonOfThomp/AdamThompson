@@ -1,4 +1,5 @@
 import React from "react"
+import Head from 'next/head'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn, faGithub, faTwitter, faCodepen } from '@fortawesome/free-brands-svg-icons'
 import T from "../components/Resume/tool/tool"
@@ -20,6 +21,7 @@ class ResumePage extends React.Component {
 
   _ResumeJSX = (
     <div className="resume-container">
+      <Head><title>Adam Thompson Resume</title></Head>
       <div className="resume-page" id="page-1">
         <ResumeHeader />
         <div className="resume-body">
