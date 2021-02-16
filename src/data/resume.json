@@ -10,7 +10,7 @@
       "location": "NYC",
       "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
-        "Architected and led development for a new [landing page](https://portal.newvisions.org) using React, Next.js and Netlify server-side functions, resulting in an all-time high for daily active users shortly after launch.",
+        "Architected and led development for a new landing page using React, Next.js and Netlify server-side functions, resulting in an all-time high for daily active users shortly after launch.",
         "Developed and maintained an Angular component library, and defined a consistent CSS (SASS) architecture. This streamlined cross-functional collaboration and communication, and improved long-term app maintainability and UI consistency.",
         "Created a design framework to streamline creation of data visualizations, enabling us to launch remote learning features just days after schools closed in March 2020.",
         "Developed prototyping infrastructure with Vue and D3 in order to test new features and interactions with real-looking data."
