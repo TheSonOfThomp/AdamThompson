@@ -10,10 +10,10 @@
       "location": "NYC",
       "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
+        "Developed and maintained an Angular component library, and defined a more consistent CSS (Sass) architecture. This streamlined cross-functional collaboration and communication, and improved long-term maintainability and UI consistency.",
         "Architected and led development for a new landing page using React, Next.js and Netlify server-side functions, resulting in an all-time high for daily active users shortly after launch.",
-        "Developed and maintained an Angular component library, and defined a consistent CSS (SASS) architecture. This streamlined cross-functional collaboration and communication, and improved long-term app maintainability and UI consistency.",
         "Created a design framework to streamline creation of data visualizations, enabling us to launch remote learning features just days after schools closed in March 2020.",
-        "Developed prototyping infrastructure with Vue and D3 in order to test new features and interactions with real-looking data."
+        "Developed prototyping infrastructure with Vue and D3 in order to validate new features and interactions with a full experience."
       ],
       "show": true
     },
@@ -36,9 +36,7 @@
       "term": "Sept 2016 - Dec 2017",
       "position": "Co-founder",
       "location": "Waterloo",
-      "bullets": [
-        "Defined business strategy and product specifications for a line of music accessories based on market and user research."
-      ],
+      "bullets": [],
       "show": false
     },
     "co-op": {
@@ -52,7 +50,61 @@
         "**KnowRoaming**: Re-architected the mobile apps UI to improve the most common use cases.",
         "**Sony**: Led design and user interface development for a music discovery feature."
       ],
-      "show": true
+      "show": false
+    },
+    "zynga": {
+      "company": "Zynga (Co-op)",
+      "url": "http://www.zynga.com/poker",
+      "term": "Summer 2016",
+      "position": "UX Product Manager",
+      "summary": "Data analysis, UX research and testing for Poker Web.",
+      "location": "Toronto",
+      "bullets": [
+        "Optimized user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature and a new subscription-based revenue model."
+      ],
+      "show": true,
+      "isCoop": true
+    },
+    "noom": {
+      "company": "Noom (Co-op)",
+      "url": "http://www.noom.com",
+      "term": "Fall 2015",
+      "position": "Product Designer",
+      "summary": "Usability optimization, and user testing for the core food-logging feature.",
+      "location": "NYC",
+      "logotype": "images/companies/noom_logotype_small.png",
+      "logo": "images/companies/noom_logo.png",
+      "bullets": [
+        "Simplified the core food logging experience by modifying the information architecture to better fit the mental model observed during user interviews."
+      ],
+      "show": true,
+      "isCoop": true
+    },
+    "knowroaming": {
+      "company": "KnowRoaming (Co-op)",
+      "url": "http://www.knowroaming.com",
+      "term": "Spring 2014 - Winter 2015",
+      "position": "UX Designer",
+      "summary": "User research, information architecture and UI design for all mobile apps.",
+      "location": "Toronto",
+      "bullets": [
+        "Redesigned the app information architecture and UI to better align with common use cases."
+      ],
+      "show": true,
+      "isCoop": true
+    },
+    "sony": {
+      "company": "Sony (Co-op)",
+      "url": "http://mediago.sony.com",
+      "term": "Winter 2013",
+      "position": "UI Designer",
+      "summary": "UI design and front-end development for MediaGo.",
+      "location": "Waterloo",
+      "bullets": [
+        "Led UI design and front-end development for a music discovery feature."
+      ],
+      "show": true,
+      "isCoop": true
     }
   },
   "education": {
@@ -90,10 +142,10 @@
     }      
   },
   "toolbox": [
-    "Javascript", "CSS3", "Sass", "HTML5", "Angular", "Typescript", "Vue", "React",
+    "Javascript", "HTML5", "CSS3", "Sass", "Angular", "Typescript", "Vue", "React",
     "Python", "Java", "C++", "Swift", "npm", "Git", "CI", "Storybook",
     "Sketch", "Figma", "Zeplin", "InVision", "Photoshop", "Illustrator", "Framer", "Balsamiq", 
-    "Excel", "Airtable", "Arduino", "D3", "XState"
+    "D3", "XState", "Three.js", "Airtable", "Arduino"
   ],
   "awards" : {
     "norman-esch": {
