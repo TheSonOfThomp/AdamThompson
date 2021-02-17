@@ -135,9 +135,20 @@ a {
   grid-auto-flow: row;
   grid-gap: $gap-section; // gap between sections
 
+  .column-subsection-label {
+    grid-column: 1/-1;
+  }
+
   .column-section {
     display: grid;
     grid-gap: $gap-first-entry; // gap between header & first entry
+
+    .column-section-contents {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: $gap-entry-y $gap-entry-x; // gap between entries
+      // grid-gap: $gap-entry; // gap between entries
+    }
 
     &#projects .column-section-contents,
     &#volunteer .column-section-contents {
@@ -151,12 +162,6 @@ a {
       line-height: 1.5em;
     }
   }
-
-  .column-section-contents {
-    display: grid;
-    grid-gap: $gap-entry; // gap between entries
-  }
-  
 }
 
 

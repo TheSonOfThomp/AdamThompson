@@ -8,8 +8,10 @@ $gap-bullet: 8pt;
 .resume_entry {
   display: grid;
   grid-template-rows: 18pt auto;
+  grid-column: 1/-1;
   grid-auto-flow: row;
   grid-gap: $gap-first-bullet; // gap between job title & first bullet
+  font-size: 14pt;
   
   .entry_header {
     display: grid;
@@ -86,7 +88,29 @@ $gap-bullet: 8pt;
       }
     }
   }
-  
+
+  &.isCoop {
+    grid-template-rows: 14pt auto;
+    grid-column: auto;
+    grid-gap: $gap-first-bullet-y; // gap between job title & first bullet
+    font-size: 12pt;
+
+
+    .entry_header {
+      grid-template-columns: max-content max-content;
+      grid-template-areas: 'company title' 'location location';
+    }
+
+    .entry_title,
+    .entry_company {
+      font-size: 12pt;
+    }
+
+    .entry_location {
+      display: none;
+    }
+  }
+
   &.project_entry,
   &.volunteer_entry {
     grid-gap: $gap-first-bullet-y; // gap between job title & first bullet

@@ -12,6 +12,11 @@ import * as projectsJson from '../data/projects.json';
 const resumeData = resumeJson.default
 const projectsData = projectsJson.default
 
+const realJobs = Object.values(resumeData.experience).filter(job => job.show).filter(job => !job.isCoop)
+const coopJobs = Object.values(resumeData.experience).filter(job => job.show).filter(job => job.isCoop)
+
+console.log(realJobs, coopJobs);
+
 class ResumePage extends React.Component {
 
   constructor() {
@@ -32,14 +37,28 @@ class ResumePage extends React.Component {
             <div className="column-section " id="experience">
               <h2 className="section-header">Professional Experience</h2>
               <div className="column-section-contents">
-                {Object.values(resumeData.experience).filter(job => job.show).map(job => {
-                  return <ResumeEntry
-                    title={job.position}
-                    company={job.company}
-                    location={`${job.term} | ${job.location}`}
-                    bullets={job.bullets}
-                  />
-                })}
+                {
+                  realJobs.map(job => (
+                    <ResumeEntry
+                      title={job.position}
+                      company={job.company}
+                      location={`${job.term} | ${job.location}`}
+                      bullets={job.bullets}
+                    />
+                  ))
+                }
+                {/* <h3 className="column-subsection-label">Co-op Education</h3> */}
+                {
+                  coopJobs.map(job => (
+                    <ResumeEntry
+                      title={job.position}
+                      company={job.company}
+                      location={`${job.term} | ${job.location}`}
+                      bullets={job.bullets}
+                      isCoop={job.isCoop}
+                    />
+                  ))
+                }
               </div>
             </div>
 

@@ -50,23 +50,23 @@
         "**KnowRoaming**: Re-architected the mobile apps UI to improve the most common use cases.",
         "**Sony**: Led design and user interface development for a music discovery feature."
       ],
-      "show": false
+      "show": true
     },
     "zynga": {
-      "company": "Zynga (Co-op)",
+      "company": "Zynga",
       "url": "http://www.zynga.com/poker",
       "term": "Summer 2016",
       "position": "UX Product Manager",
       "summary": "Data analysis, UX research and testing for Poker Web.",
       "location": "Toronto",
       "bullets": [
-        "Optimized user flows based on the results of multi-variate testing, and configured final design parameters for a social engagement feature and a new subscription-based revenue model."
+        "Optimized user flows for engagement based on the results of multi-variate testing."
       ],
-      "show": true,
+      "show": false,
       "isCoop": true
     },
     "noom": {
-      "company": "Noom (Co-op)",
+      "company": "Noom",
       "url": "http://www.noom.com",
       "term": "Fall 2015",
       "position": "Product Designer",
@@ -75,13 +75,13 @@
       "logotype": "images/companies/noom_logotype_small.png",
       "logo": "images/companies/noom_logo.png",
       "bullets": [
-        "Simplified the core food logging experience by modifying the information architecture to better fit the mental model observed during user interviews."
+        "Redesigned the core food logging workflow to align with observed mental models."
       ],
-      "show": true,
+      "show": false,
       "isCoop": true
     },
     "knowroaming": {
-      "company": "KnowRoaming (Co-op)",
+      "company": "KnowRoaming",
       "url": "http://www.knowroaming.com",
       "term": "Spring 2014 - Winter 2015",
       "position": "UX Designer",
@@ -90,11 +90,11 @@
       "bullets": [
         "Redesigned the app information architecture and UI to better align with common use cases."
       ],
-      "show": true,
+      "show": false,
       "isCoop": true
     },
     "sony": {
-      "company": "Sony (Co-op)",
+      "company": "Sony",
       "url": "http://mediago.sony.com",
       "term": "Winter 2013",
       "position": "UI Designer",
@@ -103,7 +103,7 @@
       "bullets": [
         "Led UI design and front-end development for a music discovery feature."
       ],
-      "show": true,
+      "show": false,
       "isCoop": true
     }
   },
