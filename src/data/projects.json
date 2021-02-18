@@ -63,7 +63,8 @@
     },
     {
       "name": "ZeplinX",
-      "description": "An internal Confluence plugin to embed Zeplin images on a page.",
+      "description": "An Confluence plugin to embed Zeplin images on a page.",
+      "url": "https://github.com/TheSonOfThomp/confluence-zeplin-embed",
       "logo": "zeplinX-icon.png",
       "date": "2019-12-03",
       "color": "rgb(243, 102, 36)",
