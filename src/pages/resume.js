@@ -5,7 +5,6 @@ import { faLinkedinIn, faGithub, faTwitter, faCodepen } from '@fortawesome/free-
 import T from "../components/Resume/tool/tool"
 import ResumeHeader from "../components/Resume/resume-header";
 import ResumeEntry from "../components/Resume/resume-entry/resume-entry";
-import ProjectEntry from "../components/Resume/project-entry/project-entry";
 import * as resumeJson from '../data/resume.json';
 import * as projectsJson from '../data/projects.json';
 
@@ -15,7 +14,36 @@ const projectsData = projectsJson.default
 const realJobs = Object.values(resumeData.experience).filter(job => job.show).filter(job => !job.isCoop)
 const coopJobs = Object.values(resumeData.experience).filter(job => job.show).filter(job => job.isCoop)
 
-console.log(realJobs, coopJobs);
+
+const ResumeFooter = () => (
+  <div className="resume-footer">
+    <a href="https://www.linkedin.com/in/adammthompson/">
+      <FontAwesomeIcon icon={faLinkedinIn} size="sm" />
+        /adammthompson
+      </a>
+    <a href="https://www.twitter.com/thesonofthomp/">
+      <FontAwesomeIcon icon={faTwitter} size="sm" />
+        @thesonofthomp
+      </a>
+    <a href="https://www.github.com/thesonofthomp">
+      <FontAwesomeIcon icon={faGithub} size="sm" />
+        @thesonofthomp
+      </a>
+    <a href="https://codepen.io/TheSonOfThomp/">
+      <FontAwesomeIcon icon={faCodepen} size="sm" />
+        thesonofthomp
+      </a>
+  </div>
+)
+
+const ResumeSection = ({id, header, children}) => (
+<div className="column-section" id={id || header.replace(/( )/, '-').toLowerCase()}>
+  <h2 className="section-header">{header}</h2>
+  <div className="column-section-contents">
+    {children}
+  </div>
+</div>
+)
 
 class ResumePage extends React.Component {
 
@@ -34,63 +62,49 @@ class ResumePage extends React.Component {
           <div className="column" id="column-left">
 
             {/* EXPERIENCE */}
-            <div className="column-section" id="experience">
-              <h2 className="section-header">Professional Experience</h2>
-              <div className="column-section-contents">
-                {
-                  realJobs.map(job => (
-                    <ResumeEntry
-                      header1={job.company}
-                      header2={job.position}
-                      aside={`${job.term} | ${job.location}`}
-                      contentArray={job.bullets}
-                    />
-                  ))
-                }
-              </div>
+            <ResumeSection id="experience" header="Professional Experience">
+              {
+                realJobs.map(job => (
+                  <ResumeEntry
+                    header1={job.company}
+                    header2={job.position}
+                    aside={`${job.term} | ${job.location}`}
+                    contentArray={job.bullets}
+                  />
+                ))
+              }
+            </ResumeSection>
 
-              <div className="column-section" id="coop">
-                <h2 className="section-header">Co-op experience</h2>
-                <div className="column-section-contents">
-                {
-                    coopJobs.map(job => (
-                      <ResumeEntry
-                        header1={job.company}
-                        header2={job.position}
-                        aside={`${job.term} | ${job.location}`}
-                        contentArray={job.bullets}
-                        isCompact={job.isCoop}
-                      />
-                    ))
-                  }
-                </div>
-              </div>
-                {/* <div className="column-subsection-label">
-                  <h3>Co-op Work</h3>
-                </div> */}
-                
-            </div>
+            <ResumeSection id="coop" header="Co-op Experience">
+              {
+                coopJobs.map(job => (
+                  <ResumeEntry
+                    header1={job.company}
+                    header2={job.position}
+                    aside={`${job.term} | ${job.location}`}
+                    contentArray={job.bullets}
+                    isCompact={job.isCoop}
+                  />
+                ))
+              }
+            </ResumeSection>
 
             {/* EDUCATION */}
-            <div className="column-section " id="education">
-              <h2 className="section-header">Education</h2>
-              <div className="column-section-contents">
-                <ResumeEntry
-                  header1={resumeData.education.uwaterloo.company}
-                  header2={resumeData.education.uwaterloo.position}
-                  aside={resumeData.education.uwaterloo.class}
-                  contentArray={[
-                    resumeData.education.uwaterloo.summary
-                  ]}
-                />
-              </div>
-            </div>
+            <ResumeSection id="education" header="Education">
+              <ResumeEntry
+                header1={resumeData.education.uwaterloo.company}
+                header2={resumeData.education.uwaterloo.position}
+                aside={resumeData.education.uwaterloo.class}
+                contentArray={[
+                  resumeData.education.uwaterloo.summary
+                ]}
+              />
+            </ResumeSection>
 
             {/* PROJECTS */}
-            <div className="column-section " id="projects">
-              <h2 className="section-header">Projects</h2>
-              <div className="column-section-contents">
-                {Object.values(projectsData.projects).map(project => (
+            <ResumeSection id="projects" header="Projects">
+              {
+                Object.values(projectsData.projects).map(project => (
                   project.showOnResume && 
                   <ResumeEntry
                     header1={project.name}
@@ -98,19 +112,16 @@ class ResumePage extends React.Component {
                     contentArray={[project.description]}
                     isCompact={true}
                   />
-                ))}
-              </div>
-            </div>
+                ))
+              }
+            </ResumeSection>
 
             {/* TOOLBOX */}
-            <div className="column-section" id="tools">
-              <h2 className="section-header">Skills</h2>
-              <div className="column-section-contents">
-                {resumeData.toolbox.map(tool => {
-                  return <T>{tool}</T>
-                })}
-              </div>
-            </div>
+            <ResumeSection id="tools" header="Skills">
+              {
+                resumeData.toolbox.map(tool => <T>{tool}</T>)
+              }
+            </ResumeSection>
 
 
 
@@ -156,28 +167,13 @@ class ResumePage extends React.Component {
           </div>
 
         </div>
-        <div className="resume-footer">
-          <a href="https://www.linkedin.com/in/adammthompson/">
-            <FontAwesomeIcon icon={faLinkedinIn} size="sm" />
-              /adammthompson
-            </a>
-          <a href="https://www.twitter.com/thesonofthomp/">
-            <FontAwesomeIcon icon={faTwitter} size="sm" />
-              @thesonofthomp
-            </a>
-          <a href="https://www.github.com/thesonofthomp">
-            <FontAwesomeIcon icon={faGithub} size="sm" />
-              @thesonofthomp
-            </a>
-          <a href="https://codepen.io/TheSonOfThomp/">
-            <FontAwesomeIcon icon={faCodepen} size="sm" />
-              thesonofthomp
-            </a>
-        </div>
+
+        <ResumeFooter />
+
       </div>
 
-
-      {/* <div className="resume-page" id="page-2">
+{/* 
+      <div className="resume-page" id="page-2">
         <div className="resume-body full-width">
           <div className="column" id="column-right"> */}
 
@@ -199,14 +195,10 @@ class ResumePage extends React.Component {
               </div>
             </div> */}
 
-
-      {/* </div> 
-        </div>
-        <div className="resume-footer">
-          <a href="http://thesonofthomp.com">thesonofthomp.com</a>
-          <a href="mailto:adam@thesonofthomp.com">adam@thesonofthomp.com</a>
-          <a href="tel:13323335780" id="phone">+1-332-333-5780</a>
-        </div>
+{/* 
+      </div> 
+      </div>
+        <ResumeFooter />
       </div> */}
 
     </div>
