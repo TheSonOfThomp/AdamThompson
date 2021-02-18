@@ -69,7 +69,7 @@
       "color": "rgb(243, 102, 36)",
       "tools": ["Javascript", "Atlassian API", "AWS"],
       "showOnResume": false,
-      "showOnHomepage": false
+      "showOnHomepage": true
     },
     {
       "name": "Word Chain",
