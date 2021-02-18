@@ -50,25 +50,25 @@
         "**KnowRoaming**: Re-architected the mobile apps UI to improve the most common use cases.",
         "**Sony**: Led design and user interface development for a music discovery feature."
       ],
-      "show": true
+      "show": false
     },
     "zynga": {
       "company": "Zynga",
       "url": "http://www.zynga.com/poker",
-      "term": "Summer 2016",
+      "term": "Apr - Aug 2016",
       "position": "UX Product Manager",
       "summary": "Data analysis, UX research and testing for Poker Web.",
       "location": "Toronto",
       "bullets": [
         "Optimized user flows for engagement based on the results of multi-variate testing."
       ],
-      "show": false,
+      "show": true,
       "isCoop": true
     },
     "noom": {
       "company": "Noom",
       "url": "http://www.noom.com",
-      "term": "Fall 2015",
+      "term": "Sept - Dec 2015",
       "position": "Product Designer",
       "summary": "Usability optimization, and user testing for the core food-logging feature.",
       "location": "NYC",
@@ -77,33 +77,33 @@
       "bullets": [
         "Redesigned the core food logging workflow to align with observed mental models."
       ],
-      "show": false,
+      "show": true,
       "isCoop": true
     },
     "knowroaming": {
       "company": "KnowRoaming",
       "url": "http://www.knowroaming.com",
-      "term": "Spring 2014 - Winter 2015",
+      "term": "May 2014 - Apr 2015",
       "position": "UX Designer",
       "summary": "User research, information architecture and UI design for all mobile apps.",
       "location": "Toronto",
       "bullets": [
-        "Redesigned the app information architecture and UI to better align with common use cases."
+        "Redesigned the Android and iOS app information architecture and UI to better align with common use cases."
       ],
-      "show": false,
+      "show": true,
       "isCoop": true
     },
     "sony": {
       "company": "Sony",
       "url": "http://mediago.sony.com",
-      "term": "Winter 2013",
+      "term": "Sept - Dec 2013",
       "position": "UI Designer",
       "summary": "UI design and front-end development for MediaGo.",
       "location": "Waterloo",
       "bullets": [
         "Led UI design and front-end development for a music discovery feature."
       ],
-      "show": false,
+      "show": true,
       "isCoop": true
     }
   },

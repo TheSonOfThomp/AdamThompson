@@ -11,14 +11,13 @@ $gap-bullet: 8pt;
   grid-column: 1/-1;
   grid-auto-flow: row;
   grid-gap: $gap-first-bullet; // gap between job title & first bullet
-  font-size: 14pt;
   
   .entry_header {
     display: grid;
     grid-template-areas: 'company title location';
     grid-template-columns: max-content max-content 1fr;
     grid-auto-flow: column;
-    grid-gap: 0.5em; // spacing between title & company
+    grid-gap: 1ch; // spacing between title & company
     align-items: baseline;
   }
 
@@ -37,7 +36,11 @@ $gap-bullet: 8pt;
   .entry_location {
     grid-area: location;
     justify-self: right;
-    font-size: 10pt;
+    font-size: 8pt;
+    font-weight: bold;
+    color: $grey-dark;
+    text-transform: uppercase;
+    letter-spacing: 0.1ch;
   }
 
   .entry_bullets {  
@@ -90,24 +93,26 @@ $gap-bullet: 8pt;
   }
 
   &.isCoop {
-    grid-template-rows: 14pt auto;
+    grid-template-rows: 28pt auto;
     grid-column: auto;
     grid-gap: $gap-first-bullet-y; // gap between job title & first bullet
-    font-size: 12pt;
 
 
     .entry_header {
-      grid-template-columns: max-content max-content;
       grid-template-areas: 'company title' 'location location';
+      grid-template-columns: max-content 1fr;
+      grid-gap: 3pt 1ch; // spacing between title & company
     }
 
     .entry_title,
     .entry_company {
+      display: inline-block;
+      justify-self: flex-start;
       font-size: 12pt;
     }
 
     .entry_location {
-      display: none;
+      justify-self: flex-start;
     }
   }
 

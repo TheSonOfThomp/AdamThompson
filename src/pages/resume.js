@@ -34,32 +34,41 @@ class ResumePage extends React.Component {
           <div className="column" id="column-left">
 
             {/* EXPERIENCE */}
-            <div className="column-section " id="experience">
+            <div className="column-section" id="experience">
               <h2 className="section-header">Professional Experience</h2>
               <div className="column-section-contents">
                 {
                   realJobs.map(job => (
                     <ResumeEntry
-                      title={job.position}
-                      company={job.company}
-                      location={`${job.term} | ${job.location}`}
-                      bullets={job.bullets}
-                    />
-                  ))
-                }
-                {/* <h3 className="column-subsection-label">Co-op Education</h3> */}
-                {
-                  coopJobs.map(job => (
-                    <ResumeEntry
-                      title={job.position}
-                      company={job.company}
-                      location={`${job.term} | ${job.location}`}
-                      bullets={job.bullets}
-                      isCoop={job.isCoop}
+                      header1={job.company}
+                      header2={job.position}
+                      aside={`${job.term} | ${job.location}`}
+                      contentArray={job.bullets}
                     />
                   ))
                 }
               </div>
+
+              <div className="column-section" id="coop">
+                <h2 className="section-header">Co-op experience</h2>
+                <div className="column-section-contents">
+                {
+                    coopJobs.map(job => (
+                      <ResumeEntry
+                        header1={job.company}
+                        header2={job.position}
+                        aside={`${job.term} | ${job.location}`}
+                        contentArray={job.bullets}
+                        isCompact={job.isCoop}
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+                {/* <div className="column-subsection-label">
+                  <h3>Co-op Work</h3>
+                </div> */}
+                
             </div>
 
             {/* EDUCATION */}
@@ -67,11 +76,10 @@ class ResumePage extends React.Component {
               <h2 className="section-header">Education</h2>
               <div className="column-section-contents">
                 <ResumeEntry
-                  entryClass="school_entry"
-                  title={resumeData.education.uwaterloo.position}
-                  company={resumeData.education.uwaterloo.company}
-                  location={resumeData.education.uwaterloo.class}
-                  bullets={[
+                  header1={resumeData.education.uwaterloo.company}
+                  header2={resumeData.education.uwaterloo.position}
+                  aside={resumeData.education.uwaterloo.class}
+                  contentArray={[
                     resumeData.education.uwaterloo.summary
                   ]}
                 />
@@ -84,8 +92,11 @@ class ResumePage extends React.Component {
               <div className="column-section-contents">
                 {Object.values(projectsData.projects).map(project => (
                   project.showOnResume && 
-                  <ProjectEntry
-                    project={project}
+                  <ResumeEntry
+                    header1={project.name}
+                    aside={project.tools.join(', ')}
+                    contentArray={[project.description]}
+                    isCompact={true}
                   />
                 ))}
               </div>
