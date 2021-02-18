@@ -11,9 +11,7 @@ import * as projectsJson from '../data/projects.json';
 const resumeData = resumeJson.default
 const projectsData = projectsJson.default
 
-const realJobs = Object.values(resumeData.experience).filter(job => job.show).filter(job => !job.isCoop)
-const coopJobs = Object.values(resumeData.experience).filter(job => job.show).filter(job => job.isCoop)
-
+const jobs = Object.values(resumeData.experience).filter(job => job.show)
 
 const ResumeFooter = () => (
   <div className="resume-footer">
@@ -37,9 +35,9 @@ const ResumeFooter = () => (
 )
 
 const ResumeSection = ({id, header, children}) => (
-<div className="column-section" id={id || header.replace(/( )/, '-').toLowerCase()}>
-  <h2 className="section-header">{header}</h2>
-  <div className="column-section-contents">
+<div className="resume-section" id={id || header.replace(/( )/, '-').toLowerCase()}>
+  <h2 className="resume-section-header">{header}</h2>
+  <div className="resume-section-contents">
     {children}
   </div>
 </div>
@@ -58,39 +56,23 @@ class ResumePage extends React.Component {
       <div className="resume-page" id="page-1">
         <ResumeHeader />
         <div className="resume-body">
-          {/* <div className="summary ats-only">{resumeData.blurb}</div> */}
-          <div className="column" id="column-left">
-
             {/* EXPERIENCE */}
             <ResumeSection id="experience" header="Professional Experience">
               {
-                realJobs.map(job => (
+                jobs.map(job => (
                   <ResumeEntry
                     header1={job.company}
                     header2={job.position}
-                    aside={`${job.term} | ${job.location}`}
+                    aside={`${job.term} ${job.isCoop ? '(Co-op)' : ''} | ${job.location}`}
                     contentArray={job.bullets}
-                  />
-                ))
-              }
-            </ResumeSection>
-
-            <ResumeSection id="coop" header="Co-op Experience">
-              {
-                coopJobs.map(job => (
-                  <ResumeEntry
-                    header1={job.company}
-                    header2={job.position}
-                    aside={`${job.term} | ${job.location}`}
-                    contentArray={job.bullets}
-                    isCompact={job.isCoop}
+                    isCompact={job.displayCompact}
                   />
                 ))
               }
             </ResumeSection>
 
             {/* EDUCATION */}
-            <ResumeSection id="education" header="Education">
+            <ResumeSection id="education" header="Edu.">
               <ResumeEntry
                 header1={resumeData.education.uwaterloo.company}
                 header2={resumeData.education.uwaterloo.position}
@@ -164,43 +146,11 @@ class ResumePage extends React.Component {
               <a href="tel:13323335780" id="phone">+1-332-333-5780</a>
             </div> */}
 
-          </div>
-
         </div>
 
         <ResumeFooter />
 
       </div>
-
-{/* 
-      <div className="resume-page" id="page-2">
-        <div className="resume-body full-width">
-          <div className="column" id="column-right"> */}
-
-
-
-
-      {/* VOLUTEER */}
-      {/* <div className="column-section " id="volunteer">
-              <h2 className="section-header">Volunteer</h2>
-              <div className="column-section-contents">
-                {Object.values(resumeData.volunteer).map(volunteer => {
-                  return <ResumeEntry
-                    entryClass="volunteer-entry"
-                    title={volunteer.title}
-                    location={volunteer.location}
-                    bullets={[volunteer.description]}
-                  />
-                })}
-              </div>
-            </div> */}
-
-{/* 
-      </div> 
-      </div>
-        <ResumeFooter />
-      </div> */}
-
     </div>
   )
 

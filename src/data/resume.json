@@ -10,10 +10,12 @@
       "location": "NYC",
       "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
-        "Developed and maintained an Angular component library, and defined a more consistent CSS (Sass) architecture. This streamlined cross-functional collaboration and communication, and improved long-term maintainability and UI consistency.",
-        "Architected and led development for a new landing page using React, Next.js and Netlify server-side functions, resulting in an all-time high for daily active users shortly after launch.",
-        "Created a design framework to streamline creation of data visualizations, enabling us to launch remote learning features just days after schools closed in March 2020.",
-        "Developed prototyping infrastructure with Vue and D3 in order to validate new features and interactions with a full experience."
+        "Built an Angular component library, and defined a more consistent CSS (Sass) architecture. This streamlined cross-functional collaboration and communication, and improved long-term maintainability and UI consistency.",
+        "Architected and led development for a new landing page using React, Next.js and Netlify lambda functions, increasing daily active users by over 40% WoW after launch.",
+        "Developed prototyping infrastructure with Vue and D3 in order to test and validate new features and interactions, enabling faster iteration of product and feature concepts.",
+        "Created a design framework to streamline creation of data visualizations, enabling us to launch remote learning features just days after schools closed in March 2020."
+      ],
+      "_bullets": [
       ],
       "show": true
     },
@@ -25,10 +27,15 @@
       "location": "Kitchener",
       "summary": "Design process, high level product vision & business case development.",
       "bullets": [
-        "Defined user requirements, product specifications, and business strategy based on market and user research for a new line of music accessories.",
-        "Developed a globally-used tool allowing managers to quickly evaluate new projects based on ROI and other key data."
+        "Developed a globally-used VBA tool enabling managers to quickly evaluate ROI and other key data for new projects.",
+        "Defined user requirements and business strategy for a line of accessories, and coordinated with international suppliers."
       ],
-      "show": false
+      "_bullets": [
+        "Developed a browser plugin for consolidating various online sources to a single database."
+      ],
+      "show": true,
+      "displayCompact": true,
+      "isCoop": false
     },
     "chameleon": {
       "company": "Chameleon",
@@ -37,7 +44,69 @@
       "position": "Co-founder",
       "location": "Waterloo",
       "bullets": [],
-      "show": false
+      "show": false,
+      "displayCompact": false,
+      "isCoop": false
+    },
+    "zynga": {
+      "company": "Zynga",
+      "url": "http://www.zynga.com/poker",
+      "term": "April - Aug 2016",
+      "position": "UX Product Manager",
+      "summary": "Data analysis, UX research and testing for Poker Web.",
+      "location": "Toronto",
+      "bullets": [
+        "Prototyped and defined feature requirements for a Poker chip drip feature that increased daily active users by nearly 10%.",
+        "Optimized user flows for social engagement based on the results of multi-variate testing, increasing daily news-feed app entry by 4%."
+      ],
+      "show": true,
+      "displayCompact": true,
+      "isCoop": true
+    },
+    "noom": {
+      "company": "Noom",
+      "url": "http://www.noom.com",
+      "term": "Sept - Dec 2015",
+      "position": "Product Designer",
+      "summary": "Usability optimization, and user testing for the core food-logging feature.",
+      "location": "NYC",
+      "logotype": "images/companies/noom_logotype_small.png",
+      "logo": "images/companies/noom_logo.png",
+      "bullets": [
+        "Re-architected the core food logging workflow to align with observed mental models, informed by rigorous prototyping and usability testing, increasing user retention and engagement by nearly 50%."
+      ],
+      "show": true,
+      "displayCompact": true,
+      "isCoop": true
+    },
+    "knowroaming": {
+      "company": "KnowRoaming",
+      "url": "http://www.knowroaming.com",
+      "term": "May 2014 - April 2015",
+      "position": "UX Designer",
+      "summary": "User research, information architecture and UI design for all mobile apps.",
+      "location": "Toronto",
+      "bullets": [
+        "Designed Android and iOS app information architecture to align with common use cases, increasing user retention by over 20%.",
+        "Developed a brand ambassador enrollment page using JavaScript, PHP and Sass that received hundreds of applications, and increased brand awareness."
+      ],
+      "show": true,
+      "displayCompact": true,
+      "isCoop": true
+    },
+    "sony": {
+      "company": "Sony",
+      "url": "http://mediago.sony.com",
+      "term": "Sept - Dec 2013",
+      "position": "UX Designer",
+      "summary": "UI design and front-end development for MediaGo.",
+      "location": "Waterloo",
+      "bullets": [
+        "Spearheaded UX design and front-end development for MediaGo internet radio."
+      ],
+      "show": true,
+      "displayCompact": true,
+      "isCoop": true
     },
     "co-op": {
       "company": "Co-op Education",
@@ -51,60 +120,6 @@
         "**Sony**: Led design and user interface development for a music discovery feature."
       ],
       "show": false
-    },
-    "zynga": {
-      "company": "Zynga",
-      "url": "http://www.zynga.com/poker",
-      "term": "Apr - Aug 2016",
-      "position": "UX Product Manager",
-      "summary": "Data analysis, UX research and testing for Poker Web.",
-      "location": "Toronto",
-      "bullets": [
-        "Optimized user flows for engagement based on the results of multi-variate testing."
-      ],
-      "show": true,
-      "isCoop": true
-    },
-    "noom": {
-      "company": "Noom",
-      "url": "http://www.noom.com",
-      "term": "Sept - Dec 2015",
-      "position": "Product Designer",
-      "summary": "Usability optimization, and user testing for the core food-logging feature.",
-      "location": "NYC",
-      "logotype": "images/companies/noom_logotype_small.png",
-      "logo": "images/companies/noom_logo.png",
-      "bullets": [
-        "Redesigned the core food logging workflow to align with observed mental models."
-      ],
-      "show": true,
-      "isCoop": true
-    },
-    "knowroaming": {
-      "company": "KnowRoaming",
-      "url": "http://www.knowroaming.com",
-      "term": "May 2014 - Apr 2015",
-      "position": "UX Designer",
-      "summary": "User research, information architecture and UI design for all mobile apps.",
-      "location": "Toronto",
-      "bullets": [
-        "Redesigned the Android and iOS app information architecture and UI to better align with common use cases."
-      ],
-      "show": true,
-      "isCoop": true
-    },
-    "sony": {
-      "company": "Sony",
-      "url": "http://mediago.sony.com",
-      "term": "Sept - Dec 2013",
-      "position": "UI Designer",
-      "summary": "UI design and front-end development for MediaGo.",
-      "location": "Waterloo",
-      "bullets": [
-        "Led UI design and front-end development for a music discovery feature."
-      ],
-      "show": true,
-      "isCoop": true
     }
   },
   "education": {
@@ -114,7 +129,7 @@
       "position": "Systems Design Engineering",
       "degree": "Honours Bachelor of Applied Science",
       "minor": "Cognitive Science",
-      "summary": "Honours Bachelor of Applied Science (B.Eng), Cognitive Science minor",
+      "summary": "Honours Bachelor of Applied Science (B.Eng). Cognitive Science minor.",
       "class": "Class of 2017"
     }
   },
@@ -143,9 +158,8 @@
   },
   "toolbox": [
     "Javascript", "HTML5", "CSS3", "Sass", "Angular", "Typescript", "Vue", "React",
-    "Python", "Java", "C++", "Swift", "npm", "Git", "CI", "Storybook",
-    "Sketch", "Figma", "Zeplin", "InVision", "Photoshop", "Illustrator", "Framer", "Balsamiq", 
-    "D3", "XState", "Three.js", "Airtable", "Arduino"
+    "Python", "Java", "C++", "Swift", "PHP", "Git", "Storybook", "Photoshop",
+    "Sketch", "Figma", "Framer", "Balsamiq", "D3", "XState", "Three.js", "Arduino"
   ],
   "awards" : {
     "norman-esch": {

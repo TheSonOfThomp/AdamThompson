@@ -7,7 +7,7 @@
       "logo": "chameleon_logotype.png",
       "color": "#2e8c5d",
       "icon": "link",
-      "tools": ["Python", "MatLab", "Arduino", "Fusion 360"],
+      "tools": ["Python", "Arduino C++", "Fusion 360"],
       "tags": ["hardware", "software", "programming", "audio", "control systems", "3d printing", "3d modeling", "microcontroller", "circuits"],
       "date": "2017-04-22",
       "showOnResume": true,

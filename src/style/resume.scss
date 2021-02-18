@@ -3,18 +3,23 @@
 @import './mixins';
 $page-margin-side: 0.5in;
 $page-margin-top: 0.375in;
+$page-width: 8.5in;
 $page-height: 14in;
 // $page-height: 11in;
 
 // Spacing variables
-$gap-top: 20pt;
-$gap-section: 12pt;
-$gap-first-entry: 4pt;
-$gap-entry: 12pt;
-$gap-entry-x: 8pt;
-$gap-entry-y: 8pt;
+$gap-top: 16pt;
+$gap-header: 8pt; // space between header & content
+$gap-section: 16pt; // space between sections
+// $gap-first-entry: 4pt; // space between section header and first entry
+$gap-entry-y: 12pt; // vertical space between section entries
+$gap-entry-x: 8pt; // horizontal space between section entries
 
-$left-margin: 64pt;
+$left-margin: 64pt; // space on the left
+
+%debug {
+  outline: 1px solid #f00;
+}
 
 .captcha-container {
   height: 100vh;
@@ -22,13 +27,23 @@ $left-margin: 64pt;
   background-color: #eee;
 }
 
-@page {
-  margin: $page-margin-top $page-margin-side;
-
-  .resume-container {
+@media print {
+  header,
+  footer {
     display: none;
   }
+
+  @page {
+    size: $page-width $page-height;
+    // margin: $page-margin-top $page-margin-side;
+    margin: 0;
+  
+    .resume-container {
+      display: none;
+    }
+  }
 }
+
 
 h1,
 h2,
@@ -47,7 +62,7 @@ a {
   position: absolute;
   top: 50%;
   z-index: -1;
-  color: white;
+  color: #fff;
 }
 
 .resume-container {
@@ -62,9 +77,10 @@ a {
 
     position: relative;
     display: grid;
-    grid-template-areas: 'header' 'body' 'footer';
+    grid-template-areas: 'header header' 'body body' '. footer';
     grid-template-rows: min-content max-content minmax(0.25in, 1fr);
-    grid-gap: 8pt;
+    grid-template-columns: $left-margin auto;
+    gap: $gap-header 0;
     padding: 0;
     margin: 0;
     font-size: 12pt;
@@ -75,50 +91,22 @@ a {
     .resume-body {
       display: grid;
       grid-area: body;
-      grid-template-columns: 1fr;
-      grid-gap: $gap-top; // gap between summary & first section
+      grid-template-columns: subgrid;
+      grid-gap: $gap-section 0; // gap between sections
       max-width: 100%;
-      margin: 4pt 0 auto $left-margin;
-    }
-    
-    .section-header {
-
-      // Header highlight
-      
-      $highlight-size: 1ch;
-      padding-left: $highlight-size;
-      margin-left: -2 * $highlight-size;
-      font-size: 10pt;
-      font-weight: 700;
-      line-height: 2em;
-      text-transform: uppercase;
-      letter-spacing: 2pt;
-      border-left: $highlight-size solid var(--color-green);
-    }
-
-    &#page-2 {
-      position: relative;
-      grid-template-rows: auto 1fr;
+      margin: 4pt 0 auto;
     }
 
     @media screen {
       @include elevation(2);
-      width: 8.5in - 2 * $page-margin-side;
+      width: $page-width - 2 * $page-margin-side;
       height: $page-height - 2 * $page-margin-top;
       padding: $page-margin-top $page-margin-side;
     }
     @media print {
-      // height: 100vh;
-      height: calc(100vh - 2 * #{$page-margin-top});
-      
-      // outline: 1px solid purple;
-
-      // .resume-header,
-      // .resume-body,
-      // .resume-footer {
-      //   outline: 1px solid red;
-      // }
-
+      width: $page-width - 2 * $page-margin-side;
+      height: $page-height - 2 * $page-margin-top;
+      padding: $page-margin-top $page-margin-side;
     }
   }
 }
@@ -129,48 +117,57 @@ a {
   line-height: 1.25em;
 }
 
-.column {
+.resume-section {
+  position: relative;
   display: grid;
-  grid-auto-rows: min-content;
-  grid-auto-flow: row;
-  grid-gap: $gap-section; // gap between sections
+  grid-template-areas: 'header content';
+  grid-template-columns: subgrid;
+  grid-column: 1/-1; // span both cols of subgrid
+  // grid-gap: $gap-first-entry; // gap between header & first entry
 
-  .column-subsection-label {
-    grid-column: 1/-1;
+  .resume-section-header {
+    $highlight-size: 2pt;
+
+    align-self: flex-start;
+    justify-self: flex-end;
+    font-size: 10pt;
+    font-weight: 700;
+    padding-inline: 1pt;
+    margin-block-end: 16pt;
+    line-height: 20pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5ch;
+    writing-mode: sideways-lr;
+    border-block-end: $highlight-size solid var(--color-green);
   }
 
-  .column-section {
+  .resume-section-contents {
     display: grid;
-    grid-gap: $gap-first-entry; // gap between header & first entry
+    grid-template-rows: masonry;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $gap-entry-y $gap-entry-x; // gap between entries
+  }
 
-    .column-section-contents {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: $gap-entry-y $gap-entry-x; // gap between entries
-      // grid-gap: $gap-entry; // gap between entries
-    }
+  &#projects .resume-section-contents,
+  &#volunteer .resume-section-contents {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $gap-entry-y $gap-entry-x; // gap between entries
+  }
 
-    &#projects .column-section-contents,
-    &#volunteer .column-section-contents {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: $gap-entry-y $gap-entry-x; // gap between entries
-    }
-
-    &#tools .column-section-contents {
-      display: block;
-      font-size: 12pt;
-      line-height: 1.5em;
-    }
+  &#tools .resume-section-contents {
+    display: block;
+    font-size: 12pt;
+    line-height: 1.5em;
   }
 }
 
 
 .resume-footer {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
+  grid-area: footer;
   gap: 1ch;
   align-self: flex-end;
-  margin-left: 64pt;
+  justify-content: space-between;
   font-size: 12pt;
   
   a {
@@ -188,6 +185,32 @@ a {
 
   svg {
     height: 16pt;
-    margin-bottom: -1pt;
+  }
+}
+
+.vertical-footer.resume-footer {
+  display: flex;
+  grid-area: footer;
+  gap: 28pt;
+  align-self: flex-end;
+  font-size: 12pt;
+  writing-mode: sideways-lr;
+  margin-inline-end: 36pt;
+  margin-block-start: 1.5pt; // nudge to be in center of triangle
+  
+  a {
+    font-weight: 300;
+    line-height: 16pt;
+    border: unset;
+
+    &:hover {
+      border: unset;
+    }
+  }
+
+  svg {
+    height: 16pt;
+    rotate: -90deg;
+    margin-inline-end: 4pt;
   }
 }

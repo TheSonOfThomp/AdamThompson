@@ -13,7 +13,7 @@ const ResumeEntry = ({
   isCompact,
 }) => {
   return (
-    <div className={classnames(styles.resume_entry, isCompact ? styles.isCoop : '')} id={header1 && header1.replace(/( )/g, '-').toLowerCase()}>
+    <div className={classnames(styles.resume_entry, isCompact ? styles.isCompact : '')} id={header1 && header1.replace(/( )/g, '-').toLowerCase()}>
       <div className={styles.entry_header}>
         <h4 className={styles.entry_company}>{header1}</h4>
         <h3 className={styles.entry_title}>{header2}</h3>
