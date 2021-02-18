@@ -9,7 +9,7 @@ const ResumeHeader = () => {
       <Monogram id="monogram" />
       <div className={styles.name} >
         <h1 id="name">Adam Thompson</h1>
-        <span id="tagline">Frontend UI Engineer</span>
+        <span id="tagline">UX Engineer</span>
       </div>
       <div id="contacts">
         <a href="http://thesonofthomp.com" id="website">thesonofthomp.com</a>

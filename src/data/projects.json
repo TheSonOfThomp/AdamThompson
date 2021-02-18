@@ -3,11 +3,11 @@
     {
       "name": "Chameleon",
       "url": "http://chameleon.thesonofthomp.com",
-      "description": "Hearing protection that adapts to the volume of the wearer's surroundings.",
+      "description": "Wearable hearing protection that adapts to the volume of the wearer's surroundings.",
       "logo": "chameleon_logotype.png",
       "color": "#2e8c5d",
       "icon": "link",
-      "tools": ["Python", "MatLab", "Arduino", "Fusion 360"],
+      "tools": ["Python", "Arduino C++", "Fusion 360"],
       "tags": ["hardware", "software", "programming", "audio", "control systems", "3d printing", "3d modeling", "microcontroller", "circuits"],
       "date": "2017-04-22",
       "showOnResume": true,
@@ -18,7 +18,7 @@
       "url": "https://farkle.thesonofthomp.com",
       "logo": "farkle-logo.png",
       "icon": "link",
-      "description": "Play the dice game \"Farkle\" online with friends.",
+      "description": "Online multiplayer dice game built with Three.js, XState and WebSockets.",
       "color": "rgb(5, 90, 4)",
       "tools": ["Three.js", "XState", "Typescript", "React", "Socket.io"],
       "date": "2020-07-10",
@@ -55,7 +55,7 @@
       "url": "https://chronological-mcu.netlify.app",
       "logo": "chronMCU-logo.png",
       "icon": "link",
-      "description": "Watch every Marvel Cinematic Universe scene in chronological order.",
+      "description": "Chrome extension to watch every Marvel scene in chronological order.",
       "tools": ["Javascript", "Chrome API"],
       "date": "2020-06-01",
       "showOnResume": true,
@@ -69,7 +69,7 @@
       "color": "rgb(243, 102, 36)",
       "tools": ["Javascript", "Atlassian API", "AWS"],
       "showOnResume": false,
-      "showOnHomepage": false
+      "showOnHomepage": true
     },
     {
       "name": "Word Chain",
@@ -92,7 +92,7 @@
       "icon": "github",
       "description": "A simple iOS metronome app with a minimalistic UI.",
       "tools": ["iOS", "Swift"],
-      "showOnResume": true,
+      "showOnResume": false,
       "showOnHomepage": false
     },
     {
