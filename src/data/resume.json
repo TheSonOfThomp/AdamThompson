@@ -11,11 +11,12 @@
       "summary": "Design systems development, UX architecture, and feature design.",
       "bullets": [
         "Built an Angular component library, and defined a more consistent CSS (Sass) architecture. This streamlined cross-functional collaboration and communication, and improved long-term maintainability and UI consistency.",
-        "Architected and led development for a new landing page using React, Next.js and Netlify lambda functions, increasing daily active users by over 40% WoW after launch.",
+        "Architected and led development for a new landing page using React, Next.js and Netlify server-side lambda functions, increasing daily active users by over 40% WoW after launch.",
         "Developed prototyping infrastructure with Vue and D3 in order to test and validate new features and interactions, enabling faster iteration of product and feature concepts.",
         "Created a design framework to streamline creation of data visualizations, enabling us to launch remote learning features just days after schools closed in March 2020."
       ],
       "_bullets": [
+        ""
       ],
       "show": true
     },
@@ -129,7 +130,7 @@
       "position": "Systems Design Engineering",
       "degree": "Honours Bachelor of Applied Science",
       "minor": "Cognitive Science",
-      "summary": "Honours Bachelor of Applied Science (B.Eng). Cognitive Science minor.",
+      "summary": "Honours Bachelor of Applied Science (B.Eng.) Cognitive Science minor.",
       "class": "Class of 2017"
     }
   },
@@ -158,7 +159,7 @@
   },
   "toolbox": [
     "Javascript", "HTML5", "CSS3", "Sass", "Angular", "Typescript", "Vue", "React",
-    "Python", "Java", "C++", "Swift", "PHP", "Git", "Storybook", "Photoshop",
+    "Swift", "Python",  "Node.js", "npm", "PHP", "Git", "Storybook", "Photoshop", 
     "Sketch", "Figma", "Framer", "Balsamiq", "D3", "XState", "Three.js", "Arduino"
   ],
   "awards" : {

@@ -54,7 +54,7 @@ class ResumePage extends React.Component {
     <div className="resume-container">
       <Head><title>Adam Thompson Resume</title></Head>
       <div className="resume-page" id="page-1">
-        <ResumeHeader />
+        <ResumeHeader tagline="UI Engineer" />
         <div className="resume-body">
             {/* EXPERIENCE */}
             <ResumeSection id="experience" header="Professional Experience">

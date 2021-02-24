@@ -58,7 +58,7 @@
       "description": "Chrome extension to watch every Marvel scene in chronological order.",
       "tools": ["Javascript", "Chrome API"],
       "date": "2020-06-01",
-      "showOnResume": true,
+      "showOnResume": false,
       "showOnHomepage": true
     },
     {
@@ -93,7 +93,7 @@
       "icon": "github",
       "description": "A simple iOS metronome app with a minimalistic UI.",
       "tools": ["iOS", "Swift"],
-      "showOnResume": false,
+      "showOnResume": true,
       "showOnHomepage": false
     },
     {
