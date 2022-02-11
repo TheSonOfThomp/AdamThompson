@@ -55,7 +55,7 @@
     "next-images": "^1.6.2",
     "next-pwa": "^3.1.5",
     "next-svgr": "^0.0.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
