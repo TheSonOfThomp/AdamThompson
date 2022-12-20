@@ -7,7 +7,7 @@
 package = "netlify-plugin-cache-nextjs"
 
 [[redirects]]
-  from = “/social/”
-  to = “https://social.thesonofthomp.com/
+  from = "social"
+  to = "https://social.thesonofthomp.com/"
   status = 200
   force = true
