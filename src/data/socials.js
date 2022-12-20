@@ -1,11 +1,11 @@
 import { faLinkedinIn, faGithub, faTwitter, faCodepen, faMedium, faInstagram, faMastodon } from '@fortawesome/free-brands-svg-icons'
 
 export const SOCIALS = [
-  {
-    "name": "Twitter",
-    "username": "@TheSonOfThomp",
-    "url": "https://www.twitter.com/thesonofthomp/",
-    "icon": faTwitter
+  { 
+    "name": "Mastodon",
+    "username": "@adamthompson@techhub.social",
+    "url": "https://techhub.social/@adamthompson",
+    "icon": faMastodon,
   },
   { 
     "name": "GitHub",
@@ -37,10 +37,10 @@ export const SOCIALS = [
     "url": "https://www.instagram.com/thesonofthomp/",
     "icon": faInstagram,
   },
-  { 
-    "name": "Mastodon",
-    "username": "@adamthompson@techhub.social",
-    "url": "https://techhub.social/@adamthompson",
-    "icon": faMastodon,
+  {
+    "name": "Twitter",
+    "username": "@TheSonOfThomp",
+    "url": "https://www.twitter.com/thesonofthomp/",
+    "icon": faTwitter
   },
 ]
