@@ -5,3 +5,9 @@
 
 [[plugins]]
 package = "netlify-plugin-cache-nextjs"
+
+[[redirects]]
+  from = “/social/”
+  to = “https://social.example.com/
+  status = 200
+  force = true
