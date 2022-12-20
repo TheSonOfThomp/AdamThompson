@@ -8,7 +8,6 @@ import Monogram from '../../images/monogram.svg';
 import styles from './Header.module.scss';
 
 const Header = ({ color, showNav }) => {
-  // const Monogram = color === 'white' ? MonogramWhite : MonogramBlack
 
   const navRef = useRef(null)
   const setListeners = useRef(false)

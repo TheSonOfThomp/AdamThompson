@@ -10,7 +10,13 @@ const DefaultPage = ({ children, meta, title, className, id, } ) => {
   return (
     <>
       <Head><title>{pageTitle}</title></Head>
-      <main className={classnames(styles.default_page, pageTitle, className, meta?.section)} id={id}>
+      <main className={classnames(
+          styles.default_page,
+          pageTitle,
+          className,
+          meta?.section
+        )} id={id}
+      >
         <Header color="black" />
         <article>{children}</article>
       </main>

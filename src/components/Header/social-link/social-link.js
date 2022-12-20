@@ -3,13 +3,6 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import styles from '../Header.module.scss'
 
-// type SocialLinkPropTypes = {
-//   name: string,
-//   url: string,
-//   color: string,
-//   children: React.ReactNode
-// }
-
 const SocialLink = ({name, url, color, children}) => {
 
   return (

@@ -1,0 +1,15 @@
+@import '../../style/variables';
+@import '../../style/mixins';
+
+.card {
+  @include animate(all, 0.2s, $animation-ease);
+  @include elevation(4);
+  background-color: var(--color-white);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.clickableCard {
+  @extend .card;
+  @include clickable-card(4, 8);
+}

@@ -16,7 +16,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "crawl-medium": "node src/scripts/getMediumPosts.js",
-    "webp": "./webp.sh"
+    "webp": "./scripts/webp.sh"
   },
   "dependencies": {
     "airtable": "^0.10.1",
