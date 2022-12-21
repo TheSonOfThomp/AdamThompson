@@ -2,6 +2,12 @@ import { faLinkedinIn, faGithub, faTwitter, faCodepen, faMedium, faInstagram, fa
 
 export const SOCIALS = [
   { 
+    "name": "Instagram",
+    "username": "@TheSonOfThomp",
+    "url": "https://www.instagram.com/thesonofthomp/",
+    "icon": faInstagram,
+  },
+  { 
     "name": "Mastodon",
     "username": "@adamthompson@techhub.social",
     "url": "https://techhub.social/@adamthompson",
@@ -30,12 +36,6 @@ export const SOCIALS = [
     "username": "@TheSonOfThomp",
     "url": "https://medium.com/@TheSonOfThomp",
     "icon": faMedium,
-  },
-  { 
-    "name": "Instagram",
-    "username": "@TheSonOfThomp",
-    "url": "https://www.instagram.com/thesonofthomp/",
-    "icon": faInstagram,
   },
   {
     "name": "Twitter",
