@@ -23,9 +23,9 @@ const Hero = ({className}) => {
         <h2 className={styles.big_letters}>
           <Monogram className={styles.big_letters_monogram} />
         </h2>
-        <h2 className={styles.title}>UX Engineer</h2>
+        <h2 className={styles.title}>UI Engineer</h2>
         {/* <h3 className={styles.tagline}>.</h3> */}
-        <h3 className={styles.tagline}>Developing experiences that make an impact</h3>
+        <h3 className={styles.tagline}>Building experiences that make an impact</h3>
       </div>
     </div>
   );
