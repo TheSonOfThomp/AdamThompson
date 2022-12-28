@@ -2,10 +2,19 @@
   "tagline": "An engineer at the intersection of design and development.",
   "blurb": "With an engineering education and experience in UX design since 2013, I seamlessly bridge the gap between the two disciplines.",
   "experience": {
+    "mongodb": {
+      "company": "MongoDB",
+      "url": "http://www.mongodb.design",
+      "term": "June 2021 - now",
+      "position": "UI Engineer",
+      "location": "NYC",
+      "summary": "Component development, web architecture, engineering support",
+      "bullets": []
+    },
     "new-visions": {
       "company": "New Visions for Public Schools",
       "url": "http://www.newvisions.org",
-      "term": "July 2018 - now",
+      "term": "July 2018 - June 2021",
       "position": "UI Engineer",
       "location": "NYC",
       "summary": "Design systems, CSS architecture, UX frameworks, and feature design.",
