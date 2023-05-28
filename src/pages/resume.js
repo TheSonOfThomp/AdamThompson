@@ -47,6 +47,7 @@ class ResumePage extends React.Component {
 
   constructor() {
     super()
+    // TODO: Captcha and browser check
     this.shouldRenderResume = true;
   }
 
@@ -54,7 +55,7 @@ class ResumePage extends React.Component {
     <div className="resume-container">
       <Head><title>Adam Thompson Resume</title></Head>
       <div className="resume-page" id="page-1">
-        <ResumeHeader tagline="UI Engineer" />
+        <ResumeHeader />
         <div className="resume-body">
             {/* EXPERIENCE */}
             <ResumeSection id="experience" header="Professional Experience">
@@ -70,87 +71,83 @@ class ResumePage extends React.Component {
                 ))
               }
             </ResumeSection>
+        </div>
+      </div>
+      {/* PAGE 2 */}
+      <div className="resume-page" id="page-2">
+        <ResumeHeader minimal />
 
-            {/* EDUCATION */}
-            <ResumeSection id="education" header="Edu.">
-              <ResumeEntry
-                header1={resumeData.education.uwaterloo.company}
-                header2={resumeData.education.uwaterloo.position}
-                aside={resumeData.education.uwaterloo.class}
-                contentArray={[
-                  resumeData.education.uwaterloo.summary
-                ]}
-              />
-            </ResumeSection>
+        <div className="resume-body">
+          {/* EDUCATION */}
+          <ResumeSection id="education" header="Edu.">
+            <ResumeEntry
+              header1={resumeData.education.uwaterloo.company}
+              header2={resumeData.education.uwaterloo.position}
+              aside={resumeData.education.uwaterloo.class}
+              contentArray={[
+                resumeData.education.uwaterloo.summary
+              ]}
+            />
+          </ResumeSection>
 
-            {/* PROJECTS */}
-            <ResumeSection id="projects" header="Projects">
-              {
-                Object.values(projectsData.projects).map(project => (
-                  project.showOnResume && 
-                  <ResumeEntry
-                    header1={project.name}
-                    aside={project.tools.join(', ')}
-                    contentArray={[project.description]}
-                    isCompact={true}
-                  />
-                ))
-              }
-            </ResumeSection>
+          {/* PROJECTS */}
+          <ResumeSection id="projects" header="Projects">
+            {
+              Object.values(projectsData.projects).map(project => (
+                project.showOnResume && 
+                <ResumeEntry
+                  header1={project.name}
+                  aside={project.tools.join(', ')}
+                  contentArray={[project.description]}
+                  isCompact={true}
+                />
+              ))
+            }
+          </ResumeSection>
 
-            {/* TOOLBOX */}
-            <ResumeSection id="tools" header="Skills">
-              {
-                resumeData.toolbox.map(tool => <T>{tool}</T>)
-              }
-            </ResumeSection>
-
-
-
-
-            {/* AWARDS */}
-            {/* <div className="column-section " id="projects">
-              <h2 className="section-header">Awards</h2>
-              <div className="column-section-contents">
-                {Object.values(resumeData.awards).map(award => (
-                  award && <ResumeEntry
-                    entryClass="project-entry"
-                    title={award.title}
-                    location={award.date}
-                    bullets={[award.description]}
-                  />
-                ))}
-              </div>
-            </div> */}
+          {/* TOOLBOX */}
+          <ResumeSection id="tools" header="Skills">
+            {
+              resumeData.toolbox.map(tool => <T>{tool}</T>)
+            }
+          </ResumeSection>
 
 
+          {/* AWARDS */}
+          {/* <div className="column-section " id="projects">
+            <h2 className="section-header">Awards</h2>
+            <div className="column-section-contents">
+              {Object.values(resumeData.awards).map(award => (
+                award && <ResumeEntry
+                  entryClass="project-entry"
+                  title={award.title}
+                  location={award.date}
+                  bullets={[award.description]}
+                />
+              ))}
+            </div>
+          </div> */}
 
-            {/* VOLUTEER */}
-            {/* <div className="column-section " id="volunteer">
-              <h2 className="section-header">Volunteer</h2>
-              <div className="column-section-contents">
-                {Object.values(resumeData.volunteer).map(volunteer => {
-                  return <ResumeEntry
-                    entryClass="volunteer-entry"
-                    title={volunteer.title}
-                    location={volunteer.location}
-                  />
-                })}
-              </div>
-            </div> */}
 
 
-            {/* <div className="resume-footer">
-              <a href="http://thesonofthomp.com">thesonofthomp.com</a>
-              <a href="mailto:adam@thesonofthomp.com">adam@thesonofthomp.com</a>
-              <a href="tel:13323335780" id="phone">+1-332-333-5780</a>
-            </div> */}
+          {/* VOLUTEER */}
+          {/* <div className="column-section " id="volunteer">
+            <h2 className="section-header">Volunteer</h2>
+            <div className="column-section-contents">
+              {Object.values(resumeData.volunteer).map(volunteer => {
+                return <ResumeEntry
+                  entryClass="volunteer-entry"
+                  title={volunteer.title}
+                  location={volunteer.location}
+                />
+              })}
+            </div>
+          </div> */}
 
         </div>
-
         <ResumeFooter />
+        </div>
 
-      </div>
     </div>
   )
 

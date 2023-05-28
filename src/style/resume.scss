@@ -4,8 +4,8 @@
 $page-margin-side: 0.5in;
 $page-margin-top: 0.375in;
 $page-width: 8.5in;
-$page-height: 14in;
-// $page-height: 11in;
+// $page-height: 14in;
+$page-height: 11in;
 
 // Spacing variables
 $gap-top: 16pt;
@@ -138,6 +138,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 0.5ch;
     writing-mode: sideways-lr;
+    // writing-mode: vertical-rl;
     border-block-end: $highlight-size solid var(--color-green);
   }
 
