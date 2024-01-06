@@ -3,12 +3,10 @@ import PortfolioCard from './portfolio-card'
 
 export default {
   component: PortfolioCard,
-  title: 'Cards'
+  title: 'Card'
 }
 
-
-export const Portfolio = () => {
-
+export const _PortfolioCard = () => {
     const data = {
       title: 'Lorem Dolor Co.', 
       tagline: 'Nullam quis risus eget urna mollis ornare vel eu leo.', 
