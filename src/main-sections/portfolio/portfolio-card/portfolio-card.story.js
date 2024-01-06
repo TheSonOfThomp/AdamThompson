@@ -1,10 +1,13 @@
 import React from 'react';
-
-import { storiesOf } from '@storybook/react';
 import PortfolioCard from './portfolio-card'
 
-storiesOf('Cards|Portfolio Card', module)
-  .add('with text', () => {
+export default {
+  component: PortfolioCard,
+  title: 'Cards'
+}
+
+
+export const Portfolio = () => {
 
     const data = {
       title: 'Lorem Dolor Co.', 
@@ -26,4 +29,3 @@ storiesOf('Cards|Portfolio Card', module)
       </div>
     )
   }
-  )

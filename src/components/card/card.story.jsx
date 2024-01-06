@@ -1,11 +1,12 @@
 import React from 'react';
-
-import { storiesOf } from '@storybook/react';
-
 import Card from './card'
 
-storiesOf('Cards|Card', module)
-  .add('with text', () => 
+export default {
+  component: Card,
+  title: 'Cards/Card'
+}
+
+export const Basic = () => (
   <div style={{padding: '48px'}}>
     <Card
       id={'test'}
@@ -13,4 +14,4 @@ storiesOf('Cards|Card', module)
       children={'Hello, I\'m a card'}
     ></Card>
   </div>
-  )
+)
