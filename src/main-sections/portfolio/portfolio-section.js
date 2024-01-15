@@ -3,15 +3,15 @@ import Section from "../../templates/section/section";
 import PortfolioCard from "./portfolio-card/portfolio-card";
 import styles from './portfolio-section.module.scss';
 
-import { portfolio } from '../../meta/portfolio-meta'
+const PortfolioSection = ({ meta }) => {
 
-const PortfolioSection = ({ data }) => {
+  console.log(meta)
+
   return (
     <Section title="UX Case Studies" className={styles.section} id="portfolio">
       <div className={styles.portfolio_cards_container}>
       {
-        portfolio && portfolio.map((page) => {
-          // console.log(page);
+        meta && meta.map((page) => {
           return (
           <PortfolioCard
             key={page.title}

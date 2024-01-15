@@ -8,4 +8,5 @@ newvisionsmdx.slug = "newvisions"
 const noommdx = require('../pages/portfolio/noom.mdx').meta
 noommdx.slug = "noom"
       
-export const portfolio = [chameleonmdx,newvisionsmdx,noommdx]
+const meta = [chameleonmdx,newvisionsmdx,noommdx]
+export default meta

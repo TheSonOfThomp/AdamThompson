@@ -2,7 +2,6 @@ import React from "react"
 import Section from "../../templates/section/section";
 import styles from './projects-section.module.scss';
 import ProjectCard from "./ProjectCard/project-card";
-import { projects } from '../../data/projects.json'
 
 const compareDates = (project1, project2) => {
   const Date1 = new Date(project1.date)
@@ -10,7 +9,9 @@ const compareDates = (project1, project2) => {
   return (Date1 > Date2) ? -1 : 1
 }
 
-const ProjectsSection = () => {
+const ProjectsSection = ({projects}) => {
+
+
   return (
     <Section title="Recent Projects" className={styles.section} id="projects">
       {

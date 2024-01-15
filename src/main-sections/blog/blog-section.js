@@ -1,21 +1,17 @@
 import React from "react"
 import Section from "../../templates/section/section";
-import { posts } from '../../data/medium-posts.json';
 import BlogPostLink from "./BlogPostLink/BlogPostLink";
 import styles from './blog-section.module.scss';
 
-const BlogSection = () => {
-
-  const [postsState] = React.useState(posts.slice(0,4))
+const BlogSection = ({ posts }) => {
 
   return (
     <Section className={styles.section} title="Writing" id="blog">
-      {postsState.map(post => {
+      {posts.map(post => {
         return (
           <BlogPostLink post={post} key={post.title}/>
         )
       })}
-      {/* <button id="show-all-posts">Show all</button> */}
     </Section>
   )
 }

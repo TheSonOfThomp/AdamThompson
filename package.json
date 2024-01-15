@@ -5,7 +5,8 @@
   "version": "0.1.0",
   "author": "Adam Thompson <adam.m.thompson@icloud.com>",
   "engines": {
-    "node": ">=18.19.0"
+    "node": ">=18.19.0",
+    "npm": ">=10.2.0"
   },
   "scripts": {
     "build": "next build && next export",

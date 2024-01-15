@@ -11,7 +11,12 @@ import ProjectsSection from "../main-sections/projects/projects-section";
 import FooterSection from "../main-sections/footer/footer-section";
 import QuoteSection from "../main-sections/QuoteSection/QuoteSection";
 
-const IndexPage = () => {
+const IndexPage = ({
+  projects,
+  resumeJson,
+  portfolioMeta,
+  blogPosts
+}) => {
 
   return (
     <main id="app">
@@ -24,13 +29,32 @@ const IndexPage = () => {
       
       <AboutSection />
       <QuoteSection attribution="Jen Simmons @ Artifact 2019">A design is finished when the CSS is written</QuoteSection>
-      <ResumeSection />
-      <PortfolioSection />
-      <ProjectsSection />
-      <BlogSection />
+      <ResumeSection resume={JSON.parse(resumeJson)} />
+      <PortfolioSection meta={JSON.parse(portfolioMeta)}/>
+      <ProjectsSection projects={JSON.parse(projects)}/>
+      <BlogSection posts={JSON.parse(blogPosts)}/>
       <FooterSection />
       
     </main>
 )}
 
 export default IndexPage
+
+export async function getStaticProps() {
+
+  const projects = JSON.stringify((await import('../data/projects.json')).projects);
+  const resumeJson = JSON.stringify(await import('../data/resume-full.json'));
+  const blogPosts = JSON.stringify((await import('../data/medium-posts.json')).posts);
+  const portfolioMeta = JSON.stringify((await import('../meta/portfolio-meta')).default);
+
+  return {
+    props: {
+      projects,
+      resumeJson,
+      blogPosts,
+      portfolioMeta
+    }
+  }
+
+
+}

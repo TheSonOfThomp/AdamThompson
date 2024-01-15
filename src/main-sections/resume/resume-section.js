@@ -3,16 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import Section from "../../templates/section/section";
 import ResumeCard from "../../components/resume-card/resume-card";
-import * as resumeJson from '../../data/resume-full.json'
 import styles from './resume-section.module.scss';
 
-const ResumeSection = () => {
-  const resumeData = Object.entries(resumeJson.default.experience)
+const ResumeSection = ({resume}) => {
+
+  const experience = Object.entries(resume.experience);
+
   return(
     <Section title="Experience" className={styles.section} id="resume">
       <div className={styles.resume_card_section}>
       {
-        resumeData.map( ([key, node]) => (
+        experience.map( ([key, node]) => (
           <ResumeCard
             key={key}
             title={node.company}
