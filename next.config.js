@@ -8,7 +8,7 @@ const { webpack } = require('next/dist/compiled/webpack/webpack');
 // const runtimeCaching = require('next-pwa/cache')
 
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'mdx'],
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   webpack: (config, options) => {
     
     // Load svgs as components 

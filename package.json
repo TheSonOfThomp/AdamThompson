@@ -10,7 +10,6 @@
   },
   "scripts": {
     "build": "next build && next export",
-    "dev": "next dev -p 8000",
     "export": "next export",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "next dev",

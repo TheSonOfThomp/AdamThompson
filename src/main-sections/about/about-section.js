@@ -3,7 +3,7 @@ import Markdown from 'markdown-to-jsx'
 import Section from "../../templates/section/section";
 import styles from './about-section.module.scss';
 
-const AboutSection = ({ data }) => {
+const AboutSection = () => {
   return (
     <Section className={styles.section} id="about">
       <span className={styles.about_text}>
