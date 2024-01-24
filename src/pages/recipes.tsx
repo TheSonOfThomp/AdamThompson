@@ -3,13 +3,28 @@ import path from "path"
 import React, { ComponentProps } from "react"
 import styles from "./recipes.module.scss"
 import DefaultPage from "../templates/default-page/default-template"
+import {
+  RecipeCategory,
+  RecipePageMeta,
+  fetchCategorizedRecipePageContent,
+} from "../utilities/notion/fetchRecipes"
+import Card from "../components/card/card"
+import { getPageTitle, isPageObject } from "../utilities/notion/notionUtils"
+import Link from "next/link"
 
 interface RecipesPageProps extends ComponentProps<"section"> {
+  categorizedRecipes: string
+  flatRecipes: string
   recipes: Array<any>
 }
 
-const RecipesPage = ({ recipes: _recipes }: RecipesPageProps) => {
-  console.log(_recipes)
+const RecipesPage = ({
+  recipes: _recipes,
+  categorizedRecipes,
+  flatRecipes: flatRecipesJSONString,
+}: RecipesPageProps) => {
+  const flatRecipes: Array<RecipePageMeta> = JSON.parse(flatRecipesJSONString)
+
   return (
     <>
       <DefaultPage title="Recipes">
@@ -37,6 +52,24 @@ const RecipesPage = ({ recipes: _recipes }: RecipesPageProps) => {
         </p>
 
         <div className={styles.recipe_cards}>
+          {flatRecipes.map((recipe) => {
+            if (isPageObject(recipe)) {
+              const title = getPageTitle(recipe)
+              return (
+                <Card
+                  key={recipe.id}
+                  as={Link}
+                  href={`/recipe/${recipe.id}`}
+                  clickable
+                >
+                  <a>
+                    <h3>{title}</h3>
+                    <div>{(recipe as any).category}</div>
+                  </a>
+                </Card>
+              )
+            }
+          })}
           {/* {recipes
             .sort((a, z) => a.title - z.title)
             .map((recipe) => {
@@ -77,6 +110,23 @@ const RecipesPage = ({ recipes: _recipes }: RecipesPageProps) => {
 export default RecipesPage
 
 export async function getStaticProps() {
+  const page_id = process.env.NOTION_PAGE_ID
+
+  if (page_id) {
+    const categorizedRecipes = await fetchCategorizedRecipePageContent(page_id)
+
+    const flatRecipes = categorizedRecipes.flatMap((cat) =>
+      cat.subPages.map((page) => ({ ...page, category: cat.title }))
+    )
+
+    return {
+      props: {
+        categorizedRecipes: JSON.stringify(categorizedRecipes),
+        flatRecipes: JSON.stringify(flatRecipes),
+      },
+    }
+  }
+
   return {
     props: {},
   }
