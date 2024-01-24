@@ -9,6 +9,8 @@
   margin: auto;
   font-size: 18px;
 
+  margin-bottom: 2rem;
+
   > * {
     @media screen and (max-width: $breakpoint-medium) {
       margin-right: 16px;

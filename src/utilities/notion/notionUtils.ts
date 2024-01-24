@@ -19,6 +19,18 @@ export const getPageTitle = (page: PageObjectResponse) => {
   return titleObject.title[0].plain_text
 }
 
+export const getPageCoverImageURL = (
+  page: PageObjectResponse
+): string | undefined => {
+  const cover = page.cover
+
+  if (cover?.type === "external") {
+    return cover.external.url
+  } else if (cover?.type === "file") {
+    return cover.file.url
+  }
+}
+
 export const isChildPageBlock = (
   block: PartialBlockObjectResponse | BlockObjectResponse
 ): block is ChildPageBlockObjectResponse => {

@@ -10,8 +10,13 @@ import {
   fetchFlatRecipePageContent,
 } from "../utilities/notion/fetchRecipes"
 import Card from "../components/card/card"
-import { getPageTitle, isPageObject } from "../utilities/notion/notionUtils"
+import {
+  getPageCoverImageURL,
+  getPageTitle,
+  isPageObject,
+} from "../utilities/notion/notionUtils"
 import Link from "next/link"
+import { RecipeCard } from "../components/card/RecipeCard/RecipeCard"
 
 interface RecipesPageProps extends ComponentProps<"section"> {
   categorizedRecipes: string
@@ -40,8 +45,26 @@ const RecipesPage = ({
           {/* (food recipes, not code "recipes". For that see <a href="/snippets">snippets</a>). */}
         </p>
 
-        <h2>How to read</h2>
-        <p>
+        <div className={styles.recipe_cards}>
+          {flatRecipes.map((recipe) => {
+            if (isPageObject(recipe)) {
+              const title = getPageTitle(recipe)
+              const imageUrl = getPageCoverImageURL(recipe)
+              return (
+                <RecipeCard
+                  title={title}
+                  href={`/recipe/${recipe.id}`}
+                  imageUrl={imageUrl}
+                />
+              )
+            }
+          })}
+        </div>
+
+        <details>
+          <summary>
+            <b>How to read Table Recipes</b>
+          </summary>
           These recipes formatted in the style of{" "}
           <a href="http://www.cookingforengineers.com/">
             Cooking for Engineers
@@ -50,28 +73,7 @@ const RecipesPage = ({
           personally find this is the clearest way to read a recipe. Check out
           the generator on{" "}
           <a href="https://github.com/TheSonOfThomp/recipe-parser">GitHub</a>.
-        </p>
-
-        <div className={styles.recipe_cards}>
-          {flatRecipes.map((recipe) => {
-            if (isPageObject(recipe)) {
-              const title = getPageTitle(recipe)
-              return (
-                <Card
-                  key={recipe.id}
-                  as={Link}
-                  href={`/recipe/${recipe.id}`}
-                  clickable
-                >
-                  <a>
-                    <h3>{title}</h3>
-                    <div>{(recipe as any).category}</div>
-                  </a>
-                </Card>
-              )
-            }
-          })}
-        </div>
+        </details>
       </DefaultPage>
     </>
   )

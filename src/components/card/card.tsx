@@ -17,15 +17,10 @@ interface CardProps extends ComponentProps<"div"> {
   clickable?: boolean
 }
 
-// Polymorphic<MyProps>(({ as, ...rest }) => {
-//   const { Component, ref } = usePolymorphic(as);
-//   return <Component ref={ref} {...rest} />;
-// });
 export const Card = Polymorphic<CardProps>(
   ({
     id,
     className,
-    style,
     as: asProp = "div",
     clickable,
     children,
@@ -38,7 +33,7 @@ export const Card = Polymorphic<CardProps>(
 
     return (
       <Polymorph as={asProp as PolymorphicAs} {...rest}>
-        <div id={id} style={style} className={classnames(cardClass, className)}>
+        <div id={id} className={classnames(cardClass, className)}>
           {children}
         </div>
       </Polymorph>
