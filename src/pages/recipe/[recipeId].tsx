@@ -49,7 +49,7 @@ export const getStaticPaths = async () => {
     return {
       paths: flatRecipePages.map((page) => {
         return {
-          params: { recipeId: page.id },
+          params: { recipeId: page?.id },
         }
       }),
       fallback: false,

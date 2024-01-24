@@ -15,8 +15,6 @@ export const mapBlockToReactNode = (
   const type = block.type
   const content = block[type] as BlockContent
 
-  console.log(content)
-
   switch (type) {
     case "heading_1":
       return <h1>{getPlainText(content)}</h1>

@@ -14,7 +14,7 @@ const page_size = 50
 export interface RecipeCategory {
   id: string
   title: string
-  subPages: Array<RecipePageMeta>
+  subPages: Array<RecipePageMeta | null>
 }
 
 export type RecipePageMeta = PageObjectResponse | BlockObjectResponse
@@ -48,13 +48,13 @@ export const fetchCategorizedRecipePageContent = async (
 export const fetchFlatRecipePageContent = async (
   rootPageId: string,
   categorizedRecipePageContent?: Array<RecipeCategory>
-): Promise<Array<RecipePageMeta>> => {
+): Promise<Array<RecipePageMeta | null>> => {
   const categorizedRecipes =
     categorizedRecipePageContent ??
     (await fetchCategorizedRecipePageContent(rootPageId))
 
   const flatRecipePageContent = categorizedRecipes.flatMap((cat) =>
-    cat.subPages.map((page) => ({ ...page, category: cat.title }))
+    cat.subPages.map((page) => page)
   )
 
   return flatRecipePageContent
@@ -83,7 +83,7 @@ const fetchSubPagesForChildRecipeBlock = async (
 /** Given a Recipe Page block, retrieve its metadata */
 export const fetchPagePropertiesForRecipePageBlock = async (
   recipePageBlock: PartialBlockObjectResponse | BlockObjectResponse
-): Promise<PageObjectResponse | BlockObjectResponse> => {
+): Promise<PageObjectResponse | BlockObjectResponse | null> => {
   if (isChildPageBlock(recipePageBlock)) {
     return await fetchPropertiesForPageId(recipePageBlock.id)
   } else {
@@ -91,12 +91,19 @@ export const fetchPagePropertiesForRecipePageBlock = async (
   }
 }
 
-export const fetchPropertiesForPageId = async (page_id: string) => {
-  const pageMeta = (await notion.pages.retrieve({
-    page_id,
-  })) as PageObjectResponse
+export const fetchPropertiesForPageId = async (
+  page_id: string
+): Promise<PageObjectResponse | null> => {
+  try {
+    const pageMeta = (await notion.pages.retrieve({
+      page_id,
+    })) as PageObjectResponse
 
-  return pageMeta
+    return pageMeta
+  } catch (err) {
+    console.error(err)
+    return null
+  }
 }
 
 export const fetchContentForPageId = async (page_id: string) => {

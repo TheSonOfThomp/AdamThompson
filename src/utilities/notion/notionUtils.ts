@@ -13,15 +13,17 @@ export interface PageTitleProperty {
   id: string
 }
 
-export const getPageTitle = (page: PageObjectResponse) => {
-  const titleObject = page.properties.title as PageTitleProperty
+export const getPageTitle = (page: PageObjectResponse | null) => {
+  if (!page) return ""
 
+  const titleObject = page.properties.title as PageTitleProperty
   return titleObject.title[0].plain_text
 }
 
 export const getPageCoverImageURL = (
-  page: PageObjectResponse
+  page: PageObjectResponse | null
 ): string | undefined => {
+  if (!page) return
   const cover = page.cover
 
   if (cover?.type === "external") {
