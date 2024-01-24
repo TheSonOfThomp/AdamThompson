@@ -39,6 +39,27 @@ export const fetchCategorizedRecipePageContent = async (
   return populatedCategoryPages
 }
 
+/**
+ * Retrieves a flat array of {@link RecipePageMeta}.
+ *
+ * Passing in a `Array<RecipeCategory>` as the 2nd param prevents re-fetching data
+ * and flattens the array provided
+ */
+export const fetchFlatRecipePageContent = async (
+  rootPageId: string,
+  categorizedRecipePageContent?: Array<RecipeCategory>
+): Promise<Array<RecipePageMeta>> => {
+  const categorizedRecipes =
+    categorizedRecipePageContent ??
+    (await fetchCategorizedRecipePageContent(rootPageId))
+
+  const flatRecipePageContent = categorizedRecipes.flatMap((cat) =>
+    cat.subPages.map((page) => ({ ...page, category: cat.title }))
+  )
+
+  return flatRecipePageContent
+}
+
 /**  Given a Category block, populate its subPages with content */
 const fetchSubPagesForChildRecipeBlock = async (
   categoryPageBlock: ChildPageBlockObjectResponse
@@ -60,16 +81,29 @@ const fetchSubPagesForChildRecipeBlock = async (
 }
 
 /** Given a Recipe Page block, retrieve its metadata */
-const fetchPagePropertiesForRecipePageBlock = async (
+export const fetchPagePropertiesForRecipePageBlock = async (
   recipePageBlock: PartialBlockObjectResponse | BlockObjectResponse
 ): Promise<PageObjectResponse | BlockObjectResponse> => {
   if (isChildPageBlock(recipePageBlock)) {
-    const recipePageMeta = (await notion.pages.retrieve({
-      page_id: recipePageBlock.id,
-    })) as PageObjectResponse
-
-    return recipePageMeta
+    return await fetchPropertiesForPageId(recipePageBlock.id)
   } else {
     return recipePageBlock as BlockObjectResponse
   }
+}
+
+export const fetchPropertiesForPageId = async (page_id: string) => {
+  const pageMeta = (await notion.pages.retrieve({
+    page_id,
+  })) as PageObjectResponse
+
+  return pageMeta
+}
+
+export const fetchContentForPageId = async (page_id: string) => {
+  const blocks = await notion.blocks.children.list({
+    block_id: page_id,
+    page_size,
+  })
+
+  return blocks
 }

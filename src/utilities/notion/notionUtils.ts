@@ -15,6 +15,7 @@ export interface PageTitleProperty {
 
 export const getPageTitle = (page: PageObjectResponse) => {
   const titleObject = page.properties.title as PageTitleProperty
+
   return titleObject.title[0].plain_text
 }
 

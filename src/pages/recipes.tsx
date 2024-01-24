@@ -7,6 +7,7 @@ import {
   RecipeCategory,
   RecipePageMeta,
   fetchCategorizedRecipePageContent,
+  fetchFlatRecipePageContent,
 } from "../utilities/notion/fetchRecipes"
 import Card from "../components/card/card"
 import { getPageTitle, isPageObject } from "../utilities/notion/notionUtils"
@@ -115,8 +116,9 @@ export async function getStaticProps() {
   if (page_id) {
     const categorizedRecipes = await fetchCategorizedRecipePageContent(page_id)
 
-    const flatRecipes = categorizedRecipes.flatMap((cat) =>
-      cat.subPages.map((page) => ({ ...page, category: cat.title }))
+    const flatRecipes = await fetchFlatRecipePageContent(
+      page_id,
+      categorizedRecipes
     )
 
     return {
