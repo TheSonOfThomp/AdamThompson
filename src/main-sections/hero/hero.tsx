@@ -23,7 +23,7 @@ const Hero = ({ className }: HeroProps) => {
       role="region"
     >
       <div className={styles.header_wrapper}>
-        <Header showNav={true} />
+        <Header showNav isHero />
       </div>
 
       <div className={styles.hero_contents}>

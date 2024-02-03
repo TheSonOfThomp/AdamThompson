@@ -1,6 +1,7 @@
 @import './colours.def.scss';
 
 :root {
+  // Primitive Colors
   --color-green: #{$green};
   --color-green-small: #{$green_small};
   --color-green-lightest: #{$green-lightest};
@@ -42,4 +43,21 @@
   --color-zynga-lightest: #{$zynga_lightest};
   --color-tap: #{$tap};
   --color-tap-light: #{$tap_light};
+
+  // Semantic Tokens
+
+  --color-brand-base: var(--color-green);
+  --color-brand-dark: var(--color-green-dark);
+  --color-brand-light: var(--color-green-light);
+
+  --color-text-base: var(--color-black);
+  --color-text-secondary: var(--color-grey-dark);
+  --color-text-inverse: var(--color-white);
+  --color-text-brand-bg: var(--color-white);
+
+  --color-text-brand: var(--color-green-small);
+  --color-text-selection: var(--color-green-lightest);
+
+  --color-bg-base: var(--color-white);
+  --color-bg-brand: #{$green-light-bg}; //var(--color-brand-base);
 }

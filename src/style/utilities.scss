@@ -34,7 +34,7 @@
 @mixin angledGradient($startCorner, $endCorner, $startColor, $endColor, $endPct) {
   background: $endColor; /* Old browsers */
   background: -webkit-gradient(linear, $startCorner, $endCorner, color-stop(0%, $startColor), color-stop($endPct, $endColor)); /* Chrome,Safari4+ */
-  background: linear-gradient(to $endCorner, $startColor 0%, $endColor $endPct); /* W3C */
+  background: linear-gradient(to #{$endCorner}, #{$startColor} 0%, #{$endColor} #{$endPct}); /* W3C */
 }
 
 @mixin radialGradient($from, $to) {

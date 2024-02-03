@@ -23,7 +23,9 @@ $header-opacity: 16;
 
 
   &::after {
-    @include CornerToCornerGradient($green-light, $green);
+    @include CornerToCornerGradient(
+      var(--color-brand-light), var(--color-brand-base)
+    );
     position: absolute;
     right: 0;
     width: 150vw;
@@ -34,21 +36,18 @@ $header-opacity: 16;
   }
 
   .header_wrapper {
-    // @include verticalGradient(mix($green-darker, $transparent, 45%), $transparent, 100%); // for legibility of text
     z-index: 1;
     padding: 24px $global-margin;
     padding-top: 8px;
     margin: 0;
-    background-color: mix($grey-dark, transparent, $header-opacity);
+    background-color: var(--color-bg-brand);
 
     > header {
       max-width: $content-width;
       margin: auto;
     }
   }
-
 }
-
 
 .hero_contents {
   position: relative;
@@ -85,7 +84,7 @@ $header-opacity: 16;
     top: 50%;
     width: responsiveSize(512, 768);
     margin: unset;
-    color: var(--color-black);
+    color: var(--color-text-base);
     opacity: $header-opacity * 0.01;
     place-items: center;
     transform: translateY(-50%) translateZ(-2px);
