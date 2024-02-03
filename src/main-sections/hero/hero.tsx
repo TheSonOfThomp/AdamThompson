@@ -22,9 +22,7 @@ const Hero = ({ className }: HeroProps) => {
       onMouseMove={setMousePos}
       role="region"
     >
-      <div className={styles.header_wrapper}>
-        <Header showNav isHero />
-      </div>
+      <Header showNav isHero />
 
       <div className={styles.hero_contents}>
         <h2 className={styles.big_letters}>

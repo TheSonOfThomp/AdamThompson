@@ -21,17 +21,14 @@ $header-opacity: 16;
 
   transition: height 150ms ease;
 
-
   &::after {
-
     @include CornerToCornerGradient(
       var(--color-brand-light), var(--color-brand-base)
     );
     @media (prefers-color-scheme: dark) {
-      @include CornerToCornerGradient(
-        var(--color-brand-base), var(--color-brand-dark)
-      );
+      background: var(--color-bg-base);
     }
+
     position: absolute;
     right: 0;
     width: 150vw;
@@ -39,19 +36,6 @@ $header-opacity: 16;
     content: '';
     transform: rotate(var(--app-angle));
     transform-origin: 100% 100%;
-  }
-
-  .header_wrapper {
-    z-index: 1;
-    padding: 24px $global-margin;
-    padding-top: 8px;
-    margin: 0;
-    background-color: var(--color-bg-brand);
-
-    > header {
-      max-width: $content-width;
-      margin: auto;
-    }
   }
 }
 
@@ -90,10 +74,14 @@ $header-opacity: 16;
     top: 50%;
     width: responsiveSize(512, 768);
     margin: unset;
-    color: var(--color-text-base);
     opacity: $header-opacity * 0.01;
     place-items: center;
     transform: translateY(-50%) translateZ(-2px);
+    
+    color: var(--color-text-base);
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-brand-base);
+    }
     
     .big_letters_monogram {
       box-sizing: border-box;

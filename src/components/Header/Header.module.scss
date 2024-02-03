@@ -1,20 +1,29 @@
 @import '../../style/variables';
 
 .page_header {
-  display: grid;
-  grid-template-areas: 'logo . nav';
-  grid-template-columns: max-content auto max-content;
   align-items: center;
   max-width: 100%;
-  padding: 0 16px;
-  padding-top: 16px;
+  padding: 24px $global-margin;
   margin: 0;
+  z-index: 1;
   color: var(--color-text-base);
   border-bottom: 2px solid var(--color-brand-base);
 
   &.hero {
     border: unset;
     color: var(--color-text-brand-bg);
+    background-color: var(--color-bg-brand);
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-bg-base);
+    }
+  }
+
+  .page_header_content {
+    max-width: $content-width;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 'logo . nav';
+    grid-template-columns: max-content auto max-content;
   }
 
   .page_link {
