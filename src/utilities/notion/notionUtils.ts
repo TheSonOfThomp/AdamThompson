@@ -5,7 +5,7 @@ import {
   PartialBlockObjectResponse,
   RichTextItemResponse,
 } from "@notionhq/client/build/src/api-endpoints"
-import { has } from "lodash"
+import { has, isNull } from "lodash"
 
 export interface PageTitleProperty {
   type: "title"
@@ -20,10 +20,17 @@ export const getPageTitle = (page: PageObjectResponse | null) => {
   return titleObject.title[0].plain_text
 }
 
+/** Returns whether a page object has an image */
+export const doesPageHaveImage = (
+  page: PageObjectResponse | BlockObjectResponse | null
+): page is PageObjectResponse => {
+  return !isNull(page) && isPageObject(page) && !isNull(page.cover)
+}
+
 export const getPageCoverImageURL = (
   page: PageObjectResponse | null
 ): string | undefined => {
-  if (!page) return
+  if (!doesPageHaveImage(page)) return
   const cover = page.cover
 
   if (cover?.type === "external") {

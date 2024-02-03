@@ -5,7 +5,7 @@ import {
   PageObjectResponse,
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints"
-import { isChildPageBlock } from "./notionUtils"
+import { doesPageHaveImage, isChildPageBlock } from "./notionUtils"
 const notion = new Client({ auth: process.env.NOTION_KEY })
 
 const CATEGORIES = ["Food", "Drinks", "Sauces, Spices & Syrups"]
@@ -60,7 +60,7 @@ export const fetchFlatRecipePageContent = async (
   return flatRecipePageContent
 }
 
-/**  Given a Category block, populate its subPages with content */
+/** Given a Category block, populate its subPages with content */
 const fetchSubPagesForChildRecipeBlock = async (
   categoryPageBlock: ChildPageBlockObjectResponse
 ): Promise<RecipeCategory> => {
@@ -76,7 +76,7 @@ const fetchSubPagesForChildRecipeBlock = async (
   return {
     id: categoryPageBlock.id,
     title: categoryPageBlock.child_page.title,
-    subPages: recipePageProperties,
+    subPages: recipePageProperties.filter(doesPageHaveImage),
   }
 }
 

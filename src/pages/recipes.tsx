@@ -9,13 +9,11 @@ import {
   fetchCategorizedRecipePageContent,
   fetchFlatRecipePageContent,
 } from "../utilities/notion/fetchRecipes"
-import Card from "../components/card/card"
 import {
   getPageCoverImageURL,
   getPageTitle,
   isPageObject,
 } from "../utilities/notion/notionUtils"
-import Link from "next/link"
 import { RecipeCard } from "../components/card/RecipeCard/RecipeCard"
 
 interface RecipesPageProps extends ComponentProps<"section"> {
@@ -26,9 +24,12 @@ interface RecipesPageProps extends ComponentProps<"section"> {
 
 const RecipesPage = ({
   recipes: _recipes,
-  categorizedRecipes,
+  categorizedRecipes: categorizedRecipesJSONString,
   flatRecipes: flatRecipesJSONString,
 }: RecipesPageProps) => {
+  const categorizedRecipes: Array<RecipeCategory> = JSON.parse(
+    categorizedRecipesJSONString
+  )
   const flatRecipes: Array<RecipePageMeta> = JSON.parse(flatRecipesJSONString)
 
   return (
@@ -45,6 +46,28 @@ const RecipesPage = ({
           {/* (food recipes, not code "recipes". For that see <a href="/snippets">snippets</a>). */}
         </p>
 
+        {categorizedRecipes.map((category) => (
+          <section>
+            <h2>{category.title}</h2>
+            <div key={category.id} className={styles.recipe_cards}>
+              {category.subPages.map((recipe) => {
+                if (recipe && isPageObject(recipe)) {
+                  const title = getPageTitle(recipe)
+                  const imageUrl = getPageCoverImageURL(recipe)
+                  return (
+                    <RecipeCard
+                      title={title}
+                      href={`/recipe/${recipe.id}`}
+                      imageUrl={imageUrl}
+                    />
+                  )
+                }
+              })}
+            </div>
+          </section>
+        ))}
+
+        {/* 
         <div className={styles.recipe_cards}>
           {flatRecipes.map((recipe) => {
             if (isPageObject(recipe)) {
@@ -59,7 +82,7 @@ const RecipesPage = ({
               )
             }
           })}
-        </div>
+        </div> */}
 
         <details>
           <summary>
@@ -94,7 +117,9 @@ export async function getStaticProps() {
 
     return {
       props: {
-        categorizedRecipes: JSON.stringify(categorizedRecipes),
+        categorizedRecipes: JSON.stringify(
+          categorizedRecipes.filter((cat) => cat.subPages.length > 0)
+        ),
         flatRecipes: JSON.stringify(flatRecipes),
       },
     }
