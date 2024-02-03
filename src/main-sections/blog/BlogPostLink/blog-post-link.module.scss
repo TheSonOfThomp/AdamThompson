@@ -9,6 +9,10 @@
   padding: 16px;
   background-color: var(--color-bg-base);
   border-radius: 4px;
+
+  @media (prefers-color-scheme: dark) {
+    outline: 1px solid var(--color-text-secondary);
+  }
 }
 
 .blog_post_link {

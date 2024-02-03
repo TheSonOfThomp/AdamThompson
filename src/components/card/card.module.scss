@@ -7,6 +7,10 @@
   background-color: var(--color-bg-base);
   padding: 16px;
   border-radius: 12px;
+
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid var(--color-text-secondary);
+  }
 }
 
 .clickableCard {

@@ -1,5 +1,4 @@
 import React from "react"
-// import Image from 'next/image'
 import classnames from 'classnames'
 import {useCustomProps} from '../../../hooks/useCustomProperty';
 import styles from './portfolio-card.module.scss';
@@ -16,6 +15,7 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
   })
 
   return (
+
     <a 
       ref={cardRef} 
       href={link} 
@@ -39,13 +39,6 @@ const PortfolioCard = ({ title, tagline, color, imgSrc, link }) => {
             height={200}
           />
         </picture>
-        {/* <Image 
-          src={imgSrc}
-          alt={`${title}`}
-          layout="fill"
-          objectFit="contain"
-          loading="lazy"
-        /> */}
 
       </div>
     </a>

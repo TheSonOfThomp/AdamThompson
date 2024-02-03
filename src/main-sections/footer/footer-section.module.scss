@@ -9,7 +9,11 @@
   margin-top: 48px;
   font-weight: 400;
   color: var(--color-text-brand-bg);
-  background-color: var(--color-brand-base);
+  background-color: var(--color-bg-brand);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-bg-base);
+  }
 
   .footer_content {
     display: flex;

@@ -23,9 +23,15 @@ $header-opacity: 16;
 
 
   &::after {
+
     @include CornerToCornerGradient(
       var(--color-brand-light), var(--color-brand-base)
     );
+    @media (prefers-color-scheme: dark) {
+      @include CornerToCornerGradient(
+        var(--color-brand-base), var(--color-brand-dark)
+      );
+    }
     position: absolute;
     right: 0;
     width: 150vw;

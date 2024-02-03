@@ -59,5 +59,21 @@
   --color-text-selection: var(--color-green-lightest);
 
   --color-bg-base: var(--color-white);
-  --color-bg-brand: #{$green-light-bg}; //var(--color-brand-base);
+  --color-bg-brand: #{$green-light-bg};
+
+  @media (prefers-color-scheme: dark) {
+    --color-brand-dark: var(--color-green-darker);
+    --color-brand-light: var(--color-green);
+  
+    --color-text-base: var(--color-white);
+    --color-text-secondary: var(--color-grey-med);
+    --color-text-inverse: var(--color-black);
+    --color-text-brand-bg: var(--color-white);
+  
+    --color-text-brand: var(--color-green-light);
+    --color-text-selection: var(--color-green-dark);
+  
+    --color-bg-base: var(--color-green-darkest);
+    --color-bg-brand: var(--color-green-dark);
+  }
 }
