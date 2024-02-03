@@ -34,7 +34,7 @@ const RecipesPage = ({
 
   return (
     <>
-      <DefaultPage title="Recipes">
+      <DefaultPage title="Recipes | Adam Thompson">
         <h1>Recipes</h1>
 
         <p>
@@ -66,23 +66,6 @@ const RecipesPage = ({
             </div>
           </section>
         ))}
-
-        {/* 
-        <div className={styles.recipe_cards}>
-          {flatRecipes.map((recipe) => {
-            if (isPageObject(recipe)) {
-              const title = getPageTitle(recipe)
-              const imageUrl = getPageCoverImageURL(recipe)
-              return (
-                <RecipeCard
-                  title={title}
-                  href={`/recipe/${recipe.id}`}
-                  imageUrl={imageUrl}
-                />
-              )
-            }
-          })}
-        </div> */}
 
         <details>
           <summary>
@@ -118,7 +101,7 @@ export async function getStaticProps() {
     return {
       props: {
         categorizedRecipes: JSON.stringify(
-          categorizedRecipes.filter((cat) => cat.subPages.length > 0)
+          categorizedRecipes.filter((cat) => cat.subPages.length > 1)
         ),
         flatRecipes: JSON.stringify(flatRecipes),
       },

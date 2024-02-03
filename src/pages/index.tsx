@@ -1,5 +1,4 @@
 import React from "react"
-// import SEO from "components/seo";
 import Head from "next/head"
 import Hero from "../main-sections/hero/hero"
 
