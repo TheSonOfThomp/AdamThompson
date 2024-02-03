@@ -5,6 +5,7 @@
   --scale: 1;
   @include elevation($start);
   @include animate((box-shadow, transform));
+  cursor: pointer;
   z-index: 1;
   transform: scale(var(--scale));
   transform-origin: 50% 50%;

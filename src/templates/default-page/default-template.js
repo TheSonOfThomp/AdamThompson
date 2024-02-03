@@ -4,6 +4,7 @@ import classnames from "classnames"
 import Head from "next/head"
 import styles from './default-template.module.scss';
 import Header from '../../components/Header';
+import FooterSection from '../../main-sections/footer/footer-section';
 
 const DefaultPage = ({ children, meta, title, className, id, } ) => {
   const pageTitle = title ? title : (meta ? meta.title : '—')
@@ -19,6 +20,9 @@ const DefaultPage = ({ children, meta, title, className, id, } ) => {
       >
         <Header color="black" />
         <article>{children}</article>
+
+        {/* TODO: This looks bad */}
+        {/* <FooterSection /> */}
       </main>
     </>
   );

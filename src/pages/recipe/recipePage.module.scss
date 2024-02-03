@@ -1,0 +1,10 @@
+
+picture.cover_img {
+
+  max-width: 100%;
+
+  & img {
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+}

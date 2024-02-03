@@ -61,5 +61,6 @@
 
 @function responsiveSize($min-size, $max-size, $unit: 'px') {
   $mobile-width: 320;
-  @return clamp($min-size * 1#{$unit}, $min-size/$mobile-width*100vw, $max-size*1#{$unit});
+  // @return clamp(calc($min-size * 1 * #{$unit}), $min-size/$mobile-width*100vw, $max-size*1#{$unit});
+  @return clamp(calc($min-size*1px), $min-size/$mobile-width*100vw, $max-size*1px);
 }

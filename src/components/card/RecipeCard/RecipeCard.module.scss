@@ -1,0 +1,20 @@
+.recipeCard {
+  padding: 0;
+
+  h3 {
+    margin: 0.5em 0;
+    padding: 0 16px;
+  }
+
+  picture, img {
+    display: inline-block;
+    width: 100%;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+  }
+
+  img {
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+}
