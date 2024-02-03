@@ -7,7 +7,14 @@
   }
 
   picture, img {
+    display: inline-block;
+    width: 100%;
     border-top-right-radius: inherit;
     border-top-left-radius: inherit;
+  }
+
+  img {
+    object-fit: cover;
+    aspect-ratio: 16/9;
   }
 }
