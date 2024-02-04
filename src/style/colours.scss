@@ -61,6 +61,7 @@
 
   --color-bg-base: var(--color-white);
   --color-bg-brand: #{$green-light-bg};
+  --color-bg-hover: rgba(0, 0, 0, 0.16);
 
   @media (prefers-color-scheme: dark) {
     --color-brand-dark: var(--color-green-darker);
@@ -76,5 +77,6 @@
   
     --color-bg-base: var(--color-green-darkest);
     --color-bg-brand: var(--color-green-dark);
+    --color-bg-hover: rgba(255, 255, 255, 0.16);
   }
 }

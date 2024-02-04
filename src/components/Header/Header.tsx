@@ -9,9 +9,11 @@ import {
   faCodepen,
   faMedium,
 } from "@fortawesome/free-brands-svg-icons"
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 import SocialLink from "./social-link/social-link"
 import Monogram from "../../images/monogram.svg"
 import styles from "./Header.module.scss"
+import { IconButton } from "../IconButton/IconButton"
 
 const Header = ({ showNav, isHero }) => {
   const navRef = useRef(null)
@@ -41,29 +43,31 @@ const Header = ({ showNav, isHero }) => {
               Recipes
             </a>
             <SocialLink
-              name="Twitter"
-              url="https://www.twitter.com/thesonofthomp/"
-            >
-              <FontAwesomeIcon icon={faTwitter} size="sm" />
-            </SocialLink>
+              title="Twitter"
+              icon={faTwitter}
+              href="https://www.twitter.com/thesonofthomp/"
+            />
             <SocialLink
-              name="GitHub"
-              url="https://www.github.com/thesonofthomp"
-            >
-              <FontAwesomeIcon icon={faGithub} size="sm" />
-            </SocialLink>
+              title="GitHub"
+              icon={faGithub}
+              href="https://www.github.com/thesonofthomp"
+            />
             <SocialLink
-              name="Linkedin"
-              url="https://www.linkedin.com/in/adammthompson/"
-            >
-              <FontAwesomeIcon icon={faLinkedinIn} size="sm" />
-            </SocialLink>
-            <SocialLink name="Codepen" url="https://codepen.io/TheSonOfThomp/">
-              <FontAwesomeIcon icon={faCodepen} size="sm" />
-            </SocialLink>
-            <SocialLink name="Medium" url="https://medium.com/@TheSonOfThomp">
-              <FontAwesomeIcon icon={faMedium} size="sm" />
-            </SocialLink>
+              title="Linkedin"
+              icon={faLinkedinIn}
+              href="https://www.linkedin.com/in/adammthompson/"
+            />
+            <SocialLink
+              title="Codepen"
+              icon={faCodepen}
+              href="https://codepen.io/TheSonOfThomp/"
+            />
+            <SocialLink
+              icon={faMedium}
+              title="Medium"
+              href="https://medium.com/@TheSonOfThomp"
+            />
+            <IconButton as="button" icon={faSun} />
           </nav>
         )}
       </div>

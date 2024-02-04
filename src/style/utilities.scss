@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 @function Min($a, $b) {
   @return #{'min(#{$a}, #{$b})'};
 }
@@ -52,7 +54,7 @@
   border-radius: $radius;
 }
 
-@mixin animate($what: all, $when: 500ms, $how: $animation-ease) {
+@mixin animate($what: all, $when: $animation-duration, $how: $animation-ease) {
   transition: $what $when $how;
 }
 
@@ -65,3 +67,5 @@
   // @return clamp(calc($min-size * 1 * #{$unit}), $min-size/$mobile-width*100vw, $max-size*1#{$unit});
   @return clamp(calc($min-size*1px), $min-size/$mobile-width*100vw, $max-size*1px);
 }
+
+$global-margin: responsiveSize(16, 24);
