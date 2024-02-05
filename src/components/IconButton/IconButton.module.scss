@@ -20,7 +20,7 @@
     background-color: var(--color-bg-hover);
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid var(--color-brand-light);
     outline-offset: 0.25em;
   }

@@ -4,9 +4,6 @@ import PortfolioCard from "./portfolio-card/portfolio-card";
 import styles from './portfolio-section.module.scss';
 
 const PortfolioSection = ({ meta }) => {
-
-  console.log(meta)
-
   return (
     <Section title="UX Case Studies" className={styles.section} id="portfolio">
       <div className={styles.portfolio_cards_container}>

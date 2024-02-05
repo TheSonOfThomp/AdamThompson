@@ -14,9 +14,18 @@ import SocialLink from "./social-link/social-link"
 import Monogram from "../../images/monogram.svg"
 import styles from "./Header.module.scss"
 import { IconButton } from "../IconButton/IconButton"
+import { useDarkMode } from "../DarkModeContext/DarkModeContext"
 
 const Header = ({ showNav, isHero }) => {
   const navRef = useRef(null)
+
+  const { darkMode, setDarkMode } = useDarkMode()
+
+  const handleDarkModeToggle = () => {
+    setDarkMode((dm) => !dm)
+  }
+
+  const darkModeIcon = darkMode ? faSun : faMoon
 
   return (
     <header
@@ -67,7 +76,11 @@ const Header = ({ showNav, isHero }) => {
               title="Medium"
               href="https://medium.com/@TheSonOfThomp"
             />
-            <IconButton as="button" icon={faSun} />
+            <IconButton
+              as="button"
+              icon={darkModeIcon}
+              onClick={handleDarkModeToggle}
+            />
           </nav>
         )}
       </div>
