@@ -9,11 +9,13 @@ import React, {
 interface DarkModeContextProps {
   darkMode: boolean
   setDarkMode: Dispatch<SetStateAction<boolean>>
+  theme: "dark" | "light"
 }
 
 export const DarkModeContext = createContext<DarkModeContextProps>({
   darkMode: false,
   setDarkMode: () => {},
+  theme: "light",
 })
 
 interface DarkModeProviderProps {
@@ -25,8 +27,9 @@ export const DarkModeProvider = ({
   setDarkMode,
   children,
 }: PropsWithChildren<DarkModeProviderProps>) => {
+  const theme = darkMode ? "dark" : "light"
   return (
-    <DarkModeContext.Provider value={{ darkMode, setDarkMode }}>
+    <DarkModeContext.Provider value={{ darkMode, setDarkMode, theme }}>
       {children}
     </DarkModeContext.Provider>
   )

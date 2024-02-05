@@ -65,6 +65,8 @@
   --color-bg-hover: rgba(0, 0, 0, 0.16);
 }
 @mixin DarkMode {
+  --color-brand-base: var(--color-green);
+
   --color-brand-dark: var(--color-green-darker);
   --color-brand-light: var(--color-green);
 

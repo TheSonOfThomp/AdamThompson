@@ -8,7 +8,7 @@
   padding: 16px;
   border-radius: 12px;
 
-  @media (prefers-color-scheme: dark) {
+  &.dark {
     border: 1px solid var(--color-text-secondary);
   }
 }

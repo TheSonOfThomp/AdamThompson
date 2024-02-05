@@ -19,7 +19,7 @@ import { useDarkMode } from "../DarkModeContext/DarkModeContext"
 const Header = ({ showNav, isHero }) => {
   const navRef = useRef(null)
 
-  const { darkMode, setDarkMode } = useDarkMode()
+  const { darkMode, setDarkMode, theme } = useDarkMode()
 
   const handleDarkModeToggle = () => {
     setDarkMode((dm) => !dm)
@@ -29,7 +29,11 @@ const Header = ({ showNav, isHero }) => {
 
   return (
     <header
-      className={classnames(styles.page_header, isHero ? styles.hero : "")}
+      className={classnames(
+        styles.page_header,
+        styles[theme],
+        isHero ? styles.hero : ""
+      )}
     >
       <div className={styles.page_header_content}>
         <a className={styles.page_link} href="/">
