@@ -1,4 +1,5 @@
 @import './colours.def.scss';
+@import './darkMode.mixins.scss';
 
 :root {
   // Primitive Colors
@@ -46,7 +47,7 @@
 }
 
 // Semantic Tokens
-@mixin LightMode {
+@mixin LightModeTokens {
   --color-brand-base: var(--color-green);
 
   --color-brand-dark: var(--color-green-dark);
@@ -64,7 +65,8 @@
   --color-bg-brand: #{$green-light-bg};
   --color-bg-hover: rgba(0, 0, 0, 0.16);
 }
-@mixin DarkMode {
+
+@mixin DarkModeTokens {
   --color-brand-base: var(--color-green);
 
   --color-brand-dark: var(--color-green-darker);
@@ -84,19 +86,11 @@
 }
 
 body { 
-  @media (prefers-color-scheme: light) {
-    @include LightMode();
+  @include Mode("light") {
+    @include LightModeTokens();
   }
 
-  @media (prefers-color-scheme: dark) {
-    @include DarkMode()
-  }
-
-  &[data-dark="false"] {
-    @include LightMode();
-  }
-
-  &[data-dark="true"] {
-    @include DarkMode()
+  @include Mode("dark") {
+    @include DarkModeTokens();
   }
 }

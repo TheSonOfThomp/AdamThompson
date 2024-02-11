@@ -1,4 +1,5 @@
 @import '../../style/utilities';
+@import '../../style/darkMode.mixins.scss';
 
 .page_header {
   align-items: center;
@@ -13,8 +14,8 @@
     border: unset;
     color: var(--color-text-brand-bg);
     background-color: var(--color-bg-brand);
-    
-    &.dark {
+
+    @include Mode('dark') {
       background-color: var(--color-bg-base);
     }
   }

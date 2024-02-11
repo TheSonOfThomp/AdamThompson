@@ -1,5 +1,8 @@
 import "../style/global.scss"
-import { DarkModeProvider } from "../components/DarkModeContext/DarkModeContext"
+import {
+  DarkModeProvider,
+  getTheme,
+} from "../components/DarkModeContext/DarkModeContext"
 import { useEffect, useState } from "react"
 import React from "react"
 
@@ -16,13 +19,15 @@ function MyApp({ Component, pageProps }) {
 export default MyApp
 
 const useInitDarkMode = (): [
-  boolean,
-  React.Dispatch<React.SetStateAction<boolean>>,
+  boolean | undefined,
+  React.Dispatch<React.SetStateAction<boolean | undefined>>,
 ] => {
-  const [darkMode, _setDarkMode] = useState(false)
+  const [darkMode, _setDarkMode] = useState<boolean | undefined>()
 
-  const updateDocumentData = (val: boolean) => {
-    document.body.setAttribute("data-dark", String(val))
+  const updateDocumentData = (val?: boolean) => {
+    const theme = getTheme(val)
+    console.log("data-theme", { theme })
+    document.body.setAttribute("data-theme", theme)
   }
 
   const setDarkMode: typeof _setDarkMode = (actionOrState) => {

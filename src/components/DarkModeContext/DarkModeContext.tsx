@@ -1,3 +1,4 @@
+import { isUndefined } from "lodash"
 import React, {
   Dispatch,
   PropsWithChildren,
@@ -6,28 +7,34 @@ import React, {
   useContext,
 } from "react"
 
+type Theme = "dark" | "light" | "null"
+
+export const getTheme = (mode?: boolean): Theme =>
+  isUndefined(mode) ? "null" : mode ? "dark" : "light"
+
 interface DarkModeContextProps {
-  darkMode: boolean
-  setDarkMode: Dispatch<SetStateAction<boolean>>
-  theme: "dark" | "light"
+  darkMode: boolean | undefined
+  setDarkMode: Dispatch<SetStateAction<boolean | undefined>>
+  theme: Theme
 }
 
 export const DarkModeContext = createContext<DarkModeContextProps>({
-  darkMode: false,
+  darkMode: undefined,
   setDarkMode: () => {},
   theme: "light",
 })
 
 interface DarkModeProviderProps {
-  darkMode: boolean
-  setDarkMode: Dispatch<SetStateAction<boolean>>
+  darkMode: boolean | undefined
+  setDarkMode: Dispatch<SetStateAction<boolean | undefined>>
 }
 export const DarkModeProvider = ({
   darkMode,
   setDarkMode,
   children,
 }: PropsWithChildren<DarkModeProviderProps>) => {
-  const theme = darkMode ? "dark" : "light"
+  const theme = getTheme(darkMode)
+
   return (
     <DarkModeContext.Provider value={{ darkMode, setDarkMode, theme }}>
       {children}

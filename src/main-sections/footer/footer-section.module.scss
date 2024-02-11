@@ -1,3 +1,5 @@
+@import '../../style/colours.def.scss';
+@import '../../style/darkMode.mixins.scss';
 @import '../../style/variables';
 @import '../../style/mixins';
 
@@ -11,7 +13,7 @@
   color: var(--color-text-brand-bg);
   background-color: var(--color-bg-brand);
 
-  @media (prefers-color-scheme: dark) {
+  @include Mode('dark') {
     background-color: var(--color-bg-base);
   }
 

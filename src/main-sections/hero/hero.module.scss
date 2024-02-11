@@ -1,4 +1,5 @@
 @import '../../style/colours.def.scss';
+@import '../../style/darkMode.mixins.scss';
 @import '../../style/variables';
 @import '../../style/utilities';
 @import '../../style/mixins';
@@ -22,10 +23,6 @@ $header-opacity: 16;
   transition: height 150ms ease;
 
   &::after {
-    @include CornerToCornerGradient(
-      var(--color-brand-light), var(--color-brand-base)
-    );
-
     position: absolute;
     right: 0;
     width: 150vw;
@@ -33,10 +30,12 @@ $header-opacity: 16;
     content: '';
     transform: rotate(var(--app-angle));
     transform-origin: 100% 100%;
+    @include CornerToCornerGradient(
+      var(--color-brand-light), var(--color-brand-base)
+    );
   }
 
-  &.dark {
-
+  @include Mode('dark') {
     &::after {
       background: var(--color-bg-base);
     }

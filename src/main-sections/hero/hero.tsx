@@ -2,7 +2,7 @@ import React, { ComponentProps, useRef } from "react"
 import classNames from "classnames"
 import Monogram from "../../images/monogram.svg"
 import Header from "../../components/Header"
-import { useDarkMode } from "../../components/DarkModeContext/DarkModeContext"
+import { useDarkMode } from "../../components/DarkModeContext"
 import styles from "./hero.module.scss"
 
 interface HeroProps extends ComponentProps<"div"> {}
@@ -21,7 +21,8 @@ const Hero = ({ className }: HeroProps) => {
   return (
     <div
       ref={heroRef}
-      className={classNames(styles.hero, styles[theme])}
+      className={classNames(styles.hero)}
+      data-theme={theme}
       onMouseMove={setMousePos}
       role="region"
     >

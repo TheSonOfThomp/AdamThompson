@@ -34,6 +34,7 @@ const Header = ({ showNav, isHero }) => {
         styles[theme],
         isHero ? styles.hero : ""
       )}
+      data-theme={theme}
     >
       <div className={styles.page_header_content}>
         <a className={styles.page_link} href="/">
