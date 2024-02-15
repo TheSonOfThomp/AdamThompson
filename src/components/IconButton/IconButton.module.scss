@@ -1,0 +1,27 @@
+@import '../../style/utilities';
+
+.icon_button {
+  background-color: unset;
+  outline: none;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1.75em;
+  height: 1.75em;
+  width: 1.75em;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 0.125em;
+  background-color: transparent;
+  @include animate(background-color);
+
+  &:hover {
+    border: unset;
+    background-color: var(--color-bg-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-brand-light);
+    outline-offset: 0.25em;
+  }
+}

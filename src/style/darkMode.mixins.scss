@@ -1,0 +1,31 @@
+@mixin Mode($mode) {
+
+  $isDark: $mode == 'dark';
+  
+  // if data-theme is `null`, use media query
+  // otherwise, use data-theme
+
+  @if $isDark {
+    &[data-theme="null"],
+    &:not([data-theme]) {
+      @media (prefers-color-scheme: dark) {
+        @content;
+      } 
+    }
+    &[data-theme="dark"] {
+      @content;
+    }
+  }
+  
+  @else {
+    &[data-theme="null"],
+    &:not([data-theme]) {
+      @media (prefers-color-scheme: light) {
+        @content;
+      }
+    }
+    &[data-theme="light"] {
+      @content;
+    }
+  }
+}

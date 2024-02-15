@@ -25,7 +25,7 @@ $image-height: 48px;
     .position {
       grid-area: position;
       font-size: 20px;
-      color: var(--color-green);
+      color: var(--color-text-brand);
     }
 
     .company {
@@ -37,7 +37,7 @@ $image-height: 48px;
       grid-area: location;
       justify-self: right;
       font-size: 14px;
-      color: var(--grey-dark);
+      color: var(--grey-text-secondary);
     }
   }
 

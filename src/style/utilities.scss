@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 @function Min($a, $b) {
   @return #{'min(#{$a}, #{$b})'};
 }
@@ -14,6 +16,7 @@
   $y: #{$level}px;
   $blur: #{$level * 3}px;
   box-shadow: 0 $y $blur rgba(0, 0, 0, 0.25);
+
 }
 
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
@@ -34,7 +37,7 @@
 @mixin angledGradient($startCorner, $endCorner, $startColor, $endColor, $endPct) {
   background: $endColor; /* Old browsers */
   background: -webkit-gradient(linear, $startCorner, $endCorner, color-stop(0%, $startColor), color-stop($endPct, $endColor)); /* Chrome,Safari4+ */
-  background: linear-gradient(to $endCorner, $startColor 0%, $endColor $endPct); /* W3C */
+  background: linear-gradient(to #{$endCorner}, #{$startColor} 0%, #{$endColor} #{$endPct}); /* W3C */
 }
 
 @mixin radialGradient($from, $to) {
@@ -51,7 +54,7 @@
   border-radius: $radius;
 }
 
-@mixin animate($what: all, $when: 500ms, $how: $animation-ease) {
+@mixin animate($what: all, $when: $animation-duration, $how: $animation-ease) {
   transition: $what $when $how;
 }
 
@@ -64,3 +67,5 @@
   // @return clamp(calc($min-size * 1 * #{$unit}), $min-size/$mobile-width*100vw, $max-size*1#{$unit});
   @return clamp(calc($min-size*1px), $min-size/$mobile-width*100vw, $max-size*1px);
 }
+
+$global-margin: responsiveSize(16, 24);

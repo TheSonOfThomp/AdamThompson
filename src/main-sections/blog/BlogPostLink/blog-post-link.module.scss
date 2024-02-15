@@ -1,3 +1,4 @@
+@import '../../../style/darkMode.mixins.scss';
 @import '../../../style/variables';
 @import '../../../style/mixins';
 
@@ -7,8 +8,12 @@
   flex-direction: column;
   align-items: baseline;
   padding: 16px;
-  background-color: var(--color-white);
+  background-color: var(--color-bg-base);
   border-radius: 4px;
+
+  @include Mode('dark') {
+    outline: 1px solid var(--color-text-secondary);
+  }
 }
 
 .blog_post_link {

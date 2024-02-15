@@ -1,12 +1,15 @@
 import React, { ComponentProps, useRef } from "react"
-import styles from "./hero.module.scss"
+import classNames from "classnames"
 import Monogram from "../../images/monogram.svg"
 import Header from "../../components/Header"
+import { useDarkMode } from "../../components/DarkModeContext"
+import styles from "./hero.module.scss"
 
 interface HeroProps extends ComponentProps<"div"> {}
 
 const Hero = ({ className }: HeroProps) => {
   const heroRef = useRef<HTMLDivElement>(null)
+  const { theme } = useDarkMode()
 
   const setMousePos = (e) => {
     const x = (e.clientX / (heroRef.current?.clientWidth ?? 1)) * 2 - 1
@@ -18,13 +21,12 @@ const Hero = ({ className }: HeroProps) => {
   return (
     <div
       ref={heroRef}
-      className={styles.hero}
+      className={classNames(styles.hero)}
+      data-theme={theme}
       onMouseMove={setMousePos}
       role="region"
     >
-      <div className={styles.header_wrapper}>
-        <Header showNav={true} />
-      </div>
+      <Header showNav isHero />
 
       <div className={styles.hero_contents}>
         <h2 className={styles.big_letters}>

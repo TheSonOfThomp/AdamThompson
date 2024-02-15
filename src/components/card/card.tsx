@@ -1,9 +1,5 @@
 // import PropTypes from "prop-types"
-import React, {
-  ComponentProps,
-  PropsWithChildren,
-  ReactComponentElement,
-} from "react"
+import React, { ComponentProps } from "react"
 import classnames from "classnames"
 import styles from "./card.module.scss"
 import {
@@ -11,6 +7,7 @@ import {
   Polymorphic,
   PolymorphicAs,
 } from "@leafygreen-ui/polymorphic"
+import { useDarkMode } from "../DarkModeContext/DarkModeContext"
 
 interface CardProps extends ComponentProps<"div"> {
   as?: string | React.ComponentType<any>
@@ -26,6 +23,7 @@ export const Card = Polymorphic<CardProps>(
     children,
     ...rest
   }: CardProps) => {
+    const { theme } = useDarkMode()
     const isClickable =
       clickable ??
       (typeof asProp === "string" && ["a", "button"].includes(asProp))
@@ -33,7 +31,10 @@ export const Card = Polymorphic<CardProps>(
 
     return (
       <Polymorph as={asProp as PolymorphicAs} {...rest}>
-        <div id={id} className={classnames(cardClass, className)}>
+        <div
+          id={id}
+          className={classnames(cardClass, styles[theme], className)}
+        >
           {children}
         </div>
       </Polymorph>

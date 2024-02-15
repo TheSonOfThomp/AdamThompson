@@ -1,6 +1,5 @@
-@import './utilities';
+
 // -------- Measurements -------- //
-$global-margin: responsiveSize(24, 32);
 $content-width: 1024px;
 $folio-max-width: 720px;
 
@@ -10,4 +9,6 @@ $breakpoint-medium: $content-width + 32px;
 $breakpoint-small: 768px;
 $breakpoint-xsmall: 640px;
 
+$animation-duration: 100ms;
+$animation-duration-slow: 300ms;
 $animation-ease: cubic-bezier(0.075, 0.82, 0.165, 1);
