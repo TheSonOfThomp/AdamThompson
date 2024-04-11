@@ -29,7 +29,7 @@
     "classnames": "^2.5.1",
     "i": "^0.3.7",
     "next": "^12.0.0",
-    "npm": "^10.3.0"
+    "npm": "^10.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
