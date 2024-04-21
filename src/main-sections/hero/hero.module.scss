@@ -31,18 +31,8 @@ $header-opacity: 16;
     transform: rotate(var(--app-angle));
     transform-origin: 100% 100%;
     @include CornerToCornerGradient(
-      var(--color-brand-light), var(--color-brand-base)
+      var(--color-hero-start), var(--color-hero-end)
     );
-  }
-
-  @include Mode('dark') {
-    &::after {
-      background: var(--color-bg-base);
-    }
-
-    .hero_contents .big_letters {
-      color: var(--color-brand-base);
-    }
   }
 }
 
@@ -84,7 +74,7 @@ $header-opacity: 16;
     opacity: $header-opacity * 0.01;
     place-items: center;
     transform: translateY(-50%) translateZ(-2px);
-    color: var(--color-text-base);
+    color: var(--color-hero-text);
     
     .big_letters_monogram {
       box-sizing: border-box;

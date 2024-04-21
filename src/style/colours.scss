@@ -53,6 +53,10 @@
   --color-brand-dark: var(--color-green-dark);
   --color-brand-light: var(--color-green-light);
 
+  --color-hero-start: var(--color-green-light);
+  --color-hero-end: var(--color-green);
+  --color-hero-text: var(--color-black);
+
   --color-text-base: var(--color-black);
   --color-text-secondary: var(--color-grey-dark);
   --color-text-inverse: var(--color-white);
@@ -71,6 +75,10 @@
 
   --color-brand-dark: var(--color-green-darker);
   --color-brand-light: var(--color-green);
+
+  --color-hero-start: var(--color-green-darkest);
+  --color-hero-end: var(--color-green-darkest);
+  --color-hero-text: var(--color-green-dark);
 
   --color-text-base: var(--color-white);
   --color-text-secondary: var(--color-grey-med);
