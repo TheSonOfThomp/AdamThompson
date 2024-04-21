@@ -3,24 +3,27 @@
 
 :root {
   // Primitive Colors
-  --color-green: #{$green};
-  --color-green-small: #{$green_small};
-  --color-green-lightest: #{$green-lightest};
-  --color-green-lightest-trans: #{$green-lightest_trans};
-  --color-green-lighter: #{$green-lighter};
-  --color-green-light: #{$green-light};
-  --color-green-dark: #{$green-dark};
-  --color-green-darker: #{$green-darker};
-  --color-green-darkest: #{$green-darkest};
+  --color-green-lightest-trans: #{$green-light300_trans};
+  --color-green-light300: #{$green-light300};
+  --color-green-light200: #{$green-light200};
+  --color-green-light100: #{$green-light100};
+  --color-green-light025: #{$green-light025};
+  --color-green-base: #{$green-base};
+  --color-green-dark025: #{$green-dark025};
+  --color-green-dark050: #{$green-dark050};
+  --color-green-dark100: #{$green-dark100};
+  --color-green-dark200: #{$green-dark200};
+  --color-green-dark300: #{$green-dark300};
 
   --color-white: #{$white};
-  --color-white-trans: #{$white-trans};
-  --color-grey-light: #{$grey-light};
-  --color-grey-med: #{$grey-medium};
-  --color-grey-dark: #{$grey-dark};
-  --color-grey-dark-trans: #{$grey-dark_trans};
-  --color-grey-darker: #{$grey-darker};
+  --color-grey-light: #{$grey-light300};
+  --color-grey-base: #{$grey-base};
+  --color-grey-dark200: #{$grey-dark200};
+  --color-grey-dark300: #{$grey-dark300};
   --color-black: #{$black};
+  
+  --color-white-trans: #{$white-trans};
+  --color-grey-dark-trans: #{$grey-dark200_trans};
   --color-transparent: #{$transparent};
   
   // ---- Brand Colours ---- //
@@ -48,48 +51,48 @@
 
 // Semantic Tokens
 @mixin LightModeTokens {
-  --color-brand-base: var(--color-green);
+  
+  --color-brand-dark: var(--color-green-dark050);
+  --color-brand-base: var(--color-green-base);
+  --color-brand-light: var(--color-green-light100);
 
-  --color-brand-dark: var(--color-green-dark);
-  --color-brand-light: var(--color-green-light);
-
-  --color-hero-start: var(--color-green-light);
-  --color-hero-end: var(--color-green);
+  --color-hero-start: var(--color-green-light100);
+  --color-hero-end: var(--color-green-base);
   --color-hero-text: var(--color-black);
 
   --color-text-base: var(--color-black);
-  --color-text-secondary: var(--color-grey-dark);
+  --color-text-secondary: var(--color-grey-dark200);
   --color-text-inverse: var(--color-white);
   --color-text-brand-bg: var(--color-white);
 
-  --color-text-brand: var(--color-green-small);
-  --color-text-selection: var(--color-green-lightest);
+  --color-text-brand: var(--color-green-dark025);
+  --color-text-selection: var(--color-green-light300);
 
   --color-bg-base: var(--color-white);
-  --color-bg-brand: #{$green-light-bg};
+  --color-bg-brand: #{$green-light025};
   --color-bg-hover: rgba(0, 0, 0, 0.16);
 }
 
 @mixin DarkModeTokens {
-  --color-brand-base: var(--color-green);
+  
+  --color-brand-dark: var(--color-green-dark200);
+  --color-brand-base: var(--color-green-base);
+  --color-brand-light: var(--color-green-base);
 
-  --color-brand-dark: var(--color-green-darker);
-  --color-brand-light: var(--color-green);
-
-  --color-hero-start: var(--color-green-darkest);
-  --color-hero-end: var(--color-green-darkest);
-  --color-hero-text: var(--color-green-dark);
+  --color-hero-start: var(--color-green-dark025);
+  --color-hero-end: var(--color-green-dark200);
+  --color-hero-text: var(--color-black);
 
   --color-text-base: var(--color-white);
-  --color-text-secondary: var(--color-grey-med);
+  --color-text-secondary: var(--color-grey-base);
   --color-text-inverse: var(--color-black);
   --color-text-brand-bg: var(--color-white);
 
-  --color-text-brand: var(--color-green-light);
-  --color-text-selection: var(--color-green-dark);
+  --color-text-brand: var(--color-green-light100);
+  --color-text-selection: var(--color-green-dark050);
 
-  --color-bg-base: var(--color-green-darkest);
-  --color-bg-brand: var(--color-green-dark);
+  --color-bg-base: var(--color-green-dark300);
+  --color-bg-brand: var(--color-green-dark050);
   --color-bg-hover: rgba(255, 255, 255, 0.16);
 }
 
