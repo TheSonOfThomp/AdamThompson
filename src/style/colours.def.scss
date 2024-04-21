@@ -1,25 +1,28 @@
 // -------- Colours -------- //
-// --- Brighter Greens --- //
-// $green: #2ac51b;
-$green: hsl(123, 100%, 33%); // AA for header
-$green-light: hsl(123, 100%, 51%);//00EA49
-$green-lighter: hsl(123, 75%, 90%);//00EA49
-$green-lightest: hsl(123, 100%, 91%);
-$green-lightest_trans: hsla(123, 100%, 91%, 0.75);
-$green-dark: hsl(123, 87%, 29%); // AA for body
-$green-darker: hsl(123, 75%, 25%);
-$green-darkest: hsl(123, 50%, 18%);
-$green_small: hsl(123, 100%, 30%); // AA for body
+
+$green-light300: hsl(123, 100%, 91%);
+$green-light200: hsl(123, 75%, 90%);
+$green-light100: hsl(123, 100%, 50%);
+$green-light025: hsl(123, 100%, 36%);
+$green-base: hsl(123, 100%, 33%); // AA for header
+$green-dark025: hsl(123, 100%, 30%); // AA for body
+$green-dark050: hsl(123, 87%, 29%); // AA for body
+$green-dark100: hsl(123, 75%, 25%);
+$green-dark200: hsl(123, 64%, 20%);
+$green-dark300: hsl(123, 50%, 4%);
 
 // --- Neutrals --- //
-$white: #fefefe;
+$white: rgb(254, 254, 254);
+$grey-light300: rgb(2, 0, 0);
+$grey-base: rgb(128, 128, 128);
+$grey-dark200: rgb(80, 80, 80);
+$grey-dark300: rgb(51, 51, 51);
+$black: rgb(22, 22, 22);
+
+// --- Semi-Transparent --- //
+$green-light300_trans: hsla(123, 100%, 91%, 0.75);
 $white-trans: rgba(250, 250, 250, 0.75);
-$grey-light: #e6e6e6;
-$grey-medium: #808080;
-$grey-dark: #505050;
-$grey-dark_trans: rgba(51, 51, 51, 0.75);
-$grey-darker: #333;
-$black: #161616;
+$grey-dark200_trans: rgba(51, 51, 51, 0.75);
 $transparent: rgba(250, 250, 250, 0);
 
 // --- Brand Colours --- //
@@ -31,9 +34,7 @@ $knowroaming: #4286b5;
 $knowroaming_light: #6dafdb;
 $knowroaming_lightest: mix(#fff, $knowroaming, 80);
 
-// $smrtwatr: #19838E; // teal
 $smrtwatr: #785fa3; // purple
-// $smrtwatr_light: #68A0A8; // teal
 $smrtwatr_light: #a18bcc; // purple
 $smrtwatr_lightest: mix(#fff, $smrtwatr, 80);
 
@@ -51,3 +52,4 @@ $newvisions_lightest: mix(#fff, $newvisions, 80);
 
 $tap: #000; //#518CB8 
 $tap_light: #393939; //#83AECC
+

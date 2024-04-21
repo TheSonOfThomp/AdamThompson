@@ -21,7 +21,7 @@ $gap-bullet-compact: 6pt;
 
   .entry_title {
     font-size: $header-size;
-    color: var(--color-green-small);
+    color: var(--color-green-dark025);
   }
   
   .entry_company {
@@ -32,7 +32,7 @@ $gap-bullet-compact: 6pt;
   .entry_location {
     font-size: 8pt;
     font-weight: bold;
-    color: var(--color-grey-dark);
+    color: var(--color-grey-dark200);
     text-transform: uppercase;
     letter-spacing: 0.1ch;
   }

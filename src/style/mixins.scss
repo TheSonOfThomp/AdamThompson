@@ -26,7 +26,7 @@
 
 // Add this mixin to a parent element (e.g. Card), 
 // and pass in the text selector you want to animate (e.g. '.title') 
-@mixin animate-text-underline($selector, $color: var(--color-green)) {
+@mixin animate-text-underline($selector, $color: var(--color-green-base)) {
   &:hover {
     #{$selector}::before {
       width: 100%;
@@ -83,11 +83,3 @@
     @return var(--color-#{$brand});
   }
 }
-
-// @mixin perspectiveCard($perspective: 1000) {
-//   perspective: #{$perspective}px;
-//   transform: 
-//     rotateX(var(--rotate-x, 0)) 
-//     rotateY(var(--rotate-y, 0));
-//   transform-style: preserve-3d;
-// }

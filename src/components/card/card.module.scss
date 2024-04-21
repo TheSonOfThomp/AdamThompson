@@ -1,12 +1,17 @@
+@import '../../style/darkMode.mixins.scss';
 @import '../../style/variables';
 @import '../../style/mixins';
 
 .card {
   @include animate(all, 0.2s, $animation-ease);
   @include elevation(4);
-  background-color: var(--color-white);
+  background-color: var(--color-bg-base);
   padding: 16px;
   border-radius: 12px;
+
+  @include Mode('dark') {
+    border: 1px solid var(--color-text-secondary);
+  }
 }
 
 .clickableCard {

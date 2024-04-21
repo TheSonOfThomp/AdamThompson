@@ -19,7 +19,7 @@ a.quick-link {
   bottom: 0;
   min-width: 96px;
   padding: 4px 8px;
-  border-color: var(--color-green);
+  border-color: var(--color-green-base);
   border-bottom: unset;
   backdrop-filter: blur(4px);
   background: var(--color-white-trans);
@@ -40,7 +40,7 @@ a.quick-link {
   }
 
   &:focus {
-    outline-color: $green;
+    outline-color: var(--color-green-base);
   }
 
   .quick-link-direction {
@@ -50,7 +50,7 @@ a.quick-link {
   }
 
   .quick-link-label {
-    color: var(--color-green);
+    color: var(--color-green-base);
   }
     
   &#prev-link {

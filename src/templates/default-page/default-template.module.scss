@@ -2,7 +2,7 @@
 @import '../../style/variables';
 
 .default_page {
-  --recipe-color-highlight: var(--color-green-lightest);
+  --recipe-color-highlight: var(--color-text-selection);
   display: block;
   align-items: center;
   max-width: $content-width;

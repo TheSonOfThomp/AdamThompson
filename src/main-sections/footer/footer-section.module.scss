@@ -1,3 +1,5 @@
+@import '../../style/colours.def.scss';
+@import '../../style/darkMode.mixins.scss';
 @import '../../style/variables';
 @import '../../style/mixins';
 
@@ -8,8 +10,12 @@
   width: 100%;
   margin-top: 48px;
   font-weight: 400;
-  color: var(--color-white);
-  background-color: var(--color-green);
+  color: var(--color-text-brand-bg);
+  background-color: var(--color-bg-brand);
+
+  @include Mode('dark') {
+    background-color: var(--color-bg-base);
+  }
 
   .footer_content {
     display: flex;

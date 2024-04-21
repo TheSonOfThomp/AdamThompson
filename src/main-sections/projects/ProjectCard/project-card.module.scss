@@ -1,11 +1,13 @@
+@import '../../../style/darkMode.mixins.scss';
 @import '../../../style/mixins';
 
 .project_card {
   --logo-width: 192px;
   --logo-height: calc(var(--logo-width)/2);
   @include clickable-card(1,4);
-  @include animate-text-underline('.project-title', var(--project-color, var(--color-green)));
-  @include animate-background-color(transparent, 0, var(--project-color, var(--color-green)), 0.03);
+  @include animate-text-underline('.project-title', var(--project-color, var(--color-brand-base)));
+  @include animate-background-color(transparent, 0, var(--project-color, var(--color-brand-base)), 0.03);
+  
   display: grid;
   grid-template-areas: 'logo logo' 'title title' 'description description' 'tools icon';
   grid-template-rows: var(--logo-height) 1fr 1fr;
@@ -15,14 +17,18 @@
   padding: 16px 20px;
   border: unset;
   border-bottom: unset;
-  border-radius: 2px;
+  border-radius: 4px;
+
+  @include Mode('dark') {
+    outline: 1px solid var(--color-text-secondary);
+  }
   
   &:hover {
     border-bottom: unset;
   }
 
   &:focus {
-    outline-color: var(--project-color, var(--color-green));
+    outline-color: var(--project-color, var(--color-brand-base));
   }
 
   .project_title {

@@ -33,7 +33,7 @@ $dot-size: 24px;
   color: var(--color-white);
   text-align: center;
   cursor: pointer;
-  background-color: var(--color-green);
+  background-color: var(--color-green-base);
   border-radius: 100%;
   opacity: 1;
 
@@ -74,7 +74,7 @@ $dot-size: 24px;
   &:hover,
   &:focus {
     z-index: 20;
-    outline-color: var(--color-green-light);
+    outline-color: var(--color-green-light100);
     outline-offset: 2px;
     opacity: 1;
     transform: scale(1.2);

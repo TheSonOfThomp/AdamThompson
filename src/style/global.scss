@@ -6,12 +6,12 @@
 @import './mixins';
 
 *::selection {
-  background-color: var(--color-green-lighter) /* WebKit/Blink Browsers */
+  background-color: var(--color-text-selection) /* WebKit/Blink Browsers */
 }
 
 html {
   --vh: 1vh;
-  --app-angle: 2.5deg;
+  --app-angle: 3deg;
   @media screen and (max-width: $breakpoint-small) {
     --app-angle: 4deg;
   }
@@ -27,8 +27,8 @@ html {
     overflow-x: hidden;
     font-family: var(--font-sans);
     font-weight: 300;
-    color: var(--color-black);
-    background: var(--color-white);
+    color: var(--color-text-base);
+    background: var(--color-bg-base);
   }
 
   main {
@@ -37,7 +37,7 @@ html {
     justify-content: center;
     padding: 0;
     margin: 0;
-    background-color: $white;
+    background-color: var(--color-bg-base);
     min-height: 100vh;
   }
 
@@ -50,21 +50,14 @@ html {
 
     &:hover {
       text-decoration: none;
-      border-bottom: 2px solid $green;
+      border-bottom: 2px solid var(--color-brand-base);
     }
 
     &:focus {
-      outline: 2px solid $green-light;
+      outline: 2px solid var(--color-brand-light);
       outline-offset: 0.25em;
     }
   }
-
-  // hr {
-  //   width: 150%;
-  //   margin: 64px 0 calc(64px + 24px) 0;
-  //   border-top: 4px solid var(--color-green);
-  //   transform: rotate(var(--app-angle));
-  // }
 }
 
 .hide-mobile {

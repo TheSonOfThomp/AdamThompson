@@ -1,4 +1,5 @@
 @import '../../style/colours.def.scss';
+@import '../../style/darkMode.mixins.scss';
 @import '../../style/variables';
 @import '../../style/utilities';
 @import '../../style/mixins';
@@ -21,9 +22,7 @@ $header-opacity: 16;
 
   transition: height 150ms ease;
 
-
   &::after {
-    @include CornerToCornerGradient($green-light, $green);
     position: absolute;
     right: 0;
     width: 150vw;
@@ -31,24 +30,11 @@ $header-opacity: 16;
     content: '';
     transform: rotate(var(--app-angle));
     transform-origin: 100% 100%;
+    @include CornerToCornerGradient(
+      var(--color-hero-start), var(--color-hero-end)
+    );
   }
-
-  .header_wrapper {
-    // @include verticalGradient(mix($green-darker, $transparent, 45%), $transparent, 100%); // for legibility of text
-    z-index: 1;
-    padding: 24px $global-margin;
-    padding-top: 8px;
-    margin: 0;
-    background-color: mix($grey-dark, transparent, $header-opacity);
-
-    > header {
-      max-width: $content-width;
-      margin: auto;
-    }
-  }
-
 }
-
 
 .hero_contents {
   position: relative;
@@ -64,7 +50,7 @@ $header-opacity: 16;
 
   // Animation
   transform-style: preserve-3d;
-  perspective: 2000px;
+  perspective: 1000px;
   perspective-origin:
     calc(var(--mouseX) * -100%)
     calc(var(--mouseY) * 100%);
@@ -85,10 +71,10 @@ $header-opacity: 16;
     top: 50%;
     width: responsiveSize(512, 768);
     margin: unset;
-    color: var(--color-black);
     opacity: $header-opacity * 0.01;
     place-items: center;
     transform: translateY(-50%) translateZ(-2px);
+    color: var(--color-hero-text);
     
     .big_letters_monogram {
       box-sizing: border-box;

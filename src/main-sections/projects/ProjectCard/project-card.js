@@ -24,16 +24,6 @@ const ProjectCard = ({project}) => {
     <a ref={cardRef} className={styles.project_card} href={project.url} alt={project.name} target="_blank" rel="noreferrer">
       <h2 className={styles.project_title}>{project.name}</h2>
       <span className={styles.project_description}>{project.description}</span>
-
-      {/* <div className={styles.project_logo}>
-        <Image
-          className={styles.project_logo}
-          src={logoPng} 
-          alt={`Logo for ${project.name}`}
-          layout="fill"
-          objectFit="contain"
-        />
-      </div> */}
       
       <picture className={styles.project_logo}>
         <source srcSet={logoWebp} type="image/webp" />

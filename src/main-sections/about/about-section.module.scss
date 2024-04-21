@@ -14,23 +14,23 @@
   h2 {
     @include responsiveText(32, 48);
     font-weight: 700;
-    color: var(--color-black);
+    color: var(--color-text-base);
   }
 
   h3 {
     @include responsiveText(24, 36);
     font-weight: 700;
-    color: var(--color-black);
+    color: var(--color-text-base);
   }
 
   a {
     font-weight: 700;
-    outline-color: var(--color-green);
+    outline-color: var(--color-brand-base);
     outline-offset: 0;
   }
 
   p {
-    color: var(--color-grey-dark);
+    color: var(--color-text-base);
   }
 
   p:first-child {

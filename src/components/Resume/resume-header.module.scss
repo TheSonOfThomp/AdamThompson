@@ -37,7 +37,7 @@ $side-col: 48pt;
 
     a {
       font-size: 12pt;
-      color: var(--color-green-small);
+      color: var(--color-green-dark025);
     }
   }
 
@@ -45,7 +45,7 @@ $side-col: 48pt;
     grid-area: tagline;
     font-size: 14pt;
     font-weight: 700;
-    color: var(--color-green);
+    color: var(--color-green-base);
     text-transform: uppercase;
     letter-spacing: 2pt;
   }

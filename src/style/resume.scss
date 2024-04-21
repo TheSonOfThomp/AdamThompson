@@ -139,7 +139,7 @@ a {
     letter-spacing: 0.5ch;
     writing-mode: sideways-lr;
     // writing-mode: vertical-rl;
-    border-block-end: $highlight-size solid var(--color-green);
+    border-block-end: $highlight-size solid var(--color-green-base);
   }
 
   .resume-section-contents {

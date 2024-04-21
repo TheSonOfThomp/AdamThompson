@@ -1,4 +1,4 @@
-@import '../../style/variables.scss';
+@import '../../style/utilities';
 
 .quote_section {
   box-sizing: border-box;
@@ -15,7 +15,7 @@
   font-size: 40px;
   font-style: italic;
   font-weight: 400;
-  border-left: var(--color-green) 0.25ch solid;
+  border-left: var(--color-brand-base) 0.25ch solid;
 }
 
 .quote_attribution {
