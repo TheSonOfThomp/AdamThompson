@@ -1,37 +1,15 @@
 @import '../../style/utilities';
 
 .section:global(#about) {
-  margin: 24px 0;
+  margin: 0;
+  margin-bottom: 24px ;
   text-align: left;
   scroll-margin-top: 128px;
 
   .about_text {
     position: relative;
-    font-size: 20px;
-    font-weight: 400;
   }
 
-  h2 {
-    @include responsiveText(32, 48);
-    font-weight: 700;
-    color: var(--color-text-base);
-  }
-
-  h3 {
-    @include responsiveText(24, 36);
-    font-weight: 700;
-    color: var(--color-text-base);
-  }
-
-  a {
-    font-weight: 700;
-    outline-color: var(--color-brand-base);
-    outline-offset: 0;
-  }
-
-  p {
-    color: var(--color-text-base);
-  }
 
   p:first-child {
     margin-top: 0;

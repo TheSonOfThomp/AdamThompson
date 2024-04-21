@@ -7,23 +7,3 @@
   padding: 0 $global-margin;
   margin: 64px auto;
 }
-
-.quote {
-  display: inline-block;
-  padding-left: 0.5ch;
-  margin: 0;
-  font-size: 40px;
-  font-style: italic;
-  font-weight: 400;
-  border-left: var(--color-brand-base) 0.25ch solid;
-}
-
-.quote_attribution {
-  float: right;
-  font-size: 24px;
-  font-weight: 400;
-
-  &::before {
-    content: '— ';
-  }
-}

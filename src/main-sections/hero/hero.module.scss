@@ -5,6 +5,7 @@
 @import '../../style/mixins';
 
 $header-opacity: 16;
+$parallax-perspective: 1000px;
 
 .hero {
   position: relative;
@@ -50,7 +51,7 @@ $header-opacity: 16;
 
   // Animation
   transform-style: preserve-3d;
-  perspective: 1000px;
+  perspective: #{$parallax-perspective};
   perspective-origin:
     calc(var(--mouseX) * -100%)
     calc(var(--mouseY) * 100%);
@@ -92,6 +93,7 @@ $header-opacity: 16;
     font-size: responsiveSize(54, 144);
     line-height: 1.5em;
     transform: translateZ(4px);
+    color: var(--color-white);
   }
   
   .tagline {
@@ -100,10 +102,11 @@ $header-opacity: 16;
     max-width: calc(100vw - 32px);
     margin: 0 16px;
     font-family: inherit;
-    font-size: responsiveSize(16, 24);
-    font-weight: 700;
+    font-size: responsiveSize(20, 24);
+    font-weight: 500;
     line-height: 1.2em;
     text-align: center;
     transform: translateZ(2px);
+    color: var(--color-white);
   }
 }
