@@ -11,7 +11,7 @@
 
 html {
   --vh: 1vh;
-  --app-angle: 2.5deg;
+  --app-angle: 3deg;
   @media screen and (max-width: $breakpoint-small) {
     --app-angle: 4deg;
   }
