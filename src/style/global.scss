@@ -41,8 +41,33 @@ html {
     min-height: 100vh;
   }
 
+  h1 {
+    @include responsiveText(48, 56);
+    font-weight: 100;
+    color: var(--color-text-base);
+  }
+
+  h2 {
+    @include responsiveText(32, 48);
+    font-weight: 700;
+    color: var(--color-text-base);
+  }
+
+  h3 {
+    @include responsiveText(24, 36);
+    font-weight: 700;
+    color: var(--color-text-base);
+  }
+
+  p {
+    @include responsiveText(20, 24);
+    font-weight: 100;
+    line-height: 1.5em;
+    color: var(--color-text-base);
+  }
+
   a {
-    font-weight: 400;
+    font-weight: 700;
     color: inherit;
     text-decoration: none;
     cursor: pointer;
@@ -54,9 +79,10 @@ html {
     }
 
     &:focus {
-      outline: 2px solid var(--color-brand-light);
+      outline: 2px solid var(--color-brand-light100);
       outline-offset: 0.25em;
     }
+    
   }
 }
 
