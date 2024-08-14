@@ -46,12 +46,6 @@ const Header = ({ showNav, isHero }) => {
           <nav ref={navRef} className={styles.page_nav}>
             <a
               className={classnames(styles.header_link, styles.nav_link)}
-              href="#projects"
-            >
-              Projects
-            </a>
-            <a
-              className={classnames(styles.header_link, styles.nav_link)}
               href="/recipes"
             >
               Recipes

@@ -9,6 +9,9 @@ import BlogSection from "../main-sections/blog/blog-section"
 import ProjectsSection from "../main-sections/projects/projects-section"
 import FooterSection from "../main-sections/footer/footer-section"
 import QuoteSection from "../main-sections/QuoteSection/QuoteSection"
+import Markdown from "markdown-to-jsx"
+import Section from "../templates/section/section"
+import { Quote } from "../components/Quote"
 
 const IndexPage = ({ projects, resumeJson, portfolioMeta, blogPosts }) => {
   return (
@@ -20,14 +23,26 @@ const IndexPage = ({ projects, resumeJson, portfolioMeta, blogPosts }) => {
 
       <Hero />
 
-      <AboutSection />
-      <QuoteSection attribution="Jen Simmons @ Artifact 2019">
-        A design is finished when the CSS is written
-      </QuoteSection>
-      <ResumeSection resume={JSON.parse(resumeJson)} />
-      <PortfolioSection meta={JSON.parse(portfolioMeta)} />
-      <ProjectsSection projects={JSON.parse(projects)} />
-      <BlogSection posts={JSON.parse(blogPosts)} />
+      {/* <AboutSection /> */}
+
+      <Section id="about">
+        <Quote
+          quote={"I'm a software engineer with a focus on user experience"}
+        />
+        <Markdown options={{ forceBlock: true }}>
+          Currently [building design systems](https://mongodb.design) at
+          MongoDB, I have experience in UX since 2013, and an education in
+          [Systems Design
+          Engineering](https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering).
+          I approach problems holistically, design complete solutions, and
+          execute them efficiently.
+        </Markdown>
+      </Section>
+
+      {/* <ResumeSection resume={JSON.parse(resumeJson)} /> */}
+      {/* <PortfolioSection meta={JSON.parse(portfolioMeta)} /> */}
+      {/* <ProjectsSection projects={JSON.parse(projects)} /> */}
+      {/* <BlogSection posts={JSON.parse(blogPosts)} /> */}
       <FooterSection />
     </main>
   )

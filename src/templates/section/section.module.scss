@@ -8,7 +8,7 @@
   grid-row-gap: 24px;
   align-self: center;
   justify-self: center;
-  width: 100vw;
+  width: calc(100vw - 48px);
   max-width: $content-width;
   margin: 24px auto 64px;
   
