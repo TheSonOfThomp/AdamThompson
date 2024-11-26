@@ -76,3 +76,6 @@ src/pages/cover-letter.jsx
 out
 # Local Netlify folder
 .netlify
+
+.turbo
+tsconfig.tsbuildinfo
