@@ -38,7 +38,6 @@ const Header = ({ showNav, isHero }) => {
     >
       <div className={styles.page_header_content}>
         <a className={styles.page_link} href="/">
-          {/* @ts-expect-error SVGR props */}
           <Monogram className={styles.page_logo} />
           <h1 className={styles.page_title}>Adam Thompson</h1>
         </a>

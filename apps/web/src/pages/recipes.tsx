@@ -1,11 +1,9 @@
-import fs from "fs"
-import path from "path"
 import React, { ComponentProps } from "react"
 import styles from "./recipes.module.scss"
 import DefaultPage from "../templates/default-page/default-template"
 import {
-  RecipeCategory,
-  RecipePageMeta,
+  type RecipeCategory,
+  type RecipePageMeta,
   fetchCategorizedRecipePageContent,
   fetchFlatRecipePageContent,
 } from "../utilities/notion/fetchRecipes"
@@ -27,10 +25,18 @@ const RecipesPage = ({
   categorizedRecipes: categorizedRecipesJSONString,
   flatRecipes: flatRecipesJSONString,
 }: RecipesPageProps) => {
-  const categorizedRecipes: Array<RecipeCategory> = JSON.parse(
+  console.log({
+    categorizedRecipesJSONString,
+    flatRecipesJSONString,
+  })
+
+  const categorizedRecipes: Array<RecipeCategory> | undefined =
     categorizedRecipesJSONString
-  )
-  const flatRecipes: Array<RecipePageMeta> = JSON.parse(flatRecipesJSONString)
+      ? JSON.parse(categorizedRecipesJSONString)
+      : undefined
+  const flatRecipes: Array<RecipePageMeta> = flatRecipesJSONString
+    ? JSON.parse(flatRecipesJSONString)
+    : undefined
 
   return (
     <>
@@ -46,7 +52,7 @@ const RecipesPage = ({
           {/* (food recipes, not code "recipes". For that see <a href="/snippets">snippets</a>). */}
         </p>
 
-        {categorizedRecipes.map((category) => (
+        {categorizedRecipes?.map((category) => (
           <section>
             <h2>{category.title}</h2>
             <div key={category.id} className={styles.recipe_cards}>
