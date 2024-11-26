@@ -34,7 +34,6 @@ const Hero = ({ className }: HeroProps) => {
 
       <div className={styles.hero_contents}>
         <h2 className={styles.big_letters}>
-          {/* @ts-expect-error - Monogram props not properly defined */}
           <Monogram className={styles.big_letters_monogram} />
         </h2>
         <h2 className={styles.title}>UI Engineer</h2>
