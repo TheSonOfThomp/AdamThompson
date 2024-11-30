@@ -12,9 +12,7 @@
     "dev": "turbo dev",
     "build": "turbo build"
   },
-  "dependencies": {
-    "airtable": "^0.12.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^22.9.4",
     "netlify-cli": "^17.37.2",
