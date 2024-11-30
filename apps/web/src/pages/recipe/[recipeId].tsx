@@ -32,6 +32,7 @@ export default function RecipePage({ meta: metaJSON, content: contentJSON }) {
       <picture className={styles.cover_img}>
         <img src={imgURL}></img>
       </picture>
+      {/* @ts-ignore */}
       {renderedContent}
     </DefaultPage>
   )
