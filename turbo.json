@@ -7,10 +7,6 @@
     },
     "tsc": {
       "dependsOn": ["^tsc"]
-    },
-    "dev": {
-      "persistent": true,
-      "cache": false
     }
   }
 }
