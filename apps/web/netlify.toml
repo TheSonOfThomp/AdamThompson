@@ -5,7 +5,7 @@
   command = "turbo run build"
 
 [[plugins]]
-package = "netlify-plugin-cache-nextjs"
+package = "@netlify/plugin-nextjs"
 
 [[redirects]]
   from = "https://social.thesonofthomp.com/"

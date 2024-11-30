@@ -25,11 +25,6 @@ const RecipesPage = ({
   categorizedRecipes: categorizedRecipesJSONString,
   flatRecipes: flatRecipesJSONString,
 }: RecipesPageProps) => {
-  console.log({
-    categorizedRecipesJSONString,
-    flatRecipesJSONString,
-  })
-
   const categorizedRecipes: Array<RecipeCategory> | undefined =
     categorizedRecipesJSONString
       ? JSON.parse(categorizedRecipesJSONString)
