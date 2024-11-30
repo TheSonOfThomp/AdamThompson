@@ -6,12 +6,7 @@ import {
   FontAwesomeIconProps,
 } from "@fortawesome/react-fontawesome"
 import styles from "./IconButton.module.scss"
-import {
-  Polymorphic,
-  usePolymorphic,
-  PolymorphicProps,
-  PolymorphicAs,
-} from "@leafygreen-ui/polymorphic"
+import { Polymorphic, usePolymorphic } from "@leafygreen-ui/polymorphic"
 
 export interface IconButtonProps {
   icon: IconDefinition
