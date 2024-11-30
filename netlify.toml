@@ -1,7 +1,7 @@
 [build]
   publish = "out/"
   functions = "functions/"
-  command = "pnpm run build"
+  command = "npm run build"
 
 [[plugins]]
 package = "netlify-plugin-cache-nextjs"
