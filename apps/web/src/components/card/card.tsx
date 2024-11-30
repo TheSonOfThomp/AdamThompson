@@ -1,4 +1,3 @@
-// import PropTypes from "prop-types"
 import React, { ComponentProps } from "react"
 import classnames from "classnames"
 import styles from "./card.module.scss"
