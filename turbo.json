@@ -5,8 +5,8 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
-    "tsc": {
-      "dependsOn": ["^tsc"]
+    "check": {
+      "dependsOn": ["^check"]
     }
   }
 }

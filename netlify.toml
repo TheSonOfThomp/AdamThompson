@@ -3,6 +3,9 @@
   functions = "apps/web/functions/"
   command = "turbo build"
 
+[context.deploy-preview]
+    command = "turbo build --force"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
