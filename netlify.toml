@@ -4,7 +4,7 @@
   command = "turbo build"
 
 [context.deploy-preview]
-    command = "turbo build --force"
+  command = "turbo build --force"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
