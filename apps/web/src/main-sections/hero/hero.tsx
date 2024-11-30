@@ -37,9 +37,6 @@ const Hero = ({ className }: HeroProps) => {
           <Monogram className={styles.big_letters_monogram} />
         </h2>
         <h2 className={styles.title}>UI Engineer</h2>
-        <h3 className={styles.tagline}>
-          Building experiences that make an impact
-        </h3>
       </div>
     </div>
   )

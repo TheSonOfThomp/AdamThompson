@@ -23,21 +23,7 @@ const IndexPage = ({ projects, resumeJson, portfolioMeta, blogPosts }) => {
 
       <Hero />
 
-      {/* <AboutSection /> */}
-
-      <Section id="about">
-        <Quote
-          quote={"I'm a software engineer with a focus on user experience"}
-        />
-        <Markdown options={{ forceBlock: true }}>
-          Currently [building design systems](https://mongodb.design) at
-          MongoDB, I have experience in UX since 2013, and an education in
-          [Systems Design
-          Engineering](https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering).
-          I approach problems holistically, design complete solutions, and
-          execute them efficiently.
-        </Markdown>
-      </Section>
+      <AboutSection />
 
       {/* <ResumeSection resume={JSON.parse(resumeJson)} /> */}
       {/* <PortfolioSection meta={JSON.parse(portfolioMeta)} /> */}
