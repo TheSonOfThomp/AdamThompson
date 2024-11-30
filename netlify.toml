@@ -1,10 +1,13 @@
 [build]
-  publish = "out/"
-  functions = "functions/"
-  command = "npm run build"
+  publish = "apps/web/.next"
+  functions = "apps/web/functions/"
+  command = "turbo build"
+
+[context.deploy-preview]
+  command = "turbo build --force"
 
 [[plugins]]
-package = "netlify-plugin-cache-nextjs"
+  package = "@netlify/plugin-nextjs"
 
 [[redirects]]
   from = "https://social.thesonofthomp.com/"
