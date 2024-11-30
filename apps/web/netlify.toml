@@ -1,0 +1,14 @@
+[build]
+  base = "apps/web/"
+  publish = "out/"
+  functions = "functions/"
+  command = "turbo build"
+
+[[plugins]]
+package = "netlify-plugin-cache-nextjs"
+
+[[redirects]]
+  from = "https://social.thesonofthomp.com/"
+  to = "https://thesonofthomp.com/social"
+  status = 200
+  force = true
