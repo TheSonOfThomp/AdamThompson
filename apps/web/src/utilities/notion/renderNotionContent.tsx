@@ -6,6 +6,5 @@ import { mapBlockToReactNode } from "./mapBlockToReactNode"
 export const renderNotionContent = (
   blocks: Array<BlockObjectResponse>
 ): ReactNode => {
-  console.log(blocks)
   return blocks.map(mapBlockToReactNode)
 }

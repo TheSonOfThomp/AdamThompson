@@ -26,7 +26,6 @@ const useInitDarkMode = (): [
 
   const updateDocumentData = (val?: boolean) => {
     const theme = getTheme(val)
-    console.log("data-theme", { theme })
     document.body.setAttribute("data-theme", theme)
   }
 

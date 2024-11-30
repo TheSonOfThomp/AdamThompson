@@ -4,14 +4,10 @@ import path from "path"
 export default function handler(req, res) {
   const directoryPath = path.join(process.cwd(), "public/docs/talks")
 
-  console.log(directoryPath)
-
   fs.readdir(directoryPath, (err, years) => {
     if (err) {
       return res.status(500).json({ error: "Failed to read directory" })
     }
-
-    console.log(years)
 
     const files = years
       .map((year) => {

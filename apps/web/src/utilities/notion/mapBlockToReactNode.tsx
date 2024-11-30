@@ -27,7 +27,6 @@ export const mapBlockToReactNode = (
       if (getPlainText(content))
         return <p key={block.id}>{getPlainText(content)}</p>
     default:
-      console.log("Unmapped content", content)
       return <></>
   }
 }
