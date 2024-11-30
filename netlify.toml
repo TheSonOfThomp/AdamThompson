@@ -1,11 +1,10 @@
 [build]
-  base = "."
-  publish = "out/"
-  functions = "functions/"
-  command = "turbo run build"
+  publish = "apps/web/.next"
+  functions = "apps/web/functions/"
+  command = "turbo build"
 
 [[plugins]]
-package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-nextjs"
 
 [[redirects]]
   from = "https://social.thesonofthomp.com/"

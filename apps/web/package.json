@@ -9,7 +9,7 @@
     "npm": ">=10.2.0"
   },
   "scripts": {
-    "build": "next build && next export",
+    "build": "next build",
     "export": "next export",
     "format": "prettier --write src/**/*.{js,jsx}",
     "dev": "next dev",
