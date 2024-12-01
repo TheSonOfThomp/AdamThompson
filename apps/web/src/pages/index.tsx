@@ -3,15 +3,7 @@ import Head from "next/head"
 import Hero from "../main-sections/hero/hero"
 
 import AboutSection from "../main-sections/about/about-section"
-import PortfolioSection from "../main-sections/portfolio/portfolio-section"
-import ResumeSection from "../main-sections/resume/resume-section"
-import BlogSection from "../main-sections/blog/blog-section"
-import ProjectsSection from "../main-sections/projects/projects-section"
 import FooterSection from "../main-sections/footer/footer-section"
-import QuoteSection from "../main-sections/QuoteSection/QuoteSection"
-import Markdown from "markdown-to-jsx"
-import Section from "../templates/section/section"
-import { Quote } from "../components/Quote"
 
 const IndexPage = ({ projects, resumeJson, portfolioMeta, blogPosts }) => {
   return (
