@@ -24,7 +24,6 @@
   "dependencies": {
     "@leafygreen-ui/polymorphic": "^2.0.0",
     "@notionhq/client": "^2.2.14",
-    "@reach/polymorphic": "^0.18.0",
     "@thesonofthomp/recipe-parser": "^0.2.1",
     "airtable": "^0.12.2",
     "classnames": "^2.5.1",

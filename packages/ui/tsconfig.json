@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "declarationDir": "dist",
+    "outDir": "dist",
+    "rootDir": "src",
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "include": ["./src/**/*.ts?(x)"],
+  "exclude": ["node_modules"]
+}

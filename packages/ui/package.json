@@ -1,0 +1,23 @@
+{
+  "name": "@thesonofthomp/ui",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@leafygreen-ui/polymorphic": "^2.0.0",
+    "@lg-tools/build": "^0.6.0",
+    "classnames": "^2.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  }
+}
