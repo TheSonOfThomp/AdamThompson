@@ -9,8 +9,9 @@
     "npm": ">=10.2.0"
   },
   "scripts": {
-    "dev": "turbo dev",
-    "build": "turbo build"
+    "build": "turbo build",
+    "check": "turbo check",
+    "dev": "turbo dev"
   },
   "dependencies": {},
   "devDependencies": {
