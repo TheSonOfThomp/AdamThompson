@@ -51,7 +51,7 @@ export async function getStaticProps({ params: { recipeId } }) {
 }
 
 export const getStaticPaths = async () => {
-  const page_id = process.env.NOTION_PAGE_ID
+  const page_id = process.env.NOTION_RECIPES_PAGE_ID
 
   if (page_id) {
     const flatRecipePages = await fetchFlatRecipePageContent(page_id)

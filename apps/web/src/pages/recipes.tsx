@@ -89,7 +89,7 @@ const RecipesPage = ({
 export default RecipesPage
 
 export async function getStaticProps() {
-  const page_id = process.env.NOTION_PAGE_ID
+  const page_id = process.env.NOTION_RECIPES_PAGE_ID
 
   if (page_id) {
     const categorizedRecipes = await fetchCategorizedRecipePageContent(page_id)
@@ -98,7 +98,6 @@ export async function getStaticProps() {
       page_id,
       categorizedRecipes
     )
-
     return {
       props: {
         categorizedRecipes: JSON.stringify(
