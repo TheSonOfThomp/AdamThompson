@@ -4,10 +4,6 @@
   "description": "Adam Thompson's portfolio",
   "version": "0.1.0",
   "author": "Adam Thompson <adam.m.thompson@icloud.com>",
-  "engines": {
-    "node": ">=18.19.0",
-    "npm": ">=10.2.0"
-  },
   "scripts": {
     "build": "next build",
     "check": "tsc --noEmit",
@@ -92,6 +88,5 @@
     "stylelint-config-sass-guidelines": "^7.0.0",
     "typescript": "^4.9.5"
   },
-  "license": "MIT",
-  "packageManager": "pnpm@8.12.1"
+  "license": "MIT"
 }
