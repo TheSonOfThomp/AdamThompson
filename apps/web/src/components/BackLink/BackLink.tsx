@@ -10,12 +10,10 @@ type BackLinkProps = ComponentProps<typeof Link>
 
 export const BackLink = ({ className, children, ...rest }: BackLinkProps) => {
   return (
-    <Link {...rest}>
-      <a className={classNames(styles.back_link, className)}>
-        {/* @ts-ignore */}
-        <FontAwesomeIcon icon={faChevronLeft} />
-        {children}
-      </a>
+    <Link {...rest} className={classNames(styles.back_link, className)}>
+      {/* @ts-ignore */}
+      <FontAwesomeIcon icon={faChevronLeft} />
+      {children}
     </Link>
   )
 }

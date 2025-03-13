@@ -48,7 +48,7 @@ const RecipesPage = ({
         </p>
 
         {categorizedRecipes?.map((category) => (
-          <section>
+          <section key={category.id}>
             <h2>{category.title}</h2>
             <div key={category.id} className={styles.recipe_cards}>
               {category.subPages.map((recipe) => {
@@ -57,6 +57,7 @@ const RecipesPage = ({
                   const imageUrl = getPageCoverImageURL(recipe)
                   return (
                     <RecipeCard
+                      key={recipe.id}
                       title={title}
                       href={`/recipe/${recipe.id}`}
                       imageUrl={imageUrl}
