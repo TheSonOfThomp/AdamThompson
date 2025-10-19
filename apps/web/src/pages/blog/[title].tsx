@@ -22,7 +22,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ pageData, title: titleSlug 
     return (
       <div>
         <Head>
-          <title>Post Not Found - Adam Thompson</title>
+          <title>Post Not Found | Adam Thompson</title>
         </Head>
         <main style={{ padding: '2rem', textAlign: 'center' }}>
           <h1>Post Not Found</h1>
@@ -45,7 +45,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ pageData, title: titleSlug 
   return (
     <DefaultPage title={`${title} | Adam Thompson`}>
       <header>
-        <h1>{title}</h1>
+        <h1 className={styles.title}>{title}</h1>
+        <time className={styles.time}>{format(createdTime, 'MMMM dd, yyyy')}</time>
       </header>
 
       <div className={styles.blogPost_content}>

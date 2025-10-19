@@ -1,5 +1,14 @@
 @import '../../style/mixins';
 
+h1.title {
+  margin-block-end: 0.125em;
+}
+
+.time {
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
 .blogPost_content {
   p, ul {
     @include responsiveText(16, 20);
