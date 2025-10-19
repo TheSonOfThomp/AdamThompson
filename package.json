@@ -6,7 +6,7 @@
   "author": "Adam Thompson <adam.m.thompson@icloud.com>",
   "engines": {
     "node": ">=18.20.0",
-    "pnpm": ">=9.15.0"
+    "pnpm": ">=10.18.0"
   },
   "scripts": {
     "build": "turbo build",
@@ -23,5 +23,5 @@
     "typescript": "^4.9.5"
   },
   "license": "MIT",
-  "packageManager": "pnpm@9.15.9"
+  "packageManager": "pnpm@10.18.3"
 }
