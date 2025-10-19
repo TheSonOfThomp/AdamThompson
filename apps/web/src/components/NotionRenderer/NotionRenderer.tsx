@@ -55,10 +55,7 @@ const renderRichText = (richTextArray: RichText[]) => {
   return richTextArray.map((richText, index) => {
     let content: React.ReactNode = richText.text?.content || '';
     const annotations = richText.annotations;
-    if (content === 'Was the creation of the technology ethical?') {
-      console.log({ richText });
-    }
-
+    
     // Apply formatting in nested order to preserve combinations
     if (annotations?.code) {
       content = <code>{content}</code>;
