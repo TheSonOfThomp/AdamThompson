@@ -16,6 +16,8 @@
     "dev:server": "pnpm --filter @thesonofthomp/portfolio netlify dev"
   },
   "devDependencies": {
+    "@netlify/plugin-lighthouse": "^6.0.3",
+    "@netlify/plugin-nextjs": "^5.14.0",
     "@types/node": "^22.9.4",
     "netlify-cli": "^23.9.1",
     "turbo": "^2.5.8",
