@@ -15,12 +15,13 @@
     "dev": "turbo dev",
     "dev:server": "pnpm --filter @thesonofthomp/portfolio netlify dev"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@netlify/plugin-lighthouse": "^6.0.3",
+    "@netlify/plugin-nextjs": "^5.14.0",
     "@types/node": "^22.9.4",
-    "netlify-cli": "^17.37.2",
-    "turbo": "^2.3.2",
-    "typescript": "^4.9.5"
+    "netlify-cli": "^23.9.1",
+    "turbo": "^2.5.8",
+    "typescript": "^5.9.3"
   },
   "license": "MIT",
   "packageManager": "pnpm@10.18.3"
