@@ -134,14 +134,20 @@ const renderBlock = (block: NotionBlock, headings?: TocItem[]) => {
     case 'bulleted_list_item':
       return (
         <li key={id}>
-          {block.bulleted_list_item?.rich_text && renderRichText(block.bulleted_list_item.rich_text)}
+          {block.bulleted_list_item?.rich_text ? 
+            renderRichText(block.bulleted_list_item.rich_text) :
+            'Empty bulleted list item'
+          }
         </li>
       );
 
     case 'numbered_list_item':
       return (
         <li key={id}>
-          {block.numbered_list_item?.rich_text && renderRichText(block.numbered_list_item.rich_text)}
+          {block.numbered_list_item?.rich_text ? 
+            renderRichText(block.numbered_list_item.rich_text) :
+            'Empty numbered list item'
+          }
         </li>
       );
 
@@ -176,7 +182,20 @@ const renderBlock = (block: NotionBlock, headings?: TocItem[]) => {
       );
 
     default:
-      return null;
+      console.warn(`Unhandled block type: ${type}`, block);
+      return (
+        <div key={id} style={{ 
+          padding: '0.5rem', 
+          backgroundColor: '#fff3cd', 
+          border: '1px solid #ffeaa7',
+          borderRadius: '4px',
+          margin: '0.5rem 0',
+          fontSize: '0.9rem',
+          color: '#856404'
+        }}>
+          Unsupported block type: <code>{type}</code>
+        </div>
+      );
   }
 };
 
