@@ -4,7 +4,7 @@ import { format } from 'date-fns'
 import styles from './blog-post-link.module.scss';
 
 const BlogPostLink = ({post}) => {
-  const url = post.url || `/blog/${post.id}`;
+  const url = post.url || `/blog/${post.slug || post.id}`
   return (
     <a href={url} className={classnames(styles.blog_post, styles.blog_post_link)} key={post.title}>
       <h2 className={styles.blog_post_title}>{post.title}</h2>

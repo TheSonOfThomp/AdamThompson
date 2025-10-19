@@ -67,7 +67,7 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ posts }) => {
                 }}
               >
                 <Link 
-                  href={`/blog/${post.id}`} 
+                  href={`/blog/${post.slug || post.id}`} 
                   style={{ 
                     textDecoration: 'none', 
                     color: 'inherit',

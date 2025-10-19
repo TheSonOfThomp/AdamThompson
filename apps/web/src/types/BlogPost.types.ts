@@ -1,6 +1,7 @@
 export interface BlogPost {
   id?: string;
   title?: string;
+  slug?: string;
   datePublished: string;
   url?: string;
   type?: string;
