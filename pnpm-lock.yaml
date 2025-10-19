@@ -24,8 +24,8 @@ importers:
   apps/web:
     dependencies:
       '@leafygreen-ui/polymorphic':
-        specifier: ^2.0.0
-        version: 2.0.2(react@18.3.1)
+        specifier: ^3.1.0
+        version: 3.1.0(react@18.3.1)
       '@notionhq/client':
         specifier: ^2.2.14
         version: 2.2.15
@@ -1571,13 +1571,13 @@ packages:
   '@juggle/resize-observer@3.4.0':
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
 
-  '@leafygreen-ui/lib@13.8.0':
-    resolution: {integrity: sha512-WHbs0ZKzMR/UU0XmlI7+PKDzayuynTXrEQ2GwL5WpPjRElxlajkDyjkzmxXkQLIKce+T+q8ucIVlRVInDG+Qlg==}
+  '@leafygreen-ui/lib@15.6.2':
+    resolution: {integrity: sha512-HsjXXovBqyrXL3Y7V09g2bEidGn58AK/mfoIPMlen/hEcWlbXbefoCzXF7AQqWLhd0F/lS2XgX7+BqVUHXx2/Q==}
     peerDependencies:
       react: ^17.0.0 || ^18.0.0
 
-  '@leafygreen-ui/polymorphic@2.0.2':
-    resolution: {integrity: sha512-OjP+hPG/cwADShcGa1SZdm51G2wVpbNqpU0B3GonEAvGLcAvG4LDMXa7BWo3GDliNkPtVMS86w0eZzEDmLfKmQ==}
+  '@leafygreen-ui/polymorphic@3.1.0':
+    resolution: {integrity: sha512-5fbXD6ExTmMScvODuipfB1Ti/Dvoaxxg+daSftqXfNQlEkEnd5cPnezOOl1LMsu2xUoZT6NXsFgukZYsmXEVpQ==}
 
   '@lukeed/ms@2.0.2':
     resolution: {integrity: sha512-9I2Zn6+NJLfaGoz9jN3lpwDgAYvfGeNYdbAIjJOqzs4Tpc+VU3Jqq4IofSUBKajiDS8k9fZIg18/z13mpk1bsA==}
@@ -11506,16 +11506,14 @@ snapshots:
 
   '@juggle/resize-observer@3.4.0': {}
 
-  '@leafygreen-ui/lib@13.8.0(react@18.3.1)':
+  '@leafygreen-ui/lib@15.6.2(react@18.3.1)':
     dependencies:
-      '@storybook/csf': 0.1.2
       lodash: 4.17.21
-      prop-types: 15.8.1
       react: 18.3.1
 
-  '@leafygreen-ui/polymorphic@2.0.2(react@18.3.1)':
+  '@leafygreen-ui/polymorphic@3.1.0(react@18.3.1)':
     dependencies:
-      '@leafygreen-ui/lib': 13.8.0(react@18.3.1)
+      '@leafygreen-ui/lib': 15.6.2(react@18.3.1)
       lodash: 4.17.21
     transitivePeerDependencies:
       - react
