@@ -8,6 +8,8 @@ import { getNotionBlogPosts } from "../utilities/notion/notion"
 import BlogSection from '../main-sections/blog/blog-section'
 import { BlogPost } from '../types/BlogPost.types'
 
+const MAX_BLOG_POSTS = 3;
+
 const IndexPage = ({ projects, resumeJson, portfolioMeta, allBlogPosts }) => {
 
   const parsedBlogPosts = JSON.parse(allBlogPosts);
@@ -49,7 +51,9 @@ export async function getStaticProps() {
   const mediumPosts: Array<BlogPost> = (await import("../data/medium-posts.json")).posts
   const notionBlogPages: Array<BlogPost> = await getNotionBlogPosts(notionPageId);
   const allBlogPosts = JSON.stringify(
-    [...mediumPosts, ...notionBlogPages].sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime()).slice(0, 5)
+    [...mediumPosts, ...notionBlogPages]
+      .sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime())
+      .slice(0, MAX_BLOG_POSTS)
   );
 
 
