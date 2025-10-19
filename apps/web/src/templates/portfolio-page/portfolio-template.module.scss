@@ -22,7 +22,7 @@ $full-width-margin: calc((#{$folio-max-width} - 100vw) / 2);
   align-items: flex-end;
   justify-content: left;
   justify-items: left;
-  font-family: var(--font-sans);
+  font-family: var(--font-brand);
   font-size: 20px;
 
 
@@ -171,7 +171,7 @@ $full-width-margin: calc((#{$folio-max-width} - 100vw) / 2);
       max-width: 50%;
       margin-top: 0.5em;
       margin-bottom: 0.5em;
-      font-family: var(--font-sans);
+      font-family: var(--font-brand);
       font-size: 1rem;
       font-weight: 500;
       line-height: 1.5em;

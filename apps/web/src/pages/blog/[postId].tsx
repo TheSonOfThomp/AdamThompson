@@ -1,0 +1,120 @@
+import React from 'react';
+import Head from 'next/head';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { format } from 'date-fns';
+import { getNotionPage, getAllNotionPageIds } from '../../utilities/notion/notion';
+import NotionRenderer from '../../components/NotionRenderer/NotionRenderer';
+import DefaultPage from '../../templates/default-page/default-template';
+import { BackLink } from '../../components/BackLink/BackLink';
+import styles from "./blogPost.module.scss"
+
+
+interface BlogPostPageProps {
+  pageData: {
+    page: any;
+    blocks: any[];
+  } | null;
+  postId: string;
+}
+
+const BlogPostPage: React.FC<BlogPostPageProps> = ({ pageData, postId }) => {
+  if (!pageData) {
+    return (
+      <div>
+        <Head>
+          <title>Post Not Found - Adam Thompson</title>
+        </Head>
+        <main style={{ padding: '2rem', textAlign: 'center' }}>
+          <h1>Post Not Found</h1>
+          <p>The blog post you're looking for doesn't exist.</p>
+        </main>
+      </div>
+    );
+  }
+
+  const { page, blocks } = pageData;
+  
+  // Extract title from page properties
+  const title = page.properties?.title?.title?.[0]?.text?.content || 
+                page.properties?.Name?.title?.[0]?.text?.content || 
+                'Untitled';
+  
+  // Extract dates
+  const createdTime = page.created_time ? new Date(page.created_time) : new Date();
+
+  return (
+    <DefaultPage title={`${title} | Adam Thompson`}>
+      <header>
+        <h1>{title}</h1>
+      </header>
+
+      <div className={styles.blogPost_content}>
+        <NotionRenderer blocks={blocks} />
+      </div>
+    </DefaultPage>
+  );
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const parentPageId = process.env.NOTION_BLOG_PAGE_ID;
+  
+  if (!parentPageId) {
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
+
+  try {
+    const pageIds = await getAllNotionPageIds(parentPageId);
+    const paths = pageIds.map((id) => ({
+      params: { postId: id },
+    }));
+
+    return {
+      paths,
+      fallback: 'blocking', // This allows for new posts to be added without rebuilding
+    };
+  } catch (error) {
+    console.error('Error getting static paths:', error);
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const postId = params?.postId as string;
+
+  if (!postId) {
+    return {
+      notFound: true,
+    };
+  }
+
+  try {
+    const pageData = await getNotionPage(postId);
+
+    if (!pageData) {
+      return {
+        notFound: true,
+      };
+    }
+
+    return {
+      props: {
+        pageData,
+        postId,
+      },
+      revalidate: 3600, // Revalidate every hour
+    };
+  } catch (error) {
+    console.error('Error fetching page data:', error);
+    return {
+      notFound: true,
+    };
+  }
+};
+
+export default BlogPostPage;

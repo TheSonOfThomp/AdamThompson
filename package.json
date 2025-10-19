@@ -15,7 +15,9 @@
     "dev": "turbo dev",
     "dev:server": "pnpm --filter @thesonofthomp/portfolio netlify dev"
   },
-  "dependencies": {},
+  "dependencies": {
+    "date-fns": "^2.30.0"
+  },
   "devDependencies": {
     "@types/node": "^22.9.4",
     "netlify-cli": "^17.37.2",
