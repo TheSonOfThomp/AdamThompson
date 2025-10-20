@@ -1,17 +1,11 @@
-import { Client } from '@notionhq/client';
 import { BlogPost } from '../../types/BlogPost.types';
-
-// Initialize Notion client
-const notion = new Client({
-  auth: process.env.NOTION_KEY,
-});
+import { NotionClient } from './notionUtils';
 
 export async function getNotionBlogPosts(pageId: string): Promise<Array<BlogPost>> {
 
   try {
-    console.log('Fetching Notion pages for page ID:', pageId);
     // Get child pages from the specified page
-    const response = await notion.blocks.children.list({
+    const response = await NotionClient.blocks.children.list({
       block_id: pageId,
     });
 
@@ -41,10 +35,10 @@ export async function getNotionBlogPosts(pageId: string): Promise<Array<BlogPost
 export async function getNotionPage(pageId: string) {
   try {
     // Get page properties
-    const page = await notion.pages.retrieve({ page_id: pageId });
+    const page = await NotionClient.pages.retrieve({ page_id: pageId });
     
     // Get page content (blocks)
-    const blocks = await notion.blocks.children.list({
+    const blocks = await NotionClient.blocks.children.list({
       block_id: pageId,
       page_size: 100,
     });
@@ -61,7 +55,7 @@ export async function getNotionPage(pageId: string) {
 
 export async function getAllNotionPageIds(parentPageId: string): Promise<string[]> {
   try {
-    const response = await notion.blocks.children.list({
+    const response = await NotionClient.blocks.children.list({
       block_id: parentPageId,
     });
 
@@ -87,7 +81,7 @@ export function generateSlug(title: string): string {
 // Get all page titles and their corresponding IDs for slug generation
 export async function getAllNotionPageSlugs(parentPageId: string): Promise<Array<{title: string, slug: string, id: string}>> {
   try {
-    const response = await notion.blocks.children.list({
+    const response = await NotionClient.blocks.children.list({
       block_id: parentPageId,
     });
 

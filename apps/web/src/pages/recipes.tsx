@@ -99,6 +99,9 @@ export async function getStaticProps() {
       page_id,
       categorizedRecipes
     )
+
+    console.log(`Fetched ${flatRecipes.length} recipes`)
+
     return {
       props: {
         categorizedRecipes: JSON.stringify(

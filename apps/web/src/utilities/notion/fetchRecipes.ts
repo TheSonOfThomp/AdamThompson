@@ -1,12 +1,11 @@
-import { Client } from "@notionhq/client"
+
 import {
   BlockObjectResponse,
   ChildPageBlockObjectResponse,
   PageObjectResponse,
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints"
-import { doesPageHaveImage, isChildPageBlock } from "./notionUtils"
-const notion = new Client({ auth: process.env.NOTION_KEY })
+import { doesPageHaveImage, isChildPageBlock, NotionClient } from "./notionUtils"
 
 const CATEGORIES = ["Food", "Drinks", "Sauces, Spices & Syrups"]
 const page_size = 50
@@ -23,7 +22,7 @@ export type RecipePageMeta = PageObjectResponse | BlockObjectResponse
 export const fetchCategorizedRecipePageContent = async (
   rootPageId: string
 ): Promise<Array<RecipeCategory>> => {
-  const blocks = await notion.blocks.children.list({
+  const blocks = await NotionClient.blocks.children.list({
     block_id: rootPageId,
     page_size,
   })
@@ -64,7 +63,7 @@ export const fetchFlatRecipePageContent = async (
 const fetchSubPagesForChildRecipeBlock = async (
   categoryPageBlock: ChildPageBlockObjectResponse
 ): Promise<RecipeCategory> => {
-  const subPages = await notion.blocks.children.list({
+  const subPages = await NotionClient.blocks.children.list({
     block_id: categoryPageBlock.id,
     page_size,
   })
@@ -95,7 +94,7 @@ export const fetchPropertiesForPageId = async (
   page_id: string
 ): Promise<PageObjectResponse | null> => {
   try {
-    const pageMeta = (await notion.pages.retrieve({
+    const pageMeta = (await NotionClient.pages.retrieve({
       page_id,
     })) as PageObjectResponse
 
@@ -107,7 +106,7 @@ export const fetchPropertiesForPageId = async (
 }
 
 export const fetchContentForPageId = async (page_id: string) => {
-  const blocks = await notion.blocks.children.list({
+  const blocks = await NotionClient.blocks.children.list({
     block_id: page_id,
     page_size,
   })

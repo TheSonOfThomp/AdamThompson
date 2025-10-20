@@ -1,3 +1,4 @@
+import { Client } from '@notionhq/client';
 import {
   BlockObjectResponse,
   ChildPageBlockObjectResponse,
@@ -5,6 +6,7 @@ import {
   PartialBlockObjectResponse,
   RichTextItemResponse,
 } from "@notionhq/client/build/src/api-endpoints"
+
 import { has, isNull } from "lodash"
 
 export interface PageTitleProperty {
@@ -12,6 +14,11 @@ export interface PageTitleProperty {
   title: Array<RichTextItemResponse>
   id: string
 }
+
+// Initialize Notion client
+export const NotionClient = new Client({
+  auth: process.env.NOTION_KEY,
+});
 
 export const getPageTitle = (page: PageObjectResponse | null) => {
   if (!page) return ""

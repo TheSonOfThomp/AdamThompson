@@ -13,7 +13,6 @@ const MAX_BLOG_POSTS = 3;
 const IndexPage = ({ projects, resumeJson, portfolioMeta, allBlogPosts }) => {
 
   const parsedBlogPosts = JSON.parse(allBlogPosts);
-  console.log('Parsed Blog Posts:', parsedBlogPosts);
 
   return (
     <main id="app">
@@ -56,6 +55,7 @@ export async function getStaticProps() {
       .slice(0, MAX_BLOG_POSTS)
   );
 
+  console.log(`Fetched ${allBlogPosts.length} blog posts`);
 
   return {
     props: {
