@@ -25,6 +25,8 @@ export const mapBlockToReactNode = (
       return <h3 key={block.id}>{getRichText(content)}</h3>
     case "bulleted_list_item":
       return <li key={block.id}>{getRichText(content)}</li>
+    case "numbered_list_item":
+      return <li key={block.id}>{getRichText(content)}</li>
     case "paragraph":
       if (getRichText(content))
         return <p key={block.id}>{getRichText(content)}</p>

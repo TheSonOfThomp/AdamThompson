@@ -3,16 +3,24 @@
 @import '../../../style/mixins';
 
 .blog_post {
-  @include clickable-card(1, 2);
-  display: inline-flex;
-  flex-direction: column;
+  // @include clickable-card(1, 1);
+  display: inline-grid;
+  grid-template-areas: 'date . icon' 'title title title' 'desc desc desc';
+  grid-template-columns: auto 1fr 24px;
   align-items: baseline;
   padding: 16px;
   background-color: var(--color-bg-base);
   border-radius: 4px;
 
+  transition: ease-in-out 200ms outline-color;
+
   @include Mode('dark') {
     outline: 1px solid var(--color-text-secondary);
+  }
+
+  &:hover {
+    outline-width: 2px;
+    outline-color: var(--color-brand-base);
   }
 }
 
@@ -27,16 +35,22 @@
 .blog_post_title {
   grid-area: title;
   margin: 8px 0;
+  font-size: 1.5rem;
 }
 
 .blog_post_date {
-  order: -1;
+  grid-area: date;
   margin: 2px 0;
   font-size: 0.8rem;
   opacity: 0.8;
 }
 
+.blog_post_icon {
+  grid-area: icon;
+}
+
 .blog_post_description {
+  grid-area: desc;
   margin: 2px 0;
   font-size: 1rem;
   font-weight: 400;

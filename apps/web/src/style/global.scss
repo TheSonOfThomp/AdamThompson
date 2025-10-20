@@ -60,7 +60,7 @@ html {
   }
 
   p {
-    @include responsiveText(20, 24);
+    @include responsiveText(12, 16);
     font-weight: 100;
     line-height: 1.5em;
     color: var(--color-text-base);
