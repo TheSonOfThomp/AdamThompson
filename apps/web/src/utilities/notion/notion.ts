@@ -27,8 +27,7 @@ export async function getNotionBlogPosts(pageId: string): Promise<Array<BlogPost
 
     return pages;
   } catch (error) {
-    console.error('Error fetching Notion pages:', error);
-    return [];
+    throw new Error('Error fetching Notion pages: ' + error);
   }
 }
 
@@ -48,8 +47,7 @@ export async function getNotionPage(pageId: string) {
       blocks: blocks.results,
     };
   } catch (error) {
-    console.error('Error fetching Notion page:', error);
-    return null;
+    throw new Error('Error fetching Notion page: ' + error);
   }
 }
 
@@ -63,8 +61,7 @@ export async function getAllNotionPageIds(parentPageId: string): Promise<string[
       .filter((block: any) => block.type === 'child_page')
       .map((block: any) => block.id);
   } catch (error) {
-    console.error('Error fetching page IDs:', error);
-    return [];
+    throw new Error('Error fetching page IDs: ' + error);
   }
 }
 
@@ -96,8 +93,7 @@ export async function getAllNotionPageSlugs(parentPageId: string): Promise<Array
         };
       });
   } catch (error) {
-    console.error('Error fetching page slugs:', error);
-    return [];
+    throw new Error('Error fetching page slugs: ' + error);
   }
 }
 
@@ -116,7 +112,6 @@ export async function getNotionPageBySlug(parentPageId: string, slug: string) {
     // Now get the full page content using the ID
     return await getNotionPage(matchingPage.id);
   } catch (error) {
-    console.error('Error fetching page by slug:', error);
-    return null;
+    throw new Error('Error fetching page by slug: ' + error);
   }
 }
