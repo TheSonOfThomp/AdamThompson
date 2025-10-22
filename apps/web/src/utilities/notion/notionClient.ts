@@ -243,3 +243,291 @@ export function generateSlug(title: string): string {
     .replace(/-+/g, '-') // Replace multiple hyphens with single
     .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
 }
+
+// Recipe-related functions
+export async function fetchCategorizedRecipePageContent(): Promise<any[]> {
+  // During development, if Netlify functions aren't available, use direct API
+  if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
+    try {
+      return await getDirectCategorizedRecipes();
+    } catch (error) {
+      console.log('Direct categorized recipes API failed, trying Netlify function...');
+    }
+  }
+
+  try {
+    const baseUrl = getBaseUrl();
+    const url = `${baseUrl}/.netlify/functions/notion-api?action=categorized-recipes`;
+    
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const categorizedRecipes = await response.json();
+    return categorizedRecipes;
+  } catch (error) {
+    console.error('Error fetching categorized recipes from Netlify function:', error);
+    
+    // Fallback to direct API if we're in development
+    if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
+      console.log('Falling back to direct Notion API...');
+      return await getDirectCategorizedRecipes();
+    }
+    
+    return [];
+  }
+}
+
+export async function fetchFlatRecipePageContent(): Promise<string[]> {
+  // During development, if Netlify functions aren't available, use direct API
+  if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
+    try {
+      return await getDirectRecipeIds();
+    } catch (error) {
+      console.log('Direct recipe API failed, trying Netlify function...');
+    }
+  }
+
+  try {
+    const baseUrl = getBaseUrl();
+    const url = `${baseUrl}/.netlify/functions/notion-api?action=recipes`;
+    
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const recipeIds = await response.json();
+    return recipeIds;
+  } catch (error) {
+    console.error('Error fetching recipe IDs from Netlify function:', error);
+    
+    // Fallback to direct API if we're in development
+    if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
+      console.log('Falling back to direct Notion API...');
+      return await getDirectRecipeIds();
+    }
+    
+    return [];
+  }
+}
+
+export async function fetchPropertiesForPageId(pageId: string): Promise<any> {
+  // During development, if Netlify functions aren't available, use direct API
+  if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
+    try {
+      return await getDirectRecipeMeta(pageId);
+    } catch (error) {
+      console.log('Direct recipe meta API failed, trying Netlify function...');
+    }
+  }
+
+  try {
+    const baseUrl = getBaseUrl();
+    const url = `${baseUrl}/.netlify/functions/notion-api?action=recipe-meta&pageId=${encodeURIComponent(pageId)}`;
+    
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      if (response.status === 404) {
+        return null;
+      }
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const meta = await response.json();
+    return meta;
+  } catch (error) {
+    console.error('Error fetching recipe meta from Netlify function:', error);
+    
+    // Fallback to direct API if we're in development
+    if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
+      console.log('Falling back to direct Notion API...');
+      return await getDirectRecipeMeta(pageId);
+    }
+    
+    return null;
+  }
+}
+
+export async function fetchContentForPageId(pageId: string): Promise<any> {
+  // During development, if Netlify functions aren't available, use direct API
+  if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
+    try {
+      return await getDirectRecipeContent(pageId);
+    } catch (error) {
+      console.log('Direct recipe content API failed, trying Netlify function...');
+    }
+  }
+
+  try {
+    const baseUrl = getBaseUrl();
+    const url = `${baseUrl}/.netlify/functions/notion-api?action=recipe-content&pageId=${encodeURIComponent(pageId)}`;
+    
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      if (response.status === 404) {
+        return { results: [] };
+      }
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const content = await response.json();
+    return content;
+  } catch (error) {
+    console.error('Error fetching recipe content from Netlify function:', error);
+    
+    // Fallback to direct API if we're in development
+    if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
+      console.log('Falling back to direct Notion API...');
+      return await getDirectRecipeContent(pageId);
+    }
+    
+    return { results: [] };
+  }
+}
+
+// Direct API fallback functions for recipes
+async function getDirectCategorizedRecipes(): Promise<any[]> {
+  try {
+    const notion = new Client({
+      auth: process.env.NOTION_KEY,
+    });
+    
+    const rootPageId = process.env.NOTION_RECIPES_PAGE_ID;
+    const CATEGORIES = ["Food", "Drinks", "Sauces, Spices & Syrups"];
+    
+    if (!rootPageId) {
+      console.warn('NOTION_RECIPES_PAGE_ID not configured');
+      return [];
+    }
+
+    const blocks = await notion.blocks.children.list({
+      block_id: rootPageId,
+      page_size: 50,
+    });
+
+    const categoryPages = blocks.results.filter(
+      (block: any) => block.type === 'child_page' && CATEGORIES.includes(block.child_page.title)
+    );
+
+    const categorizedRecipes = [];
+    
+    for (const categoryPage of categoryPages) {
+      const subPages = await notion.blocks.children.list({
+        block_id: categoryPage.id,
+        page_size: 50,
+      });
+      
+      const recipeMetadata = [];
+      for (const recipePage of subPages.results) {
+        if ((recipePage as any).type === 'child_page') {
+          try {
+            const pageMeta = await notion.pages.retrieve({
+              page_id: recipePage.id,
+            });
+            
+            if ((pageMeta as any).cover) {
+              recipeMetadata.push(pageMeta);
+            }
+          } catch (error) {
+            console.error(`Error fetching recipe ${recipePage.id}:`, error);
+          }
+        }
+      }
+      
+      categorizedRecipes.push({
+        id: categoryPage.id,
+        title: (categoryPage as any).child_page.title,
+        subPages: recipeMetadata,
+      });
+    }
+
+    return categorizedRecipes;
+  } catch (error) {
+    console.error('Error fetching categorized recipes directly:', error);
+    return [];
+  }
+}
+
+async function getDirectRecipeIds(): Promise<string[]> {
+  try {
+    const notion = new Client({
+      auth: process.env.NOTION_KEY,
+    });
+    
+    const rootPageId = process.env.NOTION_RECIPES_PAGE_ID;
+    if (!rootPageId) {
+      console.warn('NOTION_RECIPES_PAGE_ID not configured');
+      return [];
+    }
+
+    const blocks = await notion.blocks.children.list({
+      block_id: rootPageId,
+      page_size: 50,
+    });
+
+    const categoryPages = blocks.results.filter(
+      (block: any) => block.type === 'child_page'
+    );
+
+    const allRecipeIds = [];
+    
+    for (const categoryPage of categoryPages) {
+      const subPages = await notion.blocks.children.list({
+        block_id: categoryPage.id,
+        page_size: 50,
+      });
+      
+      const recipeIds = subPages.results
+        .filter((block: any) => block.type === 'child_page')
+        .map((block: any) => block.id);
+      
+      allRecipeIds.push(...recipeIds);
+    }
+
+    return allRecipeIds;
+  } catch (error) {
+    console.error('Error fetching recipe IDs directly:', error);
+    return [];
+  }
+}
+
+async function getDirectRecipeMeta(pageId: string): Promise<any> {
+  try {
+    const notion = new Client({
+      auth: process.env.NOTION_KEY,
+    });
+    
+    const pageMeta = await notion.pages.retrieve({
+      page_id: pageId,
+    });
+
+    return pageMeta;
+  } catch (error) {
+    console.error('Error fetching recipe meta directly:', error);
+    return null;
+  }
+}
+
+async function getDirectRecipeContent(pageId: string): Promise<any> {
+  try {
+    const notion = new Client({
+      auth: process.env.NOTION_KEY,
+    });
+    
+    const blocks = await notion.blocks.children.list({
+      block_id: pageId,
+      page_size: 50,
+    });
+
+    return blocks;
+  } catch (error) {
+    console.error('Error fetching recipe content directly:', error);
+    return { results: [] };
+  }
+}

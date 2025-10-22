@@ -16,7 +16,6 @@ export interface PageTitleProperty {
 }
 
 // Initialize Notion client
-console.log("Using NOTION_KEY", process.env.NOTION_KEY.slice(0,8))
 export const NotionClient = new Client({
   auth: process.env.NOTION_KEY,
 });

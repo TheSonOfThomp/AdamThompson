@@ -8,7 +8,7 @@ import {
   fetchContentForPageId,
   fetchFlatRecipePageContent,
   fetchPropertiesForPageId,
-} from "../../utilities/notion/fetchRecipes"
+} from "../../utilities/notion/notionClient"
 import {
   getPageCoverImageURL,
   getPageTitle,
@@ -51,23 +51,22 @@ export async function getStaticProps({ params: { recipeId } }) {
 }
 
 export const getStaticPaths = async () => {
-  const page_id = process.env.NOTION_RECIPES_PAGE_ID
-
-  if (page_id) {
-    const flatRecipePages = await fetchFlatRecipePageContent(page_id)
+  try {
+    const flatRecipePages = await fetchFlatRecipePageContent();
 
     return {
-      paths: flatRecipePages.map((page) => {
+      paths: flatRecipePages.map((recipeId) => {
         return {
-          params: { recipeId: page?.id },
+          params: { recipeId },
         }
       }),
-      fallback: false,
+      fallback: 'blocking',
     }
-  }
-
-  return {
-    paths: [],
-    fallback: "blocking",
+  } catch (error) {
+    console.error('Error fetching recipe paths:', error);
+    return {
+      paths: [],
+      fallback: 'blocking',
+    }
   }
 }
