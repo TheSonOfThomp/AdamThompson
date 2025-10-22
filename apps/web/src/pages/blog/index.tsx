@@ -143,14 +143,11 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ posts }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const notionPageId = process.env.NOTION_BLOG_PAGE_ID;
-  
   try {
     let posts: BlogPost[] = [];
     
-    if (notionPageId) {
-      posts = await getNotionBlogPosts(notionPageId);
-    }
+    // Use the Netlify function for Notion blog posts
+    posts = await getNotionBlogPosts();
 
     // Sort posts by date (newest first)
     const sortedPosts = posts.sort((a, b) => 

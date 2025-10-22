@@ -51,10 +51,8 @@ export async function getStaticProps({ params: { recipeId } }) {
 }
 
 export const getStaticPaths = async () => {
-  const page_id = process.env.NOTION_RECIPES_PAGE_ID
-
-  if (page_id) {
-    const flatRecipePages = await fetchFlatRecipePageContent(page_id)
+  try {
+    const flatRecipePages = await fetchFlatRecipePageContent();
 
     return {
       paths: flatRecipePages.map((page) => {
@@ -64,10 +62,11 @@ export const getStaticPaths = async () => {
       }),
       fallback: false,
     }
-  }
-
-  return {
-    paths: [],
-    fallback: "blocking",
+  } catch (error) {
+    console.error('Failed to fetch recipe paths:', error);
+    return {
+      paths: [],
+      fallback: "blocking",
+    }
   }
 }

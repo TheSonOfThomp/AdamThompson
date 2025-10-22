@@ -1,42 +1,32 @@
-import { Client } from "@notionhq/client"
-import {
-  BlockObjectResponse,
-  ChildPageBlockObjectResponse,
-  PageObjectResponse,
-  PartialBlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints"
-import { doesPageHaveImage, isChildPageBlock } from "./notionUtils"
-const notion = new Client({ auth: process.env.NOTION_KEY })
-
-const CATEGORIES = ["Food", "Drinks", "Sauces, Spices & Syrups"]
-const page_size = 50
-
 export interface RecipeCategory {
   id: string
   title: string
   subPages: Array<RecipePageMeta | null>
 }
 
-export type RecipePageMeta = PageObjectResponse | BlockObjectResponse
+export type RecipePageMeta = any // Simplified type since we're using the function
 
 /** Retrieves an array of {@link RecipeCategory}s, each with populated metadata */
 export const fetchCategorizedRecipePageContent = async (
-  rootPageId: string
+  rootPageId?: string
 ): Promise<Array<RecipeCategory>> => {
-  const blocks = await notion.blocks.children.list({
-    block_id: rootPageId,
-    page_size,
-  })
-
-  const categoryPages = (blocks.results as Array<BlockObjectResponse>).filter(
-    (b) => isChildPageBlock(b) && CATEGORIES.includes(b.child_page.title)
-  ) as Array<ChildPageBlockObjectResponse>
-
-  const populatedCategoryPages = await Promise.all(
-    categoryPages.map(fetchSubPagesForChildRecipeBlock)
-  )
-
-  return populatedCategoryPages
+  try {
+    const url = rootPageId 
+      ? `/.netlify/functions/notion-recipes?pageId=${rootPageId}&format=categorized`
+      : '/.netlify/functions/notion-recipes?format=categorized';
+    
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const categorizedRecipes = await response.json();
+    return categorizedRecipes;
+  } catch (error) {
+    console.error('Error fetching categorized recipes:', error);
+    return [];
+  }
 }
 
 /**
@@ -46,71 +36,66 @@ export const fetchCategorizedRecipePageContent = async (
  * and flattens the array provided
  */
 export const fetchFlatRecipePageContent = async (
-  rootPageId: string,
+  rootPageId?: string,
   categorizedRecipePageContent?: Array<RecipeCategory>
 ): Promise<Array<RecipePageMeta | null>> => {
-  const categorizedRecipes =
-    categorizedRecipePageContent ??
-    (await fetchCategorizedRecipePageContent(rootPageId))
-
-  const flatRecipePageContent = categorizedRecipes.flatMap((cat) =>
-    cat.subPages.map((page) => page)
-  )
-
-  return flatRecipePageContent
-}
-
-/** Given a Category block, populate its subPages with content */
-const fetchSubPagesForChildRecipeBlock = async (
-  categoryPageBlock: ChildPageBlockObjectResponse
-): Promise<RecipeCategory> => {
-  const subPages = await notion.blocks.children.list({
-    block_id: categoryPageBlock.id,
-    page_size,
-  })
-
-  const recipePageProperties = await Promise.all(
-    subPages.results.map(fetchPagePropertiesForRecipePageBlock)
-  )
-
-  return {
-    id: categoryPageBlock.id,
-    title: categoryPageBlock.child_page.title,
-    subPages: recipePageProperties.filter(doesPageHaveImage),
+  if (categorizedRecipePageContent) {
+    // Use provided data
+    const flatRecipePageContent = categorizedRecipePageContent.flatMap((cat) =>
+      cat.subPages.map((page) => page)
+    );
+    return flatRecipePageContent;
   }
-}
 
-/** Given a Recipe Page block, retrieve its metadata */
-export const fetchPagePropertiesForRecipePageBlock = async (
-  recipePageBlock: PartialBlockObjectResponse | BlockObjectResponse
-): Promise<PageObjectResponse | BlockObjectResponse | null> => {
-  if (isChildPageBlock(recipePageBlock)) {
-    return await fetchPropertiesForPageId(recipePageBlock.id)
-  } else {
-    return recipePageBlock as BlockObjectResponse
-  }
-}
-
-export const fetchPropertiesForPageId = async (
-  page_id: string
-): Promise<PageObjectResponse | null> => {
   try {
-    const pageMeta = (await notion.pages.retrieve({
-      page_id,
-    })) as PageObjectResponse
+    const url = rootPageId 
+      ? `/.netlify/functions/notion-recipes?pageId=${rootPageId}&format=flat`
+      : '/.netlify/functions/notion-recipes?format=flat';
+    
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const flatRecipes = await response.json();
+    return flatRecipes;
+  } catch (error) {
+    console.error('Error fetching flat recipes:', error);
+    return [];
+  }
+}
 
-    return pageMeta
-  } catch (err) {
-    console.error(err)
-    return null
+// Legacy functions for backward compatibility - these now use the Netlify functions internally
+export const fetchPagePropertiesForRecipePageBlock = async (recipePageBlock: any): Promise<any> => {
+  // This function is simplified since the logic is now in the Netlify function
+  return recipePageBlock;
+}
+
+export const fetchPropertiesForPageId = async (page_id: string): Promise<any> => {
+  try {
+    const response = await fetch(`/.netlify/functions/notion-page?pageId=${page_id}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data.page;
+  } catch (error) {
+    console.error('Error fetching page properties:', error);
+    return null;
   }
 }
 
 export const fetchContentForPageId = async (page_id: string) => {
-  const blocks = await notion.blocks.children.list({
-    block_id: page_id,
-    page_size,
-  })
-
-  return blocks
+  try {
+    const response = await fetch(`/.netlify/functions/notion-page?pageId=${page_id}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return { results: data.blocks };
+  } catch (error) {
+    console.error('Error fetching page content:', error);
+    return { results: [] };
+  }
 }

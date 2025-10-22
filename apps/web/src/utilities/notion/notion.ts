@@ -1,36 +1,21 @@
-import { Client } from '@notionhq/client';
 import { BlogPost } from '../../types/BlogPost.types';
 
-// Initialize Notion client
-const notion = new Client({
-  auth: process.env.NOTION_KEY,
-});
-
-export async function getNotionBlogPosts(pageId: string): Promise<Array<BlogPost>> {
-
+export async function getNotionBlogPosts(pageId?: string): Promise<Array<BlogPost>> {
   try {
     console.log('Fetching Notion pages for page ID:', pageId);
-    // Get child pages from the specified page
-    const response = await notion.blocks.children.list({
-      block_id: pageId,
-    });
-
-    // Filter for child page blocks and extract page information
-    const pages = response.results
-      .filter((block: any) => block.type === 'child_page')
-      .map((block: any) => {
-        const title = block.child_page.title;
-        return {
-          id: block.id,
-          title,
-          slug: generateSlug(title),
-          type: block.type,
-          datePublished: block.created_time,
-          lastEditedTime: block.last_edited_time,
-          source: 'notion',
-        };
-      });
-
+    
+    // Call the Netlify function instead of direct Notion API
+    const url = pageId 
+      ? `/.netlify/functions/notion-blog-posts?pageId=${pageId}`
+      : '/.netlify/functions/notion-blog-posts';
+    
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const pages = await response.json();
     return pages;
   } catch (error) {
     console.error('Error fetching Notion pages:', error);
@@ -40,34 +25,24 @@ export async function getNotionBlogPosts(pageId: string): Promise<Array<BlogPost
 
 export async function getNotionPage(pageId: string) {
   try {
-    // Get page properties
-    const page = await notion.pages.retrieve({ page_id: pageId });
+    const response = await fetch(`/.netlify/functions/notion-page?pageId=${pageId}`);
     
-    // Get page content (blocks)
-    const blocks = await notion.blocks.children.list({
-      block_id: pageId,
-      page_size: 100,
-    });
-
-    return {
-      page,
-      blocks: blocks.results,
-    };
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    return data;
   } catch (error) {
     console.error('Error fetching Notion page:', error);
     return null;
   }
 }
 
-export async function getAllNotionPageIds(parentPageId: string): Promise<string[]> {
+export async function getAllNotionPageIds(parentPageId?: string): Promise<string[]> {
   try {
-    const response = await notion.blocks.children.list({
-      block_id: parentPageId,
-    });
-
-    return response.results
-      .filter((block: any) => block.type === 'child_page')
-      .map((block: any) => block.id);
+    const blogPosts = await getNotionBlogPosts(parentPageId);
+    return blogPosts.map(post => post.id);
   } catch (error) {
     console.error('Error fetching page IDs:', error);
     return [];
@@ -85,22 +60,14 @@ export function generateSlug(title: string): string {
 }
 
 // Get all page titles and their corresponding IDs for slug generation
-export async function getAllNotionPageSlugs(parentPageId: string): Promise<Array<{title: string, slug: string, id: string}>> {
+export async function getAllNotionPageSlugs(parentPageId?: string): Promise<Array<{title: string, slug: string, id: string}>> {
   try {
-    const response = await notion.blocks.children.list({
-      block_id: parentPageId,
-    });
-
-    return response.results
-      .filter((block: any) => block.type === 'child_page')
-      .map((block: any) => {
-        const title = block.child_page.title;
-        return {
-          title,
-          slug: generateSlug(title),
-          id: block.id
-        };
-      });
+    const blogPosts = await getNotionBlogPosts(parentPageId);
+    return blogPosts.map(post => ({
+      title: post.title,
+      slug: post.slug,
+      id: post.id
+    }));
   } catch (error) {
     console.error('Error fetching page slugs:', error);
     return [];
@@ -108,7 +75,7 @@ export async function getAllNotionPageSlugs(parentPageId: string): Promise<Array
 }
 
 // Get a Notion page by its title slug
-export async function getNotionPageBySlug(parentPageId: string, slug: string) {
+export async function getNotionPageBySlug(parentPageId?: string, slug?: string) {
   try {
     // First, get all pages to find the one with matching slug
     const pages = await getAllNotionPageSlugs(parentPageId);
