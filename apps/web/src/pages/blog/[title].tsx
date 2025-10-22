@@ -59,8 +59,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ pageData, title: titleSlug 
 export const getStaticPaths: GetStaticPaths = async () => {
   try {
     const pages = await getAllNotionPageSlugs();
-    const paths = pages.map((page) => ({
-      params: { title: page.slug },
+    const paths = pages.map((slug) => ({
+      params: { title: slug },
     }));
 
     return {

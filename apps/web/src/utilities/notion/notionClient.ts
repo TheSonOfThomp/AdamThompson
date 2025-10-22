@@ -5,9 +5,15 @@ import { Client } from '@notionhq/client';
 function getBaseUrl() {
   // During build time or server-side rendering
   if (typeof window === 'undefined') {
-    // Check if we're in a Netlify environment
-    if (process.env.NETLIFY) {
-      return process.env.URL || process.env.DEPLOY_PRIME_URL || 'http://localhost:8888';
+    // Check if we're in a Netlify build environment
+    if (process.env.NETLIFY || process.env.NETLIFY_BUILD_BASE) {
+      // During Netlify build, use the deploy URL if available, otherwise fallback to direct API
+      const netlifyUrl = process.env.URL || process.env.DEPLOY_PRIME_URL || process.env.DEPLOY_URL;
+      if (netlifyUrl) {
+        return netlifyUrl;
+      }
+      // If no Netlify URL available during build, return null to trigger direct API calls
+      return null;
     }
     // Local development
     return 'http://localhost:8888';
@@ -161,35 +167,41 @@ export async function getNotionBlogPosts(): Promise<any[]> {
   }
 }
 
-export async function getAllNotionPageSlugs(): Promise<Array<{title: string, slug: string, id: string}>> {
-  // During development, if Netlify functions aren't available, use direct API
-  if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
-    try {
-      return await getDirectNotionPageSlugs();
-    } catch (error) {
-      console.log('Direct API failed, trying Netlify function...');
-    }
+export async function getAllNotionPageSlugs(): Promise<string[]> {
+  const baseUrl = getBaseUrl();
+  
+  // If we're in development, during build, or have no baseUrl, use direct API
+  if ((baseUrl === 'http://localhost:8888' || baseUrl === null) && process.env.NOTION_KEY) {
+    console.log('Using direct Notion API for slugs');
+    const posts = await getDirectNotionBlogPosts();
+    return posts
+      .filter(post => post.slug)
+      .map(post => post.slug);
   }
 
   try {
-    const baseUrl = getBaseUrl();
-    const url = `${baseUrl}/.netlify/functions/notion-api?action=slugs`;
-    
-    const response = await fetch(url);
+    const response = await fetch(`${baseUrl}/.netlify/functions/notion-api?action=blog-posts`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     
-    const slugs = await response.json();
-    return slugs;
+    const data = await response.json();
+    const posts = data.posts || [];
+    
+    return posts
+      .filter((post: any) => post.slug)
+      .map((post: any) => post.slug);
   } catch (error) {
     console.error('Error fetching page slugs from Netlify function:', error);
     
-    // Fallback to direct API if we're in development
-    if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
-      console.log('Falling back to direct Notion API...');
-      return await getDirectNotionPageSlugs();
+    // Fallback to direct API if available
+    if (process.env.NOTION_KEY) {
+      console.log('Falling back to direct Notion API for slugs');
+      const posts = await getDirectNotionBlogPosts();
+      return posts
+        .filter(post => post.slug)
+        .map(post => post.slug);
     }
     
     return [];
@@ -246,17 +258,15 @@ export function generateSlug(title: string): string {
 
 // Recipe-related functions
 export async function fetchCategorizedRecipePageContent(): Promise<any[]> {
-  // During development, if Netlify functions aren't available, use direct API
-  if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
-    try {
-      return await getDirectCategorizedRecipes();
-    } catch (error) {
-      console.log('Direct categorized recipes API failed, trying Netlify function...');
-    }
+  const baseUrl = getBaseUrl();
+  
+  // If we're in development, during build, or have no baseUrl, use direct API
+  if ((baseUrl === 'http://localhost:8888' || baseUrl === null) && process.env.NOTION_KEY) {
+    console.log('Using direct Notion API for categorized recipes');
+    return getDirectCategorizedRecipes();
   }
 
   try {
-    const baseUrl = getBaseUrl();
     const url = `${baseUrl}/.netlify/functions/notion-api?action=categorized-recipes`;
     
     const response = await fetch(url);
@@ -265,15 +275,15 @@ export async function fetchCategorizedRecipePageContent(): Promise<any[]> {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     
-    const categorizedRecipes = await response.json();
-    return categorizedRecipes;
+    const categories = await response.json();
+    return categories;
   } catch (error) {
     console.error('Error fetching categorized recipes from Netlify function:', error);
     
-    // Fallback to direct API if we're in development
-    if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
-      console.log('Falling back to direct Notion API...');
-      return await getDirectCategorizedRecipes();
+    // Fallback to direct API if available
+    if (process.env.NOTION_KEY) {
+      console.log('Falling back to direct Notion API for categorized recipes');
+      return getDirectCategorizedRecipes();
     }
     
     return [];
@@ -281,17 +291,15 @@ export async function fetchCategorizedRecipePageContent(): Promise<any[]> {
 }
 
 export async function fetchFlatRecipePageContent(): Promise<string[]> {
-  // During development, if Netlify functions aren't available, use direct API
-  if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
-    try {
-      return await getDirectRecipeIds();
-    } catch (error) {
-      console.log('Direct recipe API failed, trying Netlify function...');
-    }
+  const baseUrl = getBaseUrl();
+  
+  // If we're in development, during build, or have no baseUrl, use direct API
+  if ((baseUrl === 'http://localhost:8888' || baseUrl === null) && process.env.NOTION_KEY) {
+    console.log('Using direct Notion API for recipe IDs');
+    return getDirectRecipeIds();
   }
 
   try {
-    const baseUrl = getBaseUrl();
     const url = `${baseUrl}/.netlify/functions/notion-api?action=recipes`;
     
     const response = await fetch(url);
@@ -305,10 +313,10 @@ export async function fetchFlatRecipePageContent(): Promise<string[]> {
   } catch (error) {
     console.error('Error fetching recipe IDs from Netlify function:', error);
     
-    // Fallback to direct API if we're in development
-    if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
-      console.log('Falling back to direct Notion API...');
-      return await getDirectRecipeIds();
+    // Fallback to direct API if available
+    if (process.env.NOTION_KEY) {
+      console.log('Falling back to direct Notion API for recipe IDs');
+      return getDirectRecipeIds();
     }
     
     return [];
@@ -316,17 +324,15 @@ export async function fetchFlatRecipePageContent(): Promise<string[]> {
 }
 
 export async function fetchPropertiesForPageId(pageId: string): Promise<any> {
-  // During development, if Netlify functions aren't available, use direct API
-  if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
-    try {
-      return await getDirectRecipeMeta(pageId);
-    } catch (error) {
-      console.log('Direct recipe meta API failed, trying Netlify function...');
-    }
+  const baseUrl = getBaseUrl();
+  
+  // If we're in development, during build, or have no baseUrl, use direct API
+  if ((baseUrl === 'http://localhost:8888' || baseUrl === null) && process.env.NOTION_KEY) {
+    console.log('Using direct Notion API for recipe meta');
+    return getDirectRecipeMeta(pageId);
   }
 
   try {
-    const baseUrl = getBaseUrl();
     const url = `${baseUrl}/.netlify/functions/notion-api?action=recipe-meta&pageId=${encodeURIComponent(pageId)}`;
     
     const response = await fetch(url);
@@ -343,10 +349,10 @@ export async function fetchPropertiesForPageId(pageId: string): Promise<any> {
   } catch (error) {
     console.error('Error fetching recipe meta from Netlify function:', error);
     
-    // Fallback to direct API if we're in development
-    if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
-      console.log('Falling back to direct Notion API...');
-      return await getDirectRecipeMeta(pageId);
+    // Fallback to direct API if available
+    if (process.env.NOTION_KEY) {
+      console.log('Falling back to direct Notion API for recipe meta');
+      return getDirectRecipeMeta(pageId);
     }
     
     return null;
@@ -354,17 +360,15 @@ export async function fetchPropertiesForPageId(pageId: string): Promise<any> {
 }
 
 export async function fetchContentForPageId(pageId: string): Promise<any> {
-  // During development, if Netlify functions aren't available, use direct API
-  if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
-    try {
-      return await getDirectRecipeContent(pageId);
-    } catch (error) {
-      console.log('Direct recipe content API failed, trying Netlify function...');
-    }
+  const baseUrl = getBaseUrl();
+  
+  // If we're in development, during build, or have no baseUrl, use direct API
+  if ((baseUrl === 'http://localhost:8888' || baseUrl === null) && process.env.NOTION_KEY) {
+    console.log('Using direct Notion API for recipe content');
+    return getDirectRecipeContent(pageId);
   }
 
   try {
-    const baseUrl = getBaseUrl();
     const url = `${baseUrl}/.netlify/functions/notion-api?action=recipe-content&pageId=${encodeURIComponent(pageId)}`;
     
     const response = await fetch(url);
@@ -381,10 +385,10 @@ export async function fetchContentForPageId(pageId: string): Promise<any> {
   } catch (error) {
     console.error('Error fetching recipe content from Netlify function:', error);
     
-    // Fallback to direct API if we're in development
-    if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
-      console.log('Falling back to direct Notion API...');
-      return await getDirectRecipeContent(pageId);
+    // Fallback to direct API if available
+    if (process.env.NOTION_KEY) {
+      console.log('Falling back to direct Notion API for recipe content');
+      return getDirectRecipeContent(pageId);
     }
     
     return { results: [] };
