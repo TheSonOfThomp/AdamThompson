@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@notionhq/client':
+        specifier: ^2.2.14
+        version: 2.2.15
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
+      node-fetch:
+        specifier: ^3.3.2
+        version: 3.3.2
     devDependencies:
       '@netlify/plugin-lighthouse':
         specifier: ^6.0.3
