@@ -46,9 +46,17 @@ export async function getStaticProps() {
   const resumeJson = JSON.stringify(await import("../data/resume-full.json"))
 
   const mediumPosts: Array<BlogPost> = (await import("../data/medium-posts.json")).posts
-  const notionBlogPages: Array<BlogPost> = await getNotionBlogPosts();
+  const notionBlogPages = await getNotionBlogPosts();
+  
+  // Map Notion blog posts to match BlogPost interface
+  const mappedNotionPosts: Array<BlogPost> = notionBlogPages.map((post: any) => ({
+    ...post,
+    datePublished: post.publishedDate || new Date().toISOString(),
+    description: post.excerpt || '',
+  }));
+  
   const allBlogPosts = JSON.stringify(
-    [...mediumPosts, ...notionBlogPages]
+    [...mediumPosts, ...mappedNotionPosts]
       .sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime())
       .slice(0, MAX_BLOG_POSTS)
   );

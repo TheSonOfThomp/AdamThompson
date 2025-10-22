@@ -144,7 +144,14 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ posts }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const posts: BlogPost[] = await getNotionBlogPosts();
+    const notionPosts = await getNotionBlogPosts();
+
+    // Map Notion posts to match BlogPost interface
+    const posts: BlogPost[] = notionPosts.map((post: any) => ({
+      ...post,
+      datePublished: post.publishedDate || new Date().toISOString(),
+      description: post.excerpt || '',
+    }));
 
     // Sort posts by date (newest first)
     const sortedPosts = posts.sort((a, b) => 
