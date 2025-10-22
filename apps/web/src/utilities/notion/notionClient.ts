@@ -167,12 +167,17 @@ export async function getAllNotionPageSlugs(): Promise<string[]> {
   const baseUrl = getBaseUrl();
   
   // If we're in development, during build, or have no baseUrl, use direct API
-  if ((baseUrl === 'http://localhost:8888' || baseUrl === null) && process.env.NOTION_KEY) {
-    console.log('Using direct Notion API for slugs');
-    const posts = await getDirectNotionBlogPosts();
-    return posts
-      .filter(post => post.slug)
-      .map(post => post.slug);
+  if (baseUrl === 'http://localhost:8888' || baseUrl === null) {
+    if (process.env.NOTION_KEY) {
+      console.log('Using direct Notion API for slugs');
+      const posts = await getDirectNotionBlogPosts();
+      return posts
+        .filter(post => post.slug)
+        .map(post => post.slug);
+    } else {
+      console.warn('No NOTION_KEY available for direct API access');
+      return [];
+    }
   }
 
   try {
@@ -205,37 +210,37 @@ export async function getAllNotionPageSlugs(): Promise<string[]> {
 }
 
 export async function getNotionPageBySlug(slug: string) {
-  // During development, if Netlify functions aren't available, use direct API
-  if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
-    try {
-      return await getDirectNotionPageBySlug(slug);
-    } catch (error) {
-      console.log('Direct API failed, trying Netlify function...');
+  const baseUrl = getBaseUrl();
+  
+  // If we're in development, during build, or have no baseUrl, use direct API
+  if (baseUrl === 'http://localhost:8888' || baseUrl === null) {
+    if (process.env.NOTION_KEY) {
+      console.log('Using direct Notion API for page content');
+      return getDirectNotionPageBySlug(slug);
+    } else {
+      console.warn('No NOTION_KEY available for direct API access');
+      return null;
     }
   }
 
   try {
-    const baseUrl = getBaseUrl();
-    const url = `${baseUrl}/.netlify/functions/notion-api?action=page&slug=${encodeURIComponent(slug)}`;
+    const url = `${baseUrl}/.netlify/functions/notion-api?action=blog-content&slug=${encodeURIComponent(slug)}`;
     
     const response = await fetch(url);
     
     if (!response.ok) {
-      if (response.status === 404) {
-        return null;
-      }
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     
-    const pageData = await response.json();
-    return pageData;
+    const data = await response.json();
+    return data.page;
   } catch (error) {
-    console.error('Error fetching page by slug from Netlify function:', error);
+    console.error('Error fetching page content from Netlify function:', error);
     
-    // Fallback to direct API if we're in development
-    if (process.env.NODE_ENV === 'development' && typeof window === 'undefined') {
-      console.log('Falling back to direct Notion API...');
-      return await getDirectNotionPageBySlug(slug);
+    // Fallback to direct API if available
+    if (process.env.NOTION_KEY) {
+      console.log('Falling back to direct Notion API for page content');
+      return getDirectNotionPageBySlug(slug);
     }
     
     return null;
@@ -257,9 +262,14 @@ export async function fetchCategorizedRecipePageContent(): Promise<any[]> {
   const baseUrl = getBaseUrl();
   
   // If we're in development, during build, or have no baseUrl, use direct API
-  if ((baseUrl === 'http://localhost:8888' || baseUrl === null) && process.env.NOTION_KEY) {
-    console.log('Using direct Notion API for categorized recipes');
-    return getDirectCategorizedRecipes();
+  if (baseUrl === 'http://localhost:8888' || baseUrl === null) {
+    if (process.env.NOTION_KEY) {
+      console.log('Using direct Notion API for categorized recipes');
+      return getDirectCategorizedRecipes();
+    } else {
+      console.warn('No NOTION_KEY available for direct API access');
+      return [];
+    }
   }
 
   try {
@@ -290,9 +300,14 @@ export async function fetchFlatRecipePageContent(): Promise<string[]> {
   const baseUrl = getBaseUrl();
   
   // If we're in development, during build, or have no baseUrl, use direct API
-  if ((baseUrl === 'http://localhost:8888' || baseUrl === null) && process.env.NOTION_KEY) {
-    console.log('Using direct Notion API for recipe IDs');
-    return getDirectRecipeIds();
+  if (baseUrl === 'http://localhost:8888' || baseUrl === null) {
+    if (process.env.NOTION_KEY) {
+      console.log('Using direct Notion API for recipe IDs');
+      return getDirectRecipeIds();
+    } else {
+      console.warn('No NOTION_KEY available for direct API access');
+      return [];
+    }
   }
 
   try {
@@ -323,9 +338,14 @@ export async function fetchPropertiesForPageId(pageId: string): Promise<any> {
   const baseUrl = getBaseUrl();
   
   // If we're in development, during build, or have no baseUrl, use direct API
-  if ((baseUrl === 'http://localhost:8888' || baseUrl === null) && process.env.NOTION_KEY) {
-    console.log('Using direct Notion API for recipe meta');
-    return getDirectRecipeMeta(pageId);
+  if (baseUrl === 'http://localhost:8888' || baseUrl === null) {
+    if (process.env.NOTION_KEY) {
+      console.log('Using direct Notion API for recipe meta');
+      return getDirectRecipeMeta(pageId);
+    } else {
+      console.warn('No NOTION_KEY available for direct API access');
+      return null;
+    }
   }
 
   try {
@@ -359,9 +379,14 @@ export async function fetchContentForPageId(pageId: string): Promise<any> {
   const baseUrl = getBaseUrl();
   
   // If we're in development, during build, or have no baseUrl, use direct API
-  if ((baseUrl === 'http://localhost:8888' || baseUrl === null) && process.env.NOTION_KEY) {
-    console.log('Using direct Notion API for recipe content');
-    return getDirectRecipeContent(pageId);
+  if (baseUrl === 'http://localhost:8888' || baseUrl === null) {
+    if (process.env.NOTION_KEY) {
+      console.log('Using direct Notion API for recipe content');
+      return getDirectRecipeContent(pageId);
+    } else {
+      console.warn('No NOTION_KEY available for direct API access');
+      return { results: [] };
+    }
   }
 
   try {
