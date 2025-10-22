@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "turbo build",
+    "build:server": "pnpm --filter @thesonofthomp/portfolio netlify build",
     "clean:modules": "rm -rf node_modules && pnpm exec rm -rf node_modules",
     "check": "turbo check",
     "dev": "turbo dev",
