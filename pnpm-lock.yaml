@@ -16,8 +16,8 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3(typescript@5.9.3)
       '@netlify/plugin-nextjs':
-        specifier: ^5.14.0
-        version: 5.14.0
+        specifier: ^5.14.3
+        version: 5.14.3
       '@types/node':
         specifier: ^22.9.4
         version: 22.9.4
@@ -1782,8 +1782,8 @@ packages:
     resolution: {integrity: sha512-qzmiQn32jwyHfxH4xOk3S8OIWOZW/U7u0Qw6w2yatST8V0Q3FWg/CT45yI/kY0u/08vrW1Znhts/XGX/P1TyCg==}
     engines: {node: '>=18.14.0'}
 
-  '@netlify/plugin-nextjs@5.14.0':
-    resolution: {integrity: sha512-8WEnVm88Ed6v6j/D0iqXDSnAW8Mf9P2CDVgBG3x2+vkiEI48X6Na7KnoQRyi6oulgA6foHIPWqgQIClsPiW20A==}
+  '@netlify/plugin-nextjs@5.14.3':
+    resolution: {integrity: sha512-R4YIMjnVc1B1Sb64xkVHVQHzSbn6KarwlmtRJoiHA2I1vkM2eNKZ8gY/coDjxuUNY91pCjHA6uq7yiTO++BMiw==}
     engines: {node: '>=18.0.0'}
 
   '@netlify/plugins-list@6.80.0':
@@ -12246,7 +12246,7 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@netlify/plugin-nextjs@5.14.0': {}
+  '@netlify/plugin-nextjs@5.14.3': {}
 
   '@netlify/plugins-list@6.80.0': {}
 

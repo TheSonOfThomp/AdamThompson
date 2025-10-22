@@ -3,6 +3,10 @@
   functions = "apps/web/functions/"
   command = "turbo build"
 
+[build.environment]
+  # Load environment variables from root .env file for the build process
+  NODE_OPTIONS = "--max_old_space_size=4096"
+
 [context.deploy-preview]
   command = "turbo build --force"
 
