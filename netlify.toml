@@ -1,7 +1,7 @@
 [build]
   publish = "apps/web/.next"
   functions = "apps/web/functions/"
-  command = "turbo build"
+  command = "turbo build --force"
 
 [context.deploy-preview]
   command = "turbo build --force"

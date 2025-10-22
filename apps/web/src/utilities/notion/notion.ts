@@ -1,17 +1,11 @@
-import { Client } from '@notionhq/client';
 import { BlogPost } from '../../types/BlogPost.types';
-
-// Initialize Notion client
-const notion = new Client({
-  auth: process.env.NOTION_KEY,
-});
+import { NotionClient } from './notionUtils';
 
 export async function getNotionBlogPosts(pageId: string): Promise<Array<BlogPost>> {
 
   try {
-    console.log('Fetching Notion pages for page ID:', pageId);
     // Get child pages from the specified page
-    const response = await notion.blocks.children.list({
+    const response = await NotionClient.blocks.children.list({
       block_id: pageId,
     });
 
@@ -33,18 +27,17 @@ export async function getNotionBlogPosts(pageId: string): Promise<Array<BlogPost
 
     return pages;
   } catch (error) {
-    console.error('Error fetching Notion pages:', error);
-    return [];
+    throw new Error('Error fetching Notion pages: ' + error);
   }
 }
 
 export async function getNotionPage(pageId: string) {
   try {
     // Get page properties
-    const page = await notion.pages.retrieve({ page_id: pageId });
+    const page = await NotionClient.pages.retrieve({ page_id: pageId });
     
     // Get page content (blocks)
-    const blocks = await notion.blocks.children.list({
+    const blocks = await NotionClient.blocks.children.list({
       block_id: pageId,
       page_size: 100,
     });
@@ -54,14 +47,13 @@ export async function getNotionPage(pageId: string) {
       blocks: blocks.results,
     };
   } catch (error) {
-    console.error('Error fetching Notion page:', error);
-    return null;
+    throw new Error('Error fetching Notion page: ' + error);
   }
 }
 
 export async function getAllNotionPageIds(parentPageId: string): Promise<string[]> {
   try {
-    const response = await notion.blocks.children.list({
+    const response = await NotionClient.blocks.children.list({
       block_id: parentPageId,
     });
 
@@ -69,8 +61,7 @@ export async function getAllNotionPageIds(parentPageId: string): Promise<string[
       .filter((block: any) => block.type === 'child_page')
       .map((block: any) => block.id);
   } catch (error) {
-    console.error('Error fetching page IDs:', error);
-    return [];
+    throw new Error('Error fetching page IDs: ' + error);
   }
 }
 
@@ -87,7 +78,7 @@ export function generateSlug(title: string): string {
 // Get all page titles and their corresponding IDs for slug generation
 export async function getAllNotionPageSlugs(parentPageId: string): Promise<Array<{title: string, slug: string, id: string}>> {
   try {
-    const response = await notion.blocks.children.list({
+    const response = await NotionClient.blocks.children.list({
       block_id: parentPageId,
     });
 
@@ -102,8 +93,7 @@ export async function getAllNotionPageSlugs(parentPageId: string): Promise<Array
         };
       });
   } catch (error) {
-    console.error('Error fetching page slugs:', error);
-    return [];
+    throw new Error('Error fetching page slugs: ' + error);
   }
 }
 
@@ -122,7 +112,6 @@ export async function getNotionPageBySlug(parentPageId: string, slug: string) {
     // Now get the full page content using the ID
     return await getNotionPage(matchingPage.id);
   } catch (error) {
-    console.error('Error fetching page by slug:', error);
-    return null;
+    throw new Error('Error fetching page by slug: ' + error);
   }
 }

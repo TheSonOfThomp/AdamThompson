@@ -4,7 +4,7 @@ import Hero from "../main-sections/hero/hero"
 
 import AboutSection from "../main-sections/about/about-section"
 import FooterSection from "../main-sections/footer/footer-section"
-import { getNotionBlogPosts } from "../utilities/notion/notion"
+import { getNotionBlogPosts } from "../utilities/notion/notionClient"
 import BlogSection from '../main-sections/blog/blog-section'
 import { BlogPost } from '../types/BlogPost.types'
 
@@ -13,7 +13,6 @@ const MAX_BLOG_POSTS = 3;
 const IndexPage = ({ projects, resumeJson, portfolioMeta, allBlogPosts }) => {
 
   const parsedBlogPosts = JSON.parse(allBlogPosts);
-  console.log('Parsed Blog Posts:', parsedBlogPosts);
 
   return (
     <main id="app">
@@ -38,8 +37,6 @@ const IndexPage = ({ projects, resumeJson, portfolioMeta, allBlogPosts }) => {
 export default IndexPage
 
 export async function getStaticProps() {
-  const notionPageId = process.env.NOTION_BLOG_PAGE_ID;
-
   const projects = JSON.stringify(
     (await import("../data/projects.json")).projects
   )
@@ -49,13 +46,22 @@ export async function getStaticProps() {
   const resumeJson = JSON.stringify(await import("../data/resume-full.json"))
 
   const mediumPosts: Array<BlogPost> = (await import("../data/medium-posts.json")).posts
-  const notionBlogPages: Array<BlogPost> = await getNotionBlogPosts(notionPageId);
+  const notionBlogPages = await getNotionBlogPosts();
+  
+  // Map Notion blog posts to match BlogPost interface
+  const mappedNotionPosts: Array<BlogPost> = notionBlogPages.map((post: any) => ({
+    ...post,
+    datePublished: post.publishedDate || new Date().toISOString(),
+    description: post.excerpt || '',
+  }));
+  
   const allBlogPosts = JSON.stringify(
-    [...mediumPosts, ...notionBlogPages]
+    [...mediumPosts, ...mappedNotionPosts]
       .sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime())
       .slice(0, MAX_BLOG_POSTS)
   );
 
+  console.log(`Fetched ${JSON.parse(allBlogPosts).length} blog posts`);
 
   return {
     props: {

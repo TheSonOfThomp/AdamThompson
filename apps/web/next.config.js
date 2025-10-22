@@ -1,8 +1,6 @@
 // next.config.js
+require("dotenv").config({ path: "../../.env" });
 const createMDX = require('@next/mdx');
-const withImages = require('next-images');
-const withPlugins = require('next-compose-plugins');
-const { webpack } = require('next/dist/compiled/webpack/webpack');
 
 // const withPWA = require('next-pwa')
 // const runtimeCaching = require('next-pwa/cache')

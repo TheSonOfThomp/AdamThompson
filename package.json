@@ -5,18 +5,24 @@
   "version": "0.1.0",
   "author": "Adam Thompson <adam.m.thompson@icloud.com>",
   "engines": {
-    "node": ">=18.20.0",
+    "node": ">=22.16.0",
     "pnpm": ">=10.18.0"
   },
   "scripts": {
     "build": "turbo build",
+    "build:server": "pnpm --filter @thesonofthomp/portfolio netlify build",
     "clean:modules": "rm -rf node_modules && pnpm exec rm -rf node_modules",
     "check": "turbo check",
     "dev": "turbo dev",
     "dev:server": "pnpm --filter @thesonofthomp/portfolio netlify dev"
   },
   "dependencies": {
-    "date-fns": "^2.30.0"
+    "@notionhq/client": "^2.2.14",
+    "data-uri-to-buffer": "^6.0.2",
+    "date-fns": "^2.30.0",
+    "node-fetch": "^3.3.2",
+    "formdata-polyfill": "^4.0.10",
+    "web-streams-polyfill": "^3.3.3"
   },
   "devDependencies": {
     "@netlify/plugin-lighthouse": "^6.0.3",

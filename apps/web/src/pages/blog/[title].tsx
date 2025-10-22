@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { format } from 'date-fns';
-import { getNotionPageBySlug, getAllNotionPageSlugs } from '../../utilities/notion/notion';
+import { getNotionPageBySlug, getAllNotionPageSlugs } from '../../utilities/notion/notionClient';
 import NotionRenderer from '../../components/NotionRenderer/NotionRenderer';
 import DefaultPage from '../../templates/default-page/default-template';
 import { BackLink } from '../../components/BackLink/BackLink';
@@ -57,19 +57,10 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ pageData, title: titleSlug 
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const parentPageId = process.env.NOTION_BLOG_PAGE_ID;
-  
-  if (!parentPageId) {
-    return {
-      paths: [],
-      fallback: false,
-    };
-  }
-
   try {
-    const pages = await getAllNotionPageSlugs(parentPageId);
-    const paths = pages.map((page) => ({
-      params: { title: page.slug },
+    const pages = await getAllNotionPageSlugs();
+    const paths = pages.map((slug) => ({
+      params: { title: slug },
     }));
 
     return {
@@ -87,16 +78,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const titleSlug = params?.title as string;
-  const parentPageId = process.env.NOTION_BLOG_PAGE_ID;
 
-  if (!titleSlug || !parentPageId) {
+  if (!titleSlug) {
     return {
       notFound: true,
     };
   }
 
   try {
-    const pageData = await getNotionPageBySlug(parentPageId, titleSlug);
+    const pageData = await getNotionPageBySlug(titleSlug);
 
     if (!pageData) {
       return {

@@ -2,11 +2,9 @@ import React, { ComponentProps } from "react"
 import styles from "./recipes.module.scss"
 import DefaultPage from "../templates/default-page/default-template"
 import {
-  type RecipeCategory,
-  type RecipePageMeta,
   fetchCategorizedRecipePageContent,
   fetchFlatRecipePageContent,
-} from "../utilities/notion/fetchRecipes"
+} from "../utilities/notion/notionClient"
 import {
   getPageCoverImageURL,
   getPageTitle,
@@ -17,19 +15,17 @@ import { RecipeCard } from "../components/card/RecipeCard/RecipeCard"
 interface RecipesPageProps extends ComponentProps<"section"> {
   categorizedRecipes: string
   flatRecipes: string
-  recipes: Array<any>
 }
 
 const RecipesPage = ({
-  recipes: _recipes,
   categorizedRecipes: categorizedRecipesJSONString,
   flatRecipes: flatRecipesJSONString,
 }: RecipesPageProps) => {
-  const categorizedRecipes: Array<RecipeCategory> | undefined =
+  const categorizedRecipes: Array<any> | undefined =
     categorizedRecipesJSONString
       ? JSON.parse(categorizedRecipesJSONString)
       : undefined
-  const flatRecipes: Array<RecipePageMeta> = flatRecipesJSONString
+  const flatRecipes: Array<any> = flatRecipesJSONString
     ? JSON.parse(flatRecipesJSONString)
     : undefined
 
@@ -90,15 +86,12 @@ const RecipesPage = ({
 export default RecipesPage
 
 export async function getStaticProps() {
-  const page_id = process.env.NOTION_RECIPES_PAGE_ID
+  try {
+    const categorizedRecipes = await fetchCategorizedRecipePageContent();
+    const flatRecipes = await fetchFlatRecipePageContent();
 
-  if (page_id) {
-    const categorizedRecipes = await fetchCategorizedRecipePageContent(page_id)
+    console.log(`Fetched ${flatRecipes.length} recipes`);
 
-    const flatRecipes = await fetchFlatRecipePageContent(
-      page_id,
-      categorizedRecipes
-    )
     return {
       props: {
         categorizedRecipes: JSON.stringify(
@@ -106,10 +99,15 @@ export async function getStaticProps() {
         ),
         flatRecipes: JSON.stringify(flatRecipes),
       },
-    }
-  }
-
-  return {
-    props: {},
+      revalidate: 3600,
+    };
+  } catch (error) {
+    console.error('Error fetching recipes:', error);
+    return {
+      props: {
+        categorizedRecipes: JSON.stringify([]),
+        flatRecipes: JSON.stringify([]),
+      },
+    };
   }
 }
