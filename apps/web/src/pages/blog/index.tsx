@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
-import { getNotionBlogPosts } from '../../utilities/notion/notion';
+import { getNotionBlogPosts } from '../../utilities/notion/notionClient';
 import { BlogPost } from '../../types/BlogPost.types';
 import { format } from 'date-fns';
 
@@ -143,14 +143,8 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ posts }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const notionPageId = process.env.NOTION_BLOG_PAGE_ID;
-  
   try {
-    let posts: BlogPost[] = [];
-    
-    if (notionPageId) {
-      posts = await getNotionBlogPosts(notionPageId);
-    }
+    const posts: BlogPost[] = await getNotionBlogPosts();
 
     // Sort posts by date (newest first)
     const sortedPosts = posts.sort((a, b) => 

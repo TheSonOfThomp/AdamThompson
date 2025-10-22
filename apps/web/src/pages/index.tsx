@@ -4,7 +4,7 @@ import Hero from "../main-sections/hero/hero"
 
 import AboutSection from "../main-sections/about/about-section"
 import FooterSection from "../main-sections/footer/footer-section"
-import { getNotionBlogPosts } from "../utilities/notion/notion"
+import { getNotionBlogPosts } from "../utilities/notion/notionClient"
 import BlogSection from '../main-sections/blog/blog-section'
 import { BlogPost } from '../types/BlogPost.types'
 
@@ -37,8 +37,6 @@ const IndexPage = ({ projects, resumeJson, portfolioMeta, allBlogPosts }) => {
 export default IndexPage
 
 export async function getStaticProps() {
-  const notionPageId = process.env.NOTION_BLOG_PAGE_ID;
-
   const projects = JSON.stringify(
     (await import("../data/projects.json")).projects
   )
@@ -48,14 +46,14 @@ export async function getStaticProps() {
   const resumeJson = JSON.stringify(await import("../data/resume-full.json"))
 
   const mediumPosts: Array<BlogPost> = (await import("../data/medium-posts.json")).posts
-  const notionBlogPages: Array<BlogPost> = await getNotionBlogPosts(notionPageId);
+  const notionBlogPages: Array<BlogPost> = await getNotionBlogPosts();
   const allBlogPosts = JSON.stringify(
     [...mediumPosts, ...notionBlogPages]
       .sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime())
       .slice(0, MAX_BLOG_POSTS)
   );
 
-  console.log(`Fetched ${allBlogPosts.length} blog posts`);
+  console.log(`Fetched ${JSON.parse(allBlogPosts).length} blog posts`);
 
   return {
     props: {
