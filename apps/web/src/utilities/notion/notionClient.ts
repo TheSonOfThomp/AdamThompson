@@ -6,19 +6,15 @@ function getBaseUrl() {
   // During build time or server-side rendering
   if (typeof window === 'undefined') {
     // Check if we're in a Netlify build environment
-    if (process.env.NETLIFY || process.env.NETLIFY_BUILD_BASE) {
-      // During Netlify build, use the deploy URL if available, otherwise fallback to direct API
-      const netlifyUrl = process.env.URL || process.env.DEPLOY_PRIME_URL || process.env.DEPLOY_URL;
-      if (netlifyUrl) {
-        return netlifyUrl;
-      }
-      // If no Netlify URL available during build, return null to trigger direct API calls
+    if (process.env.NETLIFY || process.env.NETLIFY_BUILD_BASE || process.env.CI) {
+      // During build time, always use direct API calls since functions aren't available
+      console.log('Netlify build environment detected, using direct API');
       return null;
     }
     // Local development
     return 'http://localhost:8888';
   }
-  // Client-side
+  // Client-side - use relative URLs which will resolve to the current domain
   return '';
 }
 

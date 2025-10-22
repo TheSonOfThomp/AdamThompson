@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Adam Thompson <adam.m.thompson@icloud.com>",
   "engines": {
-    "node": ">=18.20.0",
+    "node": ">=22.16.0",
     "pnpm": ">=10.18.0"
   },
   "scripts": {
