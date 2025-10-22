@@ -138,7 +138,7 @@ export async function getNotionBlogPosts(): Promise<any[]> {
 
   try {
     const baseUrl = getBaseUrl();
-    const url = `${baseUrl}/.netlify/functions/notion-blog-posts`;
+    const url = `${baseUrl}/.netlify/functions/notion-api?action=posts`;
     
     const response = await fetch(url);
     
@@ -173,7 +173,7 @@ export async function getAllNotionPageSlugs(): Promise<Array<{title: string, slu
 
   try {
     const baseUrl = getBaseUrl();
-    const url = `${baseUrl}/.netlify/functions/notion-page-slugs`;
+    const url = `${baseUrl}/.netlify/functions/notion-api?action=slugs`;
     
     const response = await fetch(url);
     
@@ -208,7 +208,7 @@ export async function getNotionPageBySlug(slug: string) {
 
   try {
     const baseUrl = getBaseUrl();
-    const url = `${baseUrl}/.netlify/functions/notion-page-by-slug?slug=${encodeURIComponent(slug)}`;
+    const url = `${baseUrl}/.netlify/functions/notion-api?action=page&slug=${encodeURIComponent(slug)}`;
     
     const response = await fetch(url);
     
