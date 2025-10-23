@@ -6,7 +6,7 @@
   base = "/"
   
   # Build command: uses pnpm workspace to build the web app
-  command = "pnpm run build:server"
+  command = "pnpm run build --force"
   
   # Publish directory: relative to base directory
   publish = "apps/web/.next"
