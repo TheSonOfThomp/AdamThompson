@@ -37,7 +37,7 @@ const IndexPage = ({ projects, resumeJson, portfolioMeta, allBlogPosts }) => {
 
 export default IndexPage
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const projects = JSON.stringify(
     (await import("../data/projects.json")).projects
   )

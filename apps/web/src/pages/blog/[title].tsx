@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { format } from 'date-fns';
 import { getNotionPageBySlug, getAllNotionPageSlugs } from '../../utilities/notion/notion';
 import NotionRenderer from '../../components/NotionRenderer/NotionRenderer';
@@ -56,27 +56,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ pageData, title: titleSlug 
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  try {
-    const pages = await getAllNotionPageSlugs();
-    const paths = pages.map((page) => ({
-      params: { title: page.slug },
-    }));
-
-    return {
-      paths,
-      fallback: 'blocking', // This allows for new posts to be added without rebuilding
-    };
-  } catch (error) {
-    console.error('Error getting static paths:', error);
-    return {
-      paths: [],
-      fallback: false,
-    };
-  }
-};
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const titleSlug = params?.title as string;
 
   if (!titleSlug) {
@@ -99,7 +79,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         pageData,
         title: titleSlug,
       },
-      revalidate: 3600, // Revalidate every hour
     };
   } catch (error) {
     console.error('Error fetching page data:', error);

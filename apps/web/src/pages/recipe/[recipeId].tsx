@@ -38,35 +38,27 @@ export default function RecipePage({ meta: metaJSON, content: contentJSON }) {
   )
 }
 
-export async function getStaticProps({ params: { recipeId } }) {
-  const meta = await fetchPropertiesForPageId(recipeId)
-  const block = await fetchContentForPageId(recipeId)
-
-  return {
-    props: {
-      meta: JSON.stringify(meta),
-      content: JSON.stringify(block.results),
-    },
-  }
-}
-
-export const getStaticPaths = async () => {
+export async function getServerSideProps({ params: { recipeId } }) {
   try {
-    const flatRecipePages = await fetchFlatRecipePageContent();
+    const meta = await fetchPropertiesForPageId(recipeId)
+    const block = await fetchContentForPageId(recipeId)
+
+    if (!meta) {
+      return {
+        notFound: true,
+      }
+    }
 
     return {
-      paths: flatRecipePages.map((page) => {
-        return {
-          params: { recipeId: page?.id },
-        }
-      }),
-      fallback: false,
+      props: {
+        meta: JSON.stringify(meta),
+        content: JSON.stringify(block.results),
+      },
     }
   } catch (error) {
-    console.error('Failed to fetch recipe paths:', error);
+    console.error('Failed to fetch recipe:', error);
     return {
-      paths: [],
-      fallback: "blocking",
+      notFound: true,
     }
   }
 }
