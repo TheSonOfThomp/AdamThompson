@@ -12,9 +12,6 @@ const MAX_BLOG_POSTS = 3;
 
 const IndexPage = ({ projects, resumeJson, portfolioMeta, allBlogPosts }) => {
 
-  const parsedBlogPosts = JSON.parse(allBlogPosts);
-  console.log('Parsed Blog Posts:', parsedBlogPosts);
-
   return (
     <main id="app">
       <Head>
@@ -37,7 +34,7 @@ const IndexPage = ({ projects, resumeJson, portfolioMeta, allBlogPosts }) => {
 
 export default IndexPage
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const projects = JSON.stringify(
     (await import("../data/projects.json")).projects
   )

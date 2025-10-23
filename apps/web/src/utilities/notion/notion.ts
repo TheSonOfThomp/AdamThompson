@@ -1,21 +1,52 @@
 import { BlogPost } from '../../types/BlogPost.types';
+import { Client } from '@notionhq/client';
+
+// Initialize Notion client with environment variable
+const notion = new Client({
+  auth: process.env.NEXT_PUBLIC_NOTION_KEY,
+});
+
+// Utility function to generate URL-friendly slug from title
+function generateSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
+    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/-+/g, '-') // Replace multiple hyphens with single
+    .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+}
 
 export async function getNotionBlogPosts(pageId?: string): Promise<Array<BlogPost>> {
   try {
-    console.log('Fetching Notion pages for page ID:', pageId);
+
+    const targetPageId = pageId || process.env.NEXT_PUBLIC_NOTION_BLOG_PAGE_ID || process.env.NOTION_BLOG_PAGE_ID;
     
-    // Call the Netlify function instead of direct Notion API
-    const url = pageId 
-      ? `/.netlify/functions/notion-blog-posts?pageId=${pageId}`
-      : '/.netlify/functions/notion-blog-posts';
-    
-    const response = await fetch(url);
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    if (!targetPageId) {
+      console.error('Missing pageId parameter or NOTION_BLOG_PAGE_ID environment variable');
+      return [];
     }
     
-    const pages = await response.json();
+    // Get child pages from the specified page
+    const response = await notion.blocks.children.list({
+      block_id: targetPageId,
+    });
+
+    // Filter for child page blocks and extract page information
+    const pages = response.results
+      .filter((block: any) => block.type === 'child_page')
+      .map((block: any) => {
+        const title = block.child_page.title;
+        return {
+          id: block.id,
+          title,
+          slug: generateSlug(title),
+          type: block.type,
+          datePublished: block.created_time,
+          lastEditedTime: block.last_edited_time,
+          source: 'notion',
+        };
+      });
+
     return pages;
   } catch (error) {
     console.error('Error fetching Notion pages:', error);
@@ -25,14 +56,19 @@ export async function getNotionBlogPosts(pageId?: string): Promise<Array<BlogPos
 
 export async function getNotionPage(pageId: string) {
   try {
-    const response = await fetch(`/.netlify/functions/notion-page?pageId=${pageId}`);
+    // Get page properties
+    const page = await notion.pages.retrieve({ page_id: pageId });
     
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    
-    const data = await response.json();
-    return data;
+    // Get page content (blocks)
+    const blocks = await notion.blocks.children.list({
+      block_id: pageId,
+      page_size: 100,
+    });
+
+    return {
+      page,
+      blocks: blocks.results,
+    };
   } catch (error) {
     console.error('Error fetching Notion page:', error);
     return null;
@@ -47,16 +83,6 @@ export async function getAllNotionPageIds(parentPageId?: string): Promise<string
     console.error('Error fetching page IDs:', error);
     return [];
   }
-}
-
-// Utility function to generate URL-friendly slug from title
-export function generateSlug(title: string): string {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
-    .replace(/\s+/g, '-') // Replace spaces with hyphens
-    .replace(/-+/g, '-') // Replace multiple hyphens with single
-    .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
 }
 
 // Get all page titles and their corresponding IDs for slug generation

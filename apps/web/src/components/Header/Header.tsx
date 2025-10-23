@@ -90,9 +90,4 @@ Header.propTypes = {
   color: PropTypes.oneOf(["white", "black"]),
 }
 
-Header.defaultProps = {
-  showNav: false,
-  color: "white",
-}
-
 export default Header
