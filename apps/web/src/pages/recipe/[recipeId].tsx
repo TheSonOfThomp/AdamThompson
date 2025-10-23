@@ -38,6 +38,29 @@ export default function RecipePage({ meta: metaJSON, content: contentJSON }) {
   )
 }
 
+export async function getStaticPaths() {
+  try {
+    const flatRecipes = await fetchFlatRecipePageContent()
+    
+    const paths = flatRecipes
+      .filter((recipe) => recipe && recipe.id) // Filter out null recipes and ensure they have an id
+      .map((recipe) => ({
+        params: { recipeId: recipe.id },
+      }))
+
+    return {
+      paths,
+      fallback: 'blocking', // or false if you want to show 404 for unknown recipes
+    }
+  } catch (error) {
+    console.error('Failed to fetch recipe paths:', error);
+    return {
+      paths: [],
+      fallback: 'blocking',
+    }
+  }
+}
+
 export async function getStaticProps({ params: { recipeId } }) {
   try {
     const meta = await fetchPropertiesForPageId(recipeId)
