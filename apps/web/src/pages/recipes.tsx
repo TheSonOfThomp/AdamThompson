@@ -89,7 +89,7 @@ const RecipesPage = ({
 
 export default RecipesPage
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   try {
     const categorizedRecipes = await fetchCategorizedRecipePageContent();
     const flatRecipes = await fetchFlatRecipePageContent(undefined, categorizedRecipes);
