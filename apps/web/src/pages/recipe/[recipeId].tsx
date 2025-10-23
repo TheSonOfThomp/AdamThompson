@@ -38,7 +38,7 @@ export default function RecipePage({ meta: metaJSON, content: contentJSON }) {
   )
 }
 
-export async function getServerSideProps({ params: { recipeId } }) {
+export async function getStaticProps({ params: { recipeId } }) {
   try {
     const meta = await fetchPropertiesForPageId(recipeId)
     const block = await fetchContentForPageId(recipeId)

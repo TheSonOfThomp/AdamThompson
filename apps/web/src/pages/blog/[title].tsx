@@ -1,13 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import { GetServerSideProps } from 'next';
+import {  GetStaticProps } from 'next';
 import { format } from 'date-fns';
-import { getNotionPageBySlug, getAllNotionPageSlugs } from '../../utilities/notion/notion';
+import { getNotionPageBySlug } from '../../utilities/notion/notion';
 import NotionRenderer from '../../components/NotionRenderer/NotionRenderer';
 import DefaultPage from '../../templates/default-page/default-template';
-import { BackLink } from '../../components/BackLink/BackLink';
 import styles from "./blogPost.module.scss"
-
 
 interface BlogPostPageProps {
   pageData: {
@@ -56,7 +54,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ pageData, title: titleSlug 
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const titleSlug = params?.title as string;
 
   if (!titleSlug) {

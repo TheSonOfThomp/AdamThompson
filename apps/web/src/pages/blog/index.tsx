@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import { getNotionBlogPosts } from '../../utilities/notion/notion';
 import { BlogPost } from '../../types/BlogPost.types';
 import { format } from 'date-fns';
@@ -142,7 +142,7 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ posts }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   try {
     let posts: BlogPost[] = [];
     
