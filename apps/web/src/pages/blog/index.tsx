@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { getNotionBlogPosts } from '../../utilities/notion/notion';
 import { BlogPost } from '../../types/BlogPost.types';
 import { format } from 'date-fns';
@@ -142,15 +142,12 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ posts }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  const notionPageId = process.env.NOTION_BLOG_PAGE_ID;
-  
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
     let posts: BlogPost[] = [];
     
-    if (notionPageId) {
-      posts = await getNotionBlogPosts(notionPageId);
-    }
+    // Use the Netlify function for Notion blog posts
+    posts = await getNotionBlogPosts();
 
     // Sort posts by date (newest first)
     const sortedPosts = posts.sort((a, b) => 
@@ -161,7 +158,6 @@ export const getStaticProps: GetStaticProps = async () => {
       props: {
         posts: sortedPosts,
       },
-      revalidate: 3600, // Revalidate every hour
     };
   } catch (error) {
     console.error('Error fetching blog posts:', error);

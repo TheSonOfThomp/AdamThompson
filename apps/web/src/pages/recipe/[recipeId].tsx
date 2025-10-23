@@ -38,36 +38,27 @@ export default function RecipePage({ meta: metaJSON, content: contentJSON }) {
   )
 }
 
-export async function getStaticProps({ params: { recipeId } }) {
-  const meta = await fetchPropertiesForPageId(recipeId)
-  const block = await fetchContentForPageId(recipeId)
+export async function getServerSideProps({ params: { recipeId } }) {
+  try {
+    const meta = await fetchPropertiesForPageId(recipeId)
+    const block = await fetchContentForPageId(recipeId)
 
-  return {
-    props: {
-      meta: JSON.stringify(meta),
-      content: JSON.stringify(block.results),
-    },
-  }
-}
-
-export const getStaticPaths = async () => {
-  const page_id = process.env.NOTION_RECIPES_PAGE_ID
-
-  if (page_id) {
-    const flatRecipePages = await fetchFlatRecipePageContent(page_id)
+    if (!meta) {
+      return {
+        notFound: true,
+      }
+    }
 
     return {
-      paths: flatRecipePages.map((page) => {
-        return {
-          params: { recipeId: page?.id },
-        }
-      }),
-      fallback: false,
+      props: {
+        meta: JSON.stringify(meta),
+        content: JSON.stringify(block.results),
+      },
     }
-  }
-
-  return {
-    paths: [],
-    fallback: "blocking",
+  } catch (error) {
+    console.error('Failed to fetch recipe:', error);
+    return {
+      notFound: true,
+    }
   }
 }

@@ -1,0 +1,7 @@
+# This file is intentionally minimal
+# All configuration is handled by the root netlify.toml
+# This file exists only to avoid conflicts and ensure Netlify
+# recognizes this as the package directory
+
+# No configuration needed here - monorepo setup
+# uses root-level netlify.toml with package directory pointing here

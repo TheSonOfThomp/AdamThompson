@@ -1,16 +1,27 @@
+# Root-level Netlify configuration for monorepo
+# Main web app deployment configuration
+
 [build]
+  # Base directory: root for pnpm workspace dependency management
+  base = "/"
+  
+  # Build command: uses pnpm workspace to build the web app
+  command = "pnpm run build --force"
+  
+  # Publish directory: relative to base directory
   publish = "apps/web/.next"
-  functions = "apps/web/functions/"
-  command = "turbo build"
 
-[context.deploy-preview]
-  command = "turbo build --force"
+[build.environment]
+  NODE_VERSION = "22.16.0"
+  PNPM_VERSION = "10.18.3"
 
+# Plugin configuration
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Redirect configuration
 [[redirects]]
   from = "https://social.thesonofthomp.com/"
   to = "https://thesonofthomp.com/social"
-  status = 200
+  status = 301
   force = true

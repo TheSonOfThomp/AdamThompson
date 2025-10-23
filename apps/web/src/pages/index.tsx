@@ -12,9 +12,6 @@ const MAX_BLOG_POSTS = 3;
 
 const IndexPage = ({ projects, resumeJson, portfolioMeta, allBlogPosts }) => {
 
-  const parsedBlogPosts = JSON.parse(allBlogPosts);
-  console.log('Parsed Blog Posts:', parsedBlogPosts);
-
   return (
     <main id="app">
       <Head>
@@ -38,24 +35,30 @@ const IndexPage = ({ projects, resumeJson, portfolioMeta, allBlogPosts }) => {
 export default IndexPage
 
 export async function getStaticProps() {
-  const notionPageId = process.env.NOTION_BLOG_PAGE_ID;
-
   const projects = JSON.stringify(
     (await import("../data/projects.json")).projects
   )
-    const portfolioMeta = JSON.stringify(
+  const portfolioMeta = JSON.stringify(
     (await import("../meta/portfolio-meta")).default
   )
   const resumeJson = JSON.stringify(await import("../data/resume-full.json"))
 
   const mediumPosts: Array<BlogPost> = (await import("../data/medium-posts.json")).posts
-  const notionBlogPages: Array<BlogPost> = await getNotionBlogPosts(notionPageId);
+  
+  // Use the Netlify function for Notion blog posts
+  let notionBlogPages: Array<BlogPost> = [];
+  try {
+    notionBlogPages = await getNotionBlogPosts();
+  } catch (error) {
+    console.error('Failed to fetch Notion blog posts:', error);
+    // Continue without Notion posts
+  }
+  
   const allBlogPosts = JSON.stringify(
     [...mediumPosts, ...notionBlogPages]
       .sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime())
       .slice(0, MAX_BLOG_POSTS)
   );
-
 
   return {
     props: {

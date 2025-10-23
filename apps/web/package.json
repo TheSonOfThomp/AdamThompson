@@ -1,7 +1,7 @@
 {
-  "name": "@thesonofthomp/portfolio",
+  "name": "@thesonofthomp/web",
   "private": true,
-  "description": "Adam Thompson's portfolio",
+  "description": "Adam Thompson's website",
   "version": "0.1.0",
   "author": "Adam Thompson <adam.m.thompson@icloud.com>",
   "scripts": {
@@ -19,12 +19,15 @@
   },
   "dependencies": {
     "@leafygreen-ui/polymorphic": "^3.1.0",
+    "@netlify/plugin-lighthouse": "^6.0.3",
+    "@netlify/plugin-nextjs": "^5.14.3",
     "@notionhq/client": "^2.2.14",
     "@reach/polymorphic": "^0.18.0",
     "@thesonofthomp/recipe-parser": "^0.2.1",
     "airtable": "^0.12.2",
     "classnames": "^2.5.1",
     "i": "^0.3.7",
+    "netlify-cli": "^23.9.1",
     "next": "^13.5.0"
   },
   "devDependencies": {

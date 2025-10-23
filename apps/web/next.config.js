@@ -1,14 +1,20 @@
 // next.config.js
 const createMDX = require('@next/mdx');
-const withImages = require('next-images');
-const withPlugins = require('next-compose-plugins');
-const { webpack } = require('next/dist/compiled/webpack/webpack');
+const path = require('path');
+
+// Load environment variables from the repo root
+require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 
 // const withPWA = require('next-pwa')
 // const runtimeCaching = require('next-pwa/cache')
 
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  // env: {
+  //   NOTION_KEY: process.env.NOTION_KEY,
+  //   NOTION_BLOG_PAGE_ID: process.env.NOTION_BLOG_PAGE_ID,
+  //   NOTION_RECIPES_PAGE_ID: process.env.NOTION_RECIPES_PAGE_ID,
+  // },
   webpack: (config, options) => {
     
     // Load svgs as components 

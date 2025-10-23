@@ -89,16 +89,11 @@ const RecipesPage = ({
 
 export default RecipesPage
 
-export async function getStaticProps() {
-  const page_id = process.env.NOTION_RECIPES_PAGE_ID
-
-  if (page_id) {
-    const categorizedRecipes = await fetchCategorizedRecipePageContent(page_id)
-
-    const flatRecipes = await fetchFlatRecipePageContent(
-      page_id,
-      categorizedRecipes
-    )
+export async function getServerSideProps() {
+  try {
+    const categorizedRecipes = await fetchCategorizedRecipePageContent();
+    const flatRecipes = await fetchFlatRecipePageContent(undefined, categorizedRecipes);
+    
     return {
       props: {
         categorizedRecipes: JSON.stringify(
@@ -107,9 +102,14 @@ export async function getStaticProps() {
         flatRecipes: JSON.stringify(flatRecipes),
       },
     }
-  }
-
-  return {
-    props: {},
+  } catch (error) {
+    console.error('Failed to fetch recipes:', error);
+    // Return empty props if recipes can't be fetched
+    return {
+      props: {
+        categorizedRecipes: JSON.stringify([]),
+        flatRecipes: JSON.stringify([]),
+      },
+    }
   }
 }
