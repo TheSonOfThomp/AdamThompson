@@ -1,0 +1,16 @@
+[build]
+  base = "apps/web"
+  command = "pnpm run build"
+  publish = ".next"
+
+[context.deploy-preview]
+  command = "pnpm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "https://social.thesonofthomp.com/"
+  to = "https://thesonofthomp.com/social"
+  status = 200
+  force = true

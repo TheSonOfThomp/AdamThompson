@@ -1,16 +1,2 @@
-[build]
-  publish = ".next"
-  functions = "functions/"
-  command = "pnpm run build"
-
-[context.deploy-preview]
-  command = "pnpm run build"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-[[redirects]]
-  from = "https://social.thesonofthomp.com/"
-  to = "https://thesonofthomp.com/social"
-  status = 200
-  force = true
+# This file should be removed - configuration is in root netlify.toml
+# Keeping minimal config to avoid conflicts
