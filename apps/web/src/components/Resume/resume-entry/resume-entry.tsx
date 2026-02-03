@@ -20,9 +20,9 @@ const ResumeEntry = ({
         <span className={styles.entry_location}>{aside}</span>
       </div>
       <ul className={styles.entry_bullets}>
-        {contentArray && contentArray.map(b => {
+        {contentArray && contentArray.map((b, index) => {
           return (
-            <li className={styles.entry_bullet_point} dangerouslySetInnerHTML={{ __html: md.render(b)}}></li>
+            <li key={index} className={styles.entry_bullet_point} dangerouslySetInnerHTML={{ __html: md.render(b)}}></li>
           )
         })}
       </ul>

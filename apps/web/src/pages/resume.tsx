@@ -75,114 +75,107 @@ function flattenExperience(experience) {
   return jobs
 }
 
-class ResumePage extends React.Component {
-  constructor(props) {
-    super(props)
-    // TODO: Captcha and browser check
-    this.shouldRenderResume = true
-  }
+function ResumePage({ resumeData }) {
+  // TODO: Captcha and browser check
+  const shouldRenderResume = true
+  const jobs = flattenExperience(resumeData.experience)
 
-  render() {
-    const { resumeData } = this.props
-    const jobs = flattenExperience(resumeData.experience)
-
-    return (
-      <div className="resume-container">
-        <Head>
-          <title>Adam Thompson Resume</title>
-        </Head>
-        <div className="resume-page" id="page-1">
-          <ResumeHeader />
-          <div className="resume-body">
-            {/* EXPERIENCE */}
-            <ResumeSection id="experience" header="Professional Experience">
-              {jobs.map((job, index) => (
-                <ResumeEntry
-                  key={`${job.company}-${index}`}
-                  header1={job.company}
-                  header2={job.position}
-                  aside={`${job.term} ${job.isCoop ? "(Co-op)" : ""} | ${
-                    job.location
-                  }`}
-                  contentArray={job.bullets}
-                  isCompact={job.displayCompact}
-                />
-              ))}
-            </ResumeSection>
-          </div>
-        </div>
-        {/* PAGE 2 */}
-        <div className="resume-page" id="page-2">
-          <ResumeHeader minimal />
-
-          <div className="resume-body">
-            {/* EDUCATION */}
-            <ResumeSection id="education" header="Edu.">
+  return (
+    <div className="resume-container">
+      <Head>
+        <title>Adam Thompson Resume</title>
+      </Head>
+      <div className="resume-page" id="page-1">
+        <ResumeHeader />
+        <div className="resume-body">
+          {/* EXPERIENCE */}
+          <ResumeSection id="experience" header="Professional Experience">
+            {jobs.map((job, index) => (
               <ResumeEntry
-                header1={resumeData.education.uwaterloo.company}
-                header2={resumeData.education.uwaterloo.position}
-                aside={resumeData.education.uwaterloo.class}
-                contentArray={[resumeData.education.uwaterloo.summary]}
+                key={`${job.company}-${index}`}
+                header1={job.company}
+                header2={job.position}
+                aside={`${job.term} ${job.isCoop ? "(Co-op)" : ""} | ${
+                  job.location
+                }`}
+                contentArray={job.bullets}
+                isCompact={job.displayCompact}
               />
-            </ResumeSection>
-
-            {/* PROJECTS */}
-            <ResumeSection id="projects" header="Projects">
-              {Object.values(projectsData.projects).map(
-                (project) =>
-                  project.showOnResume && (
-                    <ResumeEntry
-                      key={project.name}
-                      header1={project.name}
-                      aside={project.tools.join(", ")}
-                      contentArray={[project.description]}
-                      isCompact={true}
-                    />
-                  )
-              )}
-            </ResumeSection>
-
-            {/* TOOLBOX */}
-            <ResumeSection id="tools" header="Skills">
-              {resumeData.toolbox.map((tool) => (
-                <T key={tool}>{tool}</T>
-              ))}
-            </ResumeSection>
-
-            {/* AWARDS */}
-            {/* <div className="column-section " id="projects">
-              <h2 className="section-header">Awards</h2>
-              <div className="column-section-contents">
-                {Object.values(resumeData.awards).map(award => (
-                  award && <ResumeEntry
-                    entryClass="project-entry"
-                    title={award.title}
-                    location={award.date}
-                    bullets={[award.description]}
-                  />
-                ))}
-              </div>
-            </div> */}
-
-            {/* VOLUTEER */}
-            {/* <div className="column-section " id="volunteer">
-              <h2 className="section-header">Volunteer</h2>
-              <div className="column-section-contents">
-                {Object.values(resumeData.volunteer).map(volunteer => {
-                  return <ResumeEntry
-                    entryClass="volunteer-entry"
-                    title={volunteer.title}
-                    location={volunteer.location}
-                  />
-                })}
-              </div>
-            </div> */}
-          </div>
-          <ResumeFooter />
+            ))}
+          </ResumeSection>
         </div>
       </div>
-    )
-  }
+      {/* PAGE 2 */}
+      <div className="resume-page" id="page-2">
+        <ResumeHeader minimal />
+
+        <div className="resume-body">
+          {/* EDUCATION */}
+          <ResumeSection id="education" header="Edu.">
+            <ResumeEntry
+              header1={resumeData.education.uwaterloo.company}
+              header2={resumeData.education.uwaterloo.position}
+              aside={resumeData.education.uwaterloo.class}
+              contentArray={[resumeData.education.uwaterloo.summary]}
+            />
+          </ResumeSection>
+
+          {/* PROJECTS */}
+          <ResumeSection id="projects" header="Projects">
+            {Object.values(projectsData.projects).map(
+              (project) =>
+                project.showOnResume && (
+                  <ResumeEntry
+                    key={project.name}
+                    header1={project.name}
+                    aside={project.tools.join(", ")}
+                    contentArray={[project.description]}
+                    isCompact={true}
+                  />
+                )
+            )}
+          </ResumeSection>
+
+          {/* TOOLBOX */}
+          <ResumeSection id="tools" header="Skills">
+            {resumeData.toolbox.map((tool) => (
+              <T key={tool}>{tool}</T>
+            ))}
+          </ResumeSection>
+
+          {/* AWARDS */}
+          {/* <div className="column-section " id="projects">
+            <h2 className="section-header">Awards</h2>
+            <div className="column-section-contents">
+              {Object.values(resumeData.awards).map(award => (
+                award && <ResumeEntry
+                  entryClass="project-entry"
+                  title={award.title}
+                  location={award.date}
+                  bullets={[award.description]}
+                />
+              ))}
+            </div>
+          </div> */}
+
+          {/* VOLUTEER */}
+          {/* <div className="column-section " id="volunteer">
+            <h2 className="section-header">Volunteer</h2>
+            <div className="column-section-contents">
+              {Object.values(resumeData.volunteer).map(volunteer => {
+                return <ResumeEntry
+                  entryClass="volunteer-entry"
+                  title={volunteer.title}
+                  location={volunteer.location}
+                />
+              })}
+            </div>
+          </div> */}
+        </div>
+        <ResumeFooter />
+      </div>
+    </div>
+  )
 }
 
 export async function getStaticProps() {
