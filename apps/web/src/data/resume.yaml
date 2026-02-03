@@ -8,14 +8,6 @@ experience:
     location: NYC
     show: true
     positions:
-      - term: June 2021 - August 2023
-        position: UI Engineer
-        summary: Design systems development, Website development
-        bullets:
-          - Developed React components and created development patterns for use across MongoDB products, saving the company over half a million dollars per year.
-          - Implemented processes and tooling to improve code quality, design accuracy, and to prevent visual and functional regression.
-          - Innovated new ways to generate TS documentation and to re-use component example code, saving over 200 developer-hours per year.
-          - Provided technical mentorship and assistance to designers engineers on my team and across the company.
       - term: August 2023 - now
         position: Senior UI Engineer
         summary: Design systems development, Technical architecture, Cross-team collaboration
@@ -25,6 +17,14 @@ experience:
           - Collaborated with design strategy and full-stack teams to architect a streamlined resource deletion experience, removing dark patterns and reducing user frustration through coordinated frontend specifications and backend API implementation.
           - Authored technical specification for MCP-UI implementation, defining LLM intent-to-UI conversion, embeddable UI architecture, data flow patterns, and server-side rendering for in-house LLM clients.
           - Mentored and supervised a summer UI engineering intern, providing technical guidance and professional development.
+      - term: June 2021 - August 2023
+        position: UI Engineer
+        summary: Design systems development, Website development
+        bullets:
+          - Developed React components and created development patterns for use across MongoDB products, saving the company over half a million dollars per year.
+          - Implemented processes and tooling to improve code quality, design accuracy, and to prevent visual and functional regression.
+          - Innovated new ways to generate TS documentation and to re-use component example code, saving over 200 developer-hours per year.
+          - Provided technical mentorship and assistance to designers engineers on my team and across the company.
 
   new-visions:
     company: New Visions for Public Schools
