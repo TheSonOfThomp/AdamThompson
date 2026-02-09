@@ -13,18 +13,18 @@ experience:
         summary: Design systems development, Technical architecture, Cross-team collaboration
         bullets:
           - Defined technical strategy for re-architecting the design library, researching UI library foundations, monorepo architecture, CI integration, and testing infrastructure to focus on next-generation components and AI integration.
-          - Architected and implemented a cross-product navigation component in collaboration with design strategy, product leaders, and frontend teams, successfully integrating it across the Atlas application.
-          - Collaborated with design strategy and full-stack teams to architect a streamlined resource deletion experience, removing dark patterns and reducing user frustration through coordinated frontend specifications and backend API implementation.
+          - Architected and implemented cross-product navigation in collaboration with design strategy, product leaders, and frontend teams, successfully integrating it across the Atlas application.
+          - Collaborated with design strategy and full-stack teams to build a streamlined resource deletion experience, removing "dark patterns" and reducing user frustration through coordinated full-stack API implementation.
           - Authored technical specification for MCP-UI implementation, defining LLM intent-to-UI conversion, embeddable UI architecture, data flow patterns, and server-side rendering for in-house LLM clients.
           - Mentored and supervised a summer UI engineering intern, providing technical guidance and professional development.
       - term: June 2021 - August 2023
         position: UI Engineer
         summary: Design systems development, Website development
         bullets:
-          - Developed React components and created development patterns for use across MongoDB products, saving the company over half a million dollars per year.
-          - Implemented processes and tooling to improve code quality, design accuracy, and to prevent visual and functional regression.
-          - Innovated new ways to generate TS documentation and to re-use component example code, saving over 200 developer-hours per year.
+          - Developed React components and created development patterns for use across MongoDB products, including date & time selection, search inputs and toasts. 
+          - Implemented processes and tooling to improve code quality, design accuracy, and prevent visual and functional regression—Storybook, Chromatic, Turborepo, pnpm and Rollup.
           - Provided technical mentorship and assistance to designers engineers on my team and across the company.
+          - Innovated new ways to generate TS documentation and to re-use component example code in Storybook and the NextJS documentation website.
 
   new-visions:
     company: New Visions for Public Schools
@@ -38,8 +38,6 @@ experience:
       - Architected and led development for a new landing page using React, Next.js and Netlify server-side lambda functions, increasing daily active users by over 40% WoW after launch.
       - Developed prototyping infrastructure with Vue and D3 in order to test and validate new features and interactions, enabling faster iteration of product and feature concepts.
       - Created a design framework to streamline creation of data visualizations, enabling us to launch remote learning features just days after schools closed in March 2020.
-    _bullets:
-      - ""
     show: true
 
   music-group:
@@ -147,12 +145,12 @@ education:
     summary: Honours Bachelor of Applied Science (B.Eng.) Cognitive Science minor.
     class: Class of 2017
 
-projects: See projects.json
+# projects: See projects.json
 
 volunteer:
   thesymphonychorus:
     title: The SymphoNYChorus
-    location: 2018 - now
+    location: 2018 - 2024
     description: Tenor section leader for the combined choir and orchestra.
 
   kwasind:
@@ -171,30 +169,43 @@ volunteer:
     description: Baritone section leader for the world-ranked all-male a cappella group.
 
 toolbox:
+  - Typescript
   - Javascript
+  - React
   - HTML5
   - CSS3
-  - Sass
+  - Storybook
   - Angular
-  - Typescript
   - Vue
-  - React
   - Swift
   - Python
-  - Node.js
-  - npm
-  - PHP
-  - Git
-  - Storybook
-  - Photoshop
-  - Sketch
+  - Java
   - Figma
-  - Framer
-  - Balsamiq
-  - D3
-  - XState
-  - Three.js
-  - Arduino
+  # - PHP
+  # - npm/yarn/pnpm
+  # - git
+  # - Photoshop
+  # - Sketch
+  # - Framer
+  # - Balsamiq
+  # - D3
+  # - XState
+  # - Three.js
+  # - Arduino
+
+talks:
+  react-rally:
+    event: React Rally 2024 
+    date: Aug. 2024
+    title: Typescript\: The Hard Way
+    url: https://youtu.be/-cGQMaAxolQ?si=UBSeoeNLxEY0wAwQ
+
+  storybook8:
+    event: Storybook 8 launch
+    date: March 2024
+    title: Storybook at MongoDB
+    url: "https://www.eventbrite.com/e/new-york-frontend-dev-meetup-hosted-by-storybook-tickets-852105669997"
+    # url: https://stayhappening.com/e/storybook-meetup-how-to-get-the-most-out-of-storybook-8-E3LV48R9N7QC
 
 awards:
   norman-esch:
