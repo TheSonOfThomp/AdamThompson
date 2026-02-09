@@ -11,16 +11,17 @@ import {
 import T from "../components/Resume/tool/tool"
 import ResumeHeader from "../components/Resume/resume-header"
 import ResumeEntry from "../components/Resume/resume-entry/resume-entry"
-import * as resumeJson from "../data/resume.json"
 import * as projectsJson from "../data/projects.json"
+import fs from "fs"
+import path from "path"
+import yaml from "js-yaml"
 
-const resumeData = resumeJson.default
+import styles from "./resume.module.scss";
+
 const projectsData = projectsJson.default
 
-const jobs = Object.values(resumeData.experience).filter((job) => job.show)
-
 const ResumeFooter = () => (
-  <div className="resume-footer">
+  <div className={styles.resume_footer}>
     <a href="https://www.linkedin.com/in/adammthompson/">
       <FontAwesomeIcon icon={faLinkedinIn} size="sm" />
       /adammthompson
@@ -42,38 +43,63 @@ const ResumeFooter = () => (
 
 const ResumeSection = ({ id, header, children }) => (
   <div
-    className="resume-section"
+    className={styles.resume_section}
     id={id || header.replace(/( )/, "-").toLowerCase()}
   >
-    <h2 className="resume-section-header">{header}</h2>
-    <div className="resume-section-contents">{children}</div>
+    <h2 className={styles.resume_section_header}>{header}</h2>
+    <div className={styles.resume_section_contents}>{children}</div>
   </div>
 )
 
-class ResumePage extends React.Component {
-  constructor() {
-    super()
-    // TODO: Captcha and browser check
-    this.shouldRenderResume = true
-  }
+// Flatten experience entries - companies with multiple positions become multiple job entries
+function flattenExperience(experience) {
+  const jobs = []
+  Object.values(experience).forEach((company) => {
+    if (!company.show) return
 
-  _ResumeJSX = (
-    <div className="resume-container">
+    // Handle new format with positions array
+    if (company.positions && Array.isArray(company.positions)) {
+      company.positions.forEach((position) => {
+        jobs.push({
+          company: company.company,
+          url: company.url,
+          location: company.location,
+          displayCompact: company.displayCompact,
+          isCoop: company.isCoop,
+          ...position,
+        })
+      })
+    } else {
+      // Handle old format without positions array
+      jobs.push(company)
+    }
+  })
+  return jobs
+}
+
+function ResumePage({ resumeData }) {
+  // TODO: Captcha and browser check
+  const shouldRenderResume = true
+  const jobs = flattenExperience(resumeData.experience)
+
+  return (
+    <div className={styles.resume_container}>
       <Head>
         <title>Adam Thompson Resume</title>
       </Head>
-      <div className="resume-page" id="page-1">
-        <ResumeHeader />
-        <div className="resume-body">
+      <div className={styles.resume_page} id="page-1">
+        <ResumeHeader tagline={resumeData.tagline} />
+        <div className={styles.resume_body}>
           {/* EXPERIENCE */}
           <ResumeSection id="experience" header="Professional Experience">
-            {jobs.map((job) => (
+            {jobs.map((job, index) => (
               <ResumeEntry
+                key={`${job.company}-${index}`}
                 header1={job.company}
                 header2={job.position}
-                aside={`${job.term} ${job.isCoop ? "(Co-op)" : ""} | ${
-                  job.location
-                }`}
+                term={job.term}
+                aside={job.aside}
+                location={job.location}
                 contentArray={job.bullets}
                 isCompact={job.displayCompact}
               />
@@ -82,10 +108,9 @@ class ResumePage extends React.Component {
         </div>
       </div>
       {/* PAGE 2 */}
-      <div className="resume-page" id="page-2">
+      <div className={styles.resume_page} id="page-2">
         <ResumeHeader minimal />
-
-        <div className="resume-body">
+        <div className={styles.resume_body}>
           {/* EDUCATION */}
           <ResumeSection id="education" header="Edu.">
             <ResumeEntry
@@ -102,6 +127,7 @@ class ResumePage extends React.Component {
               (project) =>
                 project.showOnResume && (
                   <ResumeEntry
+                    key={project.name}
                     header1={project.name}
                     aside={project.tools.join(", ")}
                     contentArray={[project.description]}
@@ -114,12 +140,12 @@ class ResumePage extends React.Component {
           {/* TOOLBOX */}
           <ResumeSection id="tools" header="Skills">
             {resumeData.toolbox.map((tool) => (
-              <T>{tool}</T>
+              <T key={tool}>{tool}</T>
             ))}
           </ResumeSection>
 
           {/* AWARDS */}
-          {/* <div className="column-section " id="projects">
+          <div className="column-section " id="projects">
             <h2 className="section-header">Awards</h2>
             <div className="column-section-contents">
               {Object.values(resumeData.awards).map(award => (
@@ -131,7 +157,7 @@ class ResumePage extends React.Component {
                 />
               ))}
             </div>
-          </div> */}
+          </div> 
 
           {/* VOLUTEER */}
           {/* <div className="column-section " id="volunteer">
@@ -151,10 +177,17 @@ class ResumePage extends React.Component {
       </div>
     </div>
   )
+}
 
-  render() {
-    let _toRenderJSX = this._ResumeJSX
-    return _toRenderJSX
+export async function getStaticProps() {
+  const resumePath = path.join(process.cwd(), "src", "data", "resume.yaml")
+  const fileContents = fs.readFileSync(resumePath, "utf8")
+  const resumeData = yaml.load(fileContents)
+
+  return {
+    props: {
+      resumeData,
+    },
   }
 }
 

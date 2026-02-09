@@ -1,0 +1,231 @@
+tagline: Senior Frontend Engineer
+blurb: I'm a dedicated, highly motivated, passionate, proficient, and detail oriented engineer and designer, seamlessly bridging the gap between disciplines.
+
+experience:
+  mongodb:
+    company: MongoDB
+    url: http://mongodb.design
+    location: NYC
+    show: true
+    positions:
+      - term: August 2023 - now
+        position: Senior UI Engineer
+        summary: Design systems development, Technical architecture, Cross-team collaboration
+        bullets:
+          - Defined technical strategy for re-architecting the design library, researching UI library foundations, monorepo architecture, CI integration, and testing infrastructure to focus on next-generation components and AI integration.
+          - Architected and implemented cross-product navigation in collaboration with design strategy, product leaders, and frontend teams, successfully integrating it across the Atlas application.
+          - Collaborated with design strategy and full-stack teams to build a streamlined resource deletion experience, removing "dark patterns" and reducing user frustration through coordinated full-stack API implementation.
+          - Authored technical specification for MCP-UI implementation, defining LLM intent-to-UI conversion, embeddable UI architecture, data flow patterns, and server-side rendering for in-house LLM clients.
+          - Mentored and supervised a summer UI engineering intern, providing technical guidance and professional development.
+      - term: June 2021 - August 2023
+        position: UI Engineer
+        summary: Design systems development, Website development
+        bullets:
+          - Developed React components and created development patterns for use across MongoDB products, including date & time selection, search inputs and toasts. 
+          - Implemented processes and tooling to improve code quality, design accuracy, and prevent visual and functional regression—Storybook, Chromatic, Turborepo, pnpm and Rollup.
+          - Provided technical mentorship and assistance to designers engineers on my team and across the company.
+          - Innovated new ways to generate TS documentation and to re-use component example code in Storybook and the NextJS documentation website.
+
+  new-visions:
+    company: New Visions for Public Schools
+    url: http://www.newvisions.org
+    term: July 2018 - June 2021
+    position: UI Engineer
+    location: NYC
+    summary: Design systems development, UX architecture, and feature design.
+    bullets:
+      - Built an Angular component library, and defined a more consistent CSS architecture, streamlining cross-functional collaboration, and improved long-term maintainability.
+      - Architected and led development for a new landing page using React, Next.js and Netlify server-side lambda functions, increasing daily active users by over 40% WoW after launch.
+      - Developed prototyping infrastructure with Vue and D3 in order to test and validate new features and interactions, enabling faster iteration of product and feature concepts.
+      - Created a design framework to streamline creation of data visualizations, enabling us to launch remote learning features just days after schools closed in March 2020.
+    show: true
+
+  music-group:
+    company: TC Helicon
+    url: http://musicri.be
+    term: Jan - April 2018
+    position: Product Manager
+    aside: Contract
+    location: Kitchener
+    summary: Design process, high level product vision & business case development.
+    bullets:
+      - Developed a globally-used VBA tool enabling managers to quickly evaluate ROI and other key data for new projects.
+      - Defined user requirements and business strategy for a line of accessories, and coordinated with international suppliers.
+    _bullets:
+      - Developed a browser plugin for consolidating various online sources to a single database.
+    show: true
+    displayCompact: true
+    isCoop: false
+
+  chameleon:
+    company: Chameleon
+    url: http://chameleon.thesonofthomp.com
+    term: Sept 2016 - Dec 2017
+    position: Co-founder
+    location: Waterloo
+    bullets: []
+    show: false
+    displayCompact: false
+    isCoop: false
+
+  zynga:
+    company: Zynga
+    url: http://www.zynga.com/poker
+    term: April - Aug 2016
+    position: UX Product Manager
+    aside: Co-op
+    summary: Data analysis, UX research and testing for Poker Web.
+    location: Toronto
+    bullets:
+      - Prototyped and defined feature requirements for a Poker chip drip feature that increased daily active users by nearly 10%.
+      - Optimized user flows for social engagement based on the results of multi-variate testing, increasing daily news-feed app entry by 4%.
+    show: true
+    displayCompact: true
+    isCoop: true
+
+  noom:
+    company: Noom
+    url: http://www.noom.com
+    term: Sept - Dec 2015
+    position: Product Designer
+    aside: Co-op
+    summary: Usability optimization, and user testing for the core food-logging feature.
+    location: NYC
+    logotype: images/companies/noom_logotype_small.png
+    logo: images/companies/noom_logo.png
+    bullets:
+      - Re-architected the core food logging workflow to align with observed mental models, informed by rigorous prototyping and usability testing, increasing user retention and engagement by nearly 50%.
+    show: true
+    displayCompact: true
+    isCoop: true
+
+  knowroaming:
+    company: KnowRoaming
+    url: http://www.knowroaming.com
+    term: May 2014 - April 2015
+    position: UX Designer
+    aside: Co-op
+    summary: User research, information architecture and UI design for all mobile apps.
+    location: Toronto
+    bullets:
+      - Designed Android and iOS app information architecture to align with common use cases, increasing user retention by over 20%.
+      - Developed a brand ambassador enrollment page using JavaScript, PHP and Sass that received hundreds of applications, and increased brand awareness.
+    show: true
+    displayCompact: true
+    isCoop: true
+
+  sony:
+    company: Sony
+    url: http://mediago.sony.com
+    term: Sept - Dec 2013
+    position: UX Designer
+    aside: Co-op
+    summary: UI design and front-end development for MediaGo.
+    location: Waterloo
+    bullets:
+      - Spearheaded UX design and front-end development for MediaGo internet radio.
+    show: true
+    displayCompact: true
+    isCoop: true
+
+  co-op:
+    company: Co-op Education
+    position: UX Designer & UI Developer
+    term: 2013 - 2017
+    location: Toronto & NYC
+    bullets:
+      - "**Zynga**: Optimized user flows for engagement based on the results of multi-variate testing."
+      - "**Noom**: Redesigned the core food logging workflow to align with observed mental models."
+      - "**KnowRoaming**: Re-architected the mobile apps UI to improve the most common use cases."
+      - "**Sony**: Led design and user interface development for a music discovery feature."
+    show: false
+
+education:
+  uwaterloo:
+    url: http://www.uwaterloo.ca/systems-design-engineering/about-systems-design-engineering
+    company: University of Waterloo
+    position: Systems Design Engineering
+    degree: Honours Bachelor of Applied Science
+    minor: Cognitive Science
+    summary: Honours Bachelor of Applied Science (B.Eng.) Cognitive Science minor.
+    class: Class of 2017
+
+# projects: See projects.json
+
+volunteer:
+  thesymphonychorus:
+    title: The SymphoNYChorus
+    location: 2018 - 2024
+    description: Tenor section leader for the combined choir and orchestra.
+
+  kwasind:
+    title: Camp Kwasind
+    location: 2017
+    description: Maintenance, cabin leader and staff mentor.
+
+  uwux:
+    title: UW/UX
+    location: 2015-2016
+    description: Vice President of the UW campus UX club.
+
+  water-boys:
+    title: The Water Boys
+    location: 2013-2017
+    description: Baritone section leader for the world-ranked all-male a cappella group.
+
+toolbox:
+  - Typescript
+  - Javascript
+  - React
+  - HTML5
+  - CSS3
+  - Storybook
+  - Angular
+  - Vue
+  - Swift
+  - Python
+  - Java
+  - Figma
+  # - PHP
+  # - npm/yarn/pnpm
+  # - git
+  # - Photoshop
+  # - Sketch
+  # - Framer
+  # - Balsamiq
+  # - D3
+  # - XState
+  # - Three.js
+  # - Arduino
+
+talks:
+  react-rally:
+    event: React Rally 2024 
+    date: Aug. 2024
+    title: "Typescript: The Hard Way"
+    url: https://youtu.be/-cGQMaAxolQ?si=UBSeoeNLxEY0wAwQ
+
+  storybook8:
+    event: Storybook 8 launch
+    date: March 2024
+    title: Storybook at MongoDB
+    url: "https://www.eventbrite.com/e/new-york-frontend-dev-meetup-hosted-by-storybook-tickets-852105669997"
+    # url: https://stayhappening.com/e/storybook-meetup-how-to-get-the-most-out-of-storybook-8-E3LV48R9N7QC
+
+awards:
+  norman-esch:
+    title: Norman Esch
+    date: 2017
+    url: https://uwaterloo.ca/engineering/news/six-teams-win-10000-each-annual-esch-awards
+    description: Entrepreneurship award for our pitch & demo of Chameleon.
+
+  peoples-choice:
+    title: SYDE Peoples' Choice
+    date: 2017
+    description: Awarded by vote for our demo of Chameleon.
+
+certifications:
+  udacity-optimization:
+    title: Website Performance Optimization
+    date: 2020
+    url: https://www.udacity.com/course/website-performance-optimization--ud884
