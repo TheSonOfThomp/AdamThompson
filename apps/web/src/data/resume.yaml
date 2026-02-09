@@ -1,4 +1,4 @@
-tagline: Senior UI Engineer
+tagline: Senior Frontend Engineer
 blurb: I'm a dedicated, highly motivated, passionate, proficient, and detail oriented engineer and designer, seamlessly bridging the gap between disciplines.
 
 experience:
@@ -45,6 +45,7 @@ experience:
     url: http://musicri.be
     term: Jan - April 2018
     position: Product Manager
+    aside: Contract
     location: Kitchener
     summary: Design process, high level product vision & business case development.
     bullets:
@@ -72,6 +73,7 @@ experience:
     url: http://www.zynga.com/poker
     term: April - Aug 2016
     position: UX Product Manager
+    aside: Co-op
     summary: Data analysis, UX research and testing for Poker Web.
     location: Toronto
     bullets:
@@ -86,6 +88,7 @@ experience:
     url: http://www.noom.com
     term: Sept - Dec 2015
     position: Product Designer
+    aside: Co-op
     summary: Usability optimization, and user testing for the core food-logging feature.
     location: NYC
     logotype: images/companies/noom_logotype_small.png
@@ -101,6 +104,7 @@ experience:
     url: http://www.knowroaming.com
     term: May 2014 - April 2015
     position: UX Designer
+    aside: Co-op
     summary: User research, information architecture and UI design for all mobile apps.
     location: Toronto
     bullets:
@@ -115,6 +119,7 @@ experience:
     url: http://mediago.sony.com
     term: Sept - Dec 2013
     position: UX Designer
+    aside: Co-op
     summary: UI design and front-end development for MediaGo.
     location: Waterloo
     bullets:
@@ -197,7 +202,7 @@ talks:
   react-rally:
     event: React Rally 2024 
     date: Aug. 2024
-    title: Typescript\: The Hard Way
+    title: "Typescript: The Hard Way"
     url: https://youtu.be/-cGQMaAxolQ?si=UBSeoeNLxEY0wAwQ
 
   storybook8:

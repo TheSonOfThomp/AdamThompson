@@ -1,11 +1,11 @@
 
-@import './colours.def.scss';
-@import './mixins';
+@import '../style/colours.def.scss';
+@import '../style/mixins';
 $page-margin-side: 0.5in;
 $page-margin-top: 0.375in;
 $page-width: 8.5in;
-// $page-height: 14in;
-$page-height: 11in;
+$page-height: 14in; // legal
+// $page-height: 11in; // letter
 
 // Spacing variables
 $gap-top: 16pt;
@@ -28,10 +28,10 @@ $left-margin: 64pt; // space on the left
 }
 
 @media print {
-  header,
-  footer {
-    display: none;
-  }
+  // :global(header),
+  // :global(footer) {
+  //   display: none;
+  // }
 
   @page {
     size: $page-width $page-height;
@@ -44,20 +44,6 @@ $left-margin: 64pt; // space on the left
   }
 }
 
-
-h1,
-h2,
-h3,
-h4,
-ul {
-  margin: 0;
-}
-
-a {
-  font-weight: inherit;
-  border-bottom: unset;
-}
-
 .ats-only {
   position: absolute;
   top: 50%;
@@ -65,14 +51,15 @@ a {
   color: #fff;
 }
 
-.resume-container {
+.resume_container {
+  color-scheme: light;
   display: grid;
   grid-auto-flow: row;
   grid-gap: 0.25in;
   justify-items: center;
-  background-color: #eee;
+  background-color: var(--color-bg-base);
   
-  .resume-page {
+  .resume_page {
     $centre-col-fr: 1fr;
 
     position: relative;
@@ -88,7 +75,7 @@ a {
     background-color: #fff;
     break-after: page;
 
-    .resume-body {
+    .resume_body {
       display: grid;
       grid-area: body;
       grid-template-columns: subgrid;
@@ -117,15 +104,16 @@ a {
   line-height: 1.25em;
 }
 
-.resume-section {
+.resume_section {
   position: relative;
   display: grid;
   grid-template-areas: 'header content';
   grid-template-columns: subgrid;
   grid-column: 1/-1; // span both cols of subgrid
+  margin: 0;
   // grid-gap: $gap-first-entry; // gap between header & first entry
 
-  .resume-section-header {
+  .resume_section_header {
     $highlight-size: 2pt;
 
     align-self: flex-start;
@@ -133,7 +121,7 @@ a {
     font-size: 10pt;
     font-weight: 700;
     padding-inline: 1pt;
-    margin-block-end: 16pt;
+    margin-block: 0 16pt;
     line-height: 20pt;
     text-transform: uppercase;
     letter-spacing: 0.5ch;
@@ -142,20 +130,20 @@ a {
     border-block-end: $highlight-size solid var(--color-green-base);
   }
 
-  .resume-section-contents {
+  .resume_section_contents {
     display: grid;
     grid-template-rows: masonry;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: $gap-entry-y $gap-entry-x; // gap between entries
   }
 
-  &#projects .resume-section-contents,
-  &#volunteer .resume-section-contents {
+  &#projects .resume_section_contents,
+  &#volunteer .resume_section_contents {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: $gap-entry-y $gap-entry-x; // gap between entries
   }
 
-  &#tools .resume-section-contents {
+  &#tools .resume_section_contents {
     display: block;
     font-size: 12pt;
     line-height: 1.5em;
@@ -163,7 +151,7 @@ a {
 }
 
 
-.resume-footer {
+.resume_footer {
   display: flex;
   grid-area: footer;
   gap: 1ch;

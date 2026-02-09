@@ -16,19 +16,23 @@ $gap-bullet-compact: 6pt;
     display: flex;
     gap: 1ch; // spacing between title & company
     align-items: baseline;
-    margin-bottom: $gap-first-bullet;
+    margin-block: 0 $gap-first-bullet;
   }
 
   .entry_title {
     font-size: $header-size;
     color: var(--color-green-dark025);
+    margin: 0;
   }
   
   .entry_company {
     font-size: $header-size;
     color: var(--color-black);
+    margin: 0;
   }
 
+  .entry_term,
+  .entry_aside,
   .entry_location {
     font-size: 8pt;
     font-weight: bold;
@@ -37,16 +41,29 @@ $gap-bullet-compact: 6pt;
     letter-spacing: 0.1ch;
   }
 
+
+  .entry_term:after {
+    content: " | "
+  }
+  .entry_aside:before {
+    content: ""
+  }
+  .entry_aside:after {
+    content: " | ";
+  }
+
   .entry_bullets {  
     display: grid;
     grid-gap: $gap-bullet; // gap between bullets
-    padding-left: 0;
+    padding-inline-start: 0;
     font-weight: 300;
     color: var(--color-black);
     list-style-type: none;
+    margin: 0;
     
     .entry_bullet_point {
       position: relative;
+      margin: 0;
 
       &:first-child {
         margin-top: 0;
@@ -89,13 +106,15 @@ $gap-bullet-compact: 6pt;
       font-size: $header-size;
     }
 
-    .entry_location {
-      display: block;
-      justify-self: flex-start;
-      line-height: 1.67em;
-    }
+    // .entry_location,
+    // .entry_aside {
+    //   display: inline-block;
+    //   justify-self: flex-start;
+    //   line-height: 1.67em;
+    // }
 
     .entry_bullets {
+      display: none;
       gap: $gap-bullet-compact;
     }
   }

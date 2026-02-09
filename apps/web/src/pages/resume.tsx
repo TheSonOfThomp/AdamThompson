@@ -16,10 +16,12 @@ import fs from "fs"
 import path from "path"
 import yaml from "js-yaml"
 
+import styles from "./resume.module.scss";
+
 const projectsData = projectsJson.default
 
 const ResumeFooter = () => (
-  <div className="resume-footer">
+  <div className={styles.resume_footer}>
     <a href="https://www.linkedin.com/in/adammthompson/">
       <FontAwesomeIcon icon={faLinkedinIn} size="sm" />
       /adammthompson
@@ -41,11 +43,11 @@ const ResumeFooter = () => (
 
 const ResumeSection = ({ id, header, children }) => (
   <div
-    className="resume-section"
+    className={styles.resume_section}
     id={id || header.replace(/( )/, "-").toLowerCase()}
   >
-    <h2 className="resume-section-header">{header}</h2>
-    <div className="resume-section-contents">{children}</div>
+    <h2 className={styles.resume_section_header}>{header}</h2>
+    <div className={styles.resume_section_contents}>{children}</div>
   </div>
 )
 
@@ -81,13 +83,13 @@ function ResumePage({ resumeData }) {
   const jobs = flattenExperience(resumeData.experience)
 
   return (
-    <div className="resume-container">
+    <div className={styles.resume_container}>
       <Head>
         <title>Adam Thompson Resume</title>
       </Head>
-      <div className="resume-page" id="page-1">
-        <ResumeHeader />
-        <div className="resume-body">
+      <div className={styles.resume_page} id="page-1">
+        <ResumeHeader tagline={resumeData.tagline} />
+        <div className={styles.resume_body}>
           {/* EXPERIENCE */}
           <ResumeSection id="experience" header="Professional Experience">
             {jobs.map((job, index) => (
@@ -95,9 +97,9 @@ function ResumePage({ resumeData }) {
                 key={`${job.company}-${index}`}
                 header1={job.company}
                 header2={job.position}
-                aside={`${job.term} ${job.isCoop ? "(Co-op)" : ""} | ${
-                  job.location
-                }`}
+                term={job.term}
+                aside={job.aside}
+                location={job.location}
                 contentArray={job.bullets}
                 isCompact={job.displayCompact}
               />
@@ -106,10 +108,9 @@ function ResumePage({ resumeData }) {
         </div>
       </div>
       {/* PAGE 2 */}
-      <div className="resume-page" id="page-2">
+      <div className={styles.resume_page} id="page-2">
         <ResumeHeader minimal />
-
-        <div className="resume-body">
+        <div className={styles.resume_body}>
           {/* EDUCATION */}
           <ResumeSection id="education" header="Edu.">
             <ResumeEntry
@@ -144,7 +145,7 @@ function ResumePage({ resumeData }) {
           </ResumeSection>
 
           {/* AWARDS */}
-          {/* <div className="column-section " id="projects">
+          <div className="column-section " id="projects">
             <h2 className="section-header">Awards</h2>
             <div className="column-section-contents">
               {Object.values(resumeData.awards).map(award => (
@@ -156,7 +157,7 @@ function ResumePage({ resumeData }) {
                 />
               ))}
             </div>
-          </div> */}
+          </div> 
 
           {/* VOLUTEER */}
           {/* <div className="column-section " id="volunteer">

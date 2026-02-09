@@ -18,6 +18,7 @@ $side-col: 48pt;
     font-size: 32pt;
     font-weight: 700;
     line-height: 1.2em;
+    margin: 0;
   }
   
   :global(#monogram) {
@@ -37,7 +38,7 @@ $side-col: 48pt;
 
     a {
       font-size: 12pt;
-      color: var(--color-green-dark025);
+      color: var(--color-text-link);
     }
   }
 
@@ -48,5 +49,6 @@ $side-col: 48pt;
     color: var(--color-green-base);
     text-transform: uppercase;
     letter-spacing: 2pt;
+    margin: 0;
   }
 }

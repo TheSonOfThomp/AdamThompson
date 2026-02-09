@@ -50,58 +50,27 @@
 }
 
 // Semantic Tokens
-@mixin LightModeTokens {
+body {
+  color-scheme: light dark;
   
-  --color-brand-dark: var(--color-green-dark050);
+  --color-brand-dark: light-dark(var(--color-green-dark050), var(--color-green-dark200));
   --color-brand-base: var(--color-green-base);
-  --color-brand-light: var(--color-green-light100);
+  --color-brand-light: light-dark(var(--color-green-light100), var(--color-green-base));
 
-  --color-hero-start: var(--color-green-light100);
-  --color-hero-end: var(--color-green-base);
+  --color-hero-start: light-dark(var(--color-green-light100), var(--color-green-dark025));
+  --color-hero-end: light-dark(var(--color-green-base), var(--color-green-dark200));
   --color-hero-text: var(--color-black);
 
-  --color-text-base: var(--color-black);
-  --color-text-secondary: var(--color-grey-dark200);
-  --color-text-inverse: var(--color-white);
+  --color-text-base: light-dark(var(--color-black), var(--color-white));
+  --color-text-link: light-dark(var(--color-green-dark025), var(--color-green-light100));
+  --color-text-secondary: light-dark(var(--color-grey-dark200), var(--color-grey-base));
+  --color-text-inverse: light-dark(var(--color-white), var(--color-black));
   --color-text-brand-bg: var(--color-white);
 
-  --color-text-brand: var(--color-green-dark025);
-  --color-text-selection: var(--color-green-light300);
+  --color-text-brand: light-dark(var(--color-green-dark025), var(--color-green-light100));
+  --color-text-selection: light-dark(var(--color-green-light300), var(--color-green-dark050));
 
-  --color-bg-base: var(--color-white);
-  --color-bg-brand: #{$green-light025};
-  --color-bg-hover: rgba(0, 0, 0, 0.16);
-}
-
-@mixin DarkModeTokens {
-  
-  --color-brand-dark: var(--color-green-dark200);
-  --color-brand-base: var(--color-green-base);
-  --color-brand-light: var(--color-green-base);
-
-  --color-hero-start: var(--color-green-dark025);
-  --color-hero-end: var(--color-green-dark200);
-  --color-hero-text: var(--color-black);
-
-  --color-text-base: var(--color-white);
-  --color-text-secondary: var(--color-grey-base);
-  --color-text-inverse: var(--color-black);
-  --color-text-brand-bg: var(--color-white);
-
-  --color-text-brand: var(--color-green-light100);
-  --color-text-selection: var(--color-green-dark050);
-
-  --color-bg-base: var(--color-green-dark300);
-  --color-bg-brand: var(--color-green-dark050);
-  --color-bg-hover: rgba(255, 255, 255, 0.16);
-}
-
-body { 
-  @include Mode("light") {
-    @include LightModeTokens();
-  }
-
-  @include Mode("dark") {
-    @include DarkModeTokens();
-  }
+  --color-bg-base: light-dark(var(--color-white), var(--color-green-dark300));
+  --color-bg-brand: light-dark(#{$green-light025}, var(--color-green-dark050));
+  --color-bg-hover: light-dark(rgba(0, 0, 0, 0.16), rgba(255, 255, 255, 0.16));
 }
